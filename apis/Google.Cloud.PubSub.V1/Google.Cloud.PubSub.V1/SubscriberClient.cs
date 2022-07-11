@@ -14,9 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
-using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -148,7 +146,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Settings for creating <see cref="SubscriberServiceApiClient"/>s.
+        /// This type is now obsolete; please use <see cref="SubscriberClientBuilder"/> which provides an
+        /// API surface consistent with other clients (as well as additional Pub/Sub-specific properties such as <see cref="SubscriberClientBuilder.ClientCount"/>).
         /// </summary>
+        [Obsolete("Use PublisherClientBuilder to customize client settings.")]
         public sealed class ClientCreationSettings
         {
             /// <summary>
@@ -278,20 +279,20 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan DefaultMaxTotalAckExtension { get; } = TimeSpan.FromMinutes(60);
 
         /// <summary>
-        /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
-        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
-        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
-        /// settings may need changing; especially <see cref="Settings.AckDeadline"/>.
-        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
-        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
+        /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>, using default settings.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
-        /// <see cref="SubscriberClient"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
         /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static SubscriberClient Create(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
-            CreateMaybeAsync(subscriptionName, clientCreationSettings, settings, isAsync: false).ResultWithUnwrappedExceptions();
+        public static SubscriberClient Create(SubscriptionName subscriptionName) =>
+            CreateBuilder(subscriptionName, null, null).Build();
+
+        /// <summary>
+        /// Creates a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>, using default settings.
+        /// </summary>
+        /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
+        /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        public static Task<SubscriberClient> CreateAsync(SubscriptionName subscriptionName) =>
+            CreateBuilder(subscriptionName, null, null).BuildAsync();
 
         /// <summary>
         /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
@@ -306,51 +307,40 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="SubscriberClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
         /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        [Obsolete("Use SubscriberClient.Create(SubscriptionName) to use the default settings, or SubscriberClientBuilder for customization.")]
+        public static SubscriberClient Create(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            CreateBuilder(subscriptionName, clientCreationSettings, settings).Build();
+
+        /// <summary>
+        /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially <see cref="Settings.AckDeadline"/>.
+        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
+        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
+        /// </summary>
+        /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="SubscriberClient"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
+        /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        [Obsolete("Use SubscriberClient.Create(SubscriptionName) to use the default settings, or SubscriberClientBuilder for customization.")]
         public static Task<SubscriberClient> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
-            CreateMaybeAsync(subscriptionName, clientCreationSettings, settings, isAsync: true);
+            CreateBuilder(subscriptionName, clientCreationSettings, settings).BuildAsync();
 
-        private static async Task<SubscriberClient> CreateMaybeAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings, Settings settings, bool isAsync)
-        {
-            GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
-            clientCreationSettings?.Validate();
-            // Clone settings, just in case user modifies them and an await happens in this method
-            settings = settings?.Clone() ?? new Settings();
-            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
-
-            // Create the channels and clients, and register shutdown functions for each channel
-            var clients = new SubscriberServiceApiClient[clientCount];
-            var shutdowns = new Func<Task>[clientCount];
-            for (int i = 0; i < clientCount; i++)
+#pragma warning disable CS0618 // Type or member is obsolete
+        private static SubscriberClientBuilder CreateBuilder(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings, Settings settings) =>
+            new SubscriberClientBuilder
             {
-                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-                var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
-                    .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
-
-                // First builder to handle any endpoint detection etc. We build a gRPC channel
-                // with this.
-                var builder = new SubscriberServiceApiClientBuilder
-                {
-                    EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
-                    Endpoint = clientCreationSettings?.ServiceEndpoint,
-                    ChannelCredentials = clientCreationSettings?.Credentials,
-                    Settings = clientCreationSettings?.SubscriberServiceApiSettings,
-                    ChannelOptions = grpcChannelOptions
-                };
-                var channel = isAsync ?
-                    (await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false)) :
-                    builder.CreateChannel();
-
-                // Second builder doesn't need to do much, as we can build a call invoker from the channel.
-                clients[i] = new SubscriberServiceApiClientBuilder
-                {
-                    CallInvoker = channel.CreateCallInvoker(),
-                    Settings = clientCreationSettings?.SubscriberServiceApiSettings
-                }.Build();
-                shutdowns[i] = channel.ShutdownAsync;
-            }
-            Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
-            return new SubscriberClientImpl(subscriptionName, clients, settings, Shutdown);
-        }
+                SubscriptionName = GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName)),
+                Settings = settings,
+                EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
+                ClientCount = clientCreationSettings?.ClientCount,
+                ChannelCredentials = clientCreationSettings?.Credentials,
+                Endpoint = clientCreationSettings?.ServiceEndpoint,
+                ApiSettings = clientCreationSettings?.SubscriberServiceApiSettings
+            };
+#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <summary>
         /// The associated <see cref="SubscriptionName"/>.
