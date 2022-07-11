@@ -1,5 +1,22 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-11
+
+### New features
+
+- Add support to modify kubelet pod pid limit in node system configuration ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Support spot VM ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Support Tier 1 bandwidth ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Update support for node pool labels, taints and network tags ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Add Binauthz Evaluation mode support to GKE Classic ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Add GKE Identity Service ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Add network tags to autopilot cluster ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Support enabling Confidential Nodes in the node pool ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Support node pool blue-green upgrade ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Add Location Policy API ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Support GPU timesharing ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+- Add managed prometheus feature ([commit 33a4b1d](https://github.com/googleapis/google-cloud-dotnet/commit/33a4b1d21ad275e2c8dd6307493ccaa789d1f635))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
