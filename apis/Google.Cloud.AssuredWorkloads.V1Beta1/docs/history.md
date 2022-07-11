@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-11
+
+### New features
+
+- ITAR June Preview Launch ([commit ba28a2b](https://github.com/googleapis/google-cloud-dotnet/commit/ba28a2b7bddc1a2195492181ae9041839c6f58db))
+- **BREAKING CHANGE** Removed _v1beta1 suffix from proto file names ([commit dc3a4e7](https://github.com/googleapis/google-cloud-dotnet/commit/dc3a4e7e6ffaea438a1999cbb625579ac817272f))
+
+### Breaking changes
+
+- Proto file name is changed from assuredworkloads_v1beta1.proto to assuredworkloads.proto ([commit dc3a4e7](https://github.com/googleapis/google-cloud-dotnet/commit/dc3a4e7e6ffaea438a1999cbb625579ac817272f))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
