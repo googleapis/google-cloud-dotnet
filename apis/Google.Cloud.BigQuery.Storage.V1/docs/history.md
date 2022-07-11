@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-11
+
+### Bug fixes
+
+- Modify client lib retry policy for CreateWriteStream with longer backoff, more error code and longer overall time ([commit 51e9621](https://github.com/googleapis/google-cloud-dotnet/commit/51e9621868b3fe3daf573c0c1509217d50097f7c))
+
+### New features
+
+- Add fields to eventually contain row level errors ([commit 2b870d5](https://github.com/googleapis/google-cloud-dotnet/commit/2b870d51a51b79b3b36aacdf02a29d36207b2bad))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
