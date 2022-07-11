@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-11
+
+### New features
+
+- Add ClusterType field in MembershipEndpoint.OnPremCluster ([commit 4bde0d7](https://github.com/googleapis/google-cloud-dotnet/commit/4bde0d72a70a5a63ea5329659048933b13491f58))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
