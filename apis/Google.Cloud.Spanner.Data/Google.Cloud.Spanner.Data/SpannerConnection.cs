@@ -1,11 +1,11 @@
 ﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.Data
     /// </see>
     /// .
     /// </summary>
-    public sealed class SpannerConnection : DbConnection
+    public sealed class SpannerConnection : ISpannerConnection, DbConnection
     {
         // Transaction options; no additional state, so can be reused.
         internal static TransactionOptions ReadWriteTransactionOptions { get; } = new TransactionOptions { ReadWrite = new ReadWrite() };
@@ -308,7 +308,7 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
         /// each time it is rerun.
         /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
         /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-            
+
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -335,7 +335,7 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
         /// each time it is rerun.
         /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
         /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
@@ -360,7 +360,7 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
         /// each time it is rerun.
         /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
         /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
@@ -382,7 +382,7 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
         /// each time it is rerun.
         /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
         public void RunWithRetriableTransaction(Action<SpannerTransaction> work)
