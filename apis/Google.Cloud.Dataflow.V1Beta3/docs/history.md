@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-11
+
+### Documentation improvements
+
+- Corrected the Dataflow job name regex ([commit 7501e60](https://github.com/googleapis/google-cloud-dotnet/commit/7501e6036aad008e6021fd7968730223a3bb6bc3))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
