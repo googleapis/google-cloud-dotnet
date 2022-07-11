@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-11
+
+### New features
+
+- Cloud Bigtable Undelete Table service and message proto files ([commit 29d65e4](https://github.com/googleapis/google-cloud-dotnet/commit/29d65e457d8eab164868b11481792320aaf59dd2))
+- Add storage_utilization_gib_per_node to Autoscaling target ([commit f4e0a43](https://github.com/googleapis/google-cloud-dotnet/commit/f4e0a438a076afd46d97049006c1347fea15bddc))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
