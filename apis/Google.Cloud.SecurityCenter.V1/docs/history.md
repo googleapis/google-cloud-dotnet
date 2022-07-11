@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-11
+
+### New features
+
+- Added contacts field to findings attributes, specifying Essential Contacts defined at org, folder or project level within a GCP org ([commit 70ddfdb](https://github.com/googleapis/google-cloud-dotnet/commit/70ddfdbdb4f4f0e21e6ebf22ecbaad32820afaa3))
+- Added process signature fields to the indicator attribute that helps surface multiple types of signature defined IOCs ([commit 70ddfdb](https://github.com/googleapis/google-cloud-dotnet/commit/70ddfdbdb4f4f0e21e6ebf22ecbaad32820afaa3))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
