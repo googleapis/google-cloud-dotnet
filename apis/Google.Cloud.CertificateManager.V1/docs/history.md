@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-11
+
+### Bug fixes
+
+- **BREAKING CHANGE** Removed resource definition of Compute API resources and incorrect resource references that used them ([commit 0fff1eb](https://github.com/googleapis/google-cloud-dotnet/commit/0fff1ebe5d0be93eeb28fc8dd750f0fd2f77d3b7))
+
 ## Version 2.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
