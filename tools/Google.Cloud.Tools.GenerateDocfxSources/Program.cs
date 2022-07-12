@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,25 +26,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 {
     public class Program
     {
-        /// <summary>
-        /// External dependencies we generate docs for, e.g. GAX, Grpc.Core, Protobuf, each with a list
-        /// of its own dependencies. Note all of these are *actually* generated, which is something we
-        /// need to fix - and it would be nice if we could discover the dependencies automatically instead of
-        /// hard-coding them. For now though, this is a reasonable start.
-        /// </summary>
-        private static readonly IDictionary<string, string[]> s_externalDependencies =
-            new Dictionary<string, string[]>
-        {
-            { "Google.Protobuf", new string[0] },
-            { "Google.Api.Gax", new string[0] },
-            { "Google.Api.CommonProtos", new[] { "Google.Protobuf" } },
-            { "Google.Api.Gax.Grpc", new[] { "Google.Api.Gax", "Google.Api.CommonProtos", "Grpc.Core.Api" } },
-            { "Google.Api.Gax.Grpc.Gcp", new[] { "Google.Api.Gax.Grpc.GrpcCore", "Grpc.Gcp" } },
-            { "Google.Api.Gax.Grpc.GrpcCore", new[] { "Google.Api.Gax.Grpc", "Grpc.Core" } },
-            { "Google.Api.Gax.Grpc.GrpcNetClient", new[] { "Google.Api.Gax.Grpc", "Grpc.Net.Client" } },
-            { "Google.Api.Gax.Rest", new[] { "Google.Api.Gax" } }
-        };
-
         private static int Main(string[] args)
         {
             try
@@ -137,13 +118,14 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     },
                     ["xref"] = new JArray
                     {
-                        // Include the xref maps for REST APIs even if we may not need them, for simplicity.
-                        // The directory is created in the build script.
-                        $"../../dependencies/xrefmaps/Google.Apis.xrefmap.yml",
-                        $"../../dependencies/xrefmaps/Google.Apis.Core.xrefmap.yml",
-                        $"../../dependencies/xrefmaps/Google.Apis.Auth.xrefmap.yml",
-                        $"../../dependencies/xrefmaps/Google.Apis.Storage.v1.xrefmap.yml",
-                        $"../../dependencies/xrefmaps/Google.Apis.BigQuery.v2.xrefmap.yml",
+                        // Include all fetched xrefmaps whether or not we need them.
+                        "../../dependencies/Google.Api.CommonProtos.xrefmap.yml",
+                        "../../dependencies/Google.Api.Gax.xrefmap.yml",
+                        "../../dependencies/Google.Apis.Bigquery.v2.xrefmap.yml",
+                        "../../dependencies/Google.Apis.Storage.v1.xrefmap.yml",
+                        "../../dependencies/Google.Apis.xrefmap.yml",
+                        "../../dependencies/Google.Protobuf.xrefmap.yml",
+                        "../../dependencies/Grpc.Core.xrefmap.yml"
                     },
                     ["template"] = new JArray { "default", "../../../third_party/docfx/templates/custom" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
@@ -151,15 +133,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
-
-            // We let the build script do work with the dependencies:
-            // - Copy all yml files
-            // - Concatenate toc.yml files
-            var externalDependencies = GetExternalDependencies(catalog, allApisToGenerate)
-                // Not all of our external dependencies are actually fetched yet. We need to fix that,
-                // but that can come in a later step.
-                .Where(d => Directory.Exists(Path.Combine(outputDirectory, $"../../dependencies/api/{d}")));
-            File.WriteAllText(Path.Combine(outputDirectory, "dependencies"), string.Join(" ", externalDependencies));
         }
 
         /// <summary>
@@ -209,38 +182,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     foreach (var childApiDependency in childApiDependencies)
                     {
                         processingQueue.Enqueue(childApiDependency);
-                    }
-                }
-            }
-            return set;
-        }
-
-        /// <summary>
-        /// Given a set of APIs we're generating docs for, find transitive external dependencies that we need to include in the doc set (if we have them).
-        /// </summary>
-        private static IEnumerable<string> GetExternalDependencies(ApiCatalog catalog, IEnumerable<string> apiIds)
-        {
-            var directExternalDependencies = apiIds
-                .Select(id => catalog[id])
-                .SelectMany(api => api.Dependencies.Keys)
-                .Intersect(s_externalDependencies.Keys);
-            HashSet<string> set = new HashSet<string>();
-            Queue<string> processingQueue = new Queue<string>();
-            foreach (var directDependency in directExternalDependencies)
-            {
-                processingQueue.Enqueue(directDependency);
-            }
-
-            while (processingQueue.TryDequeue(out var next))
-            {
-                if (set.Add(next))
-                {
-                    if (s_externalDependencies.TryGetValue(next, out var childDependencies))
-                    {
-                        foreach (var child in childDependencies)
-                        {
-                            processingQueue.Enqueue(child);
-                        }
                     }
                 }
             }
