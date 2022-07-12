@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,11 +43,10 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public string ProjectId { get; }
 
-        // Note: currently internal as only the default database ID is supported.
         /// <summary>
-        /// The database ID associated with this database.
+        /// The database ID associated with this database.The value will be "(default)" for the project-default database.
         /// </summary>
-        internal string DatabaseId { get; }
+        public string DatabaseId { get; }
 
         /// <summary>
         /// The resource name of the database, in the form "projects/{project_id}/databases/{database_id}".
