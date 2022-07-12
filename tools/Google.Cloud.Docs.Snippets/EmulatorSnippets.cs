@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,9 +35,11 @@ namespace Google.Cloud.Docs.Snippets
         {
             // Sample: SubscriberClient
             SubscriptionName subscription = SubscriptionName.FromProjectSubscription("projectId", "subscriptionId");
-            SubscriberClient.ClientCreationSettings clientCreationSettings = new SubscriberClient.ClientCreationSettings()
-                .WithEmulatorDetection(EmulatorDetection.EmulatorOrProduction);
-            SubscriberClient client = SubscriberClient.Create(subscription, clientCreationSettings);
+            SubscriberClient client = new SubscriberClientBuilder
+            {
+                SubscriptionName = subscription,
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+            }.Build();
             // End sample
         }
 
