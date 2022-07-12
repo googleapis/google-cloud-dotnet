@@ -31,9 +31,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             yield return CommonReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
+            yield return BigtableInstanceAdminReflection.Descriptor;
             yield return TableReflection.Descriptor;
             yield return BigtableTableAdminReflection.Descriptor;
-            yield return BigtableInstanceAdminReflection.Descriptor;
         }
     }
 }

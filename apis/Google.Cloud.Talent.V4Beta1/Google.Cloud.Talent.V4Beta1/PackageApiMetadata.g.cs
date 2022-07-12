@@ -29,19 +29,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return BatchReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompanyReflection.Descriptor;
-            yield return TenantReflection.Descriptor;
-            yield return TenantServiceReflection.Descriptor;
+            yield return CompanyServiceReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
             yield return EventReflection.Descriptor;
-            yield return CompanyServiceReflection.Descriptor;
-            yield return FiltersReflection.Descriptor;
-            yield return BatchReflection.Descriptor;
             yield return EventServiceReflection.Descriptor;
+            yield return FiltersReflection.Descriptor;
             yield return HistogramReflection.Descriptor;
             yield return JobReflection.Descriptor;
             yield return JobServiceReflection.Descriptor;
+            yield return TenantReflection.Descriptor;
+            yield return TenantServiceReflection.Descriptor;
         }
     }
 }
