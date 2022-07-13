@@ -35,7 +35,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5PYmplY3ROYW1lTWFwcGluZ0xpc3RI",
             "AhJBCgpzb3VyY2VfZW52GAYgASgLMi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
             "Lm1pZ3JhdGlvbi52Mi5Tb3VyY2VFbnZCEQoPc291cmNlX2xvY2F0aW9uQhEK",
-            "D3RhcmdldF9sb2NhdGlvbkIVChNvdXRwdXRfbmFtZV9tYXBwaW5nIpcHCgdE",
+            "D3RhcmdldF9sb2NhdGlvbkIVChNvdXRwdXRfbmFtZV9tYXBwaW5nIrkICgdE",
             "aWFsZWN0Ek8KEGJpZ3F1ZXJ5X2RpYWxlY3QYASABKAsyMy5nb29nbGUuY2xv",
             "dWQuYmlncXVlcnkubWlncmF0aW9uLnYyLkJpZ1F1ZXJ5RGlhbGVjdEgAEksK",
             "DmhpdmVxbF9kaWFsZWN0GAIgASgLMjEuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
@@ -55,41 +55,46 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "U3luYXBzZURpYWxlY3RIABJNCg92ZXJ0aWNhX2RpYWxlY3QYCiABKAsyMi5n",
             "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlZlcnRpY2FEaWFs",
             "ZWN0SAASUgoSc3FsX3NlcnZlcl9kaWFsZWN0GAsgASgLMjQuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5TUUxTZXJ2ZXJEaWFsZWN0SABC",
-            "DwoNZGlhbGVjdF92YWx1ZSIRCg9CaWdRdWVyeURpYWxlY3QiDwoNSGl2ZVFM",
-            "RGlhbGVjdCIRCg9SZWRzaGlmdERpYWxlY3QiigEKD1RlcmFkYXRhRGlhbGVj",
-            "dBJGCgRtb2RlGAEgASgOMjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3Jh",
-            "dGlvbi52Mi5UZXJhZGF0YURpYWxlY3QuTW9kZSIvCgRNb2RlEhQKEE1PREVf",
-            "VU5TUEVDSUZJRUQQABIHCgNTUUwQARIICgRCVEVREAIiDwoNT3JhY2xlRGlh",
-            "bGVjdCIRCg9TcGFya1NRTERpYWxlY3QiEgoQU25vd2ZsYWtlRGlhbGVjdCIQ",
-            "Cg5OZXRlenphRGlhbGVjdCIVChNBenVyZVN5bmFwc2VEaWFsZWN0IhAKDlZl",
-            "cnRpY2FEaWFsZWN0IhIKEFNRTFNlcnZlckRpYWxlY3QiYAoVT2JqZWN0TmFt",
-            "ZU1hcHBpbmdMaXN0EkcKCG5hbWVfbWFwGAEgAygLMjUuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5PYmplY3ROYW1lTWFwcGluZyKdAQoR",
-            "T2JqZWN0TmFtZU1hcHBpbmcSQgoGc291cmNlGAEgASgLMjIuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5OYW1lTWFwcGluZ0tleRJECgZ0",
-            "YXJnZXQYAiABKAsyNC5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
-            "LnYyLk5hbWVNYXBwaW5nVmFsdWUiqwIKDk5hbWVNYXBwaW5nS2V5EkUKBHR5",
-            "cGUYASABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
-            "Lk5hbWVNYXBwaW5nS2V5LlR5cGUSEAoIZGF0YWJhc2UYAiABKAkSDgoGc2No",
-            "ZW1hGAMgASgJEhAKCHJlbGF0aW9uGAQgASgJEhEKCWF0dHJpYnV0ZRgFIAEo",
-            "CSKKAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIREFUQUJBU0UQ",
-            "ARIKCgZTQ0hFTUEQAhIMCghSRUxBVElPThADEg0KCUFUVFJJQlVURRAEEhIK",
-            "DlJFTEFUSU9OX0FMSUFTEAUSEwoPQVRUUklCVVRFX0FMSUFTEAYSDAoIRlVO",
-            "Q1RJT04QByJZChBOYW1lTWFwcGluZ1ZhbHVlEhAKCGRhdGFiYXNlGAEgASgJ",
-            "Eg4KBnNjaGVtYRgCIAEoCRIQCghyZWxhdGlvbhgDIAEoCRIRCglhdHRyaWJ1",
-            "dGUYBCABKAkiQQoJU291cmNlRW52EhgKEGRlZmF1bHRfZGF0YWJhc2UYASAB",
-            "KAkSGgoSc2NoZW1hX3NlYXJjaF9wYXRoGAIgAygJQtkBCiZjb20uZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWVHJhbnNsYXRpb25Db25m",
-            "aWdQcm90b1ABWktnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlvbi92MjttaWdyYXRpb26qAiJH",
-            "b29nbGUuQ2xvdWQuQmlnUXVlcnkuTWlncmF0aW9uLlYyygIiR29vZ2xlXENs",
-            "b3VkXEJpZ1F1ZXJ5XE1pZ3JhdGlvblxWMmIGcHJvdG8z"));
+            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5TUUxTZXJ2ZXJEaWFsZWN0SAAS",
+            "UwoScG9zdGdyZXNxbF9kaWFsZWN0GAwgASgLMjUuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5Qb3N0Z3Jlc3FsRGlhbGVjdEgAEksKDnBy",
+            "ZXN0b19kaWFsZWN0GA0gASgLMjEuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1p",
+            "Z3JhdGlvbi52Mi5QcmVzdG9EaWFsZWN0SABCDwoNZGlhbGVjdF92YWx1ZSIR",
+            "Cg9CaWdRdWVyeURpYWxlY3QiDwoNSGl2ZVFMRGlhbGVjdCIRCg9SZWRzaGlm",
+            "dERpYWxlY3QiigEKD1RlcmFkYXRhRGlhbGVjdBJGCgRtb2RlGAEgASgOMjgu",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UZXJhZGF0YURp",
+            "YWxlY3QuTW9kZSIvCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIHCgNT",
+            "UUwQARIICgRCVEVREAIiDwoNT3JhY2xlRGlhbGVjdCIRCg9TcGFya1NRTERp",
+            "YWxlY3QiEgoQU25vd2ZsYWtlRGlhbGVjdCIQCg5OZXRlenphRGlhbGVjdCIV",
+            "ChNBenVyZVN5bmFwc2VEaWFsZWN0IhAKDlZlcnRpY2FEaWFsZWN0IhIKEFNR",
+            "TFNlcnZlckRpYWxlY3QiEwoRUG9zdGdyZXNxbERpYWxlY3QiDwoNUHJlc3Rv",
+            "RGlhbGVjdCJgChVPYmplY3ROYW1lTWFwcGluZ0xpc3QSRwoIbmFtZV9tYXAY",
+            "ASADKAsyNS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLk9i",
+            "amVjdE5hbWVNYXBwaW5nIp0BChFPYmplY3ROYW1lTWFwcGluZxJCCgZzb3Vy",
+            "Y2UYASABKAsyMi5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
+            "Lk5hbWVNYXBwaW5nS2V5EkQKBnRhcmdldBgCIAEoCzI0Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTmFtZU1hcHBpbmdWYWx1ZSKrAgoO",
+            "TmFtZU1hcHBpbmdLZXkSRQoEdHlwZRgBIAEoDjI3Lmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5taWdyYXRpb24udjIuTmFtZU1hcHBpbmdLZXkuVHlwZRIQCghk",
+            "YXRhYmFzZRgCIAEoCRIOCgZzY2hlbWEYAyABKAkSEAoIcmVsYXRpb24YBCAB",
+            "KAkSEQoJYXR0cmlidXRlGAUgASgJIooBCgRUeXBlEhQKEFRZUEVfVU5TUEVD",
+            "SUZJRUQQABIMCghEQVRBQkFTRRABEgoKBlNDSEVNQRACEgwKCFJFTEFUSU9O",
+            "EAMSDQoJQVRUUklCVVRFEAQSEgoOUkVMQVRJT05fQUxJQVMQBRITCg9BVFRS",
+            "SUJVVEVfQUxJQVMQBhIMCghGVU5DVElPThAHIlkKEE5hbWVNYXBwaW5nVmFs",
+            "dWUSEAoIZGF0YWJhc2UYASABKAkSDgoGc2NoZW1hGAIgASgJEhAKCHJlbGF0",
+            "aW9uGAMgASgJEhEKCWF0dHJpYnV0ZRgEIAEoCSJBCglTb3VyY2VFbnYSGAoQ",
+            "ZGVmYXVsdF9kYXRhYmFzZRgBIAEoCRIaChJzY2hlbWFfc2VhcmNoX3BhdGgY",
+            "AiADKAlC2QEKJmNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
+            "LnYyQhZUcmFuc2xhdGlvbkNvbmZpZ1Byb3RvUAFaS2dvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvbWlncmF0",
+            "aW9uL3YyO21pZ3JhdGlvbqoCIkdvb2dsZS5DbG91ZC5CaWdRdWVyeS5NaWdy",
+            "YXRpb24uVjLKAiJHb29nbGVcQ2xvdWRcQmlnUXVlcnlcTWlncmF0aW9uXFYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails), global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails.Parser, new[]{ "GcsSourcePath", "GcsTargetPath", "SourceDialect", "TargetDialect", "NameMappingList", "SourceEnv" }, new[]{ "SourceLocation", "TargetLocation", "OutputNameMapping" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.Dialect), global::Google.Cloud.BigQuery.Migration.V2.Dialect.Parser, new[]{ "BigqueryDialect", "HiveqlDialect", "RedshiftDialect", "TeradataDialect", "OracleDialect", "SparksqlDialect", "SnowflakeDialect", "NetezzaDialect", "AzureSynapseDialect", "VerticaDialect", "SqlServerDialect" }, new[]{ "DialectValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.Dialect), global::Google.Cloud.BigQuery.Migration.V2.Dialect.Parser, new[]{ "BigqueryDialect", "HiveqlDialect", "RedshiftDialect", "TeradataDialect", "OracleDialect", "SparksqlDialect", "SnowflakeDialect", "NetezzaDialect", "AzureSynapseDialect", "VerticaDialect", "SqlServerDialect", "PostgresqlDialect", "PrestoDialect" }, new[]{ "DialectValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.BigQueryDialect), global::Google.Cloud.BigQuery.Migration.V2.BigQueryDialect.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.HiveQLDialect), global::Google.Cloud.BigQuery.Migration.V2.HiveQLDialect.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.RedshiftDialect), global::Google.Cloud.BigQuery.Migration.V2.RedshiftDialect.Parser, null, null, null, null, null),
@@ -101,6 +106,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.AzureSynapseDialect), global::Google.Cloud.BigQuery.Migration.V2.AzureSynapseDialect.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.VerticaDialect), global::Google.Cloud.BigQuery.Migration.V2.VerticaDialect.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SQLServerDialect), global::Google.Cloud.BigQuery.Migration.V2.SQLServerDialect.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect), global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect), global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.ObjectNameMappingList), global::Google.Cloud.BigQuery.Migration.V2.ObjectNameMappingList.Parser, new[]{ "NameMap" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.ObjectNameMapping), global::Google.Cloud.BigQuery.Migration.V2.ObjectNameMapping.Parser, new[]{ "Source", "Target" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.NameMappingKey), global::Google.Cloud.BigQuery.Migration.V2.NameMappingKey.Parser, new[]{ "Type", "Database", "Schema", "Relation", "Attribute" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.NameMappingKey.Types.Type) }, null, null),
@@ -709,6 +716,12 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         case DialectValueOneofCase.SqlServerDialect:
           SqlServerDialect = other.SqlServerDialect.Clone();
           break;
+        case DialectValueOneofCase.PostgresqlDialect:
+          PostgresqlDialect = other.PostgresqlDialect.Clone();
+          break;
+        case DialectValueOneofCase.PrestoDialect:
+          PrestoDialect = other.PrestoDialect.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -885,6 +898,36 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
     }
 
+    /// <summary>Field number for the "postgresql_dialect" field.</summary>
+    public const int PostgresqlDialectFieldNumber = 12;
+    /// <summary>
+    /// The Postgresql dialect
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect PostgresqlDialect {
+      get { return dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect ? (global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect) dialectValue_ : null; }
+      set {
+        dialectValue_ = value;
+        dialectValueCase_ = value == null ? DialectValueOneofCase.None : DialectValueOneofCase.PostgresqlDialect;
+      }
+    }
+
+    /// <summary>Field number for the "presto_dialect" field.</summary>
+    public const int PrestoDialectFieldNumber = 13;
+    /// <summary>
+    /// The Presto dialect
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect PrestoDialect {
+      get { return dialectValueCase_ == DialectValueOneofCase.PrestoDialect ? (global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect) dialectValue_ : null; }
+      set {
+        dialectValue_ = value;
+        dialectValueCase_ = value == null ? DialectValueOneofCase.None : DialectValueOneofCase.PrestoDialect;
+      }
+    }
+
     private object dialectValue_;
     /// <summary>Enum of possible cases for the "dialect_value" oneof.</summary>
     public enum DialectValueOneofCase {
@@ -900,6 +943,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       AzureSynapseDialect = 9,
       VerticaDialect = 10,
       SqlServerDialect = 11,
+      PostgresqlDialect = 12,
+      PrestoDialect = 13,
     }
     private DialectValueOneofCase dialectValueCase_ = DialectValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -941,6 +986,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (!object.Equals(AzureSynapseDialect, other.AzureSynapseDialect)) return false;
       if (!object.Equals(VerticaDialect, other.VerticaDialect)) return false;
       if (!object.Equals(SqlServerDialect, other.SqlServerDialect)) return false;
+      if (!object.Equals(PostgresqlDialect, other.PostgresqlDialect)) return false;
+      if (!object.Equals(PrestoDialect, other.PrestoDialect)) return false;
       if (DialectValueCase != other.DialectValueCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -960,6 +1007,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (dialectValueCase_ == DialectValueOneofCase.AzureSynapseDialect) hash ^= AzureSynapseDialect.GetHashCode();
       if (dialectValueCase_ == DialectValueOneofCase.VerticaDialect) hash ^= VerticaDialect.GetHashCode();
       if (dialectValueCase_ == DialectValueOneofCase.SqlServerDialect) hash ^= SqlServerDialect.GetHashCode();
+      if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) hash ^= PostgresqlDialect.GetHashCode();
+      if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) hash ^= PrestoDialect.GetHashCode();
       hash ^= (int) dialectValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1023,6 +1072,14 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(SqlServerDialect);
       }
+      if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PostgresqlDialect);
+      }
+      if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) {
+        output.WriteRawTag(106);
+        output.WriteMessage(PrestoDialect);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1077,6 +1134,14 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(SqlServerDialect);
       }
+      if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PostgresqlDialect);
+      }
+      if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) {
+        output.WriteRawTag(106);
+        output.WriteMessage(PrestoDialect);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1119,6 +1184,12 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       if (dialectValueCase_ == DialectValueOneofCase.SqlServerDialect) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SqlServerDialect);
+      }
+      if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostgresqlDialect);
+      }
+      if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrestoDialect);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1198,6 +1269,18 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             SqlServerDialect = new global::Google.Cloud.BigQuery.Migration.V2.SQLServerDialect();
           }
           SqlServerDialect.MergeFrom(other.SqlServerDialect);
+          break;
+        case DialectValueOneofCase.PostgresqlDialect:
+          if (PostgresqlDialect == null) {
+            PostgresqlDialect = new global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect();
+          }
+          PostgresqlDialect.MergeFrom(other.PostgresqlDialect);
+          break;
+        case DialectValueOneofCase.PrestoDialect:
+          if (PrestoDialect == null) {
+            PrestoDialect = new global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect();
+          }
+          PrestoDialect.MergeFrom(other.PrestoDialect);
           break;
       }
 
@@ -1315,6 +1398,24 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             SqlServerDialect = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect();
+            if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) {
+              subBuilder.MergeFrom(PostgresqlDialect);
+            }
+            input.ReadMessage(subBuilder);
+            PostgresqlDialect = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect();
+            if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) {
+              subBuilder.MergeFrom(PrestoDialect);
+            }
+            input.ReadMessage(subBuilder);
+            PrestoDialect = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1427,6 +1528,24 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             }
             input.ReadMessage(subBuilder);
             SqlServerDialect = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.PostgresqlDialect();
+            if (dialectValueCase_ == DialectValueOneofCase.PostgresqlDialect) {
+              subBuilder.MergeFrom(PostgresqlDialect);
+            }
+            input.ReadMessage(subBuilder);
+            PostgresqlDialect = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.PrestoDialect();
+            if (dialectValueCase_ == DialectValueOneofCase.PrestoDialect) {
+              subBuilder.MergeFrom(PrestoDialect);
+            }
+            input.ReadMessage(subBuilder);
+            PrestoDialect = subBuilder;
             break;
           }
         }
@@ -3208,6 +3327,316 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   }
 
   /// <summary>
+  /// The dialect definition for Postgresql.
+  /// </summary>
+  public sealed partial class PostgresqlDialect : pb::IMessage<PostgresqlDialect>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PostgresqlDialect> _parser = new pb::MessageParser<PostgresqlDialect>(() => new PostgresqlDialect());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PostgresqlDialect> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostgresqlDialect() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostgresqlDialect(PostgresqlDialect other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostgresqlDialect Clone() {
+      return new PostgresqlDialect(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PostgresqlDialect);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PostgresqlDialect other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PostgresqlDialect other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The dialect definition for Presto.
+  /// </summary>
+  public sealed partial class PrestoDialect : pb::IMessage<PrestoDialect>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrestoDialect> _parser = new pb::MessageParser<PrestoDialect>(() => new PrestoDialect());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PrestoDialect> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrestoDialect() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrestoDialect(PrestoDialect other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrestoDialect Clone() {
+      return new PrestoDialect(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PrestoDialect);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PrestoDialect other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PrestoDialect other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents a map of name mappings using a list of key:value proto messages of
   /// existing name to desired output name.
   /// </summary>
@@ -3225,7 +3654,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3410,7 +3839,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3664,7 +4093,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4069,7 +4498,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4387,7 +4816,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
