@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Docs.Snippets", "..\tools\Google.Cloud.Docs.Snippets\Google.Cloud.Docs.Snippets.csproj", "{FB840CA0-F01C-4757-9791-D1C1F60D8578}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.RegenerateToc", "..\tools\Google.Cloud.Tools.RegenerateToc\Google.Cloud.Tools.RegenerateToc.csproj", "{D1C3EFCD-0ED3-4555-8437-007BAB1D3D63}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocfxMetadata", "..\tools\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.FetchDependencyXrefmaps", "..\tools\Google.Cloud.Tools.FetchDependencyXrefmaps\Google.Cloud.Tools.FetchDependencyXrefmaps.csproj", "{3734E267-99C5-4C80-9D73-D411B6773BC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,18 @@ Global
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x64.Build.0 = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.ActiveCfg = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.Build.0 = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x64.Build.0 = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Debug|x86.Build.0 = Debug|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.ActiveCfg = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.Build.0 = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.ActiveCfg = Release|Any CPU
+		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
