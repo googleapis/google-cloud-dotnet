@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -198,6 +198,74 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new Table
                 {
                     View = new ViewDefinition(),
+                    ExternalDataConfiguration = new ExternalDataConfiguration()
+                }));
+        }
+
+        [Fact]
+        public void CreateTable_ViewAndMaterializedView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            Assert.Throws<ArgumentException>(() => client.CreateTable(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    View = new ViewDefinition(),
+                    MaterializedView = new MaterializedViewDefinition()
+                }));
+        }
+
+        [Fact]
+        public async Task CreateTableAsync_ViewAndMaterializedView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.CreateTableAsync(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    View = new ViewDefinition(),
+                    MaterializedView = new MaterializedViewDefinition()
+                }));
+        }
+
+        [Fact]
+        public void CreateTable_MaterializedViewAndExternalDataConfiguration()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            Assert.Throws<ArgumentException>(() => client.CreateTable(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    MaterializedView = new MaterializedViewDefinition(),
+                    ExternalDataConfiguration = new ExternalDataConfiguration()
+                }));
+        }
+
+        [Fact]
+        public async Task CreateTableAsync_MaterializedViewAndExternalDataConfiguration()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.CreateTableAsync(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    MaterializedView = new MaterializedViewDefinition(),
                     ExternalDataConfiguration = new ExternalDataConfiguration()
                 }));
         }

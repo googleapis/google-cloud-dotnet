@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -266,10 +267,20 @@ namespace Google.Cloud.BigQuery.V2
                 resource.TableReference == null || tableReference.ReferencesSameAs(resource.TableReference),
                 nameof(resource.TableReference),
                 $"If {nameof(resource.TableReference)} is specified, it must be the same as {nameof(tableReference)}");
-            GaxPreconditions.CheckArgument(
-                !(resource.ExternalDataConfiguration is object && resource.View is object),
-                nameof(resource.ExternalDataConfiguration),
-                $"Cannot specify both {nameof(resource.ExternalDataConfiguration)} and {nameof(resource.View)}");
+            ValidateAtMostOneNotNull(
+                $"Only one of {resource.ExternalDataConfiguration}, {resource.View} or {resource.MaterializedView} may be specified.",
+                resource.ExternalDataConfiguration,
+                resource.View,
+                resource.MaterializedView);
+
+            void ValidateAtMostOneNotNull(string message, params object[] values)
+            {
+                int notNull = values.Count(v => v != null);
+                if (notNull > 1)
+                {
+                    throw new ArgumentException(message);
+                }
+            }
         }
 
         private DeleteRequest CreateDeleteTableRequest(TableReference tableReference, DeleteTableOptions options)
