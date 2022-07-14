@@ -1066,6 +1066,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("Table", tableResource.Kind);
             Assert.Equal("y", tableResource.Labels["x"]);
             Assert.Same(listResource.TableReference, tableResource.TableReference);
+            Assert.Same(listResource.TimePartitioning, tableResource.TimePartitioning);
             Assert.Equal("VIEW", tableResource.Type);
             Assert.True(tableResource.View.UseLegacySql);
             Assert.Equal(listResource.Clustering.Fields, tableResource.Clustering.Fields);
