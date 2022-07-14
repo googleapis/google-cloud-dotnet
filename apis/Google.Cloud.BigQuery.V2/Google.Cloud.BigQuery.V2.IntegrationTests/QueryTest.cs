@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -405,6 +405,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(1, queryResults.Count);
             // The earlier game is not present in the view
             Assert.Equal(85L, (long)queryResults[0]["score"]);
+        }
+
+        [Fact]
+        public void QueryOnMaterializedView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var viewDefinition = new MaterializedViewDefinition { Query = $"SELECT player, MAX(score) AS score FROM {table} WHERE player IS NOT NULL GROUP BY player" };
+            var view = client.CreateTable(_fixture.DatasetId, "highscore_materialized_view", new Table { MaterializedView = viewDefinition });
+
+            // This is how a client can check that a BigQueryTable is a view.
+            Assert.NotNull(view.Resource.MaterializedView);
+
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {view} WHERE player = 'Bob'", parameters: null).ToList();
+            Assert.Equal(1, queryResults.Count);
+            // The earlier game is not present in the view
+            Assert.Equal(85L, (long) queryResults[0]["score"]);
         }
 
         [Fact]
