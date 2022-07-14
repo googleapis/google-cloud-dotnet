@@ -365,6 +365,7 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Batch",
+      "productUrl": "https://cloud.google.com/batch/docs/",
       "description": "Recommended Google client library to access the Batch API (v1), which allows you to manage the running of batch jobs on Google Cloud Platform.",
       "tags": [
         "batch"
@@ -381,9 +382,10 @@
     },
     {
       "id": "Google.Cloud.Batch.V1Alpha",
-      "version": "1.0.0-alpha00",
+      "version": "1.0.0-alpha01",
       "type": "grpc",
       "productName": "Batch",
+      "productUrl": "https://cloud.google.com/batch/docs/",
       "description": "Recommended Google client library to access the Batch API (v1alpha), which allows you to manage the running of batch jobs on Google Cloud Platform.",
       "tags": [
         "batch"
