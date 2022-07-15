@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -95,6 +97,8 @@ namespace Google.Cloud.Dataplex.V1
             ListEnvironmentsSettings = existing.ListEnvironmentsSettings;
             GetEnvironmentSettings = existing.GetEnvironmentSettings;
             ListSessionsSettings = existing.ListSessionsSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -713,10 +717,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DataplexServiceClient.CreateEnvironment</c> and
@@ -743,10 +747,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DataplexServiceClient.UpdateEnvironment</c> and
@@ -773,10 +777,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DataplexServiceClient.DeleteEnvironment</c> and
@@ -802,11 +806,17 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListEnvironmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListEnvironmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -814,11 +824,17 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetEnvironmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -831,6 +847,16 @@ namespace Google.Cloud.Dataplex.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSessionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataplexServiceSettings"/> object.</returns>
@@ -893,9 +919,9 @@ namespace Google.Cloud.Dataplex.V1
     /// <remarks>
     /// Dataplex service provides data lakes as a service. The primary resources
     /// offered by this service are Lakes, Zones and Assets which collectively allow
-    /// a data adminstrator to organize, manage, secure and catalog data across their
-    /// organization located across cloud projects in a variety of storage systems
-    /// including Cloud Storage and BigQuery.
+    /// a data administrator to organize, manage, secure and catalog data across
+    /// their organization located across cloud projects in a variety of storage
+    /// systems including Cloud Storage and BigQuery.
     /// </remarks>
     public abstract partial class DataplexServiceClient
     {
@@ -976,6 +1002,12 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>The underlying gRPC DataplexService client</summary>
         public virtual DataplexService.DataplexServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a lake resource.
@@ -1374,7 +1406,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1390,7 +1422,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1406,7 +1438,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1419,7 +1451,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1435,7 +1467,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1451,7 +1483,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1714,7 +1746,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1739,7 +1771,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1764,7 +1796,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1789,7 +1821,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2695,7 +2727,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -2725,7 +2757,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -2755,7 +2787,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -2780,7 +2812,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -2810,7 +2842,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -2840,7 +2872,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent zone:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
         /// </param>
         /// <param name="asset">
         /// Required. Asset resource.
@@ -4033,7 +4065,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4048,7 +4080,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4063,7 +4095,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4075,7 +4107,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4090,7 +4122,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4105,7 +4137,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the task:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4511,7 +4543,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4539,7 +4571,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4567,7 +4599,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4590,7 +4622,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4618,7 +4650,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4646,7 +4678,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="environment">
         /// Required. Environment resource.
@@ -4834,7 +4866,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4850,7 +4882,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4866,7 +4898,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4879,7 +4911,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4895,7 +4927,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4911,7 +4943,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4941,7 +4973,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4966,7 +4998,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4991,7 +5023,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5016,7 +5048,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent lake:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5068,7 +5100,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5083,7 +5115,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5098,7 +5130,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5110,7 +5142,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5125,7 +5157,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5140,7 +5172,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the environment:
-        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// `projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5170,7 +5202,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5195,7 +5227,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5220,7 +5252,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5245,7 +5277,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5270,9 +5302,9 @@ namespace Google.Cloud.Dataplex.V1
     /// <remarks>
     /// Dataplex service provides data lakes as a service. The primary resources
     /// offered by this service are Lakes, Zones and Assets which collectively allow
-    /// a data adminstrator to organize, manage, secure and catalog data across their
-    /// organization located across cloud projects in a variety of storage systems
-    /// including Cloud Storage and BigQuery.
+    /// a data administrator to organize, manage, secure and catalog data across
+    /// their organization located across cloud projects in a variety of storage
+    /// systems including Cloud Storage and BigQuery.
     /// </remarks>
     public sealed partial class DataplexServiceClientImpl : DataplexServiceClient
     {
@@ -5366,6 +5398,8 @@ namespace Google.Cloud.Dataplex.V1
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings, logger);
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateLake = clientHelper.BuildApiCall<CreateLakeRequest, lro::Operation>("CreateLake", grpcClient.CreateLakeAsync, grpcClient.CreateLake, effectiveSettings.CreateLakeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateLake);
             Modify_CreateLakeApiCall(ref _callCreateLake);
@@ -5535,6 +5569,12 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>The underlying gRPC DataplexService client</summary>
         public override DataplexService.DataplexServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateLakeRequest(ref CreateLakeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6537,6 +6577,32 @@ namespace Google.Cloud.Dataplex.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class DataplexService
+    {
+        public partial class DataplexServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

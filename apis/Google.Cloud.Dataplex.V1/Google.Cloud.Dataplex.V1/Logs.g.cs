@@ -26,7 +26,7 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvbG9ncy5wcm90bxIYZ29vZ2xl",
             "LmNsb3VkLmRhdGFwbGV4LnYxGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/wgKDkRp",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ioAkKDkRp",
             "c2NvdmVyeUV2ZW50Eg8KB21lc3NhZ2UYASABKAkSDwoHbGFrZV9pZBgCIAEo",
             "CRIPCgd6b25lX2lkGAMgASgJEhAKCGFzc2V0X2lkGAQgASgJEhUKDWRhdGFf",
             "bG9jYXRpb24YBSABKAkSQAoEdHlwZRgKIAEoDjIyLmdvb2dsZS5jbG91ZC5k",
@@ -43,50 +43,50 @@ namespace Google.Cloud.Dataplex.V1 {
             "D1BhcmFtZXRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
             "AjgBGmIKDUVudGl0eURldGFpbHMSDgoGZW50aXR5GAEgASgJEkEKBHR5cGUY",
             "AiABKA4yMy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGlzY292ZXJ5RXZl",
-            "bnQuRW50aXR5VHlwZRp4ChBQYXJ0aXRpb25EZXRhaWxzEhEKCXBhcnRpdGlv",
-            "bhgBIAEoCRIOCgZlbnRpdHkYAiABKAkSQQoEdHlwZRgDIAEoDjIzLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5EaXNjb3ZlcnlFdmVudC5FbnRpdHlUeXBl",
-            "Gh0KDUFjdGlvbkRldGFpbHMSDAoEdHlwZRgBIAEoCSK0AQoJRXZlbnRUeXBl",
-            "EhoKFkVWRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZDT05GSUcQARISCg5F",
-            "TlRJVFlfQ1JFQVRFRBACEhIKDkVOVElUWV9VUERBVEVEEAMSEgoORU5USVRZ",
-            "X0RFTEVURUQQBBIVChFQQVJUSVRJT05fQ1JFQVRFRBAFEhUKEVBBUlRJVElP",
-            "Tl9VUERBVEVEEAYSFQoRUEFSVElUSU9OX0RFTEVURUQQByJBCgpFbnRpdHlU",
-            "eXBlEhsKF0VOVElUWV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVEFCTEUQARIL",
-            "CgdGSUxFU0VUEAJCCQoHZGV0YWlscyKcBAoISm9iRXZlbnQSDwoHbWVzc2Fn",
-            "ZRgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLgoKc3RhcnRfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKBXN0YXRlGAUgASgOMigu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkpvYkV2ZW50LlN0YXRlEg8KB3Jl",
-            "dHJpZXMYBiABKAUSNQoEdHlwZRgHIAEoDjInLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5Kb2JFdmVudC5UeXBlEjsKB3NlcnZpY2UYCCABKA4yKi5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjEuSm9iRXZlbnQuU2VydmljZRITCgtzZXJ2",
-            "aWNlX2pvYhgJIAEoCSI1CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIJ",
-            "CgVTUEFSSxABEgwKCE5PVEVCT09LEAIiVQoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABINCglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhINCglDQU5D",
-            "RUxMRUQQAxILCgdBQk9SVEVEEAQiMAoHU2VydmljZRIXChNTRVJWSUNFX1VO",
-            "U1BFQ0lGSUVEEAASDAoIREFUQVBST0MQASLCBAoMU2Vzc2lvbkV2ZW50Eg8K",
-            "B21lc3NhZ2UYASABKAkSDwoHdXNlcl9pZBgCIAEoCRISCgpzZXNzaW9uX2lk",
-            "GAMgASgJEj4KBHR5cGUYBCABKA4yMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
-            "djEuU2Vzc2lvbkV2ZW50LkV2ZW50VHlwZRJDCgVxdWVyeRgFIAEoCzIyLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5TZXNzaW9uRXZlbnQuUXVlcnlEZXRh",
-            "aWxIABqjAgoLUXVlcnlEZXRhaWwSEAoIcXVlcnlfaWQYASABKAkSEgoKcXVl",
-            "cnlfdGV4dBgCIAEoCRJJCgZlbmdpbmUYAyABKA4yOS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuU2Vzc2lvbkV2ZW50LlF1ZXJ5RGV0YWlsLkVuZ2luZRIr",
-            "CghkdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIZ",
-            "ChFyZXN1bHRfc2l6ZV9ieXRlcxgFIAEoAxIcChRkYXRhX3Byb2Nlc3NlZF9i",
-            "eXRlcxgGIAEoAyI9CgZFbmdpbmUSFgoSRU5HSU5FX1VOU1BFQ0lGSUVEEAAS",
-            "DQoJU1BBUktfU1FMEAESDAoIQklHUVVFUlkQAiJHCglFdmVudFR5cGUSGgoW",
-            "RVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNUQVJUEAESCAoEU1RPUBAC",
-            "EgkKBVFVRVJZEANCCAoGZGV0YWlsQm0KHGNvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjFCCUxvZ3NQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwbGV4L3YxO2RhdGFwbGV4YgZw",
-            "cm90bzM="));
+            "bnQuRW50aXR5VHlwZRqYAQoQUGFydGl0aW9uRGV0YWlscxIRCglwYXJ0aXRp",
+            "b24YASABKAkSDgoGZW50aXR5GAIgASgJEkEKBHR5cGUYAyABKA4yMy5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGlzY292ZXJ5RXZlbnQuRW50aXR5VHlw",
+            "ZRIeChZzYW1wbGVkX2RhdGFfbG9jYXRpb25zGAQgAygJGh0KDUFjdGlvbkRl",
+            "dGFpbHMSDAoEdHlwZRgBIAEoCSK0AQoJRXZlbnRUeXBlEhoKFkVWRU5UX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIKCgZDT05GSUcQARISCg5FTlRJVFlfQ1JFQVRF",
+            "RBACEhIKDkVOVElUWV9VUERBVEVEEAMSEgoORU5USVRZX0RFTEVURUQQBBIV",
+            "ChFQQVJUSVRJT05fQ1JFQVRFRBAFEhUKEVBBUlRJVElPTl9VUERBVEVEEAYS",
+            "FQoRUEFSVElUSU9OX0RFTEVURUQQByJBCgpFbnRpdHlUeXBlEhsKF0VOVElU",
+            "WV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVEFCTEUQARILCgdGSUxFU0VUEAJC",
+            "CQoHZGV0YWlscyKcBAoISm9iRXZlbnQSDwoHbWVzc2FnZRgBIAEoCRIOCgZq",
+            "b2JfaWQYAiABKAkSLgoKc3RhcnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjcKBXN0YXRlGAUgASgOMiguZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkpvYkV2ZW50LlN0YXRlEg8KB3JldHJpZXMYBiABKAUS",
+            "NQoEdHlwZRgHIAEoDjInLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Kb2JF",
+            "dmVudC5UeXBlEjsKB3NlcnZpY2UYCCABKA4yKi5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuSm9iRXZlbnQuU2VydmljZRITCgtzZXJ2aWNlX2pvYhgJIAEo",
+            "CSI1CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIJCgVTUEFSSxABEgwK",
+            "CE5PVEVCT09LEAIiVQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIN",
+            "CglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhINCglDQU5DRUxMRUQQAxILCgdB",
+            "Qk9SVEVEEAQiMAoHU2VydmljZRIXChNTRVJWSUNFX1VOU1BFQ0lGSUVEEAAS",
+            "DAoIREFUQVBST0MQASLCBAoMU2Vzc2lvbkV2ZW50Eg8KB21lc3NhZ2UYASAB",
+            "KAkSDwoHdXNlcl9pZBgCIAEoCRISCgpzZXNzaW9uX2lkGAMgASgJEj4KBHR5",
+            "cGUYBCABKA4yMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Vzc2lvbkV2",
+            "ZW50LkV2ZW50VHlwZRJDCgVxdWVyeRgFIAEoCzIyLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5TZXNzaW9uRXZlbnQuUXVlcnlEZXRhaWxIABqjAgoLUXVl",
+            "cnlEZXRhaWwSEAoIcXVlcnlfaWQYASABKAkSEgoKcXVlcnlfdGV4dBgCIAEo",
+            "CRJJCgZlbmdpbmUYAyABKA4yOS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "U2Vzc2lvbkV2ZW50LlF1ZXJ5RGV0YWlsLkVuZ2luZRIrCghkdXJhdGlvbhgE",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIZChFyZXN1bHRfc2l6",
+            "ZV9ieXRlcxgFIAEoAxIcChRkYXRhX3Byb2Nlc3NlZF9ieXRlcxgGIAEoAyI9",
+            "CgZFbmdpbmUSFgoSRU5HSU5FX1VOU1BFQ0lGSUVEEAASDQoJU1BBUktfU1FM",
+            "EAESDAoIQklHUVVFUlkQAiJHCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgkKBVNUQVJUEAESCAoEU1RPUBACEgkKBVFVRVJZEANC",
+            "CAoGZGV0YWlsQm0KHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCCUxv",
+            "Z3NQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2RhdGFwbGV4L3YxO2RhdGFwbGV4YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Parser, new[]{ "Message", "LakeId", "ZoneId", "AssetId", "DataLocation", "Type", "Config", "Entity", "Partition", "Action" }, new[]{ "Details" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EventType), typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ConfigDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ConfigDetails.Parser, new[]{ "Parameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityDetails.Parser, new[]{ "Entity", "Type" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails.Parser, new[]{ "Partition", "Entity", "Type" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails.Parser, new[]{ "Partition", "Entity", "Type", "SampledDataLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.JobEvent), global::Google.Cloud.Dataplex.V1.JobEvent.Parser, new[]{ "Message", "JobId", "StartTime", "EndTime", "State", "Retries", "Type", "Service", "ServiceJob" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Type), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.State), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Service) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent), global::Google.Cloud.Dataplex.V1.SessionEvent.Parser, new[]{ "Message", "UserId", "SessionId", "Type", "Query" }, new[]{ "Detail" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail), global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Parser, new[]{ "QueryId", "QueryText", "Engine", "Duration", "ResultSizeBytes", "DataProcessedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Types.Engine) }, null, null)})
@@ -1264,6 +1264,7 @@ namespace Google.Cloud.Dataplex.V1 {
           partition_ = other.partition_;
           entity_ = other.entity_;
           type_ = other.type_;
+          sampledDataLocations_ = other.sampledDataLocations_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1320,6 +1321,21 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "sampled_data_locations" field.</summary>
+        public const int SampledDataLocationsFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_sampledDataLocations_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> sampledDataLocations_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The locations of the data items (e.g., a Cloud Storage objects) sampled
+        /// for metadata inference.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> SampledDataLocations {
+          get { return sampledDataLocations_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1338,6 +1354,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (Partition != other.Partition) return false;
           if (Entity != other.Entity) return false;
           if (Type != other.Type) return false;
+          if(!sampledDataLocations_.Equals(other.sampledDataLocations_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1348,6 +1365,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (Partition.Length != 0) hash ^= Partition.GetHashCode();
           if (Entity.Length != 0) hash ^= Entity.GetHashCode();
           if (Type != global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType.Unspecified) hash ^= Type.GetHashCode();
+          hash ^= sampledDataLocations_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1378,6 +1396,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(24);
             output.WriteEnum((int) Type);
           }
+          sampledDataLocations_.WriteTo(output, _repeated_sampledDataLocations_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1400,6 +1419,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(24);
             output.WriteEnum((int) Type);
           }
+          sampledDataLocations_.WriteTo(ref output, _repeated_sampledDataLocations_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1419,6 +1439,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (Type != global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
+          size += sampledDataLocations_.CalculateSize(_repeated_sampledDataLocations_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1440,6 +1461,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (other.Type != global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType.Unspecified) {
             Type = other.Type;
           }
+          sampledDataLocations_.Add(other.sampledDataLocations_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1467,6 +1489,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 Type = (global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType) input.ReadEnum();
                 break;
               }
+              case 34: {
+                sampledDataLocations_.AddEntriesFrom(input, _repeated_sampledDataLocations_codec);
+                break;
+              }
             }
           }
         #endif
@@ -1492,6 +1518,10 @@ namespace Google.Cloud.Dataplex.V1 {
               }
               case 24: {
                 Type = (global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.EntityType) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                sampledDataLocations_.AddEntriesFrom(ref input, _repeated_sampledDataLocations_codec);
                 break;
               }
             }

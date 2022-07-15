@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -26,9 +26,9 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Dataplex service provides data lakes as a service. The primary resources
   /// offered by this service are Lakes, Zones and Assets which collectively allow
-  /// a data adminstrator to organize, manage, secure and catalog data across their
-  /// organization located across cloud projects in a variety of storage systems
-  /// including Cloud Storage and BigQuery.
+  /// a data administrator to organize, manage, secure and catalog data across
+  /// their organization located across cloud projects in a variety of storage
+  /// systems including Cloud Storage and BigQuery.
   /// </summary>
   public static partial class DataplexService
   {
@@ -2447,7 +2447,7 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_ListSessions, serviceImpl.ListSessions).Build();
     }
 
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
