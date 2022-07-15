@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -294,6 +294,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
 
             Assert.ThrowsAny<GoogleApiException>(() => client.CreateQueryJob($"SELECT * FROM {table}", null, options));
+        }
+
+        [Fact]
+        public void DeleteJob()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
+            // We need to wait for the job to be completed before being able to delete it.
+            var jobToFind = client.CreateQueryJob($"SELECT * FROM {table}", parameters: null).PollUntilCompleted();
+
+            client.DeleteJob(jobToFind.Reference);
         }
 
         internal static void VerifyJobLabels(IDictionary<string, string> actual)
