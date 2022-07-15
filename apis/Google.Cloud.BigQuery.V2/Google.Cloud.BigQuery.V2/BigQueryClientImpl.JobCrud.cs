@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -174,6 +174,20 @@ namespace Google.Cloud.BigQuery.V2
             return new BigQueryJob(this, job);
         }
 
+        /// <inheritdoc />
+        public override void DeleteJob(JobReference jobReference, DeleteJobOptions options = null)
+        {
+            var request = CreateDeleteJobRequest(jobReference, options);
+            request.Execute();
+        }
+
+        /// <inheritdoc />
+        public override async Task DeleteJobAsync(JobReference jobReference, DeleteJobOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateDeleteJobRequest(jobReference, options);
+            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
         internal const string DefaultJobIdPrefix = "job_";
 
         /// <summary>
@@ -299,6 +313,16 @@ namespace Google.Cloud.BigQuery.V2
             var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceModel = modelReference };
             options?.ModifyRequest(extract);
             return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
+        }
+
+        private DeleteRequest CreateDeleteJobRequest(JobReference jobReference, DeleteJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            var request = Service.Jobs.Delete(jobReference.ProjectId, jobReference.JobId);
+            request.Location = jobReference.Location;
+            options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
+            return request;
         }
     }
 }

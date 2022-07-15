@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -658,6 +658,19 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.ListJobs(MatchesWhenSerialized(reference), options),
                 client => client.ListJobs(options),
                 client => client.ListJobs(ProjectId, options));
+        }
+
+        [Fact]
+        public void DeleteJobEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new DeleteJobOptions();
+            VerifyEquivalent(
+                client => client.DeleteJob(MatchesWhenSerialized(reference), options),
+                client => client.DeleteJob(jobId, options),
+                client => client.DeleteJob(ProjectId, jobId, options),
+                client => new BigQueryJob(client, new Job { JobReference = reference }).Delete(options));
         }
 
         [Fact]
@@ -1405,6 +1418,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.ListJobsAsync(MatchesWhenSerialized(reference), options),
                 client => client.ListJobsAsync(options),
                 client => client.ListJobsAsync(ProjectId, options));
+        }
+
+        [Fact]
+        public void DeleteJobAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new DeleteJobOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                client => client.DeleteJobAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.DeleteJobAsync(jobId, options, token),
+                client => client.DeleteJobAsync(ProjectId, jobId, options, token),
+                client => new BigQueryJob(client, new Job { JobReference = reference }).DeleteAsync(options, token));
         }
 
         [Fact]

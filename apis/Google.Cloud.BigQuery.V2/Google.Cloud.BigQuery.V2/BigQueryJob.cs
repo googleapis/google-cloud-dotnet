@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -191,6 +191,13 @@ namespace Google.Cloud.BigQuery.V2
         public BigQueryJob Cancel(CancelJobOptions options = null) => _client.CancelJob(Reference, options);
 
         /// <summary>
+        /// Deletes this job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.DeleteJob(JobReference, DeleteJobOptions)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Delete(DeleteJobOptions options = null) => _client.DeleteJob(Reference, options);
+
+        /// <summary>
         /// Asynchronously polls this job for completion.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.PollJobUntilCompletedAsync(JobReference, GetJobOptions, PollSettings, CancellationToken)"/>.
         /// </summary>
@@ -229,6 +236,17 @@ namespace Google.Cloud.BigQuery.V2
         /// the final state of the job.</returns>
         public Task<BigQueryJob> CancelAsync(CancelJobOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CancelJobAsync(Reference, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously deletes this job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.DeleteJobAsync(JobReference, DeleteJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the final state of the job.</returns>
+        public Task DeleteAsync(DeleteJobOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.DeleteJobAsync(Reference, options, cancellationToken);
 
         /// <summary>
         /// The query destination table can be null if it's been fetched with and odd field mask
