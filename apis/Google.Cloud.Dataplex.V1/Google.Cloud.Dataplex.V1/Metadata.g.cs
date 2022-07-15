@@ -829,7 +829,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Required. The etag associated with the partition if it was previously retrieved.
+    /// Required. The etag associated with the entity, which can be retrieved with a
+    /// [GetEntity][] request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1124,8 +1125,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// - Entity ID: ?filter="id=entityID"
     /// - Asset ID: ?filter="asset=assetID"
     /// - Data path ?filter="data_path=gs://my-bucket"
-    /// - Is HIVE compatible: ?filter=”hive_compatible=true”
-    /// - Is BigQuery compatible: ?filter=”bigquery_compatible=true”
+    /// - Is HIVE compatible: ?filter="hive_compatible=true"
+    /// - Is BigQuery compatible: ?filter="bigquery_compatible=true"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1373,7 +1374,8 @@ namespace Google.Cloud.Dataplex.V1 {
       /// </summary>
       public enum EntityView {
         /// <summary>
-        /// The default unset value. The API will default to the FULL view.
+        /// The default unset value. Return both table and fileset entities
+        /// if unspecified.
         /// </summary>
         [pbr::OriginalName("ENTITY_VIEW_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1988,14 +1990,14 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter the partitions returned to the caller using a key vslue pair
-    /// expression. The filter expression supports:
+    /// Optional. Filter the partitions returned to the caller using a key value pair
+    /// expression. Supported operators and syntax:
     ///
-    /// - logical operators: AND, OR
+    /// - logic operators: AND, OR
     /// - comparison operators: &lt;, >, >=, &lt;= ,=, !=
     /// - LIKE operators:
-    ///     - The right hand of a LIKE operator supports “.” and
-    ///       “*” for wildcard searches, for example "value1 LIKE ".*oo.*"
+    ///   - The right hand of a LIKE operator supports "." and
+    ///     "*" for wildcard searches, for example "value1 LIKE ".*oo.*"
     /// - parenthetical grouping: ( )
     ///
     /// Sample filter expression: `?filter="key1 &lt; value1 OR key2 > value2"
@@ -2579,7 +2581,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag associated with the partition if it was previously retrieved.
+    /// Optional. The etag associated with the partition.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3253,7 +3255,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. Display name must be shorter than or equal to 63 characters.
+    /// Optional. Display name must be shorter than or equal to 256 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3318,7 +3320,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// published table name. Specifying a new ID in an update entity
     /// request will override the existing value.
     /// The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-    /// underscores. Must begin with a letter.
+    /// underscores. Must begin with a letter and consist of 256 or fewer
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3333,8 +3336,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag for this entity. Required for update and delete requests. Must
-    /// match the server's etag.
+    /// Optional. The etag associated with the entity, which can be retrieved with a
+    /// [GetEntity][] request. Required for update and delete requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4606,13 +4609,11 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The values must be HTML URL encoded two times before constructing the path.
-    /// For example, if you have a value of "US:CA", encoded it two times and you
-    /// get "US%253ACA". Then if you have the 2nd value is "CA#Sunnyvale", encoded
-    /// two times and you get "CA%2523Sunnyvale". The partition values path is
-    /// "US%253ACA/CA%2523Sunnyvale". The final URL will be
-    /// "https://.../partitions/US%253ACA/CA%2523Sunnyvale". The name field in the
-    /// responses will always have the encoded format.
+    /// Output only. Partition values used in the HTTP URL must be
+    /// double encoded. For example, `url_encode(url_encode(value))` can be used
+    /// to encode "US:CA/CA#Sunnyvale so that the request URL ends
+    /// with "/partitions/US%253ACA/CA%2523Sunnyvale".
+    /// The name field in the response retains the encoded format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4920,23 +4921,19 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UserManagedFieldNumber = 1;
     private bool userManaged_;
     /// <summary>
-    /// Required. Whether the schema is user-managed or managed by the service.
-    /// - Set user_manage to false if you would like Dataplex to help you manage
-    /// the schema. You will get the full service provided by Dataplex discovery,
-    /// including new data discovery, schema inference and schema evolution. You
-    /// can still provide input the schema of the entities, for example renaming a
-    /// schema field, changing CSV or Json options if you think the discovered
-    /// values are not as accurate. Dataplex will consider your input as the
-    /// initial schema (as if they were produced by the previous discovery run),
-    /// and will evolve schema or flag actions based on that.
-    /// - Set user_manage to true if you would like to fully manage the entity
-    /// schema by yourself. This is useful when you would like to manually specify
-    /// the schema for a table. In this case, the schema defined by the user is
-    /// guaranteed to be kept unchanged and would not be overwritten. But this also
-    /// means Dataplex will not provide schema evolution management for you.
-    /// Dataplex will still be able to manage partition registration (i.e., keeping
-    /// the list of partitions up to date) when Dataplex discovery is turned on and
-    /// user_managed is set to true.
+    /// Required. Set to `true` if user-managed or `false` if managed by Dataplex. The
+    /// default is `false` (managed by Dataplex).
+    ///
+    /// - Set to `false`to enable Dataplex discovery to update the schema.
+    ///   including new data discovery, schema inference, and schema evolution.
+    ///   Users retain the ability to input and edit the schema. Dataplex
+    ///   treats schema input by the user as though produced
+    ///   by a previous Dataplex discovery operation, and it will
+    ///   evolve the schema and take action based on that treatment.
+    ///
+    /// - Set to `true` to fully manage the entity
+    ///   schema. This setting guarantees that Dataplex will not
+    ///   change schema fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4954,6 +4951,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Schema.Types.SchemaField> fields_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Schema.Types.SchemaField>();
     /// <summary>
     /// Optional. The sequence of fields describing data in table entities.
+    /// **Note:** BigQuery SchemaFields are immutable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5343,8 +5341,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. The name of the field. The maximum length is 767 characters. The name
-        /// must begins with a letter and not contains `:` and `.`.
+        /// Required. The name of the field. Must contain only letters, numbers and
+        /// underscores, with a maximum length of 767 characters,
+        /// and must begin with a letter or underscore.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5637,7 +5636,8 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Represents a key field within the entity's partition structure. You could
       /// have up to 20 partition fields, but only the first 10 partitions have the
-      /// filtering ability due to performance consideration.
+      /// filtering ability due to performance consideration. **Note:**
+      /// Partition fields are immutable.
       /// </summary>
       public sealed partial class PartitionField : pb::IMessage<PartitionField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5688,8 +5688,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. Partition name is editable if only the partition style is not HIVE
-        /// compatible. The maximum length allowed is 767 characters.
+        /// Required. Partition field name must consist of letters, numbers, and underscores
+        /// only, with a maximum of length of 256 characters,
+        /// and must begin with a letter or underscore..
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5973,6 +5974,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The mime type descriptor for the data. Must match the pattern
     /// {type}/{subtype}. Supported values:
+    ///
     /// - application/x-parquet
     /// - application/x-avro
     /// - application/x-orc
@@ -6485,8 +6487,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int QuoteFieldNumber = 4;
         private string quote_ = "";
         /// <summary>
-        /// Optional. The character used to quote column values. Accepts '"' and '''.
-        /// Defaults to '"' if unspecified.
+        /// Optional. The character used to quote column values. Accepts '"'
+        /// (double quotation mark) or ''' (single quotation mark). Defaults to
+        /// '"' (double quotation mark) if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

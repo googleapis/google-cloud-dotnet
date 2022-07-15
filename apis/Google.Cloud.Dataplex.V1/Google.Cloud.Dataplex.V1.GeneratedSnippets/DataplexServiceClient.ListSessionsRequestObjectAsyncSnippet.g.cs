@@ -40,6 +40,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             ListSessionsRequest request = new ListSessionsRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(request);

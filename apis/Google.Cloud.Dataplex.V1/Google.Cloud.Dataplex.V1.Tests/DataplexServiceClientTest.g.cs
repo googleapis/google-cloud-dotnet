@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -71,6 +75,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -110,6 +116,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -147,6 +155,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -186,6 +196,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -223,6 +235,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetLakeRequest request = new GetLakeRequest
             {
                 LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
@@ -262,6 +276,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -299,6 +315,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -338,6 +356,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -375,6 +395,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -414,6 +436,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -451,6 +475,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetZoneRequest request = new GetZoneRequest
             {
                 ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
@@ -490,6 +516,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -528,6 +556,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -568,6 +598,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -606,6 +638,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -646,6 +680,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -684,6 +720,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAssetRequest request = new GetAssetRequest
             {
                 AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
@@ -724,6 +762,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -746,6 +786,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -760,6 +801,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -782,6 +825,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -798,6 +842,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -820,6 +866,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -834,6 +881,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -856,6 +905,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -872,6 +922,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -894,6 +946,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -908,6 +961,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
@@ -930,6 +985,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 },
                 TriggerSpec = new Task.Types.TriggerSpec(),
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
+                ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -946,6 +1002,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -974,6 +1032,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1004,6 +1064,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1032,6 +1094,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1062,6 +1126,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1090,6 +1156,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1120,6 +1188,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1136,6 +1206,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1153,6 +1225,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1169,6 +1243,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1186,6 +1262,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1202,6 +1280,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
@@ -1219,6 +1299,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
@@ -1256,6 +1338,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
@@ -1295,6 +1379,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
@@ -1332,6 +1418,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
@@ -1371,6 +1459,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
@@ -1408,6 +1498,8 @@ namespace Google.Cloud.Dataplex.V1.Tests
         {
             moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
