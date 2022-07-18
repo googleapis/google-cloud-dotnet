@@ -270,6 +270,112 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedServices_sync",
+      "title": "RestrictAllowedServicesRequestObject",
+      "description": "Snippet for RestrictAllowedServices",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedServicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedServices",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedServices",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedServices",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedServices",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedServices_async",
+      "title": "RestrictAllowedServicesRequestObjectAsync",
+      "description": "Snippet for RestrictAllowedServicesAsync",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedServicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedServicesAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedServicesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedServices",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedServices",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedResources_sync",
+      "title": "RestrictAllowedResourcesRequestObject",
+      "description": "Snippet for RestrictAllowedResources",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResources",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedResources",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedResources_async",
+      "title": "RestrictAllowedResourcesRequestObjectAsync",
+      "description": "Snippet for RestrictAllowedResourcesAsync",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResourcesAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedResourcesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_sync",
       "title": "DeleteWorkloadRequestObject",
       "description": "Snippet for DeleteWorkload",
@@ -568,6 +674,110 @@
         "method": {
           "shortName": "GetWorkload",
           "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_sync",
+      "title": "AnalyzeWorkloadMoveRequestObject",
+      "description": "Snippet for AnalyzeWorkloadMove",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMove",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMove",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_async",
+      "title": "AnalyzeWorkloadMoveRequestObjectAsync",
+      "description": "Snippet for AnalyzeWorkloadMoveAsync",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMoveAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_sync_flattened",
+      "title": "AnalyzeWorkloadMove",
+      "description": "Snippet for AnalyzeWorkloadMove",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMove",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMove",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_async_flattened",
+      "title": "AnalyzeWorkloadMoveAsync",
+      "description": "Snippet for AnalyzeWorkloadMoveAsync",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMoveAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
           "service": {
             "shortName": "AssuredWorkloadsService",
             "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"

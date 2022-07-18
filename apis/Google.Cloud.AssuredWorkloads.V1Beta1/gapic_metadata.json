@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AssuredWorkloadsServiceClient",
           "rpcs": {
+            "AnalyzeWorkloadMove": {
+              "methods": [
+                "AnalyzeWorkloadMove",
+                "AnalyzeWorkloadMoveAsync"
+              ]
+            },
             "CreateWorkload": {
               "methods": [
                 "CreateWorkload",
@@ -32,6 +38,18 @@
               "methods": [
                 "ListWorkloads",
                 "ListWorkloadsAsync"
+              ]
+            },
+            "RestrictAllowedResources": {
+              "methods": [
+                "RestrictAllowedResources",
+                "RestrictAllowedResourcesAsync"
+              ]
+            },
+            "RestrictAllowedServices": {
+              "methods": [
+                "RestrictAllowedServices",
+                "RestrictAllowedServicesAsync"
               ]
             },
             "UpdateWorkload": {

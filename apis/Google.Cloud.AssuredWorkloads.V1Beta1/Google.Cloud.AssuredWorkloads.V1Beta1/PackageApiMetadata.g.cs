@@ -30,6 +30,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AssuredworkloadsReflection.Descriptor;
+            yield return AssuredworkloadsServiceReflection.Descriptor;
         }
     }
 }
