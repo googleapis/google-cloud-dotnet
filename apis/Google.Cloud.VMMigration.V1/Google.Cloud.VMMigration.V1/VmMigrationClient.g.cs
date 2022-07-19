@@ -69,6 +69,8 @@ namespace Google.Cloud.VMMigration.V1
             CreateDatacenterConnectorOperationsSettings = existing.CreateDatacenterConnectorOperationsSettings.Clone();
             DeleteDatacenterConnectorSettings = existing.DeleteDatacenterConnectorSettings;
             DeleteDatacenterConnectorOperationsSettings = existing.DeleteDatacenterConnectorOperationsSettings.Clone();
+            UpgradeApplianceSettings = existing.UpgradeApplianceSettings;
+            UpgradeApplianceOperationsSettings = existing.UpgradeApplianceOperationsSettings.Clone();
             CreateMigratingVmSettings = existing.CreateMigratingVmSettings;
             CreateMigratingVmOperationsSettings = existing.CreateMigratingVmOperationsSettings.Clone();
             ListMigratingVmsSettings = existing.ListMigratingVmsSettings;
@@ -415,6 +417,36 @@ namespace Google.Cloud.VMMigration.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteDatacenterConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.UpgradeAppliance</c> and <c>VmMigrationClient.UpgradeApplianceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpgradeApplianceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.UpgradeAppliance</c> and
+        /// <c>VmMigrationClient.UpgradeApplianceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpgradeApplianceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2313,8 +2345,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -2340,8 +2372,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -2367,8 +2399,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -2389,8 +2421,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -2416,8 +2448,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -2443,8 +2475,8 @@ namespace Google.Cloud.VMMigration.V1
         /// Required. The report to create.
         /// </param>
         /// <param name="utilizationReportId">
-        /// Required. The ID to use for the report, which will become the final component of
-        /// the reports's resource name.
+        /// Required. The ID to use for the report, which will become the final
+        /// component of the reports's resource name.
         /// 
         /// This value maximum length is 63 characters, and valid characters
         /// are /[a-z][0-9]-/. It must start with an english letter and must not
@@ -3131,6 +3163,62 @@ namespace Google.Cloud.VMMigration.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatacenterConnectorAsync(DatacenterConnectorName name, st::CancellationToken cancellationToken) =>
             DeleteDatacenterConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+        /// updateable version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpgradeApplianceResponse, OperationMetadata> UpgradeAppliance(UpgradeApplianceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+        /// updateable version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpgradeApplianceResponse, OperationMetadata>> UpgradeApplianceAsync(UpgradeApplianceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+        /// updateable version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpgradeApplianceResponse, OperationMetadata>> UpgradeApplianceAsync(UpgradeApplianceRequest request, st::CancellationToken cancellationToken) =>
+            UpgradeApplianceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpgradeAppliance</c>.</summary>
+        public virtual lro::OperationsClient UpgradeApplianceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpgradeAppliance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<UpgradeApplianceResponse, OperationMetadata> PollOnceUpgradeAppliance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpgradeApplianceResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeApplianceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpgradeAppliance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<UpgradeApplianceResponse, OperationMetadata>> PollOnceUpgradeApplianceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpgradeApplianceResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeApplianceOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a new MigratingVm in a given Source.
@@ -6944,6 +7032,8 @@ namespace Google.Cloud.VMMigration.V1
 
         private readonly gaxgrpc::ApiCall<DeleteDatacenterConnectorRequest, lro::Operation> _callDeleteDatacenterConnector;
 
+        private readonly gaxgrpc::ApiCall<UpgradeApplianceRequest, lro::Operation> _callUpgradeAppliance;
+
         private readonly gaxgrpc::ApiCall<CreateMigratingVmRequest, lro::Operation> _callCreateMigratingVm;
 
         private readonly gaxgrpc::ApiCall<ListMigratingVmsRequest, ListMigratingVmsResponse> _callListMigratingVms;
@@ -7020,6 +7110,7 @@ namespace Google.Cloud.VMMigration.V1
             DeleteUtilizationReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteUtilizationReportOperationsSettings, logger);
             CreateDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatacenterConnectorOperationsSettings, logger);
             DeleteDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatacenterConnectorOperationsSettings, logger);
+            UpgradeApplianceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeApplianceOperationsSettings, logger);
             CreateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMigratingVmOperationsSettings, logger);
             UpdateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMigratingVmOperationsSettings, logger);
             DeleteMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMigratingVmOperationsSettings, logger);
@@ -7081,6 +7172,9 @@ namespace Google.Cloud.VMMigration.V1
             _callDeleteDatacenterConnector = clientHelper.BuildApiCall<DeleteDatacenterConnectorRequest, lro::Operation>("DeleteDatacenterConnector", grpcClient.DeleteDatacenterConnectorAsync, grpcClient.DeleteDatacenterConnector, effectiveSettings.DeleteDatacenterConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDatacenterConnector);
             Modify_DeleteDatacenterConnectorApiCall(ref _callDeleteDatacenterConnector);
+            _callUpgradeAppliance = clientHelper.BuildApiCall<UpgradeApplianceRequest, lro::Operation>("UpgradeAppliance", grpcClient.UpgradeApplianceAsync, grpcClient.UpgradeAppliance, effectiveSettings.UpgradeApplianceSettings).WithGoogleRequestParam("datacenter_connector", request => request.DatacenterConnector);
+            Modify_ApiCall(ref _callUpgradeAppliance);
+            Modify_UpgradeApplianceApiCall(ref _callUpgradeAppliance);
             _callCreateMigratingVm = clientHelper.BuildApiCall<CreateMigratingVmRequest, lro::Operation>("CreateMigratingVm", grpcClient.CreateMigratingVmAsync, grpcClient.CreateMigratingVm, effectiveSettings.CreateMigratingVmSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMigratingVm);
             Modify_CreateMigratingVmApiCall(ref _callCreateMigratingVm);
@@ -7201,6 +7295,8 @@ namespace Google.Cloud.VMMigration.V1
 
         partial void Modify_DeleteDatacenterConnectorApiCall(ref gaxgrpc::ApiCall<DeleteDatacenterConnectorRequest, lro::Operation> call);
 
+        partial void Modify_UpgradeApplianceApiCall(ref gaxgrpc::ApiCall<UpgradeApplianceRequest, lro::Operation> call);
+
         partial void Modify_CreateMigratingVmApiCall(ref gaxgrpc::ApiCall<CreateMigratingVmRequest, lro::Operation> call);
 
         partial void Modify_ListMigratingVmsApiCall(ref gaxgrpc::ApiCall<ListMigratingVmsRequest, ListMigratingVmsResponse> call);
@@ -7291,6 +7387,8 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_CreateDatacenterConnectorRequest(ref CreateDatacenterConnectorRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDatacenterConnectorRequest(ref DeleteDatacenterConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpgradeApplianceRequest(ref UpgradeApplianceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateMigratingVmRequest(ref CreateMigratingVmRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7713,6 +7811,35 @@ namespace Google.Cloud.VMMigration.V1
         {
             Modify_DeleteDatacenterConnectorRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDatacenterConnector.Async(request, callSettings).ConfigureAwait(false), DeleteDatacenterConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpgradeAppliance</c>.</summary>
+        public override lro::OperationsClient UpgradeApplianceOperationsClient { get; }
+
+        /// <summary>
+        /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+        /// updateable version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<UpgradeApplianceResponse, OperationMetadata> UpgradeAppliance(UpgradeApplianceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeApplianceRequest(ref request, ref callSettings);
+            return new lro::Operation<UpgradeApplianceResponse, OperationMetadata>(_callUpgradeAppliance.Sync(request, callSettings), UpgradeApplianceOperationsClient);
+        }
+
+        /// <summary>
+        /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+        /// updateable version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<UpgradeApplianceResponse, OperationMetadata>> UpgradeApplianceAsync(UpgradeApplianceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeApplianceRequest(ref request, ref callSettings);
+            return new lro::Operation<UpgradeApplianceResponse, OperationMetadata>(await _callUpgradeAppliance.Async(request, callSettings).ConfigureAwait(false), UpgradeApplianceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateMigratingVm</c>.</summary>

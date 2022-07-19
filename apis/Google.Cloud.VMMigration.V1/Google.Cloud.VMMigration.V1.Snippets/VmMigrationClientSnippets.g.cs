@@ -2497,6 +2497,73 @@ namespace Google.Cloud.VMMigration.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpgradeAppliance</summary>
+        public void UpgradeApplianceRequestObject()
+        {
+            // Snippet: UpgradeAppliance(UpgradeApplianceRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            UpgradeApplianceRequest request = new UpgradeApplianceRequest
+            {
+                DatacenterConnectorAsDatacenterConnectorName = DatacenterConnectorName.FromProjectLocationSourceDatacenterConnector("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DATACENTER_CONNECTOR]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<UpgradeApplianceResponse, OperationMetadata> response = vmMigrationClient.UpgradeAppliance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeApplianceResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpgradeApplianceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeApplianceResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceUpgradeAppliance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeApplianceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeApplianceAsync</summary>
+        public async Task UpgradeApplianceRequestObjectAsync()
+        {
+            // Snippet: UpgradeApplianceAsync(UpgradeApplianceRequest, CallSettings)
+            // Additional: UpgradeApplianceAsync(UpgradeApplianceRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            UpgradeApplianceRequest request = new UpgradeApplianceRequest
+            {
+                DatacenterConnectorAsDatacenterConnectorName = DatacenterConnectorName.FromProjectLocationSourceDatacenterConnector("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DATACENTER_CONNECTOR]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<UpgradeApplianceResponse, OperationMetadata> response = await vmMigrationClient.UpgradeApplianceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeApplianceResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpgradeApplianceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeApplianceResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceUpgradeApplianceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeApplianceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateMigratingVm</summary>
         public void CreateMigratingVmRequestObject()
         {
@@ -2706,6 +2773,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
                 ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
                 Filter = "",
                 OrderBy = "",
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListMigratingVmsResponse, MigratingVm> response = vmMigrationClient.ListMigratingVms(request);
@@ -2756,6 +2824,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
                 ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
                 Filter = "",
                 OrderBy = "",
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListMigratingVmsResponse, MigratingVm> response = vmMigrationClient.ListMigratingVmsAsync(request);
@@ -2984,6 +3053,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
             GetMigratingVmRequest request = new GetMigratingVmRequest
             {
                 MigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             MigratingVm response = vmMigrationClient.GetMigratingVm(request);
@@ -3001,6 +3071,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
             GetMigratingVmRequest request = new GetMigratingVmRequest
             {
                 MigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             MigratingVm response = await vmMigrationClient.GetMigratingVmAsync(request);

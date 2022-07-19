@@ -2130,6 +2130,59 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpgradeAppliance_sync",
+      "title": "UpgradeApplianceRequestObject",
+      "description": "Snippet for UpgradeAppliance",
+      "file": "VmMigrationClient.UpgradeApplianceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeAppliance",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpgradeAppliance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UpgradeApplianceResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpgradeAppliance",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpgradeAppliance",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpgradeAppliance_async",
+      "title": "UpgradeApplianceRequestObjectAsync",
+      "description": "Snippet for UpgradeApplianceAsync",
+      "file": "VmMigrationClient.UpgradeApplianceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeApplianceAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpgradeApplianceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UpgradeApplianceResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpgradeAppliance",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpgradeAppliance",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "vmmigration_v1_generated_VmMigration_CreateMigratingVm_sync",
       "title": "CreateMigratingVmRequestObject",
       "description": "Snippet for CreateMigratingVm",

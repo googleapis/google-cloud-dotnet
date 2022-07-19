@@ -578,6 +578,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -607,6 +611,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -638,6 +646,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -667,6 +679,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -698,6 +714,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -727,6 +747,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Bucket = "bucket17d0bfc2",
                 Error = new gr::Status(),
                 RegistrationId = "registration_ided27f5d9",
+                ApplianceInfrastructureVersion = "appliance_infrastructure_versionda2f8a47",
+                ApplianceSoftwareVersion = "appliance_software_versionf13920cb",
+                AvailableVersions = new AvailableUpdates(),
+                UpgradeStatus = new UpgradeStatus(),
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -745,6 +769,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
             GetMigratingVmRequest request = new GetMigratingVmRequest
             {
                 MigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                View = MigratingVmView.Basic,
             };
             MigratingVm expectedResponse = new MigratingVm
             {
@@ -764,8 +789,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -785,6 +812,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
             GetMigratingVmRequest request = new GetMigratingVmRequest
             {
                 MigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                View = MigratingVmView.Basic,
             };
             MigratingVm expectedResponse = new MigratingVm
             {
@@ -804,8 +832,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -846,8 +876,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -886,8 +918,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -928,8 +962,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -968,8 +1004,10 @@ namespace Google.Cloud.VMMigration.V1.Tests
                         "value60c16320"
                     },
                 },
+                RecentCloneJobs = { new CloneJob(), },
                 DisplayName = "display_name137f65c2",
                 Error = new gr::Status(),
+                RecentCutoverJobs = { new CutoverJob(), },
                 StateTime = new wkt::Timestamp(),
                 State = MigratingVm.Types.State.Cutover,
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
@@ -1000,6 +1038,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1025,6 +1064,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1052,6 +1092,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1077,6 +1118,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1104,6 +1146,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1129,6 +1172,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateTime = new wkt::Timestamp(),
                 Error = new gr::Status(),
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1158,6 +1202,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1185,6 +1230,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1214,6 +1260,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1241,6 +1288,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1270,6 +1318,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
@@ -1297,6 +1346,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 StateMessage = "state_message46cf28c0",
                 ProgressPercent = -412774427,
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);

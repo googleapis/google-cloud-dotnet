@@ -35,6 +35,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
             GetMigratingVmRequest request = new GetMigratingVmRequest
             {
                 MigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             MigratingVm response = await vmMigrationClient.GetMigratingVmAsync(request);
