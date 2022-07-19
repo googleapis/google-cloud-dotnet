@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListAppGateways",
+    "client": "AppGatewaysServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
