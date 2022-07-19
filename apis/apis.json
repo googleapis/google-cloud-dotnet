@@ -481,7 +481,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "BeyondCorp Client Connector Services",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
