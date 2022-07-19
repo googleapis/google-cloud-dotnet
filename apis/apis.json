@@ -480,6 +480,26 @@
       "serviceConfigFile": "beyondcorp_v1.yaml"
     },
     {
+      "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "BeyondCorp Client Connector Services",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise Client Gateways API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/clientgateways/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.BigQuery.Connection.V1",
       "version": "2.0.0",
       "type": "grpc",
