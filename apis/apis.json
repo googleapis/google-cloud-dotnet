@@ -402,7 +402,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "BeyondCorp",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
