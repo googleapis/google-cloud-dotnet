@@ -2351,6 +2351,19 @@ namespace Google.Cloud.VMMigration.V1
         }
     }
 
+    public partial class UpgradeApplianceRequest
+    {
+        /// <summary>
+        /// <see cref="DatacenterConnectorName"/>-typed view over the <see cref="DatacenterConnector"/> resource name
+        /// property.
+        /// </summary>
+        public DatacenterConnectorName DatacenterConnectorAsDatacenterConnectorName
+        {
+            get => string.IsNullOrEmpty(DatacenterConnector) ? null : DatacenterConnectorName.Parse(DatacenterConnector, allowUnparsed: true);
+            set => DatacenterConnector = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListDatacenterConnectorsRequest
     {
         /// <summary><see cref="SourceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
