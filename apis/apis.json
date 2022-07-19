@@ -422,7 +422,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnectors.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
       "description": "Recommended Google client library to access the BeyondCorp Enterprise AppConnectors API.",
