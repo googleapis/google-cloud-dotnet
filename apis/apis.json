@@ -3311,7 +3311,7 @@
       },
       "noVersionHistory": true,
       "shortName": "spanner",
-      "serviceConfigFile": "spanner_admin_database.yaml"
+      "serviceConfigFile": "spanner.yaml"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
