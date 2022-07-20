@@ -780,5 +780,46 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("gender", table.Schema.Fields[3].Fields[0].Name);
             Assert.Equal("age", table.Schema.Fields[3].Fields[1].Name);
         }
+
+        [Fact]
+        public void GetTableIamPolicy()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var policy = client.GetTableIamPolicy(
+                _fixture.DatasetId, _fixture.HighScoreTableId, new GetTableIamPolicyOptions { PolicyVersion = 3 });
+
+            Assert.NotNull(policy.ETag);
+        }
+
+        [Fact]
+        public void SetTableIamPolicy()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            client.CreateTable(_fixture.DatasetId, tableId, new Table { FriendlyName = "FriendlyName" });
+
+            var existingPolicy = client.GetTableIamPolicy(_fixture.DatasetId, tableId);
+
+            existingPolicy.Bindings ??= new List<Binding>();
+
+            existingPolicy.Bindings.Add(new Binding
+            {
+                Members = new List<string> { "allAuthenticatedUsers" },
+                Role = "roles/viewer"
+            });
+
+            var updatedPolicy = client.SetTableIamPolicy(_fixture.DatasetId, tableId, existingPolicy);
+            Assert.Contains(updatedPolicy.Bindings,
+                binding => binding.Role == "roles/viewer" && binding.Members.Single() == "allAuthenticatedUsers");
+        }
+
+        [Fact]
+        public void TestTableIamPermissions()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            var response = client.TestTableIamPermissions(_fixture.DatasetId, _fixture.HighScoreTableId, new List<string> { "bigquery.tables.get" });
+            Assert.Collection(response.Permissions, role => Assert.Equal("bigquery.tables.get", role));
+        }
     }
 }
