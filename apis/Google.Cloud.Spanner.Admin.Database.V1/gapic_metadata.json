@@ -82,6 +82,12 @@
                 "ListDatabaseOperationsAsync"
               ]
             },
+            "ListDatabaseRoles": {
+              "methods": [
+                "ListDatabaseRoles",
+                "ListDatabaseRolesAsync"
+              ]
+            },
             "ListDatabases": {
               "methods": [
                 "ListDatabases",

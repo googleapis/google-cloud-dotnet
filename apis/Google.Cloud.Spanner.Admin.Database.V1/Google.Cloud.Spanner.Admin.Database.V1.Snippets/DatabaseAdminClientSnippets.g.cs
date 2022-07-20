@@ -2897,5 +2897,281 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for ListDatabaseRoles</summary>
+        public void ListDatabaseRolesRequestObject()
+        {
+            // Snippet: ListDatabaseRoles(ListDatabaseRolesRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRoles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseRole item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseRolesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseRolesAsync</summary>
+        public async Task ListDatabaseRolesRequestObjectAsync()
+        {
+            // Snippet: ListDatabaseRolesAsync(ListDatabaseRolesRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRolesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatabaseRole item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabaseRolesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseRoles</summary>
+        public void ListDatabaseRoles()
+        {
+            // Snippet: ListDatabaseRoles(string, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            // Make the request
+            PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRoles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseRole item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseRolesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseRolesAsync</summary>
+        public async Task ListDatabaseRolesAsync()
+        {
+            // Snippet: ListDatabaseRolesAsync(string, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRolesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatabaseRole item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabaseRolesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseRoles</summary>
+        public void ListDatabaseRolesResourceNames()
+        {
+            // Snippet: ListDatabaseRoles(DatabaseName, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRoles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseRole item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseRolesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseRolesAsync</summary>
+        public async Task ListDatabaseRolesResourceNamesAsync()
+        {
+            // Snippet: ListDatabaseRolesAsync(DatabaseName, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> response = databaseAdminClient.ListDatabaseRolesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatabaseRole item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabaseRolesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseRole item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseRole> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

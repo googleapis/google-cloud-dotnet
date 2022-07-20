@@ -72,6 +72,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             RestoreDatabaseOperationsSettings = existing.RestoreDatabaseOperationsSettings.Clone();
             ListDatabaseOperationsSettings = existing.ListDatabaseOperationsSettings;
             ListBackupOperationsSettings = existing.ListBackupOperationsSettings;
+            ListDatabaseRolesSettings = existing.ListDatabaseRolesSettings;
             OnCopy(existing);
         }
 
@@ -491,6 +492,27 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBackupOperationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.ListDatabaseRoles</c> and <c>DatabaseAdminClient.ListDatabaseRolesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDatabaseRolesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseAdminSettings"/> object.</returns>
@@ -4079,6 +4101,128 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(ListDatabaseRolesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(ListDatabaseRolesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The database whose roles should be listed.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatabaseRoles(new ListDatabaseRolesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The database whose roles should be listed.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The database whose roles should be listed.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatabaseRoles(new ListDatabaseRolesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The database whose roles should be listed.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>
@@ -4128,6 +4272,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private readonly gaxgrpc::ApiCall<ListDatabaseOperationsRequest, ListDatabaseOperationsResponse> _callListDatabaseOperations;
 
         private readonly gaxgrpc::ApiCall<ListBackupOperationsRequest, ListBackupOperationsResponse> _callListBackupOperations;
+
+        private readonly gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> _callListDatabaseRoles;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseAdmin service, with the specified gRPC client and settings.
@@ -4199,6 +4345,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callListBackupOperations = clientHelper.BuildApiCall<ListBackupOperationsRequest, ListBackupOperationsResponse>("ListBackupOperations", grpcClient.ListBackupOperationsAsync, grpcClient.ListBackupOperations, effectiveSettings.ListBackupOperationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackupOperations);
             Modify_ListBackupOperationsApiCall(ref _callListBackupOperations);
+            _callListDatabaseRoles = clientHelper.BuildApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse>("ListDatabaseRoles", grpcClient.ListDatabaseRolesAsync, grpcClient.ListDatabaseRoles, effectiveSettings.ListDatabaseRolesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDatabaseRoles);
+            Modify_ListDatabaseRolesApiCall(ref _callListDatabaseRoles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4240,6 +4389,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_ListBackupOperationsApiCall(ref gaxgrpc::ApiCall<ListBackupOperationsRequest, ListBackupOperationsResponse> call);
 
+        partial void Modify_ListDatabaseRolesApiCall(ref gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> call);
+
         partial void OnConstruction(DatabaseAdmin.DatabaseAdminClient grpcClient, DatabaseAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseAdmin client</summary>
@@ -4280,6 +4431,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_ListDatabaseOperationsRequest(ref ListDatabaseOperationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupOperationsRequest(ref ListBackupOperationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDatabaseRolesRequest(ref ListDatabaseRolesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -4921,6 +5074,30 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             Modify_ListBackupOperationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupOperationsRequest, ListBackupOperationsResponse, lro::Operation>(_callListBackupOperations, request, callSettings);
         }
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(ListDatabaseRolesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabaseRolesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDatabaseRolesRequest, ListDatabaseRolesResponse, DatabaseRole>(_callListDatabaseRoles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Cloud Spanner database roles.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(ListDatabaseRolesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabaseRolesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseRolesRequest, ListDatabaseRolesResponse, DatabaseRole>(_callListDatabaseRoles, request, callSettings);
+        }
     }
 
     public partial class ListDatabasesRequest : gaxgrpc::IPageRequest
@@ -4936,6 +5113,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     public partial class ListBackupOperationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDatabaseRolesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4967,6 +5148,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<lro::Operation> GetEnumerator() => Operations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDatabaseRolesResponse : gaxgrpc::IPageResponse<DatabaseRole>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatabaseRole> GetEnumerator() => DatabaseRoles.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
