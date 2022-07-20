@@ -22,6 +22,12 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Apis.Bigquery.v2.TablesResource;
+using GetIamPolicyRequest = Google.Apis.Bigquery.v2.TablesResource.GetIamPolicyRequest;
+using GetIamPolicyRequestBody = Google.Apis.Bigquery.v2.Data.GetIamPolicyRequest;
+using SetIamPolicyRequest = Google.Apis.Bigquery.v2.TablesResource.SetIamPolicyRequest;
+using SetIamPolicyRequestBody = Google.Apis.Bigquery.v2.Data.SetIamPolicyRequest;
+using TestIamPermissionsRequest = Google.Apis.Bigquery.v2.TablesResource.TestIamPermissionsRequest;
+using TestIamPermissionsRequestBody = Google.Apis.Bigquery.v2.Data.TestIamPermissionsRequest;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -225,6 +231,48 @@ namespace Google.Cloud.BigQuery.V2
             return new BigQueryTable(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
         }
 
+        /// <inheritdoc />
+        public override Policy GetTableIamPolicy(TableReference tableReference, GetTableIamPolicyOptions options = null)
+        {
+            var request = CreateGetTableIamPolicyRequest(tableReference, options);
+            return request.Execute();
+        }
+
+        /// <inheritdoc />
+        public override async Task<Policy> GetTableIamPolicyAsync(TableReference tableReference, GetTableIamPolicyOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateGetTableIamPolicyRequest(tableReference, options);
+            return await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override Policy SetTableIamPolicy(TableReference tableReference, Policy policy, SetTableIamPolicyOptions options = null)
+        {
+            var request = CreateSetTableIamPolicyRequest(tableReference, policy, options);
+            return request.Execute();
+        }
+
+        /// <inheritdoc />
+        public override async Task<Policy> SetTableIamPolicyAsync(TableReference tableReference, Policy policy, SetTableIamPolicyOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateSetTableIamPolicyRequest(tableReference, policy, options);
+            return await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override TestIamPermissionsResponse TestTableIamPermissions(TableReference tableReference, IList<string> permissions, TestTableIamPermissionsOptions options = null)
+        {
+            var request = CreateTestTableIamPermissionsRequest(tableReference, permissions, options);
+            return request.Execute();
+        }
+
+        /// <inheritdoc />
+        public override async Task<TestIamPermissionsResponse> TestTableIamPermissionsAsync(TableReference tableReference, IList<string> permissions, TestTableIamPermissionsOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateTestTableIamPermissionsRequest(tableReference, permissions, options);
+            return await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
         // Request creation
         private GetRequest CreateGetTableRequest(TableReference tableReference, GetTableOptions options)
         {
@@ -310,6 +358,42 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
+            return request;
+        }
+
+        private GetIamPolicyRequest CreateGetTableIamPolicyRequest(TableReference tableReference, GetTableIamPolicyOptions options)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            var body = new GetIamPolicyRequestBody();
+            options?.ModifyRequest(body);
+            var request = Service.Tables.GetIamPolicy(body, tableReference.GetResourceName());
+            RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
+            return request;
+        }
+
+        private SetIamPolicyRequest CreateSetTableIamPolicyRequest(TableReference tableReference, Policy policy, SetTableIamPolicyOptions options)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(policy, nameof(policy));
+            var body = new SetIamPolicyRequestBody();
+            options?.ModifyRequest(body);
+            body.Policy = policy;
+            var request = Service.Tables.SetIamPolicy(body, tableReference.GetResourceName());
+            RetryIfETagPresent(request, policy);
+            request.PrettyPrint = PrettyPrint;
+            return request;
+        }
+
+        private TestIamPermissionsRequest CreateTestTableIamPermissionsRequest(TableReference tableReference, IList<string> permissions, TestTableIamPermissionsOptions options)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            var body = new TestIamPermissionsRequestBody();
+            options?.ModifyRequest(body);
+            body.Permissions = permissions;
+            var request = Service.Tables.TestIamPermissions(body, tableReference.GetResourceName());
+            RetryHandler.MarkAsRetriable(request);
             request.PrettyPrint = PrettyPrint;
             return request;
         }
