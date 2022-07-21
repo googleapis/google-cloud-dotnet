@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -69,6 +73,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -106,6 +112,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -141,6 +149,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -178,6 +188,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -213,6 +225,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAuthorizationPolicyRequest request = new GetAuthorizationPolicyRequest
             {
                 AuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
@@ -250,6 +264,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -283,6 +299,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -318,6 +336,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -351,6 +371,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -386,6 +408,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -419,6 +443,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetServerTlsPolicyRequest request = new GetServerTlsPolicyRequest
             {
                 ServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
@@ -454,6 +480,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
@@ -487,6 +515,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
@@ -522,6 +552,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
@@ -555,6 +587,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
@@ -590,6 +624,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
@@ -623,6 +659,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
         {
             moq::Mock<NetworkSecurity.NetworkSecurityClient> mockGrpcClient = new moq::Mock<NetworkSecurity.NetworkSecurityClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetClientTlsPolicyRequest request = new GetClientTlsPolicyRequest
             {
                 ClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),

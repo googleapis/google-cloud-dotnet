@@ -32,7 +32,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/clientTlsPolicies/[CLIENT_TLS_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request
