@@ -38,6 +38,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Mode = CommitRequest.Types.Mode.Unspecified,
                 Mutations = { new Mutation(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             CommitResponse response = datastoreClient.Commit(request);

@@ -35,6 +35,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 ProjectId = "",
+                DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
             };
             // Make the request

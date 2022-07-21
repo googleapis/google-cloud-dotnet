@@ -36,6 +36,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
