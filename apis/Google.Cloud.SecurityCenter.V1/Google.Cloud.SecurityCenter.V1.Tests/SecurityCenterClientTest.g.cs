@@ -243,6 +243,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -311,6 +313,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -381,6 +385,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -449,6 +455,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -519,6 +527,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -587,6 +597,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2627,6 +2639,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2695,6 +2709,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2765,6 +2781,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2833,6 +2851,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2903,6 +2923,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -2971,6 +2993,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3040,6 +3064,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3107,6 +3133,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3176,6 +3204,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3243,6 +3273,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3312,6 +3344,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3379,6 +3413,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3920,6 +3956,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -3987,6 +4025,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -4055,6 +4095,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
@@ -4121,6 +4163,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Exfiltration = new Exfiltration(),
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
+                Containers = { new Container(), },
+                Kubernetes = new Kubernetes(),
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
