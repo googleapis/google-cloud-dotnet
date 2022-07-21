@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,13 +30,6 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class AddCommand : CommandBase
     {
-        private static readonly Dictionary<string, string> MixinDependencies = new()
-        {
-            { "google.cloud.location.Locations", "Google.Cloud.Location" },
-            { "google.iam.v1.IAMPolicy","Google.Cloud.Iam.V1" },
-            { "google.longrunning.Operations", "Google.LongRunning" }
-        };
-
         public AddCommand()
             : base("add", "Adds an API to the API catalog", "id")
         {
@@ -97,12 +90,9 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             // Add mixin dependencies discovered via APIs listed in the service config file.
             // This *does* fail if we can't find the API, as that would indicate a general issue.
-            foreach (var declaredApi in targetApi.ServiceConfigApiNames)
+            foreach (var mixin in targetApi.GetMixinPackages())
             {
-                if (MixinDependencies.TryGetValue(declaredApi, out var package))
-                {
-                    api.Dependencies[package] = catalog[package].Version;
-                }
+                api.Dependencies[mixin] = catalog[mixin].Version;
             }
 
             // Now work out what the new API metadata looks like in JSON.
