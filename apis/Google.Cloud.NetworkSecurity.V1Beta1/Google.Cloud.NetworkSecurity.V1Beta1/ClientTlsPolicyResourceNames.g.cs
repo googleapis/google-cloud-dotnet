@@ -312,11 +312,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
     public partial class CreateClientTlsPolicyRequest
     {
         /// <summary>
-        /// <see cref="ClientTlsPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ClientTlsPolicyName ParentAsClientTlsPolicyName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ClientTlsPolicyName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

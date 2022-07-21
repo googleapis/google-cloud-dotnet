@@ -17,6 +17,7 @@
 namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
 {
     // [START networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_async_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkSecurity.V1Beta1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            ClientTlsPolicyName parent = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request
