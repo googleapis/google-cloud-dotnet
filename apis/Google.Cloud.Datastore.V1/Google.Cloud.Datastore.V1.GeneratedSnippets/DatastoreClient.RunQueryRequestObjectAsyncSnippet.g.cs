@@ -38,6 +38,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 PartitionId = new PartitionId(),
                 Query = new Query(),
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);

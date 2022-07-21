@@ -36,6 +36,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             LookupResponse response = datastoreClient.Lookup(request);

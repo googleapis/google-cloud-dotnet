@@ -35,6 +35,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             LookupResponse response = datastoreClient.Lookup(request);
@@ -54,6 +55,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             LookupResponse response = await datastoreClient.LookupAsync(request);
@@ -104,6 +106,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 PartitionId = new PartitionId(),
                 Query = new Query(),
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
@@ -124,6 +127,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 PartitionId = new PartitionId(),
                 Query = new Query(),
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
@@ -140,6 +144,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 ProjectId = "",
+                DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
             };
             // Make the request
@@ -158,6 +163,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 ProjectId = "",
+                DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
             };
             // Make the request
@@ -205,6 +211,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Mode = CommitRequest.Types.Mode.Unspecified,
                 Mutations = { new Mutation(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             CommitResponse response = datastoreClient.Commit(request);
@@ -225,6 +232,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Mode = CommitRequest.Types.Mode.Unspecified,
                 Mutations = { new Mutation(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(request);
@@ -306,6 +314,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Transaction = ByteString.Empty,
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(request);
@@ -324,6 +333,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Transaction = ByteString.Empty,
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);
@@ -370,6 +380,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             AllocateIdsResponse response = datastoreClient.AllocateIds(request);
@@ -388,6 +399,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Keys = { new Key(), },
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);

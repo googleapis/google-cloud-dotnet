@@ -38,6 +38,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             LookupResponse expectedResponse = new LookupResponse
             {
@@ -62,6 +63,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             LookupResponse expectedResponse = new LookupResponse
             {
@@ -140,6 +142,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Query = new Query(),
                 GqlQuery = new GqlQuery(),
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             RunQueryResponse expectedResponse = new RunQueryResponse
             {
@@ -164,6 +167,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Query = new Query(),
                 GqlQuery = new GqlQuery(),
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             RunQueryResponse expectedResponse = new RunQueryResponse
             {
@@ -186,6 +190,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
                 TransactionOptions = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
@@ -206,6 +211,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
                 TransactionOptions = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
@@ -271,6 +277,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Mode = CommitRequest.Types.Mode.Unspecified,
                 Mutations = { new Mutation(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             CommitResponse expectedResponse = new CommitResponse
             {
@@ -298,6 +305,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Mode = CommitRequest.Types.Mode.Unspecified,
                 Mutations = { new Mutation(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             CommitResponse expectedResponse = new CommitResponse
             {
@@ -435,6 +443,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             {
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -452,6 +461,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             {
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RollbackResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -507,6 +517,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             {
                 Keys = { new Key(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -524,6 +535,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             {
                 Keys = { new Key(), },
                 ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

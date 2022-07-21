@@ -37,6 +37,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 Transaction = ByteString.Empty,
                 ProjectId = "",
+                DatabaseId = "",
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);
