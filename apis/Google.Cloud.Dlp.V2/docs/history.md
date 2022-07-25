@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.1.0, released 2022-07-25
+
+### New features
+
+- InfoType categories were added to built-in infoTypes ([commit cafbab1](https://github.com/googleapis/google-cloud-dotnet/commit/cafbab1089c725e668ebb6abaa28045e45382162))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
