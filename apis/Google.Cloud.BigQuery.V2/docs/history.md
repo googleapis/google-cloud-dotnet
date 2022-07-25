@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-25
+
+### New features
+
+- Adds table ACLs support ([commit 22b00e2](https://github.com/googleapis/google-cloud-dotnet/commit/22b00e2ef09095a5cd2bc1c0261a8967bbdff6b4))
+- Add support for BigQuery job metadata deletion. ([commit 2b501e8](https://github.com/googleapis/google-cloud-dotnet/commit/2b501e824bd8ab6a5a88ef8cbfee137d13b65576))
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
