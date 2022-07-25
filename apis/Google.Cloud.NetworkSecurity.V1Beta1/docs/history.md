@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-25
+
+### Bug fixes
+
+- **BREAKING CHANGE** Fix annotation of parent in Create*Request ([commit 6584bbb](https://github.com/googleapis/google-cloud-dotnet/commit/6584bbb28914477079153b5287ef6012c9f43f9a))
+
+### Documentation improvements
+
+- Update the comments of various networksecurity resources ([commit 6584bbb](https://github.com/googleapis/google-cloud-dotnet/commit/6584bbb28914477079153b5287ef6012c9f43f9a))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
