@@ -1076,7 +1076,7 @@
     },
     {
       "id": "Google.Cloud.Dataplex.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud Dataplex",
       "productUrl": "https://cloud.google.com/dataplex/docs",
