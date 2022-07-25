@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.2.0, released 2022-07-25
+
+### New features
+
+- Added container field to findings attributes ([commit e8abc9d](https://github.com/googleapis/google-cloud-dotnet/commit/e8abc9dbb4d34da3f91ddbdc45067c2f86e16d4d))
+- Added kubernetes field to findings attribute. This field is populated only when the container is a kubernetes cluster explicitly ([commit e8abc9d](https://github.com/googleapis/google-cloud-dotnet/commit/e8abc9dbb4d34da3f91ddbdc45067c2f86e16d4d))
+
 ## Version 3.1.0, released 2022-07-11
 
 ### New features
