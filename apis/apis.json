@@ -2451,7 +2451,7 @@
     },
     {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Network Security",
       "productUrl": "https://cloud.google.com/traffic-director/docs/security-overview",
