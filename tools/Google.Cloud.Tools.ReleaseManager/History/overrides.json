@@ -31,4 +31,5 @@
   "b56517e": "skip", // Regenerate with updated protobuf
   "8fb35a3": "skip", // Regenerate with more .g.cs extensions
   "44186b5": "skip", // Update copyright year (2022)
+  "6ab285e": "skip", // Regenerate with protobuf 3.21.3
 }
