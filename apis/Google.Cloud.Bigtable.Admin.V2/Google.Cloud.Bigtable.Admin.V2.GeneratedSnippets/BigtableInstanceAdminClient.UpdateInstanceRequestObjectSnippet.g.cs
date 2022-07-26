@@ -41,6 +41,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 Type = Instance.Types.Type.Unspecified,
                 Labels = { { "", "" }, },
                 CreateTime = new Timestamp(),
+                SatisfiesPzs = false,
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
