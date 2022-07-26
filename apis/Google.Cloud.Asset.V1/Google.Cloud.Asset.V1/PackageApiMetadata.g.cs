@@ -29,8 +29,8 @@ namespace Google.Cloud.Asset.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return AssetsReflection.Descriptor;
             yield return AssetServiceReflection.Descriptor;
+            yield return AssetsReflection.Descriptor;
         }
     }
 }

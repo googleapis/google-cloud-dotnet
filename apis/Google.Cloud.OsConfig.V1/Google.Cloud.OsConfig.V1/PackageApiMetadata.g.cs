@@ -30,15 +30,15 @@ namespace Google.Cloud.OsConfig.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return InventoryReflection.Descriptor;
-            yield return OsconfigCommonReflection.Descriptor;
-            yield return PatchJobsReflection.Descriptor;
-            yield return PatchDeploymentsReflection.Descriptor;
-            yield return OsconfigServiceReflection.Descriptor;
-            yield return OsPolicyAssignmentReportsReflection.Descriptor;
             yield return OsPolicyReflection.Descriptor;
+            yield return OsPolicyAssignmentReportsReflection.Descriptor;
             yield return OsPolicyAssignmentsReflection.Descriptor;
-            yield return VulnerabilityReflection.Descriptor;
+            yield return OsconfigCommonReflection.Descriptor;
+            yield return OsconfigServiceReflection.Descriptor;
             yield return OsconfigZonalServiceReflection.Descriptor;
+            yield return PatchDeploymentsReflection.Descriptor;
+            yield return PatchJobsReflection.Descriptor;
+            yield return VulnerabilityReflection.Descriptor;
         }
     }
 }

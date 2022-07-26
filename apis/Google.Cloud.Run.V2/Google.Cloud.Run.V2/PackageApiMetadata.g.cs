@@ -31,11 +31,11 @@ namespace Google.Cloud.Run.V2
         {
             yield return ConditionReflection.Descriptor;
             yield return K8SMinReflection.Descriptor;
-            yield return VendorSettingsReflection.Descriptor;
             yield return RevisionReflection.Descriptor;
             yield return RevisionTemplateReflection.Descriptor;
-            yield return TrafficTargetReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return TrafficTargetReflection.Descriptor;
+            yield return VendorSettingsReflection.Descriptor;
         }
     }
 }

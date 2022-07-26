@@ -30,11 +30,11 @@ namespace Google.Cloud.Dataproc.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AutoscalingPoliciesReflection.Descriptor;
-            yield return SharedReflection.Descriptor;
             yield return BatchesReflection.Descriptor;
             yield return ClustersReflection.Descriptor;
             yield return JobsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return SharedReflection.Descriptor;
             yield return WorkflowTemplatesReflection.Descriptor;
         }
     }

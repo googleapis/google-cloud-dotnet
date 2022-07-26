@@ -32,12 +32,12 @@ namespace Google.Cloud.OsConfig.V1Alpha
             yield return ConfigCommonReflection.Descriptor;
             yield return InstanceOsPoliciesComplianceReflection.Descriptor;
             yield return InventoryReflection.Descriptor;
-            yield return OsconfigCommonReflection.Descriptor;
-            yield return OsPolicyAssignmentReportsReflection.Descriptor;
             yield return OsPolicyReflection.Descriptor;
+            yield return OsPolicyAssignmentReportsReflection.Descriptor;
             yield return OsPolicyAssignmentsReflection.Descriptor;
-            yield return VulnerabilityReflection.Descriptor;
+            yield return OsconfigCommonReflection.Descriptor;
             yield return OsconfigZonalServiceReflection.Descriptor;
+            yield return VulnerabilityReflection.Descriptor;
         }
     }
 }

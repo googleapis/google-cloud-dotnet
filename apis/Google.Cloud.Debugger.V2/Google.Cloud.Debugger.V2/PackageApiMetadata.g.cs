@@ -29,8 +29,8 @@ namespace Google.Cloud.Debugger.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return DataReflection.Descriptor;
             yield return ControllerReflection.Descriptor;
+            yield return DataReflection.Descriptor;
             yield return DebuggerReflection.Descriptor;
         }
     }

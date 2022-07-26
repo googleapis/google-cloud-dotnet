@@ -30,10 +30,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return EndpointReflection.Descriptor;
-            yield return ServiceReflection.Descriptor;
             yield return LookupServiceReflection.Descriptor;
             yield return NamespaceReflection.Descriptor;
             yield return RegistrationServiceReflection.Descriptor;
+            yield return ServiceReflection.Descriptor;
         }
     }
 }

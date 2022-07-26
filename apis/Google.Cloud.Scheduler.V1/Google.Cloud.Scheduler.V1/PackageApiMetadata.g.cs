@@ -29,9 +29,9 @@ namespace Google.Cloud.Scheduler.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return TargetReflection.Descriptor;
-            yield return JobReflection.Descriptor;
             yield return CloudschedulerReflection.Descriptor;
+            yield return JobReflection.Descriptor;
+            yield return TargetReflection.Descriptor;
         }
     }
 }

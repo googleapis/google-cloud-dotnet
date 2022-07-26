@@ -29,15 +29,15 @@ namespace Google.Cloud.Monitoring.V3
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return CommonReflection.Descriptor;
-            yield return MutationRecordReflection.Descriptor;
             yield return AlertReflection.Descriptor;
             yield return AlertServiceReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
             yield return DroppedLabelsReflection.Descriptor;
             yield return GroupReflection.Descriptor;
             yield return GroupServiceReflection.Descriptor;
             yield return MetricReflection.Descriptor;
             yield return MetricServiceReflection.Descriptor;
+            yield return MutationRecordReflection.Descriptor;
             yield return NotificationReflection.Descriptor;
             yield return NotificationServiceReflection.Descriptor;
             yield return QueryServiceReflection.Descriptor;

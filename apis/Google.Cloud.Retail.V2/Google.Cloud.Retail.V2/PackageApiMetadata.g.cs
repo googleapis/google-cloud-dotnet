@@ -32,15 +32,15 @@ namespace Google.Cloud.Retail.V2
             yield return CatalogReflection.Descriptor;
             yield return CatalogServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
-            yield return PromotionReflection.Descriptor;
-            yield return ProductReflection.Descriptor;
-            yield return UserEventReflection.Descriptor;
-            yield return ImportConfigReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
+            yield return ImportConfigReflection.Descriptor;
             yield return PredictionServiceReflection.Descriptor;
+            yield return ProductReflection.Descriptor;
             yield return ProductServiceReflection.Descriptor;
+            yield return PromotionReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
+            yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
         }
     }

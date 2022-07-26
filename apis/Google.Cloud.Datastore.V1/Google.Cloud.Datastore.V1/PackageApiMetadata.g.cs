@@ -29,9 +29,9 @@ namespace Google.Cloud.Datastore.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return DatastoreReflection.Descriptor;
             yield return EntityReflection.Descriptor;
             yield return QueryReflection.Descriptor;
-            yield return DatastoreReflection.Descriptor;
         }
     }
 }

@@ -26,22 +26,6 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
-        /// <summary>Adds a singleton <see cref="gcsv::SpeechClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddSpeechClient(this IServiceCollection services, sys::Action<gcsv::SpeechClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcsv::SpeechClientBuilder builder = new gcsv::SpeechClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
         /// <summary>Adds a singleton <see cref="gcsv::AdaptationClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -54,6 +38,22 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcsv::AdaptationClientBuilder builder = new gcsv::AdaptationClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcsv::SpeechClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSpeechClient(this IServiceCollection services, sys::Action<gcsv::SpeechClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::SpeechClientBuilder builder = new gcsv::SpeechClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

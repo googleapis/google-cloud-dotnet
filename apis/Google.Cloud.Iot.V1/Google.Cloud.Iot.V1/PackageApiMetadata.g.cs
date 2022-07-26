@@ -29,8 +29,8 @@ namespace Google.Cloud.Iot.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ResourcesReflection.Descriptor;
             yield return DeviceManagerReflection.Descriptor;
+            yield return ResourcesReflection.Descriptor;
         }
     }
 }

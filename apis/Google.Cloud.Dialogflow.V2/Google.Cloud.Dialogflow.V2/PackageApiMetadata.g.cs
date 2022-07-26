@@ -29,29 +29,29 @@ namespace Google.Cloud.Dialogflow.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return EntityTypeReflection.Descriptor;
-            yield return AudioConfigReflection.Descriptor;
-            yield return ContextReflection.Descriptor;
-            yield return IntentReflection.Descriptor;
-            yield return SessionEntityTypeReflection.Descriptor;
-            yield return SessionReflection.Descriptor;
-            yield return ParticipantReflection.Descriptor;
-            yield return ConversationProfileReflection.Descriptor;
-            yield return ValidationResultReflection.Descriptor;
             yield return AgentReflection.Descriptor;
             yield return AnswerRecordReflection.Descriptor;
-            yield return HumanAgentAssistantEventReflection.Descriptor;
-            yield return FulfillmentReflection.Descriptor;
-            yield return EnvironmentReflection.Descriptor;
-            yield return VersionReflection.Descriptor;
-            yield return KnowledgeBaseReflection.Descriptor;
-            yield return WebhookReflection.Descriptor;
-            yield return GcsReflection.Descriptor;
+            yield return AudioConfigReflection.Descriptor;
+            yield return ContextReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
-            yield return ConversationEventReflection.Descriptor;
-            yield return DocumentReflection.Descriptor;
-            yield return ConversationModelReflection.Descriptor;
             yield return ConversationDatasetReflection.Descriptor;
+            yield return ConversationEventReflection.Descriptor;
+            yield return ConversationModelReflection.Descriptor;
+            yield return ConversationProfileReflection.Descriptor;
+            yield return DocumentReflection.Descriptor;
+            yield return EntityTypeReflection.Descriptor;
+            yield return EnvironmentReflection.Descriptor;
+            yield return FulfillmentReflection.Descriptor;
+            yield return GcsReflection.Descriptor;
+            yield return HumanAgentAssistantEventReflection.Descriptor;
+            yield return IntentReflection.Descriptor;
+            yield return KnowledgeBaseReflection.Descriptor;
+            yield return ParticipantReflection.Descriptor;
+            yield return SessionReflection.Descriptor;
+            yield return SessionEntityTypeReflection.Descriptor;
+            yield return ValidationResultReflection.Descriptor;
+            yield return VersionReflection.Descriptor;
+            yield return WebhookReflection.Descriptor;
         }
     }
 }

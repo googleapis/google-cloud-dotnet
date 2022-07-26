@@ -30,26 +30,26 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AdvancedSettingsReflection.Descriptor;
-            yield return ResponseMessageReflection.Descriptor;
-            yield return FulfillmentReflection.Descriptor;
-            yield return PageReflection.Descriptor;
-            yield return ValidationMessageReflection.Descriptor;
-            yield return FlowReflection.Descriptor;
             yield return AgentReflection.Descriptor;
             yield return AudioConfigReflection.Descriptor;
             yield return ChangelogReflection.Descriptor;
             yield return DeploymentReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
-            yield return IntentReflection.Descriptor;
-            yield return SessionEntityTypeReflection.Descriptor;
-            yield return SessionReflection.Descriptor;
-            yield return TransitionRouteGroupReflection.Descriptor;
-            yield return TestCaseReflection.Descriptor;
-            yield return WebhookReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
             yield return ExperimentReflection.Descriptor;
+            yield return FlowReflection.Descriptor;
+            yield return FulfillmentReflection.Descriptor;
+            yield return IntentReflection.Descriptor;
+            yield return PageReflection.Descriptor;
+            yield return ResponseMessageReflection.Descriptor;
             yield return SecuritySettingsReflection.Descriptor;
+            yield return SessionReflection.Descriptor;
+            yield return SessionEntityTypeReflection.Descriptor;
+            yield return TestCaseReflection.Descriptor;
+            yield return TransitionRouteGroupReflection.Descriptor;
+            yield return ValidationMessageReflection.Descriptor;
             yield return VersionReflection.Descriptor;
+            yield return WebhookReflection.Descriptor;
         }
     }
 }

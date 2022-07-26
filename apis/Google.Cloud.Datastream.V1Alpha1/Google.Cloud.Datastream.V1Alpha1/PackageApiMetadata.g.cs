@@ -29,8 +29,8 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return DatastreamResourcesReflection.Descriptor;
             yield return DatastreamReflection.Descriptor;
+            yield return DatastreamResourcesReflection.Descriptor;
         }
     }
 }

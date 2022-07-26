@@ -29,8 +29,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ResourcesReflection.Descriptor;
             yield return ContactCenterInsightsReflection.Descriptor;
+            yield return ResourcesReflection.Descriptor;
         }
     }
 }

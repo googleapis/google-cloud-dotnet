@@ -31,8 +31,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         {
             yield return AdTagDetailsReflection.Descriptor;
             yield return CdnKeysReflection.Descriptor;
-            yield return EventsReflection.Descriptor;
             yield return CompanionsReflection.Descriptor;
+            yield return EventsReflection.Descriptor;
             yield return SessionsReflection.Descriptor;
             yield return SlatesReflection.Descriptor;
             yield return StitchDetailsReflection.Descriptor;
