@@ -29,13 +29,13 @@ namespace Google.Cloud.Channel.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return CommonReflection.Descriptor;
             yield return ChannelPartnerLinksReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
             yield return CustomersReflection.Descriptor;
-            yield return ProductsReflection.Descriptor;
-            yield return OffersReflection.Descriptor;
             yield return EntitlementsReflection.Descriptor;
+            yield return OffersReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return ProductsReflection.Descriptor;
             yield return RepricingReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return SubscriberEventReflection.Descriptor;

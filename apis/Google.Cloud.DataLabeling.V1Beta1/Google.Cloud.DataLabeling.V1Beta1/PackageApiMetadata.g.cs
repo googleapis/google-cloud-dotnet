@@ -29,15 +29,15 @@ namespace Google.Cloud.DataLabeling.V1Beta1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return AnnotationSpecSetReflection.Descriptor;
             yield return AnnotationReflection.Descriptor;
+            yield return AnnotationSpecSetReflection.Descriptor;
+            yield return DataLabelingServiceReflection.Descriptor;
             yield return DataPayloadsReflection.Descriptor;
-            yield return HumanAnnotationConfigReflection.Descriptor;
             yield return DatasetReflection.Descriptor;
             yield return EvaluationReflection.Descriptor;
             yield return EvaluationJobReflection.Descriptor;
+            yield return HumanAnnotationConfigReflection.Descriptor;
             yield return InstructionReflection.Descriptor;
-            yield return DataLabelingServiceReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
         }
     }

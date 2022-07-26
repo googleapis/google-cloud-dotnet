@@ -29,8 +29,8 @@ namespace Google.Cloud.PubSub.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return SchemaReflection.Descriptor;
             yield return PubsubReflection.Descriptor;
+            yield return SchemaReflection.Descriptor;
         }
     }
 }

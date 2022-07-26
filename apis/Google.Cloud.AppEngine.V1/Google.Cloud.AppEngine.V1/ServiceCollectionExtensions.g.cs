@@ -42,6 +42,90 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::AuthorizedCertificatesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAuthorizedCertificatesClient(this IServiceCollection services, sys::Action<gcav::AuthorizedCertificatesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::AuthorizedCertificatesClientBuilder builder = new gcav::AuthorizedCertificatesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::AuthorizedDomainsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAuthorizedDomainsClient(this IServiceCollection services, sys::Action<gcav::AuthorizedDomainsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::AuthorizedDomainsClientBuilder builder = new gcav::AuthorizedDomainsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::DomainMappingsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDomainMappingsClient(this IServiceCollection services, sys::Action<gcav::DomainMappingsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::DomainMappingsClientBuilder builder = new gcav::DomainMappingsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::FirewallClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFirewallClient(this IServiceCollection services, sys::Action<gcav::FirewallClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::FirewallClientBuilder builder = new gcav::FirewallClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::InstancesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstancesClient(this IServiceCollection services, sys::Action<gcav::InstancesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::InstancesClientBuilder builder = new gcav::InstancesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcav::ServicesClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -70,90 +154,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcav::VersionsClientBuilder builder = new gcav::VersionsClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>Adds a singleton <see cref="gcav::InstancesClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddInstancesClient(this IServiceCollection services, sys::Action<gcav::InstancesClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::InstancesClientBuilder builder = new gcav::InstancesClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>Adds a singleton <see cref="gcav::FirewallClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddFirewallClient(this IServiceCollection services, sys::Action<gcav::FirewallClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::FirewallClientBuilder builder = new gcav::FirewallClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>
-        /// Adds a singleton <see cref="gcav::AuthorizedDomainsClient"/> to <paramref name="services"/>.
-        /// </summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddAuthorizedDomainsClient(this IServiceCollection services, sys::Action<gcav::AuthorizedDomainsClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::AuthorizedDomainsClientBuilder builder = new gcav::AuthorizedDomainsClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>
-        /// Adds a singleton <see cref="gcav::AuthorizedCertificatesClient"/> to <paramref name="services"/>.
-        /// </summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddAuthorizedCertificatesClient(this IServiceCollection services, sys::Action<gcav::AuthorizedCertificatesClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::AuthorizedCertificatesClientBuilder builder = new gcav::AuthorizedCertificatesClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>Adds a singleton <see cref="gcav::DomainMappingsClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddDomainMappingsClient(this IServiceCollection services, sys::Action<gcav::DomainMappingsClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::DomainMappingsClientBuilder builder = new gcav::DomainMappingsClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

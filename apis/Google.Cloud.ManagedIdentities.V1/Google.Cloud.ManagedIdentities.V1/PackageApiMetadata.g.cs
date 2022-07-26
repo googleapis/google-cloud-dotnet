@@ -29,8 +29,8 @@ namespace Google.Cloud.ManagedIdentities.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ResourceReflection.Descriptor;
             yield return ManagedIdentitiesServiceReflection.Descriptor;
+            yield return ResourceReflection.Descriptor;
         }
     }
 }

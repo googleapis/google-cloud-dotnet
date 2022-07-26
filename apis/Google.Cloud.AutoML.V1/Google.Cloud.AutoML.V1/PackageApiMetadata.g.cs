@@ -29,25 +29,25 @@ namespace Google.Cloud.AutoML.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ClassificationReflection.Descriptor;
-            yield return GeometryReflection.Descriptor;
-            yield return DetectionReflection.Descriptor;
-            yield return TextSegmentReflection.Descriptor;
-            yield return TextExtractionReflection.Descriptor;
-            yield return TextSentimentReflection.Descriptor;
-            yield return IoReflection.Descriptor;
-            yield return DataItemsReflection.Descriptor;
-            yield return TranslationReflection.Descriptor;
             yield return AnnotationPayloadReflection.Descriptor;
             yield return AnnotationSpecReflection.Descriptor;
-            yield return ImageReflection.Descriptor;
-            yield return TextReflection.Descriptor;
+            yield return ClassificationReflection.Descriptor;
+            yield return DataItemsReflection.Descriptor;
             yield return DatasetReflection.Descriptor;
+            yield return DetectionReflection.Descriptor;
+            yield return GeometryReflection.Descriptor;
+            yield return ImageReflection.Descriptor;
+            yield return IoReflection.Descriptor;
             yield return ModelReflection.Descriptor;
             yield return ModelEvaluationReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
             yield return PredictionServiceReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return TextReflection.Descriptor;
+            yield return TextExtractionReflection.Descriptor;
+            yield return TextSegmentReflection.Descriptor;
+            yield return TextSentimentReflection.Descriptor;
+            yield return TranslationReflection.Descriptor;
         }
     }
 }

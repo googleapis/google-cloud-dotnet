@@ -30,8 +30,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AppConnectorInstanceConfigReflection.Descriptor;
-            yield return ResourceInfoReflection.Descriptor;
             yield return AppConnectorsServiceReflection.Descriptor;
+            yield return ResourceInfoReflection.Descriptor;
         }
     }
 }

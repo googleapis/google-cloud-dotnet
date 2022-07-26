@@ -31,9 +31,9 @@ namespace Google.Cloud.Firestore.V1
         {
             yield return CommonReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return FirestoreReflection.Descriptor;
             yield return QueryReflection.Descriptor;
             yield return WriteReflection.Descriptor;
-            yield return FirestoreReflection.Descriptor;
         }
     }
 }

@@ -30,10 +30,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return EnvironmentReflection.Descriptor;
-            yield return SnapshotsReflection.Descriptor;
             yield return JobsReflection.Descriptor;
             yield return MessagesReflection.Descriptor;
             yield return MetricsReflection.Descriptor;
+            yield return SnapshotsReflection.Descriptor;
             yield return StreamingReflection.Descriptor;
             yield return TemplatesReflection.Descriptor;
         }

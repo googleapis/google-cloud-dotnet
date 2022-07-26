@@ -29,22 +29,22 @@ namespace Google.Cloud.AppEngine.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AppYamlReflection.Descriptor;
+            yield return AppengineReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
+            yield return AuditDataReflection.Descriptor;
             yield return CertificateReflection.Descriptor;
+            yield return DeployReflection.Descriptor;
+            yield return DeployedFilesReflection.Descriptor;
             yield return DomainReflection.Descriptor;
             yield return DomainMappingReflection.Descriptor;
             yield return FirewallReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
-            yield return NetworkSettingsReflection.Descriptor;
-            yield return ServiceReflection.Descriptor;
-            yield return AppYamlReflection.Descriptor;
-            yield return DeployReflection.Descriptor;
-            yield return VersionReflection.Descriptor;
-            yield return AppengineReflection.Descriptor;
-            yield return AuditDataReflection.Descriptor;
-            yield return DeployedFilesReflection.Descriptor;
             yield return LocationReflection.Descriptor;
+            yield return NetworkSettingsReflection.Descriptor;
             yield return OperationReflection.Descriptor;
+            yield return ServiceReflection.Descriptor;
+            yield return VersionReflection.Descriptor;
         }
     }
 }

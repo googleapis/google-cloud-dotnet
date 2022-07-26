@@ -29,10 +29,10 @@ namespace Google.Cloud.Batch.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return VolumeReflection.Descriptor;
-            yield return TaskReflection.Descriptor;
-            yield return JobReflection.Descriptor;
             yield return BatchReflection.Descriptor;
+            yield return JobReflection.Descriptor;
+            yield return TaskReflection.Descriptor;
+            yield return VolumeReflection.Descriptor;
         }
     }
 }

@@ -30,11 +30,11 @@ namespace Google.Cloud.Vision.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return GeometryReflection.Descriptor;
-            yield return ProductSearchServiceReflection.Descriptor;
+            yield return ImageAnnotatorReflection.Descriptor;
             yield return ProductSearchReflection.Descriptor;
+            yield return ProductSearchServiceReflection.Descriptor;
             yield return TextAnnotationReflection.Descriptor;
             yield return WebDetectionReflection.Descriptor;
-            yield return ImageAnnotatorReflection.Descriptor;
         }
     }
 }

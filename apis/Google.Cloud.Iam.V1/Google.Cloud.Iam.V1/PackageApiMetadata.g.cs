@@ -29,9 +29,9 @@ namespace Google.Cloud.Iam.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return IamPolicyReflection.Descriptor;
             yield return OptionsReflection.Descriptor;
             yield return PolicyReflection.Descriptor;
-            yield return IamPolicyReflection.Descriptor;
         }
     }
 }

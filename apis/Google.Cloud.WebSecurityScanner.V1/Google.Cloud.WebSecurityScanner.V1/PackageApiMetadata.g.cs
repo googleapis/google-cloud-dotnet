@@ -30,14 +30,14 @@ namespace Google.Cloud.WebSecurityScanner.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CrawledUrlReflection.Descriptor;
-            yield return FindingAddonReflection.Descriptor;
             yield return FindingReflection.Descriptor;
+            yield return FindingAddonReflection.Descriptor;
             yield return FindingTypeStatsReflection.Descriptor;
             yield return ScanConfigReflection.Descriptor;
             yield return ScanConfigErrorReflection.Descriptor;
+            yield return ScanRunReflection.Descriptor;
             yield return ScanRunErrorTraceReflection.Descriptor;
             yield return ScanRunWarningTraceReflection.Descriptor;
-            yield return ScanRunReflection.Descriptor;
             yield return WebSecurityScannerReflection.Descriptor;
         }
     }

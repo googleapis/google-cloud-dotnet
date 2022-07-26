@@ -30,9 +30,9 @@ namespace Google.Cloud.Firestore.Admin.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return DatabaseReflection.Descriptor;
-            yield return IndexReflection.Descriptor;
             yield return FieldReflection.Descriptor;
             yield return FirestoreAdminReflection.Descriptor;
+            yield return IndexReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return OperationReflection.Descriptor;
         }

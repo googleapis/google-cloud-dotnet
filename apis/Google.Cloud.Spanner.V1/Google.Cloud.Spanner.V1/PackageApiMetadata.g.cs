@@ -33,10 +33,10 @@ namespace Google.Cloud.Spanner.V1
             yield return KeysReflection.Descriptor;
             yield return MutationReflection.Descriptor;
             yield return QueryPlanReflection.Descriptor;
-            yield return TransactionReflection.Descriptor;
-            yield return TypeReflection.Descriptor;
             yield return ResultSetReflection.Descriptor;
             yield return SpannerReflection.Descriptor;
+            yield return TransactionReflection.Descriptor;
+            yield return TypeReflection.Descriptor;
         }
     }
 }
