@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC9
+// Copyright 2022 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,17 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1.Tests.Conformance;
-using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -33,13 +32,16 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
     {
         public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
 
+        //TODO: Use a non CloudRun environment link as Cloud Run isn't recommended due to various issues.
         internal static string TestBenchUrl { get; } = GetEnvironmentVariableOrDefault("TEST_BENCH_URL", "https://storage-testbench-vkcain7hhq-el.a.run.app/");
 
         internal static string ProjectId { get; } = GetEnvironmentVariableOrDefault("PROJECT_ID", "test");
 
         internal string ServiceAccountEmail { get; } = GetEnvironmentVariableOrDefault("SERVICE_ACCOUNT_EMAIL", "test-service-account@test.iam.gserviceaccount.com");
 
-        internal string Topic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic"); // TODO: See if format is required.
+        internal string Topic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic");
+
+        internal string AccessId { get; set; }
 
         internal string FilePath { get; } = Path.Combine(StorageConformanceTestData.TestData.DataPath, "test_service_account.not-a-test.json");
 
@@ -47,7 +49,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
         private readonly HttpClient _httpClient;
 
-        private static System.Type s_clientType = typeof(StorageClient);
+        private static readonly System.Type s_clientType = typeof(StorageClient);
 
         private readonly ConcurrentDictionary<string, MethodInvocation> _methodMappings;
 
@@ -62,101 +64,124 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             _methodMappings = new ConcurrentDictionary<string, MethodInvocation>();
         }
 
-        [Theory, MemberData(nameof(RetryTestData))]
-        public void RetryTest(RetryTest test)
+        [Theory]
+        [MemberData(nameof(RetryTestData))]
+        public async Task RetryTest(RetryTest test)
         {
             // Create a dictionary which maps method names with the Storage client delegate to be called.
             // May need to adjust based on wider set of methods.
             CreateMethodMapping(test);
-            bool preconditionProvided = test.PreconditionProvided;
             bool expectSuccess = test.ExpectSuccess;
-
             foreach (InstructionList testCase in test.Cases)
             {
                 foreach (string instruction in testCase.Instructions)
                 {
                     foreach (Method method in test.Methods)
                     {
-                        if (method.Name == "storage.hmacKey.get")
-                        {                        
-                            // TODO: Write your tests here.
-                            var resource = CreateStorageResources(method);
-                            var meth = GetMappedFunction(method.Name);
-                            var funcname = meth.MethodInformation.Name;
+                        // TODO: Remove this if condition, when the mapping dictionary is completely and correctly populated.
 
-                            callBench(funcname);
+                        //if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
+                        //if (method.Name.Contains("storage.objects.get") || method.Name.Contains("storage.objects.list"))
+                        //if (method.Name.Contains("storage.hmacKey.get"))
+
+                        if (method.Name.Contains("storage.notifications.list"))
+                        {
+                            await RunTestCase(instruction, method, expectSuccess);
                         }
                     }
                 }
             }
         }
 
-        private async void callBench(string functionName)
+        private async Task RunTestCase(string instruction, Method method, bool expectSuccess)
         {
-            if (functionName.Contains("HmacKey"))
-            {
-                // ------- QUESTION 1 : How to ensure these execute sequentially.??
-                string res = await CreateResource();
-                // System.Threading.Thread.Sleep(60000);
-                string res2 = await ListRetryResources();
+            // method.resources specifies the resources needed by the test. Create the resource for each scenario.
+            var resources = await CreateStorageResources(method);
 
-                if (res2.Contains(res))
+            // Create retry test resource and read Id from response headers.
+            var response = await CreateRetryTestResource(method, instruction);
+
+            bool success = true;
+            try
+            {
+                RunRetryTest(response, resources);
+                // TODO: Anshul to check and change the code if  we need another request. I think retry happens automatically.
+                // Probably add some delay for retry tests to make sure the testbench has time to process the request.
+                var updatedResponse = await GetRetryTest(response.Id);
+                success = updatedResponse.Completed;
+            }
+            catch (System.Exception)
+            {
+                // Log exception to check the status of each test?
+                success = false;
+            }
+
+            Assert.Equal(expectSuccess, success);
+
+            // Delete the retry test and delete Storage Resource as well.
+            await DeleteRetryTest(response.Id);
+        }
+
+        private async Task<TestResponse> CreateRetryTestResource(Method method, string instruction)
+        {
+            var stringContent = GetBodyContent(method.Name, instruction);
+            HttpResponseMessage response = await _httpClient.PostAsync("retry_test", stringContent);
+            response.EnsureSuccessStatusCode();
+            var responseMessage = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<TestResponse>(responseMessage);
+        }
+
+        private void RunRetryTest(TestResponse response, StorageResources resources)
+        {
+            AddRetryIdHeader(response.Id);
+
+            // Use method mapping to call the StorageTestBench API.
+            if (_methodMappings.TryGetValue(GetMethodName(response), out var invocation))
+            {
+                if (invocation.ProjectIdRequired)
                 {
-                    await GetUpdatedStatus(res);
+                    invocation.ProjectId = ProjectId;
                 }
+
+                if (invocation.BucketNameRequired)
+                {
+                    invocation.BucketName = resources.BucketName;
+                }
+
+                if (invocation.ObjectNameRequired)
+                {
+                    invocation.ObjectName = resources.ObjectName;
+                }
+
+                if (invocation.HmacKeyRequired)
+                {
+                    invocation.BucketName = resources.BucketName;
+                    invocation.HmacKey = resources.HmacKey;
+                }
+
+                if (invocation.AccessIdRequired)
+                {
+                    invocation.AccessId = AccessId;
+                }
+
+                if (invocation.ServiceAccountEmailRequired)
+                {
+                    invocation.ServiceAccountEmail = ServiceAccountEmail;
+                }
+
+                if (invocation.NotificationRequired)
+                {
+                    invocation.Notification = resources.Notification;
+                }
+
+                invocation.Invoke(_storageClient);
             }
         }
 
-        private async Task GetUpdatedStatus(string resourceId)
-        {
-            // Use our retry method to be tested here
-            _storageClient.Service.HttpClient.DefaultRequestHeaders.Clear();
-            _storageClient.Service.HttpClient.DefaultRequestHeaders.Add("x-retry-test-id", resourceId);
-            var response = await _storageClient.Service.HttpClient.GetAsync(TestBenchUrl + "storage/v1/b?project=test");
-            var result = response.Content.ReadAsStringAsync().Result;
-        }
-
-        private async Task<string> ListRetryResources()
-        {
-            var response = await _storageClient.Service.HttpClient.GetAsync(TestBenchUrl + "retry_tests");
-            var result = response.Content.ReadAsStringAsync().Result.ToString();
-            return result;
-        }
-
-        private async Task<string> CreateResource()
-        {
-            var data = new StringContent("{\"instructions\":{\"storage.buckets.list\": [\"return-503\"]}}", Encoding.UTF8, "application/json");
-            var response = await _storageClient.Service.HttpClient.PostAsync(TestBenchUrl + "retry_test", data);
-            var resId = JObject.Parse(response.Content.ReadAsStringAsync().Result.Replace("\\", "")).GetValue("id").ToString();
-            return resId;
-        }
-
-        private StorageResources CreateStorageResources(Method method)
-        {
-            var result = new StorageResources();
-            foreach(Resource resource in method.Resources)
-            {
-              /*  if (resource.ToString().Equals("Bucket", StringComparison.OrdinalIgnoreCase))  ---- QUESTION 2: The bucket creation is throwing error
-                {
-                    var bucket = _storageClient.CreateBucket(ProjectId, Guid.NewGuid().ToString());
-                    result.Add(new StorageResource(Resource.Bucket, bucket.Name));
-                }
-                else */ if(resource.ToString().Equals("HmacKey", StringComparison.OrdinalIgnoreCase))
-                {
-                    var hmac = _storageClient.CreateHmacKey(ProjectId, ServiceAccountEmail);
-                   // _storageClient.CreateNotification();        -----QUESTION 3: Need to pass notification as a parameter .. how to do that?
-                    result.Add(new StorageResource(Resource.HmacKey, hmac.ToString()));
-                }
-               
-            }
-            return result;
-        }
-
-    private StorageClient InitializeClient()
+        private StorageClient InitializeClient()
         {
             var clientBuilder = new StorageClientBuilder
             {
-                // TODO: Check the url. This is just to demonstrate how to provide the url.
                 BaseUri = TestBenchUrl + "storage/v1/"
             };
 
@@ -171,20 +196,32 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             }
         }
 
-        private MethodInvocation GetMappedFunction(string name) => name switch
+        private MethodInvocation GetMappedFunction(string name) => name.ToLowerInvariant() switch
         {
-            // TODO: Add all mappings from the json file.
-            
-            "storage.buckets.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteBucket), new System.Type[] { typeof(string), typeof(DeleteBucketOptions) }), false, true, false, false, false),
-            "storage.buckets.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucket)), false, true, false, false, false),
-            "storage.buckets.getIamPolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucketIamPolicy)), false, true, false, false, false),
-            "storage.buckets.insert" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateBucket), new System.Type[] { typeof(string), typeof(string), typeof(CreateBucketOptions) }), true, true, false, false, false),
-           // "storage.buckets.update" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.UpdateBucket), new System.Type[] { typeof(string), typeof(string), typeof(UpdateBucketOptions) }), true, true, false, false, false),   ---- QUESTION 4: Update bucket needs bucket as a parameter.. how to pass that as typeOf() parameter??
-            //"storage.buckets.patch" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.PatchBucket), new System.Type[] { typeof(string), typeof(string), typeof(PatchBucketOptions) }), true, true, false, false, false), 
-            "storage.buckets.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListBuckets)), true, false, false, false, false),
-            "storage.hmacKey.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(GetHmacKeyOptions) }), false, false, false, false, true,true),
+            // TODO: Add all mappings from the json file and throw exception in the default case.
+            "storage.buckets.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteBucket), new System.Type[] { typeof(string), typeof(DeleteBucketOptions) }), false, true, false, false, false, false, false,false),
+            "storage.buckets.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucket)), false, true, false, false, false, false, false,false),
+            "storage.buckets.getiampolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucketIamPolicy)), false, true, false, false, false, false, false, false),
+            "storage.buckets.insert" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateBucket), new System.Type[] { typeof(string), typeof(string), typeof(CreateBucketOptions) }), true, true, false, false, false, false, false, false),
+            "storage.buckets.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListBuckets)), true, false, false, false, false, false, false, false),
+            "storage.buckets.testIamPermissions" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.TestBucketIamPermissions), new System.Type[] { typeof(string), typeof(string), typeof(TestBucketIamPermissionsOptions) }), true, true, false, false, false, false, false, false),
+            "storage.buckets.lockRetentionPolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.LockBucketRetentionPolicy), new System.Type[] { typeof(string), typeof(string), typeof(LockBucketRetentionPolicyOptions) }), false, true, false, false, false, false, false, true),
+
+            "storage.objects.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetObject), new System.Type[] { typeof(string), typeof(string), typeof(GetObjectOptions) }), false, true, true, false, false, false, false, false),
+            "storage.objects.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListObjects), new System.Type[] { typeof(string), typeof(string), typeof(ListObjectsOptions) }), false, true, false, false, false, false, false, false),
+
+            "storage.hmackey.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(GetHmacKeyOptions) }), true, false, false, false, false, false, true, false),
+            "storage.hmackey.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(DeleteHmacKeyOptions) }), true, false, false, false, false, false, true, false),
+            "storage.hmackey.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListHmacKeys), new System.Type[] { typeof(string), typeof(string), typeof(ListHmacKeysOptions) }), true, false, false, false, false, false, false, false),
+
+            "storage.notifications.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListNotifications), new System.Type[] { typeof(string), typeof(string), typeof(ListNotificationsOptions) }), false, true, false, false, false, false, false, false),
+            "storage.notifications.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetNotification), new System.Type[] { typeof(string), typeof(string), typeof(GetNotificationOptions) }), false, true, false, true, false, false, false, false),
+            "storage.notifications.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteNotification), new System.Type[] { typeof(string), typeof(string), typeof(DeleteNotificationOptions) }), false, true, false, true, false, false, false, false),
+
+            "storage.serviceaccount.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetStorageServiceAccountEmail), new System.Type[] { typeof(string), typeof(string), typeof(GetStorageServiceAccountEmailOptions) }), true, false, false, false, false, false, false, false),
+
             // Just to proceed with testing for now.
-            _ => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucket)), false, true, false, false, false),
+            _ => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucket)), false, true, false, false, false, false, false, false),
         };
 
         private async Task<TestResponse> GetRetryTest(string id)
@@ -201,115 +238,116 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             response.EnsureSuccessStatusCode();
         }
 
+        private async Task<StorageResources> CreateStorageResources(Method method)
+        {
+            var result = new StorageResources();
+
+            string bucket = IdGenerator.FromGuid();
+            string objectName = "TestFile.json"; // Could be any other file name as well.
+            // This will ensure that for the given test, object/notification are linked to correct bucket.
+            foreach (var item in method.Resources)
+            {
+                if (item.ToString().Equals("BUCKET", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Storage Client CreateBucket API CreateBucket(ProjectId, bucket) is failing with test bench.
+                    // This is a quick hack to create a bucket in test bench.
+                    var created = await CreateBucket(ProjectId, bucket);
+                    if (created)
+                    {
+                        result.Add(new StorageResource(Resource.Bucket, bucket));
+                    }
+                }
+
+                if (item.ToString().Equals("HMACKEY", StringComparison.OrdinalIgnoreCase))
+                {
+                    var created = await CreateBucket(ProjectId, bucket);
+                    if (created)
+                    {
+                        result.Add(new StorageResource(Resource.Bucket, bucket));
+                    }
+                    var hmacKey = _storageClient.CreateHmacKey(ProjectId, ServiceAccountEmail);
+                    AccessId = hmacKey.Metadata.AccessId;
+                    result.Add(new StorageResource(Resource.HmacKey, hmacKey.Secret));
+                }
+
+                if (item.ToString().Equals("NOTIFICATION", StringComparison.OrdinalIgnoreCase))
+                {
+                    var config = new Notification { Topic = $"//pubsub.googleapis.com/{Topic}", PayloadFormat = "JSON_API_V1" };
+                    var notification = _storageClient.CreateNotification(bucket, config);
+                    result.Add(new StorageResource(Resource.Notification, notification.Id));
+                }
+
+                if (item.ToString().Equals("OBJECT", StringComparison.OrdinalIgnoreCase))
+                {
+                    using var stream = File.OpenRead(FilePath);
+                    var objectCreated = _storageClient.UploadObject(bucket, objectName, "application/json", stream);
+                    result.Add(new StorageResource(Resource.Object, objectCreated.Name));
+                }
+            }
+
+            return result;
+        }
+
+        private async Task<bool> CreateBucket(string projectId, string bucket)
+        {
+            var content = new StringContent($"{{\"name\":\"{bucket}\"}}");
+            var response = await _httpClient.PostAsync($"storage/v1/b?project={projectId}", content);
+            return response.IsSuccessStatusCode;
+        }
+
+        private void AddHeader(string header, string value)
+        {
+            bool contains = _storageClient.Service.HttpClient.DefaultRequestHeaders.Contains(header);
+            if (contains)
+            {
+                // Remove.
+                _storageClient.Service.HttpClient.DefaultRequestHeaders.Remove(header);
+            }
+
+            _storageClient.Service.HttpClient.DefaultRequestHeaders.TryAddWithoutValidation(header, value);
+        }
+
+        private string GetMethodName(TestResponse response)
+        {
+            if (response.Instructions.Any())
+            {
+                var token = response.Instructions.First().Value;
+                if (token?.First is JProperty first)
+                {
+                    return first.Name;
+                }
+            }
+
+            return default;
+        }
+
+        private void AddRetryIdHeader(string id)
+        {
+            AddHeader("x-retry-test-id", id);
+        }
+
+        private static StringContent GetBodyContent(string methodName, string instruction)
+        {
+            if (string.IsNullOrWhiteSpace(methodName) || string.IsNullOrWhiteSpace(instruction))
+            {
+                return null;
+            }
+
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine(" { ");
+            builder.Append("\"instructions\":");
+            builder.Append($" {{\"{methodName}\":");
+            builder.Append($" [\"{instruction}\"]}}");
+            builder.Append(" } ");
+
+            return new StringContent(builder.ToString(), Encoding.UTF8, "application/json");
+        }
+
         private static string GetEnvironmentVariableOrDefault(string name, string defaultValue)
         {
             string value = Environment.GetEnvironmentVariable(name);
             return string.IsNullOrEmpty(value) ? defaultValue : value;
         }
-    }
-
-    internal class MethodInvocation
-    {
-        internal string ProjectId { get; set; }
-
-        internal string BucketName { get; set; }
-
-        internal string ObjectName { get; set; }
-
-        internal string Notification { get; set; }
-
-        internal string HmacKey { get; set; }
-
-        internal MethodInfo MethodInformation { get; set; }
-
-        internal bool ProjectIdRequired { get; }
-
-        internal bool BucketNameRequired { get; }
-
-        internal bool ObjectNameRequired { get; }
-
-        internal bool ServiceAccountEmailRequired { get; }
-
-        internal string ServiceAccountEmail { get; }
-
-        internal bool NotificationRequired { get; }
-
-        internal bool HmacKeyRequired { get; }
-
-        internal object Result { get; private set; }
-
-        public MethodInvocation(MethodInfo methodInfo, bool projectIdRequired, bool bucketNameRequired, bool objectNameRequired, bool notificationRequired, bool hmacKeyRequired, bool serviceAccountEmailRequired=false)
-        {
-            MethodInformation = methodInfo;
-            ProjectIdRequired = projectIdRequired;
-            BucketNameRequired = bucketNameRequired;
-            ObjectNameRequired = objectNameRequired;
-            NotificationRequired = notificationRequired;
-            HmacKeyRequired = hmacKeyRequired;
-            ServiceAccountEmailRequired = serviceAccountEmailRequired;
-        }
-
-        public void Invoke(StorageClient storageClient)
-        {
-            List<object> arguments = new List<object>();
-
-            var parameters = MethodInformation.GetParameters();
-            foreach (var item in parameters)
-            {
-                if (item.ParameterType == typeof(string) && !item.IsOptional)
-                {
-                    if (item.Name is "bucket")
-                    {
-                        arguments.Add(BucketName);
-                    }
-                    else if (item.Name is "object")
-                    {
-                        arguments.Add(ObjectName);
-                    }
-                    else if (item.Name is "project")
-                    {
-                        arguments.Add(ProjectId);
-                    }
-                    else if (item.Name is "notification")
-                    {
-                        arguments.Add(Notification);
-                    }
-                    else if (item.Name is "hmacKey")
-                    {
-                        arguments.Add(HmacKey);
-                    }
-                    else if (item.Name is "serviceAccountEmail")
-                    {
-                        arguments.Add(ServiceAccountEmail);
-                    }
-                    else
-                    {
-                        arguments.Add(System.Type.Missing);
-                    }
-                }
-                else
-                {
-                    arguments.Add(System.Type.Missing);
-                }
-            }
-
-            if (MethodInformation.ReturnType != typeof(void))
-            {
-                Result = MethodInformation.Invoke(storageClient, arguments.ToArray());
-            }
-            else
-            {
-                MethodInformation.Invoke(storageClient, arguments.ToArray());
-            }
-        }
-    }
-
-    internal class TestResponse
-    {
-        public string Id { get; set; }
-
-        public string Instructions { get; set; }
-
-        public bool Completed { get; set; }
     }
 }

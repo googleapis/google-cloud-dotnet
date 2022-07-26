@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,15 +16,16 @@ using Google.Cloud.Storage.V1.Tests.Conformance;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests
 {
-    internal class StorageResource
+    internal readonly struct StorageResource
     {
-        internal Resource Resource { get; set; }
-        internal string Name { get; set; }
+        internal Resource Resource { get; }
 
-        public StorageResource(Resource resource, string name)
+        internal string Value { get; }
+
+        public StorageResource(Resource resource, string value)
         {
             Resource = resource;
-            Name = name;
+            Value = value;
         }
     }
 }

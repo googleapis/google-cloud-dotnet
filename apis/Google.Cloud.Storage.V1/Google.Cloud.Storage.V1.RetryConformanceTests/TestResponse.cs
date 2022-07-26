@@ -12,20 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Storage.V1.Tests.Conformance;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests
 {
-    internal class StorageResources : List<StorageResource>
+    internal class TestResponse
     {
-        internal string BucketName => this.FirstOrDefault(j => j.Resource == Resource.Bucket).Value;
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-        internal string ObjectName => this.FirstOrDefault(j => j.Resource == Resource.Object).Value;
+        // TODO: Make this property clean and better. This is a quick hack to get the Instructions.
 
-        internal string HmacKey => this.FirstOrDefault(j => j.Resource == Resource.HmacKey).Value;
+        [JsonExtensionData]
+        public IDictionary<string, JToken> Instructions { get; set; } = new Dictionary<string, JToken>();
 
-        internal string Notification => this.FirstOrDefault(j => j.Resource == Resource.Notification).Value;
+        [JsonProperty("completed")]
+        public bool Completed { get; set; }
     }
 }
