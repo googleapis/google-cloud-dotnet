@@ -1594,7 +1594,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 2;
     /// <summary>
-    /// The natural language text to be processed.
+    /// The natural language text to be processed. Text length must not exceed
+    /// 256 character for virtual agent interactions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4312,7 +4313,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string text_ = "";
     /// <summary>
     /// Required. The UTF-8 encoded natural language text to be processed.
-    /// Text length must not exceed 256 characters.
+    /// Text length must not exceed 256 characters for virtual agent interactions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
