@@ -33,4 +33,6 @@
   "44186b5": "skip", // Update copyright year (2022)
   "6ab285e": "skip", // Regenerate with protobuf 3.21.3
   "f667ae3": "skip", // Regenerate after metadata reordering
+  "f22bb35": "skip", // Fixing OSConfig
+  "2096786": "skip", // Regenerate after gRPC change
 }
