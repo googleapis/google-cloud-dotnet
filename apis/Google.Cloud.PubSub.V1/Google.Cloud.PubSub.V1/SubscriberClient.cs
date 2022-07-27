@@ -1569,46 +1569,44 @@ namespace Google.Cloud.PubSub.V1
                     }
 
                     var idsToRetry = hasAcksOrNacks ? ackOrNackIds : extendIds.Select(j => j.Id);
-                    // Not all temporaryFailures may need to be retried.
-                    // See if the id exists in the _retryableIds dictionary and only then retry.
-                    var retryableErrorIds = idsToRetry.Where(j => _retryableIds.ContainsKey(j)).ToList();
+                    var retriesToSchedule = new List<(string id, RetryInfo info)>();
 
-                    if (retryableErrorIds.Count == 0)
+                    foreach (var candidateRetryId in idsToRetry)
                     {
-                        // Nothing to retry.
-                        return;
-                    }
-
-                    foreach (var id in retryableErrorIds)
-                    {
-                        // Only ids that exist in _retryableIds dictionary are added to retryableErrorIds from idsToRetry.
-                        // So, id will always exist in _retryableIds dictionary.
-                        var retryInfo = _retryableIds[id];
+                        if (!_retryableIds.TryGetValue(candidateRetryId, out var retryInfo))
+                        {
+                            continue;
+                        }
                         var backoff = s_ackBackoff.NextBackoff(retryInfo.Backoff ?? TimeSpan.Zero);
                         // We should retry only for specified timeout.
                         if (_clock.GetCurrentDateTimeUtc() > retryInfo.FirstTimeOfFailureInUtc + TimeSpan.FromSeconds(timeoutInSeconds) - backoff)
                         {
                             // We are past the retry timeout. This id is not retryable.
                             // Remove this id from _retryableIds dictionary and continue.
-                            _ = _retryableIds.TryRemove(id, out _);
+                            _ = _retryableIds.TryRemove(candidateRetryId, out _);
                             continue;
                         }
 
-                        // Update backoff of retryableErrorIds in _retryableIds dictionary.
-                        _retryableIds[id] = retryInfo.WithBackoff(backoff);
+                        retryInfo = retryInfo.WithBackoff(backoff);
+
+                        // Update the backoff for this ID in the _retryableIds dictionary.
+                        _retryableIds[candidateRetryId] = retryInfo;
+                        // Add it to the list of retries we need to attempt after grouping.
+                        retriesToSchedule.Add((candidateRetryId, retryInfo));
                     }
 
-                    // The ids that exist in both retryableErrorIds and _retryableIds now are the ones that need to be retried.
-                    // We can have ids with different backoff.
-                    // Group these ids on backoff and add them to the corresponding queue in the increasing order of backoff
-                    foreach (var retryGroup in _retryableIds.Where(pair => retryableErrorIds.Contains(pair.Key)).GroupBy(pair => pair.Value.Backoff).OrderBy(pair => pair.Key))
+                    // We can have ids with different backoff values.
+                    // Group on the backoff and add them to the corresponding queue in the increasing order of backoff.
+                    var retryGroups = retriesToSchedule.GroupBy(info => info.info.Backoff).OrderBy(group => group.Key);
+
+                    foreach (var retryGroup in retryGroups)
                     {
                         var backoff = retryGroup.Key ?? TimeSpan.Zero;
-                        var retryIds = retryGroup.Select(j => j.Key);
+                        var retryIds = retryGroup.Select(j => j.id);
                         Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
                         Add(delayTask, new NextAction(false, hasAcksOrNacks
-                        ? () => { ackActionToRetry(retryIds); StartPush(); }
-                        : () => { extendActionToRetry(extendIds.Where(j => retryIds.Contains(j.Id))); StartPush(); }));
+                            ? () => { ackActionToRetry(retryIds); StartPush(); }
+                            : () => { extendActionToRetry(extendIds.Where(j => retryIds.Contains(j.Id))); StartPush(); }));
                     }
                 }
 
