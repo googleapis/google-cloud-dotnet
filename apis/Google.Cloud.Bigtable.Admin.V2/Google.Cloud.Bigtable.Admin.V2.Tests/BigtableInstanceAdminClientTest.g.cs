@@ -57,6 +57,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -88,6 +89,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -121,6 +123,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -152,6 +155,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -185,6 +189,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -216,6 +221,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -403,6 +409,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             Instance expectedResponse = new Instance
             {
@@ -418,6 +425,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -445,6 +453,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             Instance expectedResponse = new Instance
             {
@@ -460,6 +469,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null, null);
