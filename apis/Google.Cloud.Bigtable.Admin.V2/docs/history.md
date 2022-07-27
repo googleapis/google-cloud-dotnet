@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-07-27
+
+### New features
+
+- Publish new fields ([commit 8622047](https://github.com/googleapis/google-cloud-dotnet/commit/8622047d137441747d3935cd806d3167b0a668a3))
+
 ## Version 3.1.0, released 2022-07-11
 
 ### New features
