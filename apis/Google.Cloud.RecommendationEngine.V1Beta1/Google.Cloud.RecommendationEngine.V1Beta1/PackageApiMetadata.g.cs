@@ -29,14 +29,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return CommonReflection.Descriptor;
             yield return CatalogReflection.Descriptor;
-            yield return UserEventReflection.Descriptor;
-            yield return RecommendationengineResourcesReflection.Descriptor;
-            yield return ImportReflection.Descriptor;
             yield return CatalogServiceReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
+            yield return ImportReflection.Descriptor;
             yield return PredictionApikeyRegistryServiceReflection.Descriptor;
             yield return PredictionServiceReflection.Descriptor;
+            yield return RecommendationengineResourcesReflection.Descriptor;
+            yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
         }
     }

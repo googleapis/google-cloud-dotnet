@@ -47,7 +47,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -67,7 +67,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -101,7 +103,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -121,7 +123,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -157,7 +161,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -177,7 +181,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -211,7 +217,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -231,7 +237,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -245,6 +253,82 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             Workload responseCallSettings = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RestrictAllowedServicesRequestObject()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedServicesResponse expectedResponse = new RestrictAllowedServicesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedServices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedServicesResponse response = client.RestrictAllowedServices(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RestrictAllowedServicesRequestObjectAsync()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedServicesResponse expectedResponse = new RestrictAllowedServicesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedServicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestrictAllowedServicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedServicesResponse responseCallSettings = await client.RestrictAllowedServicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RestrictAllowedServicesResponse responseCancellationToken = await client.RestrictAllowedServicesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RestrictAllowedResourcesRequestObject()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedResourcesRequest request = new RestrictAllowedResourcesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedResourcesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedResourcesResponse expectedResponse = new RestrictAllowedResourcesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedResources(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedResourcesResponse response = client.RestrictAllowedResources(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RestrictAllowedResourcesRequestObjectAsync()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedResourcesRequest request = new RestrictAllowedResourcesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedResourcesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedResourcesResponse expectedResponse = new RestrictAllowedResourcesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedResourcesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestrictAllowedResourcesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedResourcesResponse responseCallSettings = await client.RestrictAllowedResourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RestrictAllowedResourcesResponse responseCancellationToken = await client.RestrictAllowedResourcesAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -367,7 +451,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -387,7 +471,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -420,7 +506,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -440,7 +526,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -475,7 +563,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -495,7 +583,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -528,7 +618,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -548,7 +638,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -583,7 +675,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -603,7 +695,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -636,7 +730,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -656,7 +750,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+#pragma warning disable CS0612
                 KmsSettings = new Workload.Types.KMSSettings(),
+#pragma warning restore CS0612
                 ResourceSettings =
                 {
                     new Workload.Types.ResourceSettings(),
@@ -670,6 +766,108 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             Workload responseCallSettings = await client.GetWorkloadAsync(request.WorkloadName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.GetWorkloadAsync(request.WorkloadName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AnalyzeWorkloadMoveRequestObject()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeWorkloadMoveRequest request = new AnalyzeWorkloadMoveRequest
+            {
+                Source = "sourcef438cd36",
+                Target = "targetaefbae42",
+                Project = "projectaa6ff846",
+            };
+            AnalyzeWorkloadMoveResponse expectedResponse = new AnalyzeWorkloadMoveResponse
+            {
+                Blockers =
+                {
+                    "blockersd0e49d21",
+                },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeWorkloadMove(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            AnalyzeWorkloadMoveResponse response = client.AnalyzeWorkloadMove(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AnalyzeWorkloadMoveRequestObjectAsync()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeWorkloadMoveRequest request = new AnalyzeWorkloadMoveRequest
+            {
+                Source = "sourcef438cd36",
+                Target = "targetaefbae42",
+                Project = "projectaa6ff846",
+            };
+            AnalyzeWorkloadMoveResponse expectedResponse = new AnalyzeWorkloadMoveResponse
+            {
+                Blockers =
+                {
+                    "blockersd0e49d21",
+                },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeWorkloadMoveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeWorkloadMoveResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            AnalyzeWorkloadMoveResponse responseCallSettings = await client.AnalyzeWorkloadMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnalyzeWorkloadMoveResponse responseCancellationToken = await client.AnalyzeWorkloadMoveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AnalyzeWorkloadMove()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeWorkloadMoveRequest request = new AnalyzeWorkloadMoveRequest
+            {
+                Target = "targetaefbae42",
+                Project = "projectaa6ff846",
+            };
+            AnalyzeWorkloadMoveResponse expectedResponse = new AnalyzeWorkloadMoveResponse
+            {
+                Blockers =
+                {
+                    "blockersd0e49d21",
+                },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeWorkloadMove(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            AnalyzeWorkloadMoveResponse response = client.AnalyzeWorkloadMove(request.Project, request.Target);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AnalyzeWorkloadMoveAsync()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeWorkloadMoveRequest request = new AnalyzeWorkloadMoveRequest
+            {
+                Target = "targetaefbae42",
+                Project = "projectaa6ff846",
+            };
+            AnalyzeWorkloadMoveResponse expectedResponse = new AnalyzeWorkloadMoveResponse
+            {
+                Blockers =
+                {
+                    "blockersd0e49d21",
+                },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeWorkloadMoveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeWorkloadMoveResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            AnalyzeWorkloadMoveResponse responseCallSettings = await client.AnalyzeWorkloadMoveAsync(request.Project, request.Target, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnalyzeWorkloadMoveResponse responseCancellationToken = await client.AnalyzeWorkloadMoveAsync(request.Project, request.Target, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

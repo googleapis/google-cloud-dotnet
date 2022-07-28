@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -63,6 +65,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -94,6 +97,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -122,6 +126,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -152,6 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -180,6 +186,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -210,6 +217,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -239,6 +247,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -270,6 +279,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -299,6 +309,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -330,6 +341,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -360,6 +372,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -392,6 +405,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -421,6 +435,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -452,6 +467,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -481,6 +497,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -512,6 +529,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -542,6 +560,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -574,6 +593,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -604,6 +624,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -636,6 +657,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -666,6 +688,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -698,6 +721,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -726,6 +750,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -756,6 +781,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -785,6 +811,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -816,6 +843,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -832,6 +860,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -849,6 +878,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -865,6 +895,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -882,6 +913,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
@@ -898,6 +930,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),

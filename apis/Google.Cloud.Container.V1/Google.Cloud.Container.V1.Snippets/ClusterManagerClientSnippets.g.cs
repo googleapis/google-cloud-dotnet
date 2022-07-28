@@ -416,9 +416,14 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { "", },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                Tags = new NetworkTags(),
+                Taints = new NodeTaints(),
+                Labels = new NodeLabels(),
                 LinuxNodeConfig = new LinuxNodeConfig(),
                 KubeletConfig = new NodeKubeletConfig(),
+                NodeNetworkConfig = new NodeNetworkConfig(),
                 GcfsConfig = new GcfsConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
             };
             // Make the request
@@ -442,9 +447,14 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { "", },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                Tags = new NetworkTags(),
+                Taints = new NodeTaints(),
+                Labels = new NodeLabels(),
                 LinuxNodeConfig = new LinuxNodeConfig(),
                 KubeletConfig = new NodeKubeletConfig(),
+                NodeNetworkConfig = new NodeNetworkConfig(),
                 GcfsConfig = new GcfsConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
             };
             // Make the request
@@ -1850,6 +1860,33 @@ namespace Google.Cloud.Container.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CompleteNodePoolUpgrade</summary>
+        public void CompleteNodePoolUpgradeRequestObject()
+        {
+            // Snippet: CompleteNodePoolUpgrade(CompleteNodePoolUpgradeRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            CompleteNodePoolUpgradeRequest request = new CompleteNodePoolUpgradeRequest { Name = "", };
+            // Make the request
+            clusterManagerClient.CompleteNodePoolUpgrade(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteNodePoolUpgradeAsync</summary>
+        public async Task CompleteNodePoolUpgradeRequestObjectAsync()
+        {
+            // Snippet: CompleteNodePoolUpgradeAsync(CompleteNodePoolUpgradeRequest, CallSettings)
+            // Additional: CompleteNodePoolUpgradeAsync(CompleteNodePoolUpgradeRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CompleteNodePoolUpgradeRequest request = new CompleteNodePoolUpgradeRequest { Name = "", };
+            // Make the request
+            await clusterManagerClient.CompleteNodePoolUpgradeAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
         public void RollbackNodePoolUpgradeRequestObject()
         {
@@ -1857,7 +1894,11 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest { Name = "", };
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
+            {
+                Name = "",
+                RespectPdb = false,
+            };
             // Make the request
             Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
             // End snippet
@@ -1871,7 +1912,11 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest { Name = "", };
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
+            {
+                Name = "",
+                RespectPdb = false,
+            };
             // Make the request
             Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
             // End snippet

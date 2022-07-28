@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.2.0, released 2022-07-25
+
+### New features
+
+- Add new abort cause and new route next hop type ([commit 315900f](https://github.com/googleapis/google-cloud-dotnet/commit/315900f5725c85be5c1279cc6f40e6f28d8d3297))
+
+## Version 2.1.0, released 2022-07-11
+
+### New features
+
+- Introduce a projects_missing_permissions field in the AbortInfo structure ([commit 6f1a4bd](https://github.com/googleapis/google-cloud-dotnet/commit/6f1a4bdf27f364ce96cb71954926e5ce0dc01e00))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

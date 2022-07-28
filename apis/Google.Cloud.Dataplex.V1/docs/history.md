@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-25
+
+### New features
+
+- Add IAM support for Explore content APIs ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- Add support for custom container for Task ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- Add support for cross project for Task ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- Add support for custom encryption key to be used for encrypt data on the PDs associated with the VMs in your Dataproc cluster for Task ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- Add support for Latest job in Task resource ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- User mode filter in Explore list sessions API ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+- Support logging sampled file paths per partition to Cloud logging for Discovery event ([commit 0f67ba8](https://github.com/googleapis/google-cloud-dotnet/commit/0f67ba89c2095e73abc43cc4d63b251453bbe57f))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

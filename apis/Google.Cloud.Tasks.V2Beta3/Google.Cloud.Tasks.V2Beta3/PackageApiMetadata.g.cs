@@ -29,10 +29,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return TargetReflection.Descriptor;
-            yield return QueueReflection.Descriptor;
-            yield return TaskReflection.Descriptor;
             yield return CloudtasksReflection.Descriptor;
+            yield return QueueReflection.Descriptor;
+            yield return TargetReflection.Descriptor;
+            yield return TaskReflection.Descriptor;
         }
     }
 }

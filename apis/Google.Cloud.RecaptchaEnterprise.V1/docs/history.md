@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-11
+
+### Bug fixes
+
+- **BREAKING CHANGE** Set the right field number for reCAPTCHA private password leak ([commit 887e7fe](https://github.com/googleapis/google-cloud-dotnet/commit/887e7fe16c53f0194dc7618e61a9b4ec5a8fb0c7))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

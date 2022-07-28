@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -57,6 +58,7 @@ namespace Google.Cloud.Dialogflow.V2
             SetSuggestionFeatureConfigOperationsSettings = existing.SetSuggestionFeatureConfigOperationsSettings.Clone();
             ClearSuggestionFeatureConfigSettings = existing.ClearSuggestionFeatureConfigSettings;
             ClearSuggestionFeatureConfigOperationsSettings = existing.ClearSuggestionFeatureConfigOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -231,6 +233,11 @@ namespace Google.Cloud.Dialogflow.V2
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConversationProfilesSettings"/> object.</returns>
         public ConversationProfilesSettings Clone() => new ConversationProfilesSettings(this);
@@ -376,6 +383,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>The underlying gRPC ConversationProfiles client</summary>
         public virtual ConversationProfiles.ConversationProfilesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -1485,6 +1495,7 @@ namespace Google.Cloud.Dialogflow.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             SetSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSuggestionFeatureConfigOperationsSettings, logger);
             ClearSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ClearSuggestionFeatureConfigOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListConversationProfiles = clientHelper.BuildApiCall<ListConversationProfilesRequest, ListConversationProfilesResponse>("ListConversationProfiles", grpcClient.ListConversationProfilesAsync, grpcClient.ListConversationProfiles, effectiveSettings.ListConversationProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationProfiles);
             Modify_ListConversationProfilesApiCall(ref _callListConversationProfiles);
@@ -1529,6 +1540,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>The underlying gRPC ConversationProfiles client</summary>
         public override ConversationProfiles.ConversationProfilesClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListConversationProfilesRequest(ref ListConversationProfilesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1804,6 +1818,22 @@ namespace Google.Cloud.Dialogflow.V2
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ConversationProfiles
+    {
+        public partial class ConversationProfilesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

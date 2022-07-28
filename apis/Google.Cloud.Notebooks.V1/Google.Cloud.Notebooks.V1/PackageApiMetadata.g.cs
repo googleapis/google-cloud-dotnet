@@ -34,8 +34,8 @@ namespace Google.Cloud.Notebooks.V1
             yield return ExecutionReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
             yield return InstanceConfigReflection.Descriptor;
-            yield return RuntimeReflection.Descriptor;
             yield return ManagedServiceReflection.Descriptor;
+            yield return RuntimeReflection.Descriptor;
             yield return ScheduleReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
         }

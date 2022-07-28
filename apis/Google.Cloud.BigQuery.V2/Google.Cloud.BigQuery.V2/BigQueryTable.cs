@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -262,7 +262,40 @@ namespace Google.Cloud.BigQuery.V2
             }
             return _client.PatchTable(Reference, resource, options);
         }
-        
+
+        /// <summary>
+        /// Gets the IAM policy applied to this table.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.GetTableIamPolicy(TableReference, GetTableIamPolicyOptions)"/>.
+        /// </remarks>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The IAM policy.</returns>
+        public Policy GetIamPolicy(GetTableIamPolicyOptions options = null) => _client.GetTableIamPolicy(Reference, options);
+
+        /// <summary>
+        /// Applies the given IAM policy to this table. An update mask may be provided through <paramref name="options"/>.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.SetTableIamPolicy(TableReference, Policy, SetTableIamPolicyOptions)"/>.
+        /// </remarks>
+        /// <param name="policy">The policy to apply to this table.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The resulting IAM policy after appying <paramref name="policy"/> to this table.</returns>
+        public Policy SetIamPolicy(Policy policy, SetTableIamPolicyOptions options = null) => _client.SetTableIamPolicy(Reference, policy, options);
+
+        /// <summary>
+        /// Tests whether the caller has the given permissions for this table.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.TestTableIamPermissions(TableReference, IList{string}, TestTableIamPermissionsOptions)"/>.
+        /// </remarks>
+        /// <param name="permissions">The table permissions to test for this caller.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A response object that contains a list of permissions which is the subset of <paramref name="permissions"/>
+        /// that the caller has on this table.</returns>
+        public TestIamPermissionsResponse TestIamPermissions(IList<string> permissions, TestTableIamPermissionsOptions options = null) => _client.TestTableIamPermissions(Reference, permissions, options);
+
         /// <summary>
         /// Asynchronously uploads a stream of CSV data to this table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
@@ -479,6 +512,48 @@ namespace Google.Cloud.BigQuery.V2
             }
             return _client.PatchTableAsync(Reference, resource, options, cancellationToken);
         }
+
+        /// <summary>
+        /// Asynchronously gets the IAM policy applied to this table.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.GetTableIamPolicyAsync(TableReference, GetTableIamPolicyOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the IAM policy obtained.</returns>
+        public Task<Policy> GetIamPolicyAsync(GetTableIamPolicyOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.GetTableIamPolicyAsync(Reference, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously applies the given IAM policy to this table. An update mask may be provided through <paramref name="options"/>.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.SetTableIamPolicyAsync(TableReference, Policy, SetTableIamPolicyOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="policy">The policy to apply to this table.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the resulting IAM policy after appying <paramref name="policy"/> to this table.</returns>
+        public Task<Policy> SetIamPolicyAsync(Policy policy, SetTableIamPolicyOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.SetTableIamPolicyAsync(Reference, policy, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously tests whether the caller has the given permissions for this table.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.TestTableIamPermissionsAsync(TableReference, IList{string}, TestTableIamPermissionsOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="permissions">The table permissions to test for this caller.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a response object that contains a list of permissions which is the subset of <paramref name="permissions"/>
+        /// that the caller has on this table.</returns>
+        public Task<TestIamPermissionsResponse> TestIamPermissionsAsync(IList<string> permissions, TestTableIamPermissionsOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.TestTableIamPermissionsAsync(Reference, permissions, options, cancellationToken);
 
         /// <summary>
         /// Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL

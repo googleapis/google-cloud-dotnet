@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -72,6 +74,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             UpdateClientTlsPolicyOperationsSettings = existing.UpdateClientTlsPolicyOperationsSettings.Clone();
             DeleteClientTlsPolicySettings = existing.DeleteClientTlsPolicySettings;
             DeleteClientTlsPolicyOperationsSettings = existing.DeleteClientTlsPolicyOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -432,6 +436,16 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="NetworkSecuritySettings"/> object.</returns>
         public NetworkSecuritySettings Clone() => new NetworkSecuritySettings(this);
@@ -575,6 +589,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
 
         /// <summary>The underlying gRPC NetworkSecurity client</summary>
         public virtual NetworkSecurity.NetworkSecurityClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists AuthorizationPolicies in a given project and location.
@@ -954,10 +974,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<AuthorizationPolicy, OperationMetadata> CreateAuthorizationPolicy(AuthorizationPolicyName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<AuthorizationPolicy, OperationMetadata> CreateAuthorizationPolicy(gagr::LocationName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAuthorizationPolicy(new CreateAuthorizationPolicyRequest
             {
-                ParentAsAuthorizationPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AuthorizationPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizationPolicyId, nameof(authorizationPolicyId)),
                 AuthorizationPolicy = gax::GaxPreconditions.CheckNotNull(authorizationPolicy, nameof(authorizationPolicy)),
             }, callSettings);
@@ -980,10 +1000,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<AuthorizationPolicy, OperationMetadata>> CreateAuthorizationPolicyAsync(AuthorizationPolicyName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<AuthorizationPolicy, OperationMetadata>> CreateAuthorizationPolicyAsync(gagr::LocationName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAuthorizationPolicyAsync(new CreateAuthorizationPolicyRequest
             {
-                ParentAsAuthorizationPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AuthorizationPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizationPolicyId, nameof(authorizationPolicyId)),
                 AuthorizationPolicy = gax::GaxPreconditions.CheckNotNull(authorizationPolicy, nameof(authorizationPolicy)),
             }, callSettings);
@@ -1006,7 +1026,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<AuthorizationPolicy, OperationMetadata>> CreateAuthorizationPolicyAsync(AuthorizationPolicyName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<AuthorizationPolicy, OperationMetadata>> CreateAuthorizationPolicyAsync(gagr::LocationName parent, AuthorizationPolicy authorizationPolicy, string authorizationPolicyId, st::CancellationToken cancellationToken) =>
             CreateAuthorizationPolicyAsync(parent, authorizationPolicy, authorizationPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1183,8 +1203,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1198,8 +1218,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1213,8 +1233,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1225,8 +1245,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1240,8 +1260,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1255,8 +1275,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Deletes a single AuthorizationPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the AuthorizationPolicy to delete. Must be in the format
-        /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
+        /// Required. A name of the AuthorizationPolicy to delete. Must be in the
+        /// format `projects/{project}/locations/{location}/authorizationPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1557,9 +1577,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1582,9 +1603,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1607,9 +1629,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1627,16 +1650,17 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ServerTlsPolicy, OperationMetadata> CreateServerTlsPolicy(ServerTlsPolicyName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<ServerTlsPolicy, OperationMetadata> CreateServerTlsPolicy(gagr::LocationName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateServerTlsPolicy(new CreateServerTlsPolicyRequest
             {
-                ParentAsServerTlsPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ServerTlsPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(serverTlsPolicyId, nameof(serverTlsPolicyId)),
                 ServerTlsPolicy = gax::GaxPreconditions.CheckNotNull(serverTlsPolicy, nameof(serverTlsPolicy)),
             }, callSettings);
@@ -1652,16 +1676,17 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ServerTlsPolicy, OperationMetadata>> CreateServerTlsPolicyAsync(ServerTlsPolicyName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<ServerTlsPolicy, OperationMetadata>> CreateServerTlsPolicyAsync(gagr::LocationName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateServerTlsPolicyAsync(new CreateServerTlsPolicyRequest
             {
-                ParentAsServerTlsPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ServerTlsPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(serverTlsPolicyId, nameof(serverTlsPolicyId)),
                 ServerTlsPolicy = gax::GaxPreconditions.CheckNotNull(serverTlsPolicy, nameof(serverTlsPolicy)),
             }, callSettings);
@@ -1677,13 +1702,14 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ServerTlsPolicy resource to be created.
         /// </param>
         /// <param name="serverTlsPolicyId">
-        /// Required. Short name of the ServerTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "server_mtls_policy".
+        /// Required. Short name of the ServerTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "server_mtls_policy".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ServerTlsPolicy, OperationMetadata>> CreateServerTlsPolicyAsync(ServerTlsPolicyName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<ServerTlsPolicy, OperationMetadata>> CreateServerTlsPolicyAsync(gagr::LocationName parent, ServerTlsPolicy serverTlsPolicy, string serverTlsPolicyId, st::CancellationToken cancellationToken) =>
             CreateServerTlsPolicyAsync(parent, serverTlsPolicy, serverTlsPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2237,9 +2263,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2262,9 +2289,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2287,9 +2315,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2307,16 +2336,17 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ClientTlsPolicy, OperationMetadata> CreateClientTlsPolicy(ClientTlsPolicyName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<ClientTlsPolicy, OperationMetadata> CreateClientTlsPolicy(gagr::LocationName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateClientTlsPolicy(new CreateClientTlsPolicyRequest
             {
-                ParentAsClientTlsPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ClientTlsPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(clientTlsPolicyId, nameof(clientTlsPolicyId)),
                 ClientTlsPolicy = gax::GaxPreconditions.CheckNotNull(clientTlsPolicy, nameof(clientTlsPolicy)),
             }, callSettings);
@@ -2332,16 +2362,17 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ClientTlsPolicy, OperationMetadata>> CreateClientTlsPolicyAsync(ClientTlsPolicyName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<ClientTlsPolicy, OperationMetadata>> CreateClientTlsPolicyAsync(gagr::LocationName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateClientTlsPolicyAsync(new CreateClientTlsPolicyRequest
             {
-                ParentAsClientTlsPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ClientTlsPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(clientTlsPolicyId, nameof(clientTlsPolicyId)),
                 ClientTlsPolicy = gax::GaxPreconditions.CheckNotNull(clientTlsPolicy, nameof(clientTlsPolicy)),
             }, callSettings);
@@ -2357,13 +2388,14 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// Required. ClientTlsPolicy resource to be created.
         /// </param>
         /// <param name="clientTlsPolicyId">
-        /// Required. Short name of the ClientTlsPolicy resource to be created. This value should
-        /// be 1-63 characters long, containing only letters, numbers, hyphens, and
-        /// underscores, and should not start with a number. E.g. "client_mtls_policy".
+        /// Required. Short name of the ClientTlsPolicy resource to be created. This
+        /// value should be 1-63 characters long, containing only letters, numbers,
+        /// hyphens, and underscores, and should not start with a number. E.g.
+        /// "client_mtls_policy".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ClientTlsPolicy, OperationMetadata>> CreateClientTlsPolicyAsync(ClientTlsPolicyName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<ClientTlsPolicy, OperationMetadata>> CreateClientTlsPolicyAsync(gagr::LocationName parent, ClientTlsPolicy clientTlsPolicy, string clientTlsPolicyId, st::CancellationToken cancellationToken) =>
             CreateClientTlsPolicyAsync(parent, clientTlsPolicy, clientTlsPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2683,6 +2715,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             CreateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClientTlsPolicyOperationsSettings, logger);
             UpdateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClientTlsPolicyOperationsSettings, logger);
             DeleteClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClientTlsPolicyOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListAuthorizationPolicies = clientHelper.BuildApiCall<ListAuthorizationPoliciesRequest, ListAuthorizationPoliciesResponse>("ListAuthorizationPolicies", grpcClient.ListAuthorizationPoliciesAsync, grpcClient.ListAuthorizationPolicies, effectiveSettings.ListAuthorizationPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizationPolicies);
             Modify_ListAuthorizationPoliciesApiCall(ref _callListAuthorizationPolicies);
@@ -2767,6 +2801,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
 
         /// <summary>The underlying gRPC NetworkSecurity client</summary>
         public override NetworkSecurity.NetworkSecurityClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListAuthorizationPoliciesRequest(ref ListAuthorizationPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3233,6 +3273,32 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class NetworkSecurity
+    {
+        public partial class NetworkSecurityClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

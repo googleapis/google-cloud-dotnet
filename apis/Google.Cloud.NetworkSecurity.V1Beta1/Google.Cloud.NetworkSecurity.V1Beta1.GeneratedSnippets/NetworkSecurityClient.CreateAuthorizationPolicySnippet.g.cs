@@ -32,7 +32,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/authorizationPolicies/[AUTHORIZATION_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             AuthorizationPolicy authorizationPolicy = new AuthorizationPolicy();
             string authorizationPolicyId = "";
             // Make the request

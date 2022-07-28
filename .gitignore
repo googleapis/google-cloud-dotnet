@@ -7,10 +7,7 @@ bin
 project.lock.json
 _site
 site
-dependencies
 snippetoutput
-# Legacy docs/external; now docs/dependencies
-external
 output
 *~
 .cr

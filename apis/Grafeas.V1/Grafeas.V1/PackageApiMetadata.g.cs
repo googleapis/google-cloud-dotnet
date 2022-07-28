@@ -29,25 +29,25 @@ namespace Grafeas.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return SeverityReflection.Descriptor;
-            yield return ComplianceReflection.Descriptor;
-            yield return ProvenanceReflection.Descriptor;
-            yield return CommonReflection.Descriptor;
-            yield return PackageReflection.Descriptor;
-            yield return UpgradeReflection.Descriptor;
-            yield return DeploymentReflection.Descriptor;
-            yield return SlsaProvenanceZeroTwoReflection.Descriptor;
-            yield return IntotoProvenanceReflection.Descriptor;
-            yield return SlsaProvenanceReflection.Descriptor;
-            yield return ImageReflection.Descriptor;
-            yield return IntotoStatementReflection.Descriptor;
-            yield return BuildReflection.Descriptor;
-            yield return CvssReflection.Descriptor;
-            yield return VulnerabilityReflection.Descriptor;
             yield return AttestationReflection.Descriptor;
+            yield return BuildReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
+            yield return ComplianceReflection.Descriptor;
+            yield return CvssReflection.Descriptor;
+            yield return DeploymentReflection.Descriptor;
             yield return DiscoveryReflection.Descriptor;
             yield return DsseAttestationReflection.Descriptor;
             yield return GrafeasReflection.Descriptor;
+            yield return ImageReflection.Descriptor;
+            yield return IntotoProvenanceReflection.Descriptor;
+            yield return IntotoStatementReflection.Descriptor;
+            yield return PackageReflection.Descriptor;
+            yield return ProvenanceReflection.Descriptor;
+            yield return SeverityReflection.Descriptor;
+            yield return SlsaProvenanceReflection.Descriptor;
+            yield return SlsaProvenanceZeroTwoReflection.Descriptor;
+            yield return UpgradeReflection.Descriptor;
+            yield return VulnerabilityReflection.Descriptor;
         }
     }
 }

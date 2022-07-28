@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -127,6 +127,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest> __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
@@ -271,6 +275,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "ListBackupOperations",
         __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsRequest,
         __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> __Method_ListDatabaseRoles = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatabaseRoles",
+        __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -591,6 +603,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> ListBackupOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Cloud Spanner database roles.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> ListDatabaseRoles(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1876,6 +1900,54 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackupOperations, null, options, request);
       }
+      /// <summary>
+      /// Lists Cloud Spanner database roles.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse ListDatabaseRoles(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseRoles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Cloud Spanner database roles.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse ListDatabaseRoles(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatabaseRoles, null, options, request);
+      }
+      /// <summary>
+      /// Lists Cloud Spanner database roles.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> ListDatabaseRolesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseRolesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Cloud Spanner database roles.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> ListDatabaseRolesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseRoles, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatabaseAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -1907,10 +1979,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_RestoreDatabase, serviceImpl.RestoreDatabase)
           .AddMethod(__Method_ListDatabaseOperations, serviceImpl.ListDatabaseOperations)
-          .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations).Build();
+          .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations)
+          .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles).Build();
     }
 
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
@@ -1935,6 +2008,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_RestoreDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreDatabase));
       serviceBinder.AddMethod(__Method_ListDatabaseOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(serviceImpl.ListDatabaseOperations));
       serviceBinder.AddMethod(__Method_ListBackupOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(serviceImpl.ListBackupOperations));
+      serviceBinder.AddMethod(__Method_ListDatabaseRoles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse>(serviceImpl.ListDatabaseRoles));
     }
 
   }

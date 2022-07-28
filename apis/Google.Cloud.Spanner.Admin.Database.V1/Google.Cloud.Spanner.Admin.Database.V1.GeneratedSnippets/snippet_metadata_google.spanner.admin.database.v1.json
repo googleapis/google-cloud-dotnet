@@ -2742,6 +2742,161 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_sync",
+      "title": "ListDatabaseRolesRequestObject",
+      "description": "Snippet for ListDatabaseRoles",
+      "file": "DatabaseAdminClient.ListDatabaseRolesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRoles",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRoles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_async",
+      "title": "ListDatabaseRolesRequestObjectAsync",
+      "description": "Snippet for ListDatabaseRolesAsync",
+      "file": "DatabaseAdminClient.ListDatabaseRolesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRolesAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRolesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_sync_flattened",
+      "title": "ListDatabaseRoles",
+      "description": "Snippet for ListDatabaseRoles",
+      "file": "DatabaseAdminClient.ListDatabaseRolesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRoles",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRoles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_async_flattened",
+      "title": "ListDatabaseRolesAsync",
+      "description": "Snippet for ListDatabaseRolesAsync",
+      "file": "DatabaseAdminClient.ListDatabaseRolesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRolesAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRolesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_sync_flattened_resourceNames",
+      "title": "ListDatabaseRolesResourceNames",
+      "description": "Snippet for ListDatabaseRoles",
+      "file": "DatabaseAdminClient.ListDatabaseRolesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRoles",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRoles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_ListDatabaseRoles_async_flattened_resourceNames",
+      "title": "ListDatabaseRolesResourceNamesAsync",
+      "description": "Snippet for ListDatabaseRolesAsync",
+      "file": "DatabaseAdminClient.ListDatabaseRolesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabaseRolesAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabaseRolesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse, Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabaseRoles",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }

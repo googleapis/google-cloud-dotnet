@@ -121,6 +121,8 @@ fi
 
 log_build_action "(Start) build.sh"
 
+log_build_action "(Start) Building"
+
 # Then build the requested APIs, working out the test projects as we go.
 > AllTests.txt
 for api in ${apis[*]}
@@ -156,6 +158,8 @@ do
     rm -rf $apidir/*/bin/Release/net[0-9]*
   fi
 done
+
+log_build_action "(End) Building"
 
 if [[ "$runtests" = true ]]
 then

@@ -17,6 +17,7 @@
 namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
 {
     // [START networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkSecurity.V1Beta1;
     using Google.LongRunning;
 
@@ -34,7 +35,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateAuthorizationPolicyRequest request = new CreateAuthorizationPolicyRequest
             {
-                ParentAsAuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AuthorizationPolicyId = "",
                 AuthorizationPolicy = new AuthorizationPolicy(),
             };

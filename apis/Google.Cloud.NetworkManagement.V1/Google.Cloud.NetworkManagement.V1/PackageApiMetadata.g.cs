@@ -29,9 +29,9 @@ namespace Google.Cloud.NetworkManagement.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return TraceReflection.Descriptor;
             yield return ConnectivityTestReflection.Descriptor;
             yield return ReachabilityReflection.Descriptor;
+            yield return TraceReflection.Descriptor;
         }
     }
 }

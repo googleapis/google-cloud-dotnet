@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -47,6 +48,7 @@ namespace Google.Cloud.Dialogflow.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetFulfillmentSettings = existing.GetFulfillmentSettings;
             UpdateFulfillmentSettings = existing.UpdateFulfillmentSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -87,6 +89,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateFulfillmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FulfillmentsSettings"/> object.</returns>
@@ -229,6 +236,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>The underlying gRPC Fulfillments client</summary>
         public virtual Fulfillments.FulfillmentsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Retrieves the fulfillment.
@@ -443,6 +453,7 @@ namespace Google.Cloud.Dialogflow.V2
             GrpcClient = grpcClient;
             FulfillmentsSettings effectiveSettings = settings ?? FulfillmentsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetFulfillment = clientHelper.BuildApiCall<GetFulfillmentRequest, Fulfillment>("GetFulfillment", grpcClient.GetFulfillmentAsync, grpcClient.GetFulfillment, effectiveSettings.GetFulfillmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFulfillment);
             Modify_GetFulfillmentApiCall(ref _callGetFulfillment);
@@ -462,6 +473,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>The underlying gRPC Fulfillments client</summary>
         public override Fulfillments.FulfillmentsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_GetFulfillmentRequest(ref GetFulfillmentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -513,6 +527,22 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_UpdateFulfillmentRequest(ref request, ref callSettings);
             return _callUpdateFulfillment.Async(request, callSettings);
+        }
+    }
+
+    public static partial class Fulfillments
+    {
+        public partial class FulfillmentsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

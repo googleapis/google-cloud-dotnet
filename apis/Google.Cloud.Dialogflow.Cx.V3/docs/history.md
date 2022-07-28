@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-11
+
+### Documentation improvements
+
+- Improve comments for protos ([commit 27b3c67](https://github.com/googleapis/google-cloud-dotnet/commit/27b3c678ac58d003776a4db0f95e80af268eaed1))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

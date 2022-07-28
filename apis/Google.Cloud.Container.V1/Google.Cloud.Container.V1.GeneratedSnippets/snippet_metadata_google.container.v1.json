@@ -2959,6 +2959,58 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "container_v1_generated_ClusterManager_CompleteNodePoolUpgrade_sync",
+      "title": "CompleteNodePoolUpgradeRequestObject",
+      "description": "Snippet for CompleteNodePoolUpgrade",
+      "file": "ClusterManagerClient.CompleteNodePoolUpgradeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteNodePoolUpgrade",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteNodePoolUpgrade",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "CompleteNodePoolUpgrade",
+          "fullName": "google.container.v1.ClusterManager.CompleteNodePoolUpgrade",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_CompleteNodePoolUpgrade_async",
+      "title": "CompleteNodePoolUpgradeRequestObjectAsync",
+      "description": "Snippet for CompleteNodePoolUpgradeAsync",
+      "file": "ClusterManagerClient.CompleteNodePoolUpgradeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteNodePoolUpgradeAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteNodePoolUpgradeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "CompleteNodePoolUpgrade",
+          "fullName": "google.container.v1.ClusterManager.CompleteNodePoolUpgrade",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "container_v1_generated_ClusterManager_RollbackNodePoolUpgrade_sync",
       "title": "RollbackNodePoolUpgradeRequestObject",
       "description": "Snippet for RollbackNodePoolUpgrade",

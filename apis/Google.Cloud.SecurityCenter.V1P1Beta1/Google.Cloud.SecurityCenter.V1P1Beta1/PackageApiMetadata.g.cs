@@ -29,17 +29,17 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return FolderReflection.Descriptor;
-            yield return SecurityMarksReflection.Descriptor;
             yield return AssetReflection.Descriptor;
             yield return FindingReflection.Descriptor;
+            yield return FolderReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
-            yield return ResourceReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
             yield return OrganizationSettingsReflection.Descriptor;
+            yield return ResourceReflection.Descriptor;
             yield return RunAssetDiscoveryResponseReflection.Descriptor;
-            yield return SourceReflection.Descriptor;
+            yield return SecurityMarksReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
+            yield return SourceReflection.Descriptor;
         }
     }
 }

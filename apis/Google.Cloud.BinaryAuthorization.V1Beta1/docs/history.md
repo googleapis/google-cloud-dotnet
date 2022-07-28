@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-07-11
+
+### New features
+
+- Adds a pod_namespace field to pod events created by Continuous Validation, to distinguish pods with the same name that run in different namespaces ([commit fd6408b](https://github.com/googleapis/google-cloud-dotnet/commit/fd6408b674f330694f87d105a233c5ddf5e508d8))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

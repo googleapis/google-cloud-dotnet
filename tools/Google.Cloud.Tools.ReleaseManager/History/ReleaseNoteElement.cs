@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,16 +61,15 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// </summary>
         /// <param name="text">The message</param>
         /// <param name="hash">The git commit hash that this element is part of.</param>
-        /// <returns>The parsed release note element</returns>
+        /// <returns>The parsed release note element, or null to skip entirely.</returns>
         public static ReleaseNoteElement Parse(string hash, string text)
         {
             string[] parts = text.Split(':', 2);
 
             if (parts.Length == 1)
             {
-                // Note a conventional commit message. Register it as unknown,
-                // and let a human sort it out.
-                return new ReleaseNoteElement(hash, text, ReleaseNoteElementType.Unknown, false);
+                // Not a conventional commit message.
+                return null;
             }
             string prefix = parts[0];
             bool breakingChange = prefix.Contains('!');
@@ -80,9 +79,21 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 "fix" => ReleaseNoteElementType.Fix,
                 "chore" => ReleaseNoteElementType.Chore,
                 "docs" => ReleaseNoteElementType.Docs,
-                "doc"  => ReleaseNoteElementType.Docs,
+                "doc" => ReleaseNoteElementType.Docs,
+                "BREAKING CHANGE" => ReleaseNoteElementType.BreakingChange,
                 _ => ReleaseNoteElementType.Unknown
             };
+            if (type == ReleaseNoteElementType.BreakingChange)
+            {
+                // In a breaking change section, we don't need to highlight that a change is breaking.
+                breakingChange = false;
+            }
+            // If we the haven't got a valid type, and the text contains a space,
+            // chances are it's not intended to be a conventional commit message, so we ignore it.
+            if (type == ReleaseNoteElementType.Unknown && prefix.Contains(' '))
+            {
+                return null;
+            }
             string message = parts[1].Trim();
             if (message == "")
             {

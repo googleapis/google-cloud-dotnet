@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.1.0, released 2022-07-11
+
+### New features
+
+- Deprecated the filter field and add resource_definition ([commit 05d7b7b](https://github.com/googleapis/google-cloud-dotnet/commit/05d7b7b5e149a6bcf813db29a787b77902b28326))
+
+### Documentation improvements
+
+- Add more meaningful comments ([commit 05d7b7b](https://github.com/googleapis/google-cloud-dotnet/commit/05d7b7b5e149a6bcf813db29a787b77902b28326))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

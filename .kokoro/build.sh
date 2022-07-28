@@ -23,6 +23,11 @@ df -h
 echo "Available disk space after running build.sh"
 df -h
 
+./clean.sh
+
+echo "Available disk space after running clean.sh"
+df -h
+
 ./processbuildtiminglog.sh
 
 echo "Available disk space after running processbuildtiminglog.sh"

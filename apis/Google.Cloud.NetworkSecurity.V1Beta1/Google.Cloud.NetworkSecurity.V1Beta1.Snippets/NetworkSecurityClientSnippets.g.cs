@@ -399,7 +399,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateAuthorizationPolicyRequest request = new CreateAuthorizationPolicyRequest
             {
-                ParentAsAuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AuthorizationPolicyId = "",
                 AuthorizationPolicy = new AuthorizationPolicy(),
             };
@@ -434,7 +434,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateAuthorizationPolicyRequest request = new CreateAuthorizationPolicyRequest
             {
-                ParentAsAuthorizationPolicyName = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AuthorizationPolicyId = "",
                 AuthorizationPolicy = new AuthorizationPolicy(),
             };
@@ -466,7 +466,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/authorizationPolicies/[AUTHORIZATION_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             AuthorizationPolicy authorizationPolicy = new AuthorizationPolicy();
             string authorizationPolicyId = "";
             // Make the request
@@ -498,7 +498,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/authorizationPolicies/[AUTHORIZATION_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             AuthorizationPolicy authorizationPolicy = new AuthorizationPolicy();
             string authorizationPolicyId = "";
             // Make the request
@@ -525,11 +525,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateAuthorizationPolicy</summary>
         public void CreateAuthorizationPolicyResourceNames()
         {
-            // Snippet: CreateAuthorizationPolicy(AuthorizationPolicyName, AuthorizationPolicy, string, CallSettings)
+            // Snippet: CreateAuthorizationPolicy(LocationName, AuthorizationPolicy, string, CallSettings)
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            AuthorizationPolicyName parent = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             AuthorizationPolicy authorizationPolicy = new AuthorizationPolicy();
             string authorizationPolicyId = "";
             // Make the request
@@ -556,12 +556,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateAuthorizationPolicyAsync</summary>
         public async Task CreateAuthorizationPolicyResourceNamesAsync()
         {
-            // Snippet: CreateAuthorizationPolicyAsync(AuthorizationPolicyName, AuthorizationPolicy, string, CallSettings)
-            // Additional: CreateAuthorizationPolicyAsync(AuthorizationPolicyName, AuthorizationPolicy, string, CancellationToken)
+            // Snippet: CreateAuthorizationPolicyAsync(LocationName, AuthorizationPolicy, string, CallSettings)
+            // Additional: CreateAuthorizationPolicyAsync(LocationName, AuthorizationPolicy, string, CancellationToken)
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            AuthorizationPolicyName parent = AuthorizationPolicyName.FromProjectLocationAuthorizationPolicy("[PROJECT]", "[LOCATION]", "[AUTHORIZATION_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             AuthorizationPolicy authorizationPolicy = new AuthorizationPolicy();
             string authorizationPolicyId = "";
             // Make the request
@@ -1268,7 +1268,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateServerTlsPolicyRequest request = new CreateServerTlsPolicyRequest
             {
-                ParentAsServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ServerTlsPolicyId = "",
                 ServerTlsPolicy = new ServerTlsPolicy(),
             };
@@ -1303,7 +1303,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateServerTlsPolicyRequest request = new CreateServerTlsPolicyRequest
             {
-                ParentAsServerTlsPolicyName = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ServerTlsPolicyId = "",
                 ServerTlsPolicy = new ServerTlsPolicy(),
             };
@@ -1335,7 +1335,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/serverTlsPolicies/[SERVER_TLS_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ServerTlsPolicy serverTlsPolicy = new ServerTlsPolicy();
             string serverTlsPolicyId = "";
             // Make the request
@@ -1367,7 +1367,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/serverTlsPolicies/[SERVER_TLS_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ServerTlsPolicy serverTlsPolicy = new ServerTlsPolicy();
             string serverTlsPolicyId = "";
             // Make the request
@@ -1394,11 +1394,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateServerTlsPolicy</summary>
         public void CreateServerTlsPolicyResourceNames()
         {
-            // Snippet: CreateServerTlsPolicy(ServerTlsPolicyName, ServerTlsPolicy, string, CallSettings)
+            // Snippet: CreateServerTlsPolicy(LocationName, ServerTlsPolicy, string, CallSettings)
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            ServerTlsPolicyName parent = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ServerTlsPolicy serverTlsPolicy = new ServerTlsPolicy();
             string serverTlsPolicyId = "";
             // Make the request
@@ -1425,12 +1425,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateServerTlsPolicyAsync</summary>
         public async Task CreateServerTlsPolicyResourceNamesAsync()
         {
-            // Snippet: CreateServerTlsPolicyAsync(ServerTlsPolicyName, ServerTlsPolicy, string, CallSettings)
-            // Additional: CreateServerTlsPolicyAsync(ServerTlsPolicyName, ServerTlsPolicy, string, CancellationToken)
+            // Snippet: CreateServerTlsPolicyAsync(LocationName, ServerTlsPolicy, string, CallSettings)
+            // Additional: CreateServerTlsPolicyAsync(LocationName, ServerTlsPolicy, string, CancellationToken)
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            ServerTlsPolicyName parent = ServerTlsPolicyName.FromProjectLocationServerTlsPolicy("[PROJECT]", "[LOCATION]", "[SERVER_TLS_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ServerTlsPolicy serverTlsPolicy = new ServerTlsPolicy();
             string serverTlsPolicyId = "";
             // Make the request
@@ -2137,7 +2137,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateClientTlsPolicyRequest request = new CreateClientTlsPolicyRequest
             {
-                ParentAsClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ClientTlsPolicyId = "",
                 ClientTlsPolicy = new ClientTlsPolicy(),
             };
@@ -2172,7 +2172,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateClientTlsPolicyRequest request = new CreateClientTlsPolicyRequest
             {
-                ParentAsClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ClientTlsPolicyId = "",
                 ClientTlsPolicy = new ClientTlsPolicy(),
             };
@@ -2204,7 +2204,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/clientTlsPolicies/[CLIENT_TLS_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request
@@ -2236,7 +2236,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/clientTlsPolicies/[CLIENT_TLS_POLICY]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request
@@ -2263,11 +2263,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateClientTlsPolicy</summary>
         public void CreateClientTlsPolicyResourceNames()
         {
-            // Snippet: CreateClientTlsPolicy(ClientTlsPolicyName, ClientTlsPolicy, string, CallSettings)
+            // Snippet: CreateClientTlsPolicy(LocationName, ClientTlsPolicy, string, CallSettings)
             // Create client
             NetworkSecurityClient networkSecurityClient = NetworkSecurityClient.Create();
             // Initialize request argument(s)
-            ClientTlsPolicyName parent = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request
@@ -2294,12 +2294,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
         /// <summary>Snippet for CreateClientTlsPolicyAsync</summary>
         public async Task CreateClientTlsPolicyResourceNamesAsync()
         {
-            // Snippet: CreateClientTlsPolicyAsync(ClientTlsPolicyName, ClientTlsPolicy, string, CallSettings)
-            // Additional: CreateClientTlsPolicyAsync(ClientTlsPolicyName, ClientTlsPolicy, string, CancellationToken)
+            // Snippet: CreateClientTlsPolicyAsync(LocationName, ClientTlsPolicy, string, CallSettings)
+            // Additional: CreateClientTlsPolicyAsync(LocationName, ClientTlsPolicy, string, CancellationToken)
             // Create client
             NetworkSecurityClient networkSecurityClient = await NetworkSecurityClient.CreateAsync();
             // Initialize request argument(s)
-            ClientTlsPolicyName parent = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ClientTlsPolicy clientTlsPolicy = new ClientTlsPolicy();
             string clientTlsPolicyId = "";
             // Make the request

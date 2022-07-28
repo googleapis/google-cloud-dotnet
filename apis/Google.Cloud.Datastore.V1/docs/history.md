@@ -1,5 +1,10 @@
 # Version history
 
+## Version 4.2.0, released 2022-07-27
+
+### New features
+
+- Added database ID to request messages ([commit adf2d20](https://github.com/googleapis/google-cloud-dotnet/commit/adf2d202eb0fc206df6195cb46df98e7a6486160))
 ## Version 4.1.0, released 2022-06-22
 
 ### New features

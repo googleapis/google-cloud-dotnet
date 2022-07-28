@@ -33,6 +33,12 @@ copy_one_api() {
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
 
+  # Determine the commit for googleapis to use based on the Source-Link in
+  # the comment from the last commit in the local directory.
+  GOOGLEAPIS_COMMIT=$(git show --format=%B -s \
+     | grep "^Source-Link: https://github.com/googleapis/googleapis/commit/" \
+     | sed 's/.*\/commit\///g')
+    
   # We don't expect googleapis-gen to contain the right (or potentially
   # even valid) code for APIs which have pre/mid-generation tweak scripts,
   # or custom resource configurations - or a few other corner cases.
@@ -44,11 +50,6 @@ copy_one_api() {
   # file if so.
   if [[ -f $PACKAGE_DIR/.OwlBot-ForceRegeneration.txt ]]
   then
-    # Determine the commit for googleapis to use based on the Source-Link in
-    # the comment from the last commit in the local directory.
-    GOOGLEAPIS_COMMIT=$(git show --format=%B -s \
-       | grep "^Source-Link: https://github.com/googleapis/googleapis/commit/" \
-       | sed 's/.*\/commit\///g')
     if [[ $GOOGLEAPIS_COMMIT == "" ]]
     then
       echo "No googleapis commit to generate $PACKAGE from"
@@ -120,6 +121,13 @@ copy_one_api() {
       echo "API $1 has broken namespace declarations"
       exit 1
     fi
+  fi
+
+  # Assuming we've got a googleapis commit to work from, check for
+  # any updated mixins in the API.
+  if [[ $GOOGLEAPIS_COMMIT != "" ]]
+  then
+    ./prepare-release.sh update-mixins $PACKAGE $GOOGLEAPIS_COMMIT
   fi
 }
 

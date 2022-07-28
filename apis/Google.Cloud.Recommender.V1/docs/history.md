@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-11
+
+### New features
+
+- Implement configurable recommenders and  update .bazel files ([commit d7c46bf](https://github.com/googleapis/google-cloud-dotnet/commit/d7c46bfa4491005632e4473aa4c88d965a952c98))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

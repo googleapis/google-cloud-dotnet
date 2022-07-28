@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -33,13 +34,41 @@ namespace Google.Cloud.Tools.ApiIndex.V1
             var json = File.ReadAllText(Path.Combine(googleApisRoot, "api-index-v1.json"));
             return Parser.ParseJson(json);
         }
+
+        /// <summary>
+        /// Loads the API index from GitHub, for situations where we may not have a local
+        /// copy of the repo. We assume that we're running in a console app, so can just
+        /// get the result of a task without deadlocking.
+        /// </summary>
+        public static Index LoadFromGitHub(string committish)
+        {
+            var client = new HttpClient();
+            var json = client.GetStringAsync($"https://raw.githubusercontent.com/googleapis/googleapis/{committish}/api-index-v1.json").GetAwaiter().GetResult();
+            return Parser.ParseJson(json);
+        }
     }
 
     public partial class Api
     {
+        private static readonly Dictionary<string, string> MixinDependencies = new()
+        {
+            { "google.cloud.location.Locations", "Google.Cloud.Location" },
+            { "google.iam.v1.IAMPolicy","Google.Cloud.Iam.V1" },
+            { "google.longrunning.Operations", "Google.LongRunning" }
+        };
+
         private static readonly Regex StableVersionPattern = new Regex(@"^v[\d]+$");
 
         public bool Stable => StableVersionPattern.IsMatch(Version);
+
+        /// <summary>
+        /// Returns a sequence of .NET package names corresponding to mixins declared by this API.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<string> GetMixinPackages() =>
+            from mixin in MixinDependencies
+            join service in ServiceConfigApiNames on mixin.Key equals service
+            select mixin.Value;
 
         public string DeriveCSharpNamespace()
         {

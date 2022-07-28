@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-27
+
+### New features
+
+- Add SubscriberClientBuilder ([commit 5f830ac](https://github.com/googleapis/google-cloud-dotnet/commit/5f830acefb771d7a7f0c3f86fc7e71e5b482596e))
+- Add PublisherClientBuilder ([commit 09eeaa9](https://github.com/googleapis/google-cloud-dotnet/commit/09eeaa97a1ee617caf1d4b75f0ab97dcc14f1233))
+
 ## Version 3.0.0, released 2022-06-29
 
 No API surface changes since 3.0.0-beta01. (See 3.0.0-beta01 release notes for details.)

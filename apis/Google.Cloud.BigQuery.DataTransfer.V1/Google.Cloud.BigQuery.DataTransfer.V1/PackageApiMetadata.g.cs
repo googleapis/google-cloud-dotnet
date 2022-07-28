@@ -29,8 +29,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return TransferReflection.Descriptor;
             yield return DatatransferReflection.Descriptor;
+            yield return TransferReflection.Descriptor;
         }
     }
 }

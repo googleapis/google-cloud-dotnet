@@ -32,8 +32,8 @@ namespace Google.Cloud.DataQnA.V1Alpha
             yield return AnnotatedStringReflection.Descriptor;
             yield return AutoSuggestionServiceReflection.Descriptor;
             yield return QuestionReflection.Descriptor;
-            yield return UserFeedbackReflection.Descriptor;
             yield return QuestionServiceReflection.Descriptor;
+            yield return UserFeedbackReflection.Descriptor;
         }
     }
 }

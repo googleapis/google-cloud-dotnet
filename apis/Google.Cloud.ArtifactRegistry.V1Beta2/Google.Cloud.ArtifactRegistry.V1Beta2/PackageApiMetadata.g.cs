@@ -33,11 +33,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             yield return FileReflection.Descriptor;
             yield return PackageReflection.Descriptor;
             yield return RepositoryReflection.Descriptor;
+            yield return ServiceReflection.Descriptor;
             yield return SettingsReflection.Descriptor;
             yield return TagReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return YumArtifactReflection.Descriptor;
-            yield return ServiceReflection.Descriptor;
         }
     }
 }

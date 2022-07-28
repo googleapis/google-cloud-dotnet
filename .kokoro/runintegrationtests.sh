@@ -82,6 +82,9 @@ df -h
 echo "Available disk space after running createcoveragereport.sh"
 df -h
 
+# Clean up to make artifact copying quicker
+./clean.sh
+
 ./processbuildtiminglog.sh
 
 echo "Available disk space after running processbuildtiminglog.sh"

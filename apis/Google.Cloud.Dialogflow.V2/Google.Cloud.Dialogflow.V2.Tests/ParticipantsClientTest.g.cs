@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateParticipantRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -61,6 +63,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateParticipantRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -92,6 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateParticipant()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -121,6 +125,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateParticipantAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -152,6 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateParticipantResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -181,6 +187,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateParticipantResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateParticipantRequest request = new CreateParticipantRequest
             {
                 ParentAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -212,6 +219,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetParticipantRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -240,6 +248,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetParticipantRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -270,6 +279,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetParticipant()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -298,6 +308,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetParticipantAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -328,6 +339,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetParticipantResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -356,6 +368,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetParticipantResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetParticipantRequest request = new GetParticipantRequest
             {
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -386,6 +399,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateParticipantRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateParticipantRequest request = new UpdateParticipantRequest
             {
                 Participant = new Participant(),
@@ -415,6 +429,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateParticipantRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateParticipantRequest request = new UpdateParticipantRequest
             {
                 Participant = new Participant(),
@@ -446,6 +461,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateParticipant()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateParticipantRequest request = new UpdateParticipantRequest
             {
                 Participant = new Participant(),
@@ -475,6 +491,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateParticipantAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateParticipantRequest request = new UpdateParticipantRequest
             {
                 Participant = new Participant(),
@@ -506,6 +523,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void AnalyzeContentRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -544,6 +562,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task AnalyzeContentRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -584,6 +603,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void AnalyzeContent1()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -616,6 +636,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task AnalyzeContent1Async()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -650,6 +671,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void AnalyzeContent1ResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -682,6 +704,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task AnalyzeContent1ResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -716,6 +739,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void AnalyzeContent2()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -748,6 +772,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task AnalyzeContent2Async()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -782,6 +807,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void AnalyzeContent2ResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -814,6 +840,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task AnalyzeContent2ResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             AnalyzeContentRequest request = new AnalyzeContentRequest
             {
                 ParticipantAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -848,6 +875,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestArticlesRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -875,6 +903,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestArticlesRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -904,6 +933,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestArticles()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -928,6 +958,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestArticlesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -954,6 +985,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestArticlesResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -978,6 +1010,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestArticlesResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestArticlesRequest request = new SuggestArticlesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1004,6 +1037,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestFaqAnswersRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1028,6 +1062,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestFaqAnswersRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1054,6 +1089,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestFaqAnswers()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1075,6 +1111,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestFaqAnswersAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1098,6 +1135,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestFaqAnswersResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1119,6 +1157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestFaqAnswersResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestFaqAnswersRequest request = new SuggestFaqAnswersRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1142,6 +1181,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestSmartRepliesRequestObject()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1169,6 +1209,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestSmartRepliesRequestObjectAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1198,6 +1239,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestSmartReplies()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1222,6 +1264,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestSmartRepliesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1248,6 +1291,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void SuggestSmartRepliesResourceNames()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
@@ -1272,6 +1316,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task SuggestSmartRepliesResourceNamesAsync()
         {
             moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
             {
                 ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),

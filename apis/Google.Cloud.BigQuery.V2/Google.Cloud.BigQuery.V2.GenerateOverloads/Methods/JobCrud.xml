@@ -81,4 +81,14 @@
     - CreateCopyJob and CreateLoadJob can't be generated yet, as they doesn't use IDs.
     - Could still reduce copy/paste for the async using a target type of None, but it's probably not worth it.
     -->
+
+  <Method Name="DeleteJob"
+      TargetType="Job"
+      ReturnType="void">
+      <Comments>
+          <summary>
+              Deletes {target}.
+          </summary>
+      </Comments>
+  </Method>
 </File>

@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -198,6 +198,74 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new Table
                 {
                     View = new ViewDefinition(),
+                    ExternalDataConfiguration = new ExternalDataConfiguration()
+                }));
+        }
+
+        [Fact]
+        public void CreateTable_ViewAndMaterializedView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            Assert.Throws<ArgumentException>(() => client.CreateTable(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    View = new ViewDefinition(),
+                    MaterializedView = new MaterializedViewDefinition()
+                }));
+        }
+
+        [Fact]
+        public async Task CreateTableAsync_ViewAndMaterializedView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.CreateTableAsync(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    View = new ViewDefinition(),
+                    MaterializedView = new MaterializedViewDefinition()
+                }));
+        }
+
+        [Fact]
+        public void CreateTable_MaterializedViewAndExternalDataConfiguration()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            Assert.Throws<ArgumentException>(() => client.CreateTable(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    MaterializedView = new MaterializedViewDefinition(),
+                    ExternalDataConfiguration = new ExternalDataConfiguration()
+                }));
+        }
+
+        [Fact]
+        public async Task CreateTableAsync_MaterializedViewAndExternalDataConfiguration()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.CreateTableAsync(
+                datasetId,
+                tableId,
+                new Table
+                {
+                    MaterializedView = new MaterializedViewDefinition(),
                     ExternalDataConfiguration = new ExternalDataConfiguration()
                 }));
         }
@@ -711,6 +779,47 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(2, table.Schema.Fields[3].Fields.Count);
             Assert.Equal("gender", table.Schema.Fields[3].Fields[0].Name);
             Assert.Equal("age", table.Schema.Fields[3].Fields[1].Name);
+        }
+
+        [Fact]
+        public void GetTableIamPolicy()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var policy = client.GetTableIamPolicy(
+                _fixture.DatasetId, _fixture.HighScoreTableId, new GetTableIamPolicyOptions { PolicyVersion = 3 });
+
+            Assert.NotNull(policy.ETag);
+        }
+
+        [Fact]
+        public void SetTableIamPolicy()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            client.CreateTable(_fixture.DatasetId, tableId, new Table { FriendlyName = "FriendlyName" });
+
+            var existingPolicy = client.GetTableIamPolicy(_fixture.DatasetId, tableId);
+
+            existingPolicy.Bindings ??= new List<Binding>();
+
+            existingPolicy.Bindings.Add(new Binding
+            {
+                Members = new List<string> { "allAuthenticatedUsers" },
+                Role = "roles/viewer"
+            });
+
+            var updatedPolicy = client.SetTableIamPolicy(_fixture.DatasetId, tableId, existingPolicy);
+            Assert.Contains(updatedPolicy.Bindings,
+                binding => binding.Role == "roles/viewer" && binding.Members.Single() == "allAuthenticatedUsers");
+        }
+
+        [Fact]
+        public void TestTableIamPermissions()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            var response = client.TestTableIamPermissions(_fixture.DatasetId, _fixture.HighScoreTableId, new List<string> { "bigquery.tables.get" });
+            Assert.Collection(response.Permissions, role => Assert.Equal("bigquery.tables.get", role));
         }
     }
 }

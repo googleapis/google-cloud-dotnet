@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -103,7 +103,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Settings for creating <see cref="PublisherServiceApiClient"/>s.
+        /// This type is now obsolete; please use <see cref="PublisherClientBuilder"/> which provides an
+        /// API surface consistent with other clients (as well as additional Pub/Sub-specific properties such as <see cref="PublisherClientBuilder.ClientCount"/>).
         /// </summary>
+        [Obsolete("Use PublisherClientBuilder to customize client settings.")]
         public sealed class ClientCreationSettings
         {
             /// <summary>
@@ -207,6 +210,22 @@ namespace Google.Cloud.PubSub.V1
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 
         /// <summary>
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>, using default settings.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to. Must not be null.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static PublisherClient Create(TopicName topicName) =>
+            CreateBuilder(topicName, null, null).Build();
+
+        /// <summary>
+        /// Creates a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>, using default settings.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to. Must not be null.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static Task<PublisherClient> CreateAsync(TopicName topicName) =>
+            CreateBuilder(topicName, null, null).BuildAsync();
+
+        /// <summary>
         /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
         /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
@@ -215,15 +234,14 @@ namespace Google.Cloud.PubSub.V1
         /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
         /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
         /// </summary>
-        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to. Must not be null.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="PublisherServiceApiClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        [Obsolete("Use PublisherClient.Create(TopicName) to use the default settings, or PublisherClientBuilder for customization.")]
         public static PublisherClient Create(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
-            // With isAsync set to false, the returned task will already be completed (either successfully or faulted),
-            // so .ResultWithUnwrappedExceptions() will always return immediately.
-            CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: false).ResultWithUnwrappedExceptions();
+            CreateBuilder(topicName, clientCreationSettings, settings).Build();
 
         /// <summary>
         /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
@@ -234,61 +252,28 @@ namespace Google.Cloud.PubSub.V1
         /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
         /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
         /// </summary>
-        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to. Must not be null.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="PublisherServiceApiClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        [Obsolete("Use PublisherClient.CreateAsync(TopicName) to use the default settings, or PublisherClientBuilder for customization.")]
         public static Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
-            // With isAsync set to true, the returned task will complete asynchronously (if required) as expected.
-            CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: true);
+            CreateBuilder(topicName, clientCreationSettings, settings).BuildAsync();
 
-        /// <summary>
-        /// Creates a <see cref="PublisherClient"/>.
-        /// <paramref name="isAsync"/> controls whether the returned task will complete synchronously or asynchronously, allowing this
-        /// method to be used by both <see cref="Create"/> and <see cref="CreateAsync"/>.
-        /// </summary>
-        private static async Task<PublisherClient> CreateMaybeAsync(TopicName topicName, ClientCreationSettings clientCreationSettings, Settings settings, bool isAsync)
-        {
-            clientCreationSettings?.Validate();
-            // Clone settings, just in case user modifies them and an await happens in this method
-            settings = settings?.Clone() ?? new Settings();
-            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
-
-            // Create the channels and clients, and register shutdown functions for each channel
-            var clients = new PublisherServiceApiClient[clientCount];
-            var shutdowns = new Func<Task>[clientCount];
-            for (int i = 0; i < clientCount; i++)
+#pragma warning disable CS0618 // Type or member is obsolete
+        private static PublisherClientBuilder CreateBuilder(TopicName topicName, ClientCreationSettings clientCreationSettings, Settings settings) =>
+            new PublisherClientBuilder
             {
-                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-                var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
-                    .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
-
-                // First builder to handle any endpoint detection etc. We build a gRPC channel
-                // with this.
-                var builder = new PublisherServiceApiClientBuilder
-                {
-                    EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
-                    Endpoint = clientCreationSettings?.ServiceEndpoint,
-                    ChannelCredentials = clientCreationSettings?.Credentials,
-                    Settings = clientCreationSettings?.PublisherServiceApiSettings,
-                    ChannelOptions = grpcChannelOptions
-                };
-                var channel = isAsync ?
-                    await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false) :
-                    builder.CreateChannel();
-
-                // Second builder doesn't need to do much, as we can build a call invoker from the channel.
-                clients[i] = new PublisherServiceApiClientBuilder
-                {
-                    CallInvoker = channel.CreateCallInvoker(),
-                    Settings = clientCreationSettings?.PublisherServiceApiSettings
-                }.Build();
-                shutdowns[i] = channel.ShutdownAsync;
-            }
-            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
-            return new PublisherClientImpl(topicName, clients, settings, shutdown);
-        }
+                TopicName = GaxPreconditions.CheckNotNull(topicName, nameof(topicName)),
+                Settings = settings,
+                EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
+                ClientCount = clientCreationSettings?.ClientCount,
+                ChannelCredentials = clientCreationSettings?.Credentials,
+                Endpoint = clientCreationSettings?.ServiceEndpoint,
+                ApiSettings = clientCreationSettings?.PublisherServiceApiSettings
+            };
+#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <summary>
         /// The associated <see cref="TopicName"/>. 

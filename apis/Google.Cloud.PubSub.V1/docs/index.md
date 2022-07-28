@@ -49,7 +49,7 @@ than a single gRPC channel can support; the processor count is a pragmatic choic
 scale maximum throughput performance by potential machine workload.
 
 When using multiple clients on a machine with a high processor count, this may cause problems
-with TCP connection exhaustion. Set the relevant `ClientCreationSettings.ClientCount` to a low value
+with TCP connection exhaustion. Set the relevant builder `ClientCount` property to a low value
 (`1` is suitable for low or moderate throughput requirements) to mitigate this.
 
 ## Coding considerations
@@ -61,6 +61,14 @@ used for the lifetime of the application.
 Both synchronous `Create(...)` and asynchronous `CreateAsync(...)` methods are provided, but note that
 when using default credentials on Google Compute Engine (GCE) then a network request may need to be made
 to retrieve credentials from the GCE Metadata Server.
+
+The overloads for `Create` and `CreateAsync` accepting just a topic or subscription name use default
+settings for everything else, and are the most convenient approach for creating clients when the defaults
+are acceptable. For further customization (e.g. to set different credentials, or a different client count)
+we recommend using `PublisherClientBuilder` and `SubscriberClientBuilder` for consistency with other
+APIs, and for maximum flexibility. There are overloads of `Create` and `CreateAsync` accepting
+publisher/subscriber-specific `ClientCreationSettings`, but these are legacy methods from versions where
+the builders did not exist. They are likely to be removed in future major versions.
 
 When publishing, the `Task` returned by the various `Publish(...)` methods will complete only
 when the message has been sent to the PubSub server, so should generally not be `await`ed directly
@@ -81,8 +89,8 @@ Emulator](https://cloud.google.com/pubsub/docs/emulator), set the
 `EmulatorDetection` property in the appropriate class depending on
 which client type you are constructing:
 
-- `PublisherClient.ClientCreationSettings` (for `PublisherClient`)
-- `SubscriberClient.ClientCreationSettings` (for `SubscriberClient`)
+- `PublisherClientBuilder` (for `PublisherClient`)
+- `SubscriberClientBuilder` (for `SubscriberClient`)
 - `PublisherServiceApiClientBuilder` (for `PublisherServiceApiClient`)
 - `SubscriberServiceApiClientBuilder` (for `SubscriberServiceApiClient`)
 

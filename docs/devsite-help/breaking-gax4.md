@@ -24,6 +24,17 @@ This means that if you want to use the API libraries targeting GAX
 v3, you need to be using .NET Core 3.1 or .NET 4.6.2, or a higher
 version of either of these.
 
+## Change of gRPC default implementation
+
+Where available, GAX v4 uses Grpc.Net.Client rather than Grpc.Core as the implementation for gRPC.
+For most customers this is entirely transparent, but if you have set any environment variables that
+are specific to Grpc.Core (e.g. `GRPC_PROXY`), you may need to *either* force the use of Grpc.Core,
+*or* make other code changes to obtain the same result. (The details will depend on exactly what
+environment variables are set and why.)
+
+For more information about the rules determining which gRPC implementation is used,
+see the [transport selection documentation](transports.md).
+
 ## Obsolete members
 
 Obsolete members of libraries have been removed, unless they are part of the API

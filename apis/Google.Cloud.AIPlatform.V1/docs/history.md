@@ -1,5 +1,26 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-11
+
+### New features
+
+- Add ListSavedQueries rpc to aiplatform v1 dataset_service.proto ([commit 0ac2a25](https://github.com/googleapis/google-cloud-dotnet/commit/0ac2a258631c1925ae90cac40d4a371be3eebf13))
+- Add saved_query.proto to aiplatform v1 ([commit 0ac2a25](https://github.com/googleapis/google-cloud-dotnet/commit/0ac2a258631c1925ae90cac40d4a371be3eebf13))
+- Add saved_query_id to InputDataConfig in aiplatform v1 training_pipeline.proto ([commit 0ac2a25](https://github.com/googleapis/google-cloud-dotnet/commit/0ac2a258631c1925ae90cac40d4a371be3eebf13))
+- Add BatchImportModelEvaluationSlices API in aiplatform v1 model_service.proto ([commit f742d07](https://github.com/googleapis/google-cloud-dotnet/commit/f742d07982cab375c0e81478f473e8e393c985dd))
+- Add model_version_id to BatchPredictionJob in aiplatform v1 batch_prediction_job.proto ([commit 2b4568a](https://github.com/googleapis/google-cloud-dotnet/commit/2b4568ab92390c4e8bfaed567dcc831fe59d6641))
+- Add model_version_id to DeployedModel in aiplatform v1 endpoint.proto ([commit 2b4568a](https://github.com/googleapis/google-cloud-dotnet/commit/2b4568ab92390c4e8bfaed567dcc831fe59d6641))
+- Add model_version_id to PredictResponse in aiplatform v1 prediction_service.proto ([commit 2b4568a](https://github.com/googleapis/google-cloud-dotnet/commit/2b4568ab92390c4e8bfaed567dcc831fe59d6641))
+- Add model_version_id to UploadModelResponse in aiplatform v1 model_service.proto ([commit c85aa57](https://github.com/googleapis/google-cloud-dotnet/commit/c85aa57f26f70d7fdb6877b4fa7a58f3bdf864fd))
+- Add default_skew_threshold to TrainingPredictionSkewDetectionConfig in aiplatform v1beta1, v1 model_monitoring.proto ([commit 5e87a0c](https://github.com/googleapis/google-cloud-dotnet/commit/5e87a0c5da96ffa7bb5b9526d4b982705831c1a2))
+- Add default_drift_threshold to PredictionDriftDetectionConfig in aiplatform v1beta1, v1 model_monitoring.proto ([commit 5e87a0c](https://github.com/googleapis/google-cloud-dotnet/commit/5e87a0c5da96ffa7bb5b9526d4b982705831c1a2))
+- Add successful_forecast_point_count to CompletionStats in aiplatform v1 completion_stats.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+- Add neighbors to Explanation in aiplatform v1 explanation.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+- Add examples_override to ExplanationSpecOverride in aiplatform v1 explanation.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+- Add version_id, version_aliases, version_create_time, version_update_time, and version_description to aiplatform v1 model.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+- Add ModelVersion CRUD methods in aiplatform v1 model_service.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+- Add model_id and parent_model to TrainingPipeline in aiplatform v1 training_pipeline.proto ([commit 2ab7359](https://github.com/googleapis/google-cloud-dotnet/commit/2ab735928abdc87cbbc3c2340b0c796495fafe58))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

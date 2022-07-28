@@ -29,8 +29,9 @@ namespace Google.Cloud.Bigtable.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return DataReflection.Descriptor;
             yield return BigtableReflection.Descriptor;
+            yield return DataReflection.Descriptor;
+            yield return ResponseParamsReflection.Descriptor;
         }
     }
 }

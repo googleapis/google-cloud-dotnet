@@ -90,4 +90,43 @@
       <returns>The updated table.</returns>
     </Comments>
   </Method>
+
+  <Method Name="GetTableIamPolicy"
+     TargetType="Table"
+     ReturnType="Policy">
+      <Comments>
+          <summary>
+              Gets the IAM policy applied to {target}.
+          </summary>
+          <returns>The table's IAM policy.</returns>
+      </Comments>
+  </Method>
+
+  <Method Name="SetTableIamPolicy"
+     TargetType="Table"
+     ReturnType="Policy">
+     <AdditionalParameters>
+       <Parameter Name="policy" Type="Policy" Comment="The policy to set on the table. An update mask may be specified through options." />
+     </AdditionalParameters>
+      <Comments>
+          <summary>
+              Applies the given IAM policy to {target}.
+          </summary>
+          <returns>The resulting IAM policy after aplying the given policy.</returns>
+      </Comments>
+  </Method>
+
+  <Method Name="TestTableIamPermissions"
+     TargetType="Table"
+     ReturnType="TestIamPermissionsResponse">
+      <AdditionalParameters>
+          <Parameter Name="permissions" Type="IList&lt;string&gt;" Comment="The permissions to test on the table." />
+      </AdditionalParameters>
+      <Comments>
+          <summary>
+              Returns the subset of permissions that the caller has on {target}.
+          </summary>
+          <returns>The subset of permissions that the caller has on {target}.</returns>
+      </Comments>
+  </Method>
 </File>

@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-25
+
+### New features
+
+- Rename product ([commit f3b6e78](https://github.com/googleapis/google-cloud-dotnet/commit/f3b6e78f207771c908bdd9016c6be22e001566b9))
+- API updates ([commit f3b6e78](https://github.com/googleapis/google-cloud-dotnet/commit/f3b6e78f207771c908bdd9016c6be22e001566b9))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

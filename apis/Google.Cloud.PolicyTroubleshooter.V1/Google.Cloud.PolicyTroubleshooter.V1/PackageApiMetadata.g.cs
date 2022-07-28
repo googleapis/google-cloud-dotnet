@@ -29,8 +29,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ExplanationsReflection.Descriptor;
             yield return CheckerReflection.Descriptor;
+            yield return ExplanationsReflection.Descriptor;
         }
     }
 }

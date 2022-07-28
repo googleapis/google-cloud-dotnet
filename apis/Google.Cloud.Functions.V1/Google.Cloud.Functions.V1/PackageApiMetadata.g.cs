@@ -29,8 +29,8 @@ namespace Google.Cloud.Functions.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return OperationsReflection.Descriptor;
             yield return FunctionsReflection.Descriptor;
+            yield return OperationsReflection.Descriptor;
         }
     }
 }

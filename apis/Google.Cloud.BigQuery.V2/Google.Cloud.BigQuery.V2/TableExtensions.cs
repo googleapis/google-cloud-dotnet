@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -65,5 +65,12 @@ namespace Google.Cloud.BigQuery.V2
                 tableReference1.DatasetId == tableReference2.DatasetId &&
                 tableReference1.TableId == tableReference2.TableId;
         }
+
+        /// <summary>
+        /// Gets the resource name from the given <see cref="TableReference"/> using
+        /// the standard resource name format: projects/*/datasets/*/tables/*.
+        /// </summary>
+        internal static string GetResourceName(this TableReference tableReference) =>
+            $"projects/{tableReference.ProjectId}/datasets/{tableReference.DatasetId}/tables/{tableReference.TableId}";
     }
 }

@@ -35,6 +35,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 0,
+                PreferredMinStreamCount = 0,
             };
             // Make the request
             ReadSession response = bigQueryReadClient.CreateReadSession(request);
@@ -54,6 +55,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 0,
+                PreferredMinStreamCount = 0,
             };
             // Make the request
             ReadSession response = await bigQueryReadClient.CreateReadSessionAsync(request);

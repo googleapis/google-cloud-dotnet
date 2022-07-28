@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -170,6 +170,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     ReleaseNoteElementType.Feature => "New features",
                     ReleaseNoteElementType.Chore => "Chores",
                     ReleaseNoteElementType.Docs => "Documentation improvements",
+                    ReleaseNoteElementType.BreakingChange => "Breaking changes",
                     ReleaseNoteElementType.Unknown => FixmeBlockingRelease,
                     _ => throw new InvalidOperationException("Unknown element type")
                 };

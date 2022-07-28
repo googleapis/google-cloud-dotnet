@@ -3,7 +3,7 @@
 //     source: google/container/v1/cluster_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -125,6 +125,8 @@ namespace Google.Cloud.Container.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CreateNodePoolRequest> __Marshaller_google_container_v1_CreateNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.DeleteNodePoolRequest> __Marshaller_google_container_v1_DeleteNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest> __Marshaller_google_container_v1_CompleteNodePoolUpgradeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest> __Marshaller_google_container_v1_RollbackNodePoolUpgradeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -323,6 +325,14 @@ namespace Google.Cloud.Container.V1 {
         "DeleteNodePool",
         __Marshaller_google_container_v1_DeleteNodePoolRequest,
         __Marshaller_google_container_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CompleteNodePoolUpgrade = new grpc::Method<global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CompleteNodePoolUpgrade",
+        __Marshaller_google_container_v1_CompleteNodePoolUpgradeRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation> __Method_RollbackNodePoolUpgrade = new grpc::Method<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(
@@ -704,6 +714,19 @@ namespace Google.Cloud.Container.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.Operation> DeleteNodePool(global::Google.Cloud.Container.V1.DeleteNodePoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+      /// complete.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CompleteNodePoolUpgrade(global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2037,6 +2060,58 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNodePool, null, options, request);
       }
       /// <summary>
+      /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+      /// complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CompleteNodePoolUpgrade(global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompleteNodePoolUpgrade(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+      /// complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CompleteNodePoolUpgrade(global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CompleteNodePoolUpgrade, null, options, request);
+      }
+      /// <summary>
+      /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+      /// complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CompleteNodePoolUpgradeAsync(global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompleteNodePoolUpgradeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+      /// complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CompleteNodePoolUpgradeAsync(global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CompleteNodePoolUpgrade, null, options, request);
+      }
+      /// <summary>
       /// Rolls back a previously Aborted or Failed NodePool upgrade.
       /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
@@ -2564,6 +2639,7 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_GetNodePool, serviceImpl.GetNodePool)
           .AddMethod(__Method_CreateNodePool, serviceImpl.CreateNodePool)
           .AddMethod(__Method_DeleteNodePool, serviceImpl.DeleteNodePool)
+          .AddMethod(__Method_CompleteNodePoolUpgrade, serviceImpl.CompleteNodePoolUpgrade)
           .AddMethod(__Method_RollbackNodePoolUpgrade, serviceImpl.RollbackNodePoolUpgrade)
           .AddMethod(__Method_SetNodePoolManagement, serviceImpl.SetNodePoolManagement)
           .AddMethod(__Method_SetLabels, serviceImpl.SetLabels)
@@ -2576,7 +2652,7 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_ListUsableSubnetworks, serviceImpl.ListUsableSubnetworks).Build();
     }
 
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
@@ -2605,6 +2681,7 @@ namespace Google.Cloud.Container.V1 {
       serviceBinder.AddMethod(__Method_GetNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetNodePoolRequest, global::Google.Cloud.Container.V1.NodePool>(serviceImpl.GetNodePool));
       serviceBinder.AddMethod(__Method_CreateNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CreateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CreateNodePool));
       serviceBinder.AddMethod(__Method_DeleteNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.DeleteNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.DeleteNodePool));
+      serviceBinder.AddMethod(__Method_CompleteNodePoolUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CompleteNodePoolUpgrade));
       serviceBinder.AddMethod(__Method_RollbackNodePoolUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.RollbackNodePoolUpgrade));
       serviceBinder.AddMethod(__Method_SetNodePoolManagement, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNodePoolManagement));
       serviceBinder.AddMethod(__Method_SetLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetLabelsRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetLabels));

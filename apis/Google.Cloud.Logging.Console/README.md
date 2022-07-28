@@ -21,5 +21,10 @@ The server supports four URLs:
 
 - `/simple` logs a simple informational message
 - `/complex` logs a message containing a parameter
-- `/error` throws an exception which is logged as an error
+- `/error` throws a very simple exception which is logged as an error
 - `/scopes` logs a message in a nested scope
+- `/deep-exception` throws an exception with a non-trivial stack trace
+- `/nested-exception` throws an exception containing another one
+- `/async-exception` throws an exception from an async method (which
+  calls other async methods)
+

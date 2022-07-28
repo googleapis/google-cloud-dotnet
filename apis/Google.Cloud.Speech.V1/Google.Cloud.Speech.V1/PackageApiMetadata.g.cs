@@ -29,9 +29,9 @@ namespace Google.Cloud.Speech.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ResourceReflection.Descriptor;
             yield return CloudSpeechReflection.Descriptor;
             yield return CloudSpeechAdaptationReflection.Descriptor;
+            yield return ResourceReflection.Descriptor;
         }
     }
 }

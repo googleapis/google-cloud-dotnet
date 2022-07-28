@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -468,6 +468,50 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void GetTableIamPolicyEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new GetTableIamPolicyOptions();
+            VerifyEquivalent(new Policy(),
+                client => client.GetTableIamPolicy(MatchesWhenSerialized(reference), options),
+                client => client.GetTableIamPolicy(datasetId, tableId, options),
+                client => client.GetTableIamPolicy(ProjectId, datasetId, tableId, options),
+                client => new BigQueryTable(client, GetTable(reference)).GetIamPolicy(options));
+        }
+
+        [Fact]
+        public void SetTableIamPolicyEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var policy = new Policy();
+            var options = new SetTableIamPolicyOptions();
+            VerifyEquivalent(new Policy(),
+                client => client.SetTableIamPolicy(MatchesWhenSerialized(reference), policy, options),
+                client => client.SetTableIamPolicy(datasetId, tableId, policy, options),
+                client => client.SetTableIamPolicy(ProjectId, datasetId, tableId, policy, options),
+                client => new BigQueryTable(client, GetTable(reference)).SetIamPolicy(policy, options));
+        }
+
+        [Fact]
+        public void TestTableIamPermissionsEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var permissions = new List<string>();
+            var options = new TestTableIamPermissionsOptions();
+            VerifyEquivalent(new TestIamPermissionsResponse(),
+                client => client.TestTableIamPermissions(MatchesWhenSerialized(reference), permissions, options),
+                client => client.TestTableIamPermissions(datasetId, tableId, permissions, options),
+                client => client.TestTableIamPermissions(ProjectId, datasetId, tableId, permissions, options),
+                client => new BigQueryTable(client, GetTable(reference)).TestIamPermissions(permissions, options));
+        }
+
+        [Fact]
         public void DeleteModelEquivalents()
         {
             var datasetId = "dataset";
@@ -658,6 +702,19 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.ListJobs(MatchesWhenSerialized(reference), options),
                 client => client.ListJobs(options),
                 client => client.ListJobs(ProjectId, options));
+        }
+
+        [Fact]
+        public void DeleteJobEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new DeleteJobOptions();
+            VerifyEquivalent(
+                client => client.DeleteJob(MatchesWhenSerialized(reference), options),
+                client => client.DeleteJob(jobId, options),
+                client => client.DeleteJob(ProjectId, jobId, options),
+                client => new BigQueryJob(client, new Job { JobReference = reference }).Delete(options));
         }
 
         [Fact]
@@ -1204,6 +1261,53 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void GetTableIamPolicyAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new GetTableIamPolicyOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new Policy(),
+                client => client.GetTableIamPolicyAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetTableIamPolicyAsync(datasetId, tableId, options, token),
+                client => client.GetTableIamPolicyAsync(ProjectId, datasetId, tableId, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).GetIamPolicyAsync(options, token));
+        }
+
+        [Fact]
+        public void SetTableIamPolicyAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var policy = new Policy();
+            var options = new SetTableIamPolicyOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new Policy(),
+                client => client.SetTableIamPolicyAsync(MatchesWhenSerialized(reference), policy, options, token),
+                client => client.SetTableIamPolicyAsync(datasetId, tableId, policy, options, token),
+                client => client.SetTableIamPolicyAsync(ProjectId, datasetId, tableId, policy, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).SetIamPolicyAsync(policy, options, token));
+        }
+
+        [Fact]
+        public void TestTableIamPermissionsAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var permissions = new List<string>();
+            var options = new TestTableIamPermissionsOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new TestIamPermissionsResponse(),
+                client => client.TestTableIamPermissionsAsync(MatchesWhenSerialized(reference), permissions, options, token),
+                client => client.TestTableIamPermissionsAsync(datasetId, tableId, permissions, options, token),
+                client => client.TestTableIamPermissionsAsync(ProjectId, datasetId, tableId, permissions, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).TestIamPermissionsAsync(permissions, options, token));
+        }
+
+        [Fact]
         public void DeleteModelAsyncEquivalents()
         {
             var datasetId = "dataset";
@@ -1405,6 +1509,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.ListJobsAsync(MatchesWhenSerialized(reference), options),
                 client => client.ListJobsAsync(options),
                 client => client.ListJobsAsync(ProjectId, options));
+        }
+
+        [Fact]
+        public void DeleteJobAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new DeleteJobOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                client => client.DeleteJobAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.DeleteJobAsync(jobId, options, token),
+                client => client.DeleteJobAsync(ProjectId, jobId, options, token),
+                client => new BigQueryJob(client, new Job { JobReference = reference }).DeleteAsync(options, token));
         }
 
         [Fact]

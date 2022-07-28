@@ -43,13 +43,6 @@ build_api_docs() {
   # Generate the snippet markdown
   dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
-  # Copy external dependency yml files into the API and concatenate toc.yml
-  for dep in $(cat output/$api/dependencies)
-  do
-    cp dependencies/api/$dep/*.yml output/$api/obj/api
-    cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
-  done
-  
   # Build for googleapis.dev
   # Note that the devsite build will happen elsewhere.
   $DOCFX build --logLevel Warning --disableGitFeatures output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
@@ -60,13 +53,6 @@ build_api_docs() {
   
   echo Finished building docs for $api
 }
-
-# TODO: Use dependencies from DevSite instead?
-if [[ ! -d "dependencies" ]]
-then
-  log_build_action "Fetching external dependencies repo"
-  git clone https://github.com/googleapis/google-cloud-dotnet dependencies --quiet -b dependencies --depth=1
-fi
 
 rm -rf output
 mkdir output

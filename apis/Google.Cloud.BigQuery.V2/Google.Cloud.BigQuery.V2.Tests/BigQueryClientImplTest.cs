@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -558,6 +558,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void DeleteJob()
+        {
+            var projectId = "project";
+            var jobId = "job";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetJobReference(projectId, jobId);
+            service.ExpectRequest(
+                service.Jobs.Delete(projectId, jobId),
+                "OK");
+            client.DeleteJob(reference);
+        }
+
+        [Fact]
         public async Task ListProjectsAsyncAsync()
         {
             var projectId = "project";
@@ -954,6 +968,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(jobId, result.Reference.JobId);
         }
 
+        [Fact]
+        public async Task DeleteJobAsync()
+        {
+            var projectId = "project";
+            var jobId = "job";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetJobReference(projectId, jobId);
+            service.ExpectRequest(
+                service.Jobs.Delete(projectId, jobId),
+                "OK");
+            await client.DeleteJobAsync(reference);
+        }
+
         private Job CreateJobWithSampleConfiguration(JobCreationOptions options)
         {
             var projectId = "project";
@@ -1066,6 +1094,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("Table", tableResource.Kind);
             Assert.Equal("y", tableResource.Labels["x"]);
             Assert.Same(listResource.TableReference, tableResource.TableReference);
+            Assert.Same(listResource.TimePartitioning, tableResource.TimePartitioning);
             Assert.Equal("VIEW", tableResource.Type);
             Assert.True(tableResource.View.UseLegacySql);
             Assert.Equal(listResource.Clustering.Fields, tableResource.Clustering.Fields);

@@ -105,7 +105,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
@@ -263,7 +263,7 @@
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
@@ -284,7 +284,7 @@
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta03",
       "type": "grpc",
       "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
@@ -299,7 +299,7 @@
       "generator": "micro",
       "protoPath": "google/cloud/assuredworkloads/v1beta1",
       "shortName": "assuredworkloads",
-      "serviceConfigFile": "assuredworkloads.yaml"
+      "serviceConfigFile": "assuredworkloads_v1beta1.yaml"
     },
     {
       "id": "Google.Cloud.Audit",
@@ -362,9 +362,10 @@
     },
     {
       "id": "Google.Cloud.Batch.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Batch",
+      "productUrl": "https://cloud.google.com/batch/docs/",
       "description": "Recommended Google client library to access the Batch API (v1), which allows you to manage the running of batch jobs on Google Cloud Platform.",
       "tags": [
         "batch"
@@ -381,9 +382,10 @@
     },
     {
       "id": "Google.Cloud.Batch.V1Alpha",
-      "version": "1.0.0-alpha00",
+      "version": "1.0.0-alpha01",
       "type": "grpc",
       "productName": "Batch",
+      "productUrl": "https://cloud.google.com/batch/docs/",
       "description": "Recommended Google client library to access the Batch API (v1alpha), which allows you to manage the running of batch jobs on Google Cloud Platform.",
       "tags": [
         "batch"
@@ -399,8 +401,107 @@
       "serviceConfigFile": "batch_v1alpha.yaml"
     },
     {
+      "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "BeyondCorp",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise AppConnections API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/appconnections/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.BeyondCorp.AppConnectors.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise AppConnectors API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/appconnectors/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.BeyondCorp.AppGateways.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "BeyondCorp AppGateways",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise AppGateways API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/appgateways/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "BeyondCorp Client Connector Services",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise ClientConnectorServices API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/clientconnectorservices/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "BeyondCorp Client Connector Services",
+      "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
+      "description": "Recommended Google client library to access the BeyondCorp Enterprise Client Gateways API.",
+      "tags": [
+        "beyondcorp"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/beyondcorp/clientgateways/v1",
+      "shortName": "beyondcorp",
+      "serviceConfigFile": "beyondcorp_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.BigQuery.Connection.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "BigQuery Connection",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/bigqueryconnection",
@@ -477,7 +578,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Migration.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "BigQuery Migration",
       "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
@@ -516,12 +617,12 @@
       "id": "Google.Cloud.BigQuery.V2",
       "productName": "Google BigQuery",
       "productUrl": "https://cloud.google.com/bigquery/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.0.0",
-        "Google.Apis.Bigquery.v2": "1.57.0.2704"
+        "Google.Apis.Bigquery.v2": "1.57.0.2718"
       },
       "testDependencies": {
         "Google.Cloud.Storage.V1": "project",
@@ -538,7 +639,7 @@
       "protoPath": "google/cloud/bigquery/storage/v1",
       "productName": "Google BigQuery Storage",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/storage/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Storage API.",
       "dependencies": {
@@ -557,7 +658,7 @@
       "protoPath": "google/bigtable/admin/v2",
       "productName": "Google Cloud Bigtable Administration",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "3.0.0",
+      "version": "3.2.0",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
@@ -597,7 +698,7 @@
       "protoPath": "google/bigtable/v2",
       "productName": "Google Bigtable",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
@@ -702,7 +803,7 @@
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
@@ -722,7 +823,7 @@
     },
     {
       "id": "Google.Cloud.CertificateManager.V1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Certificate Manager",
       "productUrl": "https://cloud.google.com/certificate-manager/docs",
@@ -733,6 +834,7 @@
         "certificates"
       ],
       "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
@@ -864,7 +966,7 @@
       "protoPath": "google/container/v1",
       "productName": "Google Kubernetes Engine",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
       "dependencies": {
@@ -958,7 +1060,7 @@
     },
     {
       "id": "Google.Cloud.Dataflow.V1Beta3",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Dataflow",
       "productUrl": "https://cloud.google.com/dataflow/docs/",
@@ -974,7 +1076,7 @@
     },
     {
       "id": "Google.Cloud.Dataplex.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud Dataplex",
       "productUrl": "https://cloud.google.com/dataplex/docs",
@@ -985,6 +1087,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -1040,7 +1144,7 @@
       "protoPath": "google/datastore/v1",
       "productName": "Google Cloud Datastore",
       "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-      "version": "4.1.0",
+      "version": "4.2.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
@@ -1240,7 +1344,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
@@ -1267,7 +1371,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API.",
       "tags": [
@@ -1276,6 +1380,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -1291,7 +1396,7 @@
       "protoPath": "google/privacy/dlp/v2",
       "productName": "Google Cloud Data Loss Prevention",
       "productUrl": "https://cloud.google.com/dlp/",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
       "dependencies": {
@@ -1574,7 +1679,7 @@
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
-      "description": "Recommended Google client library to access the Google Cloud Functions API, which manages lightweight user-provided functions executed in response to events.",
+      "description": "Recommended Google client library to access the Google Cloud Functions API (v1), which manages lightweight user-provided functions executed in response to events.",
       "tags": [
         "functions"
       ],
@@ -1588,6 +1693,46 @@
       "protoPath": "google/cloud/functions/v1",
       "shortName": "cloudfunctions",
       "serviceConfigFile": "cloudfunctions_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.Functions.V2",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Cloud Functions",
+      "productUrl": "https://cloud.google.com/functions",
+      "description": "Recommended Google client library to access the Google Cloud Functions API (v2), which manages lightweight user-provided functions executed in response to events.",
+      "tags": [
+        "functions"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/functions/v2",
+      "shortName": "cloudfunctions",
+      "serviceConfigFile": "cloudfunctions_v2.yaml"
+    },
+    {
+      "id": "Google.Cloud.Functions.V2Beta",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Cloud Functions",
+      "productUrl": "https://cloud.google.com/functions",
+      "description": "Recommended Google client library to access the Google Cloud Functions API (v2beta), which manages lightweight user-provided functions executed in response to events.",
+      "tags": [
+        "functions"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/functions/v2beta",
+      "shortName": "cloudfunctions",
+      "serviceConfigFile": "cloudfunctions_v2beta.yaml"
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
@@ -1694,7 +1839,7 @@
     },
     {
       "id": "Google.Cloud.GkeHub.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "GKE Hub",
       "productUrl": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
@@ -1998,7 +2143,7 @@
     },
     {
       "id": "Google.Cloud.Logging.Console",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1",
@@ -2281,7 +2426,7 @@
     },
     {
       "id": "Google.Cloud.NetworkManagement.V1",
-      "version": "2.0.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Network Management",
       "productUrl": "https://cloud.google.com/network-intelligence-center/docs/",
@@ -2306,7 +2451,7 @@
     },
     {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Network Security",
       "productUrl": "https://cloud.google.com/traffic-director/docs/security-overview",
@@ -2322,6 +2467,8 @@
         "mesh"
       ],
       "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
@@ -2633,7 +2780,7 @@
       "protoPath": "google/pubsub/v1",
       "productName": "Cloud Pub/Sub",
       "productUrl": "https://cloud.google.com/pubsub/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
@@ -2660,7 +2807,7 @@
       "protoPath": "google/cloud/recaptchaenterprise/v1",
       "productName": "Google Cloud reCAPTCHA Enterprise",
       "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API v1.",
       "tags": [
@@ -2713,7 +2860,7 @@
       "protoPath": "google/cloud/recommender/v1",
       "productName": "Google Cloud Recommender",
       "productUrl": "https://cloud.google.com/recommender/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library for the Recommender API, which provides usage recommendations for Cloud products and services.",
       "dependencies": {
@@ -2984,7 +3131,7 @@
       "protoPath": "google/cloud/securitycenter/v1",
       "productName": "Google Cloud Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/",
-      "version": "3.0.0",
+      "version": "3.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
       "dependencies": {
@@ -3166,7 +3313,7 @@
       },
       "noVersionHistory": true,
       "shortName": "spanner",
-      "serviceConfigFile": "spanner_admin_database.yaml"
+      "serviceConfigFile": "spanner.yaml"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
@@ -3303,12 +3450,12 @@
       "id": "Google.Cloud.Storage.V1",
       "productName": "Google Cloud Storage",
       "productUrl": "https://cloud.google.com/storage/",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.0.0",
-        "Google.Apis.Storage.v1": "1.57.0.2685"
+        "Google.Apis.Storage.v1": "1.57.0.2742"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.0.0",
@@ -3546,7 +3693,7 @@
       "id": "Google.Cloud.Translation.V2",
       "productName": "Google Cloud Translation",
       "productUrl": "https://cloud.google.com/translate/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
@@ -3561,7 +3708,7 @@
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "VM Migration",
       "productUrl": "https://cloud.google.com/migrate/compute-engine/docs/",
@@ -3603,7 +3750,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -3621,7 +3768,7 @@
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Transcoder",
       "productUrl": "https://cloud.google.com/transcoder/docs",

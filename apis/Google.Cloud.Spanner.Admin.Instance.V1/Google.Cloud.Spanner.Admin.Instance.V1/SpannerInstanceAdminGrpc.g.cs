@@ -3,7 +3,7 @@
 //     source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -343,7 +343,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
       /// Authorization requires `spanner.instances.update` permission on
-      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
       /// Authorization requires `spanner.instances.update` permission on
-      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -918,7 +918,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
       /// Authorization requires `spanner.instances.update` permission on
-      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -968,7 +968,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
       /// Authorization requires `spanner.instances.update` permission on
-      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
       /// Authorization requires `spanner.instances.update` permission on
-      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1340,7 +1340,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
     }
 
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>

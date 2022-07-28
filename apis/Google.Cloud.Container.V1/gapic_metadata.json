@@ -22,6 +22,12 @@
                 "CompleteIPRotationAsync"
               ]
             },
+            "CompleteNodePoolUpgrade": {
+              "methods": [
+                "CompleteNodePoolUpgrade",
+                "CompleteNodePoolUpgradeAsync"
+              ]
+            },
             "CreateCluster": {
               "methods": [
                 "CreateCluster",

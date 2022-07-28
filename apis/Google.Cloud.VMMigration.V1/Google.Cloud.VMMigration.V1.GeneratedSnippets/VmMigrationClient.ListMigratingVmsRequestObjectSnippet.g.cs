@@ -38,6 +38,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
                 ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
                 Filter = "",
                 OrderBy = "",
+                View = MigratingVmView.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListMigratingVmsResponse, MigratingVm> response = vmMigrationClient.ListMigratingVms(request);

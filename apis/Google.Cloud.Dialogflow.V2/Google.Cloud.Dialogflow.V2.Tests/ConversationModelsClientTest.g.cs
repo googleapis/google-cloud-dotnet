@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelRequest request = new GetConversationModelRequest
             {
                 Name = "name1c9368b0",
@@ -61,6 +63,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelRequest request = new GetConversationModelRequest
             {
                 Name = "name1c9368b0",
@@ -90,6 +93,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelRequest request = new GetConversationModelRequest
             {
                 Name = "name1c9368b0",
@@ -117,6 +121,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelRequest request = new GetConversationModelRequest
             {
                 Name = "name1c9368b0",
@@ -146,6 +151,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelEvaluationRequest request = new GetConversationModelEvaluationRequest
             {
                 Name = "name1c9368b0",
@@ -170,6 +176,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelEvaluationRequest request = new GetConversationModelEvaluationRequest
             {
                 Name = "name1c9368b0",
@@ -196,6 +203,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelEvaluationRequest request = new GetConversationModelEvaluationRequest
             {
                 Name = "name1c9368b0",
@@ -220,6 +228,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<ConversationModels.ConversationModelsClient> mockGrpcClient = new moq::Mock<ConversationModels.ConversationModelsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationModelEvaluationRequest request = new GetConversationModelEvaluationRequest
             {
                 Name = "name1c9368b0",

@@ -29,12 +29,12 @@ namespace Google.Cloud.BareMetalSolution.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return BaremetalsolutionReflection.Descriptor;
+            yield return InstanceReflection.Descriptor;
             yield return LunReflection.Descriptor;
             yield return NetworkReflection.Descriptor;
-            yield return InstanceReflection.Descriptor;
             yield return NfsShareReflection.Descriptor;
             yield return VolumeReflection.Descriptor;
-            yield return BaremetalsolutionReflection.Descriptor;
         }
     }
 }

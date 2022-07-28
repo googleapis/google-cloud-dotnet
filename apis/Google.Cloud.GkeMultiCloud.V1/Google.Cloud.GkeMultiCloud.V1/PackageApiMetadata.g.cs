@@ -29,11 +29,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return CommonResourcesReflection.Descriptor;
             yield return AwsResourcesReflection.Descriptor;
             yield return AwsServiceReflection.Descriptor;
             yield return AzureResourcesReflection.Descriptor;
             yield return AzureServiceReflection.Descriptor;
+            yield return CommonResourcesReflection.Descriptor;
         }
     }
 }

@@ -29,8 +29,8 @@ namespace Google.Analytics.Data.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return DataReflection.Descriptor;
             yield return AnalyticsDataApiReflection.Descriptor;
+            yield return DataReflection.Descriptor;
         }
     }
 }

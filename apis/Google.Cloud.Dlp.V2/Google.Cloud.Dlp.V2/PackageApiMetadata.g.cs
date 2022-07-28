@@ -29,8 +29,8 @@ namespace Google.Cloud.Dlp.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return StorageReflection.Descriptor;
             yield return DlpReflection.Descriptor;
+            yield return StorageReflection.Descriptor;
         }
     }
 }

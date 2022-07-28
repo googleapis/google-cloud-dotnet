@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.1.0, released 2022-07-25
+
+## New features
+
+- Added parameterless Create/CreateAsync factory methods for the
+  clients, in preparation for potentially deprecating the methods
+  accepting `GoogleCredential`. The builder classes now form
+  the recommended way of customizing clients.
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

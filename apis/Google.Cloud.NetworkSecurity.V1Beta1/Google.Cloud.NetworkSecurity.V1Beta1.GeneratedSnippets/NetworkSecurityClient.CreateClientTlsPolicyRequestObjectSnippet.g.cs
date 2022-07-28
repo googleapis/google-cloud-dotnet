@@ -17,6 +17,7 @@
 namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
 {
     // [START networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkSecurity.V1Beta1;
     using Google.LongRunning;
 
@@ -34,7 +35,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateClientTlsPolicyRequest request = new CreateClientTlsPolicyRequest
             {
-                ParentAsClientTlsPolicyName = ClientTlsPolicyName.FromProjectLocationClientTlsPolicy("[PROJECT]", "[LOCATION]", "[CLIENT_TLS_POLICY]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ClientTlsPolicyId = "",
                 ClientTlsPolicy = new ClientTlsPolicy(),
             };

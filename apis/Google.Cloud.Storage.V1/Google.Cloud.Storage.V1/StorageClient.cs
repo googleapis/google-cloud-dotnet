@@ -12,13 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
 using Google.Apis.Storage.v1;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Storage.V1
@@ -48,8 +45,6 @@ namespace Google.Cloud.Storage.V1
     {
         private static readonly string[] s_scopes = new[] { StorageService.Scope.DevstorageFullControl };
 
-        private const string EndpointOverride = "https://storage.googleapis.com/storage/v1/";
-
         internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
             new ScopedCredentialProvider(s_scopes);
 
@@ -72,13 +67,30 @@ namespace Google.Cloud.Storage.V1
         public virtual EncryptionKey EncryptionKey { get { throw new NotImplementedException(); } }
 
         /// <summary>
+        /// Asynchronously creates a <see cref="StorageClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="StorageClientBuilder"/>.
+        /// </summary>
+        /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
+        public static Task<StorageClient> CreateAsync() => new StorageClientBuilder().BuildAsync();
+
+        /// <summary>
+        /// Synchronously creates a <see cref="StorageClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="StorageClientBuilder"/>.
+        /// </summary>
+        public static StorageClient Create() => new StorageClientBuilder().Build();
+
+        /// <summary>
         /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="StorageClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="StorageClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all relevant object-based operations by default. May be null.</param>
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
         public static Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null) =>
@@ -86,7 +98,6 @@ namespace Google.Cloud.Storage.V1
             {
                 Credential = credential?.CreateScoped(s_scopes),
                 EncryptionKey = encryptionKey,
-                BaseUri = EndpointOverride
             }.BuildAsync();
 
         /// <summary>
@@ -94,17 +105,20 @@ namespace Google.Cloud.Storage.V1
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="StorageClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="StorageClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all relevant object-based operations by default. May be null.</param>
         /// <returns>The created <see cref="StorageClient"/>.</returns>
         public static StorageClient Create(GoogleCredential credential = null, EncryptionKey encryptionKey = null) =>
             new StorageClientBuilder
             {
                 Credential = credential?.CreateScoped(s_scopes),
-                EncryptionKey = encryptionKey,
-                BaseUri = EndpointOverride
+                EncryptionKey = encryptionKey
             }.Build();
 
         /// <summary>
@@ -115,8 +129,7 @@ namespace Google.Cloud.Storage.V1
         public static StorageClient CreateUnauthenticated() =>
             new StorageClientBuilder
             {
-                UnauthenticatedAccess = true,
-                BaseUri = EndpointOverride
+                UnauthenticatedAccess = true
             }.Build();
 
         /// <summary>

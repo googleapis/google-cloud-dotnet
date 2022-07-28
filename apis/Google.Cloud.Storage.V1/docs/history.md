@@ -1,5 +1,9 @@
 # Version history
 
+## Version 4.1.0, released 2022-07-22
+
+No API surface changes; just dependency updates.
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
@@ -19,6 +23,7 @@ if you run into problems.
 ### Breaking changes
 
 - Changes to IBlogSigner to support HMAC signing. ([commit b82fed2](https://github.com/googleapis/google-cloud-dotnet/commit/b82fed27f2ebeb3c345290b477c7f53ff3c0148e))
+
 ## Version 3.7.0, released 2022-01-27
 
 No API surface changes; just dependency updates.

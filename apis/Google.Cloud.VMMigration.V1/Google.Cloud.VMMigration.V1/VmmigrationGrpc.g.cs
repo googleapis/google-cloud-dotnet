@@ -3,7 +3,7 @@
 //     source: google/cloud/vmmigration/v1/vmmigration.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -107,6 +107,8 @@ namespace Google.Cloud.VMMigration.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CreateDatacenterConnectorRequest> __Marshaller_google_cloud_vmmigration_v1_CreateDatacenterConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CreateDatacenterConnectorRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest> __Marshaller_google_cloud_vmmigration_v1_DeleteDatacenterConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest> __Marshaller_google_cloud_vmmigration_v1_UpgradeApplianceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CreateMigratingVmRequest> __Marshaller_google_cloud_vmmigration_v1_CreateMigratingVmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CreateMigratingVmRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -296,6 +298,14 @@ namespace Google.Cloud.VMMigration.V1 {
         __ServiceName,
         "DeleteDatacenterConnector",
         __Marshaller_google_cloud_vmmigration_v1_DeleteDatacenterConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest, global::Google.LongRunning.Operation> __Method_UpgradeAppliance = new grpc::Method<global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpgradeAppliance",
+        __Marshaller_google_cloud_vmmigration_v1_UpgradeApplianceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -708,6 +718,19 @@ namespace Google.Cloud.VMMigration.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatacenterConnector(global::Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+      /// updateable version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpgradeAppliance(global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1800,6 +1823,58 @@ namespace Google.Cloud.VMMigration.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatacenterConnectorAsync(global::Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDatacenterConnector, null, options, request);
+      }
+      /// <summary>
+      /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+      /// updateable version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpgradeAppliance(global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeAppliance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+      /// updateable version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpgradeAppliance(global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpgradeAppliance, null, options, request);
+      }
+      /// <summary>
+      /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+      /// updateable version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeApplianceAsync(global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeApplianceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades the appliance relate to this DatacenterConnector to the in-place
+      /// updateable version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeApplianceAsync(global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpgradeAppliance, null, options, request);
       }
       /// <summary>
       /// Creates a new MigratingVm in a given Source.
@@ -3317,6 +3392,7 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_GetDatacenterConnector, serviceImpl.GetDatacenterConnector)
           .AddMethod(__Method_CreateDatacenterConnector, serviceImpl.CreateDatacenterConnector)
           .AddMethod(__Method_DeleteDatacenterConnector, serviceImpl.DeleteDatacenterConnector)
+          .AddMethod(__Method_UpgradeAppliance, serviceImpl.UpgradeAppliance)
           .AddMethod(__Method_CreateMigratingVm, serviceImpl.CreateMigratingVm)
           .AddMethod(__Method_ListMigratingVms, serviceImpl.ListMigratingVms)
           .AddMethod(__Method_GetMigratingVm, serviceImpl.GetMigratingVm)
@@ -3348,7 +3424,7 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_DeleteTargetProject, serviceImpl.DeleteTargetProject).Build();
     }
 
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
@@ -3369,6 +3445,7 @@ namespace Google.Cloud.VMMigration.V1 {
       serviceBinder.AddMethod(__Method_GetDatacenterConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetDatacenterConnectorRequest, global::Google.Cloud.VMMigration.V1.DatacenterConnector>(serviceImpl.GetDatacenterConnector));
       serviceBinder.AddMethod(__Method_CreateDatacenterConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateDatacenterConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatacenterConnector));
       serviceBinder.AddMethod(__Method_DeleteDatacenterConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatacenterConnector));
+      serviceBinder.AddMethod(__Method_UpgradeAppliance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.UpgradeApplianceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeAppliance));
       serviceBinder.AddMethod(__Method_CreateMigratingVm, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateMigratingVmRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMigratingVm));
       serviceBinder.AddMethod(__Method_ListMigratingVms, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListMigratingVmsRequest, global::Google.Cloud.VMMigration.V1.ListMigratingVmsResponse>(serviceImpl.ListMigratingVms));
       serviceBinder.AddMethod(__Method_GetMigratingVm, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetMigratingVmRequest, global::Google.Cloud.VMMigration.V1.MigratingVm>(serviceImpl.GetMigratingVm));
