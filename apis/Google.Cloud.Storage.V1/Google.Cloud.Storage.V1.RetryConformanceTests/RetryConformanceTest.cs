@@ -80,11 +80,11 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     {
                         // TODO: Remove this if condition, when the mapping dictionary is completely and correctly populated.
 
-                        //if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
+                        if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
                         //if (method.Name.Contains("storage.objects.get") || method.Name.Contains("storage.objects.list"))
                         //if (method.Name.Contains("storage.hmacKey.get"))
 
-                        if (method.Name.Contains("storage.notifications.list"))
+                        //if (method.Name.Contains("storage.notifications.list"))
                         {
                             await RunTestCase(instruction, method, expectSuccess);
                         }
