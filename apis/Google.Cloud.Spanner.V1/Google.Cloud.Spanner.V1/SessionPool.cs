@@ -192,7 +192,7 @@ namespace Google.Cloud.Spanner.V1
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode, readTimestamp);
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName,Options.DatabaseRole).WithTransaction(transactionId, transactionMode, readTimestamp);
         }
 
         /// <summary>

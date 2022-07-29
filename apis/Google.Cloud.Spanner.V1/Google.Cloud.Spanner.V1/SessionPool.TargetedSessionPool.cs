@@ -114,7 +114,8 @@ namespace Google.Cloud.Spanner.V1
                     DatabaseAsDatabaseName = databaseName,
                     SessionTemplate = new Session
                     {
-                        Labels = { parent.Options.SessionLabels }
+                        Labels = { parent.Options.SessionLabels },
+                        CreatorRole = parent.Options.DatabaseRole
                     }
                 };
 
@@ -758,7 +759,7 @@ namespace Google.Cloud.Spanner.V1
 
                         foreach(var sessionProto in batchSessionCreateResponse.Session)
                         {
-                            pooledSessions.Add(PooledSession.FromSessionName(this, sessionProto.SessionName));
+                            pooledSessions.Add(PooledSession.FromSessionName(this, sessionProto.SessionName,Options.DatabaseRole));
                         }
                         return pooledSessions;
                     }

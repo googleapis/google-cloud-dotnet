@@ -28,10 +28,10 @@ namespace Google.Cloud.Spanner.Data
     /// The connection string should be of the form:
     /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]
     /// </summary>
-    public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
+    public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder 
     {
         /// <summary>
-        /// The default value for <see cref="Timeout"/>.
+        /// The default value for <see cref="Timeout"/>. 
         /// </summary>
         internal const int DefaultTimeout = 60;
 
@@ -53,7 +53,8 @@ namespace Google.Cloud.Spanner.Data
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
-        
+        private const string DatabaseRoleKeyword = "DatabaseRole";
+
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -99,6 +100,19 @@ namespace Google.Cloud.Spanner.Data
             {
                 ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(value);
                 this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+            }
+        }
+
+        /// <summary>
+        /// Optional database role used while performing FGAC queries
+        /// </summary>
+        public string DatabaseRole
+        {
+            get => GetValueOrDefault(DatabaseRoleKeyword);
+            set
+            {
+                this[DatabaseRoleKeyword] = value;
+                _sessionPoolManager.WithDatabaseRole(value);
             }
         }
 

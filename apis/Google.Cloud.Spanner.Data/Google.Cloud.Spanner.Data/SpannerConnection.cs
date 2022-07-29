@@ -55,7 +55,8 @@ namespace Google.Cloud.Spanner.Data
 
         // The SessionPool to use to allocate sessions. This is obtained from the SessionPoolManager,
         // and released when the connection is closed/disposed.
-        private SessionPool _sessionPool;
+        // Visible for testing
+        internal SessionPool _sessionPool;
 
         private ConnectionState _state = ConnectionState.Closed;
 

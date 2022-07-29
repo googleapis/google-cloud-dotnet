@@ -60,6 +60,13 @@ namespace Google.Cloud.Spanner.Data
         public static SessionPoolManager Default { get; } =
             new SessionPoolManager(new SessionPoolOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
 
+        /// <summary>
+        /// </summary>
+        /// <param name="databaseRole"></param>
+        /// <returns></returns>
+        public void WithDatabaseRole(string databaseRole) =>
+            SessionPoolOptions.DatabaseRole = databaseRole;
+
         private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> _clientFactory;
 
         private readonly ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool> _targetedPools =

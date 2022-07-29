@@ -18,7 +18,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner.V1 
 {
     /// <summary>
     /// Options for session pools.
@@ -39,12 +39,22 @@ namespace Google.Cloud.Spanner.V1
         private int _maximumConcurrentSessionCreates = 50;
         private RetrySettings.IJitter _sessionRefreshJitter = new ProportionalRandomJitter(0.1);
         private RetrySettings.IJitter _sessionEvictionJitter = new ProportionalRandomJitter(0.1);
+        private string _databaseRole;
 
         /// <summary>
         /// Constructs a new <see cref="SessionPoolOptions"/> with default values.
         /// </summary>
         public SessionPoolOptions()
         {
+        }
+
+        /// <summary>
+        /// Database role to be used in session
+        /// </summary>
+        public string DatabaseRole
+        {
+            get => _databaseRole;
+            set => _databaseRole = value;
         }
 
         /// <summary>

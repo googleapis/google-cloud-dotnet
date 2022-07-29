@@ -50,6 +50,11 @@ namespace Google.Cloud.Spanner.V1
         public SessionName SessionName { get; }
 
         /// <summary>
+        /// The database role used while creating sessions. 
+        /// </summary>
+        public string DatabaseRole { get; set; }
+
+        /// <summary>
         /// The ID of the transaction. May be null.
         /// </summary>
         public ByteString TransactionId { get; }
@@ -91,18 +96,19 @@ namespace Google.Cloud.Spanner.V1
         private int _disposed;
         private int _committedOrRolledBack;
 
-        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
+        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks, string databaseRole)
         {
             GaxPreconditions.CheckArgument(
                 (transactionId == null) == (transactionMode == ModeOneofCase.None),
                 nameof(transactionMode),
                 "Transaction mode and ID don't match.");
             _pool = pool;
+            DatabaseRole = databaseRole;
             SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             TransactionId = transactionId;
             TransactionMode = transactionMode;
             ReadTimestamp = readTimestamp;
-            _session = new Session { SessionName = SessionName };
+            _session = new Session { SessionName = SessionName, CreatorRole = databaseRole };
             _evictionTime = evictionTime;
             _refreshTicks = refreshTicks;
         }
@@ -110,13 +116,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a PooledSession representing a freshly-created session, with no associated transaction.
         /// </summary>
-        internal static PooledSession FromSessionName(SessionPool.ISessionPool pool, SessionName sessionName)
+        internal static PooledSession FromSessionName(SessionPool.ISessionPool pool, SessionName sessionName, string databaseRole = null)
         {
             var options = pool.Options;
             var now = pool.Clock.GetCurrentDateTimeUtc();
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             var evictionDelay = options.SessionEvictionJitter.GetDelay(options.PoolEvictionDelay);
-            return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
+            return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks, databaseRole);
         }
 
         /// <summary>
@@ -126,13 +132,13 @@ namespace Google.Cloud.Spanner.V1
         private PooledSession AfterReset()
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, null, _evictionTime, RefreshTicks);
+            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, null, _evictionTime, RefreshTicks, DatabaseRole);
         }
 
         internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp = null)
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, transactionId, transactionMode, readTimestamp, _evictionTime, _refreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId, transactionMode, readTimestamp, _evictionTime, _refreshTicks,DatabaseRole);
         }
 
         /// <summary>
