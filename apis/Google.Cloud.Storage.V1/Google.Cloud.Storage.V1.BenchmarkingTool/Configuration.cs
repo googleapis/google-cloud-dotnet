@@ -29,10 +29,21 @@ internal sealed class Configuration
     internal string OutputFolder { get; }
     internal int UploadChunkSizeInBytes { get; }
     internal int DownloadChunkSizeInBytes { get; }
-    internal string Bucket { get; } = IdGenerator.FromDateTime(prefix: "benchmark-");
+    internal string BucketStorageClass { get; }
+    internal string BucketLocation { get; }
+    internal bool ObjVersioningEnabled { get; }
+    internal string BucketName { get; } = IdGenerator.FromDateTime(prefix: "benchmark-");
     internal string ObjectName => "obj_random_data";
 
-    private Configuration(int numOfSamples, int dataSizeInBytes, string outputFolder, int uploadChunkSizeInBytes, int downloadChunkSizeInBytes)
+    private Configuration(
+        int numOfSamples,
+        int dataSizeInBytes,
+        string outputFolder,
+        int uploadChunkSizeInBytes,
+        int downloadChunkSizeInBytes,
+        string bucketLocation,
+        string storageClass,
+        bool versioningEnabled)
     {
         DataSizeInBytes = dataSizeInBytes;
         LocalFile = Path.GetTempFileName();
@@ -40,18 +51,25 @@ internal sealed class Configuration
         UploadChunkSizeInBytes = uploadChunkSizeInBytes;
         DownloadChunkSizeInBytes = downloadChunkSizeInBytes;
         NumOfSamples = numOfSamples;
+        BucketLocation = bucketLocation;
+        BucketStorageClass = storageClass;
+        ObjVersioningEnabled = versioningEnabled;
     }
 
     internal static Configuration FromCommandLineArguments(string[] args)
     {
-        if (args.Length != 5)
+        if (args.Length != 8)
         {
-            throw new ArgumentException("Error: 5 arguments required: \n" +
+            throw new ArgumentException("Error: 8 arguments required: \n" +
+
                 "<Number of samples> \n" +
                 "<File size in MiB> \n" +
                 "<Output folder path> \n" +
                 "<Upload Buffer Size in MiB: Pass '0' for DefaultBufferSize> \n" +
-                "<Download Buffer Size in MiB: Pass '0' for DefaultBufferSize>\n");
+                "<Download Buffer Size in MiB: Pass '0' for DefaultBufferSize> \n" +
+                "<Bucket storage class: Values can be REGIONAL, MULTI_REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, DURABLE_REDUCED_AVAILABILITY> \n" +
+                "<Bucket location> \n" +
+                "<Object versioning enabled: Pass True Or False> \n");
         }
 
         if (!int.TryParse(args[0], out int numOfSamples) || numOfSamples < 1) // ars[0] is the total number of times W1R3 needs to be run.
@@ -76,7 +94,20 @@ internal sealed class Configuration
             throw new ArgumentException("Error: Please provide buffer size either '0' or a positive number.");
         }
 
-        return new Configuration(numOfSamples, ConvertMiBToBytes(fileSize), args[2], ConvertMiBToBytes(uploadChunkSize), ConvertMiBToBytes(downloadChunkSize));
+        if (!bool.TryParse(args[7], out bool objVersionedEnabled))
+        {
+            throw new ArgumentException("Error: Please provide object versioning enabled either True or False");
+        }
+
+        return new Configuration(
+            numOfSamples,
+            ConvertMiBToBytes(fileSize),
+            args[2],
+            ConvertMiBToBytes(uploadChunkSize),
+            ConvertMiBToBytes(downloadChunkSize),
+            args[5], // args[5] is the bucket's location.
+            args[6], // args[6] is the bucket's storage class.
+            objVersionedEnabled);
     }
 
     private static int ConvertMiBToBytes(int dataInMiB) => dataInMiB * 1024 * 1024;

@@ -56,7 +56,7 @@ public static class Program
     {
         try
         {
-            CreateBucket(configuration.Bucket, client);
+            _ = CreateBucket(configuration, client);
 
             RunWriteTest(configuration, client, logger, "Write");
             RunReadTest(configuration, client, logger, "Read[1]");
@@ -65,15 +65,23 @@ public static class Program
         }
         finally
         {
-            DeleteBucket(client, configuration.Bucket);
+            DeleteBucket(client, configuration.BucketName);
         }
     }
 
-    private static Bucket CreateBucket(string bucketName, StorageClient client)
+    private static Bucket CreateBucket(Configuration config, StorageClient client)
     {
-        var bucket = client.CreateBucket(s_projectId, new Bucket { Name = bucketName });
+        Bucket bucket = new Bucket
+        {
+            Location = config.BucketLocation,
+            Name = config.BucketName,
+            StorageClass = config.BucketStorageClass,
+            Versioning= new Bucket.VersioningData { Enabled = config.ObjVersioningEnabled },
+        };
+
+        var newlyCreatedBucket = client.CreateBucket(s_projectId, bucket);
         SleepAfterBucketCreateDelete();
-        return bucket;
+        return newlyCreatedBucket;
     }
 
     private static void DeleteBucket(StorageClient client, string bucketName)
@@ -136,7 +144,7 @@ public static class Program
             Console.WriteLine("Uploading..");
             using var input = File.OpenRead(configuration.LocalFile);
             var stopwatch = Stopwatch.StartNew();
-            client.UploadObject(configuration.Bucket, configuration.ObjectName, "application/binary", input, options);
+            _ = client.UploadObject(configuration.BucketName, configuration.ObjectName, "application/binary", input, options);
             elapsedTimeUs = (stopwatch.Elapsed.Ticks / TimeSpanTicksPerMicrosecond).ToString(CultureInfo.InvariantCulture);
             success = true;
         }
@@ -184,7 +192,7 @@ public static class Program
             Console.WriteLine("Downloading..");
             using var output = new FileStream(downloadFileName, FileMode.CreateNew);
             var stopwatch = Stopwatch.StartNew();
-            client.DownloadObject(configuration.Bucket, configuration.ObjectName, output, options);
+            _ = client.DownloadObject(configuration.BucketName, configuration.ObjectName, output, options);
             elapsedTimeUs = (stopwatch.Elapsed.Ticks / TimeSpanTicksPerMicrosecond).ToString(CultureInfo.InvariantCulture);
             success = true;
         }
