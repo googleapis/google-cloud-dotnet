@@ -32,7 +32,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LnByb3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnBy",
             "b3RvGixnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbi5w",
             "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLyDQoFTW9kZWwSDAoEbmFtZRgBIAEo",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byKJDgoFTW9kZWwSDAoEbmFtZRgBIAEo",
             "CRIaCgp2ZXJzaW9uX2lkGBwgASgJQgbgQQXgQQMSFwoPdmVyc2lvbl9hbGlh",
             "c2VzGB0gAygJEjwKE3ZlcnNpb25fY3JlYXRlX3RpbWUYHyABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPAoTdmVyc2lvbl91cGRhdGVf",
@@ -67,26 +67,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cG9ydGFibGVDb250ZW50QgPgQQMiUAoRRXhwb3J0YWJsZUNvbnRlbnQSIgoe",
             "RVhQT1JUQUJMRV9DT05URU5UX1VOU1BFQ0lGSUVEEAASDAoIQVJUSUZBQ1QQ",
             "ARIJCgVJTUFHRRACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEidgoXRGVwbG95bWVudFJlc291cmNlc1R5cGUSKQol",
-            "REVQTE9ZTUVOVF9SRVNPVVJDRVNfVFlQRV9VTlNQRUNJRklFRBAAEhcKE0RF",
-            "RElDQVRFRF9SRVNPVVJDRVMQARIXChNBVVRPTUFUSUNfUkVTT1VSQ0VTEAI6",
-            "XOpBWQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9k",
-            "ZWx9InsKD1ByZWRpY3RTY2hlbWF0YRIgChNpbnN0YW5jZV9zY2hlbWFfdXJp",
-            "GAEgASgJQgPgQQUSIgoVcGFyYW1ldGVyc19zY2hlbWFfdXJpGAIgASgJQgPg",
-            "QQUSIgoVcHJlZGljdGlvbl9zY2hlbWFfdXJpGAMgASgJQgPgQQUi+wEKEk1v",
-            "ZGVsQ29udGFpbmVyU3BlYxIZCglpbWFnZV91cmkYASABKAlCBuBBAuBBBRIU",
-            "Cgdjb21tYW5kGAIgAygJQgPgQQUSEQoEYXJncxgDIAMoCUID4EEFEjQKA2Vu",
-            "dhgEIAMoCzIiLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudlZhckID",
-            "4EEFEjQKBXBvcnRzGAUgAygLMiAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuUG9ydEID4EEFEhoKDXByZWRpY3Rfcm91dGUYBiABKAlCA+BBBRIZCgxo",
-            "ZWFsdGhfcm91dGUYByABKAlCA+BBBSIeCgRQb3J0EhYKDmNvbnRhaW5lcl9w",
-            "b3J0GAMgASgFQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
-            "Ck1vZGVsUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29n",
-            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "YWx1ZRgCIAEoCToCOAEijAEKF0RlcGxveW1lbnRSZXNvdXJjZXNUeXBlEikK",
+            "JURFUExPWU1FTlRfUkVTT1VSQ0VTX1RZUEVfVU5TUEVDSUZJRUQQABIXChNE",
+            "RURJQ0FURURfUkVTT1VSQ0VTEAESFwoTQVVUT01BVElDX1JFU09VUkNFUxAC",
+            "EhQKEFNIQVJFRF9SRVNPVVJDRVMQAzpc6kFZCh9haXBsYXRmb3JtLmdvb2ds",
+            "ZWFwaXMuY29tL01vZGVsEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vbW9kZWxzL3ttb2RlbH0iewoPUHJlZGljdFNjaGVtYXRh",
+            "EiAKE2luc3RhbmNlX3NjaGVtYV91cmkYASABKAlCA+BBBRIiChVwYXJhbWV0",
+            "ZXJzX3NjaGVtYV91cmkYAiABKAlCA+BBBRIiChVwcmVkaWN0aW9uX3NjaGVt",
+            "YV91cmkYAyABKAlCA+BBBSL7AQoSTW9kZWxDb250YWluZXJTcGVjEhkKCWlt",
+            "YWdlX3VyaRgBIAEoCUIG4EEC4EEFEhQKB2NvbW1hbmQYAiADKAlCA+BBBRIR",
+            "CgRhcmdzGAMgAygJQgPgQQUSNAoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQUSNAoFcG9ydHMYBSADKAsyIC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qb3J0QgPgQQUSGgoNcHJlZGlj",
+            "dF9yb3V0ZRgGIAEoCUID4EEFEhkKDGhlYWx0aF9yb3V0ZRgHIAEoCUID4EEF",
+            "Ih4KBFBvcnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAVCzgEKHmNvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIKTW9kZWxQcm90b1ABWkRnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZv",
+            "cm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1423,6 +1423,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// only a modest additional configuration.
         /// </summary>
         [pbr::OriginalName("AUTOMATIC_RESOURCES")] AutomaticResources = 2,
+        /// <summary>
+        /// Resources that can be shared by multiple [DeployedModels][google.cloud.aiplatform.v1.DeployedModel].
+        /// A pre-configured [DeploymentResourcePool][] is required.
+        /// </summary>
+        [pbr::OriginalName("SHARED_RESOURCES")] SharedResources = 3,
       }
 
       /// <summary>
