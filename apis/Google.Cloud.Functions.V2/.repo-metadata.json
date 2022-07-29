@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Functions.V2",
-  "release_level": "unreleased",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Functions.V2/latest",
   "library_type": "GAPIC_AUTO",
   "api_shortname": "cloudfunctions"

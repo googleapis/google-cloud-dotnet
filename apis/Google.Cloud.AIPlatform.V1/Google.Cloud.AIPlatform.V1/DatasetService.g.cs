@@ -1216,6 +1216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///     * A key including a space must be quoted. `labels."a key"`.
     ///
     /// Some examples:
+    ///
     ///   * `displayName="myDisplayName"`
     ///   * `labels.myKey="myValue"`
     /// </summary>
@@ -1280,6 +1281,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// A comma-separated list of fields to order by, sorted in ascending order.
     /// Use "desc" after a field name for descending.
     /// Supported fields:
+    ///
     ///   * `display_name`
     ///   * `create_time`
     ///   * `update_time`
@@ -4329,7 +4331,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.SavedQuery.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery> savedQueries_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery>();
     /// <summary>
-    /// A list of SavedQueries that match the specified filter in the request.
+    /// A list of SavedQueries that matches the specified filter in the
+    /// request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

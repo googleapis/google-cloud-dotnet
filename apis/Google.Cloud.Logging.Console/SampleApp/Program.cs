@@ -37,11 +37,13 @@ app.MapGet("/complex", (ILogger<Program> logger) =>
 });
 
 
-app.MapGet("/error", () =>
-{
-    // This will automatically get logged.
-    throw new Exception("Bang!");
-});
+app.MapGet("/error", () => { throw new Exception("Bang!"); });
+
+app.MapGet("/deep-exception", () => Exceptions.ThrowDeep());
+
+app.MapGet("/nested-exception", () => Exceptions.ThrowNested());
+
+app.MapGet("/async-exception", Exceptions.ThrowAsync);
 
 app.MapGet("/scopes", (ILogger<Program> logger) =>
 {

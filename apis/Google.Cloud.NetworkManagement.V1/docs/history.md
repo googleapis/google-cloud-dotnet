@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2022-07-25
+
+### New features
+
+- Add new abort cause and new route next hop type ([commit 315900f](https://github.com/googleapis/google-cloud-dotnet/commit/315900f5725c85be5c1279cc6f40e6f28d8d3297))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### New features

@@ -32,9 +32,9 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
             yield return BillingSettingsReflection.Descriptor;
             yield return ComponentSettingsReflection.Descriptor;
             yield return DetectorReflection.Descriptor;
-            yield return SinkSettingsReflection.Descriptor;
-            yield return SettingsReflection.Descriptor;
             yield return SecuritycenterSettingsServiceReflection.Descriptor;
+            yield return SettingsReflection.Descriptor;
+            yield return SinkSettingsReflection.Descriptor;
         }
     }
 }

@@ -29,9 +29,9 @@ namespace Google.Cloud.Datastore.Admin.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return DatastoreAdminReflection.Descriptor;
             yield return IndexReflection.Descriptor;
             yield return MigrationReflection.Descriptor;
-            yield return DatastoreAdminReflection.Descriptor;
         }
     }
 }

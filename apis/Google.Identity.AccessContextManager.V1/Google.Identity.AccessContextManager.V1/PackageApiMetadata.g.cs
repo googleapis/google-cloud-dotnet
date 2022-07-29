@@ -29,11 +29,11 @@ namespace Google.Identity.AccessContextManager.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AccessContextManagerReflection.Descriptor;
             yield return AccessLevelReflection.Descriptor;
             yield return AccessPolicyReflection.Descriptor;
             yield return GcpUserAccessBindingReflection.Descriptor;
             yield return ServicePerimeterReflection.Descriptor;
-            yield return AccessContextManagerReflection.Descriptor;
         }
     }
 }

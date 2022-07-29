@@ -53,39 +53,39 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmnqQWYK",
             "I2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEj9wcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY3VzdG9tSm9icy97",
-            "Y3VzdG9tX2pvYn0itgMKDUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xf",
+            "Y3VzdG9tX2pvYn0iuQMKDUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xf",
             "c3BlY3MYASADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Xb3Jr",
             "ZXJQb29sU3BlY0ID4EECEjoKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsaW5nEhcKD3NlcnZpY2VfYWNj",
-            "b3VudBgEIAEoCRI0CgduZXR3b3JrGAUgASgJQiP6QSAKHmNvbXB1dGUuZ29v",
-            "Z2xlYXBpcy5jb20vTmV0d29yaxIfChJyZXNlcnZlZF9pcF9yYW5nZXMYDSAD",
-            "KAlCA+BBARJJChViYXNlX291dHB1dF9kaXJlY3RvcnkYBiABKAsyKi5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbhJCCgt0ZW5z",
-            "b3Jib2FyZBgHIAEoCUIt4EEB+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
-            "Y29tL1RlbnNvcmJvYXJkEh4KEWVuYWJsZV93ZWJfYWNjZXNzGAogASgIQgPg",
-            "QQEihgMKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVjGAYgASgL",
-            "MikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVyU3BlY0gA",
-            "EkwKE3B5dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gAEkUKDG1hY2hpbmVf",
-            "c3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hp",
-            "bmVTcGVjQgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgCIAEoA0ID4EEBEj0K",
-            "Cm5mc19tb3VudHMYBCADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5OZnNNb3VudEID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29udGFp",
-            "bmVyU3BlYxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5kGAIg",
-            "AygJEgwKBGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdlU3BlYxIf",
-            "ChJleGVjdXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3Vy",
-            "aXMYAiADKAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoE",
-            "YXJncxgEIAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5FbnZWYXIiXwoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29u",
-            "X3dvcmtlcl9yZXN0YXJ0GAMgASgIQtIBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCDkN1c3RvbUpvYlByb3RvUAFaRGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTth",
-            "aXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
-            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
-            "dGZvcm06OlYxYgZwcm90bzM="));
+            "b3VudBgEIAEoCRI3CgduZXR3b3JrGAUgASgJQibgQQH6QSAKHmNvbXB1dGUu",
+            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIfChJyZXNlcnZlZF9pcF9yYW5nZXMY",
+            "DSADKAlCA+BBARJJChViYXNlX291dHB1dF9kaXJlY3RvcnkYBiABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbhJCCgt0",
+            "ZW5zb3Jib2FyZBgHIAEoCUIt4EEB+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1RlbnNvcmJvYXJkEh4KEWVuYWJsZV93ZWJfYWNjZXNzGAogASgI",
+            "QgPgQQEihgMKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVjGAYg",
+            "ASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVyU3Bl",
+            "Y0gAEkwKE3B5dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gAEkUKDG1hY2hp",
+            "bmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1h",
+            "Y2hpbmVTcGVjQgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgCIAEoA0ID4EEB",
+            "Ej0KCm5mc19tb3VudHMYBCADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5OZnNNb3VudEID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29u",
+            "dGFpbmVyU3BlYxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5k",
+            "GAIgAygJEgwKBGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdlU3Bl",
+            "YxIfChJleGVjdXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdl",
+            "X3VyaXMYAiADKAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQIS",
+            "DAoEYXJncxgEIAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5FbnZWYXIiXwoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9i",
+            "X29uX3dvcmtlcl9yZXN0YXJ0GAMgASgIQtIBCh5jb20uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFCDkN1c3RvbUpvYlByb3RvUAFaRGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92",
+            "MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
+            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
+            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -805,7 +805,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Represents the spec of a CustomJob.
-  /// Next Id: 14
+  /// Next Id: 15
   /// </summary>
   public sealed partial class CustomJobSpec : pb::IMessage<CustomJobSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -912,7 +912,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NetworkFieldNumber = 5;
     private string network_ = "";
     /// <summary>
-    /// The full name of the Compute Engine
+    /// Optional. The full name of the Compute Engine
     /// [network](/compute/docs/networks-and-firewalls#networks) to which the Job
     /// should be peered. For example, `projects/12345/global/networks/myVPC`.
     /// [Format](/compute/docs/reference/rest/v1/networks/insert)

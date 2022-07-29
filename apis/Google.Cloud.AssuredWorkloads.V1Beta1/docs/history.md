@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta03, released 2022-07-25
+
+### New features
+
+- Updated the method signature of analyzeWorkloadMove for v1beta API to accept project as source. AnalyzeWorkloadMove now also returns information about org policy differences between the project and target folder ([commit 31b0016](https://github.com/googleapis/google-cloud-dotnet/commit/31b0016e71d85303ccdc14de2ddef571082de875))
+
 ## Version 2.0.0-beta02, released 2022-07-11
 
 ### New features

@@ -29,8 +29,8 @@ namespace Google.Cloud.CloudDms.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ClouddmsResourcesReflection.Descriptor;
             yield return ClouddmsReflection.Descriptor;
+            yield return ClouddmsResourcesReflection.Descriptor;
         }
     }
 }

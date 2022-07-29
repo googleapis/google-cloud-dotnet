@@ -26,22 +26,6 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
-        /// <summary>Adds a singleton <see cref="gcvv::ProductSearchClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddProductSearchClient(this IServiceCollection services, sys::Action<gcvv::ProductSearchClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcvv::ProductSearchClientBuilder builder = new gcvv::ProductSearchClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
         /// <summary>Adds a singleton <see cref="gcvv::ImageAnnotatorClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -54,6 +38,22 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcvv::ImageAnnotatorClientBuilder builder = new gcvv::ImageAnnotatorClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcvv::ProductSearchClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProductSearchClient(this IServiceCollection services, sys::Action<gcvv::ProductSearchClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcvv::ProductSearchClientBuilder builder = new gcvv::ProductSearchClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

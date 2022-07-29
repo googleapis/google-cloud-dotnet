@@ -32,8 +32,8 @@ namespace Google.Cloud.Eventarc.V1
             yield return ChannelReflection.Descriptor;
             yield return ChannelConnectionReflection.Descriptor;
             yield return DiscoveryReflection.Descriptor;
-            yield return TriggerReflection.Descriptor;
             yield return EventarcReflection.Descriptor;
+            yield return TriggerReflection.Descriptor;
         }
     }
 }

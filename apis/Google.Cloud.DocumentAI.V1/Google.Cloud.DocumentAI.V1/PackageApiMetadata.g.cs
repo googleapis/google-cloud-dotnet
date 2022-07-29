@@ -29,11 +29,11 @@ namespace Google.Cloud.DocumentAI.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return GeometryReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
             yield return DocumentIoReflection.Descriptor;
-            yield return OperationMetadataReflection.Descriptor;
             yield return DocumentProcessorServiceReflection.Descriptor;
+            yield return GeometryReflection.Descriptor;
+            yield return OperationMetadataReflection.Descriptor;
         }
     }
 }

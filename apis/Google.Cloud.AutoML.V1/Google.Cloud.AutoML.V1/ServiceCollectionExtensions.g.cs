@@ -26,6 +26,22 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
+        /// <summary>Adds a singleton <see cref="gcav::AutoMlClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAutoMlClient(this IServiceCollection services, sys::Action<gcav::AutoMlClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::AutoMlClientBuilder builder = new gcav::AutoMlClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcav::PredictionServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -40,22 +56,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcav::PredictionServiceClientBuilder builder = new gcav::PredictionServiceClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>Adds a singleton <see cref="gcav::AutoMlClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddAutoMlClient(this IServiceCollection services, sys::Action<gcav::AutoMlClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcav::AutoMlClientBuilder builder = new gcav::AutoMlClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

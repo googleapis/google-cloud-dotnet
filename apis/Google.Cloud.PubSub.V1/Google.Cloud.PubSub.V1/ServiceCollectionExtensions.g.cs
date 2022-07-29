@@ -26,22 +26,6 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
-        /// <summary>Adds a singleton <see cref="gcpv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddSchemaServiceClient(this IServiceCollection services, sys::Action<gcpv::SchemaServiceClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcpv::SchemaServiceClientBuilder builder = new gcpv::SchemaServiceClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
         /// <summary>
         /// Adds a singleton <see cref="gcpv::PublisherServiceApiClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -56,6 +40,22 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcpv::PublisherServiceApiClientBuilder builder = new gcpv::PublisherServiceApiClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcpv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSchemaServiceClient(this IServiceCollection services, sys::Action<gcpv::SchemaServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::SchemaServiceClientBuilder builder = new gcpv::SchemaServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

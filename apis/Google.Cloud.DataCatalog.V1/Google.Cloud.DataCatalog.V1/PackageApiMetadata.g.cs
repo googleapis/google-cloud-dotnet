@@ -32,18 +32,18 @@ namespace Google.Cloud.DataCatalog.V1
             yield return BigqueryReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return DataSourceReflection.Descriptor;
-            yield return PhysicalSchemaReflection.Descriptor;
+            yield return DatacatalogReflection.Descriptor;
             yield return DataplexSpecReflection.Descriptor;
-            yield return TimestampsReflection.Descriptor;
             yield return GcsFilesetSpecReflection.Descriptor;
+            yield return PhysicalSchemaReflection.Descriptor;
+            yield return PolicytagmanagerReflection.Descriptor;
+            yield return PolicytagmanagerserializationReflection.Descriptor;
             yield return SchemaReflection.Descriptor;
             yield return SearchReflection.Descriptor;
             yield return TableSpecReflection.Descriptor;
             yield return TagsReflection.Descriptor;
+            yield return TimestampsReflection.Descriptor;
             yield return UsageReflection.Descriptor;
-            yield return DatacatalogReflection.Descriptor;
-            yield return PolicytagmanagerReflection.Descriptor;
-            yield return PolicytagmanagerserializationReflection.Descriptor;
         }
     }
 }

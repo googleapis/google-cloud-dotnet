@@ -29,8 +29,8 @@ namespace Google.Cloud.StorageTransfer.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return TransferTypesReflection.Descriptor;
             yield return TransferReflection.Descriptor;
+            yield return TransferTypesReflection.Descriptor;
         }
     }
 }

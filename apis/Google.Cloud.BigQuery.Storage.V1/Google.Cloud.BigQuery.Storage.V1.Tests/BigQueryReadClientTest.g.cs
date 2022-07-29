@@ -38,6 +38,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
+                PreferredMinStreamCount = -105459667,
             };
             ReadSession expectedResponse = new ReadSession
             {
@@ -69,6 +70,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
+                PreferredMinStreamCount = -105459667,
             };
             ReadSession expectedResponse = new ReadSession
             {

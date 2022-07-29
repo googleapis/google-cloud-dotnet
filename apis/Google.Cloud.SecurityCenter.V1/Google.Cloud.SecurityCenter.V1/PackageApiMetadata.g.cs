@@ -30,33 +30,33 @@ namespace Google.Cloud.SecurityCenter.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AccessReflection.Descriptor;
-            yield return FolderReflection.Descriptor;
-            yield return SecurityMarksReflection.Descriptor;
             yield return AssetReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
             yield return ComplianceReflection.Descriptor;
             yield return ConnectionReflection.Descriptor;
             yield return ContactDetailsReflection.Descriptor;
-            yield return LabelReflection.Descriptor;
             yield return ContainerReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
+            yield return FindingReflection.Descriptor;
+            yield return FolderReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
             yield return KubernetesReflection.Descriptor;
+            yield return LabelReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
-            yield return ProcessReflection.Descriptor;
-            yield return VulnerabilityReflection.Descriptor;
-            yield return FindingReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
-            yield return ResourceReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
             yield return OrganizationSettingsReflection.Descriptor;
+            yield return ProcessReflection.Descriptor;
+            yield return ResourceReflection.Descriptor;
             yield return RunAssetDiscoveryResponseReflection.Descriptor;
-            yield return SourceReflection.Descriptor;
+            yield return SecurityMarksReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
+            yield return SourceReflection.Descriptor;
+            yield return VulnerabilityReflection.Descriptor;
         }
     }
 }

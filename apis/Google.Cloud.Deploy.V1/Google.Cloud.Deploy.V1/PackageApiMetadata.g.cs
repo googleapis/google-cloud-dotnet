@@ -30,8 +30,8 @@ namespace Google.Cloud.Deploy.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudDeployReflection.Descriptor;
-            yield return LogEnumsReflection.Descriptor;
             yield return DeliverypipelineNotificationPayloadReflection.Descriptor;
+            yield return LogEnumsReflection.Descriptor;
             yield return ReleaseNotificationPayloadReflection.Descriptor;
             yield return ReleaseRenderPayloadReflection.Descriptor;
             yield return RolloutNotificationPayloadReflection.Descriptor;

@@ -284,7 +284,7 @@
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0-beta03",
       "type": "grpc",
       "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
@@ -501,7 +501,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "BigQuery Connection",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/bigqueryconnection",
@@ -578,7 +578,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Migration.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "BigQuery Migration",
       "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
@@ -617,7 +617,7 @@
       "id": "Google.Cloud.BigQuery.V2",
       "productName": "Google BigQuery",
       "productUrl": "https://cloud.google.com/bigquery/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
@@ -658,7 +658,7 @@
       "protoPath": "google/bigtable/admin/v2",
       "productName": "Google Cloud Bigtable Administration",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
@@ -1076,7 +1076,7 @@
     },
     {
       "id": "Google.Cloud.Dataplex.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud Dataplex",
       "productUrl": "https://cloud.google.com/dataplex/docs",
@@ -1144,7 +1144,7 @@
       "protoPath": "google/datastore/v1",
       "productName": "Google Cloud Datastore",
       "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-      "version": "4.1.0",
+      "version": "4.2.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
@@ -1396,7 +1396,7 @@
       "protoPath": "google/privacy/dlp/v2",
       "productName": "Google Cloud Data Loss Prevention",
       "productUrl": "https://cloud.google.com/dlp/",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
       "dependencies": {
@@ -1696,7 +1696,7 @@
     },
     {
       "id": "Google.Cloud.Functions.V2",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
@@ -2426,7 +2426,7 @@
     },
     {
       "id": "Google.Cloud.NetworkManagement.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Network Management",
       "productUrl": "https://cloud.google.com/network-intelligence-center/docs/",
@@ -2451,7 +2451,7 @@
     },
     {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Network Security",
       "productUrl": "https://cloud.google.com/traffic-director/docs/security-overview",
@@ -2780,7 +2780,7 @@
       "protoPath": "google/pubsub/v1",
       "productName": "Cloud Pub/Sub",
       "productUrl": "https://cloud.google.com/pubsub/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
@@ -3131,7 +3131,7 @@
       "protoPath": "google/cloud/securitycenter/v1",
       "productName": "Google Cloud Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
       "dependencies": {
@@ -3693,7 +3693,7 @@
       "id": "Google.Cloud.Translation.V2",
       "productName": "Google Cloud Translation",
       "productUrl": "https://cloud.google.com/translate/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
@@ -3708,7 +3708,7 @@
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "VM Migration",
       "productUrl": "https://cloud.google.com/migrate/compute-engine/docs/",
@@ -3750,7 +3750,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",

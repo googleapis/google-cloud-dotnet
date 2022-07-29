@@ -286,7 +286,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForDouble(10);
     private readonly pbc::RepeatedField<double> values_ = new pbc::RepeatedField<double>();
     /// <summary>
-    /// A list of bool values.
+    /// A list of double values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

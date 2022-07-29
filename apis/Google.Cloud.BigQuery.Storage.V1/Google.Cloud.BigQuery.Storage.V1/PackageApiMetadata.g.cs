@@ -32,9 +32,9 @@ namespace Google.Cloud.BigQuery.Storage.V1
             yield return ArrowReflection.Descriptor;
             yield return AvroReflection.Descriptor;
             yield return ProtobufReflection.Descriptor;
-            yield return TableReflection.Descriptor;
-            yield return StreamReflection.Descriptor;
             yield return StorageReflection.Descriptor;
+            yield return StreamReflection.Descriptor;
+            yield return TableReflection.Descriptor;
         }
     }
 }

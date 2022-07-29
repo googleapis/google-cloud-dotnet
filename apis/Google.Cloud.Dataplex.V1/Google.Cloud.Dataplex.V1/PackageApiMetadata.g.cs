@@ -29,13 +29,13 @@ namespace Google.Cloud.Dataplex.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return ResourcesReflection.Descriptor;
             yield return AnalyzeReflection.Descriptor;
             yield return ContentReflection.Descriptor;
             yield return LogsReflection.Descriptor;
             yield return MetadataReflection.Descriptor;
-            yield return TasksReflection.Descriptor;
+            yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return TasksReflection.Descriptor;
         }
     }
 }

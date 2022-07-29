@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-07-27
+
+### New features
+
+- Add service_account_id output field to CloudSQL properties ([commit c72ac43](https://github.com/googleapis/google-cloud-dotnet/commit/c72ac437a7f24199045e03016a384f250ac1380c))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

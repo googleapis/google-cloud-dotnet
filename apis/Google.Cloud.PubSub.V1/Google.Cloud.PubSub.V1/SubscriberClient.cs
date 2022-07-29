@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -44,12 +45,6 @@ namespace Google.Cloud.PubSub.V1
     /// </remarks>
     public abstract class SubscriberClient
     {
-        private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
-            .WithMaxReceiveMessageSize(int.MaxValue)
-            .WithMaxSendMessageSize(int.MaxValue)
-            // Set max metadata size to 4 MB i.e., 4194304 bytes.
-            .WithCustomOption("grpc.max_metadata_size", 4194304);
-
         /// <summary>
         /// Reply from a message handler; whether to <see cref="Ack"/>
         /// or <see cref="Nack"/> the message to the server. 
@@ -84,6 +79,7 @@ namespace Google.Cloud.PubSub.V1
                 AckDeadline = other.AckDeadline;
                 AckExtensionWindow = other.AckExtensionWindow;
                 Scheduler = other.Scheduler;
+                Clock = other.Clock;
                 MaxTotalAckExtension = other.MaxTotalAckExtension;
             }
 
@@ -125,6 +121,16 @@ namespace Google.Cloud.PubSub.V1
             /// This is usually only used for testing.
             /// </summary>
             public IScheduler Scheduler { get; set; }
+
+            /// <summary>
+            /// The <see cref="IClock"/> used for timeouts and retries.
+            /// If <c>null</c>, the default <see cref="SystemClock"/> is used.
+            /// This is usually only used for testing.
+            /// </summary>
+            /// <remarks>
+            /// This is used only in exactly once flow as we need to retry temporary failures.
+            /// </remarks>
+            public IClock Clock { get; set; }
 
             internal void Validate()
             {
@@ -262,6 +268,11 @@ namespace Google.Cloud.PubSub.V1
         /// The minimum message ACKnowledgement extension window of 50 milliseconds.
         /// </summary>
         public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
+
+        /// <summary>
+        /// The minimum message acknowledgement extension window of 60 seconds for exactly once subscriptions.
+        /// </summary>
+        public static TimeSpan MinimumAckExtensionWindowForExactlyOnce { get; } = TimeSpan.FromSeconds(60);
 
         /// <summary>
         /// The default message ACKnowledgement extension window of 15 seconds.
@@ -417,12 +428,16 @@ namespace Google.Cloud.PubSub.V1
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
             var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+            var autoExtendIntervalForExactlyOnce = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnce;
+            // For exactly once subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
             // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
             // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
             _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
+            _autoExtendIntervalForExactlyOnce = TimeSpan.FromTicks(Math.Max(autoExtendIntervalForExactlyOnce.Ticks, MinimumLeaseExtensionDelay.Ticks));
             _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
+            _clock = settings.Clock ?? SystemClock.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
             _useLegacyFlowControl = settings.UseLegacyFlowControl;
@@ -432,11 +447,13 @@ namespace Google.Cloud.PubSub.V1
         private readonly object _lock = new object();
         private readonly SubscriberServiceApiClient[] _clients;
         private readonly Func<Task> _shutdown;
-        private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends
+        private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends for non-exactly once subscriptions.
+        private readonly TimeSpan _autoExtendIntervalForExactlyOnce; // Interval between message lease auto-extends for exactly once subscriptions.
         private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
         private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
         private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
         private readonly IScheduler _scheduler;
+        private readonly IClock _clock;
         private readonly TaskHelper _taskHelper;
         private readonly FlowControlSettings _flowControlSettings;
         private readonly bool _useLegacyFlowControl;
@@ -871,6 +888,37 @@ namespace Google.Cloud.PubSub.V1
                 internal string Id { get; }
             }
 
+            /// <summary>
+            /// This struct contains the retry information for a temporary failed AckId/NackId/ExtendId.
+            /// The AckId/NackId/ExtendId is stored in a dictionary as a key and mapped to <see cref="RetryInfo"/>.
+            /// This struct is only used in exactly once delivery mode.
+            /// </summary>
+            private readonly struct RetryInfo
+            {
+                /// <summary>
+                /// Gets the first time of failure in UTC when the Acknowledge/ModifyAcDeadline RPC call failed with a temporary error for a given message id.
+                /// </summary>
+                internal DateTime FirstTimeOfFailureInUtc { get; }
+
+                /// <summary>
+                /// Gets the latest backoff that was used to retry Acknowledge/ModifyAcDeadline RPC call.
+                /// </summary>
+                internal TimeSpan? Backoff { get; }
+
+                /// <summary>
+                /// Initializes a new instance of the <see cref="RetryInfo"/> struct.
+                /// </summary>
+                /// <param name="firstTimeOfFailureInUtc">The first time of failure in UTC.</param>
+                /// <param name="backoff">The latest backoff that was used, which is null at the time of first temporary failure.</param>
+                internal RetryInfo(DateTime firstTimeOfFailureInUtc, TimeSpan? backoff = null)
+                {
+                    FirstTimeOfFailureInUtc = firstTimeOfFailureInUtc;
+                    Backoff = backoff;
+                }
+
+                internal RetryInfo WithBackoff(TimeSpan? backoff) => new RetryInfo(FirstTimeOfFailureInUtc, backoff);
+            }
+
             internal SingleChannel(SubscriberClientImpl subscriber,
                 SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 Flow flow, bool useLegacyFlowControl,
@@ -879,6 +927,7 @@ namespace Google.Cloud.PubSub.V1
                 _registerTaskFn = registerTaskFn;
                 _taskHelper = subscriber._taskHelper;
                 _scheduler = subscriber._scheduler;
+                _clock = subscriber._clock;
                 _client = client;
                 _handlerAsync = handlerAsync;
                 _hardStopCts = subscriber._globalHardStopCts;
@@ -888,6 +937,7 @@ namespace Google.Cloud.PubSub.V1
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
                 _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
                 _autoExtendInterval = subscriber._autoExtendInterval;
+                _autoExtendIntervalForExactlyOnce = subscriber._autoExtendIntervalForExactlyOnce;
                 _maxExtensionDuration = subscriber._maxExtensionDuration;
                 _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
                 _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
@@ -902,6 +952,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly Action<Task> _registerTaskFn;
             private readonly TaskHelper _taskHelper;
             private readonly IScheduler _scheduler;
+            private readonly IClock _clock;
             private readonly SubscriberServiceApiClient _client;
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
             private readonly CancellationTokenSource _hardStopCts;
@@ -909,7 +960,8 @@ namespace Google.Cloud.PubSub.V1
             private readonly CancellationTokenSource _softStopCts;
             private readonly SubscriptionName _subscriptionName;
             private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
-            private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends.
+            private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends for non-exactly once subscriptions.
+            private readonly TimeSpan _autoExtendIntervalForExactlyOnce; // Delay between auto-extends for exactly once subscriptions.
             private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
             private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
             private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
@@ -931,6 +983,12 @@ namespace Google.Cloud.PubSub.V1
             private bool _pullComplete = false;
             private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
             private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
+            private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
+
+            // This dictionary will only have ids that can be retried for temporary errors while calling Acknowledgement or ModifyAckDeadline RPCs.
+            // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
+            // which is a requirement for exactly once subscription.
+            private readonly ConcurrentDictionary<string, RetryInfo> _retryableIds = new ConcurrentDictionary<string, RetryInfo>();
 
             private static readonly RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
                 maxAttempts: int.MaxValue,
@@ -939,6 +997,15 @@ namespace Google.Cloud.PubSub.V1
                 backoffMultiplier: 2.0,
                 retryFilter: _ => false // Ignored
                 );
+
+            private static readonly RetrySettings s_ackBackoff = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(1),
+                maxBackoff: TimeSpan.FromSeconds(64),
+                backoffMultiplier: 2.0,
+                retryFilter: _ => false // Ignored
+                );
+
             private TimeSpan? _pullBackoff = null;
 
             // Stream shutdown occurs after 1 minute, so ensure we're always before that.
@@ -1125,6 +1192,7 @@ namespace Google.Cloud.PubSub.V1
                     try
                     {
                         current = _pull.GrpcCall.ResponseStream.Current;
+                        _exactlyOnceDeliveryEnabled = current.SubscriptionProperties?.ExactlyOnceDeliveryEnabled ?? false;
                     }
                     catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
                     {
@@ -1292,7 +1360,7 @@ namespace Google.Cloud.PubSub.V1
                         _eventPush.Set();
                         // Some ids still exist, schedule another extension.
                         // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                        Add(_scheduler.Delay(_autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                        Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendIntervalForExactlyOnce : _autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                         // Increment _extendThrottles.
                         _extendThrottleHigh += 1;
                         Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
@@ -1360,10 +1428,229 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
+            /// <summary>
+            /// This method is called when the acknowledgement request completes.
+            /// This method handles the response from an acknowledgement request for exactly once subscriptions only.
+            /// For non-exactly once subscriptions, <see cref="HandleAckResponse(Task, List{string}, List{string}, List{TimedId})"/> is called.
+            /// </summary>
+            /// <param name="writeTask">The task containing the response of Acknowledge/ModifyAckDeadline RPC.</param>
+            /// <param name="ackIds">The list of ids that were sent to the Acknowledge RPC for acknowledgement
+            /// that the message associated with these ids shouldn't be redelivered.</param>
+            /// <param name="nackIds">The list of ids that were sent to the ModifyAckDeadline RPC to indicate that
+            /// the message associated with these ids should be redelivered.</param>
+            /// <param name="extendIds">The list of ids that were sent to the ModifyAckDeadline RPC to modify their ack deadline.</param>
+            /// <remarks>
+            /// Only one of ackIds, nackIds and extendIds will be non-null and based on that we determine if we are handling acks, nacks or extends.
+            /// This method is used for exactly once subscriptions only. To keep the logic of exactly once subscription in one place,
+            /// this method has a few local methods that are used only in exactly once flow and not in non-exactly once flow, so the method
+            /// is pretty long.
+            /// </remarks>
+            private void HandleAckResponseForExactlyOnce(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
             {
                 _concurrentPushCount -= 1;
-                _pushInFlight -= ackIds?.Count ?? 0 + nackIds?.Count ?? 0 + extendIds?.Count ?? 0;
+                _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
+                
+                bool hasAckIds = ackIds?.Count > 0;
+                bool hasNackIds = nackIds?.Count > 0;
+                bool hasExtendIds = extendIds?.Count > 0;
+                // In one call, we'll have one of acks or nacks or extends, not all.
+                var ids = hasAckIds ? ackIds
+                    : hasNackIds ? nackIds : extendIds.Select(j => j.Id);
+
+                if (writeTask.IsFaulted)
+                {
+                    // There may be few successes and few failures or all failures.
+                    var rpcException = writeTask.Exception.As<RpcException>();
+                    if (rpcException != null)
+                    {
+                        var ackError = AckError.ForRpcException(rpcException, ids);
+                        // Only temporary failures should be retried. Mark them as retryable if not already.
+                        UpdateRetryableIds(ids, ackError);
+
+                        if (hasAckIds)
+                        {
+                            // ack = true implies acks.
+                            RetryAcksAndNacks(true, ackError);
+                        }
+
+                        if (hasNackIds)
+                        {
+                            // ack = false implies nacks.
+                            RetryAcksAndNacks(false, ackError);
+                        }
+
+                        if (hasExtendIds)
+                        {
+                            RetryExtends(extendIds, ackError);
+                        }
+                    }
+                    else
+                    {
+                        // Throw it.
+                        throw writeTask.Exception.FlattenIfPossible();
+                    }
+                }
+                else
+                {
+                    // Everything succeeded. Update _retryableIds dictionary.
+                    UpdateRetryableIds(ids, default);
+                }
+
+                // Perform push so that other messages can be processed.
+                StartPush();
+                return;
+
+                // All methods below are local methods applicable to exactly once subscription only.
+                // They are not used in non-exactly once subscription.
+                
+                // This method schedules the retry of ackIds/nackIds with temporary errors and
+                // handles the permanent errors. Permanent errors are propagated to the caller for acks/nacks.
+                void RetryAcksAndNacks(bool ack, AckError ackError)
+                {
+                    // ack = true implies acks. ack = false implies nacks.
+                    // We have acks or nacks.
+                    var idsToRetry = ackError.TemporaryFailureIds;
+                    var queue = ack ? _ackQueue : _nackQueue;
+                    if (idsToRetry.Any())
+                    {
+                        // Retry for 600 seconds.
+                        RetryTemporaryFailures(idsToRetry, acksToRetry => queue.Locked(() => queue.Requeue(acksToRetry)), Enumerable.Empty<TimedId>(), null, 600);
+                    }
+
+                    if (ackError.GetPermanentExceptions() is IEnumerable<AcknowledgementException> exception && exception.Any())
+                    {
+                        // For acks/nacks, bubble up the exception.
+                        throw new AggregateException(exception);
+                    }
+                }
+
+                // This method schedules the retry of extendIds with temporary errors and
+                // handles the permanent errors. Permanent errors are only logged for extendIds as extend call is not user initiated.
+                void RetryExtends(IEnumerable<TimedId> extendIds, AckError ackError)
+                {
+                    var extendIdsToRetry = extendIds.Where(j => ackError.TemporaryFailureIds.Contains(j.Id));
+                    if (extendIdsToRetry.Any())
+                    {
+                        // Retry for 10 seconds or 3 attempts only.
+                        RetryTemporaryFailures(Enumerable.Empty<string>(), null, extendIdsToRetry, extendsToRetry => _extendQueue.Locked(() => _extendQueue.Requeue(extendsToRetry)), 10);
+                    }
+
+                    if (ackError.GetPermanentExceptions() is IEnumerable<AcknowledgementException> exception && exception.Any())
+                    {
+                        // Don't bubble permanent failures for lease extends as they are not user initiated.
+                        // Just log them.
+                        // TODO: Log the permanent failures.                           
+                    }
+                }
+
+                // Retries the ackIds/nackIds with temporary failures for Acknowledge RPC or extendIds with temporary failures for ModifyAckDeadline RPC.
+                // This method checks if the id exists in _retryableIds dictionary and has not been tried, or not been successful for the specified timeout since the first time of failure.
+                // If so, it retries those ids by adding them to the appropriate queue and calls the StartPush() method.
+                // For acks and nacks, ackOrNackIds must be non-null. For extends, extendIds must be non-null.
+                // For acks and nacks, ackActionToRetry must be non-null and specify the right queue (_ackQueue or _nackQueue).
+                // For extends, extendActionToRetry must be non-null and specify the right queue,i.e, _extendQueue.
+                void RetryTemporaryFailures(
+                    IEnumerable<string> ackOrNackIds,
+                    Action<IEnumerable<string>> ackActionToRetry,
+                    IEnumerable<TimedId> extendIds,
+                    Action<IEnumerable<TimedId>> extendActionToRetry = default,
+                    int timeoutInSeconds = 600)
+                {
+                    // ackOrNackIds may be empty but will never be null, so null check is not needed.
+                    // By design, only items in ackOrNackIds that exist in _retryableIds will be retried.
+                    // If id is not in _retryableIds dictionary, it is either already succeeded or not retryable.
+                    // Failure may be non-retryable due to exceeded time duration or that failure may have become permanent.
+
+                    bool hasAcksOrNacks = ackOrNackIds.Any();
+                    bool hasExtends = extendIds.Any();
+                    if (!hasAcksOrNacks && !hasExtends)
+                    {
+                        return;
+                    }
+
+                    var idsToRetry = hasAcksOrNacks ? ackOrNackIds : extendIds.Select(j => j.Id);
+                    var retriesToSchedule = new List<(string id, RetryInfo info)>();
+
+                    foreach (var candidateRetryId in idsToRetry)
+                    {
+                        if (!_retryableIds.TryGetValue(candidateRetryId, out var retryInfo))
+                        {
+                            continue;
+                        }
+                        var backoff = s_ackBackoff.NextBackoff(retryInfo.Backoff ?? TimeSpan.Zero);
+                        // We should retry only for specified timeout.
+                        if (_clock.GetCurrentDateTimeUtc() > retryInfo.FirstTimeOfFailureInUtc + TimeSpan.FromSeconds(timeoutInSeconds) - backoff)
+                        {
+                            // We are past the retry timeout. This id is not retryable.
+                            // Remove this id from _retryableIds dictionary and continue.
+                            _ = _retryableIds.TryRemove(candidateRetryId, out _);
+                            continue;
+                        }
+
+                        retryInfo = retryInfo.WithBackoff(backoff);
+
+                        // Update the backoff for this ID in the _retryableIds dictionary.
+                        _retryableIds[candidateRetryId] = retryInfo;
+                        // Add it to the list of retries we need to attempt after grouping.
+                        retriesToSchedule.Add((candidateRetryId, retryInfo));
+                    }
+
+                    // We can have ids with different backoff values.
+                    // Group on the backoff and add them to the corresponding queue in the increasing order of backoff.
+                    var retryGroups = retriesToSchedule.GroupBy(info => info.info.Backoff).OrderBy(group => group.Key);
+
+                    foreach (var retryGroup in retryGroups)
+                    {
+                        var backoff = retryGroup.Key ?? TimeSpan.Zero;
+                        var retryIds = retryGroup.Select(j => j.id);
+                        Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
+                        Add(delayTask, new NextAction(false, hasAcksOrNacks
+                            ? () => { ackActionToRetry(retryIds); StartPush(); }
+                            : () => { extendActionToRetry(extendIds.Where(j => retryIds.Contains(j.Id))); StartPush(); }));
+                    }
+                }
+
+                // Updates the _retryableIds dictionary. Ensures that the ids that should be re-tried exist in the dictionary.
+                // By design, only ids that are in _retryableIds dictionary will be retried with exponential backoff.
+                // Removes the ids that are either successful or become permanent failures as they should not be retried.
+                // allIds - All the ids for which Acknowledge/ModifyAckDeadline request was sent.
+                // ackError - The AckError that occurred in the response.
+                void UpdateRetryableIds(IEnumerable<string> allIds, AckError ackError)
+                {
+                    var temporaryFailureIds = ackError?.TemporaryFailureIds ?? Enumerable.Empty<string>();
+                    var permanentFailureIds = ackError?.PermanentFailureIds ?? Enumerable.Empty<string>();
+                    // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
+                    // TODO: Check if there is an impact due to lazy loading of IEnumerable<T>.
+                    var successfulIds = allIds.Except(temporaryFailureIds).Except(permanentFailureIds);
+                    // Some ids may have permanent failures and some may have succeeded. Those ids shouldn't be retried. 
+                    var nonRetryableIds = permanentFailureIds.Concat(successfulIds);
+
+                    foreach (var item in temporaryFailureIds)
+                    {
+                        // If the id to be retried is already in _retryableIds dictionary we are good,
+                        // else add the id to _retryableIds dictionary with first time of failure as CurrentDateTimeUtc,
+                        // so that we can retry for specific duration.
+                        _ = _retryableIds.TryAdd(item, new RetryInfo(_clock.GetCurrentDateTimeUtc()));
+                    }
+
+                    // Remove non-retryable ids from _retryableIds dictionary.
+                    foreach (var item in nonRetryableIds)
+                    {
+                        _ = _retryableIds.TryRemove(item, out _);
+                    }
+                }
+            }
+
+            private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
+            {
+                if (_exactlyOnceDeliveryEnabled)
+                {
+                    HandleAckResponseForExactlyOnce(writeTask, ackIds, nackIds, extendIds);
+                    return;
+                }
+
+                _concurrentPushCount -= 1;
+                _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
                 if (writeTask.IsFaulted)
                 {
                     if (writeTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)

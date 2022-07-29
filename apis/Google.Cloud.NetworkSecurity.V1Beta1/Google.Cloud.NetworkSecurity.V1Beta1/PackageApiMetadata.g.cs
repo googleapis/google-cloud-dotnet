@@ -30,11 +30,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AuthorizationPolicyReflection.Descriptor;
-            yield return TlsReflection.Descriptor;
             yield return ClientTlsPolicyReflection.Descriptor;
             yield return CommonReflection.Descriptor;
-            yield return ServerTlsPolicyReflection.Descriptor;
             yield return NetworkSecurityReflection.Descriptor;
+            yield return ServerTlsPolicyReflection.Descriptor;
+            yield return TlsReflection.Descriptor;
         }
     }
 }
