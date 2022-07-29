@@ -1717,7 +1717,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The observation noise level of the study.
     /// Currently only supported by the Vertex AI Vizier service. Not supported by
-    /// HyperparamterTuningJob or TrainingPipeline.
+    /// HyperparameterTuningJob or TrainingPipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3070,7 +3070,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// offered starting point.
             ///
             /// Currently only supported by the Vertex AI Vizier service. Not supported
-            /// by HyperparamterTuningJob or TrainingPipeline.
+            /// by HyperparameterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3365,7 +3365,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// offered starting point.
             ///
             /// Currently only supported by the Vertex AI Vizier service. Not supported
-            /// by HyperparamterTuningJob or TrainingPipeline.
+            /// by HyperparameterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3640,8 +3640,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// relatively good starting point.  Unset value signals that there is no
             /// offered starting point.
             ///
-            /// Currently only supported by the Vizier service. Not supported by
-            /// HyperparamterTuningJob or TrainingPipeline.
+            /// Currently only supported by the Vertex AI Vizier service. Not supported
+            /// by HyperparameterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3887,8 +3887,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// offered starting point.  It automatically rounds to the
             /// nearest feasible discrete point.
             ///
-            /// Currently only supported by the Vizier service. Not supported by
-            /// HyperparamterTuningJob or TrainingPipeline.
+            /// Currently only supported by the Vertex AI Vizier service. Not supported
+            /// by HyperparameterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
