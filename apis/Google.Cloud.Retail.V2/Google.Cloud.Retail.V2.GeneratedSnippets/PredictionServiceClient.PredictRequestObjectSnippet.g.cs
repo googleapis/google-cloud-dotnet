@@ -37,7 +37,6 @@ namespace Google.Cloud.Retail.V2.Snippets
                 Placement = "",
                 UserEvent = new UserEvent(),
                 PageSize = 0,
-                PageToken = "",
                 Filter = "",
                 ValidateOnly = false,
                 Params = { { "", new Value() }, },

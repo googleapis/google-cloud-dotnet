@@ -282,18 +282,21 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// When inventory is updated with
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct], the
-      /// specified inventory field value(s) will overwrite any existing value(s)
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct],
+      /// the specified inventory field value(s) will overwrite any existing value(s)
       /// while ignoring the last update time for this field. Furthermore, the last
       /// update time for the specified inventory fields will be overwritten to the
       /// time of the
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] or
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// or
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
       /// request.
       ///
       /// If no inventory fields are set in
@@ -305,10 +308,10 @@ namespace Google.Cloud.Retail.V2 {
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
-      /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
+      /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
       /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
       /// and
-      /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+      /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -332,8 +335,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the added place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -357,8 +361,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the removed place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -383,13 +388,15 @@ namespace Google.Cloud.Retail.V2 {
       /// and processed downstream. As a consequence, when a response is returned,
       /// updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be modified using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -412,13 +419,15 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, removals are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be removed using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -784,18 +793,21 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// When inventory is updated with
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct], the
-      /// specified inventory field value(s) will overwrite any existing value(s)
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct],
+      /// the specified inventory field value(s) will overwrite any existing value(s)
       /// while ignoring the last update time for this field. Furthermore, the last
       /// update time for the specified inventory fields will be overwritten to the
       /// time of the
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] or
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// or
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
       /// request.
       ///
       /// If no inventory fields are set in
@@ -807,10 +819,10 @@ namespace Google.Cloud.Retail.V2 {
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
-      /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
+      /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
       /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
       /// and
-      /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+      /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -836,18 +848,21 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// When inventory is updated with
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct], the
-      /// specified inventory field value(s) will overwrite any existing value(s)
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct],
+      /// the specified inventory field value(s) will overwrite any existing value(s)
       /// while ignoring the last update time for this field. Furthermore, the last
       /// update time for the specified inventory fields will be overwritten to the
       /// time of the
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] or
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// or
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
       /// request.
       ///
       /// If no inventory fields are set in
@@ -859,10 +874,10 @@ namespace Google.Cloud.Retail.V2 {
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
-      /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
+      /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
       /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
       /// and
-      /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+      /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -886,18 +901,21 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// When inventory is updated with
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct], the
-      /// specified inventory field value(s) will overwrite any existing value(s)
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct],
+      /// the specified inventory field value(s) will overwrite any existing value(s)
       /// while ignoring the last update time for this field. Furthermore, the last
       /// update time for the specified inventory fields will be overwritten to the
       /// time of the
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] or
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// or
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
       /// request.
       ///
       /// If no inventory fields are set in
@@ -909,10 +927,10 @@ namespace Google.Cloud.Retail.V2 {
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
-      /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
+      /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
       /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
       /// and
-      /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+      /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -938,18 +956,21 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// When inventory is updated with
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct], the
-      /// specified inventory field value(s) will overwrite any existing value(s)
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct],
+      /// the specified inventory field value(s) will overwrite any existing value(s)
       /// while ignoring the last update time for this field. Furthermore, the last
       /// update time for the specified inventory fields will be overwritten to the
       /// time of the
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] or
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// or
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
       /// request.
       ///
       /// If no inventory fields are set in
@@ -961,10 +982,10 @@ namespace Google.Cloud.Retail.V2 {
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
-      /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
+      /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
       /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
       /// and
-      /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+      /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -987,8 +1008,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the added place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1013,8 +1035,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the added place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1037,8 +1060,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the added place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1063,8 +1087,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the added place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1087,8 +1112,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the removed place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1113,8 +1139,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the removed place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1137,8 +1164,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the removed place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1163,8 +1191,9 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, the removed place IDs are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1188,13 +1217,15 @@ namespace Google.Cloud.Retail.V2 {
       /// and processed downstream. As a consequence, when a response is returned,
       /// updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be modified using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1220,13 +1251,15 @@ namespace Google.Cloud.Retail.V2 {
       /// and processed downstream. As a consequence, when a response is returned,
       /// updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be modified using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1250,13 +1283,15 @@ namespace Google.Cloud.Retail.V2 {
       /// and processed downstream. As a consequence, when a response is returned,
       /// updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be modified using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1282,13 +1317,15 @@ namespace Google.Cloud.Retail.V2 {
       /// and processed downstream. As a consequence, when a response is returned,
       /// updates are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be modified using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1310,13 +1347,15 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, removals are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be removed using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1340,13 +1379,15 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, removals are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be removed using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1368,13 +1409,15 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, removals are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be removed using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.
@@ -1398,13 +1441,15 @@ namespace Google.Cloud.Retail.V2 {
       /// enqueued and processed downstream. As a consequence, when a response is
       /// returned, removals are not immediately manifested in the
       /// [Product][google.cloud.retail.v2.Product] queried by
-      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
-      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+      /// or
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// Local inventory information can only be removed using this method.
-      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
-      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
-      /// effect on local inventories.
+      /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+      /// and
+      /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+      /// has no effect on local inventories.
       ///
       /// This feature is only available for users who have Retail Search enabled.
       /// Please enable Retail Search on Cloud Console before using this feature.

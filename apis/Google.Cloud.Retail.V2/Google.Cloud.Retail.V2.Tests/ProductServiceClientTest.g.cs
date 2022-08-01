@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -112,6 +114,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -192,6 +195,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -270,6 +274,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -350,6 +355,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -428,6 +434,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
@@ -508,6 +515,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -584,6 +592,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -662,6 +671,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -738,6 +748,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -816,6 +827,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -892,6 +904,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -970,6 +983,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
@@ -1048,6 +1062,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
@@ -1128,6 +1143,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
@@ -1205,6 +1221,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
@@ -1284,6 +1301,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -1300,6 +1318,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -1317,6 +1336,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -1333,6 +1353,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -1350,6 +1371,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
@@ -1366,6 +1388,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<ProductService.ProductServiceClient> mockGrpcClient = new moq::Mock<ProductService.ProductServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
