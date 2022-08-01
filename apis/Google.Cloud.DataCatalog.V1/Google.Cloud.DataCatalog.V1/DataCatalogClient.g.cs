@@ -1862,10 +1862,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntryGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(EntryGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListEntryGroups(new ListEntryGroupsRequest
             {
-                ParentAsEntryGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1888,10 +1888,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntryGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(EntryGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListEntryGroupsAsync(new ListEntryGroupsRequest
             {
-                ParentAsEntryGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -5044,10 +5044,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Tag CreateTag(TagName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Tag CreateTag(EntryName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTag(new CreateTagRequest
             {
-                ParentAsTagName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsEntryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Tag = gax::GaxPreconditions.CheckNotNull(tag, nameof(tag)),
             }, callSettings);
 
@@ -5079,10 +5079,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Tag> CreateTagAsync(TagName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Tag> CreateTagAsync(EntryName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagAsync(new CreateTagRequest
             {
-                ParentAsTagName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsEntryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Tag = gax::GaxPreconditions.CheckNotNull(tag, nameof(tag)),
             }, callSettings);
 
@@ -5114,7 +5114,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Tag> CreateTagAsync(TagName parent, Tag tag, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Tag> CreateTagAsync(EntryName parent, Tag tag, st::CancellationToken cancellationToken) =>
             CreateTagAsync(parent, tag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

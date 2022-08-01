@@ -654,7 +654,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
             {
-                ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(request);
@@ -702,7 +702,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
             {
-                ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(request);
@@ -748,7 +748,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
 
@@ -793,7 +793,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
 
@@ -834,11 +834,11 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
         /// <summary>Snippet for ListEntryGroups</summary>
         public void ListEntryGroupsResourceNames()
         {
-            // Snippet: ListEntryGroups(EntryGroupName, string, int?, CallSettings)
+            // Snippet: ListEntryGroups(LocationName, string, int?, CallSettings)
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            EntryGroupName parent = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
 
@@ -879,11 +879,11 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
         /// <summary>Snippet for ListEntryGroupsAsync</summary>
         public async Task ListEntryGroupsResourceNamesAsync()
         {
-            // Snippet: ListEntryGroupsAsync(EntryGroupName, string, int?, CallSettings)
+            // Snippet: ListEntryGroupsAsync(LocationName, string, int?, CallSettings)
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            EntryGroupName parent = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
 
@@ -2574,7 +2574,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             // Make the request
@@ -2592,7 +2592,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             // Make the request
@@ -2607,7 +2607,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]/tags/[TAG]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
             Tag response = dataCatalogClient.CreateTag(parent, tag);
@@ -2622,7 +2622,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]/tags/[TAG]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);
@@ -2632,11 +2632,11 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
         /// <summary>Snippet for CreateTag</summary>
         public void CreateTagResourceNames()
         {
-            // Snippet: CreateTag(TagName, Tag, CallSettings)
+            // Snippet: CreateTag(EntryName, Tag, CallSettings)
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            TagName parent = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]");
+            EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             Tag tag = new Tag();
             // Make the request
             Tag response = dataCatalogClient.CreateTag(parent, tag);
@@ -2646,12 +2646,12 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
         /// <summary>Snippet for CreateTagAsync</summary>
         public async Task CreateTagResourceNamesAsync()
         {
-            // Snippet: CreateTagAsync(TagName, Tag, CallSettings)
-            // Additional: CreateTagAsync(TagName, Tag, CancellationToken)
+            // Snippet: CreateTagAsync(EntryName, Tag, CallSettings)
+            // Additional: CreateTagAsync(EntryName, Tag, CancellationToken)
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            TagName parent = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]");
+            EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             Tag tag = new Tag();
             // Make the request
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);

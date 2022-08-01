@@ -32,7 +32,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            TagName parent = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]");
+            EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             Tag tag = new Tag();
             // Make the request
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);

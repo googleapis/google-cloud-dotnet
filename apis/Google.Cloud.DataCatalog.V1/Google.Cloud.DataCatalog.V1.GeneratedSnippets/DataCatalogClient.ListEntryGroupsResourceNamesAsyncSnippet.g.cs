@@ -18,6 +18,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
 {
     // [START datacatalog_v1_generated_DataCatalog_ListEntryGroups_async_flattened_resourceNames]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DataCatalog.V1;
     using System;
     using System.Linq;
@@ -35,7 +36,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            EntryGroupName parent = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
 

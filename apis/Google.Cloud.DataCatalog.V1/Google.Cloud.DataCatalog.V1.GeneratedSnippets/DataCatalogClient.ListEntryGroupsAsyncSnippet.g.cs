@@ -35,7 +35,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
 

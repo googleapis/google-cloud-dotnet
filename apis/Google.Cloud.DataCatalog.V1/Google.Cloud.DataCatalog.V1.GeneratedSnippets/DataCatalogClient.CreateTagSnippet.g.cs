@@ -31,7 +31,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]/tags/[TAG]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
             Tag response = dataCatalogClient.CreateTag(parent, tag);
