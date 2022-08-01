@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void UpdateCatalogRequestObject()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateCatalogRequest request = new UpdateCatalogRequest
             {
                 Catalog = new Catalog(),
@@ -54,6 +56,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task UpdateCatalogRequestObjectAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateCatalogRequest request = new UpdateCatalogRequest
             {
                 Catalog = new Catalog(),
@@ -78,6 +81,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void UpdateCatalog()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateCatalogRequest request = new UpdateCatalogRequest
             {
                 Catalog = new Catalog(),
@@ -100,6 +104,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task UpdateCatalogAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateCatalogRequest request = new UpdateCatalogRequest
             {
                 Catalog = new Catalog(),
@@ -124,6 +129,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void SetDefaultBranchRequestObject()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -142,6 +148,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task SetDefaultBranchRequestObjectAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -161,6 +168,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void SetDefaultBranch()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -176,6 +184,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task SetDefaultBranchAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -192,6 +201,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void SetDefaultBranchResourceNames()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -207,6 +217,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task SetDefaultBranchResourceNamesAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SetDefaultBranchRequest request = new SetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -223,6 +234,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void GetDefaultBranchRequestObject()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -244,6 +256,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task GetDefaultBranchRequestObjectAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -267,6 +280,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void GetDefaultBranch()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -288,6 +302,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task GetDefaultBranchAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -311,6 +326,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public void GetDefaultBranchResourceNames()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -332,6 +348,7 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task GetDefaultBranchResourceNamesAsync()
         {
             moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDefaultBranchRequest request = new GetDefaultBranchRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),

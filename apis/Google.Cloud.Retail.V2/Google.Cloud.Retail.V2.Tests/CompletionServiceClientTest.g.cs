@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +34,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<CompletionService.CompletionServiceClient> mockGrpcClient = new moq::Mock<CompletionService.CompletionServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
@@ -70,6 +72,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<CompletionService.CompletionServiceClient> mockGrpcClient = new moq::Mock<CompletionService.CompletionServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),

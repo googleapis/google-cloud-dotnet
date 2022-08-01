@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,12 +33,15 @@ namespace Google.Cloud.Retail.V2.Tests
         public void PredictRequestObject()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 Placement = "placementb440552a",
                 UserEvent = new UserEvent(),
                 PageSize = -226905851,
+#pragma warning disable CS0612
                 PageToken = "page_tokenf09e5538",
+#pragma warning restore CS0612
                 Filter = "filtere47ac9b2",
                 ValidateOnly = true,
                 Params =
@@ -79,12 +83,15 @@ namespace Google.Cloud.Retail.V2.Tests
         public async stt::Task PredictRequestObjectAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 Placement = "placementb440552a",
                 UserEvent = new UserEvent(),
                 PageSize = -226905851,
+#pragma warning disable CS0612
                 PageToken = "page_tokenf09e5538",
+#pragma warning restore CS0612
                 Filter = "filtere47ac9b2",
                 ValidateOnly = true,
                 Params =
