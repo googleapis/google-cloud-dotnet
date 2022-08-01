@@ -52,6 +52,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -82,6 +83,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -114,6 +116,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -144,6 +147,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -176,6 +180,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -206,6 +211,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -236,6 +242,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -264,6 +271,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -294,6 +302,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -322,6 +331,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -352,6 +362,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -380,6 +391,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -412,6 +424,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -442,6 +455,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -474,6 +488,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -504,6 +519,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -536,6 +552,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
@@ -566,6 +583,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
                 Aws = new AwsProperties(),
+                Azure = new AzureProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
                 CloudResource = new CloudResourceProperties(),
             };
