@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.1.0, released 2022-08-02
+
+### Bug fixes
+
+- **BREAKING CHANGE** Fix datacatalog resource name config ([commit 0c58375](https://github.com/googleapis/google-cloud-dotnet/commit/0c58375c78330939465587655212289d608ef3ea))
+
+This breaking change affects the `CreateTag` and `ListEntryGroups`
+operations. In both cases, the resource name type being used was
+inappropriate, and would have led to invalid requests. As these
+methods could not have been used successfully in their current form,
+we're releasing this bug fix as a minor version bump instead of a
+major one.
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
