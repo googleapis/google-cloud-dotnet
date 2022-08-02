@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -787,7 +787,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetCurrentTraceId()
         {
             var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
-            Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
+            Assert.Equal(TraceId, tracer.GetCurrentTraceId());
         }
 
         [Fact]
@@ -810,7 +810,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             ulong parentSpanId = 54321;
             var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId, parentSpanId);
-            Assert.Equal(tracer.GetCurrentSpanId(), parentSpanId);
+            Assert.Equal(parentSpanId, tracer.GetCurrentSpanId());
         }
     }
 }

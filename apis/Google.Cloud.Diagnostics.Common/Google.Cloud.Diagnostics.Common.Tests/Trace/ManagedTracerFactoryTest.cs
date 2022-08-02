@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -93,8 +93,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             IManagedTracer tracer = s_tracerFactoryNoLimit.CreateTracer(s_headerTrue);
             Assert.IsType<SimpleManagedTracer>(tracer);
-            Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
-            Assert.Equal(tracer.GetCurrentSpanId(), SpanId);
+            Assert.Equal(TraceId, tracer.GetCurrentTraceId());
+            Assert.Equal(SpanId, tracer.GetCurrentSpanId());
         }
 
         private static ManagedTracerFactory CreateFactory(ITraceOptionsFactory optionsFactory) => 
