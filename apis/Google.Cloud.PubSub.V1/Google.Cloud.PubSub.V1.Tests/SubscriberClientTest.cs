@@ -320,11 +320,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
 
                 // Simulate Ack failure if _ackModifyAckDeadlineAction is specified.
-                // All gRPC exceptions from this method are fire and forget, so no exception should propagate to the caller.
+                // For non-exactly once delivery subscriptions, all gRPC exceptions from this method are fire and forget, so no exception should propagate to the caller.
+                // For exactly-once delivery subscriptions, the permanent exception should be propagated to the caller.
                 // Non-gRPC exceptions will propagate to the caller.
                 if (_ackModifyAckDeadlineAction?.Exception != null && _ackModifyAckDeadlineAction.OnAck)
                 {
-                    MayBeThrowException(ackIds);
+                    MaybeThrowException(ackIds);
                 }
 
                 lock (_lock)
@@ -341,11 +342,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
 
                 // Simulate ModifyAckDeadline failure if _ackModifyAckDeadlineAction is specified.
-                // All gRPC exceptions from this method are fire and forget, so no exceptions should propagate to the caller.
+                // For non-exactly once delivery subscriptions, all gRPC exceptions from this method are fire and forget, so no exception should propagate to the caller.
+                // For exactly-once delivery subscriptions, the permanent exception should be propagated to the caller for nacks but not for extends.
                 // Non-gRPC exceptions will propagate to the caller.
                 if (_ackModifyAckDeadlineAction?.Exception != null && _ackModifyAckDeadlineAction.OnModifyAckDeadline)
                 {
-                    MayBeThrowException(ackIds);
+                    MaybeThrowException(ackIds);
                 }
 
                 lock (_lock)
@@ -358,23 +360,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             /// <summary>
             /// This method does the following:
             /// <list type="bullet">
-            /// <item> Checks if subscription under test is exactly once or not.</item>
-            /// <item> If it's not exactly once, it will always throw the specified exception for the specified number of times as <c>_numberOfAckModifyAckDeadlineFailures</c>.</item>
-            /// <item> If it's exactly once, it first checks if the entire request has failed permanently based on <c>StatusCode</c>. If yes, it will set the flag to throw the specified exception.</item>
+            /// <item> Checks if subscription under test is exactly once delivery enabled or not.</item>
+            /// <item> If it's not exactly once delivery, it will always throw the specified exception for the specified number of times as <c>_numberOfAckModifyAckDeadlineFailures</c>.</item>
+            /// <item> If it's exactly once delivery, it first checks if the entire request is retryable and return without throwing an exception.
+            /// Otherwise it checks if the request has failed permanently based on <c>StatusCode</c>. If yes, it will set the flag to throw the specified exception.</item>
             /// <item> If the entire request has not failed permanently, it will check the error metadata to see if it contains permanent error for the given ackId. If yes, it will set the flag to throw the specified exception.</item>
             /// <item> If the flag to throw the specified exception is set and the specified number of exceptions are not thrown already, the specified exception is thrown, else exception is not thrown.</item>
             /// </list>
             /// </summary>
             /// <param name="ackIds">The list of acknowledgement ids being processed.</param>
-            private void MayBeThrowException(IEnumerable<string> ackIds)
+            private void MaybeThrowException(IEnumerable<string> ackIds)
             {
                 // For non-exactly once subscriptions, we always throw exception.
                 bool throwException = true;
                 if (_isExactlyOnce)
                 {
-                    // If it's exactly once, check if we have RpcException.
+                    // If it's exactly once delivery, check if we have RpcException.
                     if (_ackModifyAckDeadlineAction.Exception is RpcException rpcException)
                     {
+                        if (AckError.ShouldRetryAll(rpcException))
+                        {
+                            return;
+                        }
+
                         // Check if entire request failed with permanent error.
                         if (rpcException.StatusCode is StatusCode.FailedPrecondition or
                                 StatusCode.InvalidArgument or
@@ -468,19 +476,24 @@ namespace Google.Cloud.PubSub.V1.Tests
         /// </remarks>
         private static RpcException GetExactlyOnceMixedException(Rpc.ErrorInfo errorInfo = null)
         {
-            if (errorInfo == null)
+            // If caller has not initialized and sent the parameter, do it here (mostly for reuse in tests).
+            errorInfo ??= new Rpc.ErrorInfo
             {
-                // If caller has not initialized and sent the parameter, do it here (mostly for reuse in tests). 
-                errorInfo = new Rpc.ErrorInfo { Domain = "pubsub.googleapis.com", Reason = "broken" };
-                // Message 2 is temporary failure, 3 is permanent failure.
-                errorInfo.Metadata.Add("2", "TRANSIENT_FAILURE_UNORDERED_ACK_ID");
-                errorInfo.Metadata.Add("3", "PERMANENT_FAILURE_INVALID_ACK_ID");
-            }
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata =
+                {
+                    // Message 2 is temporary failure, 3 is permanent failure.
+                    { "2", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "3", "PERMANENT_FAILURE_INVALID_ACK_ID" }
+                }
+            };
 
             var status = new Google.Rpc.Status { Details = { Any.Pack(errorInfo) } };
             var metadata = new Metadata { { "grpc-status-details-bin", status.ToByteArray() } };
             return new RpcException(new Status(StatusCode.OK, ""), metadata);
         }
+
         [Theory, CombinatorialData]
         public void ImmediateStop(
             [CombinatorialValues(false, true)] bool hardStop)
@@ -1254,11 +1267,10 @@ namespace Google.Cloud.PubSub.V1.Tests
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
-                await Task.FromResult(ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack));
+                    await Task.FromResult(ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack));
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
                 // For Ack/Nack, exception should be thrown.
-                Assert.True(ex is not null);
                 Assert.IsType<AcknowledgementException>(ex);
                 Assert.Equal(1, fake.ClientShutdowns.Count);
             });
@@ -1298,7 +1310,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Theory, CombinatorialData]
-        public void ExactlyOnce_AckNack_MixedFault([CombinatorialValues(true, false)] bool ackOrNack)
+        public void ExactlyOnceDelivery_AckNack_MixedFault([CombinatorialValues(true, false)] bool ackOrNack)
         {
             var msgs = new[]
             {
@@ -1324,18 +1336,17 @@ namespace Google.Cloud.PubSub.V1.Tests
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
-                await Task.FromResult(ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack));
+                    await Task.FromResult(ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack));
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
                 // For acks or nacks, exception should be thrown for only permanent failure.
-                Assert.True(ex is not null);
                 Assert.IsType<AcknowledgementException>(ex);
                 Assert.Equal(AcknowledgementStatus.InvalidAckId, ex.As<AcknowledgementException>().Status);
             });
         }
 
         [Fact]
-        public void ExactlyOnce_Extends_MixedFault()
+        public void ExactlyOnceDelivery_Extends_MixedFault()
         {
             var msgs = new[]
             {
@@ -1363,7 +1374,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
                 // For extends, exception shouldn't be thrown.
-                Assert.True(ex is null);
+                Assert.Null(ex);
             });
         }
     }
