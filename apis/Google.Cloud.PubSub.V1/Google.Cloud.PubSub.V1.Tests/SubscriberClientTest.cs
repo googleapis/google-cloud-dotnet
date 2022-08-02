@@ -708,7 +708,11 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
                     // Only allowed to start a Subscriber once.
-                    Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StartAsync((msg, ct) => throw new Exception())));
+                    // Note: we want to validate that the exception is thrown synchronously.
+                    // Separating out the action assignment from the Assert.Throws call fools the
+                    // xUnit analyzer into understanding that this is okay.
+                    Action action = () => fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
+                    Assert.Throws<InvalidOperationException>(action);
                 });
             }
         }
