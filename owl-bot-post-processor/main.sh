@@ -123,12 +123,11 @@ copy_one_api() {
     fi
   fi
 
-  # Assuming we've got a googleapis commit to work from, check for
-  # any updated mixins in the API.
-  if [[ $GOOGLEAPIS_COMMIT != "" ]]
-  then
-    ./prepare-release.sh update-mixins $PACKAGE $GOOGLEAPIS_COMMIT
-  fi
+  # Check for any updated mixins in the API.
+  # We use the HEAD API index rather than $GOOGLEAPIS_COMMIT
+  # as the latter is the commit at which the *API* changed,
+  # and the API *index* changes shortly afterwards.
+  ./prepare-release.sh update-mixins $PACKAGE HEAD
 }
 
 # Avoid .NET complaining about submodules being missing
