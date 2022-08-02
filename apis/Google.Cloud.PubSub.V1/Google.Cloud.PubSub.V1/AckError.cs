@@ -108,7 +108,7 @@ internal sealed class AckError
         // and return:
         // the temporary errors in temporaryErrors collection and
         // the permanent errors in permanentErrors collection.
-        // For exactly once, the metadata of the rpcException contains the error details. A sample metadata is shown below:
+        // For exactly once delivery, the metadata of the rpcException contains the error details. A sample metadata is shown below:
         // {
         //    "ack_id_1": "PERMANENT_FAILURE_INVALID_ACK_ID",
         //    "ack_id_2": "PERMANENT_FAILURE_INVALID_ACK_ID",
@@ -127,7 +127,7 @@ internal sealed class AckError
         {
             // Now, if temporary or permanent error messages are *not* present, it means the entire request has failed with a permanent error.
             // It may be due to a gRPC error like a failed precondition or a permission denied error or other permanent error.
-            return new AckError(temporaryErrors, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
+            return new AckError(Enumerable.Empty<KeyValuePair<string, string>>(), ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
         }
     }
 

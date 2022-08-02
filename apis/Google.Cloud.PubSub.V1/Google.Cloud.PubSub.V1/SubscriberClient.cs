@@ -128,7 +128,7 @@ namespace Google.Cloud.PubSub.V1
             /// This is usually only used for testing.
             /// </summary>
             /// <remarks>
-            /// This is used only in exactly once flow as we need to retry temporary failures.
+            /// This is used only in exactly once delivery flow as we need to retry temporary failures.
             /// </remarks>
             public IClock Clock { get; set; }
 
@@ -270,9 +270,9 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
         /// <summary>
-        /// The minimum message acknowledgement extension window of 60 seconds for exactly once subscriptions.
+        /// The minimum message acknowledgement extension window of 60 seconds for exactly once delivery subscriptions.
         /// </summary>
-        public static TimeSpan MinimumAckExtensionWindowForExactlyOnce { get; } = TimeSpan.FromSeconds(60);
+        public static TimeSpan MinimumAckExtensionWindowForExactlyOnceDelivery { get; } = TimeSpan.FromSeconds(60);
 
         /// <summary>
         /// The default message ACKnowledgement extension window of 15 seconds.
@@ -428,12 +428,12 @@ namespace Google.Cloud.PubSub.V1
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
             var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-            var autoExtendIntervalForExactlyOnce = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnce;
-            // For exactly once subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
+            var autoExtendIntervalForExactlyOnceDelivery = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnceDelivery;
+            // For exactly once delivery subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
             // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
             // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
             _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
-            _autoExtendIntervalForExactlyOnce = TimeSpan.FromTicks(Math.Max(autoExtendIntervalForExactlyOnce.Ticks, MinimumLeaseExtensionDelay.Ticks));
+            _autoExtendIntervalForExactlyOnceDelivery = TimeSpan.FromTicks(Math.Max(autoExtendIntervalForExactlyOnceDelivery.Ticks, MinimumLeaseExtensionDelay.Ticks));
             _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
@@ -447,8 +447,8 @@ namespace Google.Cloud.PubSub.V1
         private readonly object _lock = new object();
         private readonly SubscriberServiceApiClient[] _clients;
         private readonly Func<Task> _shutdown;
-        private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends for non-exactly once subscriptions.
-        private readonly TimeSpan _autoExtendIntervalForExactlyOnce; // Interval between message lease auto-extends for exactly once subscriptions.
+        private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends for non-exactly once delivery subscriptions.
+        private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Interval between message lease auto-extends for exactly once delivery subscriptions.
         private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
         private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
         private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
@@ -896,12 +896,12 @@ namespace Google.Cloud.PubSub.V1
             private readonly struct RetryInfo
             {
                 /// <summary>
-                /// Gets the first time of failure in UTC when the Acknowledge/ModifyAcDeadline RPC call failed with a temporary error for a given message id.
+                /// Gets the first time of failure in UTC when the Acknowledge/ModifyAckDeadline RPC call failed with a temporary error for a given message id.
                 /// </summary>
                 internal DateTime FirstTimeOfFailureInUtc { get; }
 
                 /// <summary>
-                /// Gets the latest backoff that was used to retry Acknowledge/ModifyAcDeadline RPC call.
+                /// Gets the latest backoff that was used to retry Acknowledge/ModifyAckDeadline RPC call.
                 /// </summary>
                 internal TimeSpan? Backoff { get; }
 
@@ -937,7 +937,7 @@ namespace Google.Cloud.PubSub.V1
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
                 _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
                 _autoExtendInterval = subscriber._autoExtendInterval;
-                _autoExtendIntervalForExactlyOnce = subscriber._autoExtendIntervalForExactlyOnce;
+                _autoExtendIntervalForExactlyOnceDelivery = subscriber._autoExtendIntervalForExactlyOnceDelivery;
                 _maxExtensionDuration = subscriber._maxExtensionDuration;
                 _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
                 _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
@@ -960,8 +960,8 @@ namespace Google.Cloud.PubSub.V1
             private readonly CancellationTokenSource _softStopCts;
             private readonly SubscriptionName _subscriptionName;
             private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
-            private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends for non-exactly once subscriptions.
-            private readonly TimeSpan _autoExtendIntervalForExactlyOnce; // Delay between auto-extends for exactly once subscriptions.
+            private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends for non-exactly once delivery subscriptions.
+            private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Delay between auto-extends for exactly once delivery subscriptions.
             private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
             private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
             private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
@@ -987,7 +987,7 @@ namespace Google.Cloud.PubSub.V1
 
             // This dictionary will only have ids that can be retried for temporary errors while calling Acknowledgement or ModifyAckDeadline RPCs.
             // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
-            // which is a requirement for exactly once subscription.
+            // which is a requirement for exactly once delivery subscription.
             private readonly ConcurrentDictionary<string, RetryInfo> _retryableIds = new ConcurrentDictionary<string, RetryInfo>();
 
             private static readonly RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.PubSub.V1
                         _eventPush.Set();
                         // Some ids still exist, schedule another extension.
                         // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                        Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendIntervalForExactlyOnce : _autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                        Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendIntervalForExactlyOnceDelivery : _autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                         // Increment _extendThrottles.
                         _extendThrottleHigh += 1;
                         Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
@@ -1430,8 +1430,8 @@ namespace Google.Cloud.PubSub.V1
 
             /// <summary>
             /// This method is called when the acknowledgement request completes.
-            /// This method handles the response from an acknowledgement request for exactly once subscriptions only.
-            /// For non-exactly once subscriptions, <see cref="HandleAckResponse(Task, List{string}, List{string}, List{TimedId})"/> is called.
+            /// This method handles the response from an acknowledgement request for exactly once delivery subscriptions only.
+            /// For non-exactly once delivery subscriptions, <see cref="HandleAckResponse(Task, List{string}, List{string}, List{TimedId})"/> is called.
             /// </summary>
             /// <param name="writeTask">The task containing the response of Acknowledge/ModifyAckDeadline RPC.</param>
             /// <param name="ackIds">The list of ids that were sent to the Acknowledge RPC for acknowledgement
@@ -1441,11 +1441,11 @@ namespace Google.Cloud.PubSub.V1
             /// <param name="extendIds">The list of ids that were sent to the ModifyAckDeadline RPC to modify their ack deadline.</param>
             /// <remarks>
             /// Only one of ackIds, nackIds and extendIds will be non-null and based on that we determine if we are handling acks, nacks or extends.
-            /// This method is used for exactly once subscriptions only. To keep the logic of exactly once subscription in one place,
-            /// this method has a few local methods that are used only in exactly once flow and not in non-exactly once flow, so the method
+            /// This method is used for exactly once delivery subscriptions only. To keep the logic of exactly once delivery subscription in one place,
+            /// this method has a few local methods that are used only in exactly once delivery flow and not in non-exactly once delivery flow, so the method
             /// is pretty long.
             /// </remarks>
-            private void HandleAckResponseForExactlyOnce(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
+            private void HandleAckResponseForExactlyOnceDelivery(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
             {
                 _concurrentPushCount -= 1;
                 _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
@@ -1454,6 +1454,7 @@ namespace Google.Cloud.PubSub.V1
                 bool hasNackIds = nackIds?.Count > 0;
                 bool hasExtendIds = extendIds?.Count > 0;
                 // In one call, we'll have one of acks or nacks or extends, not all.
+                GaxPreconditions.CheckArgument((hasAckIds ? 1 : 0) + (hasNackIds ? 1 : 0) + (hasExtendIds ? 1 : 0) <= 1, nameof(ackIds), "At most one of ackIds, nackIds or extendIds should be non-empty.");
                 var ids = hasAckIds ? ackIds
                     : hasNackIds ? nackIds : extendIds.Select(j => j.Id);
 
@@ -1469,14 +1470,12 @@ namespace Google.Cloud.PubSub.V1
 
                         if (hasAckIds)
                         {
-                            // ack = true implies acks.
-                            RetryAcksAndNacks(true, ackError);
+                            RetryAcks(ackError);
                         }
 
                         if (hasNackIds)
                         {
-                            // ack = false implies nacks.
-                            RetryAcksAndNacks(false, ackError);
+                            RetryNacks(ackError);
                         }
 
                         if (hasExtendIds)
@@ -1500,9 +1499,21 @@ namespace Google.Cloud.PubSub.V1
                 StartPush();
                 return;
 
-                // All methods below are local methods applicable to exactly once subscription only.
-                // They are not used in non-exactly once subscription.
-                
+                // All methods below are local methods applicable to exactly once delivery subscriptions only.
+                // They are not used in non-exactly once delivery subscriptions.
+
+                // This method schedules the retry of ackIds with temporary errors and
+                // handles the permanent errors. Permanent errors are propagated to the caller for acks.
+                void RetryAcks(AckError ackError) =>
+                    // ack = true implies acks.
+                    RetryAcksAndNacks(true, ackError);
+
+                // This method schedules the retry of nackIds with temporary errors and
+                // handles the permanent errors. Permanent errors are propagated to the caller for nacks.
+                void RetryNacks(AckError ackError) =>
+                    // ack = false implies nacks.
+                    RetryAcksAndNacks(false, ackError);
+
                 // This method schedules the retry of ackIds/nackIds with temporary errors and
                 // handles the permanent errors. Permanent errors are propagated to the caller for acks/nacks.
                 void RetryAcksAndNacks(bool ack, AckError ackError)
@@ -1645,7 +1656,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 if (_exactlyOnceDeliveryEnabled)
                 {
-                    HandleAckResponseForExactlyOnce(writeTask, ackIds, nackIds, extendIds);
+                    HandleAckResponseForExactlyOnceDelivery(writeTask, ackIds, nackIds, extendIds);
                     return;
                 }
 
