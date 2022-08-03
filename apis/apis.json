@@ -4043,7 +4043,7 @@
     },
     {
       "id": "Google.Geo.Type",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
       "description": "Version-agnostic types for Geo APIs.",
