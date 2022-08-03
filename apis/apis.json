@@ -4119,7 +4119,7 @@
     },
     {
       "id": "Google.Maps.Routing.V2",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Maps Routing",
       "productUrl": "https://developers.google.com/maps/documentation/routes_preferred",
@@ -4130,7 +4130,7 @@
         "geo"
       ],
       "dependencies": {
-        "Google.Geo.Type": "project"
+        "Google.Geo.Type": "1.0.0-beta01"
       },
       "generator": "micro",
       "protoPath": "google/maps/routing/v2",

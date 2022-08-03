@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Maps.Routing.V2</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Geo.Type</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
