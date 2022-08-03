@@ -36,7 +36,7 @@ namespace Google.Cloud.PubSub.V1
     /// A PubSub subscriber that is associated with a specific <see cref="SubscriptionName"/>.
     /// </summary>
     /// <remarks>
-    /// <para>To receive messages, the <see cref="StartAsync"/> method must be called,
+    /// <para>To receive messages, the <see cref="StartAsync(SubscriptionHandler)"/> method must be called,
     /// with a suitable message handler.</para>
     /// <para>The message handler <see cref="Reply"/> states whether to acknowledge the message;
     /// if acknowledged then (under normal conditions) it will not be received on this subscription again.</para>
@@ -369,7 +369,17 @@ namespace Google.Cloud.PubSub.V1
         /// ACKnowledge this message (implying it will be received again). If this function throws any Exception, then
         /// it behaves as if it returned <see cref="Reply.Nack"/>.</param>
         /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
-        public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) => throw new NotImplementedException();
+        public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) =>
+            StartAsync(new SimpleSubscriptionHandler(handlerAsync));
+
+        /// <summary>
+        /// Starts receiving messages. The returned <see cref="Task"/> completes when either <see cref="StopAsync(CancellationToken)"/> is called
+        /// or if an unrecoverable fault occurs. See <see cref="StopAsync(CancellationToken)"/> for more details.
+        /// This method cannot be called more than once per <see cref="SubscriberClient"/> instance.
+        /// </summary>
+        /// <param name="handler">The handler that is passed all received messages and acknowledgement results.</param>
+        /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
+        public virtual Task StartAsync(SubscriptionHandler handler) => throw new NotImplementedException();
 
         /// <summary>
         /// Stop this <see cref="SubscriberClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
@@ -472,7 +482,7 @@ namespace Google.Cloud.PubSub.V1
         public override SubscriptionName SubscriptionName { get; }
 
         /// <inheritdoc />
-        public override Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync)
+        public override Task StartAsync(SubscriptionHandler handler)
         {
             lock (_lock)
             {
@@ -493,7 +503,7 @@ namespace Google.Cloud.PubSub.V1
             // Start all subscribers
             var subscriberTasks = _clients.Select(client =>
             {
-                var singleChannel = new SingleChannel(this, client, handlerAsync, flow, _useLegacyFlowControl, registerTask);
+                var singleChannel = new SingleChannel(this, client, handler, flow, _useLegacyFlowControl, registerTask);
                 return _taskHelper.Run(() => singleChannel.StartAsync());
             }).ToArray();
             // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
@@ -920,7 +930,7 @@ namespace Google.Cloud.PubSub.V1
             }
 
             internal SingleChannel(SubscriberClientImpl subscriber,
-                SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
+                SubscriberServiceApiClient client, SubscriptionHandler handler,
                 Flow flow, bool useLegacyFlowControl,
                 Action<Task> registerTaskFn)
             {
@@ -929,7 +939,7 @@ namespace Google.Cloud.PubSub.V1
                 _scheduler = subscriber._scheduler;
                 _clock = subscriber._clock;
                 _client = client;
-                _handlerAsync = handlerAsync;
+                _handler = handler;
                 _hardStopCts = subscriber._globalHardStopCts;
                 _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                 _softStopCts = subscriber._globalSoftStopCts;
@@ -954,7 +964,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly IScheduler _scheduler;
             private readonly IClock _clock;
             private readonly SubscriberServiceApiClient _client;
-            private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
+            private readonly SubscriptionHandler _handler;
             private readonly CancellationTokenSource _hardStopCts;
             private readonly CancellationTokenSource _pushStopCts;
             private readonly CancellationTokenSource _softStopCts;
@@ -1243,7 +1253,7 @@ namespace Google.Cloud.PubSub.V1
                             msg.Message.Attributes[DeliveryAttemptAttrKey] = msg.DeliveryAttempt.ToString(CultureInfo.InvariantCulture);
                         }
                         // Call user message handler
-                        var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                        var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handler.HandleMessage(msg.Message, _hardStopCts.Token), Reply.Nack);
                         // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
                         lock (msgIds)
                         {
@@ -1643,6 +1653,14 @@ namespace Google.Cloud.PubSub.V1
 
             private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
             {
+                // TODO: Call _handler.HandleAckResponses or _handler.HandleNackResponses here. Open questions:
+                // - Do we need something similar for "extend" operations?
+                // - Should we allow permanent failured to be ignored (i.e. keep the subscription going)?
+                // - How should the client indicate how they want to proceed? (Throw an exception to fail?)
+                // - Should the methods be called before or after the rest of the logic here?
+                // - How do we indicate a timeout? We could have a temporary failure that isn't actually retried
+                //   due to the backoff...
+
                 if (_exactlyOnceDeliveryEnabled)
                 {
                     HandleAckResponseForExactlyOnce(writeTask, ackIds, nackIds, extendIds);
