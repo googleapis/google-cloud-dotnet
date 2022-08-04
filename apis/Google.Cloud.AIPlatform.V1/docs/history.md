@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.2.0, released 2022-08-04
+
+### New features
+
+- Making network arg optional in aiplatform v1 custom_job.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+- Added SHARED_RESOURCES enum to aiplatform v1 model.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+
+### Documentation improvements
+
+- Doc edits to aiplatform v1 dataset_service.proto, job_service.proto, model_service.proto, pipeline_service.proto, saved_query.proto, study.proto, types.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### New features
