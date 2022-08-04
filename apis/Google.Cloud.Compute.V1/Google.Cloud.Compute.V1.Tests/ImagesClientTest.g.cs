@@ -59,6 +59,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -128,6 +129,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -199,6 +201,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -268,6 +271,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -339,6 +343,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -408,6 +413,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -479,6 +485,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
@@ -548,6 +555,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
                 ShieldedInstanceInitialState = new InitialStateConfig(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
