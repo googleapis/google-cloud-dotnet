@@ -872,11 +872,11 @@ namespace Google.Cloud.DataCatalog.V1
     public partial class ListEntryGroupsRequest
     {
         /// <summary>
-        /// <see cref="EntryGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public EntryGroupName ParentAsEntryGroupName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : EntryGroupName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -979,10 +979,10 @@ namespace Google.Cloud.DataCatalog.V1
 
     public partial class CreateTagRequest
     {
-        /// <summary><see cref="TagName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TagName ParentAsTagName
+        /// <summary><see cref="EntryName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EntryName ParentAsEntryName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TagName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : EntryName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

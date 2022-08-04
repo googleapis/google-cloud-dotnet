@@ -5,6 +5,7 @@
   ],
   "ignorePaths": [
     "apis/Google.Analytics.Admin.V1Alpha/Google.Analytics.Admin.V1Alpha/**",
+    "apis/Google.Analytics.Admin.V1Beta/Google.Analytics.Admin.V1Beta/**",
     "apis/Google.Analytics.Data.V1Beta/Google.Analytics.Data.V1Beta/**",
     "apis/Google.Apps.Script.Type/Google.Apps.Script.Type/**",
     "apis/Google.Area120.Tables.V1Alpha1/Google.Area120.Tables.V1Alpha1/**",
@@ -199,9 +200,11 @@
     "apis/Google.Cloud.Workflows.Executions.V1Beta/Google.Cloud.Workflows.Executions.V1Beta/**",
     "apis/Google.Cloud.Workflows.V1/Google.Cloud.Workflows.V1/**",
     "apis/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta/**",
+    "apis/Google.Geo.Type/Google.Geo.Type/**",
     "apis/Google.Identity.AccessContextManager.Type/Google.Identity.AccessContextManager.Type/**",
     "apis/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1/**",
     "apis/Google.LongRunning/Google.LongRunning/**",
+    "apis/Google.Maps.Routing.V2/Google.Maps.Routing.V2/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
   "ignoreDeps": [

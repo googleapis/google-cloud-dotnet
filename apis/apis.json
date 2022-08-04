@@ -17,6 +17,22 @@
       "serviceConfigFile": "analyticsadmin_v1alpha.yaml"
     },
     {
+      "id": "Google.Analytics.Admin.V1Beta",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Google Analytics Admin",
+      "productUrl": "https://developers.google.com/analytics",
+      "description": "Recommended Google client library to access the Analytics Admin API (v1beta)",
+      "tags": [
+        "analytics"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/analytics/admin/v1beta",
+      "shortName": "analyticsadmin",
+      "serviceConfigFile": "analyticsadmin.yaml"
+    },
+    {
       "id": "Google.Analytics.Data.V1Beta",
       "version": "2.0.0-beta01",
       "type": "grpc",
@@ -985,7 +1001,7 @@
       "protoPath": "google/cloud/datacatalog/v1",
       "productName": "Data Catalog",
       "productUrl": "https://cloud.google.com/data-catalog/docs",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Data Catalog API. Data Catalog is a fully managed and highly scalable data discovery and metadata management service.",
       "tags": [
@@ -2967,6 +2983,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -4025,6 +4042,21 @@
       "serviceConfigFile": "workflows_v1beta.yaml"
     },
     {
+      "id": "Google.Geo.Type",
+      "version": "1.0.0-beta01",
+      "targetFrameworks": "netstandard2.1;net462",
+      "type": "other",
+      "description": "Version-agnostic types for Geo APIs.",
+      "tags": [
+        "geo"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.6.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/geo/type"
+    },
+    {
       "id": "Google.Identity.AccessContextManager.Type",
       "packageOwner": "google-cloud",
       "generator": "proto",
@@ -4084,6 +4116,26 @@
       },
       "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml"
+    },
+    {
+      "id": "Google.Maps.Routing.V2",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Maps Routing",
+      "productUrl": "https://developers.google.com/maps/documentation/routes_preferred",
+      "description": "Recommended Google client library to access the Google Maps Routes Preferred API.",
+      "tags": [
+        "maps",
+        "routes",
+        "geo"
+      ],
+      "dependencies": {
+        "Google.Geo.Type": "1.0.0-beta01"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/routing/v2",
+      "shortName": "routes",
+      "serviceConfigFile": "routes_v2.yaml"
     },
     {
       "id": "Grafeas.V1",

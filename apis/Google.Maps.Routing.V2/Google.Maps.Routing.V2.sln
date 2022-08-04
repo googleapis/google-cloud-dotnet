@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.Routing.V2", "Google.Maps.Routing.V2\Google.Maps.Routing.V2.csproj", "{CC9906BB-4742-45BE-96D0-430794C6AB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Geo.Type", "..\Google.Geo.Type\Google.Geo.Type\Google.Geo.Type.csproj", "{85E875F3-342E-49D4-A78D-403EA5F7DAFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.Routing.V2.GeneratedSnippets", "Google.Maps.Routing.V2.GeneratedSnippets\Google.Maps.Routing.V2.GeneratedSnippets.csproj", "{72FF15A0-87B7-4D5E-8B65-E6319064866E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{1FCB9D24-CFCE-4168-AF05-51B695ECD6B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.Routing.V2.Snippets", "Google.Maps.Routing.V2.Snippets\Google.Maps.Routing.V2.Snippets.csproj", "{B91D0541-57A0-41AC-B639-08E6CB495A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.Routing.V2.Tests", "Google.Maps.Routing.V2.Tests\Google.Maps.Routing.V2.Tests.csproj", "{37DA7DD2-020B-44DF-A3F8-D7C5D7080C1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9906BB-4742-45BE-96D0-430794C6AB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9906BB-4742-45BE-96D0-430794C6AB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9906BB-4742-45BE-96D0-430794C6AB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9906BB-4742-45BE-96D0-430794C6AB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E875F3-342E-49D4-A78D-403EA5F7DAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E875F3-342E-49D4-A78D-403EA5F7DAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E875F3-342E-49D4-A78D-403EA5F7DAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E875F3-342E-49D4-A78D-403EA5F7DAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FF15A0-87B7-4D5E-8B65-E6319064866E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FF15A0-87B7-4D5E-8B65-E6319064866E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FF15A0-87B7-4D5E-8B65-E6319064866E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FF15A0-87B7-4D5E-8B65-E6319064866E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FCB9D24-CFCE-4168-AF05-51B695ECD6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCB9D24-CFCE-4168-AF05-51B695ECD6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCB9D24-CFCE-4168-AF05-51B695ECD6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCB9D24-CFCE-4168-AF05-51B695ECD6B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91D0541-57A0-41AC-B639-08E6CB495A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91D0541-57A0-41AC-B639-08E6CB495A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91D0541-57A0-41AC-B639-08E6CB495A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91D0541-57A0-41AC-B639-08E6CB495A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DA7DD2-020B-44DF-A3F8-D7C5D7080C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DA7DD2-020B-44DF-A3F8-D7C5D7080C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DA7DD2-020B-44DF-A3F8-D7C5D7080C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DA7DD2-020B-44DF-A3F8-D7C5D7080C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

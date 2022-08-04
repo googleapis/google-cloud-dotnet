@@ -3294,7 +3294,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3324,7 +3324,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3356,7 +3356,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3386,7 +3386,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3418,7 +3418,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3437,7 +3437,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null, null);
-            Tag response = client.CreateTag(request.ParentAsTagName, request.Tag);
+            Tag response = client.CreateTag(request.ParentAsEntryName, request.Tag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3448,7 +3448,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
@@ -3467,9 +3467,9 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null, null);
-            Tag responseCallSettings = await client.CreateTagAsync(request.ParentAsTagName, request.Tag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            Tag responseCallSettings = await client.CreateTagAsync(request.ParentAsEntryName, request.Tag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Tag responseCancellationToken = await client.CreateTagAsync(request.ParentAsTagName, request.Tag, st::CancellationToken.None);
+            Tag responseCancellationToken = await client.CreateTagAsync(request.ParentAsEntryName, request.Tag, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

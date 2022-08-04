@@ -33,7 +33,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
 

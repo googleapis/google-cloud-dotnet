@@ -27,39 +27,42 @@ namespace Google.Cloud.Retail.V2 {
             "Ci9nb29nbGUvY2xvdWQvcmV0YWlsL3YyL3ByZWRpY3Rpb25fc2VydmljZS5w",
             "cm90bxIWZ29vZ2xlLmNsb3VkLnJldGFpbC52MhocZ29vZ2xlL2FwaS9hbm5v",
             "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
-            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aJ2dvb2dsZS9jbG91ZC9yZXRh",
-            "aWwvdjIvdXNlcl9ldmVudC5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
-            "dC5wcm90byKwAwoOUHJlZGljdFJlcXVlc3QSFgoJcGxhY2VtZW50GAEgASgJ",
-            "QgPgQQISOgoKdXNlcl9ldmVudBgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRh",
-            "aWwudjIuVXNlckV2ZW50QgPgQQISEQoJcGFnZV9zaXplGAMgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YBCABKAkSDgoGZmlsdGVyGAUgASgJEhUKDXZhbGlkYXRlX29u",
-            "bHkYBiABKAgSQgoGcGFyYW1zGAcgAygLMjIuZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5QcmVkaWN0UmVxdWVzdC5QYXJhbXNFbnRyeRJCCgZsYWJlbHMYCCAD",
-            "KAsyMi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByZWRpY3RSZXF1ZXN0Lkxh",
-            "YmVsc0VudHJ5GkUKC1BhcmFtc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1",
-            "ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLnAgoPUHJl",
-            "ZGljdFJlc3BvbnNlEkkKB3Jlc3VsdHMYASADKAsyOC5nb29nbGUuY2xvdWQu",
-            "cmV0YWlsLnYyLlByZWRpY3RSZXNwb25zZS5QcmVkaWN0aW9uUmVzdWx0EhkK",
-            "EWF0dHJpYnV0aW9uX3Rva2VuGAIgASgJEhMKC21pc3NpbmdfaWRzGAMgAygJ",
-            "EhUKDXZhbGlkYXRlX29ubHkYBCABKAgawQEKEFByZWRpY3Rpb25SZXN1bHQS",
-            "CgoCaWQYASABKAkSWAoIbWV0YWRhdGEYAiADKAsyRi5nb29nbGUuY2xvdWQu",
-            "cmV0YWlsLnYyLlByZWRpY3RSZXNwb25zZS5QcmVkaWN0aW9uUmVzdWx0Lk1l",
-            "dGFkYXRhRW50cnkaRwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSJQoF",
-            "dmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBMo4CChFQ",
-            "cmVkaWN0aW9uU2VydmljZRKtAQoHUHJlZGljdBImLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuUHJlZGljdFJlcXVlc3QaJy5nb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyLlByZWRpY3RSZXNwb25zZSJRgtPkkwJLIkYvdjIve3BsYWNlbWVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovcGxhY2VtZW50cy8q",
-            "fTpwcmVkaWN0OgEqGknKQRVyZXRhaWwuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQssB",
-            "Chpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkIWUHJlZGljdGlvblNlcnZp",
-            "Y2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUu",
-            "Q2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdv",
-            "b2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
+            "Y2UucHJvdG8aJ2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvdXNlcl9ldmVudC5w",
+            "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byK0AwoOUHJlZGlj",
+            "dFJlcXVlc3QSFgoJcGxhY2VtZW50GAEgASgJQgPgQQISOgoKdXNlcl9ldmVu",
+            "dBgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXNlckV2ZW50QgPg",
+            "QQISEQoJcGFnZV9zaXplGAMgASgFEhYKCnBhZ2VfdG9rZW4YBCABKAlCAhgB",
+            "Eg4KBmZpbHRlchgFIAEoCRIVCg12YWxpZGF0ZV9vbmx5GAYgASgIEkIKBnBh",
+            "cmFtcxgHIAMoCzIyLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJlZGljdFJl",
+            "cXVlc3QuUGFyYW1zRW50cnkSQgoGbGFiZWxzGAggAygLMjIuZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5QcmVkaWN0UmVxdWVzdC5MYWJlbHNFbnRyeRpFCgtQ",
+            "YXJhbXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29n",
+            "bGUucHJvdG9idWYuVmFsdWU6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi5wIKD1ByZWRpY3RSZXNwb25zZRJJ",
+            "CgdyZXN1bHRzGAEgAygLMjguZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmVk",
+            "aWN0UmVzcG9uc2UuUHJlZGljdGlvblJlc3VsdBIZChFhdHRyaWJ1dGlvbl90",
+            "b2tlbhgCIAEoCRITCgttaXNzaW5nX2lkcxgDIAMoCRIVCg12YWxpZGF0ZV9v",
+            "bmx5GAQgASgIGsEBChBQcmVkaWN0aW9uUmVzdWx0EgoKAmlkGAEgASgJElgK",
+            "CG1ldGFkYXRhGAIgAygLMkYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmVk",
+            "aWN0UmVzcG9uc2UuUHJlZGljdGlvblJlc3VsdC5NZXRhZGF0YUVudHJ5GkcK",
+            "DU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYu",
+            "Z29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ATLhAgoRUHJlZGljdGlvblNlcnZp",
+            "Y2USgAIKB1ByZWRpY3QSJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByZWRp",
+            "Y3RSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmVkaWN0UmVz",
+            "cG9uc2UiowGC0+STApwBIkYvdjIve3BsYWNlbWVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2NhdGFsb2dzLyovcGxhY2VtZW50cy8qfTpwcmVkaWN0OgEq",
+            "Wk8iSi92Mi97cGxhY2VtZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0",
+            "YWxvZ3MvKi9zZXJ2aW5nQ29uZmlncy8qfTpwcmVkaWN0OgEqGknKQRVyZXRh",
+            "aWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQssBChpjb20uZ29vZ2xlLmNsb3VkLnJl",
+            "dGFpbC52MkIWUHJlZGljdGlvblNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92Mjty",
+            "ZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29v",
+            "Z2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PredictRequest), global::Google.Cloud.Retail.V2.PredictRequest.Parser, new[]{ "Placement", "UserEvent", "PageSize", "PageToken", "Filter", "ValidateOnly", "Params", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PredictResponse), global::Google.Cloud.Retail.V2.PredictResponse.Parser, new[]{ "Results", "AttributionToken", "MissingIds", "ValidateOnly" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PredictResponse.Types.PredictionResult), global::Google.Cloud.Retail.V2.PredictResponse.Types.PredictionResult.Parser, new[]{ "Id", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
@@ -128,14 +131,19 @@ namespace Google.Cloud.Retail.V2 {
     private string placement_ = "";
     /// <summary>
     /// Required. Full resource name of the format:
-    /// {name=projects/*/locations/global/catalogs/default_catalog/placements/*}
-    /// The ID of the Recommendations AI placement. Before you can request
-    /// predictions from your model, you must create at least one placement for it.
-    /// For more information, see [Managing
-    /// placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
+    /// `{placement=projects/*/locations/global/catalogs/default_catalog/servingConfigs/*}`
+    /// or
+    /// `{placement=projects/*/locations/global/catalogs/default_catalog/placements/*}`.
+    /// We recommend using the `servingConfigs` resource. `placements` is a legacy
+    /// resource.
+    /// The ID of the Recommendations AI serving config or placement.
+    /// Before you can request predictions from your model, you must create at
+    /// least one serving config or placement for it. For more information, see
+    /// [Managing serving configurations]
+    /// (https://cloud.google.com/retail/docs/manage-configs).
     ///
-    /// The full list of available placements can be seen at
-    /// https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
+    /// The full list of available serving configs can be seen at
+    /// https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,10 +186,10 @@ namespace Google.Cloud.Retail.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of results to return per page. Set this property
-    /// to the number of prediction results needed. If zero, the service will
-    /// choose a reasonable default. The maximum allowed value is 100. Values
-    /// above 100 will be coerced to 100.
+    /// Maximum number of results to return. Set this property to the number of
+    /// prediction results needed. If zero, the service will choose a reasonable
+    /// default. The maximum allowed value is 100. Values above 100 will be coerced
+    /// to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -196,8 +204,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// The previous PredictResponse.next_page_token.
+    /// This field is not used; leave it unset.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
@@ -240,6 +249,14 @@ namespace Google.Cloud.Retail.V2 {
     /// receive empty results instead.
     /// Note that the API will never return items with storageStatus of "EXPIRED"
     /// or "DELETED" regardless of filter choices.
+    ///
+    /// If `filterSyntaxV2` is set to true under the `params` field, then
+    /// attribute-based expressions are expected instead of the above described
+    /// tag-based syntax. Examples:
+    ///
+    ///  * (colors: ANY("Red", "Blue")) AND NOT (categories: ANY("Phones"))
+    ///  * (availability: ANY("IN_STOCK")) AND
+    ///    (colors: ANY("Red") OR categories: ANY("Phones"))
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -299,6 +316,8 @@ namespace Google.Cloud.Retail.V2 {
     ///    'medium-diversity', 'high-diversity', 'auto-diversity'}. This gives
     ///    request-level control and adjusts prediction results based on product
     ///    category.
+    /// * `filterSyntaxV2`: Boolean. False by default. If set to true, the `filter`
+    ///   field is interpreteted according to the new, attribute-based syntax.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

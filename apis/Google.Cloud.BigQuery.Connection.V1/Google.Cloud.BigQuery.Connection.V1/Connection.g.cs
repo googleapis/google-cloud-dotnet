@@ -50,83 +50,90 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             "dXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
             "QgPgQQIiXQoXRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QSQgoEbmFtZRgBIAEo",
             "CUI04EEC+kEuCixiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20v",
-            "Q29ubmVjdGlvbiLiBAoKQ29ubmVjdGlvbhIMCgRuYW1lGAEgASgJEhUKDWZy",
+            "Q29ubmVjdGlvbiKpBQoKQ29ubmVjdGlvbhIMCgRuYW1lGAEgASgJEhUKDWZy",
             "aWVuZGx5X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSTAoJY2xv",
             "dWRfc3FsGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rp",
             "b24udjEuQ2xvdWRTcWxQcm9wZXJ0aWVzSAASQQoDYXdzGAggASgLMjIuZ29v",
             "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQXdzUHJvcGVydGll",
-            "c0gAElQKDWNsb3VkX3NwYW5uZXIYFSABKAsyOy5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuY29ubmVjdGlvbi52MS5DbG91ZFNwYW5uZXJQcm9wZXJ0aWVzSAAS",
-            "VgoOY2xvdWRfcmVzb3VyY2UYFiABKAsyPC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkuY29ubmVjdGlvbi52MS5DbG91ZFJlc291cmNlUHJvcGVydGllc0gAEhoK",
-            "DWNyZWF0aW9uX3RpbWUYBSABKANCA+BBAxIfChJsYXN0X21vZGlmaWVkX3Rp",
-            "bWUYBiABKANCA+BBAxIbCg5oYXNfY3JlZGVudGlhbBgHIAEoCEID4EEDOnPq",
-            "QXAKLGJpZ3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0",
-            "aW9uEkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "Y29ubmVjdGlvbnMve2Nvbm5lY3Rpb259QgwKCnByb3BlcnRpZXMiygIKEkNs",
-            "b3VkU3FsUHJvcGVydGllcxITCgtpbnN0YW5jZV9pZBgBIAEoCRIQCghkYXRh",
-            "YmFzZRgCIAEoCRJSCgR0eXBlGAMgASgOMkQuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuQ2xvdWRTcWxQcm9wZXJ0aWVzLkRhdGFiYXNl",
-            "VHlwZRJQCgpjcmVkZW50aWFsGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuQ2xvdWRTcWxDcmVkZW50aWFsQgPgQQQSHwoS",
-            "c2VydmljZV9hY2NvdW50X2lkGAUgASgJQgPgQQMiRgoMRGF0YWJhc2VUeXBl",
-            "Eh0KGURBVEFCQVNFX1RZUEVfVU5TUEVDSUZJRUQQABIMCghQT1NUR1JFUxAB",
-            "EgkKBU1ZU1FMEAIiOAoSQ2xvdWRTcWxDcmVkZW50aWFsEhAKCHVzZXJuYW1l",
-            "GAEgASgJEhAKCHBhc3N3b3JkGAIgASgJIkMKFkNsb3VkU3Bhbm5lclByb3Bl",
-            "cnRpZXMSEAoIZGF0YWJhc2UYASABKAkSFwoPdXNlX3BhcmFsbGVsaXNtGAIg",
-            "ASgIIssBCg1Bd3NQcm9wZXJ0aWVzElYKEmNyb3NzX2FjY291bnRfcm9sZRgC",
-            "IAEoCzI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkF3",
-            "c0Nyb3NzQWNjb3VudFJvbGVIABJJCgthY2Nlc3Nfcm9sZRgDIAEoCzIyLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkF3c0FjY2Vzc1Jv",
-            "bGVIAEIXChVhdXRoZW50aWNhdGlvbl9tZXRob2QiXgoTQXdzQ3Jvc3NBY2Nv",
-            "dW50Um9sZRITCgtpYW1fcm9sZV9pZBgBIAEoCRIYCgtpYW1fdXNlcl9pZBgC",
-            "IAEoCUID4EEDEhgKC2V4dGVybmFsX2lkGAMgASgJQgPgQQMiNgoNQXdzQWNj",
-            "ZXNzUm9sZRITCgtpYW1fcm9sZV9pZBgBIAEoCRIQCghpZGVudGl0eRgCIAEo",
-            "CSI6ChdDbG91ZFJlc291cmNlUHJvcGVydGllcxIfChJzZXJ2aWNlX2FjY291",
-            "bnRfaWQYASABKAlCA+BBAzLMDQoRQ29ubmVjdGlvblNlcnZpY2US6AEKEENy",
-            "ZWF0ZUNvbm5lY3Rpb24SPC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVj",
-            "dGlvbi52MS5DcmVhdGVDb25uZWN0aW9uUmVxdWVzdBovLmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNvbm5lY3Rpb24iZYLT5JMCPSIv",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY29ubmVjdGlv",
-            "bnM6CmNvbm5lY3Rpb27aQR9wYXJlbnQsY29ubmVjdGlvbixjb25uZWN0aW9u",
-            "X2lkErsBCg1HZXRDb25uZWN0aW9uEjkuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmNvbm5lY3Rpb24udjEuR2V0Q29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uIj6C0+ST",
-            "AjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rp",
-            "b25zLyp92kEEbmFtZRLOAQoPTGlzdENvbm5lY3Rpb25zEjsuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuTGlzdENvbm5lY3Rpb25zUmVx",
-            "dWVzdBo8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkxp",
-            "c3RDb25uZWN0aW9uc1Jlc3BvbnNlIkCC0+STAjESLy92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25z2kEGcGFyZW50EuQB",
-            "ChBVcGRhdGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNv",
-            "bm5lY3Rpb24udjEuVXBkYXRlQ29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uImGC0+ST",
-            "Aj0yLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rp",
-            "b25zLyp9Ogpjb25uZWN0aW9u2kEbbmFtZSxjb25uZWN0aW9uLHVwZGF0ZV9t",
-            "YXNrEqgBChBEZWxldGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiPoLT5JMCMSovL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn3aQQRuYW1lEqkBCgxH",
-            "ZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVl",
-            "c3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJegtPkkwJFIkAvdjEve3Jlc291",
-            "cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn06Z2V0",
-            "SWFtUG9saWN5OgEq2kEQcmVzb3VyY2Usb3B0aW9ucxKoAQoMU2V0SWFtUG9s",
-            "aWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29v",
-            "Z2xlLmlhbS52MS5Qb2xpY3kiXYLT5JMCRSJAL3YxL3tyZXNvdXJjZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OnNldElhbVBvbGlj",
-            "eToBKtpBD3Jlc291cmNlLHBvbGljeRLTAQoSVGVzdElhbVBlcm1pc3Npb25z",
-            "EiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0Giku",
-            "Z29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJogtPk",
-            "kwJLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29u",
-            "bmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2Us",
-            "cGVybWlzc2lvbnMafspBIWJpZ3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlz",
-            "LmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlncXVl",
-            "cnksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybULGAQonY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9u",
-            "LnYxUAFaTWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvYmlncXVlcnkvY29ubmVjdGlvbi92MTtjb25uZWN0aW9uqgIjR29v",
-            "Z2xlLkNsb3VkLkJpZ1F1ZXJ5LkNvbm5lY3Rpb24uVjHKAiNHb29nbGVcQ2xv",
-            "dWRcQmlnUXVlcnlcQ29ubmVjdGlvblxWMWIGcHJvdG8z"));
+            "c0gAEkUKBWF6dXJlGAsgASgLMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNv",
+            "bm5lY3Rpb24udjEuQXp1cmVQcm9wZXJ0aWVzSAASVAoNY2xvdWRfc3Bhbm5l",
+            "chgVIAEoCzI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYx",
+            "LkNsb3VkU3Bhbm5lclByb3BlcnRpZXNIABJWCg5jbG91ZF9yZXNvdXJjZRgW",
+            "IAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNs",
+            "b3VkUmVzb3VyY2VQcm9wZXJ0aWVzSAASGgoNY3JlYXRpb25fdGltZRgFIAEo",
+            "A0ID4EEDEh8KEmxhc3RfbW9kaWZpZWRfdGltZRgGIAEoA0ID4EEDEhsKDmhh",
+            "c19jcmVkZW50aWFsGAcgASgIQgPgQQM6c+pBcAosYmlncXVlcnljb25uZWN0",
+            "aW9uLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb24SQHByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVj",
+            "dGlvbn1CDAoKcHJvcGVydGllcyLKAgoSQ2xvdWRTcWxQcm9wZXJ0aWVzEhMK",
+            "C2luc3RhbmNlX2lkGAEgASgJEhAKCGRhdGFiYXNlGAIgASgJElIKBHR5cGUY",
+            "AyABKA4yRC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5D",
+            "bG91ZFNxbFByb3BlcnRpZXMuRGF0YWJhc2VUeXBlElAKCmNyZWRlbnRpYWwY",
+            "BCABKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5D",
+            "bG91ZFNxbENyZWRlbnRpYWxCA+BBBBIfChJzZXJ2aWNlX2FjY291bnRfaWQY",
+            "BSABKAlCA+BBAyJGCgxEYXRhYmFzZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgwKCFBPU1RHUkVTEAESCQoFTVlTUUwQAiI4ChJDbG91",
+            "ZFNxbENyZWRlbnRpYWwSEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQY",
+            "AiABKAkiQwoWQ2xvdWRTcGFubmVyUHJvcGVydGllcxIQCghkYXRhYmFzZRgB",
+            "IAEoCRIXCg91c2VfcGFyYWxsZWxpc20YAiABKAgizwEKDUF3c1Byb3BlcnRp",
+            "ZXMSWgoSY3Jvc3NfYWNjb3VudF9yb2xlGAIgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQXdzQ3Jvc3NBY2NvdW50Um9sZUIC",
+            "GAFIABJJCgthY2Nlc3Nfcm9sZRgDIAEoCzIyLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5jb25uZWN0aW9uLnYxLkF3c0FjY2Vzc1JvbGVIAEIXChVhdXRoZW50",
+            "aWNhdGlvbl9tZXRob2QiXgoTQXdzQ3Jvc3NBY2NvdW50Um9sZRITCgtpYW1f",
+            "cm9sZV9pZBgBIAEoCRIYCgtpYW1fdXNlcl9pZBgCIAEoCUID4EEDEhgKC2V4",
+            "dGVybmFsX2lkGAMgASgJQgPgQQMiNgoNQXdzQWNjZXNzUm9sZRITCgtpYW1f",
+            "cm9sZV9pZBgBIAEoCRIQCghpZGVudGl0eRgCIAEoCSLNAQoPQXp1cmVQcm9w",
+            "ZXJ0aWVzEhgKC2FwcGxpY2F0aW9uGAEgASgJQgPgQQMSFgoJY2xpZW50X2lk",
+            "GAIgASgJQgPgQQMSFgoJb2JqZWN0X2lkGAMgASgJQgPgQQMSGgoSY3VzdG9t",
+            "ZXJfdGVuYW50X2lkGAQgASgJEhQKDHJlZGlyZWN0X3VyaRgFIAEoCRInCh9m",
+            "ZWRlcmF0ZWRfYXBwbGljYXRpb25fY2xpZW50X2lkGAYgASgJEhUKCGlkZW50",
+            "aXR5GAcgASgJQgPgQQMiOgoXQ2xvdWRSZXNvdXJjZVByb3BlcnRpZXMSHwoS",
+            "c2VydmljZV9hY2NvdW50X2lkGAEgASgJQgPgQQMyzA0KEUNvbm5lY3Rpb25T",
+            "ZXJ2aWNlEugBChBDcmVhdGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3Qa",
+            "Ly5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0",
+            "aW9uImWC0+STAj0iLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L2Nvbm5lY3Rpb25zOgpjb25uZWN0aW9u2kEfcGFyZW50LGNvbm5lY3Rp",
+            "b24sY29ubmVjdGlvbl9pZBK7AQoNR2V0Q29ubmVjdGlvbhI5Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkdldENvbm5lY3Rpb25SZXF1",
+            "ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29u",
+            "bmVjdGlvbiI+gtPkkwIxEi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb25uZWN0aW9ucy8qfdpBBG5hbWUSzgEKD0xpc3RDb25uZWN0aW9u",
+            "cxI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkxpc3RD",
+            "b25uZWN0aW9uc1JlcXVlc3QaPC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29u",
+            "bmVjdGlvbi52MS5MaXN0Q29ubmVjdGlvbnNSZXNwb25zZSJAgtPkkwIxEi8v",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb25uZWN0aW9u",
+            "c9pBBnBhcmVudBLkAQoQVXBkYXRlQ29ubmVjdGlvbhI8Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLlVwZGF0ZUNvbm5lY3Rpb25SZXF1",
+            "ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29u",
+            "bmVjdGlvbiJhgtPkkwI9Mi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb25uZWN0aW9ucy8qfToKY29ubmVjdGlvbtpBG25hbWUsY29ubmVj",
+            "dGlvbix1cGRhdGVfbWFzaxKoAQoQRGVsZXRlQ29ubmVjdGlvbhI8Lmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkRlbGV0ZUNvbm5lY3Rp",
+            "b25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij6C0+STAjEqLy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9",
+            "2kEEbmFtZRKpAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJ",
+            "YW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiXoLT5JMC",
+            "RSJAL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5l",
+            "Y3Rpb25zLyp9OmdldElhbVBvbGljeToBKtpBEHJlc291cmNlLG9wdGlvbnMS",
+            "qAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5",
+            "UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Il2C0+STAkUiQC92MS97",
+            "cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8q",
+            "fTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS0wEKElRlc3RJ",
+            "YW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Np",
+            "b25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25z",
+            "UmVzcG9uc2UiaILT5JMCSyJGL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
+            "KtpBFHJlc291cmNlLHBlcm1pc3Npb25zGn7KQSFiaWdxdWVyeWNvbm5lY3Rp",
+            "b24uZ29vZ2xlYXBpcy5jb23SQVdodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1CxgEKJ2NvbS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuY29ubmVjdGlvbi52MVABWk1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L2Nvbm5lY3Rpb24vdjE7Y29u",
+            "bmVjdGlvbqoCI0dvb2dsZS5DbG91ZC5CaWdRdWVyeS5Db25uZWN0aW9uLlYx",
+            "ygIjR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XENvbm5lY3Rpb25cVjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -136,13 +143,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser, new[]{ "NextPageToken", "Connections" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser, new[]{ "Name", "Connection", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "CloudSpanner", "CloudResource", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "Azure", "CloudSpanner", "CloudResource", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Parser, new[]{ "InstanceId", "Database", "Type", "Credential", "ServiceAccountId" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Types.DatabaseType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties.Parser, new[]{ "Database", "UseParallelism" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsProperties), global::Google.Cloud.BigQuery.Connection.V1.AwsProperties.Parser, new[]{ "CrossAccountRole", "AccessRole" }, new[]{ "AuthenticationMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole), global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole.Parser, new[]{ "IamRoleId", "IamUserId", "ExternalId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole), global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole.Parser, new[]{ "IamRoleId", "Identity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AzureProperties), global::Google.Cloud.BigQuery.Connection.V1.AzureProperties.Parser, new[]{ "Application", "ClientId", "ObjectId", "CustomerTenantId", "RedirectUri", "FederatedApplicationClientId", "Identity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties.Parser, new[]{ "ServiceAccountId" }, null, null, null, null)
           }));
     }
@@ -1672,6 +1680,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         case PropertiesOneofCase.Aws:
           Aws = other.Aws.Clone();
           break;
+        case PropertiesOneofCase.Azure:
+          Azure = other.Azure.Clone();
+          break;
         case PropertiesOneofCase.CloudSpanner:
           CloudSpanner = other.CloudSpanner.Clone();
           break;
@@ -1765,6 +1776,21 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "azure" field.</summary>
+    public const int AzureFieldNumber = 11;
+    /// <summary>
+    /// Azure properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Connection.V1.AzureProperties Azure {
+      get { return propertiesCase_ == PropertiesOneofCase.Azure ? (global::Google.Cloud.BigQuery.Connection.V1.AzureProperties) properties_ : null; }
+      set {
+        properties_ = value;
+        propertiesCase_ = value == null ? PropertiesOneofCase.None : PropertiesOneofCase.Azure;
+      }
+    }
+
     /// <summary>Field number for the "cloud_spanner" field.</summary>
     public const int CloudSpannerFieldNumber = 21;
     /// <summary>
@@ -1846,6 +1872,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       None = 0,
       CloudSql = 4,
       Aws = 8,
+      Azure = 11,
       CloudSpanner = 21,
       CloudResource = 22,
     }
@@ -1883,6 +1910,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (Description != other.Description) return false;
       if (!object.Equals(CloudSql, other.CloudSql)) return false;
       if (!object.Equals(Aws, other.Aws)) return false;
+      if (!object.Equals(Azure, other.Azure)) return false;
       if (!object.Equals(CloudSpanner, other.CloudSpanner)) return false;
       if (!object.Equals(CloudResource, other.CloudResource)) return false;
       if (CreationTime != other.CreationTime) return false;
@@ -1901,6 +1929,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudSql) hash ^= CloudSql.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.Aws) hash ^= Aws.GetHashCode();
+      if (propertiesCase_ == PropertiesOneofCase.Azure) hash ^= Azure.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) hash ^= CloudSpanner.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudResource) hash ^= CloudResource.GetHashCode();
       if (CreationTime != 0L) hash ^= CreationTime.GetHashCode();
@@ -1957,6 +1986,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Aws);
       }
+      if (propertiesCase_ == PropertiesOneofCase.Azure) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Azure);
+      }
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) {
         output.WriteRawTag(170, 1);
         output.WriteMessage(CloudSpanner);
@@ -2007,6 +2040,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Aws);
       }
+      if (propertiesCase_ == PropertiesOneofCase.Azure) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Azure);
+      }
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) {
         output.WriteRawTag(170, 1);
         output.WriteMessage(CloudSpanner);
@@ -2039,6 +2076,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
       if (propertiesCase_ == PropertiesOneofCase.Aws) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Aws);
+      }
+      if (propertiesCase_ == PropertiesOneofCase.Azure) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Azure);
       }
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CloudSpanner);
@@ -2097,6 +2137,12 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             Aws = new global::Google.Cloud.BigQuery.Connection.V1.AwsProperties();
           }
           Aws.MergeFrom(other.Aws);
+          break;
+        case PropertiesOneofCase.Azure:
+          if (Azure == null) {
+            Azure = new global::Google.Cloud.BigQuery.Connection.V1.AzureProperties();
+          }
+          Azure.MergeFrom(other.Azure);
           break;
         case PropertiesOneofCase.CloudSpanner:
           if (CloudSpanner == null) {
@@ -2167,6 +2213,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             }
             input.ReadMessage(subBuilder);
             Aws = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.BigQuery.Connection.V1.AzureProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AzureProperties();
+            if (propertiesCase_ == PropertiesOneofCase.Azure) {
+              subBuilder.MergeFrom(Azure);
+            }
+            input.ReadMessage(subBuilder);
+            Azure = subBuilder;
             break;
           }
           case 170: {
@@ -2242,6 +2297,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             }
             input.ReadMessage(subBuilder);
             Aws = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.BigQuery.Connection.V1.AzureProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AzureProperties();
+            if (propertiesCase_ == PropertiesOneofCase.Azure) {
+              subBuilder.MergeFrom(Azure);
+            }
+            input.ReadMessage(subBuilder);
+            Azure = subBuilder;
             break;
           }
           case 170: {
@@ -3193,7 +3257,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
     /// <summary>
     /// Authentication using Google owned AWS IAM user's access key to assume
     /// into customer's AWS IAM Role.
+    /// Deprecated, do not use.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole CrossAccountRole {
@@ -3947,6 +4013,445 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
   }
 
   /// <summary>
+  /// Container for connection properties specific to Azure.
+  /// </summary>
+  public sealed partial class AzureProperties : pb::IMessage<AzureProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AzureProperties> _parser = new pb::MessageParser<AzureProperties>(() => new AzureProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AzureProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AzureProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AzureProperties(AzureProperties other) : this() {
+      application_ = other.application_;
+      clientId_ = other.clientId_;
+      objectId_ = other.objectId_;
+      customerTenantId_ = other.customerTenantId_;
+      redirectUri_ = other.redirectUri_;
+      federatedApplicationClientId_ = other.federatedApplicationClientId_;
+      identity_ = other.identity_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AzureProperties Clone() {
+      return new AzureProperties(this);
+    }
+
+    /// <summary>Field number for the "application" field.</summary>
+    public const int ApplicationFieldNumber = 1;
+    private string application_ = "";
+    /// <summary>
+    /// Output only. The name of the Azure Active Directory Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Application {
+      get { return application_; }
+      set {
+        application_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "client_id" field.</summary>
+    public const int ClientIdFieldNumber = 2;
+    private string clientId_ = "";
+    /// <summary>
+    /// Output only. The client id of the Azure Active Directory Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "object_id" field.</summary>
+    public const int ObjectIdFieldNumber = 3;
+    private string objectId_ = "";
+    /// <summary>
+    /// Output only. The object id of the Azure Active Directory Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ObjectId {
+      get { return objectId_; }
+      set {
+        objectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "customer_tenant_id" field.</summary>
+    public const int CustomerTenantIdFieldNumber = 4;
+    private string customerTenantId_ = "";
+    /// <summary>
+    /// The id of customer's directory that host the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomerTenantId {
+      get { return customerTenantId_; }
+      set {
+        customerTenantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "redirect_uri" field.</summary>
+    public const int RedirectUriFieldNumber = 5;
+    private string redirectUri_ = "";
+    /// <summary>
+    /// The URL user will be redirected to after granting consent during connection
+    /// setup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RedirectUri {
+      get { return redirectUri_; }
+      set {
+        redirectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "federated_application_client_id" field.</summary>
+    public const int FederatedApplicationClientIdFieldNumber = 6;
+    private string federatedApplicationClientId_ = "";
+    /// <summary>
+    /// The client id of the user's Azure Active Directory Application used for a
+    /// federated connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FederatedApplicationClientId {
+      get { return federatedApplicationClientId_; }
+      set {
+        federatedApplicationClientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 7;
+    private string identity_ = "";
+    /// <summary>
+    /// Output only. A unique Google-owned and Google-generated identity for the Connection.
+    /// This identity will be used to access the user's Azure Active Directory
+    /// Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Identity {
+      get { return identity_; }
+      set {
+        identity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AzureProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AzureProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Application != other.Application) return false;
+      if (ClientId != other.ClientId) return false;
+      if (ObjectId != other.ObjectId) return false;
+      if (CustomerTenantId != other.CustomerTenantId) return false;
+      if (RedirectUri != other.RedirectUri) return false;
+      if (FederatedApplicationClientId != other.FederatedApplicationClientId) return false;
+      if (Identity != other.Identity) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Application.Length != 0) hash ^= Application.GetHashCode();
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (ObjectId.Length != 0) hash ^= ObjectId.GetHashCode();
+      if (CustomerTenantId.Length != 0) hash ^= CustomerTenantId.GetHashCode();
+      if (RedirectUri.Length != 0) hash ^= RedirectUri.GetHashCode();
+      if (FederatedApplicationClientId.Length != 0) hash ^= FederatedApplicationClientId.GetHashCode();
+      if (Identity.Length != 0) hash ^= Identity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Application.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Application);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClientId);
+      }
+      if (ObjectId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ObjectId);
+      }
+      if (CustomerTenantId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomerTenantId);
+      }
+      if (RedirectUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RedirectUri);
+      }
+      if (FederatedApplicationClientId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FederatedApplicationClientId);
+      }
+      if (Identity.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Identity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Application.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Application);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClientId);
+      }
+      if (ObjectId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ObjectId);
+      }
+      if (CustomerTenantId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomerTenantId);
+      }
+      if (RedirectUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RedirectUri);
+      }
+      if (FederatedApplicationClientId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FederatedApplicationClientId);
+      }
+      if (Identity.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Identity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Application.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Application);
+      }
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (ObjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ObjectId);
+      }
+      if (CustomerTenantId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerTenantId);
+      }
+      if (RedirectUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RedirectUri);
+      }
+      if (FederatedApplicationClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FederatedApplicationClientId);
+      }
+      if (Identity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Identity);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AzureProperties other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Application.Length != 0) {
+        Application = other.Application;
+      }
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.ObjectId.Length != 0) {
+        ObjectId = other.ObjectId;
+      }
+      if (other.CustomerTenantId.Length != 0) {
+        CustomerTenantId = other.CustomerTenantId;
+      }
+      if (other.RedirectUri.Length != 0) {
+        RedirectUri = other.RedirectUri;
+      }
+      if (other.FederatedApplicationClientId.Length != 0) {
+        FederatedApplicationClientId = other.FederatedApplicationClientId;
+      }
+      if (other.Identity.Length != 0) {
+        Identity = other.Identity;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Application = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ObjectId = input.ReadString();
+            break;
+          }
+          case 34: {
+            CustomerTenantId = input.ReadString();
+            break;
+          }
+          case 42: {
+            RedirectUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            FederatedApplicationClientId = input.ReadString();
+            break;
+          }
+          case 58: {
+            Identity = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Application = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ObjectId = input.ReadString();
+            break;
+          }
+          case 34: {
+            CustomerTenantId = input.ReadString();
+            break;
+          }
+          case 42: {
+            RedirectUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            FederatedApplicationClientId = input.ReadString();
+            break;
+          }
+          case 58: {
+            Identity = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Container for connection properties for delegation of access to GCP
   /// resources.
   /// </summary>
@@ -3964,7 +4469,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

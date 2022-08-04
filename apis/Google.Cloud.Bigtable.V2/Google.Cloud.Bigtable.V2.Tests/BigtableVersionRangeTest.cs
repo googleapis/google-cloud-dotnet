@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All rights reserved.
+// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -108,10 +108,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData("BigtableVersionRange: Start=0; End=1", 0, 1)]
-        [InlineData("BigtableVersionRange: Start=1; End=10", 1, 10)]
-        [InlineData("BigtableVersionRange: Start=(none); End=10", null, 10)]
-        [InlineData("BigtableVersionRange: Start=12345; End=(none)", 12345, null)]
+        [InlineData("BigtableVersionRange: Start=0; End=1", 0L, 1L)]
+        [InlineData("BigtableVersionRange: Start=1; End=10", 1L, 10L)]
+        [InlineData("BigtableVersionRange: Start=(none); End=10", null, 10L)]
+        [InlineData("BigtableVersionRange: Start=12345; End=(none)", 12345L, null)]
         public void Formatting(string expectedText, long? start, long? end)
         {
             var version = new BigtableVersionRange(start, end);
@@ -119,10 +119,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData(0, 1)]
-        [InlineData(1, 10)]
-        [InlineData(null, 10)]
-        [InlineData(12345, null)]
+        [InlineData(0L, 1L)]
+        [InlineData(1L, 10L)]
+        [InlineData(null, 10L)]
+        [InlineData(12345L, null)]
         public void ToTimestampRange(long? start, long? end)
         {
             var range = new BigtableVersionRange(start, end);

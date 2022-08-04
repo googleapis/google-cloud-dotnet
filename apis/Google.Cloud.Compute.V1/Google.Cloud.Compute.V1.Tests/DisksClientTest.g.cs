@@ -76,6 +76,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 Licenses =
                 {
@@ -154,6 +155,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 Licenses =
                 {
@@ -234,6 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 Licenses =
                 {
@@ -312,6 +315,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
+                Architecture = "architecture329ce7ef",
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 Licenses =
                 {

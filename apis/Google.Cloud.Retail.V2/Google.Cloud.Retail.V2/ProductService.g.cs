@@ -183,7 +183,9 @@ namespace Google.Cloud.Retail.V2 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [CreateProduct][] method.
+  /// Request message for
+  /// [ProductService.CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct]
+  /// method.
   /// </summary>
   public sealed partial class CreateProductRequest : pb::IMessage<CreateProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -482,7 +484,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [GetProduct][] method.
+  /// Request message for
+  /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+  /// method.
   /// </summary>
   public sealed partial class GetProductRequest : pb::IMessage<GetProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -686,7 +690,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [UpdateProduct][] method.
+  /// Request message for
+  /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+  /// method.
   /// </summary>
   public sealed partial class UpdateProductRequest : pb::IMessage<UpdateProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1001,7 +1007,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [DeleteProduct][] method.
+  /// Request message for
+  /// [ProductService.DeleteProduct][google.cloud.retail.v2.ProductService.DeleteProduct]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProductRequest : pb::IMessage<DeleteProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1874,7 +1882,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [SetInventory][] method.
+  /// Request message for
+  /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory]
+  /// method.
   /// </summary>
   public sealed partial class SetInventoryRequest : pb::IMessage<SetInventoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1929,6 +1939,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. The inventory information to update. The allowable fields to
     /// update are:
+    ///
     /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
     /// * [Product.availability][google.cloud.retail.v2.Product.availability]
     /// * [Product.available_quantity][google.cloud.retail.v2.Product.available_quantity]
@@ -1936,8 +1947,9 @@ namespace Google.Cloud.Retail.V2 {
     /// The updated inventory fields must be specified in
     /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask].
     ///
-    /// If [SetInventoryRequest.inventory.name][] is empty or invalid, an
-    /// INVALID_ARGUMENT error is returned.
+    /// If
+    /// [SetInventoryRequest.inventory.name][google.cloud.retail.v2.Product.name]
+    /// is empty or invalid, an INVALID_ARGUMENT error is returned.
     ///
     /// If the caller does not have permission to update the
     /// [Product][google.cloud.retail.v2.Product] named in
@@ -1960,7 +1972,8 @@ namespace Google.Cloud.Retail.V2 {
     /// * Adds "fulfillment_info" in
     /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask]
     /// * Specifies only the desired fulfillment types and corresponding place IDs
-    /// to update in [SetInventoryRequest.inventory.fulfillment_info][]
+    /// to update in
+    /// [SetInventoryRequest.inventory.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
     ///
     /// The caller can clear all place IDs from a subset of fulfillment types in
     /// the following ways:
@@ -1968,9 +1981,9 @@ namespace Google.Cloud.Retail.V2 {
     /// * Adds "fulfillment_info" in
     /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask]
     /// * Specifies only the desired fulfillment types to clear in
-    /// [SetInventoryRequest.inventory.fulfillment_info][]
+    /// [SetInventoryRequest.inventory.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
     /// * Checks that only the desired fulfillment info types have empty
-    /// [SetInventoryRequest.inventory.fulfillment_info.place_ids][]
+    /// [SetInventoryRequest.inventory.fulfillment_info.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
     ///
     /// The last update time is recorded for the following inventory fields:
     /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
@@ -1979,7 +1992,9 @@ namespace Google.Cloud.Retail.V2 {
     /// * [Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
     ///
     /// If a full overwrite of inventory information while ignoring timestamps is
-    /// needed, [UpdateProduct][] should be invoked instead.
+    /// needed,
+    /// [ProductService.UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct]
+    /// should be invoked instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2283,7 +2298,8 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata related to the progress of the SetInventory operation.
   /// Currently empty because there is no meaningful metadata populated from the
-  /// [SetInventory][] method.
+  /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory]
+  /// method.
   /// </summary>
   public sealed partial class SetInventoryMetadata : pb::IMessage<SetInventoryMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2439,7 +2455,8 @@ namespace Google.Cloud.Retail.V2 {
 
   /// <summary>
   /// Response of the SetInventoryRequest.  Currently empty because
-  /// there is no meaningful response populated from the [SetInventory][]
+  /// there is no meaningful response populated from the
+  /// [ProductService.SetInventory][google.cloud.retail.v2.ProductService.SetInventory]
   /// method.
   /// </summary>
   public sealed partial class SetInventoryResponse : pb::IMessage<SetInventoryResponse>
@@ -2690,7 +2707,8 @@ namespace Google.Cloud.Retail.V2 {
     /// If this field is set to an invalid value other than these, an
     /// INVALID_ARGUMENT error is returned.
     ///
-    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// This field directly corresponds to
+    /// [Product.fulfillment_info.type][google.cloud.retail.v2.FulfillmentInfo.type].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4021,7 +4039,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [RemoveLocalInventories][] method.
+  /// Request message for
+  /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
+  /// method.
   /// </summary>
   public sealed partial class RemoveLocalInventoriesRequest : pb::IMessage<RemoveLocalInventoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4350,7 +4370,8 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata related to the progress of the RemoveLocalInventories operation.
   /// Currently empty because there is no meaningful metadata populated from the
-  /// [RemoveLocalInventories][] method.
+  /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
+  /// method.
   /// </summary>
   public sealed partial class RemoveLocalInventoriesMetadata : pb::IMessage<RemoveLocalInventoriesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4505,8 +4526,11 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Response of the [RemoveLocalInventories][] API.  Currently empty because
-  /// there is no meaningful response populated from the [RemoveLocalInventories][]
+  /// Response of the
+  /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
+  /// API.  Currently empty because there is no meaningful response populated from
+  /// the
+  /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
   /// method.
   /// </summary>
   public sealed partial class RemoveLocalInventoriesResponse : pb::IMessage<RemoveLocalInventoriesResponse>
@@ -4662,7 +4686,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [RemoveFulfillmentPlaces][] method.
+  /// Request message for
+  /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+  /// method.
   /// </summary>
   public sealed partial class RemoveFulfillmentPlacesRequest : pb::IMessage<RemoveFulfillmentPlacesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5058,7 +5084,8 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata related to the progress of the RemoveFulfillmentPlaces operation.
   /// Currently empty because there is no meaningful metadata populated from the
-  /// [RemoveFulfillmentPlaces][] method.
+  /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+  /// method.
   /// </summary>
   public sealed partial class RemoveFulfillmentPlacesMetadata : pb::IMessage<RemoveFulfillmentPlacesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5214,7 +5241,8 @@ namespace Google.Cloud.Retail.V2 {
 
   /// <summary>
   /// Response of the RemoveFulfillmentPlacesRequest. Currently empty because there
-  /// is no meaningful response populated from the [RemoveFulfillmentPlaces][]
+  /// is no meaningful response populated from the
+  /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
   /// method.
   /// </summary>
   public sealed partial class RemoveFulfillmentPlacesResponse : pb::IMessage<RemoveFulfillmentPlacesResponse>

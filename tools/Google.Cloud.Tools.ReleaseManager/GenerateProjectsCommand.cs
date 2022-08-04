@@ -89,11 +89,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "17.0.0" },
-            { "xunit", "2.4.1" },
-            { "xunit.runner.visualstudio", "2.4.3" },
+            { "Microsoft.NET.Test.Sdk", "17.2.0" },
+            { "xunit", "2.4.2" },
+            { "xunit.runner.visualstudio", "2.4.5" },
             { "Xunit.SkippableFact", "1.4.13" },
-            { "Moq", "4.16.1" },
+            { "Moq", "4.18.1" },
             { "System.Linq.Async", "6.0.1" },
         };
 
@@ -159,6 +159,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             foreach (var api in catalog.Apis)
             {
+                // If we're not releasing anything, it's fine for this to use project dependencies.
+                // This is typically the case when creating a pair of packages, one of which will be
+                // general (e.g. X.Y.Type) and the other of which depends on it.
+                if (api.Version.EndsWith("00"))
+                {
+                    continue;
+                }
                 var projectDependencies = api.Dependencies.Where(d => d.Value == ProjectVersionValue).Select(d => d.Key).ToList();
                 if (projectDependencies.Count == 0)
                 {

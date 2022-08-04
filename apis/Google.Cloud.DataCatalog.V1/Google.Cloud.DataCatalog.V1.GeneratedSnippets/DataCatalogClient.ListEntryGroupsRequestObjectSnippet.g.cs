@@ -18,6 +18,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
 {
     // [START datacatalog_v1_generated_DataCatalog_ListEntryGroups_sync]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DataCatalog.V1;
     using System;
 
@@ -35,7 +36,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
             {
-                ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(request);

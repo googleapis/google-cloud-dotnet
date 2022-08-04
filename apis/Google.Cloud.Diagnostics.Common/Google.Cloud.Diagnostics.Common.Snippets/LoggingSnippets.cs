@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -227,7 +227,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                 string writtenInfo = writer.ToString();
 
                 int urlStart = writtenInfo.LastIndexOf("http", StringComparison.OrdinalIgnoreCase);
-                Assert.NotEqual(urlStart, -1);
+                Assert.NotEqual(-1, urlStart);
 
                 // We know the URL is the last to be written.
                 string url = writtenInfo.Substring(urlStart);

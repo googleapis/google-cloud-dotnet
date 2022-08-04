@@ -33,7 +33,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Initialize request argument(s)
             CreateTagRequest request = new CreateTagRequest
             {
-                ParentAsTagName = TagName.FromProjectLocationEntryGroupEntryTag("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]", "[TAG]"),
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 Tag = new Tag(),
             };
             // Make the request

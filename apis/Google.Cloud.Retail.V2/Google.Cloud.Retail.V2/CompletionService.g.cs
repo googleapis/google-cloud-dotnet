@@ -192,6 +192,9 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> languageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// Note that this field applies for `user-data` dataset only. For requests
+    /// with `cloud-retail` dataset, setting this field has no effect.
+    ///
     /// The language filters applied to the output suggestions. If set, it should
     /// contain the language of the query. If not set, suggestions are returned
     /// without considering language restrictions. This is the BCP-47 language
@@ -649,7 +652,7 @@ namespace Google.Cloud.Retail.V2 {
     ///  [CompleteQueryRequest.query][google.cloud.retail.v2.CompleteQueryRequest.query]
     ///  case insensitively.
     ///
-    ///  * They are transformed to lower cases.
+    ///  * They are transformed to lower case.
     ///
     ///  * They are UTF-8 safe.
     ///
@@ -901,8 +904,9 @@ namespace Google.Cloud.Retail.V2 {
         /// ingested through BigQuery.
         ///
         /// * For "cloud-retail", the attributes are product attributes generated
-        /// by Cloud Retail. This is an experimental feature. Contact Retail Search
-        /// support team if you are interested in enabling it.
+        /// by Cloud Retail. It requires
+        /// [UserEvent.product_details][google.cloud.retail.v2.UserEvent.product_details]
+        /// is imported properly.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

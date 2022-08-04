@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -36,6 +37,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<UserEventService.UserEventServiceClient> mockGrpcClient = new moq::Mock<UserEventService.UserEventServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 Parent = "parent7858e4d0",
@@ -91,6 +93,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<UserEventService.UserEventServiceClient> mockGrpcClient = new moq::Mock<UserEventService.UserEventServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 Parent = "parent7858e4d0",
@@ -148,6 +151,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<UserEventService.UserEventServiceClient> mockGrpcClient = new moq::Mock<UserEventService.UserEventServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CollectUserEventRequest request = new CollectUserEventRequest
             {
                 Parent = "parent7858e4d0",
@@ -173,6 +177,7 @@ namespace Google.Cloud.Retail.V2.Tests
         {
             moq::Mock<UserEventService.UserEventServiceClient> mockGrpcClient = new moq::Mock<UserEventService.UserEventServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CollectUserEventRequest request = new CollectUserEventRequest
             {
                 Parent = "parent7858e4d0",
