@@ -1420,7 +1420,7 @@ namespace Google.Cloud.Compute.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Instances.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Instances.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1937,7 +1937,7 @@ namespace Google.Cloud.Compute.V1
             AttachDiskAsync(project, zone, instance, attachedDiskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1946,7 +1946,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1955,7 +1955,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1990,7 +1990,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2012,7 +2012,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2034,7 +2034,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7172,7 +7172,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient BulkInsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7187,7 +7187,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

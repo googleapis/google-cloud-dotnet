@@ -50,8 +50,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     -3549522739643304114L,
                 },
                 ChainName = "chain_name66f3d828",
+                SourceSnapshotSchedulePolicyId = "source_snapshot_schedule_policy_id5af4a0ef",
+                SnapshotType = "snapshot_typea8f307fd",
+                CreationSizeBytes = -5048220602200959998L,
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceSnapshotSchedulePolicy = "source_snapshot_schedule_policyc1faf2bf",
+                Architecture = "architecture329ce7ef",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -109,8 +114,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     -3549522739643304114L,
                 },
                 ChainName = "chain_name66f3d828",
+                SourceSnapshotSchedulePolicyId = "source_snapshot_schedule_policy_id5af4a0ef",
+                SnapshotType = "snapshot_typea8f307fd",
+                CreationSizeBytes = -5048220602200959998L,
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceSnapshotSchedulePolicy = "source_snapshot_schedule_policyc1faf2bf",
+                Architecture = "architecture329ce7ef",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -170,8 +180,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     -3549522739643304114L,
                 },
                 ChainName = "chain_name66f3d828",
+                SourceSnapshotSchedulePolicyId = "source_snapshot_schedule_policy_id5af4a0ef",
+                SnapshotType = "snapshot_typea8f307fd",
+                CreationSizeBytes = -5048220602200959998L,
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceSnapshotSchedulePolicy = "source_snapshot_schedule_policyc1faf2bf",
+                Architecture = "architecture329ce7ef",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -229,8 +244,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     -3549522739643304114L,
                 },
                 ChainName = "chain_name66f3d828",
+                SourceSnapshotSchedulePolicyId = "source_snapshot_schedule_policy_id5af4a0ef",
+                SnapshotType = "snapshot_typea8f307fd",
+                CreationSizeBytes = -5048220602200959998L,
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceSnapshotSchedulePolicy = "source_snapshot_schedule_policyc1faf2bf",
+                Architecture = "architecture329ce7ef",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {

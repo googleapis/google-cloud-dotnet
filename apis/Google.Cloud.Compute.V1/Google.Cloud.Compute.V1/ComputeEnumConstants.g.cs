@@ -175,6 +175,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.AttachedDisk"/> message.</summary>
         public static class AttachedDisk
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Interface"/> enum.</summary>
             public static class Interface
             {
@@ -218,6 +234,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams"/> message.</summary>
         public static class AttachedDiskInitializeParams
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDiskInitializeParams.Types.OnUpdateAction"/> enum.</summary>
             public static class OnUpdateAction
             {
@@ -877,6 +909,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Status.Active"/>.</summary>
                 public const string Active = "ACTIVE";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Status.Cancelled"/>.</summary>
+                public const string Cancelled = "CANCELLED";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Status.Creating"/>.</summary>
                 public const string Creating = "CREATING";
 
@@ -1030,6 +1065,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Disk"/> message.</summary>
         public static class Disk
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Status"/> enum.</summary>
             public static class Status
             {
@@ -1336,6 +1387,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.PscConnectionStatus.Closed"/>.</summary>
                 public const string Closed = "CLOSED";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.PscConnectionStatus.NeedsAttention"/>.</summary>
+                public const string NeedsAttention = "NEEDS_ATTENTION";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.PscConnectionStatus.Pending"/>.</summary>
                 public const string Pending = "PENDING";
 
@@ -1638,6 +1692,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Image"/> message.</summary>
         public static class Image
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Image.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Image.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Image.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Image.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Image.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Image.Types.SourceType"/> enum.</summary>
             public static class SourceType
             {
@@ -1671,6 +1741,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Instance"/> message.</summary>
         public static class Instance
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Instance.Types.KeyRevocationActionType"/> enum.</summary>
+            public static class KeyRevocationActionType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.KeyRevocationActionType.UndefinedKeyRevocationActionType"/>.</summary>
+                public const string UndefinedKeyRevocationActionType = "UNDEFINED_KEY_REVOCATION_ACTION_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.KeyRevocationActionType.Unspecified"/>.</summary>
+                public const string Unspecified = "KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.KeyRevocationActionType.None"/>.</summary>
+                public const string None = "NONE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.KeyRevocationActionType.Stop"/>.</summary>
+                public const string Stop = "STOP";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Instance.Types.PrivateIpv6GoogleAccess"/> enum.</summary>
             public static class PrivateIpv6GoogleAccess
             {
@@ -1861,6 +1947,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceProperties"/> message.</summary>
         public static class InstanceProperties
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.KeyRevocationActionType"/> enum.</summary>
+            public static class KeyRevocationActionType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.KeyRevocationActionType.UndefinedKeyRevocationActionType"/>.</summary>
+                public const string UndefinedKeyRevocationActionType = "UNDEFINED_KEY_REVOCATION_ACTION_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.KeyRevocationActionType.Unspecified"/>.</summary>
+                public const string Unspecified = "KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.KeyRevocationActionType.None"/>.</summary>
+                public const string None = "NONE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.KeyRevocationActionType.Stop"/>.</summary>
+                public const string Stop = "STOP";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceProperties.Types.PrivateIpv6GoogleAccess"/> enum.</summary>
             public static class PrivateIpv6GoogleAccess
             {
@@ -4313,6 +4415,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.SavedDisk"/> message.</summary>
         public static class SavedDisk
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.SavedDisk.Types.StorageBytesStatus"/> enum.</summary>
             public static class StorageBytesStatus
             {
@@ -4612,6 +4730,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ServiceAttachmentConnectedEndpoint.Types.Status.Closed"/>.</summary>
                 public const string Closed = "CLOSED";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ServiceAttachmentConnectedEndpoint.Types.Status.NeedsAttention"/>.</summary>
+                public const string NeedsAttention = "NEEDS_ATTENTION";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ServiceAttachmentConnectedEndpoint.Types.Status.Pending"/>.</summary>
                 public const string Pending = "PENDING";
 
@@ -4646,6 +4767,35 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Snapshot"/> message.</summary>
         public static class Snapshot
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.SnapshotType"/> enum.</summary>
+            public static class SnapshotType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.SnapshotType.UndefinedSnapshotType"/>.</summary>
+                public const string UndefinedSnapshotType = "UNDEFINED_SNAPSHOT_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.SnapshotType.Archive"/>.</summary>
+                public const string Archive = "ARCHIVE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.SnapshotType.Standard"/>.</summary>
+                public const string Standard = "STANDARD";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.Status"/> enum.</summary>
             public static class Status
             {
@@ -4679,6 +4829,26 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Snapshot.Types.StorageBytesStatus.UpToDate"/>.</summary>
                 public const string UpToDate = "UP_TO_DATE";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties"/> message.</summary>
+        public static class SourceInstanceProperties
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.KeyRevocationActionType"/> enum.</summary>
+            public static class KeyRevocationActionType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.KeyRevocationActionType.UndefinedKeyRevocationActionType"/>.</summary>
+                public const string UndefinedKeyRevocationActionType = "UNDEFINED_KEY_REVOCATION_ACTION_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.KeyRevocationActionType.Unspecified"/>.</summary>
+                public const string Unspecified = "KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.KeyRevocationActionType.None"/>.</summary>
+                public const string None = "NONE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.KeyRevocationActionType.Stop"/>.</summary>
+                public const string Stop = "STOP";
             }
         }
 
@@ -5392,6 +5562,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.InjectedKernelsDeprecated"/>.</summary>
                 public const string InjectedKernelsDeprecated = "INJECTED_KERNELS_DEPRECATED";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.InvalidHealthCheckForDynamicWieghtedLb"/>.</summary>
+                public const string InvalidHealthCheckForDynamicWieghtedLb = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.LargeDeploymentWarning"/>.</summary>
                 public const string LargeDeploymentWarning = "LARGE_DEPLOYMENT_WARNING";
 
@@ -5480,6 +5653,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.InjectedKernelsDeprecated"/>.</summary>
                 public const string InjectedKernelsDeprecated = "INJECTED_KERNELS_DEPRECATED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.InvalidHealthCheckForDynamicWieghtedLb"/>.</summary>
+                public const string InvalidHealthCheckForDynamicWieghtedLb = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.LargeDeploymentWarning"/>.</summary>
                 public const string LargeDeploymentWarning = "LARGE_DEPLOYMENT_WARNING";
