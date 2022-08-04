@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-08-04
+
+### New features
+
+- Update Compute Engine API to revision 20220720 ([issue 723](https://github.com/googleapis/google-cloud-dotnet/issues/723)) ([commit 5bdaae8](https://github.com/googleapis/google-cloud-dotnet/commit/5bdaae8eeb7d8081d22329285ce5fc27e3cc8a8d))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
