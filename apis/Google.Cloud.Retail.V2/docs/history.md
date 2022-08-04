@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.1.0, released 2022-08-04
+
+### New features
+
+- Support case insensitive match on search facets ([commit 10c0429](https://github.com/googleapis/google-cloud-dotnet/commit/10c0429387e35ac500c1947dee81b3b25327e99c))
+- Allow to return min/max values on search numeric facets ([commit 10c0429](https://github.com/googleapis/google-cloud-dotnet/commit/10c0429387e35ac500c1947dee81b3b25327e99c))
+- Allow to use serving configs as an alias of placements ([commit 10c0429](https://github.com/googleapis/google-cloud-dotnet/commit/10c0429387e35ac500c1947dee81b3b25327e99c))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 10c0429](https://github.com/googleapis/google-cloud-dotnet/commit/10c0429387e35ac500c1947dee81b3b25327e99c))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
