@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2022-08-04
+
+### New features
+
+- Add Azure Properties to Connection ([commit 0c0c650](https://github.com/googleapis/google-cloud-dotnet/commit/0c0c6508e17835aeb6a97ccda4c8827adcf71ce3))
+
 ## Version 2.1.0, released 2022-07-27
 
 ### New features
