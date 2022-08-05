@@ -22,6 +22,12 @@
                 "ApproveDisplayVideo360AdvertiserLinkProposalAsync"
               ]
             },
+            "ArchiveAudience": {
+              "methods": [
+                "ArchiveAudience",
+                "ArchiveAudienceAsync"
+              ]
+            },
             "ArchiveCustomDimension": {
               "methods": [
                 "ArchiveCustomDimension",
@@ -68,6 +74,12 @@
               "methods": [
                 "CancelDisplayVideo360AdvertiserLinkProposal",
                 "CancelDisplayVideo360AdvertiserLinkProposalAsync"
+              ]
+            },
+            "CreateAudience": {
+              "methods": [
+                "CreateAudience",
+                "CreateAudienceAsync"
               ]
             },
             "CreateConversionEvent": {
@@ -202,6 +214,18 @@
                 "GetAccountAsync"
               ]
             },
+            "GetAttributionSettings": {
+              "methods": [
+                "GetAttributionSettings",
+                "GetAttributionSettingsAsync"
+              ]
+            },
+            "GetAudience": {
+              "methods": [
+                "GetAudience",
+                "GetAudienceAsync"
+              ]
+            },
             "GetConversionEvent": {
               "methods": [
                 "GetConversionEvent",
@@ -292,6 +316,12 @@
                 "ListAccountsAsync"
               ]
             },
+            "ListAudiences": {
+              "methods": [
+                "ListAudiences",
+                "ListAudiencesAsync"
+              ]
+            },
             "ListConversionEvents": {
               "methods": [
                 "ListConversionEvents",
@@ -374,6 +404,18 @@
               "methods": [
                 "UpdateAccount",
                 "UpdateAccountAsync"
+              ]
+            },
+            "UpdateAttributionSettings": {
+              "methods": [
+                "UpdateAttributionSettings",
+                "UpdateAttributionSettingsAsync"
+              ]
+            },
+            "UpdateAudience": {
+              "methods": [
+                "UpdateAudience",
+                "UpdateAudienceAsync"
               ]
             },
             "UpdateCustomDimension": {

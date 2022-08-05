@@ -9144,6 +9144,886 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_sync",
+      "title": "GetAudienceRequestObject",
+      "description": "Snippet for GetAudience",
+      "file": "AnalyticsAdminServiceClient.GetAudienceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_async",
+      "title": "GetAudienceRequestObjectAsync",
+      "description": "Snippet for GetAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.GetAudienceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_sync_flattened",
+      "title": "GetAudience",
+      "description": "Snippet for GetAudience",
+      "file": "AnalyticsAdminServiceClient.GetAudienceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_async_flattened",
+      "title": "GetAudienceAsync",
+      "description": "Snippet for GetAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.GetAudienceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_sync_flattened_resourceNames",
+      "title": "GetAudienceResourceNames",
+      "description": "Snippet for GetAudience",
+      "file": "AnalyticsAdminServiceClient.GetAudienceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAudience_async_flattened_resourceNames",
+      "title": "GetAudienceResourceNamesAsync",
+      "description": "Snippet for GetAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.GetAudienceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_sync",
+      "title": "ListAudiencesRequestObject",
+      "description": "Snippet for ListAudiences",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiences",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiences",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_async",
+      "title": "ListAudiencesRequestObjectAsync",
+      "description": "Snippet for ListAudiencesAsync",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiencesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiencesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_sync_flattened",
+      "title": "ListAudiences",
+      "description": "Snippet for ListAudiences",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiences",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiences",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_async_flattened",
+      "title": "ListAudiencesAsync",
+      "description": "Snippet for ListAudiencesAsync",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiencesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiencesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_sync_flattened_resourceNames",
+      "title": "ListAudiencesResourceNames",
+      "description": "Snippet for ListAudiences",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiences",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiences",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAudiences_async_flattened_resourceNames",
+      "title": "ListAudiencesResourceNamesAsync",
+      "description": "Snippet for ListAudiencesAsync",
+      "file": "AnalyticsAdminServiceClient.ListAudiencesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudiencesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAudiencesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAudiencesResponse, Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAudiences",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAudiences",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_sync",
+      "title": "CreateAudienceRequestObject",
+      "description": "Snippet for CreateAudience",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_async",
+      "title": "CreateAudienceRequestObjectAsync",
+      "description": "Snippet for CreateAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_sync_flattened",
+      "title": "CreateAudience",
+      "description": "Snippet for CreateAudience",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_async_flattened",
+      "title": "CreateAudienceAsync",
+      "description": "Snippet for CreateAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_sync_flattened_resourceNames",
+      "title": "CreateAudienceResourceNames",
+      "description": "Snippet for CreateAudience",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAudience_async_flattened_resourceNames",
+      "title": "CreateAudienceResourceNamesAsync",
+      "description": "Snippet for CreateAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAudienceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAudience_sync",
+      "title": "UpdateAudienceRequestObject",
+      "description": "Snippet for UpdateAudience",
+      "file": "AnalyticsAdminServiceClient.UpdateAudienceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAudience_async",
+      "title": "UpdateAudienceRequestObjectAsync",
+      "description": "Snippet for UpdateAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAudienceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAudience_sync_flattened",
+      "title": "UpdateAudience",
+      "description": "Snippet for UpdateAudience",
+      "file": "AnalyticsAdminServiceClient.UpdateAudienceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAudience",
+        "resultType": "Google.Analytics.Admin.V1Alpha.Audience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAudience_async_flattened",
+      "title": "UpdateAudienceAsync",
+      "description": "Snippet for UpdateAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAudienceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.Audience>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ArchiveAudience_sync",
+      "title": "ArchiveAudienceRequestObject",
+      "description": "Snippet for ArchiveAudience",
+      "file": "AnalyticsAdminServiceClient.ArchiveAudienceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ArchiveAudience",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ArchiveAudience",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ArchiveAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ArchiveAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ArchiveAudience_async",
+      "title": "ArchiveAudienceRequestObjectAsync",
+      "description": "Snippet for ArchiveAudienceAsync",
+      "file": "AnalyticsAdminServiceClient.ArchiveAudienceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ArchiveAudienceAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ArchiveAudienceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ArchiveAudience",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ArchiveAudience",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_sync",
+      "title": "GetAttributionSettingsRequestObject",
+      "description": "Snippet for GetAttributionSettings",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AttributionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_async",
+      "title": "GetAttributionSettingsRequestObjectAsync",
+      "description": "Snippet for GetAttributionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AttributionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_sync_flattened",
+      "title": "GetAttributionSettings",
+      "description": "Snippet for GetAttributionSettings",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AttributionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_async_flattened",
+      "title": "GetAttributionSettingsAsync",
+      "description": "Snippet for GetAttributionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AttributionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_sync_flattened_resourceNames",
+      "title": "GetAttributionSettingsResourceNames",
+      "description": "Snippet for GetAttributionSettings",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AttributionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_async_flattened_resourceNames",
+      "title": "GetAttributionSettingsResourceNamesAsync",
+      "description": "Snippet for GetAttributionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetAttributionSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAttributionSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AttributionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAttributionSettings_sync",
+      "title": "UpdateAttributionSettingsRequestObject",
+      "description": "Snippet for UpdateAttributionSettings",
+      "file": "AnalyticsAdminServiceClient.UpdateAttributionSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAttributionSettings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AttributionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAttributionSettings_async",
+      "title": "UpdateAttributionSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateAttributionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAttributionSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAttributionSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AttributionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAttributionSettings_sync_flattened",
+      "title": "UpdateAttributionSettings",
+      "description": "Snippet for UpdateAttributionSettings",
+      "file": "AnalyticsAdminServiceClient.UpdateAttributionSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAttributionSettings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AttributionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAttributionSettings_async_flattened",
+      "title": "UpdateAttributionSettingsAsync",
+      "description": "Snippet for UpdateAttributionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAttributionSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAttributionSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AttributionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAttributionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }

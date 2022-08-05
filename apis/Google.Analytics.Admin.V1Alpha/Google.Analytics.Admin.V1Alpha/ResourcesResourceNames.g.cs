@@ -3914,6 +3914,220 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(DataRetentionSettingsName a, DataRetentionSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AttributionSettings</c> resource.</summary>
+    public sealed partial class AttributionSettingsName : gax::IResourceName, sys::IEquatable<AttributionSettingsName>
+    {
+        /// <summary>The possible contents of <see cref="AttributionSettingsName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/attributionSettings</c>.</summary>
+            Property = 1,
+        }
+
+        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/attributionSettings");
+
+        /// <summary>Creates a <see cref="AttributionSettingsName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AttributionSettingsName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AttributionSettingsName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AttributionSettingsName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AttributionSettingsName"/> with the pattern
+        /// <c>properties/{property}/attributionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="AttributionSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static AttributionSettingsName FromProperty(string propertyId) =>
+            new AttributionSettingsName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AttributionSettingsName"/> with pattern
+        /// <c>properties/{property}/attributionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AttributionSettingsName"/> with pattern
+        /// <c>properties/{property}/attributionSettings</c>.
+        /// </returns>
+        public static string Format(string propertyId) => FormatProperty(propertyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AttributionSettingsName"/> with pattern
+        /// <c>properties/{property}/attributionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AttributionSettingsName"/> with pattern
+        /// <c>properties/{property}/attributionSettings</c>.
+        /// </returns>
+        public static string FormatProperty(string propertyId) =>
+            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AttributionSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/attributionSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="attributionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AttributionSettingsName"/> if successful.</returns>
+        public static AttributionSettingsName Parse(string attributionSettingsName) => Parse(attributionSettingsName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AttributionSettingsName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/attributionSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="attributionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AttributionSettingsName"/> if successful.</returns>
+        public static AttributionSettingsName Parse(string attributionSettingsName, bool allowUnparsed) =>
+            TryParse(attributionSettingsName, allowUnparsed, out AttributionSettingsName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AttributionSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/attributionSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="attributionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AttributionSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string attributionSettingsName, out AttributionSettingsName result) =>
+            TryParse(attributionSettingsName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AttributionSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/attributionSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="attributionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AttributionSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string attributionSettingsName, bool allowUnparsed, out AttributionSettingsName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(attributionSettingsName, nameof(attributionSettingsName));
+            gax::TemplatedResourceName resourceName;
+            if (s_property.TryParseName(attributionSettingsName, out resourceName))
+            {
+                result = FromProperty(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(attributionSettingsName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AttributionSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AttributionSettingsName"/> class from the component parts of
+        /// pattern <c>properties/{property}/attributionSettings</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        public AttributionSettingsName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AttributionSettingsName);
+
+        /// <inheritdoc/>
+        public bool Equals(AttributionSettingsName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(AttributionSettingsName a, AttributionSettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(AttributionSettingsName a, AttributionSettingsName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -4147,6 +4361,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::DataRetentionSettingsName DataRetentionSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::DataRetentionSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AttributionSettings
+    {
+        /// <summary>
+        /// <see cref="gaav::AttributionSettingsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AttributionSettingsName AttributionSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AttributionSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
