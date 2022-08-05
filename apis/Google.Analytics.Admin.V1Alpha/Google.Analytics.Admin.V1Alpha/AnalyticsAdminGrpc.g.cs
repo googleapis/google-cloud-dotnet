@@ -301,6 +301,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AttributionSettings> __Marshaller_google_analytics_admin_v1alpha_AttributionSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateAttributionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest> __Marshaller_google_analytics_admin_v1alpha_RunAccessReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -925,6 +929,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         "UpdateAttributionSettings",
         __Marshaller_google_analytics_admin_v1alpha_UpdateAttributionSettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_AttributionSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> __Method_RunAccessReport = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunAccessReport",
+        __Marshaller_google_analytics_admin_v1alpha_RunAccessReportRequest,
+        __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1937,6 +1949,30 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AttributionSettings> UpdateAttributionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a customized report of data access records. The report provides
+      /// records of each time a user reads Google Analytics reporting data. Access
+      /// records are retained for up to 2 years.
+      ///
+      /// Data Access Reports can be requested for a property. The property must be
+      /// in Google Analytics 360. This method is only available to Administrators.
+      ///
+      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// data from Google Analytics through a linkage. These records don't include
+      /// property configuration changes like adding a stream or changing a
+      /// property's time zone. For configuration change history, see
+      /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> RunAccessReport(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -5990,6 +6026,102 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAttributionSettings, null, options, request);
       }
+      /// <summary>
+      /// Returns a customized report of data access records. The report provides
+      /// records of each time a user reads Google Analytics reporting data. Access
+      /// records are retained for up to 2 years.
+      ///
+      /// Data Access Reports can be requested for a property. The property must be
+      /// in Google Analytics 360. This method is only available to Administrators.
+      ///
+      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// data from Google Analytics through a linkage. These records don't include
+      /// property configuration changes like adding a stream or changing a
+      /// property's time zone. For configuration change history, see
+      /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse RunAccessReport(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunAccessReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a customized report of data access records. The report provides
+      /// records of each time a user reads Google Analytics reporting data. Access
+      /// records are retained for up to 2 years.
+      ///
+      /// Data Access Reports can be requested for a property. The property must be
+      /// in Google Analytics 360. This method is only available to Administrators.
+      ///
+      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// data from Google Analytics through a linkage. These records don't include
+      /// property configuration changes like adding a stream or changing a
+      /// property's time zone. For configuration change history, see
+      /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse RunAccessReport(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunAccessReport, null, options, request);
+      }
+      /// <summary>
+      /// Returns a customized report of data access records. The report provides
+      /// records of each time a user reads Google Analytics reporting data. Access
+      /// records are retained for up to 2 years.
+      ///
+      /// Data Access Reports can be requested for a property. The property must be
+      /// in Google Analytics 360. This method is only available to Administrators.
+      ///
+      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// data from Google Analytics through a linkage. These records don't include
+      /// property configuration changes like adding a stream or changing a
+      /// property's time zone. For configuration change history, see
+      /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> RunAccessReportAsync(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunAccessReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a customized report of data access records. The report provides
+      /// records of each time a user reads Google Analytics reporting data. Access
+      /// records are retained for up to 2 years.
+      ///
+      /// Data Access Reports can be requested for a property. The property must be
+      /// in Google Analytics 360. This method is only available to Administrators.
+      ///
+      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// data from Google Analytics through a linkage. These records don't include
+      /// property configuration changes like adding a stream or changing a
+      /// property's time zone. For configuration change history, see
+      /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> RunAccessReportAsync(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunAccessReport, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -6081,7 +6213,8 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_UpdateAudience, serviceImpl.UpdateAudience)
           .AddMethod(__Method_ArchiveAudience, serviceImpl.ArchiveAudience)
           .AddMethod(__Method_GetAttributionSettings, serviceImpl.GetAttributionSettings)
-          .AddMethod(__Method_UpdateAttributionSettings, serviceImpl.UpdateAttributionSettings).Build();
+          .AddMethod(__Method_UpdateAttributionSettings, serviceImpl.UpdateAttributionSettings)
+          .AddMethod(__Method_RunAccessReport, serviceImpl.RunAccessReport).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -6169,6 +6302,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_ArchiveAudience, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ArchiveAudience));
       serviceBinder.AddMethod(__Method_GetAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.GetAttributionSettings));
       serviceBinder.AddMethod(__Method_UpdateAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.UpdateAttributionSettings));
+      serviceBinder.AddMethod(__Method_RunAccessReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse>(serviceImpl.RunAccessReport));
     }
 
   }

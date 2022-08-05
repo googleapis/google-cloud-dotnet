@@ -10024,6 +10024,59 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync",
+      "title": "RunAccessReportRequestObject",
+      "description": "Snippet for RunAccessReport",
+      "file": "AnalyticsAdminServiceClient.RunAccessReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAccessReport",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.RunAccessReport",
+        "resultType": "Google.Analytics.Admin.V1Alpha.RunAccessReportResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "RunAccessReport",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.RunAccessReport",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_async",
+      "title": "RunAccessReportRequestObjectAsync",
+      "description": "Snippet for RunAccessReportAsync",
+      "file": "AnalyticsAdminServiceClient.RunAccessReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAccessReportAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.RunAccessReportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RunAccessReportResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "RunAccessReport",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.RunAccessReport",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
     }
   ]
 }

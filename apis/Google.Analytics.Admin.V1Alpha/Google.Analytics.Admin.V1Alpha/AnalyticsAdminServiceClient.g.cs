@@ -126,6 +126,7 @@ namespace Google.Analytics.Admin.V1Alpha
             ArchiveAudienceSettings = existing.ArchiveAudienceSettings;
             GetAttributionSettingsSettings = existing.GetAttributionSettingsSettings;
             UpdateAttributionSettingsSettings = existing.UpdateAttributionSettingsSettings;
+            RunAccessReportSettings = existing.RunAccessReportSettings;
             OnCopy(existing);
         }
 
@@ -1836,6 +1837,28 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateAttributionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.RunAccessReport</c> and <c>AnalyticsAdminServiceClient.RunAccessReportAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunAccessReportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -9848,6 +9871,69 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(AttributionSettings attributionSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateAttributionSettingsAsync(attributionSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a customized report of data access records. The report provides
+        /// records of each time a user reads Google Analytics reporting data. Access
+        /// records are retained for up to 2 years.
+        /// 
+        /// Data Access Reports can be requested for a property. The property must be
+        /// in Google Analytics 360. This method is only available to Administrators.
+        /// 
+        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// data from Google Analytics through a linkage. These records don't include
+        /// property configuration changes like adding a stream or changing a
+        /// property's time zone. For configuration change history, see
+        /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunAccessReportResponse RunAccessReport(RunAccessReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a customized report of data access records. The report provides
+        /// records of each time a user reads Google Analytics reporting data. Access
+        /// records are retained for up to 2 years.
+        /// 
+        /// Data Access Reports can be requested for a property. The property must be
+        /// in Google Analytics 360. This method is only available to Administrators.
+        /// 
+        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// data from Google Analytics through a linkage. These records don't include
+        /// property configuration changes like adding a stream or changing a
+        /// property's time zone. For configuration change history, see
+        /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunAccessReportResponse> RunAccessReportAsync(RunAccessReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a customized report of data access records. The report provides
+        /// records of each time a user reads Google Analytics reporting data. Access
+        /// records are retained for up to 2 years.
+        /// 
+        /// Data Access Reports can be requested for a property. The property must be
+        /// in Google Analytics 360. This method is only available to Administrators.
+        /// 
+        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// data from Google Analytics through a linkage. These records don't include
+        /// property configuration changes like adding a stream or changing a
+        /// property's time zone. For configuration change history, see
+        /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunAccessReportResponse> RunAccessReportAsync(RunAccessReportRequest request, st::CancellationToken cancellationToken) =>
+            RunAccessReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -10011,6 +10097,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<GetAttributionSettingsRequest, AttributionSettings> _callGetAttributionSettings;
 
         private readonly gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> _callUpdateAttributionSettings;
+
+        private readonly gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> _callRunAccessReport;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -10258,6 +10346,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callUpdateAttributionSettings = clientHelper.BuildApiCall<UpdateAttributionSettingsRequest, AttributionSettings>("UpdateAttributionSettings", grpcClient.UpdateAttributionSettingsAsync, grpcClient.UpdateAttributionSettings, effectiveSettings.UpdateAttributionSettingsSettings).WithGoogleRequestParam("attribution_settings.name", request => request.AttributionSettings?.Name);
             Modify_ApiCall(ref _callUpdateAttributionSettings);
             Modify_UpdateAttributionSettingsApiCall(ref _callUpdateAttributionSettings);
+            _callRunAccessReport = clientHelper.BuildApiCall<RunAccessReportRequest, RunAccessReportResponse>("RunAccessReport", grpcClient.RunAccessReportAsync, grpcClient.RunAccessReport, effectiveSettings.RunAccessReportSettings).WithGoogleRequestParam("entity", request => request.Entity);
+            Modify_ApiCall(ref _callRunAccessReport);
+            Modify_RunAccessReportApiCall(ref _callRunAccessReport);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -10419,6 +10510,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_UpdateAttributionSettingsApiCall(ref gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> call);
 
+        partial void Modify_RunAccessReportApiCall(ref gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -10579,6 +10672,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetAttributionSettingsRequest(ref GetAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAttributionSettingsRequest(ref UpdateAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunAccessReportRequest(ref RunAccessReportRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -12592,6 +12687,54 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_UpdateAttributionSettingsRequest(ref request, ref callSettings);
             return _callUpdateAttributionSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a customized report of data access records. The report provides
+        /// records of each time a user reads Google Analytics reporting data. Access
+        /// records are retained for up to 2 years.
+        /// 
+        /// Data Access Reports can be requested for a property. The property must be
+        /// in Google Analytics 360. This method is only available to Administrators.
+        /// 
+        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// data from Google Analytics through a linkage. These records don't include
+        /// property configuration changes like adding a stream or changing a
+        /// property's time zone. For configuration change history, see
+        /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunAccessReportResponse RunAccessReport(RunAccessReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunAccessReportRequest(ref request, ref callSettings);
+            return _callRunAccessReport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a customized report of data access records. The report provides
+        /// records of each time a user reads Google Analytics reporting data. Access
+        /// records are retained for up to 2 years.
+        /// 
+        /// Data Access Reports can be requested for a property. The property must be
+        /// in Google Analytics 360. This method is only available to Administrators.
+        /// 
+        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
+        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// data from Google Analytics through a linkage. These records don't include
+        /// property configuration changes like adding a stream or changing a
+        /// property's time zone. For configuration change history, see
+        /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RunAccessReportResponse> RunAccessReportAsync(RunAccessReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunAccessReportRequest(ref request, ref callSettings);
+            return _callRunAccessReport.Async(request, callSettings);
         }
     }
 
