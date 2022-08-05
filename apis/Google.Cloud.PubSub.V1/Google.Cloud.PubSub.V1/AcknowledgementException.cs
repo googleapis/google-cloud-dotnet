@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 
@@ -37,25 +38,33 @@ public sealed class AcknowledgementException : Exception
     public AcknowledgementStatus Status { get; }
 
     /// <summary>
+    /// Gets the message ID associated with this instance of <see cref="AcknowledgementException"/>.
+    /// </summary>
+    public string MessageId { get; }
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="AcknowledgementException"/> class.
     /// </summary>
     /// <param name="status">The <see cref="AcknowledgementStatus"/> for the exception.</param>
-    /// <param name="message">A descriptive message about the exception.</param>
-    public AcknowledgementException(AcknowledgementStatus status, string message) : base($"{status}: {message}: {GetErrorMessageFromStatus(status)}") =>
+    /// <param name="messageId">The message ID associated with this instance of exception.</param>
+    public AcknowledgementException(AcknowledgementStatus status, string messageId) : base($"{status}: {messageId}: {GetErrorMessageFromStatus(status)}")
+    {
         Status = status;
+        MessageId = messageId;
+    }
 
     /// <summary>
-    /// Gets the <see cref="AcknowledgementException"/> from the ackId and permanent error message pair.
+    /// Gets the <see cref="AcknowledgementException"/> from the ID and permanent error message pair.
     /// </summary>
-    /// <param name="idErrorPair">The <see cref="KeyValuePair{TKey, TValue}"/> of ackId as key and permanent error message as value.</param>
+    /// <param name="idPermanentErrorPair">The <see cref="KeyValuePair{TKey, TValue}"/> of ID as key and permanent error message as value.</param>
     /// <returns>The <see cref="AcknowledgementException"/>.</returns>
-    internal static AcknowledgementException FromIdErrorPair(KeyValuePair<string, string> idErrorPair) => idErrorPair.Value switch
+    internal static AcknowledgementException FromIdPermanentErrorPair(KeyValuePair<string, string> idPermanentErrorPair) => idPermanentErrorPair.Value switch
     {
         // TODO: We have an enum and string in switch. Check if we can improve it.
-        "PERMANENT_FAILURE_INVALID_ACK_ID" => new AcknowledgementException(AcknowledgementStatus.InvalidAckId, idErrorPair.Key),
-        nameof(AcknowledgementStatus.FailedPrecondition) => new AcknowledgementException(AcknowledgementStatus.FailedPrecondition, idErrorPair.Key),
-        nameof(AcknowledgementStatus.PermissionDenied) => new AcknowledgementException(AcknowledgementStatus.PermissionDenied, idErrorPair.Key),
-        _ => new AcknowledgementException(AcknowledgementStatus.Other, idErrorPair.Key),
+        "PERMANENT_FAILURE_INVALID_ACK_ID" => new AcknowledgementException(AcknowledgementStatus.InvalidAckId, idPermanentErrorPair.Key),
+        nameof(StatusCode.FailedPrecondition) => new AcknowledgementException(AcknowledgementStatus.FailedPrecondition, idPermanentErrorPair.Key),
+        nameof(StatusCode.PermissionDenied) => new AcknowledgementException(AcknowledgementStatus.PermissionDenied, idPermanentErrorPair.Key),
+        _ => new AcknowledgementException(AcknowledgementStatus.Other, idPermanentErrorPair.Key),
     };
 
     /// <summary>
