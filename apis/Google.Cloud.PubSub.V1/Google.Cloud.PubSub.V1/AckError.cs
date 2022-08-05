@@ -60,12 +60,27 @@ internal sealed class AckError
     internal IEnumerable<KeyValuePair<string, string>> PermanentFailures { get; }
 
     /// <summary>
+    /// Gets the AckIds/ExtendIds/NackIds that are successful.
+    /// This collection will be populated with AckIds/ExtendIds/NackIds only if they are successful,
+    /// else this collection will be empty (but not null).
+    /// </summary>
+    internal IEnumerable<string> SuccessfulIds => MessageIds.Except(PermanentFailureIds).Except(TemporaryFailureIds);
+
+    /// <summary>
+    /// Gets all the AckIds/ExtendIds/NackIds for which the response encountered a <see cref="RpcException"/>.
+    /// This collection is always populated with AckIds/ExtendIds/NackIds and is never null.
+    /// </summary>
+    internal IEnumerable<string> MessageIds { get; }
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="AckError"/> class.
     /// </summary>
+    /// <param name="messageIds">The collection of AckId/NackId/ExtendId for which response is being processed.</param>
     /// <param name="temporaryFailures">The collection of temporary failed AckId/NackId/ExtendId as key and their corresponding failure reason as value.</param>
     /// <param name="permanentFailures">The collection of permanent failed AckId/NackId/ExtendId as key and their corresponding failure reason as value.</param>
-    internal AckError(IEnumerable<KeyValuePair<string, string>> temporaryFailures, IEnumerable<KeyValuePair<string, string>> permanentFailures)
+    internal AckError(IEnumerable<string> messageIds, IEnumerable<KeyValuePair<string, string>> temporaryFailures, IEnumerable<KeyValuePair<string, string>> permanentFailures)
     {
+        MessageIds = messageIds;
         TemporaryFailures = temporaryFailures;
         PermanentFailures = permanentFailures;
     }
@@ -81,8 +96,22 @@ internal sealed class AckError
     /// <returns>The sequence of <see cref="AcknowledgementException"/> if there are permanent failures, empty otherwise.</returns>
     internal IEnumerable<AcknowledgementException> GetPermanentExceptions() =>
         HasPermanentFailures
-            ? PermanentFailures.Select(AcknowledgementException.FromIdErrorPair).ToList()
+            ? PermanentFailures.Select(AcknowledgementException.FromIdPermanentErrorPair).ToList()
             : Enumerable.Empty<AcknowledgementException>();
+
+    /// <summary>
+    /// Gets the sequence of <see cref="AckNackResponse"/>
+    /// from the current instance of <seealso cref="AckError"/>.
+    /// It returns the AckNackResponse of only the successful or permanently failed message IDs.
+    /// </summary>
+    /// <remarks>
+    /// This method will always return a sequence of <see cref="AckNackResponse"/>. This sequence will be empty (but not null) if there are no successful responses or permanent failures
+    /// in the current instance of <seealso cref="AckError"/>.
+    /// </remarks>
+    /// <returns>The sequence of <see cref="AckNackResponse"/> if there are successful responses or permanent failures, empty otherwise.</returns>
+    internal IEnumerable<AckNackResponse> GetAckNackResponses() =>
+        PermanentFailures.Select(AckNackResponse.FromIdPermanentErrorPair)
+        .Concat(SuccessfulIds.Select(AckNackResponse.FromSuccessfulId));
 
     /// <summary>
     /// Gets the <see cref="AckError"/> from the <see cref="RpcException"/> while calling Acknowledge or ModifyAckDeadline RPC.
@@ -100,7 +129,7 @@ internal sealed class AckError
         if (retryAll)
         {
             // Return all ids in temporary failures and empty permanent failures, so that the caller can retry the whole temporary batch.
-            return new AckError(ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()), Enumerable.Empty<KeyValuePair<string, string>>());
+            return new AckError(ids, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()), Enumerable.Empty<KeyValuePair<string, string>>());
         }
 
         // We can have complete or partial failure. We classify the error as temporary or permanent
@@ -121,13 +150,13 @@ internal sealed class AckError
         if (temporaryErrors.Any() || permanentErrors.Any())
         {
             // If temporary or permanent error messages are present, it means the entire request hasn't failed with a permanent error.
-            return new AckError(temporaryErrors, permanentErrors);
+            return new AckError(ids, temporaryErrors, permanentErrors);
         }
         else
         {
             // Now, if temporary or permanent error messages are *not* present, it means the entire request has failed with a permanent error.
             // It may be due to a gRPC error like a failed precondition or a permission denied error or other permanent error.
-            return new AckError(Enumerable.Empty<KeyValuePair<string, string>>(), ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
+            return new AckError(ids, temporaryErrors, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
         }
     }
 
