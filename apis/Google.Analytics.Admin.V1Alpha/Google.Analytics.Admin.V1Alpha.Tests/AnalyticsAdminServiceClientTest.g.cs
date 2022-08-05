@@ -7374,5 +7374,103 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void RunAccessReportRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            RunAccessReportRequest request = new RunAccessReportRequest
+            {
+                Entity = "entitycc38e6f5",
+                Dimensions =
+                {
+                    new AccessDimension(),
+                },
+                Metrics = { new AccessMetric(), },
+                DateRanges =
+                {
+                    new AccessDateRange(),
+                },
+                DimensionFilter = new AccessFilterExpression(),
+                MetricFilter = new AccessFilterExpression(),
+                Offset = -4389998161825790342L,
+                Limit = 7494001492025909162L,
+                TimeZone = "time_zone73f23b20",
+                OrderBys =
+                {
+                    new AccessOrderBy(),
+                },
+                ReturnEntityQuota = true,
+            };
+            RunAccessReportResponse expectedResponse = new RunAccessReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new AccessDimensionHeader(),
+                },
+                MetricHeaders =
+                {
+                    new AccessMetricHeader(),
+                },
+                Rows = { new AccessRow(), },
+                RowCount = 743251772,
+                Quota = new AccessQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunAccessReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
+            RunAccessReportResponse response = client.RunAccessReport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunAccessReportRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            RunAccessReportRequest request = new RunAccessReportRequest
+            {
+                Entity = "entitycc38e6f5",
+                Dimensions =
+                {
+                    new AccessDimension(),
+                },
+                Metrics = { new AccessMetric(), },
+                DateRanges =
+                {
+                    new AccessDateRange(),
+                },
+                DimensionFilter = new AccessFilterExpression(),
+                MetricFilter = new AccessFilterExpression(),
+                Offset = -4389998161825790342L,
+                Limit = 7494001492025909162L,
+                TimeZone = "time_zone73f23b20",
+                OrderBys =
+                {
+                    new AccessOrderBy(),
+                },
+                ReturnEntityQuota = true,
+            };
+            RunAccessReportResponse expectedResponse = new RunAccessReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new AccessDimensionHeader(),
+                },
+                MetricHeaders =
+                {
+                    new AccessMetricHeader(),
+                },
+                Rows = { new AccessRow(), },
+                RowCount = 743251772,
+                Quota = new AccessQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunAccessReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunAccessReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
+            RunAccessReportResponse responseCallSettings = await client.RunAccessReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RunAccessReportResponse responseCancellationToken = await client.RunAccessReportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
