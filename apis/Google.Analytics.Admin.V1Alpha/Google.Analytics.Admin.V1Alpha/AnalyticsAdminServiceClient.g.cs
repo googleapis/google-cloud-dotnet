@@ -119,6 +119,13 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateDataStreamSettings = existing.UpdateDataStreamSettings;
             ListDataStreamsSettings = existing.ListDataStreamsSettings;
             GetDataStreamSettings = existing.GetDataStreamSettings;
+            GetAudienceSettings = existing.GetAudienceSettings;
+            ListAudiencesSettings = existing.ListAudiencesSettings;
+            CreateAudienceSettings = existing.CreateAudienceSettings;
+            UpdateAudienceSettings = existing.UpdateAudienceSettings;
+            ArchiveAudienceSettings = existing.ArchiveAudienceSettings;
+            GetAttributionSettingsSettings = existing.GetAttributionSettingsSettings;
+            UpdateAttributionSettingsSettings = existing.UpdateAttributionSettingsSettings;
             OnCopy(existing);
         }
 
@@ -1677,6 +1684,158 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDataStreamSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetAudience</c> and <c>AnalyticsAdminServiceClient.GetAudienceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAudienceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListAudiences</c> and <c>AnalyticsAdminServiceClient.ListAudiencesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAudiencesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateAudience</c> and <c>AnalyticsAdminServiceClient.CreateAudienceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAudienceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateAudience</c> and <c>AnalyticsAdminServiceClient.UpdateAudienceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAudienceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ArchiveAudience</c> and <c>AnalyticsAdminServiceClient.ArchiveAudienceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ArchiveAudienceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetAttributionSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.GetAttributionSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAttributionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateAttributionSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateAttributionSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAttributionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -9012,6 +9171,683 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DataStream> GetDataStreamAsync(DataStreamName name, st::CancellationToken cancellationToken) =>
             GetDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience GetAudience(GetAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(GetAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(GetAudienceRequest request, st::CancellationToken cancellationToken) =>
+            GetAudienceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience GetAudience(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudience(new GetAudienceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceAsync(new GetAudienceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAudienceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience GetAudience(AudienceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudience(new GetAudienceRequest
+            {
+                AudienceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(AudienceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceAsync(new GetAudienceRequest
+            {
+                AudienceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/audiences/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> GetAudienceAsync(AudienceName name, st::CancellationToken cancellationToken) =>
+            GetAudienceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(ListAudiencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(ListAudiencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudiences(new ListAudiencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudiencesAsync(new ListAudiencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudiences(new ListAudiencesRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudiencesAsync(new ListAudiencesRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience CreateAudience(CreateAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(CreateAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(CreateAudienceRequest request, st::CancellationToken cancellationToken) =>
+            CreateAudienceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience CreateAudience(string parent, Audience audience, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudience(new CreateAudienceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(string parent, Audience audience, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceAsync(new CreateAudienceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(string parent, Audience audience, st::CancellationToken cancellationToken) =>
+            CreateAudienceAsync(parent, audience, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience CreateAudience(PropertyName parent, Audience audience, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudience(new CreateAudienceRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(PropertyName parent, Audience audience, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceAsync(new CreateAudienceRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="audience">
+        /// Required. The audience to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> CreateAudienceAsync(PropertyName parent, Audience audience, st::CancellationToken cancellationToken) =>
+            CreateAudienceAsync(parent, audience, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience UpdateAudience(UpdateAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> UpdateAudienceAsync(UpdateAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> UpdateAudienceAsync(UpdateAudienceRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAudienceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="audience">
+        /// Required. The audience to update.
+        /// The audience's `name` field is used to identify the audience to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Audience UpdateAudience(Audience audience, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAudience(new UpdateAudienceRequest
+            {
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="audience">
+        /// Required. The audience to update.
+        /// The audience's `name` field is used to identify the audience to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> UpdateAudienceAsync(Audience audience, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAudienceAsync(new UpdateAudienceRequest
+            {
+                Audience = gax::GaxPreconditions.CheckNotNull(audience, nameof(audience)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="audience">
+        /// Required. The audience to update.
+        /// The audience's `name` field is used to identify the audience to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Audience> UpdateAudienceAsync(Audience audience, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAudienceAsync(audience, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Archives an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ArchiveAudience(ArchiveAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Archives an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ArchiveAudienceAsync(ArchiveAudienceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Archives an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ArchiveAudienceAsync(ArchiveAudienceRequest request, st::CancellationToken cancellationToken) =>
+            ArchiveAudienceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributionSettings GetAttributionSettings(GetAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(GetAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(GetAttributionSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetAttributionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributionSettings GetAttributionSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributionSettings(new GetAttributionSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributionSettingsAsync(new GetAttributionSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAttributionSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributionSettings GetAttributionSettings(AttributionSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributionSettings(new GetAttributionSettingsRequest
+            {
+                AttributionSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(AttributionSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributionSettingsAsync(new GetAttributionSettingsRequest
+            {
+                AttributionSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attribution settings to retrieve.
+        /// Format: properties/{property}/attributionSettings
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> GetAttributionSettingsAsync(AttributionSettingsName name, st::CancellationToken cancellationToken) =>
+            GetAttributionSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributionSettings UpdateAttributionSettings(UpdateAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(UpdateAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(UpdateAttributionSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAttributionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="attributionSettings">
+        /// Required. The attribution settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributionSettings UpdateAttributionSettings(AttributionSettings attributionSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAttributionSettings(new UpdateAttributionSettingsRequest
+            {
+                AttributionSettings = gax::GaxPreconditions.CheckNotNull(attributionSettings, nameof(attributionSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="attributionSettings">
+        /// Required. The attribution settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(AttributionSettings attributionSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAttributionSettingsAsync(new UpdateAttributionSettingsRequest
+            {
+                AttributionSettings = gax::GaxPreconditions.CheckNotNull(attributionSettings, nameof(attributionSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="attributionSettings">
+        /// Required. The attribution settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(AttributionSettings attributionSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAttributionSettingsAsync(attributionSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -9161,6 +9997,20 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<ListDataStreamsRequest, ListDataStreamsResponse> _callListDataStreams;
 
         private readonly gaxgrpc::ApiCall<GetDataStreamRequest, DataStream> _callGetDataStream;
+
+        private readonly gaxgrpc::ApiCall<GetAudienceRequest, Audience> _callGetAudience;
+
+        private readonly gaxgrpc::ApiCall<ListAudiencesRequest, ListAudiencesResponse> _callListAudiences;
+
+        private readonly gaxgrpc::ApiCall<CreateAudienceRequest, Audience> _callCreateAudience;
+
+        private readonly gaxgrpc::ApiCall<UpdateAudienceRequest, Audience> _callUpdateAudience;
+
+        private readonly gaxgrpc::ApiCall<ArchiveAudienceRequest, wkt::Empty> _callArchiveAudience;
+
+        private readonly gaxgrpc::ApiCall<GetAttributionSettingsRequest, AttributionSettings> _callGetAttributionSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> _callUpdateAttributionSettings;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -9387,6 +10237,27 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetDataStream = clientHelper.BuildApiCall<GetDataStreamRequest, DataStream>("GetDataStream", grpcClient.GetDataStreamAsync, grpcClient.GetDataStream, effectiveSettings.GetDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataStream);
             Modify_GetDataStreamApiCall(ref _callGetDataStream);
+            _callGetAudience = clientHelper.BuildApiCall<GetAudienceRequest, Audience>("GetAudience", grpcClient.GetAudienceAsync, grpcClient.GetAudience, effectiveSettings.GetAudienceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAudience);
+            Modify_GetAudienceApiCall(ref _callGetAudience);
+            _callListAudiences = clientHelper.BuildApiCall<ListAudiencesRequest, ListAudiencesResponse>("ListAudiences", grpcClient.ListAudiencesAsync, grpcClient.ListAudiences, effectiveSettings.ListAudiencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAudiences);
+            Modify_ListAudiencesApiCall(ref _callListAudiences);
+            _callCreateAudience = clientHelper.BuildApiCall<CreateAudienceRequest, Audience>("CreateAudience", grpcClient.CreateAudienceAsync, grpcClient.CreateAudience, effectiveSettings.CreateAudienceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAudience);
+            Modify_CreateAudienceApiCall(ref _callCreateAudience);
+            _callUpdateAudience = clientHelper.BuildApiCall<UpdateAudienceRequest, Audience>("UpdateAudience", grpcClient.UpdateAudienceAsync, grpcClient.UpdateAudience, effectiveSettings.UpdateAudienceSettings).WithGoogleRequestParam("audience.name", request => request.Audience?.Name);
+            Modify_ApiCall(ref _callUpdateAudience);
+            Modify_UpdateAudienceApiCall(ref _callUpdateAudience);
+            _callArchiveAudience = clientHelper.BuildApiCall<ArchiveAudienceRequest, wkt::Empty>("ArchiveAudience", grpcClient.ArchiveAudienceAsync, grpcClient.ArchiveAudience, effectiveSettings.ArchiveAudienceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callArchiveAudience);
+            Modify_ArchiveAudienceApiCall(ref _callArchiveAudience);
+            _callGetAttributionSettings = clientHelper.BuildApiCall<GetAttributionSettingsRequest, AttributionSettings>("GetAttributionSettings", grpcClient.GetAttributionSettingsAsync, grpcClient.GetAttributionSettings, effectiveSettings.GetAttributionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAttributionSettings);
+            Modify_GetAttributionSettingsApiCall(ref _callGetAttributionSettings);
+            _callUpdateAttributionSettings = clientHelper.BuildApiCall<UpdateAttributionSettingsRequest, AttributionSettings>("UpdateAttributionSettings", grpcClient.UpdateAttributionSettingsAsync, grpcClient.UpdateAttributionSettings, effectiveSettings.UpdateAttributionSettingsSettings).WithGoogleRequestParam("attribution_settings.name", request => request.AttributionSettings?.Name);
+            Modify_ApiCall(ref _callUpdateAttributionSettings);
+            Modify_UpdateAttributionSettingsApiCall(ref _callUpdateAttributionSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -9534,6 +10405,20 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_GetDataStreamApiCall(ref gaxgrpc::ApiCall<GetDataStreamRequest, DataStream> call);
 
+        partial void Modify_GetAudienceApiCall(ref gaxgrpc::ApiCall<GetAudienceRequest, Audience> call);
+
+        partial void Modify_ListAudiencesApiCall(ref gaxgrpc::ApiCall<ListAudiencesRequest, ListAudiencesResponse> call);
+
+        partial void Modify_CreateAudienceApiCall(ref gaxgrpc::ApiCall<CreateAudienceRequest, Audience> call);
+
+        partial void Modify_UpdateAudienceApiCall(ref gaxgrpc::ApiCall<UpdateAudienceRequest, Audience> call);
+
+        partial void Modify_ArchiveAudienceApiCall(ref gaxgrpc::ApiCall<ArchiveAudienceRequest, wkt::Empty> call);
+
+        partial void Modify_GetAttributionSettingsApiCall(ref gaxgrpc::ApiCall<GetAttributionSettingsRequest, AttributionSettings> call);
+
+        partial void Modify_UpdateAttributionSettingsApiCall(ref gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -9680,6 +10565,20 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_ListDataStreamsRequest(ref ListDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDataStreamRequest(ref GetDataStreamRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAudienceRequest(ref GetAudienceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAudiencesRequest(ref ListAudiencesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAudienceRequest(ref CreateAudienceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAudienceRequest(ref UpdateAudienceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ArchiveAudienceRequest(ref ArchiveAudienceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAttributionSettingsRequest(ref GetAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAttributionSettingsRequest(ref UpdateAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -11522,6 +12421,178 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_GetDataStreamRequest(ref request, ref callSettings);
             return _callGetDataStream.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Audience GetAudience(GetAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAudienceRequest(ref request, ref callSettings);
+            return _callGetAudience.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single Audience.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Audience> GetAudienceAsync(GetAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAudienceRequest(ref request, ref callSettings);
+            return _callGetAudience.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Audience"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAudiencesResponse, Audience> ListAudiences(ListAudiencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAudiencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAudiencesRequest, ListAudiencesResponse, Audience>(_callListAudiences, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Audiences on a property.
+        /// Audiences created before 2020 may not be supported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Audience"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAudiencesResponse, Audience> ListAudiencesAsync(ListAudiencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAudiencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAudiencesRequest, ListAudiencesResponse, Audience>(_callListAudiences, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Audience CreateAudience(CreateAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceRequest(ref request, ref callSettings);
+            return _callCreateAudience.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an Audience.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Audience> CreateAudienceAsync(CreateAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceRequest(ref request, ref callSettings);
+            return _callCreateAudience.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Audience UpdateAudience(UpdateAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAudienceRequest(ref request, ref callSettings);
+            return _callUpdateAudience.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Audience> UpdateAudienceAsync(UpdateAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAudienceRequest(ref request, ref callSettings);
+            return _callUpdateAudience.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Archives an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void ArchiveAudience(ArchiveAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ArchiveAudienceRequest(ref request, ref callSettings);
+            _callArchiveAudience.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Archives an Audience on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task ArchiveAudienceAsync(ArchiveAudienceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ArchiveAudienceRequest(ref request, ref callSettings);
+            return _callArchiveAudience.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributionSettings GetAttributionSettings(GetAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttributionSettingsRequest(ref request, ref callSettings);
+            return _callGetAttributionSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a AttributionSettings singleton.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributionSettings> GetAttributionSettingsAsync(GetAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttributionSettingsRequest(ref request, ref callSettings);
+            return _callGetAttributionSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributionSettings UpdateAttributionSettings(UpdateAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAttributionSettingsRequest(ref request, ref callSettings);
+            return _callUpdateAttributionSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates attribution settings on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributionSettings> UpdateAttributionSettingsAsync(UpdateAttributionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAttributionSettingsRequest(ref request, ref callSettings);
+            return _callUpdateAttributionSettings.Async(request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -11581,6 +12652,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListDataStreamsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAudiencesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -11702,6 +12777,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DataStream> GetEnumerator() => DataStreams.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAudiencesResponse : gaxgrpc::IPageResponse<Audience>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Audience> GetEnumerator() => Audiences.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

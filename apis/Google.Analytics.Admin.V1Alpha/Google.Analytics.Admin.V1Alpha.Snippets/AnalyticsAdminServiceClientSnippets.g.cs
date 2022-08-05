@@ -7653,5 +7653,709 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             DataStream response = await analyticsAdminServiceClient.GetDataStreamAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetAudience</summary>
+        public void GetAudienceRequestObject()
+        {
+            // Snippet: GetAudience(GetAudienceRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetAudienceRequest request = new GetAudienceRequest
+            {
+                AudienceName = AudienceName.FromPropertyAudience("[PROPERTY]", "[AUDIENCE]"),
+            };
+            // Make the request
+            Audience response = analyticsAdminServiceClient.GetAudience(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAudienceAsync</summary>
+        public async Task GetAudienceRequestObjectAsync()
+        {
+            // Snippet: GetAudienceAsync(GetAudienceRequest, CallSettings)
+            // Additional: GetAudienceAsync(GetAudienceRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAudienceRequest request = new GetAudienceRequest
+            {
+                AudienceName = AudienceName.FromPropertyAudience("[PROPERTY]", "[AUDIENCE]"),
+            };
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.GetAudienceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAudience</summary>
+        public void GetAudience()
+        {
+            // Snippet: GetAudience(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/audiences/[AUDIENCE]";
+            // Make the request
+            Audience response = analyticsAdminServiceClient.GetAudience(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAudienceAsync</summary>
+        public async Task GetAudienceAsync()
+        {
+            // Snippet: GetAudienceAsync(string, CallSettings)
+            // Additional: GetAudienceAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/audiences/[AUDIENCE]";
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.GetAudienceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAudience</summary>
+        public void GetAudienceResourceNames()
+        {
+            // Snippet: GetAudience(AudienceName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AudienceName name = AudienceName.FromPropertyAudience("[PROPERTY]", "[AUDIENCE]");
+            // Make the request
+            Audience response = analyticsAdminServiceClient.GetAudience(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAudienceAsync</summary>
+        public async Task GetAudienceResourceNamesAsync()
+        {
+            // Snippet: GetAudienceAsync(AudienceName, CallSettings)
+            // Additional: GetAudienceAsync(AudienceName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AudienceName name = AudienceName.FromPropertyAudience("[PROPERTY]", "[AUDIENCE]");
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.GetAudienceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiences</summary>
+        public void ListAudiencesRequestObject()
+        {
+            // Snippet: ListAudiences(ListAudiencesRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListAudiencesRequest request = new ListAudiencesRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiences(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Audience item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAudiencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiencesAsync</summary>
+        public async Task ListAudiencesRequestObjectAsync()
+        {
+            // Snippet: ListAudiencesAsync(ListAudiencesRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAudiencesRequest request = new ListAudiencesRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiencesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Audience item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAudiencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiences</summary>
+        public void ListAudiences()
+        {
+            // Snippet: ListAudiences(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Audience item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAudiencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiencesAsync</summary>
+        public async Task ListAudiencesAsync()
+        {
+            // Snippet: ListAudiencesAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Audience item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAudiencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiences</summary>
+        public void ListAudiencesResourceNames()
+        {
+            // Snippet: ListAudiences(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Audience item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAudiencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAudiencesAsync</summary>
+        public async Task ListAudiencesResourceNamesAsync()
+        {
+            // Snippet: ListAudiencesAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAudiencesResponse, Audience> response = analyticsAdminServiceClient.ListAudiencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Audience item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAudiencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Audience item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Audience> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Audience item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudience</summary>
+        public void CreateAudienceRequestObject()
+        {
+            // Snippet: CreateAudience(CreateAudienceRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAudienceRequest request = new CreateAudienceRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Audience = new Audience(),
+            };
+            // Make the request
+            Audience response = analyticsAdminServiceClient.CreateAudience(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceAsync</summary>
+        public async Task CreateAudienceRequestObjectAsync()
+        {
+            // Snippet: CreateAudienceAsync(CreateAudienceRequest, CallSettings)
+            // Additional: CreateAudienceAsync(CreateAudienceRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAudienceRequest request = new CreateAudienceRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Audience = new Audience(),
+            };
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.CreateAudienceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudience</summary>
+        public void CreateAudience()
+        {
+            // Snippet: CreateAudience(string, Audience, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            Audience audience = new Audience();
+            // Make the request
+            Audience response = analyticsAdminServiceClient.CreateAudience(parent, audience);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceAsync</summary>
+        public async Task CreateAudienceAsync()
+        {
+            // Snippet: CreateAudienceAsync(string, Audience, CallSettings)
+            // Additional: CreateAudienceAsync(string, Audience, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            Audience audience = new Audience();
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.CreateAudienceAsync(parent, audience);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudience</summary>
+        public void CreateAudienceResourceNames()
+        {
+            // Snippet: CreateAudience(PropertyName, Audience, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            Audience audience = new Audience();
+            // Make the request
+            Audience response = analyticsAdminServiceClient.CreateAudience(parent, audience);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceAsync</summary>
+        public async Task CreateAudienceResourceNamesAsync()
+        {
+            // Snippet: CreateAudienceAsync(PropertyName, Audience, CallSettings)
+            // Additional: CreateAudienceAsync(PropertyName, Audience, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            Audience audience = new Audience();
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.CreateAudienceAsync(parent, audience);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAudience</summary>
+        public void UpdateAudienceRequestObject()
+        {
+            // Snippet: UpdateAudience(UpdateAudienceRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAudienceRequest request = new UpdateAudienceRequest
+            {
+                Audience = new Audience(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Audience response = analyticsAdminServiceClient.UpdateAudience(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAudienceAsync</summary>
+        public async Task UpdateAudienceRequestObjectAsync()
+        {
+            // Snippet: UpdateAudienceAsync(UpdateAudienceRequest, CallSettings)
+            // Additional: UpdateAudienceAsync(UpdateAudienceRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAudienceRequest request = new UpdateAudienceRequest
+            {
+                Audience = new Audience(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.UpdateAudienceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAudience</summary>
+        public void UpdateAudience()
+        {
+            // Snippet: UpdateAudience(Audience, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            Audience audience = new Audience();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Audience response = analyticsAdminServiceClient.UpdateAudience(audience, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAudienceAsync</summary>
+        public async Task UpdateAudienceAsync()
+        {
+            // Snippet: UpdateAudienceAsync(Audience, FieldMask, CallSettings)
+            // Additional: UpdateAudienceAsync(Audience, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Audience audience = new Audience();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Audience response = await analyticsAdminServiceClient.UpdateAudienceAsync(audience, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ArchiveAudience</summary>
+        public void ArchiveAudienceRequestObject()
+        {
+            // Snippet: ArchiveAudience(ArchiveAudienceRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ArchiveAudienceRequest request = new ArchiveAudienceRequest
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.ArchiveAudience(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ArchiveAudienceAsync</summary>
+        public async Task ArchiveAudienceRequestObjectAsync()
+        {
+            // Snippet: ArchiveAudienceAsync(ArchiveAudienceRequest, CallSettings)
+            // Additional: ArchiveAudienceAsync(ArchiveAudienceRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ArchiveAudienceRequest request = new ArchiveAudienceRequest
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.ArchiveAudienceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettings</summary>
+        public void GetAttributionSettingsRequestObject()
+        {
+            // Snippet: GetAttributionSettings(GetAttributionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetAttributionSettingsRequest request = new GetAttributionSettingsRequest
+            {
+                AttributionSettingsName = AttributionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            AttributionSettings response = analyticsAdminServiceClient.GetAttributionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettingsAsync</summary>
+        public async Task GetAttributionSettingsRequestObjectAsync()
+        {
+            // Snippet: GetAttributionSettingsAsync(GetAttributionSettingsRequest, CallSettings)
+            // Additional: GetAttributionSettingsAsync(GetAttributionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAttributionSettingsRequest request = new GetAttributionSettingsRequest
+            {
+                AttributionSettingsName = AttributionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            AttributionSettings response = await analyticsAdminServiceClient.GetAttributionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettings</summary>
+        public void GetAttributionSettings()
+        {
+            // Snippet: GetAttributionSettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/attributionSettings";
+            // Make the request
+            AttributionSettings response = analyticsAdminServiceClient.GetAttributionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettingsAsync</summary>
+        public async Task GetAttributionSettingsAsync()
+        {
+            // Snippet: GetAttributionSettingsAsync(string, CallSettings)
+            // Additional: GetAttributionSettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/attributionSettings";
+            // Make the request
+            AttributionSettings response = await analyticsAdminServiceClient.GetAttributionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettings</summary>
+        public void GetAttributionSettingsResourceNames()
+        {
+            // Snippet: GetAttributionSettings(AttributionSettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AttributionSettingsName name = AttributionSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            AttributionSettings response = analyticsAdminServiceClient.GetAttributionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributionSettingsAsync</summary>
+        public async Task GetAttributionSettingsResourceNamesAsync()
+        {
+            // Snippet: GetAttributionSettingsAsync(AttributionSettingsName, CallSettings)
+            // Additional: GetAttributionSettingsAsync(AttributionSettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AttributionSettingsName name = AttributionSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            AttributionSettings response = await analyticsAdminServiceClient.GetAttributionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributionSettings</summary>
+        public void UpdateAttributionSettingsRequestObject()
+        {
+            // Snippet: UpdateAttributionSettings(UpdateAttributionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAttributionSettingsRequest request = new UpdateAttributionSettingsRequest
+            {
+                AttributionSettings = new AttributionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributionSettings response = analyticsAdminServiceClient.UpdateAttributionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributionSettingsAsync</summary>
+        public async Task UpdateAttributionSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateAttributionSettingsAsync(UpdateAttributionSettingsRequest, CallSettings)
+            // Additional: UpdateAttributionSettingsAsync(UpdateAttributionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAttributionSettingsRequest request = new UpdateAttributionSettingsRequest
+            {
+                AttributionSettings = new AttributionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributionSettings response = await analyticsAdminServiceClient.UpdateAttributionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributionSettings</summary>
+        public void UpdateAttributionSettings()
+        {
+            // Snippet: UpdateAttributionSettings(AttributionSettings, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AttributionSettings attributionSettings = new AttributionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AttributionSettings response = analyticsAdminServiceClient.UpdateAttributionSettings(attributionSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributionSettingsAsync</summary>
+        public async Task UpdateAttributionSettingsAsync()
+        {
+            // Snippet: UpdateAttributionSettingsAsync(AttributionSettings, FieldMask, CallSettings)
+            // Additional: UpdateAttributionSettingsAsync(AttributionSettings, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AttributionSettings attributionSettings = new AttributionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AttributionSettings response = await analyticsAdminServiceClient.UpdateAttributionSettingsAsync(attributionSettings, updateMask);
+            // End snippet
+        }
     }
 }

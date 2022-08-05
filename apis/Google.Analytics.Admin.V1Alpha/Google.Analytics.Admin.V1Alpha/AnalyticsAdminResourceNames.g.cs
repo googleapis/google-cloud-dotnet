@@ -935,4 +935,64 @@ namespace Google.Analytics.Admin.V1Alpha
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetAudienceRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AudienceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AudienceName AudienceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AudienceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAudiencesRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAudienceRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ArchiveAudienceRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::PropertyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::PropertyName PropertyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::PropertyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAttributionSettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AttributionSettingsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AttributionSettingsName AttributionSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AttributionSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

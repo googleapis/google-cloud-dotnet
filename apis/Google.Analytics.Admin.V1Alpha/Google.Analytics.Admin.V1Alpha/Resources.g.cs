@@ -34,259 +34,298 @@ namespace Google.Analytics.Admin.V1Alpha {
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMZGlzcGxheV9uYW1l",
             "GAQgASgJQgPgQQISEwoLcmVnaW9uX2NvZGUYBSABKAkSFAoHZGVsZXRlZBgG",
             "IAEoCEID4EEDOj7qQTsKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
-            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSLvBAoIUHJvcGVydHkSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKBnBhcmVudBgC",
-            "IAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EECEksKEWluZHVz",
-            "dHJ5X2NhdGVnb3J5GAYgASgOMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhLkluZHVzdHJ5Q2F0ZWdvcnkSFgoJdGltZV96b25lGAcgASgJQgPg",
-            "QQISFQoNY3VycmVuY3lfY29kZRgIIAEoCRJICg1zZXJ2aWNlX2xldmVsGAog",
-            "ASgOMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlNlcnZpY2VM",
-            "ZXZlbEID4EEDEjQKC2RlbGV0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC2V4cGlyZV90aW1lGAwgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4KB2FjY291bnQYDSABKAlC",
-            "LeBBBfpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3Vu",
-            "dDpC6kE/CiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0",
-            "eRIVcHJvcGVydGllcy97cHJvcGVydHl9IvkHCgpEYXRhU3RyZWFtElMKD3dl",
-            "Yl9zdHJlYW1fZGF0YRgGIAEoCzI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5EYXRhU3RyZWFtLldlYlN0cmVhbURhdGFIABJiChdhbmRyb2lk",
-            "X2FwcF9zdHJlYW1fZGF0YRgHIAEoCzI/Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5EYXRhU3RyZWFtLkFuZHJvaWRBcHBTdHJlYW1EYXRhSAAS",
-            "WgoTaW9zX2FwcF9zdHJlYW1fZGF0YRgIIAEoCzI7Lmdvb2dsZS5hbmFseXRp",
-            "Y3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLklvc0FwcFN0cmVhbURhdGFI",
-            "ABIRCgRuYW1lGAEgASgJQgPgQQMSTwoEdHlwZRgCIAEoDjI5Lmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLkRhdGFTdHJlYW1U",
-            "eXBlQgbgQQXgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90",
-            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDGmQKDVdlYlN0cmVhbURhdGESGwoObWVhc3VyZW1lbnRfaWQYASAB",
-            "KAlCA+BBAxIcCg9maXJlYmFzZV9hcHBfaWQYAiABKAlCA+BBAxIYCgtkZWZh",
-            "dWx0X3VyaRgDIAEoCUID4EEFGk8KFEFuZHJvaWRBcHBTdHJlYW1EYXRhEhwK",
-            "D2ZpcmViYXNlX2FwcF9pZBgBIAEoCUID4EEDEhkKDHBhY2thZ2VfbmFtZRgC",
-            "IAEoCUID4EEFGksKEElvc0FwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBw",
-            "X2lkGAEgASgJQgPgQQMSGQoJYnVuZGxlX2lkGAIgASgJQgbgQQXgQQIifQoO",
-            "RGF0YVN0cmVhbVR5cGUSIAocREFUQV9TVFJFQU1fVFlQRV9VTlNQRUNJRklF",
-            "RBAAEhMKD1dFQl9EQVRBX1NUUkVBTRABEhsKF0FORFJPSURfQVBQX0RBVEFf",
-            "U1RSRUFNEAISFwoTSU9TX0FQUF9EQVRBX1NUUkVBTRADOl7qQVsKKGFuYWx5",
-            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTdHJlYW0SL3Byb3BlcnRp",
-            "ZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19Qg0KC3N0",
-            "cmVhbV9kYXRhItQBCghVc2VyTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGgoN",
-            "ZW1haWxfYWRkcmVzcxgCIAEoCUID4EEFEhQKDGRpcmVjdF9yb2xlcxgDIAMo",
-            "CTqCAepBfwomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vVXNlckxp",
-            "bmsSKGFjY291bnRzL3thY2NvdW50fS91c2VyTGlua3Mve3VzZXJfbGlua30S",
-            "K3Byb3BlcnRpZXMve3Byb3BlcnR5fS91c2VyTGlua3Mve3VzZXJfbGlua30i",
-            "YwoNQXVkaXRVc2VyTGluaxIMCgRuYW1lGAEgASgJEhUKDWVtYWlsX2FkZHJl",
-            "c3MYAiABKAkSFAoMZGlyZWN0X3JvbGVzGAMgAygJEhcKD2VmZmVjdGl2ZV9y",
-            "b2xlcxgEIAMoCSLTAQoMRmlyZWJhc2VMaW5rEhEKBG5hbWUYASABKAlCA+BB",
-            "AxIUCgdwcm9qZWN0GAIgASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6ZOpBYQoqYW5hbHl0",
-            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRmlyZWJhc2VMaW5rEjNwcm9wZXJ0",
-            "aWVzL3twcm9wZXJ0eX0vZmlyZWJhc2VMaW5rcy97ZmlyZWJhc2VfbGlua30i",
-            "qQEKDUdsb2JhbFNpdGVUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3NuaXBw",
-            "ZXQYAiABKAlCA+BBBTpv6kFsCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
-            "LmNvbS9HbG9iYWxTaXRlVGFnEj1wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0",
-            "YVN0cmVhbXMve2RhdGFfc3RyZWFtfS9nbG9iYWxTaXRlVGFnIpgDCg1Hb29n",
-            "bGVBZHNMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIYCgtjdXN0b21lcl9pZBgD",
-            "IAEoCUID4EEFEh8KEmNhbl9tYW5hZ2VfY2xpZW50cxgEIAEoCEID4EEDEj8K",
-            "G2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgFIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5Cb29sVmFsdWUSNAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSIgoVY3JlYXRv",
-            "cl9lbWFpbF9hZGRyZXNzGAkgASgJQgPgQQM6aOpBZQorYW5hbHl0aWNzYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vR29vZ2xlQWRzTGluaxI2cHJvcGVydGllcy97",
-            "cHJvcGVydHl9L2dvb2dsZUFkc0xpbmtzL3tnb29nbGVfYWRzX2xpbmt9IusC",
-            "ChNEYXRhU2hhcmluZ1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxIrCiNz",
-            "aGFyaW5nX3dpdGhfZ29vZ2xlX3N1cHBvcnRfZW5hYmxlZBgCIAEoCBIyCipz",
-            "aGFyaW5nX3dpdGhfZ29vZ2xlX2Fzc2lnbmVkX3NhbGVzX2VuYWJsZWQYAyAB",
-            "KAgSLQolc2hhcmluZ193aXRoX2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgE",
-            "IAEoCBIsCiRzaGFyaW5nX3dpdGhfZ29vZ2xlX3Byb2R1Y3RzX2VuYWJsZWQY",
-            "BSABKAgSIwobc2hhcmluZ193aXRoX290aGVyc19lbmFibGVkGAYgASgIOl7q",
-            "QVsKMWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTaGFyaW5n",
-            "U2V0dGluZ3MSJmFjY291bnRzL3thY2NvdW50fS9kYXRhU2hhcmluZ1NldHRp",
-            "bmdzIpUCCg5BY2NvdW50U3VtbWFyeRIMCgRuYW1lGAEgASgJEjsKB2FjY291",
-            "bnQYAiABKAlCKvpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "QWNjb3VudBIUCgxkaXNwbGF5X25hbWUYAyABKAkSSwoScHJvcGVydHlfc3Vt",
-            "bWFyaWVzGAQgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LlByb3BlcnR5U3VtbWFyeTpV6kFSCixhbmFseXRpY3NhZG1pbi5nb29nbGVh",
-            "cGlzLmNvbS9BY2NvdW50U3VtbWFyeRIiYWNjb3VudFN1bW1hcmllcy97YWNj",
-            "b3VudF9zdW1tYXJ5fSJmCg9Qcm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkY",
-            "ASABKAlCK/pBKAomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJv",
-            "cGVydHkSFAoMZGlzcGxheV9uYW1lGAIgASgJIo4CChlNZWFzdXJlbWVudFBy",
-            "b3RvY29sU2VjcmV0EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25h",
-            "bWUYAiABKAlCA+BBAhIZCgxzZWNyZXRfdmFsdWUYAyABKAlCA+BBAzqnAepB",
-            "owEKN2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL01lYXN1cmVtZW50",
-            "UHJvdG9jb2xTZWNyZXQSaHByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3Ry",
-            "ZWFtcy97ZGF0YV9zdHJlYW19L21lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRz",
-            "L3ttZWFzdXJlbWVudF9wcm90b2NvbF9zZWNyZXR9IooCChJDaGFuZ2VIaXN0",
-            "b3J5RXZlbnQSCgoCaWQYASABKAkSLwoLY2hhbmdlX3RpbWUYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEj0KCmFjdG9yX3R5cGUYAyABKA4y",
-            "KS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0b3JUeXBlEhgK",
-            "EHVzZXJfYWN0b3JfZW1haWwYBCABKAkSGAoQY2hhbmdlc19maWx0ZXJlZBgF",
-            "IAEoCBJECgdjaGFuZ2VzGAYgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
-            "bi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2UijAsKE0NoYW5nZUhpc3Rv",
-            "cnlDaGFuZ2USEAoIcmVzb3VyY2UYASABKAkSOgoGYWN0aW9uGAIgASgOMiou",
-            "Z29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjdGlvblR5cGUSaQoW",
-            "cmVzb3VyY2VfYmVmb3JlX2NoYW5nZRgDIAEoCzJJLmdvb2dsZS5hbmFseXRp",
-            "Y3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhp",
-            "c3RvcnlSZXNvdXJjZRJoChVyZXNvdXJjZV9hZnRlcl9jaGFuZ2UYBCABKAsy",
-            "SS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9y",
-            "eUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3VyY2Ua0QgKFUNoYW5nZUhpc3Rv",
-            "cnlSZXNvdXJjZRI6CgdhY2NvdW50GAEgASgLMicuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5hZG1pbi52MWFscGhhLkFjY291bnRIABI8Cghwcm9wZXJ0eRgCIAEoCzIo",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eUgAEkUK",
-            "DWZpcmViYXNlX2xpbmsYBiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuRmlyZWJhc2VMaW5rSAASSAoPZ29vZ2xlX2Fkc19saW5rGAcg",
-            "ASgLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkdvb2dsZUFk",
-            "c0xpbmtIABJYChdnb29nbGVfc2lnbmFsc19zZXR0aW5ncxgIIAEoCzI1Lmdv",
-            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU2V0",
-            "dGluZ3NIABJqCiFkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmsY",
-            "CSABKAsyPS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxh",
-            "eVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtIABJ7CipkaXNwbGF5X3ZpZGVvXzM2",
-            "MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWwYCiABKAsyRS5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNl",
-            "ckxpbmtQcm9wb3NhbEgAEksKEGNvbnZlcnNpb25fZXZlbnQYCyABKAsyLy5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ29udmVyc2lvbkV2ZW50",
-            "SAASYAobbWVhc3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjkuZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLk1lYXN1cmVtZW50UHJvdG9j",
-            "b2xTZWNyZXRIABJLChBjdXN0b21fZGltZW5zaW9uGA0gASgLMi8uZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbkgAEkUK",
-            "DWN1c3RvbV9tZXRyaWMYDiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuQ3VzdG9tTWV0cmljSAASWAoXZGF0YV9yZXRlbnRpb25fc2V0",
-            "dGluZ3MYDyABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
-            "RGF0YVJldGVudGlvblNldHRpbmdzSAASQQoLZGF0YV9zdHJlYW0YEiABKAsy",
-            "Ki5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbUgA",
-            "QgoKCHJlc291cmNlIt8DCh1EaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2VyTGlu",
-            "axIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEoCUID",
-            "4EEFEiQKF2FkdmVydGlzZXJfZGlzcGxheV9uYW1lGAMgASgJQgPgQQMSPwob",
-            "YWRzX3BlcnNvbmFsaXphdGlvbl9lbmFibGVkGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkJvb2xWYWx1ZRJGCh1jYW1wYWlnbl9kYXRhX3NoYXJpbmdfZW5h",
-            "YmxlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJC",
-            "Chljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVkGAYgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkJvb2xWYWx1ZUID4EEFOpsB6kGXAQo7YW5hbHl0aWNzYWRtaW4u",
-            "Z29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmsS",
-            "WHByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBBZHZlcnRp",
-            "c2VyTGlua3Mve2Rpc3BsYXlfdmlkZW9fMzYwX2FkdmVydGlzZXJfbGlua30i",
-            "igUKJURpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWwSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhoKDWFkdmVydGlzZXJfaWQYAiABKAlCA+BBBRJk",
-            "ChxsaW5rX3Byb3Bvc2FsX3N0YXR1c19kZXRhaWxzGAMgASgLMjkuZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbFN0YXR1c0Rl",
-            "dGFpbHNCA+BBAxIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFtZRgEIAEoCUID",
-            "4EEDEh0KEHZhbGlkYXRpb25fZW1haWwYBSABKAlCA+BBBBJEChthZHNfcGVy",
-            "c29uYWxpemF0aW9uX2VuYWJsZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "Qm9vbFZhbHVlQgPgQQUSRgodY2FtcGFpZ25fZGF0YV9zaGFyaW5nX2VuYWJs",
-            "ZWQYByABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUSQgoZ",
-            "Y29zdF9kYXRhX3NoYXJpbmdfZW5hYmxlZBgIIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5Cb29sVmFsdWVCA+BBBTq0AepBsAEKQ2FuYWx5dGljc2FkbWluLmdv",
-            "b2dsZWFwaXMuY29tL0Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJv",
-            "cG9zYWwSaXByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBB",
-            "ZHZlcnRpc2VyTGlua1Byb3Bvc2Fscy97ZGlzcGxheV92aWRlb18zNjBfYWR2",
-            "ZXJ0aXNlcl9saW5rX3Byb3Bvc2FsfSL8AQoZTGlua1Byb3Bvc2FsU3RhdHVz",
-            "RGV0YWlscxJsCiBsaW5rX3Byb3Bvc2FsX2luaXRpYXRpbmdfcHJvZHVjdBgB",
-            "IAEoDjI9Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5MaW5rUHJv",
-            "cG9zYWxJbml0aWF0aW5nUHJvZHVjdEID4EEDEhwKD3JlcXVlc3Rvcl9lbWFp",
-            "bBgCIAEoCUID4EEDElMKE2xpbmtfcHJvcG9zYWxfc3RhdGUYAyABKA4yMS5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTGlua1Byb3Bvc2FsU3Rh",
-            "dGVCA+BBAyKPAgoPQ29udmVyc2lvbkV2ZW50EhEKBG5hbWUYASABKAlCA+BB",
-            "AxIXCgpldmVudF9uYW1lGAIgASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFgoJZGVsZXRh",
-            "YmxlGAQgASgIQgPgQQMSEwoGY3VzdG9tGAUgASgIQgPgQQM6bepBagotYW5h",
-            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ29udmVyc2lvbkV2ZW50Ejlw",
-            "cm9wZXJ0aWVzL3twcm9wZXJ0eX0vY29udmVyc2lvbkV2ZW50cy97Y29udmVy",
-            "c2lvbl9ldmVudH0ioAIKFUdvb2dsZVNpZ25hbHNTZXR0aW5ncxIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSQQoFc3RhdGUYAyABKA4yMi5nb29nbGUuYW5hbHl0aWNz",
-            "LmFkbWluLnYxYWxwaGEuR29vZ2xlU2lnbmFsc1N0YXRlEkoKB2NvbnNlbnQY",
-            "BCABKA4yNC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuR29vZ2xl",
-            "U2lnbmFsc0NvbnNlbnRCA+BBAzpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29n",
-            "bGVhcGlzLmNvbS9Hb29nbGVTaWduYWxzU2V0dGluZ3MSK3Byb3BlcnRpZXMv",
-            "e3Byb3BlcnR5fS9nb29nbGVTaWduYWxzU2V0dGluZ3MisgMKD0N1c3RvbURp",
-            "bWVuc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSHgoOcGFyYW1ldGVyX25hbWUY",
-            "AiABKAlCBuBBAuBBBRIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAhIYCgtk",
-            "ZXNjcmlwdGlvbhgEIAEoCUID4EEBElUKBXNjb3BlGAUgASgOMj4uZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbi5EaW1l",
-            "bnNpb25TY29wZUIG4EEC4EEFEikKHGRpc2FsbG93X2Fkc19wZXJzb25hbGl6",
-            "YXRpb24YBiABKAhCA+BBASJGCg5EaW1lbnNpb25TY29wZRIfChtESU1FTlNJ",
-            "T05fU0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVOVBABEggKBFVTRVIQAjpt",
-            "6kFqCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DdXN0b21EaW1l",
-            "bnNpb24SOXByb3BlcnRpZXMve3Byb3BlcnR5fS9jdXN0b21EaW1lbnNpb25z",
-            "L3tjdXN0b21fZGltZW5zaW9ufSLFBgoMQ3VzdG9tTWV0cmljEhEKBG5hbWUY",
-            "ASABKAlCA+BBAxIeCg5wYXJhbWV0ZXJfbmFtZRgCIAEoCUIG4EEC4EEFEhkK",
-            "DGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJ",
-            "QgPgQQESWwoQbWVhc3VyZW1lbnRfdW5pdBgFIAEoDjI8Lmdvb2dsZS5hbmFs",
-            "eXRpY3MuYWRtaW4udjFhbHBoYS5DdXN0b21NZXRyaWMuTWVhc3VyZW1lbnRV",
-            "bml0QgPgQQISTwoFc2NvcGUYBiABKA4yOC5nb29nbGUuYW5hbHl0aWNzLmFk",
-            "bWluLnYxYWxwaGEuQ3VzdG9tTWV0cmljLk1ldHJpY1Njb3BlQgbgQQLgQQUS",
-            "ZgoWcmVzdHJpY3RlZF9tZXRyaWNfdHlwZRgIIAMoDjJBLmdvb2dsZS5hbmFs",
-            "eXRpY3MuYWRtaW4udjFhbHBoYS5DdXN0b21NZXRyaWMuUmVzdHJpY3RlZE1l",
-            "dHJpY1R5cGVCA+BBASK3AQoPTWVhc3VyZW1lbnRVbml0EiAKHE1FQVNVUkVN",
-            "RU5UX1VOSVRfVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEgwKCENVUlJF",
-            "TkNZEAISCAoERkVFVBADEgoKBk1FVEVSUxAEEg4KCktJTE9NRVRFUlMQBRIJ",
-            "CgVNSUxFUxAGEhAKDE1JTExJU0VDT05EUxAHEgsKB1NFQ09ORFMQCBILCgdN",
-            "SU5VVEVTEAkSCQoFSE9VUlMQCiI2CgtNZXRyaWNTY29wZRIcChhNRVRSSUNf",
-            "U0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVOVBABIl8KFFJlc3RyaWN0ZWRN",
-            "ZXRyaWNUeXBlEiYKIlJFU1RSSUNURURfTUVUUklDX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABINCglDT1NUX0RBVEEQARIQCgxSRVZFTlVFX0RBVEEQAjpk6kFhCiph",
-            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DdXN0b21NZXRyaWMSM3By",
-            "b3BlcnRpZXMve3Byb3BlcnR5fS9jdXN0b21NZXRyaWNzL3tjdXN0b21fbWV0",
-            "cmljfSLCAwoVRGF0YVJldGVudGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlC",
-            "A+BBAxJlChRldmVudF9kYXRhX3JldGVudGlvbhgCIAEoDjJHLmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhUmV0ZW50aW9uU2V0dGluZ3Mu",
-            "UmV0ZW50aW9uRHVyYXRpb24SJwofcmVzZXRfdXNlcl9kYXRhX29uX25ld19h",
-            "Y3Rpdml0eRgDIAEoCCKeAQoRUmV0ZW50aW9uRHVyYXRpb24SIgoeUkVURU5U",
-            "SU9OX0RVUkFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKVFdPX01PTlRIUxABEhMK",
-            "D0ZPVVJURUVOX01PTlRIUxADEhUKEVRXRU5UWV9TSVhfTU9OVEhTEAQSFwoT",
-            "VEhJUlRZX0VJR0hUX01PTlRIUxAFEhAKDEZJRlRZX01PTlRIUxAGOmXqQWIK",
-            "M2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFSZXRlbnRpb25T",
-            "ZXR0aW5ncxIrcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFSZXRlbnRpb25T",
-            "ZXR0aW5ncyqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRF",
-            "R09SWV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVT",
-            "U19BTkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhF",
-            "QUxUSENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RI",
-            "RVIQBxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FO",
-            "RF9GSVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09E",
-            "X0FORF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VS",
-            "RRANEhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxF",
-            "Q09NEA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9O",
-            "TElORV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQK",
-            "EFBFVFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVS",
-            "RU5DRRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9F",
-            "RFVDQVRJT04QGRIMCghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZlbBIdChlT",
-            "RVJWSUNFX0xFVkVMX1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FOQUxZVElD",
-            "U19TVEFOREFSRBABEhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIqSgoJQWN0",
-            "b3JUeXBlEhoKFkFDVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAES",
-            "CgoGU1lTVEVNEAISCwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUSGwoXQUNU",
-            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHVVBEQVRF",
-            "RBACEgsKB0RFTEVURUQQAyqOAwoZQ2hhbmdlSGlzdG9yeVJlc291cmNlVHlw",
-            "ZRIsCihDSEFOR0VfSElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASCwoHQUNDT1VOVBABEgwKCFBST1BFUlRZEAISEQoNRklSRUJBU0VfTElO",
-            "SxAGEhMKD0dPT0dMRV9BRFNfTElOSxAHEhsKF0dPT0dMRV9TSUdOQUxTX1NF",
-            "VFRJTkdTEAgSFAoQQ09OVkVSU0lPTl9FVkVOVBAJEh8KG01FQVNVUkVNRU5U",
-            "X1BST1RPQ09MX1NFQ1JFVBAKEhQKEENVU1RPTV9ESU1FTlNJT04QCxIRCg1D",
-            "VVNUT01fTUVUUklDEAwSGwoXREFUQV9SRVRFTlRJT05fU0VUVElOR1MQDRIl",
-            "CiFESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTksQDhIuCipESVNQ",
-            "TEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTktfUFJPUE9TQUwQDxIPCgtE",
-            "QVRBX1NUUkVBTRASKnMKEkdvb2dsZVNpZ25hbHNTdGF0ZRIkCiBHT09HTEVf",
-            "U0lHTkFMU19TVEFURV9VTlNQRUNJRklFRBAAEhoKFkdPT0dMRV9TSUdOQUxT",
-            "X0VOQUJMRUQQARIbChdHT09HTEVfU0lHTkFMU19ESVNBQkxFRBACKo4BChRH",
-            "b29nbGVTaWduYWxzQ29uc2VudBImCiJHT09HTEVfU0lHTkFMU19DT05TRU5U",
-            "X1VOU1BFQ0lGSUVEEAASJAogR09PR0xFX1NJR05BTFNfQ09OU0VOVF9DT05T",
-            "RU5URUQQAhIoCiRHT09HTEVfU0lHTkFMU19DT05TRU5UX05PVF9DT05TRU5U",
-            "RUQQASp7Ch1MaW5rUHJvcG9zYWxJbml0aWF0aW5nUHJvZHVjdBIwCixMSU5L",
-            "X1BST1BPU0FMX0lOSVRJQVRJTkdfUFJPRFVDVF9VTlNQRUNJRklFRBAAEhQK",
-            "EEdPT0dMRV9BTkFMWVRJQ1MQARISCg5MSU5LRURfUFJPRFVDVBACKsQBChFM",
-            "aW5rUHJvcG9zYWxTdGF0ZRIjCh9MSU5LX1BST1BPU0FMX1NUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASKQolQVdBSVRJTkdfUkVWSUVXX0ZST01fR09PR0xFX0FOQUxZ",
-            "VElDUxABEicKI0FXQUlUSU5HX1JFVklFV19GUk9NX0xJTktFRF9QUk9EVUNU",
-            "EAISDQoJV0lUSERSQVdOEAMSDAoIREVDTElORUQQBBILCgdFWFBJUkVEEAUS",
-            "DAoIT0JTT0xFVEUQBkJ7CiJjb20uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhQg5SZXNvdXJjZXNQcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9hZG1pbi92MWFscGhhO2Fk",
-            "bWluYgZwcm90bzM="));
+            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSK5BQoIUHJvcGVydHkSEQoE",
+            "bmFtZRgBIAEoCUID4EEDEkgKDXByb3BlcnR5X3R5cGUYDiABKA4yLC5nb29n",
+            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlUeXBlQgPgQQUS",
+            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSEwoGcGFyZW50GAIgASgJQgPgQQUSGQoMZGlz",
+            "cGxheV9uYW1lGAUgASgJQgPgQQISSwoRaW5kdXN0cnlfY2F0ZWdvcnkYBiAB",
+            "KA4yMC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuSW5kdXN0cnlD",
+            "YXRlZ29yeRIWCgl0aW1lX3pvbmUYByABKAlCA+BBAhIVCg1jdXJyZW5jeV9j",
+            "b2RlGAggASgJEkgKDXNlcnZpY2VfbGV2ZWwYCiABKA4yLC5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGEuU2VydmljZUxldmVsQgPgQQMSNAoLZGVs",
+            "ZXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLZXhwaXJlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSPgoHYWNjb3VudBgNIAEoCUIt4EEF+kEnCiVhbmFseXRp",
+            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50OkLqQT8KJmFuYWx5dGlj",
+            "c2FkbWluLmdvb2dsZWFwaXMuY29tL1Byb3BlcnR5EhVwcm9wZXJ0aWVzL3tw",
+            "cm9wZXJ0eX0i+QcKCkRhdGFTdHJlYW0SUwoPd2ViX3N0cmVhbV9kYXRhGAYg",
+            "ASgLMjguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFTdHJl",
+            "YW0uV2ViU3RyZWFtRGF0YUgAEmIKF2FuZHJvaWRfYXBwX3N0cmVhbV9kYXRh",
+            "GAcgASgLMj8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFT",
+            "dHJlYW0uQW5kcm9pZEFwcFN0cmVhbURhdGFIABJaChNpb3NfYXBwX3N0cmVh",
+            "bV9kYXRhGAggASgLMjsuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkRhdGFTdHJlYW0uSW9zQXBwU3RyZWFtRGF0YUgAEhEKBG5hbWUYASABKAlC",
+            "A+BBAxJPCgR0eXBlGAIgASgOMjkuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkRhdGFTdHJlYW0uRGF0YVN0cmVhbVR5cGVCBuBBBeBBAhIUCgxk",
+            "aXNwbGF5X25hbWUYAyABKAkSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaZAoNV2ViU3Ry",
+            "ZWFtRGF0YRIbCg5tZWFzdXJlbWVudF9pZBgBIAEoCUID4EEDEhwKD2ZpcmVi",
+            "YXNlX2FwcF9pZBgCIAEoCUID4EEDEhgKC2RlZmF1bHRfdXJpGAMgASgJQgPg",
+            "QQUaTwoUQW5kcm9pZEFwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBwX2lk",
+            "GAEgASgJQgPgQQMSGQoMcGFja2FnZV9uYW1lGAIgASgJQgPgQQUaSwoQSW9z",
+            "QXBwU3RyZWFtRGF0YRIcCg9maXJlYmFzZV9hcHBfaWQYASABKAlCA+BBAxIZ",
+            "CglidW5kbGVfaWQYAiABKAlCBuBBBeBBAiJ9Cg5EYXRhU3RyZWFtVHlwZRIg",
+            "ChxEQVRBX1NUUkVBTV9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPV0VCX0RBVEFf",
+            "U1RSRUFNEAESGwoXQU5EUk9JRF9BUFBfREFUQV9TVFJFQU0QAhIXChNJT1Nf",
+            "QVBQX0RBVEFfU1RSRUFNEAM6XupBWwooYW5hbHl0aWNzYWRtaW4uZ29vZ2xl",
+            "YXBpcy5jb20vRGF0YVN0cmVhbRIvcHJvcGVydGllcy97cHJvcGVydHl9L2Rh",
+            "dGFTdHJlYW1zL3tkYXRhX3N0cmVhbX1CDQoLc3RyZWFtX2RhdGEi1AEKCFVz",
+            "ZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1lbWFpbF9hZGRyZXNzGAIg",
+            "ASgJQgPgQQUSFAoMZGlyZWN0X3JvbGVzGAMgAygJOoIB6kF/CiZhbmFseXRp",
+            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Vc2VyTGluaxIoYWNjb3VudHMve2Fj",
+            "Y291bnR9L3VzZXJMaW5rcy97dXNlcl9saW5rfRIrcHJvcGVydGllcy97cHJv",
+            "cGVydHl9L3VzZXJMaW5rcy97dXNlcl9saW5rfSJjCg1BdWRpdFVzZXJMaW5r",
+            "EgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRkcmVzcxgCIAEoCRIUCgxkaXJl",
+            "Y3Rfcm9sZXMYAyADKAkSFwoPZWZmZWN0aXZlX3JvbGVzGAQgAygJItMBCgxG",
+            "aXJlYmFzZUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3Byb2plY3QYAiAB",
+            "KAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAzpk6kFhCiphbmFseXRpY3NhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbS9GaXJlYmFzZUxpbmsSM3Byb3BlcnRpZXMve3Byb3BlcnR5fS9m",
+            "aXJlYmFzZUxpbmtzL3tmaXJlYmFzZV9saW5rfSKpAQoNR2xvYmFsU2l0ZVRh",
+            "ZxIRCgRuYW1lGAEgASgJQgPgQQMSFAoHc25pcHBldBgCIAEoCUID4EEFOm/q",
+            "QWwKK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0dsb2JhbFNpdGVU",
+            "YWcSPXByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9z",
+            "dHJlYW19L2dsb2JhbFNpdGVUYWcimAMKDUdvb2dsZUFkc0xpbmsSEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEhgKC2N1c3RvbWVyX2lkGAMgASgJQgPgQQUSHwoSY2Fu",
+            "X21hbmFnZV9jbGllbnRzGAQgASgIQgPgQQMSPwobYWRzX3BlcnNvbmFsaXph",
+            "dGlvbl9lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1",
+            "ZRI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIiChVjcmVhdG9yX2VtYWlsX2FkZHJlc3MY",
+            "CSABKAlCA+BBAzpo6kFlCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9Hb29nbGVBZHNMaW5rEjZwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZ29vZ2xl",
+            "QWRzTGlua3Mve2dvb2dsZV9hZHNfbGlua30i6wIKE0RhdGFTaGFyaW5nU2V0",
+            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEisKI3NoYXJpbmdfd2l0aF9nb29n",
+            "bGVfc3VwcG9ydF9lbmFibGVkGAIgASgIEjIKKnNoYXJpbmdfd2l0aF9nb29n",
+            "bGVfYXNzaWduZWRfc2FsZXNfZW5hYmxlZBgDIAEoCBItCiVzaGFyaW5nX3dp",
+            "dGhfZ29vZ2xlX2FueV9zYWxlc19lbmFibGVkGAQgASgIEiwKJHNoYXJpbmdf",
+            "d2l0aF9nb29nbGVfcHJvZHVjdHNfZW5hYmxlZBgFIAEoCBIjChtzaGFyaW5n",
+            "X3dpdGhfb3RoZXJzX2VuYWJsZWQYBiABKAg6XupBWwoxYW5hbHl0aWNzYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vRGF0YVNoYXJpbmdTZXR0aW5ncxImYWNjb3Vu",
+            "dHMve2FjY291bnR9L2RhdGFTaGFyaW5nU2V0dGluZ3MilQIKDkFjY291bnRT",
+            "dW1tYXJ5EgwKBG5hbWUYASABKAkSOwoHYWNjb3VudBgCIAEoCUIq+kEnCiVh",
+            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhQKDGRpc3Bs",
+            "YXlfbmFtZRgDIAEoCRJLChJwcm9wZXJ0eV9zdW1tYXJpZXMYBCADKAsyLy5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlTdW1tYXJ5",
+            "OlXqQVIKLGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnRT",
+            "dW1tYXJ5EiJhY2NvdW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9IrsB",
+            "Cg9Qcm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkYASABKAlCK/pBKAomYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFAoMZGlzcGxh",
+            "eV9uYW1lGAIgASgJEkMKDXByb3BlcnR5X3R5cGUYAyABKA4yLC5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlUeXBlEg4KBnBhcmVu",
+            "dBgEIAEoCSKOAgoZTWVhc3VyZW1lbnRQcm90b2NvbFNlY3JldBIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGQoMc2Vj",
+            "cmV0X3ZhbHVlGAMgASgJQgPgQQM6pwHqQaMBCjdhbmFseXRpY3NhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9NZWFzdXJlbWVudFByb3RvY29sU2VjcmV0Emhwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3RyZWFtfS9t",
+            "ZWFzdXJlbWVudFByb3RvY29sU2VjcmV0cy97bWVhc3VyZW1lbnRfcHJvdG9j",
+            "b2xfc2VjcmV0fSKKAgoSQ2hhbmdlSGlzdG9yeUV2ZW50EgoKAmlkGAEgASgJ",
+            "Ei8KC2NoYW5nZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBI9CgphY3Rvcl90eXBlGAMgASgOMikuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkFjdG9yVHlwZRIYChB1c2VyX2FjdG9yX2VtYWlsGAQg",
+            "ASgJEhgKEGNoYW5nZXNfZmlsdGVyZWQYBSABKAgSRAoHY2hhbmdlcxgGIAMo",
+            "CzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0",
+            "b3J5Q2hhbmdlIuELChNDaGFuZ2VIaXN0b3J5Q2hhbmdlEhAKCHJlc291cmNl",
+            "GAEgASgJEjoKBmFjdGlvbhgCIAEoDjIqLmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5BY3Rpb25UeXBlEmkKFnJlc291cmNlX2JlZm9yZV9jaGFu",
+            "Z2UYAyABKAsySS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hh",
+            "bmdlSGlzdG9yeUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3VyY2USaAoVcmVz",
+            "b3VyY2VfYWZ0ZXJfY2hhbmdlGAQgASgLMkkuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2UuQ2hhbmdlSGlzdG9y",
+            "eVJlc291cmNlGqYJChVDaGFuZ2VIaXN0b3J5UmVzb3VyY2USOgoHYWNjb3Vu",
+            "dBgBIAEoCzInLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nv",
+            "dW50SAASPAoIcHJvcGVydHkYAiABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuUHJvcGVydHlIABJFCg1maXJlYmFzZV9saW5rGAYgASgL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkZpcmViYXNlTGlu",
+            "a0gAEkgKD2dvb2dsZV9hZHNfbGluaxgHIAEoCzItLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5Hb29nbGVBZHNMaW5rSAASWAoXZ29vZ2xlX3Np",
+            "Z25hbHNfc2V0dGluZ3MYCCABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
+            "LnYxYWxwaGEuR29vZ2xlU2lnbmFsc1NldHRpbmdzSAASagohZGlzcGxheV92",
+            "aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rGAkgASgLMj0uZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJM",
+            "aW5rSAASewoqZGlzcGxheV92aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rX3By",
+            "b3Bvc2FsGAogASgLMkUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxIABJLChBj",
+            "b252ZXJzaW9uX2V2ZW50GAsgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWFscGhhLkNvbnZlcnNpb25FdmVudEgAEmAKG21lYXN1cmVtZW50X3By",
+            "b3RvY29sX3NlY3JldBgMIAEoCzI5Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYS5NZWFzdXJlbWVudFByb3RvY29sU2VjcmV0SAASSwoQY3VzdG9t",
+            "X2RpbWVuc2lvbhgNIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
+            "bHBoYS5DdXN0b21EaW1lbnNpb25IABJFCg1jdXN0b21fbWV0cmljGA4gASgL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJp",
+            "Y0gAElgKF2RhdGFfcmV0ZW50aW9uX3NldHRpbmdzGA8gASgLMjUuZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFSZXRlbnRpb25TZXR0aW5n",
+            "c0gAEkEKC2RhdGFfc3RyZWFtGBIgASgLMiouZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkRhdGFTdHJlYW1IABJTChRhdHRyaWJ1dGlvbl9zZXR0",
+            "aW5ncxgUIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5B",
+            "dHRyaWJ1dGlvblNldHRpbmdzSABCCgoIcmVzb3VyY2Ui3wMKHURpc3BsYXlW",
+            "aWRlbzM2MEFkdmVydGlzZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1h",
+            "ZHZlcnRpc2VyX2lkGAIgASgJQgPgQQUSJAoXYWR2ZXJ0aXNlcl9kaXNwbGF5",
+            "X25hbWUYAyABKAlCA+BBAxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJs",
+            "ZWQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEkYKHWNhbXBh",
+            "aWduX2RhdGFfc2hhcmluZ19lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkJvb2xWYWx1ZUID4EEFEkIKGWNvc3RfZGF0YV9zaGFyaW5nX2VuYWJs",
+            "ZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQU6mwHq",
+            "QZcBCjthbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EaXNwbGF5Vmlk",
+            "ZW8zNjBBZHZlcnRpc2VyTGluaxJYcHJvcGVydGllcy97cHJvcGVydHl9L2Rp",
+            "c3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rcy97ZGlzcGxheV92aWRlb18z",
+            "NjBfYWR2ZXJ0aXNlcl9saW5rfSKKBQolRGlzcGxheVZpZGVvMzYwQWR2ZXJ0",
+            "aXNlckxpbmtQcm9wb3NhbBIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0",
+            "aXNlcl9pZBgCIAEoCUID4EEFEmQKHGxpbmtfcHJvcG9zYWxfc3RhdHVzX2Rl",
+            "dGFpbHMYAyABKAsyOS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "TGlua1Byb3Bvc2FsU3RhdHVzRGV0YWlsc0ID4EEDEiQKF2FkdmVydGlzZXJf",
+            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSHQoQdmFsaWRhdGlvbl9lbWFpbBgF",
+            "IAEoCUID4EEEEkQKG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgGIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJGCh1jYW1wYWln",
+            "bl9kYXRhX3NoYXJpbmdfZW5hYmxlZBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5Cb29sVmFsdWVCA+BBBRJCChljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVk",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFOrQB6kGw",
+            "AQpDYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVv",
+            "MzYwQWR2ZXJ0aXNlckxpbmtQcm9wb3NhbBJpcHJvcGVydGllcy97cHJvcGVy",
+            "dHl9L2Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxzL3tk",
+            "aXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWx9IvwB",
+            "ChlMaW5rUHJvcG9zYWxTdGF0dXNEZXRhaWxzEmwKIGxpbmtfcHJvcG9zYWxf",
+            "aW5pdGlhdGluZ19wcm9kdWN0GAEgASgOMj0uZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbEluaXRpYXRpbmdQcm9kdWN0QgPg",
+            "QQMSHAoPcmVxdWVzdG9yX2VtYWlsGAIgASgJQgPgQQMSUwoTbGlua19wcm9w",
+            "b3NhbF9zdGF0ZRgDIAEoDjIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
+            "bHBoYS5MaW5rUHJvcG9zYWxTdGF0ZUID4EEDIo8CCg9Db252ZXJzaW9uRXZl",
+            "bnQSEQoEbmFtZRgBIAEoCUID4EEDEhcKCmV2ZW50X25hbWUYAiABKAlCA+BB",
+            "BRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIWCglkZWxldGFibGUYBCABKAhCA+BBAxITCgZjdXN0b20Y",
+            "BSABKAhCA+BBAzpt6kFqCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9Db252ZXJzaW9uRXZlbnQSOXByb3BlcnRpZXMve3Byb3BlcnR5fS9jb252",
+            "ZXJzaW9uRXZlbnRzL3tjb252ZXJzaW9uX2V2ZW50fSKgAgoVR29vZ2xlU2ln",
+            "bmFsc1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxJBCgVzdGF0ZRgDIAEo",
+            "DjIyLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWdu",
+            "YWxzU3RhdGUSSgoHY29uc2VudBgEIAEoDjI0Lmdvb2dsZS5hbmFseXRpY3Mu",
+            "YWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzQ29uc2VudEID4EEDOmXqQWIK",
+            "M2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0dvb2dsZVNpZ25hbHNT",
+            "ZXR0aW5ncxIrcHJvcGVydGllcy97cHJvcGVydHl9L2dvb2dsZVNpZ25hbHNT",
+            "ZXR0aW5ncyKyAwoPQ3VzdG9tRGltZW5zaW9uEhEKBG5hbWUYASABKAlCA+BB",
+            "AxIeCg5wYXJhbWV0ZXJfbmFtZRgCIAEoCUIG4EEC4EEFEhkKDGRpc3BsYXlf",
+            "bmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQESVQoF",
+            "c2NvcGUYBSABKA4yPi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "Q3VzdG9tRGltZW5zaW9uLkRpbWVuc2lvblNjb3BlQgbgQQLgQQUSKQocZGlz",
+            "YWxsb3dfYWRzX3BlcnNvbmFsaXphdGlvbhgGIAEoCEID4EEBIkYKDkRpbWVu",
+            "c2lvblNjb3BlEh8KG0RJTUVOU0lPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgkK",
+            "BUVWRU5UEAESCAoEVVNFUhACOm3qQWoKLWFuYWx5dGljc2FkbWluLmdvb2ds",
+            "ZWFwaXMuY29tL0N1c3RvbURpbWVuc2lvbhI5cHJvcGVydGllcy97cHJvcGVy",
+            "dHl9L2N1c3RvbURpbWVuc2lvbnMve2N1c3RvbV9kaW1lbnNpb259IsUGCgxD",
+            "dXN0b21NZXRyaWMSEQoEbmFtZRgBIAEoCUID4EEDEh4KDnBhcmFtZXRlcl9u",
+            "YW1lGAIgASgJQgbgQQLgQQUSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQIS",
+            "GAoLZGVzY3JpcHRpb24YBCABKAlCA+BBARJbChBtZWFzdXJlbWVudF91bml0",
+            "GAUgASgOMjwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3Rv",
+            "bU1ldHJpYy5NZWFzdXJlbWVudFVuaXRCA+BBAhJPCgVzY29wZRgGIAEoDjI4",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DdXN0b21NZXRyaWMu",
+            "TWV0cmljU2NvcGVCBuBBAuBBBRJmChZyZXN0cmljdGVkX21ldHJpY190eXBl",
+            "GAggAygOMkEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3Rv",
+            "bU1ldHJpYy5SZXN0cmljdGVkTWV0cmljVHlwZUID4EEBIrcBCg9NZWFzdXJl",
+            "bWVudFVuaXQSIAocTUVBU1VSRU1FTlRfVU5JVF9VTlNQRUNJRklFRBAAEgwK",
+            "CFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQAhIICgRGRUVUEAMSCgoGTUVURVJT",
+            "EAQSDgoKS0lMT01FVEVSUxAFEgkKBU1JTEVTEAYSEAoMTUlMTElTRUNPTkRT",
+            "EAcSCwoHU0VDT05EUxAIEgsKB01JTlVURVMQCRIJCgVIT1VSUxAKIjYKC01l",
+            "dHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09QRV9VTlNQRUNJRklFRBAAEgkKBUVW",
+            "RU5UEAEiXwoUUmVzdHJpY3RlZE1ldHJpY1R5cGUSJgoiUkVTVFJJQ1RFRF9N",
+            "RVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPU1RfREFUQRABEhAKDFJF",
+            "VkVOVUVfREFUQRACOmTqQWEKKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
+            "Y29tL0N1c3RvbU1ldHJpYxIzcHJvcGVydGllcy97cHJvcGVydHl9L2N1c3Rv",
+            "bU1ldHJpY3Mve2N1c3RvbV9tZXRyaWN9IsIDChVEYXRhUmV0ZW50aW9uU2V0",
+            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEmUKFGV2ZW50X2RhdGFfcmV0ZW50",
+            "aW9uGAIgASgOMkcuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRh",
+            "dGFSZXRlbnRpb25TZXR0aW5ncy5SZXRlbnRpb25EdXJhdGlvbhInCh9yZXNl",
+            "dF91c2VyX2RhdGFfb25fbmV3X2FjdGl2aXR5GAMgASgIIp4BChFSZXRlbnRp",
+            "b25EdXJhdGlvbhIiCh5SRVRFTlRJT05fRFVSQVRJT05fVU5TUEVDSUZJRUQQ",
+            "ABIOCgpUV09fTU9OVEhTEAESEwoPRk9VUlRFRU5fTU9OVEhTEAMSFQoRVFdF",
+            "TlRZX1NJWF9NT05USFMQBBIXChNUSElSVFlfRUlHSFRfTU9OVEhTEAUSEAoM",
+            "RklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb20vRGF0YVJldGVudGlvblNldHRpbmdzEitwcm9wZXJ0aWVzL3twcm9w",
+            "ZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdzIqQKChNBdHRyaWJ1dGlvblNl",
+            "dHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKXAQosYWNxdWlzaXRpb25fY29u",
+            "dmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAiABKA4yXC5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25TZXR0aW5ncy5B",
+            "Y3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2luZG93QgPgQQIS",
+            "iwEKJm90aGVyX2NvbnZlcnNpb25fZXZlbnRfbG9va2JhY2tfd2luZG93GAMg",
+            "ASgOMlYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF0dHJpYnV0",
+            "aW9uU2V0dGluZ3MuT3RoZXJDb252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRv",
+            "d0ID4EECEncKG3JlcG9ydGluZ19hdHRyaWJ1dGlvbl9tb2RlbBgEIAEoDjJN",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRyaWJ1dGlvblNl",
+            "dHRpbmdzLlJlcG9ydGluZ0F0dHJpYnV0aW9uTW9kZWxCA+BBAiLbAQooQWNx",
+            "dWlzaXRpb25Db252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvdxI8CjhBQ1FV",
+            "SVNJVElPTl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQ",
+            "RUNJRklFRBAAEjcKM0FDUVVJU0lUSU9OX0NPTlZFUlNJT05fRVZFTlRfTE9P",
+            "S0JBQ0tfV0lORE9XXzdfREFZUxABEjgKNEFDUVVJU0lUSU9OX0NPTlZFUlNJ",
+            "T05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQAiL4AQoiT3RoZXJD",
+            "b252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvdxI2CjJPVEhFUl9DT05WRVJT",
+            "SU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQRUNJRklFRBAAEjIKLk9U",
+            "SEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQ",
+            "ARIyCi5PVEhFUl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV182",
+            "MF9EQVlTEAISMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19X",
+            "SU5ET1dfOTBfREFZUxADIpwCChlSZXBvcnRpbmdBdHRyaWJ1dGlvbk1vZGVs",
+            "EisKJ1JFUE9SVElOR19BVFRSSUJVVElPTl9NT0RFTF9VTlNQRUNJRklFRBAA",
+            "Eh0KGUNST1NTX0NIQU5ORUxfREFUQV9EUklWRU4QARIcChhDUk9TU19DSEFO",
+            "TkVMX0xBU1RfQ0xJQ0sQAhIdChlDUk9TU19DSEFOTkVMX0ZJUlNUX0NMSUNL",
+            "EAMSGAoUQ1JPU1NfQ0hBTk5FTF9MSU5FQVIQBBIgChxDUk9TU19DSEFOTkVM",
+            "X1BPU0lUSU9OX0JBU0VEEAUSHAoYQ1JPU1NfQ0hBTk5FTF9USU1FX0RFQ0FZ",
+            "EAYSHAoYQURTX1BSRUZFUlJFRF9MQVNUX0NMSUNLEAc6YepBXgoxYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXR0cmlidXRpb25TZXR0aW5ncxIp",
+            "cHJvcGVydGllcy97cHJvcGVydHl9L2F0dHJpYnV0aW9uU2V0dGluZ3MqqgQK",
+            "EEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5EVVNUUllfQ0FURUdPUllfVU5TUEVD",
+            "SUZJRUQQABIOCgpBVVRPTU9USVZFEAESIwofQlVTSU5FU1NfQU5EX0lORFVT",
+            "VFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQS",
+            "DgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZFTBAGEgkKBU9USEVSEAcSGgoWQVJU",
+            "U19BTkRfRU5URVJUQUlOTUVOVBAIEhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJ",
+            "EhgKFEJPT0tTX0FORF9MSVRFUkFUVVJFEAoSEgoORk9PRF9BTkRfRFJJTksQ",
+            "CxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNfQU5EX0xFSVNVUkUQDRITCg9IT01F",
+            "X0FORF9HQVJERU4QDhIYChRJTlRFUk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxB",
+            "V19BTkRfR09WRVJOTUVOVBAQEggKBE5FV1MQERIWChJPTkxJTkVfQ09NTVVO",
+            "SVRJRVMQEhIWChJQRU9QTEVfQU5EX1NPQ0lFVFkQExIUChBQRVRTX0FORF9B",
+            "TklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQFRINCglSRUZFUkVOQ0UQFhILCgdT",
+            "Q0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoSSk9CU19BTkRfRURVQ0FUSU9OEBkS",
+            "DAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZF",
+            "TF9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQ",
+            "ARIYChRHT09HTEVfQU5BTFlUSUNTXzM2MBACKkoKCUFjdG9yVHlwZRIaChZB",
+            "Q1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEgoKBlNZU1RFTRAC",
+            "EgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsKF0FDVElPTl9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQREFURUQQAhILCgdERUxF",
+            "VEVEEAMqwQMKGUNoYW5nZUhpc3RvcnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdF",
+            "X0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgsKB0FDQ09V",
+            "TlQQARIMCghQUk9QRVJUWRACEhEKDUZJUkVCQVNFX0xJTksQBhITCg9HT09H",
+            "TEVfQURTX0xJTksQBxIbChdHT09HTEVfU0lHTkFMU19TRVRUSU5HUxAIEhQK",
+            "EENPTlZFUlNJT05fRVZFTlQQCRIfChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9T",
+            "RUNSRVQQChIUChBDVVNUT01fRElNRU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJ",
+            "QxAMEhsKF0RBVEFfUkVURU5USU9OX1NFVFRJTkdTEA0SJQohRElTUExBWV9W",
+            "SURFT18zNjBfQURWRVJUSVNFUl9MSU5LEA4SLgoqRElTUExBWV9WSURFT18z",
+            "NjBfQURWRVJUSVNFUl9MSU5LX1BST1BPU0FMEA8SFwoTU0VBUkNIX0FEU18z",
+            "NjBfTElOSxAQEg8KC0RBVEFfU1RSRUFNEBISGAoUQVRUUklCVVRJT05fU0VU",
+            "VElOR1MQFCpzChJHb29nbGVTaWduYWxzU3RhdGUSJAogR09PR0xFX1NJR05B",
+            "TFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09HTEVfU0lHTkFMU19FTkFC",
+            "TEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJMRUQQAiqOAQoUR29vZ2xl",
+            "U2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05BTFNfQ09OU0VOVF9VTlNQ",
+            "RUNJRklFRBAAEiQKIEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfQ09OU0VOVEVE",
+            "EAISKAokR09PR0xFX1NJR05BTFNfQ09OU0VOVF9OT1RfQ09OU0VOVEVEEAEq",
+            "ewodTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3QSMAosTElOS19QUk9Q",
+            "T1NBTF9JTklUSUFUSU5HX1BST0RVQ1RfVU5TUEVDSUZJRUQQABIUChBHT09H",
+            "TEVfQU5BTFlUSUNTEAESEgoOTElOS0VEX1BST0RVQ1QQAirEAQoRTGlua1By",
+            "b3Bvc2FsU3RhdGUSIwofTElOS19QUk9QT1NBTF9TVEFURV9VTlNQRUNJRklF",
+            "RBAAEikKJUFXQUlUSU5HX1JFVklFV19GUk9NX0dPT0dMRV9BTkFMWVRJQ1MQ",
+            "ARInCiNBV0FJVElOR19SRVZJRVdfRlJPTV9MSU5LRURfUFJPRFVDVBACEg0K",
+            "CVdJVEhEUkFXThADEgwKCERFQ0xJTkVEEAQSCwoHRVhQSVJFRBAFEgwKCE9C",
+            "U09MRVRFEAYqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEh0KGVBS",
+            "T1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9UWVBFX1JP",
+            "TExVUBADQnsKImNvbS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGFC",
+            "DlJlc291cmNlc1Byb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGE7YWRtaW5iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "PropertyType", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream), global::Google.Analytics.Admin.V1Alpha.DataStream.Parser, new[]{ "WebStreamData", "AndroidAppStreamData", "IosAppStreamData", "Name", "Type", "DisplayName", "CreateTime", "UpdateTime" }, new[]{ "StreamData" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.DataStreamType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData.Parser, new[]{ "MeasurementId", "FirebaseAppId", "DefaultUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData.Parser, new[]{ "FirebaseAppId", "PackageName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData.Parser, new[]{ "FirebaseAppId", "BundleId" }, null, null, null, null)}),
@@ -297,10 +336,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "CreateTime", "UpdateTime", "CreatorEmailAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataSharingSettings), global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser, new[]{ "Name", "SharingWithGoogleSupportEnabled", "SharingWithGoogleAssignedSalesEnabled", "SharingWithGoogleAnySalesEnabled", "SharingWithGoogleProductsEnabled", "SharingWithOthersEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccountSummary), global::Google.Analytics.Admin.V1Alpha.AccountSummary.Parser, new[]{ "Name", "Account", "DisplayName", "PropertySummaries" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName", "PropertyType", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret), global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret.Parser, new[]{ "Name", "DisplayName", "SecretValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "DataStream" }, new[]{ "Resource" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "DataStream", "AttributionSettings" }, new[]{ "Resource" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser, new[]{ "Name", "AdvertiserId", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser, new[]{ "Name", "AdvertiserId", "LinkProposalStatusDetails", "AdvertiserDisplayName", "ValidationEmail", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails), global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails.Parser, new[]{ "LinkProposalInitiatingProduct", "RequestorEmail", "LinkProposalState" }, null, null, null, null),
@@ -308,7 +347,8 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings), global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings.Parser, new[]{ "Name", "State", "Consent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension), global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) }, null, null)
           }));
     }
     #endregion
@@ -549,9 +589,17 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// </summary>
     [pbr::OriginalName("DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL")] DisplayVideo360AdvertiserLinkProposal = 15,
     /// <summary>
+    /// SearchAds360Link resource
+    /// </summary>
+    [pbr::OriginalName("SEARCH_ADS_360_LINK")] SearchAds360Link = 16,
+    /// <summary>
     /// DataStream resource
     /// </summary>
     [pbr::OriginalName("DATA_STREAM")] DataStream = 18,
+    /// <summary>
+    /// AttributionSettings resource
+    /// </summary>
+    [pbr::OriginalName("ATTRIBUTION_SETTINGS")] AttributionSettings = 20,
   }
 
   /// <summary>
@@ -654,6 +702,28 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// proposal will be automatically deleted after some time.
     /// </summary>
     [pbr::OriginalName("OBSOLETE")] Obsolete = 6,
+  }
+
+  /// <summary>
+  /// Types of Property resources.
+  /// </summary>
+  public enum PropertyType {
+    /// <summary>
+    /// Unknown or unspecified property type
+    /// </summary>
+    [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Ordinary GA4 property
+    /// </summary>
+    [pbr::OriginalName("PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
+    /// <summary>
+    /// GA4 subproperty
+    /// </summary>
+    [pbr::OriginalName("PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
+    /// <summary>
+    /// GA4 rollup property
+    /// </summary>
+    [pbr::OriginalName("PROPERTY_TYPE_ROLLUP")] Rollup = 3,
   }
 
   #endregion
@@ -1113,6 +1183,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Property(Property other) : this() {
       name_ = other.name_;
+      propertyType_ = other.propertyType_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       parent_ = other.parent_;
@@ -1147,6 +1218,24 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "property_type" field.</summary>
+    public const int PropertyTypeFieldNumber = 14;
+    private global::Google.Analytics.Admin.V1Alpha.PropertyType propertyType_ = global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified;
+    /// <summary>
+    /// Immutable. The property type for this Property resource. When creating a property, if
+    /// the type is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be
+    /// implied. "SUBPROPERTY" and "ROLLUP_PROPERTY" types cannot yet be created
+    /// via Google Analytics Admin API.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.PropertyType PropertyType {
+      get { return propertyType_; }
+      set {
+        propertyType_ = value;
       }
     }
 
@@ -1187,8 +1276,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Immutable. Resource name of this property's logical parent.
     ///
     /// Note: The Property-Moving UI can be used to change the parent.
-    /// Format: accounts/{account}
-    /// Example: "accounts/100"
+    /// Format: accounts/{account}, properties/{property}
+    /// Example: "accounts/100", "properties/101"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1354,6 +1443,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return true;
       }
       if (Name != other.Name) return false;
+      if (PropertyType != other.PropertyType) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Parent != other.Parent) return false;
@@ -1373,6 +1463,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) hash ^= PropertyType.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -1450,6 +1541,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(106);
         output.WriteString(Account);
       }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) PropertyType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1508,6 +1603,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(106);
         output.WriteString(Account);
       }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) PropertyType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1520,6 +1619,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PropertyType);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -1568,6 +1670,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        PropertyType = other.PropertyType;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -1689,6 +1794,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             Account = input.ReadString();
             break;
           }
+          case 112: {
+            PropertyType = (global::Google.Analytics.Admin.V1Alpha.PropertyType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1762,6 +1871,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 106: {
             Account = input.ReadString();
+            break;
+          }
+          case 112: {
+            PropertyType = (global::Google.Analytics.Admin.V1Alpha.PropertyType) input.ReadEnum();
             break;
           }
         }
@@ -5456,6 +5569,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public PropertySummary(PropertySummary other) : this() {
       property_ = other.property_;
       displayName_ = other.displayName_;
+      propertyType_ = other.propertyType_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5497,6 +5612,40 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "property_type" field.</summary>
+    public const int PropertyTypeFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.PropertyType propertyType_ = global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified;
+    /// <summary>
+    /// The property's property type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.PropertyType PropertyType {
+      get { return propertyType_; }
+      set {
+        propertyType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 4;
+    private string parent_ = "";
+    /// <summary>
+    /// Resource name of this property's logical parent.
+    ///
+    /// Note: The Property-Moving UI can be used to change the parent.
+    /// Format: accounts/{account}, properties/{property}
+    /// Example: "accounts/100", "properties/200"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5514,6 +5663,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (Property != other.Property) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (PropertyType != other.PropertyType) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5523,6 +5674,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       int hash = 1;
       if (Property.Length != 0) hash ^= Property.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) hash ^= PropertyType.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5549,6 +5702,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PropertyType);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5567,6 +5728,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PropertyType);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5582,6 +5751,12 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PropertyType);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5600,6 +5775,12 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.PropertyType != global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified) {
+        PropertyType = other.PropertyType;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5624,6 +5805,14 @@ namespace Google.Analytics.Admin.V1Alpha {
             DisplayName = input.ReadString();
             break;
           }
+          case 24: {
+            PropertyType = (global::Google.Analytics.Admin.V1Alpha.PropertyType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5645,6 +5834,14 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 18: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 24: {
+            PropertyType = (global::Google.Analytics.Admin.V1Alpha.PropertyType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Parent = input.ReadString();
             break;
           }
         }
@@ -5710,7 +5907,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Resource name of this secret. This secret may be a child of any type of
     /// stream.
     /// Format:
-    /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
+    /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6750,6 +6947,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             case ResourceOneofCase.DataStream:
               DataStream = other.DataStream.Clone();
               break;
+            case ResourceOneofCase.AttributionSettings:
+              AttributionSettings = other.AttributionSettings.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6958,6 +7158,21 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "attribution_settings" field.</summary>
+        public const int AttributionSettingsFieldNumber = 20;
+        /// <summary>
+        /// A snapshot of AttributionSettings resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.AttributionSettings AttributionSettings {
+          get { return resourceCase_ == ResourceOneofCase.AttributionSettings ? (global::Google.Analytics.Admin.V1Alpha.AttributionSettings) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.AttributionSettings;
+          }
+        }
+
         private object resource_;
         /// <summary>Enum of possible cases for the "resource" oneof.</summary>
         public enum ResourceOneofCase {
@@ -6975,6 +7190,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           CustomMetric = 14,
           DataRetentionSettings = 15,
           DataStream = 18,
+          AttributionSettings = 20,
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7018,6 +7234,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (!object.Equals(CustomMetric, other.CustomMetric)) return false;
           if (!object.Equals(DataRetentionSettings, other.DataRetentionSettings)) return false;
           if (!object.Equals(DataStream, other.DataStream)) return false;
+          if (!object.Equals(AttributionSettings, other.AttributionSettings)) return false;
           if (ResourceCase != other.ResourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -7039,6 +7256,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.CustomMetric) hash ^= CustomMetric.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) hash ^= DataRetentionSettings.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.DataStream) hash ^= DataStream.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.AttributionSettings) hash ^= AttributionSettings.GetHashCode();
           hash ^= (int) resourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7110,6 +7328,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(146, 1);
             output.WriteMessage(DataStream);
           }
+          if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
+            output.WriteRawTag(162, 1);
+            output.WriteMessage(AttributionSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7172,6 +7394,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(146, 1);
             output.WriteMessage(DataStream);
           }
+          if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
+            output.WriteRawTag(162, 1);
+            output.WriteMessage(AttributionSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7220,6 +7446,9 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           if (resourceCase_ == ResourceOneofCase.DataStream) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(AttributionSettings);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7311,6 +7540,12 @@ namespace Google.Analytics.Admin.V1Alpha {
                 DataStream = new global::Google.Analytics.Admin.V1Alpha.DataStream();
               }
               DataStream.MergeFrom(other.DataStream);
+              break;
+            case ResourceOneofCase.AttributionSettings:
+              if (AttributionSettings == null) {
+                AttributionSettings = new global::Google.Analytics.Admin.V1Alpha.AttributionSettings();
+              }
+              AttributionSettings.MergeFrom(other.AttributionSettings);
               break;
           }
 
@@ -7446,6 +7681,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 DataStream = subBuilder;
                 break;
               }
+              case 162: {
+                global::Google.Analytics.Admin.V1Alpha.AttributionSettings subBuilder = new global::Google.Analytics.Admin.V1Alpha.AttributionSettings();
+                if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
+                  subBuilder.MergeFrom(AttributionSettings);
+                }
+                input.ReadMessage(subBuilder);
+                AttributionSettings = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -7576,6 +7820,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 DataStream = subBuilder;
+                break;
+              }
+              case 162: {
+                global::Google.Analytics.Admin.V1Alpha.AttributionSettings subBuilder = new global::Google.Analytics.Admin.V1Alpha.AttributionSettings();
+                if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
+                  subBuilder.MergeFrom(AttributionSettings);
+                }
+                input.ReadMessage(subBuilder);
+                AttributionSettings = subBuilder;
                 break;
               }
             }
@@ -10752,6 +11005,432 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// Available to 360 properties only.
         /// </summary>
         [pbr::OriginalName("FIFTY_MONTHS")] FiftyMonths = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The attribution settings used for a given property. This is a singleton
+  /// resource.
+  /// </summary>
+  public sealed partial class AttributionSettings : pb::IMessage<AttributionSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AttributionSettings> _parser = new pb::MessageParser<AttributionSettings>(() => new AttributionSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AttributionSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributionSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributionSettings(AttributionSettings other) : this() {
+      name_ = other.name_;
+      acquisitionConversionEventLookbackWindow_ = other.acquisitionConversionEventLookbackWindow_;
+      otherConversionEventLookbackWindow_ = other.otherConversionEventLookbackWindow_;
+      reportingAttributionModel_ = other.reportingAttributionModel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributionSettings Clone() {
+      return new AttributionSettings(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of this attribution settings resource.
+    /// Format: properties/{property_id}/attributionSettings
+    /// Example: "properties/1000/attributionSettings"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acquisition_conversion_event_lookback_window" field.</summary>
+    public const int AcquisitionConversionEventLookbackWindowFieldNumber = 2;
+    private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow acquisitionConversionEventLookbackWindow_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified;
+    /// <summary>
+    /// Required. The lookback window configuration for acquisition conversion events.
+    /// The default window size is 30 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow AcquisitionConversionEventLookbackWindow {
+      get { return acquisitionConversionEventLookbackWindow_; }
+      set {
+        acquisitionConversionEventLookbackWindow_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "other_conversion_event_lookback_window" field.</summary>
+    public const int OtherConversionEventLookbackWindowFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow otherConversionEventLookbackWindow_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified;
+    /// <summary>
+    /// Required. The lookback window for all other, non-acquisition conversion events.
+    /// The default window size is 90 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow OtherConversionEventLookbackWindow {
+      get { return otherConversionEventLookbackWindow_; }
+      set {
+        otherConversionEventLookbackWindow_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reporting_attribution_model" field.</summary>
+    public const int ReportingAttributionModelFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel reportingAttributionModel_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified;
+    /// <summary>
+    /// Required. The reporting attribution model used to calculate conversion credit in this
+    /// property's reports.
+    ///
+    /// Changing the attribution model will apply to both historical and future
+    /// data. These changes will be reflected in reports with conversion and
+    /// revenue data. User and session data will be unaffected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel ReportingAttributionModel {
+      get { return reportingAttributionModel_; }
+      set {
+        reportingAttributionModel_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AttributionSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AttributionSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (AcquisitionConversionEventLookbackWindow != other.AcquisitionConversionEventLookbackWindow) return false;
+      if (OtherConversionEventLookbackWindow != other.OtherConversionEventLookbackWindow) return false;
+      if (ReportingAttributionModel != other.ReportingAttributionModel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) hash ^= AcquisitionConversionEventLookbackWindow.GetHashCode();
+      if (OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) hash ^= OtherConversionEventLookbackWindow.GetHashCode();
+      if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) hash ^= ReportingAttributionModel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) AcquisitionConversionEventLookbackWindow);
+      }
+      if (OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OtherConversionEventLookbackWindow);
+      }
+      if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ReportingAttributionModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) AcquisitionConversionEventLookbackWindow);
+      }
+      if (OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OtherConversionEventLookbackWindow);
+      }
+      if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ReportingAttributionModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AcquisitionConversionEventLookbackWindow);
+      }
+      if (OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OtherConversionEventLookbackWindow);
+      }
+      if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReportingAttributionModel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AttributionSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) {
+        AcquisitionConversionEventLookbackWindow = other.AcquisitionConversionEventLookbackWindow;
+      }
+      if (other.OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) {
+        OtherConversionEventLookbackWindow = other.OtherConversionEventLookbackWindow;
+      }
+      if (other.ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
+        ReportingAttributionModel = other.ReportingAttributionModel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            AcquisitionConversionEventLookbackWindow = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            OtherConversionEventLookbackWindow = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ReportingAttributionModel = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            AcquisitionConversionEventLookbackWindow = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            OtherConversionEventLookbackWindow = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ReportingAttributionModel = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AttributionSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// How far back in time events should be considered for inclusion in a
+      /// converting path which leads to the first install of an app or the first
+      /// visit to a site.
+      /// </summary>
+      public enum AcquisitionConversionEventLookbackWindow {
+        /// <summary>
+        /// Lookback window size unspecified.
+        /// </summary>
+        [pbr::OriginalName("ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// 7-day lookback window.
+        /// </summary>
+        [pbr::OriginalName("ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_7_DAYS")] _7Days = 1,
+        /// <summary>
+        /// 30-day lookback window.
+        /// </summary>
+        [pbr::OriginalName("ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS")] _30Days = 2,
+      }
+
+      /// <summary>
+      /// How far back in time events should be considered for inclusion in a
+      /// converting path for all conversions other than first app install/first site
+      /// visit.
+      /// </summary>
+      public enum OtherConversionEventLookbackWindow {
+        /// <summary>
+        /// Lookback window size unspecified.
+        /// </summary>
+        [pbr::OriginalName("OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// 30-day lookback window.
+        /// </summary>
+        [pbr::OriginalName("OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS")] _30Days = 1,
+        /// <summary>
+        /// 60-day lookback window.
+        /// </summary>
+        [pbr::OriginalName("OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_60_DAYS")] _60Days = 2,
+        /// <summary>
+        /// 90-day lookback window.
+        /// </summary>
+        [pbr::OriginalName("OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS")] _90Days = 3,
+      }
+
+      /// <summary>
+      /// The reporting attribution model used to calculate conversion credit in this
+      /// property's reports.
+      /// </summary>
+      public enum ReportingAttributionModel {
+        /// <summary>
+        /// Reporting attribution model unspecified.
+        /// </summary>
+        [pbr::OriginalName("REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Data-driven attribution distributes credit for the conversion based on
+        /// data for each conversion event. Each Data-driven model is specific to
+        /// each advertiser and each conversion event.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_DATA_DRIVEN")] CrossChannelDataDriven = 1,
+        /// <summary>
+        /// Ignores direct traffic and attributes 100% of the conversion value to the
+        /// last channel that the customer clicked through (or engaged view through
+        /// for YouTube) before converting.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_LAST_CLICK")] CrossChannelLastClick = 2,
+        /// <summary>
+        /// Gives all credit for the conversion to the first channel that a customer
+        /// clicked (or engaged view through for YouTube) before converting.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_FIRST_CLICK")] CrossChannelFirstClick = 3,
+        /// <summary>
+        /// Distributes the credit for the conversion equally across all the channels
+        /// a customer clicked (or engaged view through for YouTube) before
+        /// converting.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_LINEAR")] CrossChannelLinear = 4,
+        /// <summary>
+        /// Attributes 40% credit to the first and last interaction, and the
+        /// remaining 20% credit is distributed evenly to the middle interactions.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_POSITION_BASED")] CrossChannelPositionBased = 5,
+        /// <summary>
+        /// Gives more credit to the touchpoints that happened closer in time to
+        /// the conversion.
+        /// </summary>
+        [pbr::OriginalName("CROSS_CHANNEL_TIME_DECAY")] CrossChannelTimeDecay = 6,
+        /// <summary>
+        /// Attributes 100% of the conversion value to the last Google Ads channel
+        /// that the customer clicked through before converting.
+        /// </summary>
+        [pbr::OriginalName("ADS_PREFERRED_LAST_CLICK")] AdsPreferredLastClick = 7,
       }
 
     }
