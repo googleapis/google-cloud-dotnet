@@ -30,7 +30,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "L3YzL2NvbW1vbi5wcm90bxoqZ29vZ2xlL21vbml0b3JpbmcvdjMvbXV0YXRp",
             "b25fcmVjb3JkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8i4xcKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
+            "Yy9zdGF0dXMucHJvdG8i2xoKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
             "FAoMZGlzcGxheV9uYW1lGAIgASgJEkYKDWRvY3VtZW50YXRpb24YDSABKAsy",
             "Ly5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Eb2N1bWVudGF0",
             "aW9uEkYKC3VzZXJfbGFiZWxzGBAgAygLMjEuZ29vZ2xlLm1vbml0b3Jpbmcu",
@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "cmVjb3JkGAsgASgLMiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25S",
             "ZWNvcmQSRwoOYWxlcnRfc3RyYXRlZ3kYFSABKAsyLy5nb29nbGUubW9uaXRv",
             "cmluZy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5GjMKDURvY3VtZW50",
-            "YXRpb24SDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5cGUYAiABKAka1g0K",
+            "YXRpb24SDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5cGUYAiABKAkazhAK",
             "CUNvbmRpdGlvbhIMCgRuYW1lGAwgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEo",
             "CRJaChNjb25kaXRpb25fdGhyZXNob2xkGAEgASgLMjsuZ29vZ2xlLm1vbml0",
             "b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLk1ldHJpY1RocmVzaG9s",
@@ -56,7 +56,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "I2NvbmRpdGlvbl9tb25pdG9yaW5nX3F1ZXJ5X2xhbmd1YWdlGBMgASgLMkwu",
             "Z29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLk1v",
             "bml0b3JpbmdRdWVyeUxhbmd1YWdlQ29uZGl0aW9uSAAaNQoHVHJpZ2dlchIP",
-            "CgVjb3VudBgBIAEoBUgAEhEKB3BlcmNlbnQYAiABKAFIAEIGCgR0eXBlGoYD",
+            "CgVjb3VudBgBIAEoBUgAEhEKB3BlcmNlbnQYAiABKAFIAEIGCgR0eXBlGuoD",
             "Cg9NZXRyaWNUaHJlc2hvbGQSEwoGZmlsdGVyGAIgASgJQgPgQQISNwoMYWdn",
             "cmVnYXRpb25zGAggAygLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWdncmVn",
             "YXRpb24SGgoSZGVub21pbmF0b3JfZmlsdGVyGAkgASgJEkMKGGRlbm9taW5h",
@@ -65,53 +65,61 @@ namespace Google.Cloud.Monitoring.V3 {
             "aXRvcmluZy52My5Db21wYXJpc29uVHlwZRIXCg90aHJlc2hvbGRfdmFsdWUY",
             "BSABKAESKwoIZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
             "YXRpb24SRAoHdHJpZ2dlchgHIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyGtABCg1NZXRyaWNBYnNl",
-            "bmNlEhMKBmZpbHRlchgBIAEoCUID4EECEjcKDGFnZ3JlZ2F0aW9ucxgFIAMo",
-            "CzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9uEisKCGR1cmF0",
-            "aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKB3RyaWdn",
-            "ZXIYAyABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
-            "b25kaXRpb24uVHJpZ2dlchq8AQoITG9nTWF0Y2gSEwoGZmlsdGVyGAEgASgJ",
-            "QgPgQQISYwoQbGFiZWxfZXh0cmFjdG9ycxgCIAMoCzJJLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Mb2dNYXRjaC5MYWJl",
-            "bEV4dHJhY3RvcnNFbnRyeRo2ChRMYWJlbEV4dHJhY3RvcnNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGqQBCiBNb25pdG9yaW5nUXVl",
-            "cnlMYW5ndWFnZUNvbmRpdGlvbhINCgVxdWVyeRgBIAEoCRIrCghkdXJhdGlv",
-            "bhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJECgd0cmlnZ2Vy",
-            "GAMgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29u",
-            "ZGl0aW9uLlRyaWdnZXI6lwLqQZMCCi5tb25pdG9yaW5nLmdvb2dsZWFwaXMu",
-            "Y29tL0FsZXJ0UG9saWN5Q29uZGl0aW9uEkZwcm9qZWN0cy97cHJvamVjdH0v",
-            "YWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fS9jb25kaXRpb25zL3tjb25k",
-            "aXRpb259ElBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FsZXJ0UG9s",
-            "aWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97Y29uZGl0aW9ufRJE",
-            "Zm9sZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9",
-            "L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SASpCCwoJY29uZGl0aW9uGuoBCg1B",
-            "bGVydFN0cmF0ZWd5EmYKF25vdGlmaWNhdGlvbl9yYXRlX2xpbWl0GAEgASgL",
-            "MkUuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQWxlcnRTdHJh",
-            "dGVneS5Ob3RpZmljYXRpb25SYXRlTGltaXQSLQoKYXV0b19jbG9zZRgDIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhpCChVOb3RpZmljYXRpb25S",
-            "YXRlTGltaXQSKQoGcGVyaW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uGjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBImEKFUNvbmRpdGlvbkNvbWJpbmVyVHlwZRIXChNDT01C",
-            "SU5FX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAhIeChpBTkRfV0lU",
-            "SF9NQVRDSElOR19SRVNPVVJDRRADOskB6kHFAQolbW9uaXRvcmluZy5nb29n",
-            "bGVhcGlzLmNvbS9BbGVydFBvbGljeRIvcHJvamVjdHMve3Byb2plY3R9L2Fs",
-            "ZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0SOW9yZ2FuaXphdGlvbnMve29y",
-            "Z2FuaXphdGlvbn0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRItZm9s",
-            "ZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9EgEq",
-            "QsIBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCCkFsZXJ0UHJvdG9QAVo+",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9y",
-            "aW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5W",
-            "M8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91",
-            "ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
+            "LkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1YXRpb25f",
+            "bWlzc2luZ19kYXRhGAsgASgOMkEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0YRrQAQoN",
+            "TWV0cmljQWJzZW5jZRITCgZmaWx0ZXIYASABKAlCA+BBAhI3CgxhZ2dyZWdh",
+            "dGlvbnMYBSADKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlv",
+            "bhIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bhJECgd0cmlnZ2VyGAMgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kuQ29uZGl0aW9uLlRyaWdnZXIavAEKCExvZ01hdGNoEhMKBmZp",
+            "bHRlchgBIAEoCUID4EECEmMKEGxhYmVsX2V4dHJhY3RvcnMYAiADKAsySS5n",
+            "b29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uTG9n",
+            "TWF0Y2guTGFiZWxFeHRyYWN0b3JzRW50cnkaNgoUTGFiZWxFeHRyYWN0b3Jz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARqIAgogTW9u",
+            "aXRvcmluZ1F1ZXJ5TGFuZ3VhZ2VDb25kaXRpb24SDQoFcXVlcnkYASABKAkS",
+            "KwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
+            "RAoHdHJpZ2dlchgDIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
+            "UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1YXRpb25fbWlzc2lu",
+            "Z19kYXRhGAQgASgOMkEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
+            "Y3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0YSKtAQoVRXZhbHVh",
+            "dGlvbk1pc3NpbmdEYXRhEicKI0VWQUxVQVRJT05fTUlTU0lOR19EQVRBX1VO",
+            "U1BFQ0lGSUVEEAASJAogRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfSU5BQ1RJ",
+            "VkUQARIiCh5FVkFMVUFUSU9OX01JU1NJTkdfREFUQV9BQ1RJVkUQAhIhCh1F",
+            "VkFMVUFUSU9OX01JU1NJTkdfREFUQV9OT19PUBADOpcC6kGTAgoubW9uaXRv",
+            "cmluZy5nb29nbGVhcGlzLmNvbS9BbGVydFBvbGljeUNvbmRpdGlvbhJGcHJv",
+            "amVjdHMve3Byb2plY3R9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0v",
+            "Y29uZGl0aW9ucy97Y29uZGl0aW9ufRJQb3JnYW5pemF0aW9ucy97b3JnYW5p",
+            "emF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9L2NvbmRpdGlv",
+            "bnMve2NvbmRpdGlvbn0SRGZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xpY2ll",
+            "cy97YWxlcnRfcG9saWN5fS9jb25kaXRpb25zL3tjb25kaXRpb259EgEqQgsK",
+            "CWNvbmRpdGlvbhrqAQoNQWxlcnRTdHJhdGVneRJmChdub3RpZmljYXRpb25f",
+            "cmF0ZV9saW1pdBgBIAEoCzJFLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
+            "UG9saWN5LkFsZXJ0U3RyYXRlZ3kuTm90aWZpY2F0aW9uUmF0ZUxpbWl0Ei0K",
+            "CmF1dG9fY2xvc2UYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24a",
+            "QgoVTm90aWZpY2F0aW9uUmF0ZUxpbWl0EikKBnBlcmlvZBgBIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoxCg9Vc2VyTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChVDb25kaXRpb25Db21i",
+            "aW5lclR5cGUSFwoTQ09NQklORV9VTlNQRUNJRklFRBAAEgcKA0FORBABEgYK",
+            "Ak9SEAISHgoaQU5EX1dJVEhfTUFUQ0hJTkdfUkVTT1VSQ0UQAzrJAepBxQEK",
+            "JW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3kSL3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9Ejlv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FsZXJ0UG9saWNpZXMve2Fs",
+            "ZXJ0X3BvbGljeX0SLWZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xpY2llcy97",
+            "YWxlcnRfcG9saWN5fRIBKkLCAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "QgpBbGVydFByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNs",
+            "b3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xW",
+            "M+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord", "AlertStrategy" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage" }, new[]{ "Condition" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "Comparison", "ThresholdValue", "Duration", "Trigger" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage" }, new[]{ "Condition" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "Comparison", "ThresholdValue", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch.Parser, new[]{ "Filter", "LabelExtractors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "AutoClose" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null)}),
             null, })
           }));
@@ -190,7 +198,7 @@ namespace Google.Cloud.Monitoring.V3 {
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     ///
-    /// `[ALERT_POLICY_ID]` is assigned by Stackdriver Monitoring when the policy
+    /// `[ALERT_POLICY_ID]` is assigned by Cloud Monitoring when the policy
     /// is created. When calling the
     /// [alertPolicies.create][google.monitoring.v3.AlertPolicyService.CreateAlertPolicy]
     /// method, do not include the `name` field in the alerting policy passed as
@@ -911,7 +919,8 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The text of the documentation, interpreted according to `mime_type`.
         /// The content may not exceed 8,192 Unicode characters and may not exceed
         /// more than 10,240 bytes when encoded in UTF-8 format, whichever is
-        /// smaller.
+        /// smaller. This text can be [templatized by using
+        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1170,13 +1179,13 @@ namespace Google.Cloud.Monitoring.V3 {
         ///
         ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
         ///
-        /// `[CONDITION_ID]` is assigned by Stackdriver Monitoring when the
+        /// `[CONDITION_ID]` is assigned by Cloud Monitoring when the
         /// condition is created as part of a new or updated alerting policy.
         ///
         /// When calling the
         /// [alertPolicies.create][google.monitoring.v3.AlertPolicyService.CreateAlertPolicy]
         /// method, do not include the `name` field in the conditions of the
-        /// requested alerting policy. Stackdriver Monitoring creates the
+        /// requested alerting policy. Cloud Monitoring creates the
         /// condition identifiers and includes them in the new policy.
         ///
         /// When calling the
@@ -1617,6 +1626,33 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
+          /// A condition control that determines how metric-threshold conditions
+          /// are evaluated when data stops arriving.
+          /// This control doesn't affect metric-absence policies.
+          /// </summary>
+          public enum EvaluationMissingData {
+            /// <summary>
+            /// An unspecified evaluation missing data option.  Equivalent to
+            /// EVALUATION_MISSING_DATA_NO_OP.
+            /// </summary>
+            [pbr::OriginalName("EVALUATION_MISSING_DATA_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// If there is no data to evaluate the condition, then evaluate the
+            /// condition as false.
+            /// </summary>
+            [pbr::OriginalName("EVALUATION_MISSING_DATA_INACTIVE")] Inactive = 1,
+            /// <summary>
+            /// If there is no data to evaluate the condition, then evaluate the
+            /// condition as true.
+            /// </summary>
+            [pbr::OriginalName("EVALUATION_MISSING_DATA_ACTIVE")] Active = 2,
+            /// <summary>
+            /// Do not evaluate the condition to any value if there is no data.
+            /// </summary>
+            [pbr::OriginalName("EVALUATION_MISSING_DATA_NO_OP")] NoOp = 3,
+          }
+
+          /// <summary>
           /// Specifies how many time series must fail a predicate to trigger a
           /// condition. If not specified, then a `{count: 1}` trigger is used.
           /// </summary>
@@ -1933,6 +1969,7 @@ namespace Google.Cloud.Monitoring.V3 {
               thresholdValue_ = other.thresholdValue_;
               duration_ = other.duration_ != null ? other.duration_.Clone() : null;
               trigger_ = other.trigger_ != null ? other.trigger_.Clone() : null;
+              evaluationMissingData_ = other.evaluationMissingData_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2115,6 +2152,22 @@ namespace Google.Cloud.Monitoring.V3 {
               }
             }
 
+            /// <summary>Field number for the "evaluation_missing_data" field.</summary>
+            public const int EvaluationMissingDataFieldNumber = 11;
+            private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData evaluationMissingData_ = global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified;
+            /// <summary>
+            /// A condition control that determines how metric-threshold conditions
+            /// are evaluated when data stops arriving.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData EvaluationMissingData {
+              get { return evaluationMissingData_; }
+              set {
+                evaluationMissingData_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -2138,6 +2191,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ThresholdValue, other.ThresholdValue)) return false;
               if (!object.Equals(Duration, other.Duration)) return false;
               if (!object.Equals(Trigger, other.Trigger)) return false;
+              if (EvaluationMissingData != other.EvaluationMissingData) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -2153,6 +2207,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (ThresholdValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ThresholdValue);
               if (duration_ != null) hash ^= Duration.GetHashCode();
               if (trigger_ != null) hash ^= Trigger.GetHashCode();
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) hash ^= EvaluationMissingData.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -2197,6 +2252,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteString(DenominatorFilter);
               }
               denominatorAggregations_.WriteTo(output, _repeated_denominatorAggregations_codec);
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                output.WriteRawTag(88);
+                output.WriteEnum((int) EvaluationMissingData);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2233,6 +2292,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteString(DenominatorFilter);
               }
               denominatorAggregations_.WriteTo(ref output, _repeated_denominatorAggregations_codec);
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                output.WriteRawTag(88);
+                output.WriteEnum((int) EvaluationMissingData);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2262,6 +2325,9 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               if (trigger_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Trigger);
+              }
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EvaluationMissingData);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -2300,6 +2366,9 @@ namespace Google.Cloud.Monitoring.V3 {
                   Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                 }
                 Trigger.MergeFrom(other.Trigger);
+              }
+              if (other.EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                EvaluationMissingData = other.EvaluationMissingData;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -2354,6 +2423,10 @@ namespace Google.Cloud.Monitoring.V3 {
                     denominatorAggregations_.AddEntriesFrom(input, _repeated_denominatorAggregations_codec);
                     break;
                   }
+                  case 88: {
+                    EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             #endif
@@ -2405,6 +2478,10 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                   case 82: {
                     denominatorAggregations_.AddEntriesFrom(ref input, _repeated_denominatorAggregations_codec);
+                    break;
+                  }
+                  case 88: {
+                    EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
                     break;
                   }
                 }
@@ -3048,6 +3125,7 @@ namespace Google.Cloud.Monitoring.V3 {
               query_ = other.query_;
               duration_ = other.duration_ != null ? other.duration_.Clone() : null;
               trigger_ = other.trigger_ != null ? other.trigger_.Clone() : null;
+              evaluationMissingData_ = other.evaluationMissingData_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -3117,6 +3195,22 @@ namespace Google.Cloud.Monitoring.V3 {
               }
             }
 
+            /// <summary>Field number for the "evaluation_missing_data" field.</summary>
+            public const int EvaluationMissingDataFieldNumber = 4;
+            private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData evaluationMissingData_ = global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified;
+            /// <summary>
+            /// A condition control that determines how metric-threshold conditions
+            /// are evaluated when data stops arriving.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData EvaluationMissingData {
+              get { return evaluationMissingData_; }
+              set {
+                evaluationMissingData_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -3135,6 +3229,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (Query != other.Query) return false;
               if (!object.Equals(Duration, other.Duration)) return false;
               if (!object.Equals(Trigger, other.Trigger)) return false;
+              if (EvaluationMissingData != other.EvaluationMissingData) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -3145,6 +3240,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (Query.Length != 0) hash ^= Query.GetHashCode();
               if (duration_ != null) hash ^= Duration.GetHashCode();
               if (trigger_ != null) hash ^= Trigger.GetHashCode();
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) hash ^= EvaluationMissingData.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -3175,6 +3271,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(26);
                 output.WriteMessage(Trigger);
               }
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) EvaluationMissingData);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -3197,6 +3297,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(26);
                 output.WriteMessage(Trigger);
               }
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) EvaluationMissingData);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -3215,6 +3319,9 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               if (trigger_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Trigger);
+              }
+              if (EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EvaluationMissingData);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -3242,6 +3349,9 @@ namespace Google.Cloud.Monitoring.V3 {
                   Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                 }
                 Trigger.MergeFrom(other.Trigger);
+              }
+              if (other.EvaluationMissingData != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified) {
+                EvaluationMissingData = other.EvaluationMissingData;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -3276,6 +3386,10 @@ namespace Google.Cloud.Monitoring.V3 {
                     input.ReadMessage(Trigger);
                     break;
                   }
+                  case 32: {
+                    EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             #endif
@@ -3307,6 +3421,10 @@ namespace Google.Cloud.Monitoring.V3 {
                       Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                     }
                     input.ReadMessage(Trigger);
+                    break;
+                  }
+                  case 32: {
+                    EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
                     break;
                   }
                 }
