@@ -398,11 +398,17 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchGetEffectiveIamPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings BatchGetEffectiveIamPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
@@ -1355,6 +1361,14 @@ namespace Google.Cloud.Asset.V1
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
         /// encryption key whose name contains the word "key".
+        /// * `relationships:instance-group-1` to find Cloud resources that have
+        /// relationships with "instance-group-1" in the related resource name.
+        /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
+        /// have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
+        /// compute instances that have relationships with "instance-group-1" in the
+        /// compute instance group resource name, for relationship type
+        /// "INSTANCE_TO_INSTANCEGROUP".
         /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
@@ -1456,6 +1470,14 @@ namespace Google.Cloud.Asset.V1
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
         /// encryption key whose name contains the word "key".
+        /// * `relationships:instance-group-1` to find Cloud resources that have
+        /// relationships with "instance-group-1" in the related resource name.
+        /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
+        /// have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
+        /// compute instances that have relationships with "instance-group-1" in the
+        /// compute instance group resource name, for relationship type
+        /// "INSTANCE_TO_INSTANCEGROUP".
         /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
@@ -1566,8 +1588,8 @@ namespace Google.Cloud.Asset.V1
         /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see [IAM policy
-        /// doc](https://cloud.google.com/iam/docs/policies#structure).
+        /// policy structure, see the [IAM policy
+        /// documentation](https://cloud.google.com/iam/help/allow-policies/structure).
         /// 
         /// Examples:
         /// 
@@ -1649,8 +1671,8 @@ namespace Google.Cloud.Asset.V1
         /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see [IAM policy
-        /// doc](https://cloud.google.com/iam/docs/policies#structure).
+        /// policy structure, see the [IAM policy
+        /// documentation](https://cloud.google.com/iam/help/allow-policies/structure).
         /// 
         /// Examples:
         /// 

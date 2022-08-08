@@ -1013,8 +1013,8 @@ namespace Google.Cloud.Asset.V1 {
     /// effectively policy is the union of both the policy set on this resource
     /// and each policy set on all of the resource's ancestry resource levels in
     /// the hierarchy. See
-    /// [this topic](https://cloud.google.com/iam/docs/policies#inheritance) for
-    /// more information.
+    /// [this topic](https://cloud.google.com/iam/help/allow-policies/inheritance)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3041,6 +3041,7 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// A result of Resource Search, containing information of a cloud resource.
+  /// Next ID: 29
   /// </summary>
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
