@@ -1445,6 +1445,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -1469,6 +1470,7 @@
         "automl"
       ],
       "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
