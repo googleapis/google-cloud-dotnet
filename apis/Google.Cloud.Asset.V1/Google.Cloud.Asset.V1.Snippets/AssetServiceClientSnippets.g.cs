@@ -1317,6 +1317,51 @@ namespace Google.Cloud.Asset.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for QueryAssets</summary>
+        public void QueryAssetsRequestObject()
+        {
+            // Snippet: QueryAssets(QueryAssetsRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            QueryAssetsRequest request = new QueryAssetsRequest
+            {
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Statement = "",
+                PageSize = 0,
+                PageToken = "",
+                Timeout = new Duration(),
+                ReadTimeWindow = new TimeWindow(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            // Make the request
+            QueryAssetsResponse response = assetServiceClient.QueryAssets(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryAssetsAsync</summary>
+        public async Task QueryAssetsRequestObjectAsync()
+        {
+            // Snippet: QueryAssetsAsync(QueryAssetsRequest, CallSettings)
+            // Additional: QueryAssetsAsync(QueryAssetsRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryAssetsRequest request = new QueryAssetsRequest
+            {
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Statement = "",
+                PageSize = 0,
+                PageToken = "",
+                Timeout = new Duration(),
+                ReadTimeWindow = new TimeWindow(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            // Make the request
+            QueryAssetsResponse response = await assetServiceClient.QueryAssetsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateSavedQuery</summary>
         public void CreateSavedQueryRequestObject()
         {

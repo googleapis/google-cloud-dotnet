@@ -110,6 +110,10 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.QueryAssetsRequest> __Marshaller_google_cloud_asset_v1_QueryAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.QueryAssetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.QueryAssetsResponse> __Marshaller_google_cloud_asset_v1_QueryAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.QueryAssetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest> __Marshaller_google_cloud_asset_v1_CreateSavedQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.CreateSavedQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SavedQuery> __Marshaller_google_cloud_asset_v1_SavedQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SavedQuery.Parser));
@@ -231,6 +235,14 @@ namespace Google.Cloud.Asset.V1 {
         "AnalyzeMove",
         __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest,
         __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.QueryAssetsRequest, global::Google.Cloud.Asset.V1.QueryAssetsResponse> __Method_QueryAssets = new grpc::Method<global::Google.Cloud.Asset.V1.QueryAssetsRequest, global::Google.Cloud.Asset.V1.QueryAssetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryAssets",
+        __Marshaller_google_cloud_asset_v1_QueryAssetsRequest,
+        __Marshaller_google_cloud_asset_v1_QueryAssetsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery> __Method_CreateSavedQuery = new grpc::Method<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(
@@ -480,6 +492,31 @@ namespace Google.Cloud.Asset.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Issue a job that queries assets using a SQL statement compatible with
+      /// [BigQuery Standard
+      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      ///
+      /// If the query execution finishes within timeout and there's no pagination,
+      /// the full query results will be returned in the `QueryAssetsResponse`.
+      ///
+      /// Otherwise, full query results can be obtained by issuing extra requests
+      /// with the `job_reference` from the a previous `QueryAssets` call.
+      ///
+      /// Note, the query result has approximately 10 GB limitation enforced by
+      /// BigQuery
+      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
+      /// queries return larger results will result in errors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.QueryAssetsResponse> QueryAssets(global::Google.Cloud.Asset.V1.QueryAssetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1362,6 +1399,106 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeMove, null, options, request);
       }
       /// <summary>
+      /// Issue a job that queries assets using a SQL statement compatible with
+      /// [BigQuery Standard
+      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      ///
+      /// If the query execution finishes within timeout and there's no pagination,
+      /// the full query results will be returned in the `QueryAssetsResponse`.
+      ///
+      /// Otherwise, full query results can be obtained by issuing extra requests
+      /// with the `job_reference` from the a previous `QueryAssets` call.
+      ///
+      /// Note, the query result has approximately 10 GB limitation enforced by
+      /// BigQuery
+      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
+      /// queries return larger results will result in errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.QueryAssetsResponse QueryAssets(global::Google.Cloud.Asset.V1.QueryAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Issue a job that queries assets using a SQL statement compatible with
+      /// [BigQuery Standard
+      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      ///
+      /// If the query execution finishes within timeout and there's no pagination,
+      /// the full query results will be returned in the `QueryAssetsResponse`.
+      ///
+      /// Otherwise, full query results can be obtained by issuing extra requests
+      /// with the `job_reference` from the a previous `QueryAssets` call.
+      ///
+      /// Note, the query result has approximately 10 GB limitation enforced by
+      /// BigQuery
+      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
+      /// queries return larger results will result in errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.QueryAssetsResponse QueryAssets(global::Google.Cloud.Asset.V1.QueryAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryAssets, null, options, request);
+      }
+      /// <summary>
+      /// Issue a job that queries assets using a SQL statement compatible with
+      /// [BigQuery Standard
+      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      ///
+      /// If the query execution finishes within timeout and there's no pagination,
+      /// the full query results will be returned in the `QueryAssetsResponse`.
+      ///
+      /// Otherwise, full query results can be obtained by issuing extra requests
+      /// with the `job_reference` from the a previous `QueryAssets` call.
+      ///
+      /// Note, the query result has approximately 10 GB limitation enforced by
+      /// BigQuery
+      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
+      /// queries return larger results will result in errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.QueryAssetsResponse> QueryAssetsAsync(global::Google.Cloud.Asset.V1.QueryAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Issue a job that queries assets using a SQL statement compatible with
+      /// [BigQuery Standard
+      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      ///
+      /// If the query execution finishes within timeout and there's no pagination,
+      /// the full query results will be returned in the `QueryAssetsResponse`.
+      ///
+      /// Otherwise, full query results can be obtained by issuing extra requests
+      /// with the `job_reference` from the a previous `QueryAssets` call.
+      ///
+      /// Note, the query result has approximately 10 GB limitation enforced by
+      /// BigQuery
+      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
+      /// queries return larger results will result in errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.QueryAssetsResponse> QueryAssetsAsync(global::Google.Cloud.Asset.V1.QueryAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryAssets, null, options, request);
+      }
+      /// <summary>
       /// Creates a saved query in a parent project/folder/organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1676,6 +1813,7 @@ namespace Google.Cloud.Asset.V1 {
           .AddMethod(__Method_AnalyzeIamPolicy, serviceImpl.AnalyzeIamPolicy)
           .AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl.AnalyzeIamPolicyLongrunning)
           .AddMethod(__Method_AnalyzeMove, serviceImpl.AnalyzeMove)
+          .AddMethod(__Method_QueryAssets, serviceImpl.QueryAssets)
           .AddMethod(__Method_CreateSavedQuery, serviceImpl.CreateSavedQuery)
           .AddMethod(__Method_GetSavedQuery, serviceImpl.GetSavedQuery)
           .AddMethod(__Method_ListSavedQueries, serviceImpl.ListSavedQueries)
@@ -1704,6 +1842,7 @@ namespace Google.Cloud.Asset.V1 {
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse>(serviceImpl.AnalyzeIamPolicy));
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest, global::Google.LongRunning.Operation>(serviceImpl.AnalyzeIamPolicyLongrunning));
       serviceBinder.AddMethod(__Method_AnalyzeMove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse>(serviceImpl.AnalyzeMove));
+      serviceBinder.AddMethod(__Method_QueryAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.QueryAssetsRequest, global::Google.Cloud.Asset.V1.QueryAssetsResponse>(serviceImpl.QueryAssets));
       serviceBinder.AddMethod(__Method_CreateSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.CreateSavedQuery));
       serviceBinder.AddMethod(__Method_GetSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.GetSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.GetSavedQuery));
       serviceBinder.AddMethod(__Method_ListSavedQueries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ListSavedQueriesRequest, global::Google.Cloud.Asset.V1.ListSavedQueriesResponse>(serviceImpl.ListSavedQueries));

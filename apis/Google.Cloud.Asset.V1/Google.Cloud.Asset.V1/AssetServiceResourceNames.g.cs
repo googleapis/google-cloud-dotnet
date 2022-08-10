@@ -850,6 +850,18 @@ namespace Google.Cloud.Asset.V1
         }
     }
 
+    public partial class QueryAssetsRequest
+    {
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gax::UnparsedResourceName.Parse(Parent);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class BatchGetEffectiveIamPoliciesRequest
     {
         /// <summary>

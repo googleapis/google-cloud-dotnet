@@ -20,6 +20,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
 using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -873,6 +874,72 @@ namespace Google.Cloud.Asset.V1.Tests
             AnalyzeMoveResponse responseCallSettings = await client.AnalyzeMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeMoveResponse responseCancellationToken = await client.AnalyzeMoveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void QueryAssetsRequestObject()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            QueryAssetsRequest request = new QueryAssetsRequest
+            {
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Statement = "statement56bf4542",
+                JobReference = "job_reference0b9f6693",
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                Timeout = new wkt::Duration(),
+                ReadTimeWindow = new TimeWindow(),
+                ReadTime = new wkt::Timestamp(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            QueryAssetsResponse expectedResponse = new QueryAssetsResponse
+            {
+                JobReference = "job_reference0b9f6693",
+                Done = true,
+                Error = new gr::Status(),
+                QueryResult = new QueryResult(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            mockGrpcClient.Setup(x => x.QueryAssets(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null, null);
+            QueryAssetsResponse response = client.QueryAssets(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task QueryAssetsRequestObjectAsync()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            QueryAssetsRequest request = new QueryAssetsRequest
+            {
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Statement = "statement56bf4542",
+                JobReference = "job_reference0b9f6693",
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                Timeout = new wkt::Duration(),
+                ReadTimeWindow = new TimeWindow(),
+                ReadTime = new wkt::Timestamp(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            QueryAssetsResponse expectedResponse = new QueryAssetsResponse
+            {
+                JobReference = "job_reference0b9f6693",
+                Done = true,
+                Error = new gr::Status(),
+                QueryResult = new QueryResult(),
+                OutputConfig = new QueryAssetsOutputConfig(),
+            };
+            mockGrpcClient.Setup(x => x.QueryAssetsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<QueryAssetsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null, null);
+            QueryAssetsResponse responseCallSettings = await client.QueryAssetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            QueryAssetsResponse responseCancellationToken = await client.QueryAssetsAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
