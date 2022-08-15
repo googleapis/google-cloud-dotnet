@@ -31,7 +31,7 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // Create client
             DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            string name = "a/wildcard/resource";
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(name);
         }
