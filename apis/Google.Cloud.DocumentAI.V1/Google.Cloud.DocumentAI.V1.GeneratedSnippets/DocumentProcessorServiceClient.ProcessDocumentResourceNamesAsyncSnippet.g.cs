@@ -17,6 +17,7 @@
 namespace Google.Cloud.DocumentAI.V1.Snippets
 {
     // [START documentai_v1_generated_DocumentProcessorService_ProcessDocument_async_flattened_resourceNames]
+    using Google.Api.Gax;
     using Google.Cloud.DocumentAI.V1;
     using System.Threading.Tasks;
 
@@ -32,7 +33,7 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // Create client
             DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProcessorName name = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             ProcessResponse response = await documentProcessorServiceClient.ProcessDocumentAsync(name);
         }

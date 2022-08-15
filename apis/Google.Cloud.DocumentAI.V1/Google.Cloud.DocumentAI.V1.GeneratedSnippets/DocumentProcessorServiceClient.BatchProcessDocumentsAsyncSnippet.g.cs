@@ -33,7 +33,7 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // Create client
             DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            string name = "a/wildcard/resource";
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(name);
 
