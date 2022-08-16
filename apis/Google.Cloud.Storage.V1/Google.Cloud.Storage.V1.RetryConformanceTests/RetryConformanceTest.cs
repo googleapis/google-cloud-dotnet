@@ -53,6 +53,10 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
         private readonly ConcurrentDictionary<string, MethodInvocation> _methodMappings;
 
+        //internal string hmacKey;
+        internal string hmacSecret;
+        internal string notificationId;
+
         public RetryConformanceTest()
         {
             _storageClient = InitializeClient();
@@ -80,11 +84,11 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     {
                         // TODO: Remove this if condition, when the mapping dictionary is completely and correctly populated.
 
-                        if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
+                        //if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
                         //if (method.Name.Contains("storage.objects.get") || method.Name.Contains("storage.objects.list"))
                         //if (method.Name.Contains("storage.hmacKey.get"))
 
-                        //if (method.Name.Contains("storage.notifications.list"))
+                        if (method.Name.Contains("storage.notifications.list"))
                         {
                             await RunTestCase(instruction, method, expectSuccess);
                         }
@@ -260,21 +264,31 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
                 if (item.ToString().Equals("HMACKEY", StringComparison.OrdinalIgnoreCase))
                 {
-                    var created = await CreateBucket(ProjectId, bucket);
-                    if (created)
+                    var createdHmac = await CreateHmacKey(ProjectId, ServiceAccountEmail);
+                    if (createdHmac)
                     {
-                        result.Add(new StorageResource(Resource.Bucket, bucket));
+                        result.Add(new StorageResource(Resource.HmacKey, hmacSecret));
                     }
+
+                    /*
                     var hmacKey = _storageClient.CreateHmacKey(ProjectId, ServiceAccountEmail);
                     AccessId = hmacKey.Metadata.AccessId;
                     result.Add(new StorageResource(Resource.HmacKey, hmacKey.Secret));
+                    */
                 }
 
                 if (item.ToString().Equals("NOTIFICATION", StringComparison.OrdinalIgnoreCase))
                 {
+
+                    var created = await CreateNotification(ProjectId,bucket);
+                    if(created)
+                    result.Add(new StorageResource(Resource.Notification, notificationId));
+
+                    /*
                     var config = new Notification { Topic = $"//pubsub.googleapis.com/{Topic}", PayloadFormat = "JSON_API_V1" };
                     var notification = _storageClient.CreateNotification(bucket, config);
                     result.Add(new StorageResource(Resource.Notification, notification.Id));
+                    */
                 }
 
                 if (item.ToString().Equals("OBJECT", StringComparison.OrdinalIgnoreCase))
@@ -292,6 +306,28 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
         {
             var content = new StringContent($"{{\"name\":\"{bucket}\"}}");
             var response = await _httpClient.PostAsync($"storage/v1/b?project={projectId}", content);
+            return response.IsSuccessStatusCode;
+        }
+
+        private async Task<bool> CreateHmacKey(string projectId, string serviceAccountEmail)
+        {
+            var content = new StringContent("");
+            var response = await _httpClient.PostAsync($"storage/v1/projects/proj/hmacKeys?project={projectId}&serviceAccountEmail={serviceAccountEmail}", content);
+            var payload = response.Content.ReadAsStringAsync().Result;
+            var metadata = JObject.Parse(payload)["metadata"];
+            AccessId = metadata["accessId"].ToString();
+
+            hmacSecret = JObject.Parse(payload)["secret"].ToString();
+            return response.IsSuccessStatusCode;
+        }
+
+        private async Task<bool> CreateNotification(string projectId, string bucket)
+        {
+            var content = new StringContent("{\"payload_format\":\"NONE\",\"topic\":\"projects/proj/topics/topic\"}");
+            var response = await _httpClient.PostAsync($"storage/v1/b/{bucket}/notificationConfigs?project={projectId}", content);
+
+            var payload = response.Content.ReadAsStringAsync().Result;
+            notificationId = JObject.Parse(payload)["id"].ToString();
             return response.IsSuccessStatusCode;
         }
 
