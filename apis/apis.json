@@ -143,6 +143,25 @@
       "serviceConfigFile": "aiplatform_v1.yaml"
     },
     {
+      "id": "Google.Cloud.ApiKeys.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "API Keys",
+      "productUrl": "https://cloud.google.com/api-keys/docs",
+      "description": "Recommended Google client library to access the API Keys API (v2), which manages the API keys associated with developer projects.",
+      "tags": [
+        "apikey",
+        "authorization"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/api/apikeys/v2",
+      "shortName": "apikeys",
+      "serviceConfigFile": "apikeys_v2.yaml"
+    },
+    {
       "id": "Google.Cloud.ApigeeConnect.V1",
       "version": "2.0.0",
       "type": "grpc",
