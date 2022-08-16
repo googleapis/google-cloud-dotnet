@@ -25,26 +25,27 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL3Byb2Nlc3Nvcl90",
-            "eXBlLnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvIssCCg1Qcm9jZXNzb3JUeXBlEgwKBG5hbWUYASABKAkSDAoE",
-            "dHlwZRgCIAEoCRIQCghjYXRlZ29yeRgDIAEoCRJYChNhdmFpbGFibGVfbG9j",
-            "YXRpb25zGAQgAygLMjsuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "My5Qcm9jZXNzb3JUeXBlLkxvY2F0aW9uSW5mbxIWCg5hbGxvd19jcmVhdGlv",
-            "bhgGIAEoCBojCgxMb2NhdGlvbkluZm8SEwoLbG9jYXRpb25faWQYASABKAk6",
-            "depBcgonZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JUeXBl",
-            "Ekdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJv",
-            "Y2Vzc29yVHlwZXMve3Byb2Nlc3Nvcl90eXBlfUL0AQojY29tLmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCF0RvY3VtZW50QWlQcm9jZXNzb3JU",
-            "eXBlUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvZG9jdW1lbnRhaS92MWJldGEzO2RvY3VtZW50YWmqAh9Hb29nbGUu",
-            "Q2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3Vt",
-            "ZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYx",
-            "YmV0YTNiBnByb3RvMw=="));
+            "eXBlLnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGh1n",
+            "b29nbGUvYXBpL2xhdW5jaF9zdGFnZS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
+            "dXJjZS5wcm90byL6AgoNUHJvY2Vzc29yVHlwZRIMCgRuYW1lGAEgASgJEgwK",
+            "BHR5cGUYAiABKAkSEAoIY2F0ZWdvcnkYAyABKAkSWAoTYXZhaWxhYmxlX2xv",
+            "Y2F0aW9ucxgEIAMoCzI7Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTMuUHJvY2Vzc29yVHlwZS5Mb2NhdGlvbkluZm8SFgoOYWxsb3dfY3JlYXRp",
+            "b24YBiABKAgSLQoMbGF1bmNoX3N0YWdlGAggASgOMhcuZ29vZ2xlLmFwaS5M",
+            "YXVuY2hTdGFnZRojCgxMb2NhdGlvbkluZm8SEwoLbG9jYXRpb25faWQYASAB",
+            "KAk6depBcgonZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JU",
+            "eXBlEkdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "cHJvY2Vzc29yVHlwZXMve3Byb2Nlc3Nvcl90eXBlfUL0AQojY29tLmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCF0RvY3VtZW50QWlQcm9jZXNz",
+            "b3JUeXBlUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzO2RvY3VtZW50YWmqAh9Hb29n",
+            "bGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERv",
+            "Y3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6",
+            "OlYxYmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Parser, new[]{ "Name", "Type", "Category", "AvailableLocations", "AllowCreation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Types.LocationInfo), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Types.LocationInfo.Parser, new[]{ "LocationId" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Parser, new[]{ "Name", "Type", "Category", "AvailableLocations", "AllowCreation", "LaunchStage" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Types.LocationInfo), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorType.Types.LocationInfo.Parser, new[]{ "LocationId" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -94,6 +95,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       category_ = other.category_;
       availableLocations_ = other.availableLocations_.Clone();
       allowCreation_ = other.allowCreation_;
+      launchStage_ = other.launchStage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -108,6 +110,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the processor type.
+    /// Format: projects/{project}/processorTypes/{processor_type}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +125,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The type of the processor.
+    /// The type of the processor, e.g., "invoice_parsing".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +140,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CategoryFieldNumber = 3;
     private string category_ = "";
     /// <summary>
-    /// The processor category.
+    /// The processor category, used by UI to group processor types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,9 +169,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int AllowCreationFieldNumber = 6;
     private bool allowCreation_;
     /// <summary>
-    /// Whether the processor type allows creation. If yes, user can create a
-    /// processor of this processor type. Otherwise, user needs to require for
-    /// whitelisting.
+    /// Whether the processor type allows creation. If true, users can create a
+    /// processor of this processor type. Otherwise, users need to request access.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,6 +178,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       get { return allowCreation_; }
       set {
         allowCreation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "launch_stage" field.</summary>
+    public const int LaunchStageFieldNumber = 8;
+    private global::Google.Api.LaunchStage launchStage_ = global::Google.Api.LaunchStage.Unspecified;
+    /// <summary>
+    /// Launch stage of the processor type
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Api.LaunchStage LaunchStage {
+      get { return launchStage_; }
+      set {
+        launchStage_ = value;
       }
     }
 
@@ -199,6 +216,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (Category != other.Category) return false;
       if(!availableLocations_.Equals(other.availableLocations_)) return false;
       if (AllowCreation != other.AllowCreation) return false;
+      if (LaunchStage != other.LaunchStage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -211,6 +229,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (Category.Length != 0) hash ^= Category.GetHashCode();
       hash ^= availableLocations_.GetHashCode();
       if (AllowCreation != false) hash ^= AllowCreation.GetHashCode();
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) hash ^= LaunchStage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -246,6 +265,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(48);
         output.WriteBool(AllowCreation);
       }
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) LaunchStage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -273,6 +296,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(48);
         output.WriteBool(AllowCreation);
       }
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) LaunchStage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -295,6 +322,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       size += availableLocations_.CalculateSize(_repeated_availableLocations_codec);
       if (AllowCreation != false) {
         size += 1 + 1;
+      }
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LaunchStage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -320,6 +350,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       availableLocations_.Add(other.availableLocations_);
       if (other.AllowCreation != false) {
         AllowCreation = other.AllowCreation;
+      }
+      if (other.LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
+        LaunchStage = other.LaunchStage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -356,6 +389,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             AllowCreation = input.ReadBool();
             break;
           }
+          case 64: {
+            LaunchStage = (global::Google.Api.LaunchStage) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -389,6 +426,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           case 48: {
             AllowCreation = input.ReadBool();
+            break;
+          }
+          case 64: {
+            LaunchStage = (global::Google.Api.LaunchStage) input.ReadEnum();
             break;
           }
         }
@@ -452,7 +493,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int LocationIdFieldNumber = 1;
         private string locationId_ = "";
         /// <summary>
-        /// The location id.
+        /// The location id, currently must be one of [us, eu].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

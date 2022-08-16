@@ -21,6 +21,268 @@ using sys = System;
 
 namespace Google.Cloud.DocumentAI.V1Beta3
 {
+    /// <summary>Resource name for the <c>ProcessorVersion</c> resource.</summary>
+    public sealed partial class ProcessorVersionName : gax::IResourceName, sys::IEquatable<ProcessorVersionName>
+    {
+        /// <summary>The possible contents of <see cref="ProcessorVersionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+            /// .
+            /// </summary>
+            ProjectLocationProcessorProcessorVersion = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationProcessorProcessorVersion = new gax::PathTemplate("projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}");
+
+        /// <summary>Creates a <see cref="ProcessorVersionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ProcessorVersionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ProcessorVersionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ProcessorVersionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ProcessorVersionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorId">The <c>Processor</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorVersionId">The <c>ProcessorVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ProcessorVersionName"/> constructed from the provided ids.</returns>
+        public static ProcessorVersionName FromProjectLocationProcessorProcessorVersion(string projectId, string locationId, string processorId, string processorVersionId) =>
+            new ProcessorVersionName(ResourceNameType.ProjectLocationProcessorProcessorVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), processorId: gax::GaxPreconditions.CheckNotNullOrEmpty(processorId, nameof(processorId)), processorVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(processorVersionId, nameof(processorVersionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProcessorVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorId">The <c>Processor</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorVersionId">The <c>ProcessorVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProcessorVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string processorId, string processorVersionId) =>
+            FormatProjectLocationProcessorProcessorVersion(projectId, locationId, processorId, processorVersionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProcessorVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorId">The <c>Processor</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorVersionId">The <c>ProcessorVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProcessorVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>.
+        /// </returns>
+        public static string FormatProjectLocationProcessorProcessorVersion(string projectId, string locationId, string processorId, string processorVersionId) =>
+            s_projectLocationProcessorProcessorVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(processorId, nameof(processorId)), gax::GaxPreconditions.CheckNotNullOrEmpty(processorVersionId, nameof(processorVersionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProcessorVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="processorVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProcessorVersionName"/> if successful.</returns>
+        public static ProcessorVersionName Parse(string processorVersionName) => Parse(processorVersionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProcessorVersionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="processorVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ProcessorVersionName"/> if successful.</returns>
+        public static ProcessorVersionName Parse(string processorVersionName, bool allowUnparsed) =>
+            TryParse(processorVersionName, allowUnparsed, out ProcessorVersionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProcessorVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="processorVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProcessorVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string processorVersionName, out ProcessorVersionName result) =>
+            TryParse(processorVersionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProcessorVersionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="processorVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProcessorVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string processorVersionName, bool allowUnparsed, out ProcessorVersionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(processorVersionName, nameof(processorVersionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationProcessorProcessorVersion.TryParseName(processorVersionName, out resourceName))
+            {
+                result = FromProjectLocationProcessorProcessorVersion(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(processorVersionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ProcessorVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string processorId = null, string processorVersionId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProcessorId = processorId;
+            ProcessorVersionId = processorVersionId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ProcessorVersionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorId">The <c>Processor</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="processorVersionId">The <c>ProcessorVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        public ProcessorVersionName(string projectId, string locationId, string processorId, string processorVersionId) : this(ResourceNameType.ProjectLocationProcessorProcessorVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), processorId: gax::GaxPreconditions.CheckNotNullOrEmpty(processorId, nameof(processorId)), processorVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(processorVersionId, nameof(processorVersionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Processor</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProcessorId { get; }
+
+        /// <summary>
+        /// The <c>ProcessorVersion</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ProcessorVersionId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationProcessorProcessorVersion: return s_projectLocationProcessorProcessorVersion.Expand(ProjectId, LocationId, ProcessorId, ProcessorVersionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ProcessorVersionName);
+
+        /// <inheritdoc/>
+        public bool Equals(ProcessorVersionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ProcessorVersionName a, ProcessorVersionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ProcessorVersionName a, ProcessorVersionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Processor</c> resource.</summary>
     public sealed partial class ProcessorName : gax::IResourceName, sys::IEquatable<ProcessorName>
     {
@@ -259,6 +521,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         public static bool operator !=(ProcessorName a, ProcessorName b) => !(a == b);
     }
 
+    public partial class ProcessorVersion
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorVersionName ProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Processor
     {
         /// <summary>
@@ -268,6 +542,16 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="DefaultProcessorVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName DefaultProcessorVersionAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(DefaultProcessorVersion) ? null : ProcessorVersionName.Parse(DefaultProcessorVersion, allowUnparsed: true);
+            set => DefaultProcessorVersion = value?.ToString() ?? "";
         }
     }
 }

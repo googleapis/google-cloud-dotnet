@@ -27,13 +27,30 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "Ci9nb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL3Byb2Nlc3Nvci5w",
             "cm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMxofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxoxZ29vZ2xlL2Nsb3VkL2RvY3VtZW50YWkvdjFiZXRhMy9kb2N1",
-            "bWVudF9pby5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKBBAoJUHJvY2Vzc29y",
-            "EhQKBG5hbWUYASABKAlCBuBBBeBBAxIMCgR0eXBlGAIgASgJEhQKDGRpc3Bs",
-            "YXlfbmFtZRgDIAEoCRJECgVzdGF0ZRgEIAEoDjIwLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuUHJvY2Vzc29yLlN0YXRlQgPgQQMSIQoZZGVm",
-            "YXVsdF9wcm9jZXNzb3JfdmVyc2lvbhgJIAEoCRIgChBwcm9jZXNzX2VuZHBv",
+            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKaBgoQ",
+            "UHJvY2Vzc29yVmVyc2lvbhIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCRJGCgVzdGF0ZRgGIAEoDjI3Lmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxYmV0YTMuUHJvY2Vzc29yVmVyc2lvbi5TdGF0ZRIvCgtjcmVhdGVf",
+            "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMa21z",
+            "X2tleV9uYW1lGAkgASgJEhwKFGttc19rZXlfdmVyc2lvbl9uYW1lGAogASgJ",
+            "EhYKDmdvb2dsZV9tYW5hZ2VkGAsgASgIElsKEGRlcHJlY2F0aW9uX2luZm8Y",
+            "DSABKAsyQS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLlByb2Nl",
+            "c3NvclZlcnNpb24uRGVwcmVjYXRpb25JbmZvGp8BCg9EZXByZWNhdGlvbklu",
+            "Zm8SNAoQZGVwcmVjYXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASVgodcmVwbGFjZW1lbnRfcHJvY2Vzc29yX3ZlcnNpb24Y",
+            "AiABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNz",
+            "b3JWZXJzaW9uIoQBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
+            "CERFUExPWUVEEAESDQoJREVQTE9ZSU5HEAISDgoKVU5ERVBMT1lFRBADEg8K",
+            "C1VOREVQTE9ZSU5HEAQSDAoIQ1JFQVRJTkcQBRIMCghERUxFVElORxAGEgoK",
+            "BkZBSUxFRBAHOpYB6kGSAQoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Q",
+            "cm9jZXNzb3JWZXJzaW9uEmRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9wcm9jZXNzb3JW",
+            "ZXJzaW9ucy97cHJvY2Vzc29yX3ZlcnNpb259IrIECglQcm9jZXNzb3ISFAoE",
+            "bmFtZRgBIAEoCUIG4EEF4EEDEgwKBHR5cGUYAiABKAkSFAoMZGlzcGxheV9u",
+            "YW1lGAMgASgJEkQKBXN0YXRlGAQgASgOMjAuZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Qcm9jZXNzb3IuU3RhdGVCA+BBAxJSChlkZWZhdWx0",
+            "X3Byb2Nlc3Nvcl92ZXJzaW9uGAkgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29v",
+            "Z2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbhIgChBwcm9jZXNzX2VuZHBv",
             "aW50GAYgASgJQgbgQQPgQQUSLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGttc19rZXlfbmFtZRgIIAEoCSJ+",
             "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIM",
@@ -48,8 +65,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "Ah9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpD",
             "bG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Parser, new[]{ "Name", "DisplayName", "State", "CreateTime", "KmsKeyName", "KmsKeyVersionName", "GoogleManaged", "DeprecationInfo" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo.Parser, new[]{ "DeprecationTime", "ReplacementProcessorVersion" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Processor), global::Google.Cloud.DocumentAI.V1Beta3.Processor.Parser, new[]{ "Name", "Type", "DisplayName", "State", "DefaultProcessorVersion", "ProcessEndpoint", "CreateTime", "KmsKeyName" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Processor.Types.State) }, null, null)
           }));
     }
@@ -58,8 +76,797 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
   #region Messages
   /// <summary>
-  /// The first-class citizen for DocumentAI. Each processor defines how to extract
-  /// structural information from a document.
+  /// A processor version is an implementation of a processor. Each processor
+  /// can have multiple versions, pre-trained by Google internally or up-trained
+  /// by the customer. At a time, a processor can only have one default version
+  /// version. So the processor's behavior (when processing documents) is defined
+  /// by a default version
+  /// </summary>
+  public sealed partial class ProcessorVersion : pb::IMessage<ProcessorVersion>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProcessorVersion> _parser = new pb::MessageParser<ProcessorVersion>(() => new ProcessorVersion());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProcessorVersion> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.ProcessorReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessorVersion() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessorVersion(ProcessorVersion other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      state_ = other.state_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      kmsKeyName_ = other.kmsKeyName_;
+      kmsKeyVersionName_ = other.kmsKeyVersionName_;
+      googleManaged_ = other.googleManaged_;
+      deprecationInfo_ = other.deprecationInfo_ != null ? other.deprecationInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessorVersion Clone() {
+      return new ProcessorVersion(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The resource name of the processor version.
+    /// Format:
+    /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processor_version}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the processor version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 6;
+    private global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State state_ = global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified;
+    /// <summary>
+    /// The state of the processor version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time the processor version was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 9;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// The KMS key name used for encryption.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_version_name" field.</summary>
+    public const int KmsKeyVersionNameFieldNumber = 10;
+    private string kmsKeyVersionName_ = "";
+    /// <summary>
+    /// The KMS key version with which data is encrypted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyVersionName {
+      get { return kmsKeyVersionName_; }
+      set {
+        kmsKeyVersionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "google_managed" field.</summary>
+    public const int GoogleManagedFieldNumber = 11;
+    private bool googleManaged_;
+    /// <summary>
+    /// Denotes that this ProcessorVersion is managed by google.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GoogleManaged {
+      get { return googleManaged_; }
+      set {
+        googleManaged_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deprecation_info" field.</summary>
+    public const int DeprecationInfoFieldNumber = 13;
+    private global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo deprecationInfo_;
+    /// <summary>
+    /// If set, information about the eventual deprecation of this version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo DeprecationInfo {
+      get { return deprecationInfo_; }
+      set {
+        deprecationInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProcessorVersion);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProcessorVersion other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
+      if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
+      if (GoogleManaged != other.GoogleManaged) return false;
+      if (!object.Equals(DeprecationInfo, other.DeprecationInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
+      if (GoogleManaged != false) hash ^= GoogleManaged.GetHashCode();
+      if (deprecationInfo_ != null) hash ^= DeprecationInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (GoogleManaged != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(GoogleManaged);
+      }
+      if (deprecationInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DeprecationInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (GoogleManaged != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(GoogleManaged);
+      }
+      if (deprecationInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DeprecationInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersionName);
+      }
+      if (GoogleManaged != false) {
+        size += 1 + 1;
+      }
+      if (deprecationInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeprecationInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProcessorVersion other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      if (other.KmsKeyVersionName.Length != 0) {
+        KmsKeyVersionName = other.KmsKeyVersionName;
+      }
+      if (other.GoogleManaged != false) {
+        GoogleManaged = other.GoogleManaged;
+      }
+      if (other.deprecationInfo_ != null) {
+        if (deprecationInfo_ == null) {
+          DeprecationInfo = new global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo();
+        }
+        DeprecationInfo.MergeFrom(other.DeprecationInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 82: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 88: {
+            GoogleManaged = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (deprecationInfo_ == null) {
+              DeprecationInfo = new global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo();
+            }
+            input.ReadMessage(DeprecationInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 82: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 88: {
+            GoogleManaged = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (deprecationInfo_ == null) {
+              DeprecationInfo = new global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo();
+            }
+            input.ReadMessage(DeprecationInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProcessorVersion message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The possible states of the processor version.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The processor version is in an unspecified state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The processor version is deployed and can be used for processing.
+        /// </summary>
+        [pbr::OriginalName("DEPLOYED")] Deployed = 1,
+        /// <summary>
+        /// The processor version is being deployed.
+        /// </summary>
+        [pbr::OriginalName("DEPLOYING")] Deploying = 2,
+        /// <summary>
+        /// The processor version is not deployed and cannot be used for processing.
+        /// </summary>
+        [pbr::OriginalName("UNDEPLOYED")] Undeployed = 3,
+        /// <summary>
+        /// The processor version is being undeployed.
+        /// </summary>
+        [pbr::OriginalName("UNDEPLOYING")] Undeploying = 4,
+        /// <summary>
+        /// The processor version is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 5,
+        /// <summary>
+        /// The processor version is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 6,
+        /// <summary>
+        /// The processor version failed and is in an indeterminate state.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 7,
+      }
+
+      /// <summary>
+      /// Information about the upcoming deprecation of this processor version.
+      /// </summary>
+      public sealed partial class DeprecationInfo : pb::IMessage<DeprecationInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DeprecationInfo> _parser = new pb::MessageParser<DeprecationInfo>(() => new DeprecationInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DeprecationInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeprecationInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeprecationInfo(DeprecationInfo other) : this() {
+          deprecationTime_ = other.deprecationTime_ != null ? other.deprecationTime_.Clone() : null;
+          replacementProcessorVersion_ = other.replacementProcessorVersion_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeprecationInfo Clone() {
+          return new DeprecationInfo(this);
+        }
+
+        /// <summary>Field number for the "deprecation_time" field.</summary>
+        public const int DeprecationTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp deprecationTime_;
+        /// <summary>
+        /// The time at which this processor version will be deprecated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp DeprecationTime {
+          get { return deprecationTime_; }
+          set {
+            deprecationTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "replacement_processor_version" field.</summary>
+        public const int ReplacementProcessorVersionFieldNumber = 2;
+        private string replacementProcessorVersion_ = "";
+        /// <summary>
+        /// If set, the processor version that will be used as a replacement.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ReplacementProcessorVersion {
+          get { return replacementProcessorVersion_; }
+          set {
+            replacementProcessorVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DeprecationInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DeprecationInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(DeprecationTime, other.DeprecationTime)) return false;
+          if (ReplacementProcessorVersion != other.ReplacementProcessorVersion) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (deprecationTime_ != null) hash ^= DeprecationTime.GetHashCode();
+          if (ReplacementProcessorVersion.Length != 0) hash ^= ReplacementProcessorVersion.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (deprecationTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DeprecationTime);
+          }
+          if (ReplacementProcessorVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ReplacementProcessorVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (deprecationTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DeprecationTime);
+          }
+          if (ReplacementProcessorVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ReplacementProcessorVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (deprecationTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeprecationTime);
+          }
+          if (ReplacementProcessorVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ReplacementProcessorVersion);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DeprecationInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.deprecationTime_ != null) {
+            if (deprecationTime_ == null) {
+              DeprecationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            DeprecationTime.MergeFrom(other.DeprecationTime);
+          }
+          if (other.ReplacementProcessorVersion.Length != 0) {
+            ReplacementProcessorVersion = other.ReplacementProcessorVersion;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (deprecationTime_ == null) {
+                  DeprecationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeprecationTime);
+                break;
+              }
+              case 18: {
+                ReplacementProcessorVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (deprecationTime_ == null) {
+                  DeprecationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeprecationTime);
+                break;
+              }
+              case 18: {
+                ReplacementProcessorVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The first-class citizen for Document AI. Each processor defines how to
+  /// extract structural information from a document.
   /// </summary>
   public sealed partial class Processor : pb::IMessage<Processor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -75,7 +882,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.ProcessorReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.ProcessorReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -117,7 +924,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private string name_ = "";
     /// <summary>
     /// Output only. Immutable. The resource name of the processor.
-    /// Format: projects/{project}/locations/{location}/processors/{processor}
+    /// Format: `projects/{project}/locations/{location}/processors/{processor}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,7 +939,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The processor type.
+    /// The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc.
+    /// To get a list of processors types, see
+    /// [FetchProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.FetchProcessorTypes].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -556,7 +1365,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The processor is enabled.
+        /// The processor is enabled, i.e., has an enabled version which can
+        /// currently serve processing requests and all the feature dependencies have
+        /// been successfully initialized.
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
@@ -572,11 +1383,17 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// </summary>
         [pbr::OriginalName("DISABLING")] Disabling = 4,
         /// <summary>
-        /// The processor is being created.
+        /// The processor is being created, will become either ENABLED (for
+        /// successful creation) or FAILED (for failed ones).
+        /// Once a processor is in this state, it can then be used for document
+        /// processing, but the feature dependencies of the processor might not be
+        /// fully created yet.
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 5,
         /// <summary>
-        /// The processor failed during creation.
+        /// The processor failed during creation or initialization of feature
+        /// dependencies. The user should delete the processor and recreate one as
+        /// all the functionalities of the processor are disabled.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 6,
         /// <summary>

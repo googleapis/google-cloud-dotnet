@@ -32,7 +32,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
             // Create client
             DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            string name = "a/wildcard/resource";
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = documentProcessorServiceClient.BatchProcessDocuments(name);
 

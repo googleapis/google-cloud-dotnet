@@ -275,11 +275,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
     public partial class ProcessRequest
     {
         /// <summary>
-        /// <see cref="gcdv::ProcessorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::ProcessorName ProcessorName
+        public gax::IResourceName ResourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gax::UnparsedResourceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -287,16 +287,28 @@ namespace Google.Cloud.DocumentAI.V1Beta3
     public partial class BatchProcessRequest
     {
         /// <summary>
-        /// <see cref="gcdv::ProcessorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::ProcessorName ProcessorName
+        public gax::IResourceName ResourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gax::UnparsedResourceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
 
     public partial class FetchProcessorTypesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListProcessorTypesRequest
     {
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
@@ -317,6 +329,78 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetProcessorRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorName ProcessorName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorVersionName ProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListProcessorVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProcessorName ParentAsProcessorName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProcessorName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorVersionName ProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeployProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorVersionName ProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UndeployProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorVersionName ProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -365,6 +449,28 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SetDefaultProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorName"/>-typed view over the <see cref="Processor"/> resource name property.
+        /// </summary>
+        public ProcessorName ProcessorAsProcessorName
+        {
+            get => string.IsNullOrEmpty(Processor) ? null : ProcessorName.Parse(Processor, allowUnparsed: true);
+            set => Processor = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="DefaultProcessorVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName DefaultProcessorVersionAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(DefaultProcessorVersion) ? null : ProcessorVersionName.Parse(DefaultProcessorVersion, allowUnparsed: true);
+            set => DefaultProcessorVersion = value?.ToString() ?? "";
         }
     }
 
