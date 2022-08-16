@@ -1,5 +1,25 @@
 # Version history
 
+## Version 3.0.0, released 2022-08-16
+
+### New features
+
+- Regenerate DocumentAI manually ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added field_mask to ProcessRequest object in document_processor_service.proto ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added parent_ids to Revision object in document.proto ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added integer_values, float_values and non_present to Entity object in document.proto ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added corrected_key_text, correct_value_text to FormField object in document.proto ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added OperationMetadata resource ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+- Added Processor Management and Processor Version support to v1 library ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+
+### Documentation improvements
+
+- Fix minor docstring formatting ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+
+### Breaking changes
+
+- Changed the name field for ProcessRequest and BatchProcessorRequest to accept `*` so the name field can accept Processor and ProcessorVersion. ([commit d5df4a6](https://github.com/googleapis/google-cloud-dotnet/commit/d5df4a6a513faac93c7b382498efacbf64237def))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
