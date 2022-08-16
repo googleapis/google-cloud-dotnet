@@ -126,7 +126,15 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     if (a != null)
                         a.ReadPage(5);
                 }
+                /*
                 if (MethodInformation.Name.ToLowerInvariant().Contains("gethmackey"))
+                {
+                    var a = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
+                    if (a != null)
+                        a.ReadPage(5);
+                }
+                */
+                if (MethodInformation.Name.ToLowerInvariant().Contains("listnotifications"))
                 {
                     var a = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
                     if (a != null)
