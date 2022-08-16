@@ -88,7 +88,8 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                         //if (method.Name.Contains("storage.objects.get") || method.Name.Contains("storage.objects.list"))
                         //if (method.Name.Contains("storage.hmacKey.get"))
 
-                        if (method.Name.Contains("storage.notifications.list"))
+                        // if (method.Name.Contains("storage.notifications.list"))
+                        if (method.Name.Contains("storage.buckets.list"))
                         {
                             await RunTestCase(instruction, method, expectSuccess);
                         }
@@ -109,7 +110,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             try
             {
                 RunRetryTest(response, resources);
-                // TODO: Anshul to check and change the code if  we need another request. I think retry happens automatically.
+                // TODO:  to check and change the code if  we need another request. I think retry happens automatically.
                 // Probably add some delay for retry tests to make sure the testbench has time to process the request.
                 var updatedResponse = await GetRetryTest(response.Id);
                 success = updatedResponse.Completed;
@@ -218,7 +219,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             "storage.hmackey.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(DeleteHmacKeyOptions) }), true, false, false, false, false, false, true, false),
             "storage.hmackey.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListHmacKeys), new System.Type[] { typeof(string), typeof(string), typeof(ListHmacKeysOptions) }), true, false, false, false, false, false, false, false),
 
-            "storage.notifications.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListNotifications), new System.Type[] { typeof(string), typeof(string), typeof(ListNotificationsOptions) }), false, true, false, false, false, false, false, false),
+            "storage.notifications.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListNotifications), new System.Type[] { typeof(string), typeof(string), typeof(ListNotificationsOptions) }), true, false, false,true, false, false, false, false),
             "storage.notifications.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetNotification), new System.Type[] { typeof(string), typeof(string), typeof(GetNotificationOptions) }), false, true, false, true, false, false, false, false),
             "storage.notifications.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteNotification), new System.Type[] { typeof(string), typeof(string), typeof(DeleteNotificationOptions) }), false, true, false, true, false, false, false, false),
 
@@ -284,6 +285,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     if(created)
                     result.Add(new StorageResource(Resource.Notification, notificationId));
 
+
                     /*
                     var config = new Notification { Topic = $"//pubsub.googleapis.com/{Topic}", PayloadFormat = "JSON_API_V1" };
                     var notification = _storageClient.CreateNotification(bucket, config);
@@ -323,7 +325,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
         private async Task<bool> CreateNotification(string projectId, string bucket)
         {
-            var content = new StringContent("{\"payload_format\":\"NONE\",\"topic\":\"projects/proj/topics/topic\"}");
+            var content = new StringContent("{\"payload_format\":\"NONE\",\"topic\":\"projects/"+projectId+"/topics/{"+ Topic + "}\"}");
             var response = await _httpClient.PostAsync($"storage/v1/b/{bucket}/notificationConfigs?project={projectId}", content);
 
             var payload = response.Content.ReadAsStringAsync().Result;
