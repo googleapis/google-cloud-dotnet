@@ -144,7 +144,7 @@
     },
     {
       "id": "Google.Cloud.ApiKeys.V2",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "API Keys",
       "productUrl": "https://cloud.google.com/api-keys/docs",
