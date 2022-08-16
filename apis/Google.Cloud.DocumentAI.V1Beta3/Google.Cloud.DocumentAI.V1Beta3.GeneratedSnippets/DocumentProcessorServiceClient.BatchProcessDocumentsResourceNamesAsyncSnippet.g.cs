@@ -17,6 +17,7 @@
 namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
 {
     // [START documentai_v1beta3_generated_DocumentProcessorService_BatchProcessDocuments_async_flattened_resourceNames]
+    using Google.Api.Gax;
     using Google.Cloud.DocumentAI.V1Beta3;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
             // Create client
             DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProcessorName name = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(name);
 

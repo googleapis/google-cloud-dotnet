@@ -28,6 +28,18 @@
                 "DeleteProcessorAsync"
               ]
             },
+            "DeleteProcessorVersion": {
+              "methods": [
+                "DeleteProcessorVersion",
+                "DeleteProcessorVersionAsync"
+              ]
+            },
+            "DeployProcessorVersion": {
+              "methods": [
+                "DeployProcessorVersion",
+                "DeployProcessorVersionAsync"
+              ]
+            },
             "DisableProcessor": {
               "methods": [
                 "DisableProcessor",
@@ -46,6 +58,30 @@
                 "FetchProcessorTypesAsync"
               ]
             },
+            "GetProcessor": {
+              "methods": [
+                "GetProcessor",
+                "GetProcessorAsync"
+              ]
+            },
+            "GetProcessorVersion": {
+              "methods": [
+                "GetProcessorVersion",
+                "GetProcessorVersionAsync"
+              ]
+            },
+            "ListProcessorTypes": {
+              "methods": [
+                "ListProcessorTypes",
+                "ListProcessorTypesAsync"
+              ]
+            },
+            "ListProcessorVersions": {
+              "methods": [
+                "ListProcessorVersions",
+                "ListProcessorVersionsAsync"
+              ]
+            },
             "ListProcessors": {
               "methods": [
                 "ListProcessors",
@@ -62,6 +98,18 @@
               "methods": [
                 "ReviewDocument",
                 "ReviewDocumentAsync"
+              ]
+            },
+            "SetDefaultProcessorVersion": {
+              "methods": [
+                "SetDefaultProcessorVersion",
+                "SetDefaultProcessorVersionAsync"
+              ]
+            },
+            "UndeployProcessorVersion": {
+              "methods": [
+                "UndeployProcessorVersion",
+                "UndeployProcessorVersionAsync"
               ]
             }
           }

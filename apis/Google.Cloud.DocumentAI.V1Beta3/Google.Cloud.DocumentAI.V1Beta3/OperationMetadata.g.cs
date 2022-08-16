@@ -26,25 +26,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           string.Concat(
             "Cjhnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL29wZXJhdGlvbl9t",
             "ZXRhZGF0YS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "MxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2Fw",
-            "aS9hbm5vdGF0aW9ucy5wcm90byLIAgoXQ29tbW9uT3BlcmF0aW9uTWV0YWRh",
-            "dGESTQoFc3RhdGUYASABKA4yPi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MWJldGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhLlN0YXRlEhUKDXN0YXRl",
-            "X21lc3NhZ2UYAiABKAkSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
-            "RUNJRklFRBAAEgsKB1JVTk5JTkcQARIOCgpDQU5DRUxMSU5HEAISDQoJU1VD",
-            "Q0VFREVEEAMSCgoGRkFJTEVEEAQSDQoJQ0FOQ0VMTEVEEAVC8wEKI2NvbS5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzQhZPcGVyYXRpb25NZXRh",
-            "ZGF0YVByb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzO2RvY3VtZW50YWmqAh9H",
-            "b29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3Vk",
-            "XERvY3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50",
-            "QUk6OlYxYmV0YTNiBnByb3RvMw=="));
+            "MxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLaAgoXQ29tbW9u",
+            "T3BlcmF0aW9uTWV0YWRhdGESTQoFc3RhdGUYASABKA4yPi5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRh",
+            "LlN0YXRlEhUKDXN0YXRlX21lc3NhZ2UYAiABKAkSEAoIcmVzb3VyY2UYBSAB",
+            "KAkSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
+            "B1JVTk5JTkcQARIOCgpDQU5DRUxMSU5HEAISDQoJU1VDQ0VFREVEEAMSCgoG",
+            "RkFJTEVEEAQSDQoJQ0FOQ0VMTEVEEAVC8wEKI2NvbS5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzQhZPcGVyYXRpb25NZXRhZGF0YVByb3RvUAFa",
+            "SWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "ZG9jdW1lbnRhaS92MWJldGEzO2RvY3VtZW50YWmqAh9Hb29nbGUuQ2xvdWQu",
+            "RG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlc",
+            "VjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata), global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata.Parser, new[]{ "State", "StateMessage", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata), global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata.Parser, new[]{ "State", "StateMessage", "Resource", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -90,6 +90,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public CommonOperationMetadata(CommonOperationMetadata other) : this() {
       state_ = other.state_;
       stateMessage_ = other.stateMessage_;
+      resource_ = other.resource_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -128,6 +129,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       get { return stateMessage_; }
       set {
         stateMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 5;
+    private string resource_ = "";
+    /// <summary>
+    /// A related resource to this operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Resource {
+      get { return resource_; }
+      set {
+        resource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -178,6 +194,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (State != other.State) return false;
       if (StateMessage != other.StateMessage) return false;
+      if (Resource != other.Resource) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -189,6 +206,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       int hash = 1;
       if (State != global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateMessage.Length != 0) hash ^= StateMessage.GetHashCode();
+      if (Resource.Length != 0) hash ^= Resource.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
@@ -225,6 +243,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(UpdateTime);
       }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Resource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -251,6 +273,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(UpdateTime);
       }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Resource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -266,6 +292,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (StateMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StateMessage);
+      }
+      if (Resource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -290,6 +319,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (other.StateMessage.Length != 0) {
         StateMessage = other.StateMessage;
+      }
+      if (other.Resource.Length != 0) {
+        Resource = other.Resource;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -340,6 +372,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 42: {
+            Resource = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -375,6 +411,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            Resource = input.ReadString();
             break;
           }
         }

@@ -25,202 +25,211 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50LnBy",
-            "b3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGhxnb29nbGUv",
-            "YXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGi5nb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2dl",
-            "b21ldHJ5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoXZ29vZ2xlL3R5cGUvY29sb3Iu",
-            "cHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8aGmdvb2dsZS90eXBlL2Rh",
-            "dGV0aW1lLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90bxogZ29vZ2xl",
-            "L3R5cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8ikj4KCERvY3VtZW50EhIKA3Vy",
-            "aRgBIAEoCUID4EEBSAASFgoHY29udGVudBgCIAEoDEID4EEBSAASEQoJbWlt",
-            "ZV90eXBlGAMgASgJEhEKBHRleHQYBCABKAlCA+BBARJECgt0ZXh0X3N0eWxl",
-            "cxgFIAMoCzIvLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
-            "dW1lbnQuU3R5bGUSPQoFcGFnZXMYBiADKAsyLi5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2USQgoIZW50aXRpZXMYByAD",
-            "KAsyMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
-            "LkVudGl0eRJSChBlbnRpdHlfcmVsYXRpb25zGAggAygLMjguZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5FbnRpdHlSZWxhdGlv",
-            "bhJKCgx0ZXh0X2NoYW5nZXMYDiADKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRDaGFuZ2USRwoKc2hhcmRfaW5m",
-            "bxgJIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
-            "dW1lbnQuU2hhcmRJbmZvEiEKBWVycm9yGAogASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXMSRQoJcmV2aXNpb25zGA0gAygLMjIuZ29vZ2xlLmNsb3VkLmRvY3Vt",
-            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5SZXZpc2lvbhpKCglTaGFyZEluZm8S",
-            "EwoLc2hhcmRfaW5kZXgYASABKAMSEwoLc2hhcmRfY291bnQYAiABKAMSEwoL",
-            "dGV4dF9vZmZzZXQYAyABKAMa2gIKBVN0eWxlEkkKC3RleHRfYW5jaG9yGAEg",
-            "ASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVu",
-            "dC5UZXh0QW5jaG9yEiEKBWNvbG9yGAIgASgLMhIuZ29vZ2xlLnR5cGUuQ29s",
-            "b3ISLAoQYmFja2dyb3VuZF9jb2xvchgDIAEoCzISLmdvb2dsZS50eXBlLkNv",
-            "bG9yEhMKC2ZvbnRfd2VpZ2h0GAQgASgJEhIKCnRleHRfc3R5bGUYBSABKAkS",
-            "FwoPdGV4dF9kZWNvcmF0aW9uGAYgASgJEksKCWZvbnRfc2l6ZRgHIAEoCzI4",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuU3R5",
-            "bGUuRm9udFNpemUaJgoIRm9udFNpemUSDAoEc2l6ZRgBIAEoAhIMCgR1bml0",
-            "GAIgASgJGtsiCgRQYWdlEhMKC3BhZ2VfbnVtYmVyGAEgASgFEkMKBWltYWdl",
-            "GA0gASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1",
-            "bWVudC5QYWdlLkltYWdlEkkKCnRyYW5zZm9ybXMYDiADKAsyNS5nb29nbGUu",
-            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTWF0cml4",
-            "EksKCWRpbWVuc2lvbhgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EaW1lbnNpb24SRQoGbGF5b3V0GAMg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVu",
-            "dC5QYWdlLkxheW91dBJbChJkZXRlY3RlZF9sYW5ndWFnZXMYBCADKAsyPy5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2Uu",
-            "RGV0ZWN0ZWRMYW5ndWFnZRJECgZibG9ja3MYBSADKAsyNC5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuQmxvY2sSTAoK",
-            "cGFyYWdyYXBocxgGIAMoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnQuUGFnZS5QYXJhZ3JhcGgSQgoFbGluZXMYByADKAsy",
-            "My5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBh",
-            "Z2UuTGluZRJECgZ0b2tlbnMYCCADKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuVG9rZW4SVQoPdmlzdWFsX2Vs",
-            "ZW1lbnRzGAkgAygLMjwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "My5Eb2N1bWVudC5QYWdlLlZpc3VhbEVsZW1lbnQSRAoGdGFibGVzGAogAygL",
-            "MjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Q",
-            "YWdlLlRhYmxlEk0KC2Zvcm1fZmllbGRzGAsgAygLMjguZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkZvcm1GaWVsZBJG",
-            "CgdzeW1ib2xzGAwgAygLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5Eb2N1bWVudC5QYWdlLlN5bWJvbBJICgpwcm92ZW5hbmNlGBAgASgL",
-            "MjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Q",
-            "cm92ZW5hbmNlGjgKCURpbWVuc2lvbhINCgV3aWR0aBgBIAEoAhIOCgZoZWln",
-            "aHQYAiABKAISDAoEdW5pdBgDIAEoCRpKCgVJbWFnZRIPCgdjb250ZW50GAEg",
-            "ASgMEhEKCW1pbWVfdHlwZRgCIAEoCRINCgV3aWR0aBgDIAEoBRIOCgZoZWln",
-            "aHQYBCABKAUaQAoGTWF0cml4EgwKBHJvd3MYASABKAUSDAoEY29scxgCIAEo",
-            "BRIMCgR0eXBlGAMgASgFEgwKBGRhdGEYBCABKAwa7AIKBkxheW91dBJJCgt0",
-            "ZXh0X2FuY2hvchgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchISCgpjb25maWRlbmNlGAIgASgC",
-            "EkQKDWJvdW5kaW5nX3BvbHkYAyABKAsyLS5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkJvdW5kaW5nUG9seRJWCgtvcmllbnRhdGlvbhgEIAEo",
-            "DjJBLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
-            "UGFnZS5MYXlvdXQuT3JpZW50YXRpb24iZQoLT3JpZW50YXRpb24SGwoXT1JJ",
-            "RU5UQVRJT05fVU5TUEVDSUZJRUQQABILCgdQQUdFX1VQEAESDgoKUEFHRV9S",
-            "SUdIVBACEg0KCVBBR0VfRE9XThADEg0KCVBBR0VfTEVGVBAEGvUBCgVCbG9j",
-            "axJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "b3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGh9nb29nbGUv",
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGi1nb29nbGUvY2xvdWQvZG9jdW1l",
+            "bnRhaS92MWJldGEzL2JhcmNvZGUucHJvdG8aLmdvb2dsZS9jbG91ZC9kb2N1",
+            "bWVudGFpL3YxYmV0YTMvZ2VvbWV0cnkucHJvdG8aH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhdn",
+            "b29nbGUvdHlwZS9jb2xvci5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
+            "bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aF2dvb2dsZS90eXBlL21v",
+            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byKF",
+            "QQoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
+            "ASgMQgPgQQFIABIRCgltaW1lX3R5cGUYAyABKAkSEQoEdGV4dBgEIAEoCUID",
+            "4EEBEkQKC3RleHRfc3R5bGVzGAUgAygLMi8uZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5TdHlsZRI9CgVwYWdlcxgGIAMoCzIu",
+            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFn",
+            "ZRJCCghlbnRpdGllcxgHIAMoCzIwLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRG9jdW1lbnQuRW50aXR5ElIKEGVudGl0eV9yZWxhdGlvbnMY",
+            "CCADKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3Vt",
+            "ZW50LkVudGl0eVJlbGF0aW9uEkoKDHRleHRfY2hhbmdlcxgOIAMoCzI0Lmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuVGV4dENo",
+            "YW5nZRJHCgpzaGFyZF9pbmZvGAkgASgLMjMuZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5TaGFyZEluZm8SIQoFZXJyb3IYCiAB",
+            "KAsyEi5nb29nbGUucnBjLlN0YXR1cxJFCglyZXZpc2lvbnMYDSADKAsyMi5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlJldmlz",
+            "aW9uGkoKCVNoYXJkSW5mbxITCgtzaGFyZF9pbmRleBgBIAEoAxITCgtzaGFy",
+            "ZF9jb3VudBgCIAEoAxITCgt0ZXh0X29mZnNldBgDIAEoAxraAgoFU3R5bGUS",
+            "SQoLdGV4dF9hbmNob3IYASABKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNob3ISIQoFY29sb3IYAiABKAsy",
+            "Ei5nb29nbGUudHlwZS5Db2xvchIsChBiYWNrZ3JvdW5kX2NvbG9yGAMgASgL",
+            "MhIuZ29vZ2xlLnR5cGUuQ29sb3ISEwoLZm9udF93ZWlnaHQYBCABKAkSEgoK",
+            "dGV4dF9zdHlsZRgFIAEoCRIXCg90ZXh0X2RlY29yYXRpb24YBiABKAkSSwoJ",
+            "Zm9udF9zaXplGAcgASgLMjguZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5Eb2N1bWVudC5TdHlsZS5Gb250U2l6ZRomCghGb250U2l6ZRIMCgRz",
+            "aXplGAEgASgCEgwKBHVuaXQYAiABKAkahiUKBFBhZ2USEwoLcGFnZV9udW1i",
+            "ZXIYASABKAUSQwoFaW1hZ2UYDSABKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1l",
+            "bnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuSW1hZ2USSQoKdHJhbnNmb3Jt",
+            "cxgOIAMoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
+            "dW1lbnQuUGFnZS5NYXRyaXgSSwoJZGltZW5zaW9uGAIgASgLMjguZ29vZ2xl",
+            "LmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRpbWVu",
+            "c2lvbhJFCgZsYXlvdXQYAyABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0ElsKEmRldGVjdGVkX2xh",
+            "bmd1YWdlcxgEIAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlEkQKBmJsb2NrcxgF",
+            "IAMoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1l",
+            "bnQuUGFnZS5CbG9jaxJMCgpwYXJhZ3JhcGhzGAYgAygLMjguZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLlBhcmFncmFw",
+            "aBJCCgVsaW5lcxgHIAMoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnQuUGFnZS5MaW5lEkQKBnRva2VucxgIIAMoCzI0Lmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5U",
+            "b2tlbhJVCg92aXN1YWxfZWxlbWVudHMYCSADKAsyPC5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuVmlzdWFsRWxlbWVu",
+            "dBJECgZ0YWJsZXMYCiADKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkRvY3VtZW50LlBhZ2UuVGFibGUSTQoLZm9ybV9maWVsZHMYCyAD",
+            "KAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
+            "LlBhZ2UuRm9ybUZpZWxkEkYKB3N5bWJvbHMYDCADKAsyNS5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuU3ltYm9sElkK",
+            "EWRldGVjdGVkX2JhcmNvZGVzGA8gAygLMj4uZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVkQmFyY29kZRJI",
+            "Cgpwcm92ZW5hbmNlGBAgASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlGjgKCURpbWVuc2lvbhINCgV3",
+            "aWR0aBgBIAEoAhIOCgZoZWlnaHQYAiABKAISDAoEdW5pdBgDIAEoCRpKCgVJ",
+            "bWFnZRIPCgdjb250ZW50GAEgASgMEhEKCW1pbWVfdHlwZRgCIAEoCRINCgV3",
+            "aWR0aBgDIAEoBRIOCgZoZWlnaHQYBCABKAUaQAoGTWF0cml4EgwKBHJvd3MY",
+            "ASABKAUSDAoEY29scxgCIAEoBRIMCgR0eXBlGAMgASgFEgwKBGRhdGEYBCAB",
+            "KAwa7AIKBkxheW91dBJJCgt0ZXh0X2FuY2hvchgBIAEoCzI0Lmdvb2dsZS5j",
+            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchIS",
+            "Cgpjb25maWRlbmNlGAIgASgCEkQKDWJvdW5kaW5nX3BvbHkYAyABKAsyLS5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJvdW5kaW5nUG9seRJW",
+            "CgtvcmllbnRhdGlvbhgEIAEoDjJBLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlvdXQuT3JpZW50YXRpb24iZQoL",
+            "T3JpZW50YXRpb24SGwoXT1JJRU5UQVRJT05fVU5TUEVDSUZJRUQQABILCgdQ",
+            "QUdFX1VQEAESDgoKUEFHRV9SSUdIVBACEg0KCVBBR0VfRE9XThADEg0KCVBB",
+            "R0VfTEVGVBAEGvUBCgVCbG9jaxJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0",
+            "ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgCIAMoCzI/Lmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1",
+            "YWdlEkgKCnByb3ZlbmFuY2UYAyABKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1l",
+            "bnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2Ua+QEKCVBhcmFncmFw",
+            "aBJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
             "MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0ElsKEmRldGVjdGVkX2xhbmd1",
             "YWdlcxgCIAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
             "RG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlEkgKCnByb3ZlbmFuY2UY",
             "AyABKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3Vt",
-            "ZW50LlByb3ZlbmFuY2Ua+QEKCVBhcmFncmFwaBJFCgZsYXlvdXQYASABKAsy",
-            "NS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBh",
-            "Z2UuTGF5b3V0ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgCIAMoCzI/Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRl",
-            "Y3RlZExhbmd1YWdlEkgKCnByb3ZlbmFuY2UYAyABKAsyNC5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2Ua9AEK",
-            "BExpbmUSRQoGbGF5b3V0GAEgASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
-            "YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkxheW91dBJbChJkZXRlY3RlZF9s",
-            "YW5ndWFnZXMYAiADKAsyPy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
-            "dGEzLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRJICgpwcm92ZW5h",
-            "bmNlGAMgASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
-            "b2N1bWVudC5Qcm92ZW5hbmNlGv8DCgVUb2tlbhJFCgZsYXlvdXQYASABKAsy",
-            "NS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBh",
-            "Z2UuTGF5b3V0EloKDmRldGVjdGVkX2JyZWFrGAIgASgLMkIuZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLlRva2VuLkRl",
-            "dGVjdGVkQnJlYWsSWwoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAMgAygLMj8uZ29v",
-            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRl",
-            "dGVjdGVkTGFuZ3VhZ2USSAoKcHJvdmVuYW5jZRgEIAEoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZRqr",
-            "AQoNRGV0ZWN0ZWRCcmVhaxJVCgR0eXBlGAEgASgOMkcuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLlRva2VuLkRldGVj",
-            "dGVkQnJlYWsuVHlwZSJDCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIJ",
-            "CgVTUEFDRRABEg4KCldJREVfU1BBQ0UQAhIKCgZIWVBIRU4QAxqsAQoGU3lt",
-            "Ym9sEkUKBmxheW91dBgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlvdXQSWwoSZGV0ZWN0ZWRfbGFu",
-            "Z3VhZ2VzGAIgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "My5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2UawQEKDVZpc3VhbEVs",
-            "ZW1lbnQSRQoGbGF5b3V0GAEgASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
-            "YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkxheW91dBIMCgR0eXBlGAIgASgJ",
-            "ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgDIAMoCzI/Lmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1",
-            "YWdlGoIFCgVUYWJsZRJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0ElIKC2hl",
-            "YWRlcl9yb3dzGAIgAygLMj0uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5Eb2N1bWVudC5QYWdlLlRhYmxlLlRhYmxlUm93ElAKCWJvZHlfcm93",
-            "cxgDIAMoCzI9Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
-            "dW1lbnQuUGFnZS5UYWJsZS5UYWJsZVJvdxJbChJkZXRlY3RlZF9sYW5ndWFn",
-            "ZXMYBCADKAsyPy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
-            "Y3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRpZCghUYWJsZVJvdxJNCgVj",
-            "ZWxscxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuUGFnZS5UYWJsZS5UYWJsZUNlbGwa0wEKCVRhYmxlQ2VsbBJF",
-            "CgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
-            "dGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EhAKCHJvd19zcGFuGAIgASgFEhAK",
-            "CGNvbF9zcGFuGAMgASgFElsKEmRldGVjdGVkX2xhbmd1YWdlcxgEIAMoCzI/",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFn",
-            "ZS5EZXRlY3RlZExhbmd1YWdlGsUDCglGb3JtRmllbGQSSQoKZmllbGRfbmFt",
-            "ZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
-            "dW1lbnQuUGFnZS5MYXlvdXQSSgoLZmllbGRfdmFsdWUYAiABKAsyNS5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5",
-            "b3V0EmAKF25hbWVfZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAMgAygLMj8uZ29vZ2xl",
-            "LmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVj",
-            "dGVkTGFuZ3VhZ2USYQoYdmFsdWVfZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAQgAygL",
-            "Mj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Q",
-            "YWdlLkRldGVjdGVkTGFuZ3VhZ2USEgoKdmFsdWVfdHlwZRgFIAEoCRJICgpw",
-            "cm92ZW5hbmNlGAggASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlGj0KEERldGVjdGVkTGFuZ3VhZ2US",
-            "FQoNbGFuZ3VhZ2VfY29kZRgBIAEoCRISCgpjb25maWRlbmNlGAIgASgCGrkG",
-            "CgZFbnRpdHkSTgoLdGV4dF9hbmNob3IYASABKAsyNC5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNob3JCA+BBARIR",
-            "CgR0eXBlGAIgASgJQgPgQQISGQoMbWVudGlvbl90ZXh0GAMgASgJQgPgQQES",
-            "FwoKbWVudGlvbl9pZBgEIAEoCUID4EEBEhcKCmNvbmZpZGVuY2UYBSABKAJC",
-            "A+BBARJOCgtwYWdlX2FuY2hvchgGIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZUFuY2hvckID4EEBEg8KAmlk",
-            "GAcgASgJQgPgQQESXwoQbm9ybWFsaXplZF92YWx1ZRgJIAEoCzJALmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuRW50aXR5Lk5v",
-            "cm1hbGl6ZWRWYWx1ZUID4EEBEkkKCnByb3BlcnRpZXMYCiADKAsyMC5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LkVudGl0eUID",
-            "4EEBEk0KCnByb3ZlbmFuY2UYCyABKAsyNC5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2VCA+BBARIVCghyZWRh",
-            "Y3RlZBgMIAEoCEID4EEBGosCCg9Ob3JtYWxpemVkVmFsdWUSKQoLbW9uZXlf",
-            "dmFsdWUYAiABKAsyEi5nb29nbGUudHlwZS5Nb25leUgAEicKCmRhdGVfdmFs",
-            "dWUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlSAASLwoOZGF0ZXRpbWVfdmFs",
-            "dWUYBCABKAsyFS5nb29nbGUudHlwZS5EYXRlVGltZUgAEjMKDWFkZHJlc3Nf",
-            "dmFsdWUYBSABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzSAASFwoN",
-            "Ym9vbGVhbl92YWx1ZRgGIAEoCEgAEhEKBHRleHQYASABKAlCA+BBAUISChBz",
-            "dHJ1Y3R1cmVkX3ZhbHVlGkkKDkVudGl0eVJlbGF0aW9uEhIKCnN1YmplY3Rf",
-            "aWQYASABKAkSEQoJb2JqZWN0X2lkGAIgASgJEhAKCHJlbGF0aW9uGAMgASgJ",
-            "Gq0BCgpUZXh0QW5jaG9yElcKDXRleHRfc2VnbWVudHMYASADKAsyQC5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNo",
-            "b3IuVGV4dFNlZ21lbnQSDwoHY29udGVudBgCIAEoCRo1CgtUZXh0U2VnbWVu",
-            "dBITCgtzdGFydF9pbmRleBgBIAEoAxIRCgllbmRfaW5kZXgYAiABKAMa5wMK",
-            "ClBhZ2VBbmNob3ISTwoJcGFnZV9yZWZzGAEgAygLMjwuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlQW5jaG9yLlBhZ2VS",
-            "ZWYahwMKB1BhZ2VSZWYSEQoEcGFnZRgBIAEoA0ID4EECEmEKC2xheW91dF90",
-            "eXBlGAIgASgOMkcuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
-            "b2N1bWVudC5QYWdlQW5jaG9yLlBhZ2VSZWYuTGF5b3V0VHlwZUID4EEBEhgK",
-            "CWxheW91dF9pZBgDIAEoCUIFGAHgQQESSQoNYm91bmRpbmdfcG9seRgEIAEo",
-            "CzItLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQm91bmRpbmdQ",
-            "b2x5QgPgQQESFwoKY29uZmlkZW5jZRgFIAEoAkID4EEBIocBCgpMYXlvdXRU",
-            "eXBlEhsKF0xBWU9VVF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQkxPQ0sQARIN",
-            "CglQQVJBR1JBUEgQAhIICgRMSU5FEAMSCQoFVE9LRU4QBBISCg5WSVNVQUxf",
-            "RUxFTUVOVBAFEgkKBVRBQkxFEAYSDgoKRk9STV9GSUVMRBAHGpYDCgpQcm92",
-            "ZW5hbmNlEhAKCHJldmlzaW9uGAEgASgFEg4KAmlkGAIgASgFQgIYARJMCgdw",
-            "YXJlbnRzGAMgAygLMjsuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "My5Eb2N1bWVudC5Qcm92ZW5hbmNlLlBhcmVudBJQCgR0eXBlGAQgASgOMkIu",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92",
-            "ZW5hbmNlLk9wZXJhdGlvblR5cGUaOQoGUGFyZW50EhAKCHJldmlzaW9uGAEg",
-            "ASgFEg0KBWluZGV4GAMgASgFEg4KAmlkGAIgASgFQgIYASKKAQoNT3BlcmF0",
-            "aW9uVHlwZRIeChpPUEVSQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FE",
-            "RBABEgoKBlJFTU9WRRACEgsKB1JFUExBQ0UQAxISCg5FVkFMX1JFUVVFU1RF",
-            "RBAEEhEKDUVWQUxfQVBQUk9WRUQQBRIQCgxFVkFMX1NLSVBQRUQQBhqSAgoI",
-            "UmV2aXNpb24SDwoFYWdlbnQYBCABKAlIABITCglwcm9jZXNzb3IYBSABKAlI",
-            "ABIKCgJpZBgBIAEoCRIOCgZwYXJlbnQYAiADKAUSLwoLY3JlYXRlX3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElQKDGh1bWFuX3Jl",
-            "dmlldxgGIAEoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuUmV2aXNpb24uSHVtYW5SZXZpZXcaMwoLSHVtYW5SZXZpZXcS",
-            "DQoFc3RhdGUYASABKAkSFQoNc3RhdGVfbWVzc2FnZRgCIAEoCUIICgZzb3Vy",
-            "Y2UatwEKClRleHRDaGFuZ2USSQoLdGV4dF9hbmNob3IYASABKAsyNC5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNo",
-            "b3ISFAoMY2hhbmdlZF90ZXh0GAIgASgJEkgKCnByb3ZlbmFuY2UYAyADKAsy",
-            "NC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBy",
-            "b3ZlbmFuY2VCCAoGc291cmNlQuoBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3Vt",
-            "ZW50YWkudjFiZXRhM0INRG9jdW1lbnRQcm90b1ABWklnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RvY3VtZW50YWkvdjFi",
-            "ZXRhMztkb2N1bWVudGFpqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFC",
-            "ZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29n",
-            "bGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
+            "ZW50LlByb3ZlbmFuY2Ua9AEKBExpbmUSRQoGbGF5b3V0GAEgASgLMjUuZ29v",
+            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkxh",
+            "eW91dBJbChJkZXRlY3RlZF9sYW5ndWFnZXMYAiADKAsyPy5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRM",
+            "YW5ndWFnZRJICgpwcm92ZW5hbmNlGAMgASgLMjQuZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlGv8DCgVUb2tl",
+            "bhJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EloKDmRldGVjdGVkX2JyZWFr",
+            "GAIgASgLMkIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1",
+            "bWVudC5QYWdlLlRva2VuLkRldGVjdGVkQnJlYWsSWwoSZGV0ZWN0ZWRfbGFu",
+            "Z3VhZ2VzGAMgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
+            "My5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2USSAoKcHJvdmVuYW5j",
+            "ZRgEIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
+            "dW1lbnQuUHJvdmVuYW5jZRqrAQoNRGV0ZWN0ZWRCcmVhaxJVCgR0eXBlGAEg",
+            "ASgOMkcuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVu",
+            "dC5QYWdlLlRva2VuLkRldGVjdGVkQnJlYWsuVHlwZSJDCgRUeXBlEhQKEFRZ",
+            "UEVfVU5TUEVDSUZJRUQQABIJCgVTUEFDRRABEg4KCldJREVfU1BBQ0UQAhIK",
+            "CgZIWVBIRU4QAxqsAQoGU3ltYm9sEkUKBmxheW91dBgBIAEoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlv",
+            "dXQSWwoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAIgAygLMj8uZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFu",
+            "Z3VhZ2UawQEKDVZpc3VhbEVsZW1lbnQSRQoGbGF5b3V0GAEgASgLMjUuZ29v",
+            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkxh",
+            "eW91dBIMCgR0eXBlGAIgASgJElsKEmRldGVjdGVkX2xhbmd1YWdlcxgDIAMo",
+            "CzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
+            "UGFnZS5EZXRlY3RlZExhbmd1YWdlGoIFCgVUYWJsZRJFCgZsYXlvdXQYASAB",
+            "KAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
+            "LlBhZ2UuTGF5b3V0ElIKC2hlYWRlcl9yb3dzGAIgAygLMj0uZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLlRhYmxlLlRh",
+            "YmxlUm93ElAKCWJvZHlfcm93cxgDIAMoCzI9Lmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5UYWJsZS5UYWJsZVJvdxJb",
+            "ChJkZXRlY3RlZF9sYW5ndWFnZXMYBCADKAsyPy5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFn",
+            "ZRpZCghUYWJsZVJvdxJNCgVjZWxscxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5UYWJsZS5UYWJsZUNl",
+            "bGwa0wEKCVRhYmxlQ2VsbBJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EhAK",
+            "CHJvd19zcGFuGAIgASgFEhAKCGNvbF9zcGFuGAMgASgFElsKEmRldGVjdGVk",
+            "X2xhbmd1YWdlcxgEIAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlGv8DCglGb3Jt",
+            "RmllbGQSSQoKZmllbGRfbmFtZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlvdXQSSgoLZmllbGRf",
+            "dmFsdWUYAiABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
+            "LkRvY3VtZW50LlBhZ2UuTGF5b3V0EmAKF25hbWVfZGV0ZWN0ZWRfbGFuZ3Vh",
+            "Z2VzGAMgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
+            "b2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2USYQoYdmFsdWVfZGV0ZWN0",
+            "ZWRfbGFuZ3VhZ2VzGAQgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2USEgoKdmFs",
+            "dWVfdHlwZRgFIAEoCRIaChJjb3JyZWN0ZWRfa2V5X3RleHQYBiABKAkSHAoU",
+            "Y29ycmVjdGVkX3ZhbHVlX3RleHQYByABKAkSSAoKcHJvdmVuYW5jZRgIIAEo",
+            "CzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
+            "UHJvdmVuYW5jZRqTAQoPRGV0ZWN0ZWRCYXJjb2RlEkUKBmxheW91dBgBIAEo",
+            "CzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
+            "UGFnZS5MYXlvdXQSOQoHYmFyY29kZRgCIAEoCzIoLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuQmFyY29kZRo9ChBEZXRlY3RlZExhbmd1YWdl",
+            "EhUKDWxhbmd1YWdlX2NvZGUYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhrp",
+            "BgoGRW50aXR5Ek4KC3RleHRfYW5jaG9yGAEgASgLMjQuZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5UZXh0QW5jaG9yQgPgQQES",
+            "EQoEdHlwZRgCIAEoCUID4EECEhkKDG1lbnRpb25fdGV4dBgDIAEoCUID4EEB",
+            "EhcKCm1lbnRpb25faWQYBCABKAlCA+BBARIXCgpjb25maWRlbmNlGAUgASgC",
+            "QgPgQQESTgoLcGFnZV9hbmNob3IYBiABKAsyNC5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2VBbmNob3JCA+BBARIPCgJp",
+            "ZBgHIAEoCUID4EEBEl8KEG5vcm1hbGl6ZWRfdmFsdWUYCSABKAsyQC5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LkVudGl0eS5O",
+            "b3JtYWxpemVkVmFsdWVCA+BBARJJCgpwcm9wZXJ0aWVzGAogAygLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5FbnRpdHlC",
+            "A+BBARJNCgpwcm92ZW5hbmNlGAsgASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlQgPgQQESFQoIcmVk",
+            "YWN0ZWQYDCABKAhCA+BBARq7AgoPTm9ybWFsaXplZFZhbHVlEikKC21vbmV5",
+            "X3ZhbHVlGAIgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlIABInCgpkYXRlX3Zh",
+            "bHVlGAMgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEi8KDmRhdGV0aW1lX3Zh",
+            "bHVlGAQgASgLMhUuZ29vZ2xlLnR5cGUuRGF0ZVRpbWVIABIzCg1hZGRyZXNz",
+            "X3ZhbHVlGAUgASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFsQWRkcmVzc0gAEhcK",
+            "DWJvb2xlYW5fdmFsdWUYBiABKAhIABIXCg1pbnRlZ2VyX3ZhbHVlGAcgASgF",
+            "SAASFQoLZmxvYXRfdmFsdWUYCCABKAJIABIRCgR0ZXh0GAEgASgJQgPgQQFC",
+            "EgoQc3RydWN0dXJlZF92YWx1ZRpJCg5FbnRpdHlSZWxhdGlvbhISCgpzdWJq",
+            "ZWN0X2lkGAEgASgJEhEKCW9iamVjdF9pZBgCIAEoCRIQCghyZWxhdGlvbhgD",
+            "IAEoCRqtAQoKVGV4dEFuY2hvchJXCg10ZXh0X3NlZ21lbnRzGAEgAygLMkAu",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5UZXh0",
+            "QW5jaG9yLlRleHRTZWdtZW50Eg8KB2NvbnRlbnQYAiABKAkaNQoLVGV4dFNl",
+            "Z21lbnQSEwoLc3RhcnRfaW5kZXgYASABKAMSEQoJZW5kX2luZGV4GAIgASgD",
+            "GucDCgpQYWdlQW5jaG9yEk8KCXBhZ2VfcmVmcxgBIAMoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZUFuY2hvci5Q",
+            "YWdlUmVmGocDCgdQYWdlUmVmEhEKBHBhZ2UYASABKANCA+BBAhJhCgtsYXlv",
+            "dXRfdHlwZRgCIAEoDjJHLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTMuRG9jdW1lbnQuUGFnZUFuY2hvci5QYWdlUmVmLkxheW91dFR5cGVCA+BB",
+            "ARIYCglsYXlvdXRfaWQYAyABKAlCBRgB4EEBEkkKDWJvdW5kaW5nX3BvbHkY",
+            "BCABKAsyLS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJvdW5k",
+            "aW5nUG9seUID4EEBEhcKCmNvbmZpZGVuY2UYBSABKAJCA+BBASKHAQoKTGF5",
+            "b3V0VHlwZRIbChdMQVlPVVRfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUJMT0NL",
+            "EAESDQoJUEFSQUdSQVBIEAISCAoETElORRADEgkKBVRPS0VOEAQSEgoOVklT",
+            "VUFMX0VMRU1FTlQQBRIJCgVUQUJMRRAGEg4KCkZPUk1fRklFTEQQBxqWAwoK",
+            "UHJvdmVuYW5jZRIQCghyZXZpc2lvbhgBIAEoBRIOCgJpZBgCIAEoBUICGAES",
+            "TAoHcGFyZW50cxgDIAMoCzI7Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZS5QYXJlbnQSUAoEdHlwZRgEIAEo",
+            "DjJCLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
+            "UHJvdmVuYW5jZS5PcGVyYXRpb25UeXBlGjkKBlBhcmVudBIQCghyZXZpc2lv",
+            "bhgBIAEoBRINCgVpbmRleBgDIAEoBRIOCgJpZBgCIAEoBUICGAEiigEKDU9w",
+            "ZXJhdGlvblR5cGUSHgoaT1BFUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIH",
+            "CgNBREQQARIKCgZSRU1PVkUQAhILCgdSRVBMQUNFEAMSEgoORVZBTF9SRVFV",
+            "RVNURUQQBBIRCg1FVkFMX0FQUFJPVkVEEAUSEAoMRVZBTF9TS0lQUEVEEAYa",
+            "qgIKCFJldmlzaW9uEg8KBWFnZW50GAQgASgJSAASEwoJcHJvY2Vzc29yGAUg",
+            "ASgJSAASCgoCaWQYASABKAkSEgoGcGFyZW50GAIgAygFQgIYARISCgpwYXJl",
+            "bnRfaWRzGAcgAygJEi8KC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBJUCgxodW1hbl9yZXZpZXcYBiABKAsyPi5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlJldmlzaW9u",
+            "Lkh1bWFuUmV2aWV3GjMKC0h1bWFuUmV2aWV3Eg0KBXN0YXRlGAEgASgJEhUK",
+            "DXN0YXRlX21lc3NhZ2UYAiABKAlCCAoGc291cmNlGrcBCgpUZXh0Q2hhbmdl",
+            "EkkKC3RleHRfYW5jaG9yGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5Eb2N1bWVudC5UZXh0QW5jaG9yEhQKDGNoYW5nZWRfdGV4",
+            "dBgCIAEoCRJICgpwcm92ZW5hbmNlGAMgAygLMjQuZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlQggKBnNvdXJj",
+            "ZULqAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCDURv",
+            "Y3VtZW50UHJvdG9QAVpJZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTM7ZG9jdW1lbnRhaaoC",
+            "H0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xv",
+            "dWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1l",
+            "bnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document), global::Google.Cloud.DocumentAI.V1Beta3.Document.Parser, new[]{ "Uri", "Content", "MimeType", "Text", "TextStyles", "Pages", "Entities", "EntityRelations", "TextChanges", "ShardInfo", "Error", "Revisions" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ShardInfo), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ShardInfo.Parser, new[]{ "ShardIndex", "ShardCount", "TextOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style.Parser, new[]{ "TextAnchor", "Color", "BackgroundColor", "FontWeight", "TextStyle", "TextDecoration", "FontSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style.Types.FontSize), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style.Types.FontSize.Parser, new[]{ "Size", "Unit" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Parser, new[]{ "PageNumber", "Image", "Transforms", "Dimension", "Layout", "DetectedLanguages", "Blocks", "Paragraphs", "Lines", "Tokens", "VisualElements", "Tables", "FormFields", "Symbols", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Dimension), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Dimension.Parser, new[]{ "Width", "Height", "Unit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Parser, new[]{ "PageNumber", "Image", "Transforms", "Dimension", "Layout", "DetectedLanguages", "Blocks", "Paragraphs", "Lines", "Tokens", "VisualElements", "Tables", "FormFields", "Symbols", "DetectedBarcodes", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Dimension), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Dimension.Parser, new[]{ "Width", "Height", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Image), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Image.Parser, new[]{ "Content", "MimeType", "Width", "Height" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Matrix), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Matrix.Parser, new[]{ "Rows", "Cols", "Type", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout.Parser, new[]{ "TextAnchor", "Confidence", "BoundingPoly", "Orientation" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout.Types.Orientation) }, null, null),
@@ -232,14 +241,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement.Parser, new[]{ "Layout", "Type", "DetectedLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Parser, new[]{ "Layout", "HeaderRows", "BodyRows", "DetectedLanguages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableRow), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableRow.Parser, new[]{ "Cells" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableCell), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableCell.Parser, new[]{ "Layout", "RowSpan", "ColSpan", "DetectedLanguages" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.FormField), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.FormField.Parser, new[]{ "FieldName", "FieldValue", "NameDetectedLanguages", "ValueDetectedLanguages", "ValueType", "Provenance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.FormField), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.FormField.Parser, new[]{ "FieldName", "FieldValue", "NameDetectedLanguages", "ValueDetectedLanguages", "ValueType", "CorrectedKeyText", "CorrectedValueText", "Provenance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode.Parser, new[]{ "Layout", "Barcode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedLanguage), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Parser, new[]{ "TextAnchor", "Type", "MentionText", "MentionId", "Confidence", "PageAnchor", "Id", "NormalizedValue", "Properties", "Provenance", "Redacted" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue.Parser, new[]{ "MoneyValue", "DateValue", "DatetimeValue", "AddressValue", "BooleanValue", "Text" }, new[]{ "StructuredValue" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Parser, new[]{ "TextAnchor", "Type", "MentionText", "MentionId", "Confidence", "PageAnchor", "Id", "NormalizedValue", "Properties", "Provenance", "Redacted" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue.Parser, new[]{ "MoneyValue", "DateValue", "DatetimeValue", "AddressValue", "BooleanValue", "IntegerValue", "FloatValue", "Text" }, new[]{ "StructuredValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.EntityRelation), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.EntityRelation.Parser, new[]{ "SubjectId", "ObjectId", "Relation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Parser, new[]{ "TextSegments", "Content" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Types.TextSegment), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Types.TextSegment.Parser, new[]{ "StartIndex", "EndIndex" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId", "BoundingPoly", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Parser, new[]{ "Revision", "Id", "Parents", "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.OperationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent.Parser, new[]{ "Revision", "Index", "Id" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Parser, new[]{ "Agent", "Processor", "Id", "Parent", "CreateTime", "HumanReview" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview.Parser, new[]{ "State", "StateMessage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Parser, new[]{ "Agent", "Processor", "Id", "Parent", "ParentIds", "CreateTime", "HumanReview" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview.Parser, new[]{ "State", "StateMessage" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)})
           }));
     }
@@ -248,11 +258,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
   #region Messages
   /// <summary>
-  /// Document represents the canonical document resource in Document Understanding
-  /// AI.
-  /// It is an interchange format that provides insights into documents and allows
-  /// for collaboration between users and Document Understanding AI to iterate and
-  /// optimize for quality.
+  /// Document represents the canonical document resource in Document AI. It is an
+  /// interchange format that provides insights into documents and allows for
+  /// collaboration between users and Document AI to iterate and optimize for
+  /// quality.
   /// </summary>
   public sealed partial class Document : pb::IMessage<Document>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -390,8 +399,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style> textStyles_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Style>();
     /// <summary>
-    /// Placeholder.  Styles for the
-    /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+    /// Placeholder.  Styles for the [Document.text][google.cloud.documentai.v1beta3.Document.text].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -405,8 +413,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page> pages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page>();
     /// <summary>
-    /// Visual page layout for the
-    /// [Document][google.cloud.documentai.v1beta3.Document].
+    /// Visual page layout for the [Document][google.cloud.documentai.v1beta3.Document].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -420,9 +427,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity>();
     /// <summary>
-    /// A list of entities detected on
-    /// [Document.text][google.cloud.documentai.v1beta3.Document.text]. For
-    /// document shards, entities in this list may cross shard boundaries.
+    /// A list of entities detected on [Document.text][google.cloud.documentai.v1beta3.Document.text]. For document shards,
+    /// entities in this list may cross shard boundaries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -436,8 +442,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.EntityRelation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.EntityRelation> entityRelations_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.EntityRelation>();
     /// <summary>
-    /// Placeholder.  Relationship among
-    /// [Document.entities][google.cloud.documentai.v1beta3.Document.entities].
+    /// Placeholder.  Relationship among [Document.entities][google.cloud.documentai.v1beta3.Document.entities].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -975,9 +980,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int TextOffsetFieldNumber = 3;
         private long textOffset_;
         /// <summary>
-        /// The index of the first character in
-        /// [Document.text][google.cloud.documentai.v1beta3.Document.text] in the
-        /// overall document global text.
+        /// The index of the first character in [Document.text][google.cloud.documentai.v1beta3.Document.text] in the overall
+        /// document global text.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1227,8 +1231,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int TextAnchorFieldNumber = 1;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor textAnchor_;
         /// <summary>
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta3.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1940,6 +1943,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           tables_ = other.tables_.Clone();
           formFields_ = other.formFields_.Clone();
           symbols_ = other.symbols_.Clone();
+          detectedBarcodes_ = other.detectedBarcodes_.Clone();
           provenance_ = other.provenance_ != null ? other.provenance_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -1954,11 +1958,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int PageNumberFieldNumber = 1;
         private int pageNumber_;
         /// <summary>
-        /// 1-based index for current
-        /// [Page][google.cloud.documentai.v1beta3.Document.Page] in a parent
-        /// [Document][google.cloud.documentai.v1beta3.Document]. Useful when a page
-        /// is taken out of a [Document][google.cloud.documentai.v1beta3.Document]
-        /// for individual processing.
+        /// 1-based index for current [Page][google.cloud.documentai.v1beta3.Document.Page] in a parent [Document][google.cloud.documentai.v1beta3.Document].
+        /// Useful when a page is taken out of a [Document][google.cloud.documentai.v1beta3.Document] for individual
+        /// processing.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1993,8 +1995,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Matrix> transforms_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Matrix>();
         /// <summary>
         /// Transformation matrices that were applied to the original document image
-        /// to produce
-        /// [Page.image][google.cloud.documentai.v1beta3.Document.Page.image].
+        /// to produce [Page.image][google.cloud.documentai.v1beta3.Document.Page.image].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2021,8 +2022,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int LayoutFieldNumber = 3;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
         /// <summary>
-        /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the
-        /// page.
+        /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2164,6 +2164,20 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           get { return symbols_; }
         }
 
+        /// <summary>Field number for the "detected_barcodes" field.</summary>
+        public const int DetectedBarcodesFieldNumber = 15;
+        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode> _repeated_detectedBarcodes_codec
+            = pb::FieldCodec.ForMessage(122, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode> detectedBarcodes_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode>();
+        /// <summary>
+        /// A list of detected barcodes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.DetectedBarcode> DetectedBarcodes {
+          get { return detectedBarcodes_; }
+        }
+
         /// <summary>Field number for the "provenance" field.</summary>
         public const int ProvenanceFieldNumber = 16;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance provenance_;
@@ -2208,6 +2222,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if(!tables_.Equals(other.tables_)) return false;
           if(!formFields_.Equals(other.formFields_)) return false;
           if(!symbols_.Equals(other.symbols_)) return false;
+          if(!detectedBarcodes_.Equals(other.detectedBarcodes_)) return false;
           if (!object.Equals(Provenance, other.Provenance)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2230,6 +2245,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           hash ^= tables_.GetHashCode();
           hash ^= formFields_.GetHashCode();
           hash ^= symbols_.GetHashCode();
+          hash ^= detectedBarcodes_.GetHashCode();
           if (provenance_ != null) hash ^= Provenance.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2275,6 +2291,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteMessage(Image);
           }
           transforms_.WriteTo(output, _repeated_transforms_codec);
+          detectedBarcodes_.WriteTo(output, _repeated_detectedBarcodes_codec);
           if (provenance_ != null) {
             output.WriteRawTag(130, 1);
             output.WriteMessage(Provenance);
@@ -2315,6 +2332,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteMessage(Image);
           }
           transforms_.WriteTo(ref output, _repeated_transforms_codec);
+          detectedBarcodes_.WriteTo(ref output, _repeated_detectedBarcodes_codec);
           if (provenance_ != null) {
             output.WriteRawTag(130, 1);
             output.WriteMessage(Provenance);
@@ -2351,6 +2369,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           size += tables_.CalculateSize(_repeated_tables_codec);
           size += formFields_.CalculateSize(_repeated_formFields_codec);
           size += symbols_.CalculateSize(_repeated_symbols_codec);
+          size += detectedBarcodes_.CalculateSize(_repeated_detectedBarcodes_codec);
           if (provenance_ != null) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(Provenance);
           }
@@ -2397,6 +2416,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           tables_.Add(other.tables_);
           formFields_.Add(other.formFields_);
           symbols_.Add(other.symbols_);
+          detectedBarcodes_.Add(other.detectedBarcodes_);
           if (other.provenance_ != null) {
             if (provenance_ == null) {
               Provenance = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance();
@@ -2481,6 +2501,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               case 114: {
                 transforms_.AddEntriesFrom(input, _repeated_transforms_codec);
+                break;
+              }
+              case 122: {
+                detectedBarcodes_.AddEntriesFrom(input, _repeated_detectedBarcodes_codec);
                 break;
               }
               case 130: {
@@ -2568,6 +2592,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               case 114: {
                 transforms_.AddEntriesFrom(ref input, _repeated_transforms_codec);
+                break;
+              }
+              case 122: {
+                detectedBarcodes_.AddEntriesFrom(ref input, _repeated_detectedBarcodes_codec);
                 break;
               }
               case 130: {
@@ -3550,8 +3578,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int TextAnchorFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor textAnchor_;
             /// <summary>
-            /// Text anchor indexing into the
-            /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+            /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta3.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3566,11 +3593,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int ConfidenceFieldNumber = 2;
             private float confidence_;
             /// <summary>
-            /// Confidence of the current
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] within
-            /// context of the object this layout is for. e.g. confidence can be for a
-            /// single token, a table, a visual element, etc. depending on context.
-            /// Range [0, 1].
+            /// Confidence of the current [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] within context of the object this
+            /// layout is for. e.g. confidence can be for a single token, a table,
+            /// a visual element, etc. depending on context. Range [0, 1].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3585,8 +3610,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int BoundingPolyFieldNumber = 3;
             private global::Google.Cloud.DocumentAI.V1Beta3.BoundingPoly boundingPoly_;
             /// <summary>
-            /// The bounding polygon for the
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout].
+            /// The bounding polygon for the [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3601,8 +3625,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int OrientationFieldNumber = 4;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout.Types.Orientation orientation_ = global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified;
             /// <summary>
-            /// Detected orientation for the
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout].
+            /// Detected orientation for the [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3927,8 +3950,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Block][google.cloud.documentai.v1beta3.Document.Page.Block].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Block][google.cloud.documentai.v1beta3.Document.Page.Block].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4210,8 +4232,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Paragraph][google.cloud.documentai.v1beta3.Document.Page.Paragraph].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Paragraph][google.cloud.documentai.v1beta3.Document.Page.Paragraph].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4494,8 +4515,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Line][google.cloud.documentai.v1beta3.Document.Page.Line].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Line][google.cloud.documentai.v1beta3.Document.Page.Line].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4778,8 +4798,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4794,8 +4813,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int DetectedBreakFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak detectedBreak_;
             /// <summary>
-            /// Detected break at the end of a
-            /// [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
+            /// Detected break at the end of a [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5061,8 +5079,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Detected break at the end of a
-              /// [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
+              /// Detected break at the end of a [Token][google.cloud.documentai.v1beta3.Document.Page.Token].
               /// </summary>
               public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5343,8 +5360,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Symbol][google.cloud.documentai.v1beta3.Document.Page.Symbol].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Symbol][google.cloud.documentai.v1beta3.Document.Page.Symbol].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5579,8 +5595,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [VisualElement][google.cloud.documentai.v1beta3.Document.Page.VisualElement].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [VisualElement][google.cloud.documentai.v1beta3.Document.Page.VisualElement].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5595,8 +5610,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int TypeFieldNumber = 2;
             private string type_ = "";
             /// <summary>
-            /// Type of the
-            /// [VisualElement][google.cloud.documentai.v1beta3.Document.Page.VisualElement].
+            /// Type of the [VisualElement][google.cloud.documentai.v1beta3.Document.Page.VisualElement].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5855,8 +5869,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-            /// [Table][google.cloud.documentai.v1beta3.Document.Page.Table].
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [Table][google.cloud.documentai.v1beta3.Document.Page.Table].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6334,8 +6347,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int LayoutFieldNumber = 1;
                 private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
                 /// <summary>
-                /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for
-                /// [TableCell][google.cloud.documentai.v1beta3.Document.Page.Table.TableCell].
+                /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [TableCell][google.cloud.documentai.v1beta3.Document.Page.Table.TableCell].
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6641,6 +6653,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               nameDetectedLanguages_ = other.nameDetectedLanguages_.Clone();
               valueDetectedLanguages_ = other.valueDetectedLanguages_.Clone();
               valueType_ = other.valueType_;
+              correctedKeyText_ = other.correctedKeyText_;
+              correctedValueText_ = other.correctedValueText_;
               provenance_ = other.provenance_ != null ? other.provenance_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -6655,9 +6669,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int FieldNameFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout fieldName_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the
-            /// [FormField][google.cloud.documentai.v1beta3.Document.Page.FormField]
-            /// name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1beta3.Document.Page.FormField] name. e.g. `Address`, `Email`,
+            /// `Grand total`, `Phone number`, etc.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6672,9 +6685,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int FieldValueFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout fieldValue_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the
-            /// [FormField][google.cloud.documentai.v1beta3.Document.Page.FormField]
-            /// value.
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1beta3.Document.Page.FormField] value.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6732,6 +6743,40 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "corrected_key_text" field.</summary>
+            public const int CorrectedKeyTextFieldNumber = 6;
+            private string correctedKeyText_ = "";
+            /// <summary>
+            /// Created for Labeling UI to export key text.
+            /// If corrections were made to the text identified by the
+            /// `field_name.text_anchor`, this field will contain the correction.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string CorrectedKeyText {
+              get { return correctedKeyText_; }
+              set {
+                correctedKeyText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "corrected_value_text" field.</summary>
+            public const int CorrectedValueTextFieldNumber = 7;
+            private string correctedValueText_ = "";
+            /// <summary>
+            /// Created for Labeling UI to export value text.
+            /// If corrections were made to the text identified by the
+            /// `field_value.text_anchor`, this field will contain the correction.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string CorrectedValueText {
+              get { return correctedValueText_; }
+              set {
+                correctedValueText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
             /// <summary>Field number for the "provenance" field.</summary>
             public const int ProvenanceFieldNumber = 8;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance provenance_;
@@ -6767,6 +6812,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if(!nameDetectedLanguages_.Equals(other.nameDetectedLanguages_)) return false;
               if(!valueDetectedLanguages_.Equals(other.valueDetectedLanguages_)) return false;
               if (ValueType != other.ValueType) return false;
+              if (CorrectedKeyText != other.CorrectedKeyText) return false;
+              if (CorrectedValueText != other.CorrectedValueText) return false;
               if (!object.Equals(Provenance, other.Provenance)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -6780,6 +6827,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               hash ^= nameDetectedLanguages_.GetHashCode();
               hash ^= valueDetectedLanguages_.GetHashCode();
               if (ValueType.Length != 0) hash ^= ValueType.GetHashCode();
+              if (CorrectedKeyText.Length != 0) hash ^= CorrectedKeyText.GetHashCode();
+              if (CorrectedValueText.Length != 0) hash ^= CorrectedValueText.GetHashCode();
               if (provenance_ != null) hash ^= Provenance.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -6813,6 +6862,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(42);
                 output.WriteString(ValueType);
               }
+              if (CorrectedKeyText.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(CorrectedKeyText);
+              }
+              if (CorrectedValueText.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(CorrectedValueText);
+              }
               if (provenance_ != null) {
                 output.WriteRawTag(66);
                 output.WriteMessage(Provenance);
@@ -6841,6 +6898,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(42);
                 output.WriteString(ValueType);
               }
+              if (CorrectedKeyText.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(CorrectedKeyText);
+              }
+              if (CorrectedValueText.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(CorrectedValueText);
+              }
               if (provenance_ != null) {
                 output.WriteRawTag(66);
                 output.WriteMessage(Provenance);
@@ -6865,6 +6930,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               size += valueDetectedLanguages_.CalculateSize(_repeated_valueDetectedLanguages_codec);
               if (ValueType.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ValueType);
+              }
+              if (CorrectedKeyText.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(CorrectedKeyText);
+              }
+              if (CorrectedValueText.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(CorrectedValueText);
               }
               if (provenance_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Provenance);
@@ -6897,6 +6968,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               valueDetectedLanguages_.Add(other.valueDetectedLanguages_);
               if (other.ValueType.Length != 0) {
                 ValueType = other.ValueType;
+              }
+              if (other.CorrectedKeyText.Length != 0) {
+                CorrectedKeyText = other.CorrectedKeyText;
+              }
+              if (other.CorrectedValueText.Length != 0) {
+                CorrectedValueText = other.CorrectedValueText;
               }
               if (other.provenance_ != null) {
                 if (provenance_ == null) {
@@ -6943,6 +7020,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   }
                   case 42: {
                     ValueType = input.ReadString();
+                    break;
+                  }
+                  case 50: {
+                    CorrectedKeyText = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    CorrectedValueText = input.ReadString();
                     break;
                   }
                   case 66: {
@@ -6993,11 +7078,272 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     ValueType = input.ReadString();
                     break;
                   }
+                  case 50: {
+                    CorrectedKeyText = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    CorrectedValueText = input.ReadString();
+                    break;
+                  }
                   case 66: {
                     if (provenance_ == null) {
                       Provenance = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance();
                     }
                     input.ReadMessage(Provenance);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// A detected barcode.
+          /// </summary>
+          public sealed partial class DetectedBarcode : pb::IMessage<DetectedBarcode>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DetectedBarcode> _parser = new pb::MessageParser<DetectedBarcode>(() => new DetectedBarcode());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DetectedBarcode> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Descriptor.NestedTypes[12]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DetectedBarcode() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DetectedBarcode(DetectedBarcode other) : this() {
+              layout_ = other.layout_ != null ? other.layout_.Clone() : null;
+              barcode_ = other.barcode_ != null ? other.barcode_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DetectedBarcode Clone() {
+              return new DetectedBarcode(this);
+            }
+
+            /// <summary>Field number for the "layout" field.</summary>
+            public const int LayoutFieldNumber = 1;
+            private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout layout_;
+            /// <summary>
+            /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for [DetectedBarcode][google.cloud.documentai.v1beta3.Document.Page.DetectedBarcode].
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout Layout {
+              get { return layout_; }
+              set {
+                layout_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "barcode" field.</summary>
+            public const int BarcodeFieldNumber = 2;
+            private global::Google.Cloud.DocumentAI.V1Beta3.Barcode barcode_;
+            /// <summary>
+            /// Detailed barcode information of the [DetectedBarcode][google.cloud.documentai.v1beta3.Document.Page.DetectedBarcode].
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1Beta3.Barcode Barcode {
+              get { return barcode_; }
+              set {
+                barcode_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DetectedBarcode);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DetectedBarcode other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Layout, other.Layout)) return false;
+              if (!object.Equals(Barcode, other.Barcode)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (layout_ != null) hash ^= Layout.GetHashCode();
+              if (barcode_ != null) hash ^= Barcode.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              if (barcode_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Barcode);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              if (barcode_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Barcode);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (layout_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Layout);
+              }
+              if (barcode_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Barcode);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DetectedBarcode other) {
+              if (other == null) {
+                return;
+              }
+              if (other.layout_ != null) {
+                if (layout_ == null) {
+                  Layout = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout();
+                }
+                Layout.MergeFrom(other.Layout);
+              }
+              if (other.barcode_ != null) {
+                if (barcode_ == null) {
+                  Barcode = new global::Google.Cloud.DocumentAI.V1Beta3.Barcode();
+                }
+                Barcode.MergeFrom(other.Barcode);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    if (barcode_ == null) {
+                      Barcode = new global::Google.Cloud.DocumentAI.V1Beta3.Barcode();
+                    }
+                    input.ReadMessage(Barcode);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    if (barcode_ == null) {
+                      Barcode = new global::Google.Cloud.DocumentAI.V1Beta3.Barcode();
+                    }
+                    input.ReadMessage(Barcode);
                     break;
                   }
                 }
@@ -7024,7 +7370,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Descriptor.NestedTypes[12]; }
+              get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Descriptor.NestedTypes[13]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7313,8 +7659,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Optional. Provenance of the entity.
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta3.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7344,8 +7689,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int MentionTextFieldNumber = 3;
         private string mentionText_ = "";
         /// <summary>
-        /// Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If
-        /// the entity is not present in the document, this field will be empty.
+        /// Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity
+        /// is not present in the document, this field will be empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7390,8 +7735,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int PageAnchorFieldNumber = 6;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor pageAnchor_;
         /// <summary>
-        /// Optional. Represents the provenance of this entity wrt. the location on
-        /// the page where it was found.
+        /// Optional. Represents the provenance of this entity wrt. the location on the
+        /// page where it was found.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7422,8 +7767,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int NormalizedValueFieldNumber = 9;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue normalizedValue_;
         /// <summary>
-        /// Optional. Normalized entity value. Absent if the extracted value could
-        /// not be converted or the type (e.g. address) is not supported for certain
+        /// Optional. Normalized entity value. Absent if the extracted value could not be
+        /// converted or the type (e.g. address) is not supported for certain
         /// parsers. This field is also only populated for certain supported document
         /// types.
         /// </summary>
@@ -7442,8 +7787,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             = pb::FieldCodec.ForMessage(82, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity> properties_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity>();
         /// <summary>
-        /// Optional. Entities can be nested to form a hierarchical data structure
-        /// representing the content in the document.
+        /// Optional. Entities can be nested to form a hierarchical data structure representing
+        /// the content in the document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7470,8 +7815,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int RedactedFieldNumber = 12;
         private bool redacted_;
         /// <summary>
-        /// Optional. Whether the entity will be redacted for de-identification
-        /// purposes.
+        /// Optional. Whether the entity will be redacted for de-identification purposes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7938,6 +8282,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 case StructuredValueOneofCase.BooleanValue:
                   BooleanValue = other.BooleanValue;
                   break;
+                case StructuredValueOneofCase.IntegerValue:
+                  IntegerValue = other.IntegerValue;
+                  break;
+                case StructuredValueOneofCase.FloatValue:
+                  FloatValue = other.FloatValue;
+                  break;
               }
 
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -8029,6 +8379,36 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "integer_value" field.</summary>
+            public const int IntegerValueFieldNumber = 7;
+            /// <summary>
+            /// Integer value.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int IntegerValue {
+              get { return structuredValueCase_ == StructuredValueOneofCase.IntegerValue ? (int) structuredValue_ : 0; }
+              set {
+                structuredValue_ = value;
+                structuredValueCase_ = StructuredValueOneofCase.IntegerValue;
+              }
+            }
+
+            /// <summary>Field number for the "float_value" field.</summary>
+            public const int FloatValueFieldNumber = 8;
+            /// <summary>
+            /// Float value.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public float FloatValue {
+              get { return structuredValueCase_ == StructuredValueOneofCase.FloatValue ? (float) structuredValue_ : 0F; }
+              set {
+                structuredValue_ = value;
+                structuredValueCase_ = StructuredValueOneofCase.FloatValue;
+              }
+            }
+
             /// <summary>Field number for the "text" field.</summary>
             public const int TextFieldNumber = 1;
             private string text_ = "";
@@ -8062,6 +8442,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               DatetimeValue = 4,
               AddressValue = 5,
               BooleanValue = 6,
+              IntegerValue = 7,
+              FloatValue = 8,
             }
             private StructuredValueOneofCase structuredValueCase_ = StructuredValueOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8097,6 +8479,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (!object.Equals(DatetimeValue, other.DatetimeValue)) return false;
               if (!object.Equals(AddressValue, other.AddressValue)) return false;
               if (BooleanValue != other.BooleanValue) return false;
+              if (IntegerValue != other.IntegerValue) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FloatValue, other.FloatValue)) return false;
               if (Text != other.Text) return false;
               if (StructuredValueCase != other.StructuredValueCase) return false;
               return Equals(_unknownFields, other._unknownFields);
@@ -8111,6 +8495,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (structuredValueCase_ == StructuredValueOneofCase.DatetimeValue) hash ^= DatetimeValue.GetHashCode();
               if (structuredValueCase_ == StructuredValueOneofCase.AddressValue) hash ^= AddressValue.GetHashCode();
               if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
+              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) hash ^= IntegerValue.GetHashCode();
+              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
               if (Text.Length != 0) hash ^= Text.GetHashCode();
               hash ^= (int) structuredValueCase_;
               if (_unknownFields != null) {
@@ -8155,6 +8541,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(48);
                 output.WriteBool(BooleanValue);
               }
+              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+                output.WriteRawTag(56);
+                output.WriteInt32(IntegerValue);
+              }
+              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+                output.WriteRawTag(69);
+                output.WriteFloat(FloatValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -8189,6 +8583,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(48);
                 output.WriteBool(BooleanValue);
               }
+              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+                output.WriteRawTag(56);
+                output.WriteInt32(IntegerValue);
+              }
+              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+                output.WriteRawTag(69);
+                output.WriteFloat(FloatValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -8213,6 +8615,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) {
                 size += 1 + 1;
+              }
+              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntegerValue);
+              }
+              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+                size += 1 + 4;
               }
               if (Text.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
@@ -8259,6 +8667,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   break;
                 case StructuredValueOneofCase.BooleanValue:
                   BooleanValue = other.BooleanValue;
+                  break;
+                case StructuredValueOneofCase.IntegerValue:
+                  IntegerValue = other.IntegerValue;
+                  break;
+                case StructuredValueOneofCase.FloatValue:
+                  FloatValue = other.FloatValue;
                   break;
               }
 
@@ -8321,6 +8735,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     BooleanValue = input.ReadBool();
                     break;
                   }
+                  case 56: {
+                    IntegerValue = input.ReadInt32();
+                    break;
+                  }
+                  case 69: {
+                    FloatValue = input.ReadFloat();
+                    break;
+                  }
                 }
               }
             #endif
@@ -8380,6 +8802,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     BooleanValue = input.ReadBool();
                     break;
                   }
+                  case 56: {
+                    IntegerValue = input.ReadInt32();
+                    break;
+                  }
+                  case 69: {
+                    FloatValue = input.ReadFloat();
+                    break;
+                  }
                 }
               }
             }
@@ -8393,8 +8823,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
 
       /// <summary>
-      /// Relationship between
-      /// [Entities][google.cloud.documentai.v1beta3.Document.Entity].
+      /// Relationship between [Entities][google.cloud.documentai.v1beta3.Document.Entity].
       /// </summary>
       public sealed partial class EntityRelation : pb::IMessage<EntityRelation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8669,8 +9098,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
 
       /// <summary>
-      /// Text reference indexing into the
-      /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+      /// Text reference indexing into the [Document.text][google.cloud.documentai.v1beta3.Document.text].
       /// </summary>
       public sealed partial class TextAnchor : pb::IMessage<TextAnchor>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8723,8 +9151,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Types.TextSegment.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Types.TextSegment> textSegments_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor.Types.TextSegment>();
         /// <summary>
-        /// The text segments from the
-        /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+        /// The text segments from the [Document.text][google.cloud.documentai.v1beta3.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8900,11 +9327,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// A text segment in the
-          /// [Document.text][google.cloud.documentai.v1beta3.Document.text]. The
-          /// indices may be out of bounds which indicate that the text extends into
-          /// another document shard for large sharded documents. See
-          /// [ShardInfo.text_offset][google.cloud.documentai.v1beta3.Document.ShardInfo.text_offset]
+          /// A text segment in the [Document.text][google.cloud.documentai.v1beta3.Document.text]. The indices may be out of bounds
+          /// which indicate that the text extends into another document shard for
+          /// large sharded documents. See [ShardInfo.text_offset][google.cloud.documentai.v1beta3.Document.ShardInfo.text_offset]
           /// </summary>
           public sealed partial class TextSegment : pb::IMessage<TextSegment>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8955,9 +9380,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int StartIndexFieldNumber = 1;
             private long startIndex_;
             /// <summary>
-            /// [TextSegment][google.cloud.documentai.v1beta3.Document.TextAnchor.TextSegment]
-            /// start UTF-8 char index in the
-            /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
+            /// [TextSegment][google.cloud.documentai.v1beta3.Document.TextAnchor.TextSegment] start UTF-8 char index in the [Document.text][google.cloud.documentai.v1beta3.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8972,8 +9395,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int EndIndexFieldNumber = 2;
             private long endIndex_;
             /// <summary>
-            /// [TextSegment][google.cloud.documentai.v1beta3.Document.TextAnchor.TextSegment]
-            /// half open end UTF-8 char index in the
+            /// [TextSegment][google.cloud.documentai.v1beta3.Document.TextAnchor.TextSegment] half open end UTF-8 char index in the
             /// [Document.text][google.cloud.documentai.v1beta3.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9148,9 +9570,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
 
       /// <summary>
-      /// Referencing the visual context of the entity in the
-      /// [Document.pages][google.cloud.documentai.v1beta3.Document.pages]. Page
-      /// anchors can be cross-page, consist of multiple bounding polygons and
+      /// Referencing the visual context of the entity in the [Document.pages][google.cloud.documentai.v1beta3.Document.pages].
+      /// Page anchors can be cross-page, consist of multiple bounding polygons and
       /// optionally reference specific layout element types.
       /// </summary>
       public sealed partial class PageAnchor : pb::IMessage<PageAnchor>
@@ -9392,11 +9813,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int PageFieldNumber = 1;
             private long page_;
             /// <summary>
-            /// Required. Index into the
-            /// [Document.pages][google.cloud.documentai.v1beta3.Document.pages]
-            /// element, for example using [Document.pages][page_refs.page] to locate
-            /// the related page element. This field is skipped when its value is the
-            /// default 0. See
+            /// Required. Index into the [Document.pages][google.cloud.documentai.v1beta3.Document.pages] element, for example using
+            /// [Document.pages][page_refs.page] to locate the related page element.
+            /// This field is skipped when its value is the default 0. See
             /// https://developers.google.com/protocol-buffers/docs/proto3#json.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9412,8 +9831,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutTypeFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType layoutType_ = global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified;
             /// <summary>
-            /// Optional. The type of the layout element that is being referenced if
-            /// any.
+            /// Optional. The type of the layout element that is being referenced if any.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9428,9 +9846,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LayoutIdFieldNumber = 3;
             private string layoutId_ = "";
             /// <summary>
-            /// Optional. Deprecated.  Use
-            /// [PageRef.bounding_poly][google.cloud.documentai.v1beta3.Document.PageAnchor.PageRef.bounding_poly]
-            /// instead.
+            /// Optional. Deprecated.  Use [PageRef.bounding_poly][google.cloud.documentai.v1beta3.Document.PageAnchor.PageRef.bounding_poly] instead.
             /// </summary>
             [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9446,8 +9862,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int BoundingPolyFieldNumber = 4;
             private global::Google.Cloud.DocumentAI.V1Beta3.BoundingPoly boundingPoly_;
             /// <summary>
-            /// Optional. Identifies the bounding polygon of a layout element on the
-            /// page.
+            /// Optional. Identifies the bounding polygon of a layout element on the page.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9462,8 +9877,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int ConfidenceFieldNumber = 5;
             private float confidence_;
             /// <summary>
-            /// Optional. Confidence of detected page element, if applicable. Range [0,
-            /// 1].
+            /// Optional. Confidence of detected page element, if applicable. Range [0, 1].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9724,45 +10138,31 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// </summary>
                 [pbr::OriginalName("LAYOUT_TYPE_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
-                /// References a
-                /// [Page.blocks][google.cloud.documentai.v1beta3.Document.Page.blocks]
-                /// element.
+                /// References a [Page.blocks][google.cloud.documentai.v1beta3.Document.Page.blocks] element.
                 /// </summary>
                 [pbr::OriginalName("BLOCK")] Block = 1,
                 /// <summary>
-                /// References a
-                /// [Page.paragraphs][google.cloud.documentai.v1beta3.Document.Page.paragraphs]
-                /// element.
+                /// References a [Page.paragraphs][google.cloud.documentai.v1beta3.Document.Page.paragraphs] element.
                 /// </summary>
                 [pbr::OriginalName("PARAGRAPH")] Paragraph = 2,
                 /// <summary>
-                /// References a
-                /// [Page.lines][google.cloud.documentai.v1beta3.Document.Page.lines]
-                /// element.
+                /// References a [Page.lines][google.cloud.documentai.v1beta3.Document.Page.lines] element.
                 /// </summary>
                 [pbr::OriginalName("LINE")] Line = 3,
                 /// <summary>
-                /// References a
-                /// [Page.tokens][google.cloud.documentai.v1beta3.Document.Page.tokens]
-                /// element.
+                /// References a [Page.tokens][google.cloud.documentai.v1beta3.Document.Page.tokens] element.
                 /// </summary>
                 [pbr::OriginalName("TOKEN")] Token = 4,
                 /// <summary>
-                /// References a
-                /// [Page.visual_elements][google.cloud.documentai.v1beta3.Document.Page.visual_elements]
-                /// element.
+                /// References a [Page.visual_elements][google.cloud.documentai.v1beta3.Document.Page.visual_elements] element.
                 /// </summary>
                 [pbr::OriginalName("VISUAL_ELEMENT")] VisualElement = 5,
                 /// <summary>
-                /// Refrrences a
-                /// [Page.tables][google.cloud.documentai.v1beta3.Document.Page.tables]
-                /// element.
+                /// Refrrences a [Page.tables][google.cloud.documentai.v1beta3.Document.Page.tables] element.
                 /// </summary>
                 [pbr::OriginalName("TABLE")] Table = 6,
                 /// <summary>
-                /// References a
-                /// [Page.form_fields][google.cloud.documentai.v1beta3.Document.Page.form_fields]
-                /// element.
+                /// References a [Page.form_fields][google.cloud.documentai.v1beta3.Document.Page.form_fields] element.
                 /// </summary>
                 [pbr::OriginalName("FORM_FIELD")] FormField = 7,
               }
@@ -10445,6 +10845,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public Revision(Revision other) : this() {
           id_ = other.id_;
           parent_ = other.parent_.Clone();
+          parentIds_ = other.parentIds_.Clone();
           createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
           humanReview_ = other.humanReview_ != null ? other.humanReview_.Clone() : null;
           switch (other.SourceCase) {
@@ -10522,10 +10923,27 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// more parent (when documents are merged.)  This field represents the
         /// index into the `revisions` field.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<int> Parent {
           get { return parent_; }
+        }
+
+        /// <summary>Field number for the "parent_ids" field.</summary>
+        public const int ParentIdsFieldNumber = 7;
+        private static readonly pb::FieldCodec<string> _repeated_parentIds_codec
+            = pb::FieldCodec.ForString(58);
+        private readonly pbc::RepeatedField<string> parentIds_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The revisions that this revision is based on. Must include all the ids
+        /// that have anything to do with this revision - eg. there are
+        /// `provenance.parent.revision` fields that index into this field.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ParentIds {
+          get { return parentIds_; }
         }
 
         /// <summary>Field number for the "create_time" field.</summary>
@@ -10598,6 +11016,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (Processor != other.Processor) return false;
           if (Id != other.Id) return false;
           if(!parent_.Equals(other.parent_)) return false;
+          if(!parentIds_.Equals(other.parentIds_)) return false;
           if (!object.Equals(CreateTime, other.CreateTime)) return false;
           if (!object.Equals(HumanReview, other.HumanReview)) return false;
           if (SourceCase != other.SourceCase) return false;
@@ -10612,6 +11031,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (sourceCase_ == SourceOneofCase.Processor) hash ^= Processor.GetHashCode();
           if (Id.Length != 0) hash ^= Id.GetHashCode();
           hash ^= parent_.GetHashCode();
+          hash ^= parentIds_.GetHashCode();
           if (createTime_ != null) hash ^= CreateTime.GetHashCode();
           if (humanReview_ != null) hash ^= HumanReview.GetHashCode();
           hash ^= (int) sourceCase_;
@@ -10654,6 +11074,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(50);
             output.WriteMessage(HumanReview);
           }
+          parentIds_.WriteTo(output, _repeated_parentIds_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -10685,6 +11106,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(50);
             output.WriteMessage(HumanReview);
           }
+          parentIds_.WriteTo(ref output, _repeated_parentIds_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -10705,6 +11127,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
           }
           size += parent_.CalculateSize(_repeated_parent_codec);
+          size += parentIds_.CalculateSize(_repeated_parentIds_codec);
           if (createTime_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
           }
@@ -10727,6 +11150,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             Id = other.Id;
           }
           parent_.Add(other.parent_);
+          parentIds_.Add(other.parentIds_);
           if (other.createTime_ != null) {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -10794,6 +11218,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 input.ReadMessage(HumanReview);
                 break;
               }
+              case 58: {
+                parentIds_.AddEntriesFrom(input, _repeated_parentIds_codec);
+                break;
+              }
             }
           }
         #endif
@@ -10838,6 +11266,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   HumanReview = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview();
                 }
                 input.ReadMessage(HumanReview);
+                break;
+              }
+              case 58: {
+                parentIds_.AddEntriesFrom(ref input, _repeated_parentIds_codec);
                 break;
               }
             }
@@ -11145,11 +11577,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Provenance of the correction.
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1beta3.Document.text].  There
-        /// can only be a single `TextAnchor.text_segments` element.  If the start
-        /// and end index of the text segment are the same, the text change is
-        /// inserted before that index.
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta3.Document.text].  There can only be a
+        /// single `TextAnchor.text_segments` element.  If the start and
+        /// end index of the text segment are the same, the text change is inserted
+        /// before that index.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
