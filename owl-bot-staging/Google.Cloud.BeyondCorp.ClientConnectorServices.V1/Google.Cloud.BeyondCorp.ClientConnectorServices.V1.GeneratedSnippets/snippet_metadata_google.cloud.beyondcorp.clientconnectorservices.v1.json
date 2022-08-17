@@ -1,0 +1,738 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.beyondcorp.clientconnectorservices.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_sync",
+      "title": "ListClientConnectorServicesRequestObject",
+      "description": "Snippet for ListClientConnectorServices",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServices",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_async",
+      "title": "ListClientConnectorServicesRequestObjectAsync",
+      "description": "Snippet for ListClientConnectorServicesAsync",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServicesAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_sync_flattened",
+      "title": "ListClientConnectorServices",
+      "description": "Snippet for ListClientConnectorServices",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServices",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_async_flattened",
+      "title": "ListClientConnectorServicesAsync",
+      "description": "Snippet for ListClientConnectorServicesAsync",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServicesAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_sync_flattened_resourceNames",
+      "title": "ListClientConnectorServicesResourceNames",
+      "description": "Snippet for ListClientConnectorServices",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServices",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_ListClientConnectorServices_async_flattened_resourceNames",
+      "title": "ListClientConnectorServicesResourceNamesAsync",
+      "description": "Snippet for ListClientConnectorServicesAsync",
+      "file": "ClientConnectorServicesServiceClient.ListClientConnectorServicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientConnectorServicesAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "ListClientConnectorServices",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.ListClientConnectorServices",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_sync",
+      "title": "GetClientConnectorServiceRequestObject",
+      "description": "Snippet for GetClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_async",
+      "title": "GetClientConnectorServiceRequestObjectAsync",
+      "description": "Snippet for GetClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_sync_flattened",
+      "title": "GetClientConnectorService",
+      "description": "Snippet for GetClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_async_flattened",
+      "title": "GetClientConnectorServiceAsync",
+      "description": "Snippet for GetClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_sync_flattened_resourceNames",
+      "title": "GetClientConnectorServiceResourceNames",
+      "description": "Snippet for GetClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_GetClientConnectorService_async_flattened_resourceNames",
+      "title": "GetClientConnectorServiceResourceNamesAsync",
+      "description": "Snippet for GetClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.GetClientConnectorServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "GetClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.GetClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_sync",
+      "title": "CreateClientConnectorServiceRequestObject",
+      "description": "Snippet for CreateClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_async",
+      "title": "CreateClientConnectorServiceRequestObjectAsync",
+      "description": "Snippet for CreateClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_sync_flattened",
+      "title": "CreateClientConnectorService",
+      "description": "Snippet for CreateClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_async_flattened",
+      "title": "CreateClientConnectorServiceAsync",
+      "description": "Snippet for CreateClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_sync_flattened_resourceNames",
+      "title": "CreateClientConnectorServiceResourceNames",
+      "description": "Snippet for CreateClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_CreateClientConnectorService_async_flattened_resourceNames",
+      "title": "CreateClientConnectorServiceResourceNamesAsync",
+      "description": "Snippet for CreateClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.CreateClientConnectorServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.CreateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_UpdateClientConnectorService_sync",
+      "title": "UpdateClientConnectorServiceRequestObject",
+      "description": "Snippet for UpdateClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.UpdateClientConnectorServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.UpdateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_UpdateClientConnectorService_async",
+      "title": "UpdateClientConnectorServiceRequestObjectAsync",
+      "description": "Snippet for UpdateClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.UpdateClientConnectorServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.UpdateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_UpdateClientConnectorService_sync_flattened",
+      "title": "UpdateClientConnectorService",
+      "description": "Snippet for UpdateClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.UpdateClientConnectorServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.UpdateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_UpdateClientConnectorService_async_flattened",
+      "title": "UpdateClientConnectorServiceAsync",
+      "description": "Snippet for UpdateClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.UpdateClientConnectorServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.UpdateClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_sync",
+      "title": "DeleteClientConnectorServiceRequestObject",
+      "description": "Snippet for DeleteClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_async",
+      "title": "DeleteClientConnectorServiceRequestObjectAsync",
+      "description": "Snippet for DeleteClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_sync_flattened",
+      "title": "DeleteClientConnectorService",
+      "description": "Snippet for DeleteClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_async_flattened",
+      "title": "DeleteClientConnectorServiceAsync",
+      "description": "Snippet for DeleteClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_sync_flattened_resourceNames",
+      "title": "DeleteClientConnectorServiceResourceNames",
+      "description": "Snippet for DeleteClientConnectorService",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorService",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_async_flattened_resourceNames",
+      "title": "DeleteClientConnectorServiceResourceNamesAsync",
+      "description": "Snippet for DeleteClientConnectorServiceAsync",
+      "file": "ClientConnectorServicesServiceClient.DeleteClientConnectorServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientConnectorServiceAsync",
+        "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
+        "client": {
+          "shortName": "ClientConnectorServicesServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteClientConnectorService",
+          "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService.DeleteClientConnectorService",
+          "service": {
+            "shortName": "ClientConnectorServicesService",
+            "fullName": "google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorServicesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    }
+  ]
+}

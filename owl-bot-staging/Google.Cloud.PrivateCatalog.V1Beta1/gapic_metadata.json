@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.privatecatalog.v1beta1",
+  "libraryPackage": "Google.Cloud.PrivateCatalog.V1Beta1",
+  "services": {
+    "PrivateCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PrivateCatalogClient",
+          "rpcs": {
+            "SearchCatalogs": {
+              "methods": [
+                "SearchCatalogs",
+                "SearchCatalogsAsync"
+              ]
+            },
+            "SearchProducts": {
+              "methods": [
+                "SearchProducts",
+                "SearchProductsAsync"
+              ]
+            },
+            "SearchVersions": {
+              "methods": [
+                "SearchVersions",
+                "SearchVersionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

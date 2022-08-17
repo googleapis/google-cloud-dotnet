@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.clouderrorreporting.v1beta1",
+  "libraryPackage": "Google.Cloud.ErrorReporting.V1Beta1",
+  "services": {
+    "ErrorGroupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ErrorGroupServiceClient",
+          "rpcs": {
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ErrorStatsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ErrorStatsServiceClient",
+          "rpcs": {
+            "DeleteEvents": {
+              "methods": [
+                "DeleteEvents",
+                "DeleteEventsAsync"
+              ]
+            },
+            "ListEvents": {
+              "methods": [
+                "ListEvents",
+                "ListEventsAsync"
+              ]
+            },
+            "ListGroupStats": {
+              "methods": [
+                "ListGroupStats",
+                "ListGroupStatsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReportErrorsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReportErrorsServiceClient",
+          "rpcs": {
+            "ReportErrorEvent": {
+              "methods": [
+                "ReportErrorEvent",
+                "ReportErrorEventAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.api.serviceusage.v1",
+  "libraryPackage": "Google.Cloud.ServiceUsage.V1",
+  "services": {
+    "ServiceUsage": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServiceUsageClient",
+          "rpcs": {
+            "BatchEnableServices": {
+              "methods": [
+                "BatchEnableServices",
+                "BatchEnableServicesAsync"
+              ]
+            },
+            "BatchGetServices": {
+              "methods": [
+                "BatchGetServices",
+                "BatchGetServicesAsync"
+              ]
+            },
+            "DisableService": {
+              "methods": [
+                "DisableService",
+                "DisableServiceAsync"
+              ]
+            },
+            "EnableService": {
+              "methods": [
+                "EnableService",
+                "EnableServiceAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
