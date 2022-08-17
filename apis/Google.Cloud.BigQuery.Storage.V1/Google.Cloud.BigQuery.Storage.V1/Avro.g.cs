@@ -27,17 +27,19 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "Citnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hdnJvLnByb3Rv",
             "EiBnb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MSIcCgpBdnJvU2No",
             "ZW1hEg4KBnNjaGVtYRgBIAEoCSJBCghBdnJvUm93cxIeChZzZXJpYWxpemVk",
-            "X2JpbmFyeV9yb3dzGAEgASgMEhUKCXJvd19jb3VudBgCIAEoA0ICGAFCwgEK",
-            "JGNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MUIJQXZyb1By",
-            "b3RvUAFaR2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNs",
-            "b3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVl",
-            "cnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "X2JpbmFyeV9yb3dzGAEgASgMEhUKCXJvd19jb3VudBgCIAEoA0ICGAEiQQoY",
+            "QXZyb1NlcmlhbGl6YXRpb25PcHRpb25zEiUKHWVuYWJsZV9kaXNwbGF5X25h",
+            "bWVfYXR0cmlidXRlGAEgASgIQsIBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnN0b3JhZ2UudjFCCUF2cm9Qcm90b1ABWkdnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2Uv",
+            "djE7c3RvcmFnZaoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYx",
+            "ygIgR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSchema), global::Google.Cloud.BigQuery.Storage.V1.AvroSchema.Parser, new[]{ "Schema" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroRows), global::Google.Cloud.BigQuery.Storage.V1.AvroRows.Parser, new[]{ "SerializedBinaryRows", "RowCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroRows), global::Google.Cloud.BigQuery.Storage.V1.AvroRows.Parser, new[]{ "SerializedBinaryRows", "RowCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions), global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Parser, new[]{ "EnableDisplayNameAttribute" }, null, null, null, null)
           }));
     }
     #endregion
@@ -468,6 +470,210 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 16: {
             RowCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Contains options specific to Avro Serialization.
+  /// </summary>
+  public sealed partial class AvroSerializationOptions : pb::IMessage<AvroSerializationOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AvroSerializationOptions> _parser = new pb::MessageParser<AvroSerializationOptions>(() => new AvroSerializationOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AvroSerializationOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AvroSerializationOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AvroSerializationOptions(AvroSerializationOptions other) : this() {
+      enableDisplayNameAttribute_ = other.enableDisplayNameAttribute_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AvroSerializationOptions Clone() {
+      return new AvroSerializationOptions(this);
+    }
+
+    /// <summary>Field number for the "enable_display_name_attribute" field.</summary>
+    public const int EnableDisplayNameAttributeFieldNumber = 1;
+    private bool enableDisplayNameAttribute_;
+    /// <summary>
+    /// Enable displayName attribute in Avro schema.
+    ///
+    /// The Avro specification requires field names to be alphanumeric.  By
+    /// default, in cases when column names do not conform to these requirements
+    /// (e.g. non-ascii unicode codepoints) and Avro is requested as an output
+    /// format, the CreateReadSession call will fail.
+    ///
+    /// Setting this field to true, populates avro field names with a placeholder
+    /// value and populates a "displayName" attribute for every avro field with the
+    /// original column name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableDisplayNameAttribute {
+      get { return enableDisplayNameAttribute_; }
+      set {
+        enableDisplayNameAttribute_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AvroSerializationOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AvroSerializationOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnableDisplayNameAttribute != other.EnableDisplayNameAttribute) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnableDisplayNameAttribute != false) hash ^= EnableDisplayNameAttribute.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EnableDisplayNameAttribute != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableDisplayNameAttribute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EnableDisplayNameAttribute != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableDisplayNameAttribute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnableDisplayNameAttribute != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AvroSerializationOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnableDisplayNameAttribute != false) {
+        EnableDisplayNameAttribute = other.EnableDisplayNameAttribute;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnableDisplayNameAttribute = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EnableDisplayNameAttribute = input.ReadBool();
             break;
           }
         }
