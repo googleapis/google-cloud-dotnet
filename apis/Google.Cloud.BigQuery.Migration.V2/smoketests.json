@@ -3,7 +3,7 @@
     "method": "ListMigrationWorkflows",
     "client": "MigrationServiceClient",
     "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+      "parent": "projects/${PROJECT_ID}/locations/us"
     }
   }
 ]
