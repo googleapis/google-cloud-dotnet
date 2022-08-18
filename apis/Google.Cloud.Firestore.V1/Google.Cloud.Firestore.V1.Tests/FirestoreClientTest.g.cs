@@ -16,7 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
@@ -35,7 +34,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void GetDocumentRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -67,7 +65,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task GetDocumentRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -101,7 +98,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void UpdateDocumentRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
@@ -133,7 +129,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task UpdateDocumentRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
@@ -167,7 +162,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void UpdateDocument()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
@@ -197,7 +191,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task UpdateDocumentAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
@@ -229,7 +222,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void DeleteDocumentRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -246,7 +238,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task DeleteDocumentRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -264,7 +255,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void DeleteDocument()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -280,7 +270,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task DeleteDocumentAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
                 Name = "projects/test/databases/test/documents/name1c9368b0",
@@ -297,7 +286,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void BeginTransactionRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -318,7 +306,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task BeginTransactionRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -341,7 +328,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void BeginTransaction()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -361,7 +347,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task BeginTransactionAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -383,7 +368,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void CommitRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CommitRequest request = new CommitRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -406,7 +390,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task CommitRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CommitRequest request = new CommitRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -431,7 +414,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void Commit()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CommitRequest request = new CommitRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -453,7 +435,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task CommitAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CommitRequest request = new CommitRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -477,7 +458,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void RollbackRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RollbackRequest request = new RollbackRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -494,7 +474,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task RollbackRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RollbackRequest request = new RollbackRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -512,7 +491,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void Rollback()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RollbackRequest request = new RollbackRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -529,7 +507,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task RollbackAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RollbackRequest request = new RollbackRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -547,7 +524,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void BatchWriteRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchWriteRequest request = new BatchWriteRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -576,7 +552,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task BatchWriteRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchWriteRequest request = new BatchWriteRequest
             {
                 Database = "projects/test/databases/databased8eee011",
@@ -607,7 +582,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public void CreateDocumentRequestObject()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDocumentRequest request = new CreateDocumentRequest
             {
                 Parent = "projects/test/databases/test/documents/parent7858e4d0",
@@ -640,7 +614,6 @@ namespace Google.Cloud.Firestore.V1.Tests
         public async stt::Task CreateDocumentRequestObjectAsync()
         {
             moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDocumentRequest request = new CreateDocumentRequest
             {
                 Parent = "projects/test/databases/test/documents/parent7858e4d0",
