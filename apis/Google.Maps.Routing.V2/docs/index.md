@@ -1,6 +1,7 @@
 {{title}}
 
-{{description}}
+`Google.Maps.Routing.V2` is a.NET client library for the Maps
+Routing API, which is currently in private preview.
 
 {{version}}
 
