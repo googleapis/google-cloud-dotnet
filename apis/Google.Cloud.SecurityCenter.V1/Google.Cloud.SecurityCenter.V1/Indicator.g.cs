@@ -25,31 +25,31 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvaW5kaWNhdG9yLnBy",
-            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEigwUKCUluZGlj",
+            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEikQUKCUluZGlj",
             "YXRvchIUCgxpcF9hZGRyZXNzZXMYASADKAkSDwoHZG9tYWlucxgCIAMoCRJO",
             "CgpzaWduYXR1cmVzGAMgAygLMjouZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
-            "dGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlGv4DChBQcm9jZXNz",
-            "U2lnbmF0dXJlEm8KFW1lbW9yeV9oYXNoX3NpZ25hdHVyZRgGIAEoCzJOLmdv",
-            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5JbmRpY2F0b3IuUHJvY2Vz",
-            "c1NpZ25hdHVyZS5NZW1vcnlIYXNoU2lnbmF0dXJlSAASawoTeWFyYV9ydWxl",
-            "X3NpZ25hdHVyZRgHIAEoCzJMLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
-            "ci52MS5JbmRpY2F0b3IuUHJvY2Vzc1NpZ25hdHVyZS5ZYXJhUnVsZVNpZ25h",
-            "dHVyZUgAGtYBChNNZW1vcnlIYXNoU2lnbmF0dXJlEhUKDWJpbmFyeV9mYW1p",
-            "bHkYASABKAkSbAoKZGV0ZWN0aW9ucxgEIAMoCzJYLmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eWNlbnRlci52MS5JbmRpY2F0b3IuUHJvY2Vzc1NpZ25hdHVyZS5N",
-            "ZW1vcnlIYXNoU2lnbmF0dXJlLkRldGVjdGlvbho6CglEZXRlY3Rpb24SDgoG",
-            "YmluYXJ5GAIgASgJEh0KFXBlcmNlbnRfcGFnZXNfbWF0Y2hlZBgDIAEoARom",
-            "ChFZYXJhUnVsZVNpZ25hdHVyZRIRCgl5YXJhX3J1bGUYBSABKAlCCwoJc2ln",
-            "bmF0dXJlQuoBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "Qg5JbmRpY2F0b3JQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5",
-            "Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29v",
-            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
-            "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "dGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlEgwKBHVyaXMYBCAD",
+            "KAka/gMKEFByb2Nlc3NTaWduYXR1cmUSbwoVbWVtb3J5X2hhc2hfc2lnbmF0",
+            "dXJlGAYgASgLMk4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLklu",
+            "ZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlLk1lbW9yeUhhc2hTaWduYXR1cmVI",
+            "ABJrChN5YXJhX3J1bGVfc2lnbmF0dXJlGAcgASgLMkwuZ29vZ2xlLmNsb3Vk",
+            "LnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJl",
+            "LllhcmFSdWxlU2lnbmF0dXJlSAAa1gEKE01lbW9yeUhhc2hTaWduYXR1cmUS",
+            "FQoNYmluYXJ5X2ZhbWlseRgBIAEoCRJsCgpkZXRlY3Rpb25zGAQgAygLMlgu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvci5Qcm9j",
+            "ZXNzU2lnbmF0dXJlLk1lbW9yeUhhc2hTaWduYXR1cmUuRGV0ZWN0aW9uGjoK",
+            "CURldGVjdGlvbhIOCgZiaW5hcnkYAiABKAkSHQoVcGVyY2VudF9wYWdlc19t",
+            "YXRjaGVkGAMgASgBGiYKEVlhcmFSdWxlU2lnbmF0dXJlEhEKCXlhcmFfcnVs",
+            "ZRgFIAEoCUILCglzaWduYXR1cmVC6gEKImNvbS5nb29nbGUuY2xvdWQuc2Vj",
+            "dXJpdHljZW50ZXIudjFCDkluZGljYXRvclByb3RvUAFaTGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50",
+            "ZXIvdjE7c2VjdXJpdHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlD",
+            "ZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFH",
+            "b29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains", "Signatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser, new[]{ "MemoryHashSignature", "YaraRuleSignature" }, new[]{ "Signature" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Parser, new[]{ "BinaryFamily", "Detections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser, new[]{ "Binary", "PercentPagesMatched" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains", "Signatures", "Uris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser, new[]{ "MemoryHashSignature", "YaraRuleSignature" }, new[]{ "Signature" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Parser, new[]{ "BinaryFamily", "Detections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser, new[]{ "Binary", "PercentPagesMatched" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature.Parser, new[]{ "YaraRule" }, null, null, null, null)})})
           }));
     }
@@ -100,6 +100,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       ipAddresses_ = other.ipAddresses_.Clone();
       domains_ = other.domains_.Clone();
       signatures_ = other.signatures_.Clone();
+      uris_ = other.uris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -152,6 +153,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return signatures_; }
     }
 
+    /// <summary>Field number for the "uris" field.</summary>
+    public const int UrisFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_uris_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> uris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of URIs associated to the Findings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Uris {
+      get { return uris_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -170,6 +185,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if(!ipAddresses_.Equals(other.ipAddresses_)) return false;
       if(!domains_.Equals(other.domains_)) return false;
       if(!signatures_.Equals(other.signatures_)) return false;
+      if(!uris_.Equals(other.uris_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -180,6 +196,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       hash ^= ipAddresses_.GetHashCode();
       hash ^= domains_.GetHashCode();
       hash ^= signatures_.GetHashCode();
+      hash ^= uris_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -201,6 +218,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       ipAddresses_.WriteTo(output, _repeated_ipAddresses_codec);
       domains_.WriteTo(output, _repeated_domains_codec);
       signatures_.WriteTo(output, _repeated_signatures_codec);
+      uris_.WriteTo(output, _repeated_uris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -214,6 +232,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       ipAddresses_.WriteTo(ref output, _repeated_ipAddresses_codec);
       domains_.WriteTo(ref output, _repeated_domains_codec);
       signatures_.WriteTo(ref output, _repeated_signatures_codec);
+      uris_.WriteTo(ref output, _repeated_uris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -227,6 +246,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       size += ipAddresses_.CalculateSize(_repeated_ipAddresses_codec);
       size += domains_.CalculateSize(_repeated_domains_codec);
       size += signatures_.CalculateSize(_repeated_signatures_codec);
+      size += uris_.CalculateSize(_repeated_uris_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -242,6 +262,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       ipAddresses_.Add(other.ipAddresses_);
       domains_.Add(other.domains_);
       signatures_.Add(other.signatures_);
+      uris_.Add(other.uris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -269,6 +290,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             signatures_.AddEntriesFrom(input, _repeated_signatures_codec);
             break;
           }
+          case 34: {
+            uris_.AddEntriesFrom(input, _repeated_uris_codec);
+            break;
+          }
         }
       }
     #endif
@@ -294,6 +319,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 26: {
             signatures_.AddEntriesFrom(ref input, _repeated_signatures_codec);
+            break;
+          }
+          case 34: {
+            uris_.AddEntriesFrom(ref input, _repeated_uris_codec);
             break;
           }
         }
