@@ -26,18 +26,17 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
           string.Concat(
             "CkBnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvc2V0dGluZ3MvdjFiZXRh",
             "MS9zaW5rX3NldHRpbmdzLnByb3RvEixnb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIuc2V0dGluZ3MudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byIsCgxTaW5rU2V0dGluZ3MSHAoUbG9nZ2luZ19zaW5rX3Byb2pl",
-            "Y3QYASABKAlCqQIKMGNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
-            "c2V0dGluZ3MudjFiZXRhMUIJU2lua1Byb3RvUAFaVGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIv",
-            "c2V0dGluZ3MvdjFiZXRhMTtzZXR0aW5nc/gBAaoCLEdvb2dsZS5DbG91ZC5T",
-            "ZWN1cml0eUNlbnRlci5TZXR0aW5ncy5WMUJldGExygIsR29vZ2xlXENsb3Vk",
-            "XFNlY3VyaXR5Q2VudGVyXFNldHRpbmdzXFYxYmV0YTHqAjBHb29nbGU6OkNs",
-            "b3VkOjpTZWN1cml0eUNlbnRlcjo6U2V0dGluZ3M6OlYxYmV0YTFiBnByb3Rv",
-            "Mw=="));
+            "ZW50ZXIuc2V0dGluZ3MudjFiZXRhMSIsCgxTaW5rU2V0dGluZ3MSHAoUbG9n",
+            "Z2luZ19zaW5rX3Byb2plY3QYASABKAlCqQIKMGNvbS5nb29nbGUuY2xvdWQu",
+            "c2VjdXJpdHljZW50ZXIuc2V0dGluZ3MudjFiZXRhMUIJU2lua1Byb3RvUAFa",
+            "VGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "c2VjdXJpdHljZW50ZXIvc2V0dGluZ3MvdjFiZXRhMTtzZXR0aW5nc/gBAaoC",
+            "LEdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5TZXR0aW5ncy5WMUJldGEx",
+            "ygIsR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFNldHRpbmdzXFYxYmV0",
+            "YTHqAjBHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6U2V0dGluZ3M6",
+            "OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.SinkSettings), global::Google.Cloud.SecurityCenter.Settings.V1Beta1.SinkSettings.Parser, new[]{ "LoggingSinkProject" }, null, null, null, null)
           }));

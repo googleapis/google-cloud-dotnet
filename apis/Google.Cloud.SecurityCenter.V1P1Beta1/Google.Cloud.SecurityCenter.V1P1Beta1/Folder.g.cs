@@ -26,17 +26,16 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL2ZvbGRl",
             "ci5wcm90bxIlZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxcDFiZXRh",
-            "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byJHCgZGb2xkZXISFwoP",
-            "cmVzb3VyY2VfZm9sZGVyGAEgASgJEiQKHHJlc291cmNlX2ZvbGRlcl9kaXNw",
-            "bGF5X25hbWUYAiABKAlCigIKKWNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjFwMWJldGExQgtGb2xkZXJQcm90b1ABWlNnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
-            "L3YxcDFiZXRhMTtzZWN1cml0eWNlbnRlcqoCJUdvb2dsZS5DbG91ZC5TZWN1",
-            "cml0eUNlbnRlci5WMVAxQmV0YTHKAiVHb29nbGVcQ2xvdWRcU2VjdXJpdHlD",
-            "ZW50ZXJcVjFwMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50",
-            "ZXI6OlYxcDFCZXRhMWIGcHJvdG8z"));
+            "MSJHCgZGb2xkZXISFwoPcmVzb3VyY2VfZm9sZGVyGAEgASgJEiQKHHJlc291",
+            "cmNlX2ZvbGRlcl9kaXNwbGF5X25hbWUYAiABKAlCigIKKWNvbS5nb29nbGUu",
+            "Y2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExQgtGb2xkZXJQcm90b1AB",
+            "WlNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L3NlY3VyaXR5Y2VudGVyL3YxcDFiZXRhMTtzZWN1cml0eWNlbnRlcqoCJUdv",
+            "b2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMVAxQmV0YTHKAiVHb29nbGVc",
+            "Q2xvdWRcU2VjdXJpdHlDZW50ZXJcVjFwMWJldGEx6gIoR29vZ2xlOjpDbG91",
+            "ZDo6U2VjdXJpdHlDZW50ZXI6OlYxcDFCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Folder), global::Google.Cloud.SecurityCenter.V1P1Beta1.Folder.Parser, new[]{ "ResourceFolder", "ResourceFolderDisplayName" }, null, null, null, null)
           }));
