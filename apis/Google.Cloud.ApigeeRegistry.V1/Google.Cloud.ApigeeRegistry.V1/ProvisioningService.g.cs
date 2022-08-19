@@ -1283,7 +1283,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
     private string name_ = "";
     /// <summary>
     /// Format: `projects/*/locations/*/instance`.
-    /// Currently only locations/global is supported.
+    /// Currently only `locations/global` is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

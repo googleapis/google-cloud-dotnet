@@ -748,6 +748,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Tests
             DeleteApiRequest request = new DeleteApiRequest
             {
                 ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                Force = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteApi(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -765,6 +766,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Tests
             DeleteApiRequest request = new DeleteApiRequest
             {
                 ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                Force = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteApiAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1527,6 +1529,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Tests
             DeleteApiVersionRequest request = new DeleteApiVersionRequest
             {
                 ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                Force = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteApiVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1544,6 +1547,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Tests
             DeleteApiVersionRequest request = new DeleteApiVersionRequest
             {
                 ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                Force = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteApiVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
