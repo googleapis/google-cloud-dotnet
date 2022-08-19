@@ -453,7 +453,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
     public abstract partial class RegistryBase
     {
       /// <summary>
-      /// ListApis returns matching APIs.
+      /// Returns matching APIs.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -465,7 +465,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetApi returns a specified API.
+      /// Returns a specified API.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -477,7 +477,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// CreateApi creates a specified API.
+      /// Creates a specified API.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -489,7 +489,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// UpdateApi can be used to modify a specified API.
+      /// Used to modify a specified API.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -501,7 +501,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApi removes a specified API and all of the resources that it
+      /// Removes a specified API and all of the resources that it
       /// owns.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -514,7 +514,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApiVersions returns matching versions.
+      /// Returns matching versions.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -526,7 +526,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetApiVersion returns a specified version.
+      /// Returns a specified version.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -538,7 +538,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// CreateApiVersion creates a specified version.
+      /// Creates a specified version.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -550,7 +550,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// UpdateApiVersion can be used to modify a specified version.
+      /// Used to modify a specified version.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -562,7 +562,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApiVersion removes a specified version and all of the resources that
+      /// Removes a specified version and all of the resources that
       /// it owns.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -575,7 +575,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApiSpecs returns matching specs.
+      /// Returns matching specs.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -587,7 +587,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetApiSpec returns a specified spec.
+      /// Returns a specified spec.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -599,7 +599,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetApiSpecContents returns the contents of a specified spec.
+      /// Returns the contents of a specified spec.
       /// If specs are stored with GZip compression, the default behavior
       /// is to return the spec uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -614,7 +614,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// CreateApiSpec creates a specified spec.
+      /// Creates a specified spec.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -626,7 +626,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// UpdateApiSpec can be used to modify a specified spec.
+      /// Used to modify a specified spec.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -638,8 +638,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApiSpec removes a specified spec, all revisions, and all child
-      /// resources (e.g. artifacts).
+      /// Removes a specified spec, all revisions, and all child
+      /// resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -651,7 +651,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// TagApiSpecRevision adds a tag to a specified revision of a spec.
+      /// Adds a tag to a specified revision of a spec.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -663,7 +663,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApiSpecRevisions lists all revisions of a spec.
+      /// Lists all revisions of a spec.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -676,7 +676,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// RollbackApiSpec sets the current revision to a specified prior revision.
+      /// Sets the current revision to a specified prior revision.
       /// Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -689,7 +689,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApiSpecRevision deletes a revision of a spec.
+      /// Deletes a revision of a spec.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -701,7 +701,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApiDeployments returns matching deployments.
+      /// Returns matching deployments.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -713,7 +713,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetApiDeployment returns a specified deployment.
+      /// Returns a specified deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -725,7 +725,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// CreateApiDeployment creates a specified deployment.
+      /// Creates a specified deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -737,7 +737,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// UpdateApiDeployment can be used to modify a specified deployment.
+      /// Used to modify a specified deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -749,8 +749,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApiDeployment removes a specified deployment, all revisions, and all
-      /// child resources (e.g. artifacts).
+      /// Removes a specified deployment, all revisions, and all
+      /// child resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -762,7 +762,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// TagApiDeploymentRevision adds a tag to a specified revision of a
+      /// Adds a tag to a specified revision of a
       /// deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -775,7 +775,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApiDeploymentRevisions lists all revisions of a deployment.
+      /// Lists all revisions of a deployment.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -788,7 +788,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// RollbackApiDeployment sets the current revision to a specified prior
+      /// Sets the current revision to a specified prior
       /// revision. Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -801,7 +801,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteApiDeploymentRevision deletes a revision of a deployment.
+      /// Deletes a revision of a deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -813,7 +813,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListArtifacts returns matching artifacts.
+      /// Returns matching artifacts.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -825,7 +825,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetArtifact returns a specified artifact.
+      /// Returns a specified artifact.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -837,7 +837,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// GetArtifactContents returns the contents of a specified artifact.
+      /// Returns the contents of a specified artifact.
       /// If artifacts are stored with GZip compression, the default behavior
       /// is to return the artifact uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -852,7 +852,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// CreateArtifact creates a specified artifact.
+      /// Creates a specified artifact.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -864,7 +864,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ReplaceArtifact can be used to replace a specified artifact.
+      /// Used to replace a specified artifact.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -876,7 +876,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// DeleteArtifact removes a specified artifact.
+      /// Removes a specified artifact.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -917,7 +917,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       }
 
       /// <summary>
-      /// ListApis returns matching APIs.
+      /// Returns matching APIs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -930,7 +930,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApis returns matching APIs.
+      /// Returns matching APIs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -941,7 +941,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApis, null, options, request);
       }
       /// <summary>
-      /// ListApis returns matching APIs.
+      /// Returns matching APIs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -954,7 +954,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApis returns matching APIs.
+      /// Returns matching APIs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -965,7 +965,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApis, null, options, request);
       }
       /// <summary>
-      /// GetApi returns a specified API.
+      /// Returns a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -978,7 +978,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApi returns a specified API.
+      /// Returns a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -989,7 +989,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApi, null, options, request);
       }
       /// <summary>
-      /// GetApi returns a specified API.
+      /// Returns a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1002,7 +1002,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApi returns a specified API.
+      /// Returns a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1013,7 +1013,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApi, null, options, request);
       }
       /// <summary>
-      /// CreateApi creates a specified API.
+      /// Creates a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1026,7 +1026,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApi creates a specified API.
+      /// Creates a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApi, null, options, request);
       }
       /// <summary>
-      /// CreateApi creates a specified API.
+      /// Creates a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApi creates a specified API.
+      /// Creates a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApi, null, options, request);
       }
       /// <summary>
-      /// UpdateApi can be used to modify a specified API.
+      /// Used to modify a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1074,7 +1074,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApi can be used to modify a specified API.
+      /// Used to modify a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApi, null, options, request);
       }
       /// <summary>
-      /// UpdateApi can be used to modify a specified API.
+      /// Used to modify a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1098,7 +1098,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApi can be used to modify a specified API.
+      /// Used to modify a specified API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApi, null, options, request);
       }
       /// <summary>
-      /// DeleteApi removes a specified API and all of the resources that it
+      /// Removes a specified API and all of the resources that it
       /// owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1123,7 +1123,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApi removes a specified API and all of the resources that it
+      /// Removes a specified API and all of the resources that it
       /// owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApi, null, options, request);
       }
       /// <summary>
-      /// DeleteApi removes a specified API and all of the resources that it
+      /// Removes a specified API and all of the resources that it
       /// owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1149,7 +1149,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApi removes a specified API and all of the resources that it
+      /// Removes a specified API and all of the resources that it
       /// owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1161,7 +1161,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApi, null, options, request);
       }
       /// <summary>
-      /// ListApiVersions returns matching versions.
+      /// Returns matching versions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1174,7 +1174,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiVersions returns matching versions.
+      /// Returns matching versions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1185,7 +1185,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiVersions, null, options, request);
       }
       /// <summary>
-      /// ListApiVersions returns matching versions.
+      /// Returns matching versions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1198,7 +1198,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiVersions returns matching versions.
+      /// Returns matching versions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiVersions, null, options, request);
       }
       /// <summary>
-      /// GetApiVersion returns a specified version.
+      /// Returns a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiVersion returns a specified version.
+      /// Returns a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1233,7 +1233,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApiVersion, null, options, request);
       }
       /// <summary>
-      /// GetApiVersion returns a specified version.
+      /// Returns a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiVersion returns a specified version.
+      /// Returns a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1257,7 +1257,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiVersion, null, options, request);
       }
       /// <summary>
-      /// CreateApiVersion creates a specified version.
+      /// Creates a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiVersion creates a specified version.
+      /// Creates a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1281,7 +1281,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApiVersion, null, options, request);
       }
       /// <summary>
-      /// CreateApiVersion creates a specified version.
+      /// Creates a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiVersion creates a specified version.
+      /// Creates a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1305,7 +1305,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApiVersion, null, options, request);
       }
       /// <summary>
-      /// UpdateApiVersion can be used to modify a specified version.
+      /// Used to modify a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1318,7 +1318,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiVersion can be used to modify a specified version.
+      /// Used to modify a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1329,7 +1329,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApiVersion, null, options, request);
       }
       /// <summary>
-      /// UpdateApiVersion can be used to modify a specified version.
+      /// Used to modify a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1342,7 +1342,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiVersion can be used to modify a specified version.
+      /// Used to modify a specified version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApiVersion, null, options, request);
       }
       /// <summary>
-      /// DeleteApiVersion removes a specified version and all of the resources that
+      /// Removes a specified version and all of the resources that
       /// it owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1367,7 +1367,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiVersion removes a specified version and all of the resources that
+      /// Removes a specified version and all of the resources that
       /// it owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiVersion, null, options, request);
       }
       /// <summary>
-      /// DeleteApiVersion removes a specified version and all of the resources that
+      /// Removes a specified version and all of the resources that
       /// it owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1393,7 +1393,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiVersion removes a specified version and all of the resources that
+      /// Removes a specified version and all of the resources that
       /// it owns.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiVersion, null, options, request);
       }
       /// <summary>
-      /// ListApiSpecs returns matching specs.
+      /// Returns matching specs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1418,7 +1418,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiSpecs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiSpecs returns matching specs.
+      /// Returns matching specs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiSpecs, null, options, request);
       }
       /// <summary>
-      /// ListApiSpecs returns matching specs.
+      /// Returns matching specs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1442,7 +1442,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiSpecsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiSpecs returns matching specs.
+      /// Returns matching specs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiSpecs, null, options, request);
       }
       /// <summary>
-      /// GetApiSpec returns a specified spec.
+      /// Returns a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiSpec returns a specified spec.
+      /// Returns a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1477,7 +1477,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApiSpec, null, options, request);
       }
       /// <summary>
-      /// GetApiSpec returns a specified spec.
+      /// Returns a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1490,7 +1490,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiSpec returns a specified spec.
+      /// Returns a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1501,7 +1501,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiSpec, null, options, request);
       }
       /// <summary>
-      /// GetApiSpecContents returns the contents of a specified spec.
+      /// Returns the contents of a specified spec.
       /// If specs are stored with GZip compression, the default behavior
       /// is to return the spec uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -1517,7 +1517,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiSpecContents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiSpecContents returns the contents of a specified spec.
+      /// Returns the contents of a specified spec.
       /// If specs are stored with GZip compression, the default behavior
       /// is to return the spec uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApiSpecContents, null, options, request);
       }
       /// <summary>
-      /// GetApiSpecContents returns the contents of a specified spec.
+      /// Returns the contents of a specified spec.
       /// If specs are stored with GZip compression, the default behavior
       /// is to return the spec uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -1547,7 +1547,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiSpecContentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiSpecContents returns the contents of a specified spec.
+      /// Returns the contents of a specified spec.
       /// If specs are stored with GZip compression, the default behavior
       /// is to return the spec uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -1561,7 +1561,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiSpecContents, null, options, request);
       }
       /// <summary>
-      /// CreateApiSpec creates a specified spec.
+      /// Creates a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1574,7 +1574,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiSpec creates a specified spec.
+      /// Creates a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApiSpec, null, options, request);
       }
       /// <summary>
-      /// CreateApiSpec creates a specified spec.
+      /// Creates a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1598,7 +1598,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiSpec creates a specified spec.
+      /// Creates a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApiSpec, null, options, request);
       }
       /// <summary>
-      /// UpdateApiSpec can be used to modify a specified spec.
+      /// Used to modify a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1622,7 +1622,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiSpec can be used to modify a specified spec.
+      /// Used to modify a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1633,7 +1633,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApiSpec, null, options, request);
       }
       /// <summary>
-      /// UpdateApiSpec can be used to modify a specified spec.
+      /// Used to modify a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiSpec can be used to modify a specified spec.
+      /// Used to modify a specified spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1657,8 +1657,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApiSpec, null, options, request);
       }
       /// <summary>
-      /// DeleteApiSpec removes a specified spec, all revisions, and all child
-      /// resources (e.g. artifacts).
+      /// Removes a specified spec, all revisions, and all child
+      /// resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1671,8 +1671,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiSpec removes a specified spec, all revisions, and all child
-      /// resources (e.g. artifacts).
+      /// Removes a specified spec, all revisions, and all child
+      /// resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1683,8 +1683,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiSpec, null, options, request);
       }
       /// <summary>
-      /// DeleteApiSpec removes a specified spec, all revisions, and all child
-      /// resources (e.g. artifacts).
+      /// Removes a specified spec, all revisions, and all child
+      /// resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1697,8 +1697,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiSpec removes a specified spec, all revisions, and all child
-      /// resources (e.g. artifacts).
+      /// Removes a specified spec, all revisions, and all child
+      /// resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1709,7 +1709,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiSpec, null, options, request);
       }
       /// <summary>
-      /// TagApiSpecRevision adds a tag to a specified revision of a spec.
+      /// Adds a tag to a specified revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1722,7 +1722,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return TagApiSpecRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// TagApiSpecRevision adds a tag to a specified revision of a spec.
+      /// Adds a tag to a specified revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TagApiSpecRevision, null, options, request);
       }
       /// <summary>
-      /// TagApiSpecRevision adds a tag to a specified revision of a spec.
+      /// Adds a tag to a specified revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return TagApiSpecRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// TagApiSpecRevision adds a tag to a specified revision of a spec.
+      /// Adds a tag to a specified revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TagApiSpecRevision, null, options, request);
       }
       /// <summary>
-      /// ListApiSpecRevisions lists all revisions of a spec.
+      /// Lists all revisions of a spec.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiSpecRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiSpecRevisions lists all revisions of a spec.
+      /// Lists all revisions of a spec.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1783,7 +1783,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiSpecRevisions, null, options, request);
       }
       /// <summary>
-      /// ListApiSpecRevisions lists all revisions of a spec.
+      /// Lists all revisions of a spec.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1797,7 +1797,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiSpecRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiSpecRevisions lists all revisions of a spec.
+      /// Lists all revisions of a spec.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1809,7 +1809,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiSpecRevisions, null, options, request);
       }
       /// <summary>
-      /// RollbackApiSpec sets the current revision to a specified prior revision.
+      /// Sets the current revision to a specified prior revision.
       /// Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1823,7 +1823,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return RollbackApiSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RollbackApiSpec sets the current revision to a specified prior revision.
+      /// Sets the current revision to a specified prior revision.
       /// Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1835,7 +1835,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RollbackApiSpec, null, options, request);
       }
       /// <summary>
-      /// RollbackApiSpec sets the current revision to a specified prior revision.
+      /// Sets the current revision to a specified prior revision.
       /// Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1849,7 +1849,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return RollbackApiSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RollbackApiSpec sets the current revision to a specified prior revision.
+      /// Sets the current revision to a specified prior revision.
       /// Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1861,7 +1861,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RollbackApiSpec, null, options, request);
       }
       /// <summary>
-      /// DeleteApiSpecRevision deletes a revision of a spec.
+      /// Deletes a revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1874,7 +1874,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiSpecRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiSpecRevision deletes a revision of a spec.
+      /// Deletes a revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1885,7 +1885,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiSpecRevision, null, options, request);
       }
       /// <summary>
-      /// DeleteApiSpecRevision deletes a revision of a spec.
+      /// Deletes a revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1898,7 +1898,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiSpecRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiSpecRevision deletes a revision of a spec.
+      /// Deletes a revision of a spec.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1909,7 +1909,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiSpecRevision, null, options, request);
       }
       /// <summary>
-      /// ListApiDeployments returns matching deployments.
+      /// Returns matching deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1922,7 +1922,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiDeployments returns matching deployments.
+      /// Returns matching deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1933,7 +1933,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiDeployments, null, options, request);
       }
       /// <summary>
-      /// ListApiDeployments returns matching deployments.
+      /// Returns matching deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1946,7 +1946,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiDeployments returns matching deployments.
+      /// Returns matching deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiDeployments, null, options, request);
       }
       /// <summary>
-      /// GetApiDeployment returns a specified deployment.
+      /// Returns a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1970,7 +1970,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiDeployment returns a specified deployment.
+      /// Returns a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1981,7 +1981,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApiDeployment, null, options, request);
       }
       /// <summary>
-      /// GetApiDeployment returns a specified deployment.
+      /// Returns a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1994,7 +1994,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetApiDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetApiDeployment returns a specified deployment.
+      /// Returns a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2005,7 +2005,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiDeployment, null, options, request);
       }
       /// <summary>
-      /// CreateApiDeployment creates a specified deployment.
+      /// Creates a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2018,7 +2018,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiDeployment creates a specified deployment.
+      /// Creates a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2029,7 +2029,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApiDeployment, null, options, request);
       }
       /// <summary>
-      /// CreateApiDeployment creates a specified deployment.
+      /// Creates a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2042,7 +2042,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateApiDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateApiDeployment creates a specified deployment.
+      /// Creates a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2053,7 +2053,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApiDeployment, null, options, request);
       }
       /// <summary>
-      /// UpdateApiDeployment can be used to modify a specified deployment.
+      /// Used to modify a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2066,7 +2066,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiDeployment can be used to modify a specified deployment.
+      /// Used to modify a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2077,7 +2077,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApiDeployment, null, options, request);
       }
       /// <summary>
-      /// UpdateApiDeployment can be used to modify a specified deployment.
+      /// Used to modify a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2090,7 +2090,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return UpdateApiDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// UpdateApiDeployment can be used to modify a specified deployment.
+      /// Used to modify a specified deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2101,8 +2101,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApiDeployment, null, options, request);
       }
       /// <summary>
-      /// DeleteApiDeployment removes a specified deployment, all revisions, and all
-      /// child resources (e.g. artifacts).
+      /// Removes a specified deployment, all revisions, and all
+      /// child resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2115,8 +2115,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiDeployment removes a specified deployment, all revisions, and all
-      /// child resources (e.g. artifacts).
+      /// Removes a specified deployment, all revisions, and all
+      /// child resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2127,8 +2127,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiDeployment, null, options, request);
       }
       /// <summary>
-      /// DeleteApiDeployment removes a specified deployment, all revisions, and all
-      /// child resources (e.g. artifacts).
+      /// Removes a specified deployment, all revisions, and all
+      /// child resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2141,8 +2141,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiDeployment removes a specified deployment, all revisions, and all
-      /// child resources (e.g. artifacts).
+      /// Removes a specified deployment, all revisions, and all
+      /// child resources (e.g., artifacts).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2153,7 +2153,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiDeployment, null, options, request);
       }
       /// <summary>
-      /// TagApiDeploymentRevision adds a tag to a specified revision of a
+      /// Adds a tag to a specified revision of a
       /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2167,7 +2167,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return TagApiDeploymentRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// TagApiDeploymentRevision adds a tag to a specified revision of a
+      /// Adds a tag to a specified revision of a
       /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2179,7 +2179,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TagApiDeploymentRevision, null, options, request);
       }
       /// <summary>
-      /// TagApiDeploymentRevision adds a tag to a specified revision of a
+      /// Adds a tag to a specified revision of a
       /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2193,7 +2193,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return TagApiDeploymentRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// TagApiDeploymentRevision adds a tag to a specified revision of a
+      /// Adds a tag to a specified revision of a
       /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2205,7 +2205,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TagApiDeploymentRevision, null, options, request);
       }
       /// <summary>
-      /// ListApiDeploymentRevisions lists all revisions of a deployment.
+      /// Lists all revisions of a deployment.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2219,7 +2219,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiDeploymentRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiDeploymentRevisions lists all revisions of a deployment.
+      /// Lists all revisions of a deployment.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2231,7 +2231,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiDeploymentRevisions, null, options, request);
       }
       /// <summary>
-      /// ListApiDeploymentRevisions lists all revisions of a deployment.
+      /// Lists all revisions of a deployment.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2245,7 +2245,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListApiDeploymentRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListApiDeploymentRevisions lists all revisions of a deployment.
+      /// Lists all revisions of a deployment.
       /// Revisions are returned in descending order of revision creation time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2257,7 +2257,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiDeploymentRevisions, null, options, request);
       }
       /// <summary>
-      /// RollbackApiDeployment sets the current revision to a specified prior
+      /// Sets the current revision to a specified prior
       /// revision. Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2271,7 +2271,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return RollbackApiDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RollbackApiDeployment sets the current revision to a specified prior
+      /// Sets the current revision to a specified prior
       /// revision. Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2283,7 +2283,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RollbackApiDeployment, null, options, request);
       }
       /// <summary>
-      /// RollbackApiDeployment sets the current revision to a specified prior
+      /// Sets the current revision to a specified prior
       /// revision. Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2297,7 +2297,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return RollbackApiDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RollbackApiDeployment sets the current revision to a specified prior
+      /// Sets the current revision to a specified prior
       /// revision. Note that this creates a new revision with a new revision ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2309,7 +2309,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RollbackApiDeployment, null, options, request);
       }
       /// <summary>
-      /// DeleteApiDeploymentRevision deletes a revision of a deployment.
+      /// Deletes a revision of a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2322,7 +2322,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiDeploymentRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiDeploymentRevision deletes a revision of a deployment.
+      /// Deletes a revision of a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2333,7 +2333,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiDeploymentRevision, null, options, request);
       }
       /// <summary>
-      /// DeleteApiDeploymentRevision deletes a revision of a deployment.
+      /// Deletes a revision of a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2346,7 +2346,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteApiDeploymentRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteApiDeploymentRevision deletes a revision of a deployment.
+      /// Deletes a revision of a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2357,7 +2357,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiDeploymentRevision, null, options, request);
       }
       /// <summary>
-      /// ListArtifacts returns matching artifacts.
+      /// Returns matching artifacts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2370,7 +2370,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListArtifacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListArtifacts returns matching artifacts.
+      /// Returns matching artifacts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2381,7 +2381,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListArtifacts, null, options, request);
       }
       /// <summary>
-      /// ListArtifacts returns matching artifacts.
+      /// Returns matching artifacts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2394,7 +2394,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ListArtifactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ListArtifacts returns matching artifacts.
+      /// Returns matching artifacts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2405,7 +2405,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListArtifacts, null, options, request);
       }
       /// <summary>
-      /// GetArtifact returns a specified artifact.
+      /// Returns a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2418,7 +2418,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetArtifact returns a specified artifact.
+      /// Returns a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2429,7 +2429,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetArtifact, null, options, request);
       }
       /// <summary>
-      /// GetArtifact returns a specified artifact.
+      /// Returns a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2442,7 +2442,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetArtifact returns a specified artifact.
+      /// Returns a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2453,7 +2453,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetArtifact, null, options, request);
       }
       /// <summary>
-      /// GetArtifactContents returns the contents of a specified artifact.
+      /// Returns the contents of a specified artifact.
       /// If artifacts are stored with GZip compression, the default behavior
       /// is to return the artifact uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -2469,7 +2469,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetArtifactContents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetArtifactContents returns the contents of a specified artifact.
+      /// Returns the contents of a specified artifact.
       /// If artifacts are stored with GZip compression, the default behavior
       /// is to return the artifact uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -2483,7 +2483,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetArtifactContents, null, options, request);
       }
       /// <summary>
-      /// GetArtifactContents returns the contents of a specified artifact.
+      /// Returns the contents of a specified artifact.
       /// If artifacts are stored with GZip compression, the default behavior
       /// is to return the artifact uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -2499,7 +2499,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return GetArtifactContentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// GetArtifactContents returns the contents of a specified artifact.
+      /// Returns the contents of a specified artifact.
       /// If artifacts are stored with GZip compression, the default behavior
       /// is to return the artifact uncompressed (the mime_type response field
       /// indicates the exact format returned).
@@ -2513,7 +2513,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetArtifactContents, null, options, request);
       }
       /// <summary>
-      /// CreateArtifact creates a specified artifact.
+      /// Creates a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2526,7 +2526,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateArtifact creates a specified artifact.
+      /// Creates a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2537,7 +2537,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateArtifact, null, options, request);
       }
       /// <summary>
-      /// CreateArtifact creates a specified artifact.
+      /// Creates a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2550,7 +2550,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CreateArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CreateArtifact creates a specified artifact.
+      /// Creates a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2561,7 +2561,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateArtifact, null, options, request);
       }
       /// <summary>
-      /// ReplaceArtifact can be used to replace a specified artifact.
+      /// Used to replace a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2574,7 +2574,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ReplaceArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ReplaceArtifact can be used to replace a specified artifact.
+      /// Used to replace a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2585,7 +2585,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ReplaceArtifact, null, options, request);
       }
       /// <summary>
-      /// ReplaceArtifact can be used to replace a specified artifact.
+      /// Used to replace a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2598,7 +2598,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return ReplaceArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ReplaceArtifact can be used to replace a specified artifact.
+      /// Used to replace a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2609,7 +2609,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ReplaceArtifact, null, options, request);
       }
       /// <summary>
-      /// DeleteArtifact removes a specified artifact.
+      /// Removes a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2622,7 +2622,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteArtifact removes a specified artifact.
+      /// Removes a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2633,7 +2633,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteArtifact, null, options, request);
       }
       /// <summary>
-      /// DeleteArtifact removes a specified artifact.
+      /// Removes a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2646,7 +2646,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
         return DeleteArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// DeleteArtifact removes a specified artifact.
+      /// Removes a specified artifact.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

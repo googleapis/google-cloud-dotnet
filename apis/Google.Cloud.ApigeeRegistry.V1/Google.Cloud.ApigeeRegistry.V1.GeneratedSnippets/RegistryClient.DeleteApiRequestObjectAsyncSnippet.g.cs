@@ -35,6 +35,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiRequest request = new DeleteApiRequest
             {
                 ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                Force = false,
             };
             // Make the request
             await registryClient.DeleteApiAsync(request);
