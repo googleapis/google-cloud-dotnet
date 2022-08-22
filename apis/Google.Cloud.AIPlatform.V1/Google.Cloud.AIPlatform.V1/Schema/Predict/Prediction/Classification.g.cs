@@ -26,20 +26,20 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
           string.Concat(
             "Cklnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlbWEvcHJlZGljdC9w",
             "cmVkaWN0aW9uL2NsYXNzaWZpY2F0aW9uLnByb3RvEjRnb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5zY2hlbWEucHJlZGljdC5wcmVkaWN0aW9uGhxnb29n",
-            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIlkKHkNsYXNzaWZpY2F0aW9uUHJl",
-            "ZGljdGlvblJlc3VsdBILCgNpZHMYASADKAMSFQoNZGlzcGxheV9uYW1lcxgC",
-            "IAMoCRITCgtjb25maWRlbmNlcxgDIAMoAkLsAgo4Y29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS5wcmVkaWN0LnByZWRpY3Rpb25CI0Ns",
-            "YXNzaWZpY2F0aW9uUHJlZGljdGlvblJlc3VsdFByb3RvUAFaXmdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9y",
-            "bS92MS9zY2hlbWEvcHJlZGljdC9wcmVkaWN0aW9uO3ByZWRpY3Rpb26qAjRH",
-            "b29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMS5TY2hlbWEuUHJlZGljdC5QcmVk",
-            "aWN0aW9uygI0R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFcU2NoZW1hXFBy",
-            "ZWRpY3RcUHJlZGljdGlvbuoCOkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
-            "OlYxOjpTY2hlbWE6OlByZWRpY3Q6OlByZWRpY3Rpb25iBnByb3RvMw=="));
+            "YWlwbGF0Zm9ybS52MS5zY2hlbWEucHJlZGljdC5wcmVkaWN0aW9uIlkKHkNs",
+            "YXNzaWZpY2F0aW9uUHJlZGljdGlvblJlc3VsdBILCgNpZHMYASADKAMSFQoN",
+            "ZGlzcGxheV9uYW1lcxgCIAMoCRITCgtjb25maWRlbmNlcxgDIAMoAkLsAgo4",
+            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS5wcmVkaWN0",
+            "LnByZWRpY3Rpb25CI0NsYXNzaWZpY2F0aW9uUHJlZGljdGlvblJlc3VsdFBy",
+            "b3RvUAFaXmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlbWEvcHJlZGljdC9wcmVkaWN0aW9u",
+            "O3ByZWRpY3Rpb26qAjRHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMS5TY2hl",
+            "bWEuUHJlZGljdC5QcmVkaWN0aW9uygI0R29vZ2xlXENsb3VkXEFJUGxhdGZv",
+            "cm1cVjFcU2NoZW1hXFByZWRpY3RcUHJlZGljdGlvbuoCOkdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxOjpTY2hlbWE6OlByZWRpY3Q6OlByZWRpY3Rp",
+            "b25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.ClassificationPredictionResult), global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.ClassificationPredictionResult.Parser, new[]{ "Ids", "DisplayNames", "Confidences" }, null, null, null, null)
           }));

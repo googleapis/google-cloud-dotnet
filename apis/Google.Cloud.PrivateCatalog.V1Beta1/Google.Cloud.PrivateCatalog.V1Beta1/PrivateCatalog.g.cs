@@ -29,9 +29,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
             "MWJldGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUv",
             "YXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdy",
-            "dW5uaW5nL29wZXJhdGlvbnMucHJvdG8aGWdvb2dsZS9wcm90b2J1Zi9hbnku",
-            "cHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3By",
-            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
+            "dW5uaW5nL29wZXJhdGlvbnMucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
             "Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iZAoV",
             "U2VhcmNoQ2F0YWxvZ3NSZXF1ZXN0EhUKCHJlc291cmNlGAEgASgJQgPgQQIS",
             "DQoFcXVlcnkYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9r",
@@ -122,7 +120,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
             "XFYxYmV0YTHqAiZHb29nbGU6OkNsb3VkOjpQcml2YXRlQ2F0YWxvZzo6VjFi",
             "ZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest), global::Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest.Parser, new[]{ "Resource", "Query", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse), global::Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse.Parser, new[]{ "Catalogs", "NextPageToken" }, null, null, null, null),
