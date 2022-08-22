@@ -40,6 +40,10 @@ build_api_docs() {
   $DOCFX metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
+  # Unescape the metadata files for both devsite and googleapis.dev
+  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.UnescapeDocfxMetadataXml -- output/$api/obj/api
+  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.UnescapeDocfxMetadataXml -- output/$api/obj/bareapi
+
   # Generate the snippet markdown
   dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
