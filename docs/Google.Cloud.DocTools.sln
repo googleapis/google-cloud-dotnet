@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocfxMet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.FetchDependencyXrefmaps", "..\tools\Google.Cloud.Tools.FetchDependencyXrefmaps\Google.Cloud.Tools.FetchDependencyXrefmaps.csproj", "{3734E267-99C5-4C80-9D73-D411B6773BC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.UnescapeDocfxMetadataXml", "..\tools\Google.Cloud.Tools.UnescapeDocfxMetadataXml\Google.Cloud.Tools.UnescapeDocfxMetadataXml.csproj", "{60920FE5-243D-4A75-9B42-D03DF86AA6AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,18 @@ Global
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.Build.0 = Release|Any CPU
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.Build.0 = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x64.Build.0 = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
