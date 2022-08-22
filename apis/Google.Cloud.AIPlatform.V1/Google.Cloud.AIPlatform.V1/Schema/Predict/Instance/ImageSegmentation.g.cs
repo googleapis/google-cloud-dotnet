@@ -26,20 +26,19 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
           string.Concat(
             "Cktnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlbWEvcHJlZGljdC9p",
             "bnN0YW5jZS9pbWFnZV9zZWdtZW50YXRpb24ucHJvdG8SMmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS5wcmVkaWN0Lmluc3RhbmNlGhxnb29n",
-            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIkkKI0ltYWdlU2VnbWVudGF0aW9u",
-            "UHJlZGljdGlvbkluc3RhbmNlEg8KB2NvbnRlbnQYASABKAkSEQoJbWltZV90",
-            "eXBlGAIgASgJQuUCCjZjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "c2NoZW1hLnByZWRpY3QuaW5zdGFuY2VCKEltYWdlU2VnbWVudGF0aW9uUHJl",
-            "ZGljdGlvbkluc3RhbmNlUHJvdG9QAVpaZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxL3NjaGVtYS9w",
-            "cmVkaWN0L2luc3RhbmNlO2luc3RhbmNlqgIyR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjEuU2NoZW1hLlByZWRpY3QuSW5zdGFuY2XKAjJHb29nbGVcQ2xv",
-            "dWRcQUlQbGF0Zm9ybVxWMVxTY2hlbWFcUHJlZGljdFxJbnN0YW5jZeoCOEdv",
-            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxOjpTY2hlbWE6OlByZWRpY3Q6",
-            "Okluc3RhbmNlYgZwcm90bzM="));
+            "ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS5wcmVkaWN0Lmluc3RhbmNlIkkKI0lt",
+            "YWdlU2VnbWVudGF0aW9uUHJlZGljdGlvbkluc3RhbmNlEg8KB2NvbnRlbnQY",
+            "ASABKAkSEQoJbWltZV90eXBlGAIgASgJQuUCCjZjb20uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuc2NoZW1hLnByZWRpY3QuaW5zdGFuY2VCKEltYWdl",
+            "U2VnbWVudGF0aW9uUHJlZGljdGlvbkluc3RhbmNlUHJvdG9QAVpaZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRm",
+            "b3JtL3YxL3NjaGVtYS9wcmVkaWN0L2luc3RhbmNlO2luc3RhbmNlqgIyR29v",
+            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjEuU2NoZW1hLlByZWRpY3QuSW5zdGFu",
+            "Y2XKAjJHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMVxTY2hlbWFcUHJlZGlj",
+            "dFxJbnN0YW5jZeoCOEdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxOjpT",
+            "Y2hlbWE6OlByZWRpY3Q6Okluc3RhbmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.Predict.Instance.ImageSegmentationPredictionInstance), global::Google.Cloud.AIPlatform.V1.Schema.Predict.Instance.ImageSegmentationPredictionInstance.Parser, new[]{ "Content", "MimeType" }, null, null, null, null)
           }));

@@ -27,20 +27,20 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
             "ClFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlbWEvcHJlZGljdC9p",
             "bnN0YW5jZS92aWRlb19hY3Rpb25fcmVjb2duaXRpb24ucHJvdG8SMmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS5wcmVkaWN0Lmluc3RhbmNl",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIoQBCihWaWRlb0FjdGlv",
-            "blJlY29nbml0aW9uUHJlZGljdGlvbkluc3RhbmNlEg8KB2NvbnRlbnQYASAB",
-            "KAkSEQoJbWltZV90eXBlGAIgASgJEhoKEnRpbWVfc2VnbWVudF9zdGFydBgD",
-            "IAEoCRIYChB0aW1lX3NlZ21lbnRfZW5kGAQgASgJQuoCCjZjb20uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuc2NoZW1hLnByZWRpY3QuaW5zdGFuY2VC",
-            "LVZpZGVvQWN0aW9uUmVjb2duaXRpb25QcmVkaWN0aW9uSW5zdGFuY2VQcm90",
-            "b1ABWlpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1hL3ByZWRpY3QvaW5zdGFuY2U7aW5z",
-            "dGFuY2WqAjJHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMS5TY2hlbWEuUHJl",
-            "ZGljdC5JbnN0YW5jZcoCMkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxXFNj",
-            "aGVtYVxQcmVkaWN0XEluc3RhbmNl6gI4R29vZ2xlOjpDbG91ZDo6QUlQbGF0",
-            "Zm9ybTo6VjE6OlNjaGVtYTo6UHJlZGljdDo6SW5zdGFuY2ViBnByb3RvMw=="));
+            "IoQBCihWaWRlb0FjdGlvblJlY29nbml0aW9uUHJlZGljdGlvbkluc3RhbmNl",
+            "Eg8KB2NvbnRlbnQYASABKAkSEQoJbWltZV90eXBlGAIgASgJEhoKEnRpbWVf",
+            "c2VnbWVudF9zdGFydBgDIAEoCRIYChB0aW1lX3NlZ21lbnRfZW5kGAQgASgJ",
+            "QuoCCjZjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuc2NoZW1hLnBy",
+            "ZWRpY3QuaW5zdGFuY2VCLVZpZGVvQWN0aW9uUmVjb2duaXRpb25QcmVkaWN0",
+            "aW9uSW5zdGFuY2VQcm90b1ABWlpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1hL3ByZWRp",
+            "Y3QvaW5zdGFuY2U7aW5zdGFuY2WqAjJHb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMS5TY2hlbWEuUHJlZGljdC5JbnN0YW5jZcoCMkdvb2dsZVxDbG91ZFxB",
+            "SVBsYXRmb3JtXFYxXFNjaGVtYVxQcmVkaWN0XEluc3RhbmNl6gI4R29vZ2xl",
+            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjE6OlNjaGVtYTo6UHJlZGljdDo6SW5z",
+            "dGFuY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.Predict.Instance.VideoActionRecognitionPredictionInstance), global::Google.Cloud.AIPlatform.V1.Schema.Predict.Instance.VideoActionRecognitionPredictionInstance.Parser, new[]{ "Content", "MimeType", "TimeSegmentStart", "TimeSegmentEnd" }, null, null, null, null)
           }));
