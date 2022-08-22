@@ -13913,9 +13913,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int QueryRecordFieldNumber = 5;
     private string queryRecord_ = "";
     /// <summary>
-    /// Name of the query record.
+    /// The name of the answer record.
     /// Format:
-    /// projects/{project}/locations/{location}/queryRecords/{query_record}
+    /// projects/{project}/locations/{location}/answerRecords/{answer_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14304,9 +14304,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int QueryRecordFieldNumber = 5;
     private string queryRecord_ = "";
     /// <summary>
-    /// Name of the query record.
+    /// The name of the answer record.
     /// Format:
-    /// projects/{project}/locations/{location}/queryRecords/{query_record}.
+    /// projects/{project}/locations/{location}/answerRecords/{answer_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14678,9 +14678,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int QueryRecordFieldNumber = 4;
     private string queryRecord_ = "";
     /// <summary>
-    /// Name of the query record.
+    /// The name of the answer record.
     /// Format:
-    /// projects/{project}/locations/{location}/queryRecords/{query_record}
+    /// projects/{project}/locations/{location}/answerRecords/{answer_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14987,9 +14987,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int QueryRecordFieldNumber = 4;
     private string queryRecord_ = "";
     /// <summary>
-    /// Name of the query record.
+    /// The name of the answer record.
     /// Format:
-    /// projects/{project}/locations/{location}/queryRecords/{query_record}
+    /// projects/{project}/locations/{location}/answerRecords/{answer_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
