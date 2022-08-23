@@ -210,6 +210,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. Problem type of the SavedQuery.
     /// Allowed values:
+    ///
     /// * IMAGE_CLASSIFICATION_SINGLE_LABEL
     /// * IMAGE_CLASSIFICATION_MULTI_LABEL
     /// * IMAGE_BOUNDING_POLY
@@ -249,7 +250,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Used to perform consistent read-modify-write updates. If not set, a blind
+    /// Used to perform a consistent read-modify-write update. If not set, a blind
     /// "overwrite" update happens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

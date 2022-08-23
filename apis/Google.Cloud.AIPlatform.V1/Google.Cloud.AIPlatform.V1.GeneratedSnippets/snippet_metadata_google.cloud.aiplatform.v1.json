@@ -8504,6 +8504,112 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "aiplatform_v1_generated_IndexService_UpsertDatapoints_sync",
+      "title": "UpsertDatapointsRequestObject",
+      "description": "Snippet for UpsertDatapoints",
+      "file": "IndexServiceClient.UpsertDatapointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpsertDatapoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient.UpsertDatapoints",
+        "resultType": "Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "UpsertDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.IndexService.UpsertDatapoints",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_IndexService_UpsertDatapoints_async",
+      "title": "UpsertDatapointsRequestObjectAsync",
+      "description": "Snippet for UpsertDatapointsAsync",
+      "file": "IndexServiceClient.UpsertDatapointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpsertDatapointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient.UpsertDatapointsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "UpsertDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.IndexService.UpsertDatapoints",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_IndexService_RemoveDatapoints_sync",
+      "title": "RemoveDatapointsRequestObject",
+      "description": "Snippet for RemoveDatapoints",
+      "file": "IndexServiceClient.RemoveDatapointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveDatapoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient.RemoveDatapoints",
+        "resultType": "Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.IndexService.RemoveDatapoints",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_IndexService_RemoveDatapoints_async",
+      "title": "RemoveDatapointsRequestObjectAsync",
+      "description": "Snippet for RemoveDatapointsAsync",
+      "file": "IndexServiceClient.RemoveDatapointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveDatapointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient.RemoveDatapointsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.IndexService.RemoveDatapoints",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "aiplatform_v1_generated_JobService_CreateCustomJob_sync",
       "title": "CreateCustomJobRequestObject",
       "description": "Snippet for CreateCustomJob",

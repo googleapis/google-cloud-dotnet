@@ -58,6 +58,8 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateIndexOperationsSettings = existing.UpdateIndexOperationsSettings.Clone();
             DeleteIndexSettings = existing.DeleteIndexSettings;
             DeleteIndexOperationsSettings = existing.DeleteIndexOperationsSettings.Clone();
+            UpsertDatapointsSettings = existing.UpsertDatapointsSettings;
+            RemoveDatapointsSettings = existing.RemoveDatapointsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -178,6 +180,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IndexServiceClient.UpsertDatapoints</c> and <c>IndexServiceClient.UpsertDatapointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpsertDatapointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IndexServiceClient.RemoveDatapoints</c> and <c>IndexServiceClient.RemoveDatapointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveDatapointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -995,6 +1021,60 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteIndexAsync(IndexName name, st::CancellationToken cancellationToken) =>
             DeleteIndexAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add/update Datapoints into an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UpsertDatapointsResponse UpsertDatapoints(UpsertDatapointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update Datapoints into an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpsertDatapointsResponse> UpsertDatapointsAsync(UpsertDatapointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update Datapoints into an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpsertDatapointsResponse> UpsertDatapointsAsync(UpsertDatapointsRequest request, st::CancellationToken cancellationToken) =>
+            UpsertDatapointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Remove Datapoints from an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveDatapointsResponse RemoveDatapoints(RemoveDatapointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Remove Datapoints from an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveDatapointsResponse> RemoveDatapointsAsync(RemoveDatapointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Remove Datapoints from an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveDatapointsResponse> RemoveDatapointsAsync(RemoveDatapointsRequest request, st::CancellationToken cancellationToken) =>
+            RemoveDatapointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>IndexService client wrapper implementation, for convenient use.</summary>
@@ -1012,6 +1092,10 @@ namespace Google.Cloud.AIPlatform.V1
         private readonly gaxgrpc::ApiCall<UpdateIndexRequest, lro::Operation> _callUpdateIndex;
 
         private readonly gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> _callDeleteIndex;
+
+        private readonly gaxgrpc::ApiCall<UpsertDatapointsRequest, UpsertDatapointsResponse> _callUpsertDatapoints;
+
+        private readonly gaxgrpc::ApiCall<RemoveDatapointsRequest, RemoveDatapointsResponse> _callRemoveDatapoints;
 
         /// <summary>
         /// Constructs a client wrapper for the IndexService service, with the specified gRPC client and settings.
@@ -1044,6 +1128,12 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>("DeleteIndex", grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIndex);
             Modify_DeleteIndexApiCall(ref _callDeleteIndex);
+            _callUpsertDatapoints = clientHelper.BuildApiCall<UpsertDatapointsRequest, UpsertDatapointsResponse>("UpsertDatapoints", grpcClient.UpsertDatapointsAsync, grpcClient.UpsertDatapoints, effectiveSettings.UpsertDatapointsSettings).WithGoogleRequestParam("index", request => request.Index);
+            Modify_ApiCall(ref _callUpsertDatapoints);
+            Modify_UpsertDatapointsApiCall(ref _callUpsertDatapoints);
+            _callRemoveDatapoints = clientHelper.BuildApiCall<RemoveDatapointsRequest, RemoveDatapointsResponse>("RemoveDatapoints", grpcClient.RemoveDatapointsAsync, grpcClient.RemoveDatapoints, effectiveSettings.RemoveDatapointsSettings).WithGoogleRequestParam("index", request => request.Index);
+            Modify_ApiCall(ref _callRemoveDatapoints);
+            Modify_RemoveDatapointsApiCall(ref _callRemoveDatapoints);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1058,6 +1148,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpdateIndexApiCall(ref gaxgrpc::ApiCall<UpdateIndexRequest, lro::Operation> call);
 
         partial void Modify_DeleteIndexApiCall(ref gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> call);
+
+        partial void Modify_UpsertDatapointsApiCall(ref gaxgrpc::ApiCall<UpsertDatapointsRequest, UpsertDatapointsResponse> call);
+
+        partial void Modify_RemoveDatapointsApiCall(ref gaxgrpc::ApiCall<RemoveDatapointsRequest, RemoveDatapointsResponse> call);
 
         partial void OnConstruction(IndexService.IndexServiceClient grpcClient, IndexServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1079,6 +1173,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpdateIndexRequest(ref UpdateIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteIndexRequest(ref DeleteIndexRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpsertDatapointsRequest(ref UpsertDatapointsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveDatapointsRequest(ref RemoveDatapointsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
         public override lro::OperationsClient CreateIndexOperationsClient { get; }
@@ -1211,6 +1309,54 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteIndexRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteIndex.Async(request, callSettings).ConfigureAwait(false), DeleteIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Add/update Datapoints into an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UpsertDatapointsResponse UpsertDatapoints(UpsertDatapointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpsertDatapointsRequest(ref request, ref callSettings);
+            return _callUpsertDatapoints.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add/update Datapoints into an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UpsertDatapointsResponse> UpsertDatapointsAsync(UpsertDatapointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpsertDatapointsRequest(ref request, ref callSettings);
+            return _callUpsertDatapoints.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Remove Datapoints from an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveDatapointsResponse RemoveDatapoints(RemoveDatapointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveDatapointsRequest(ref request, ref callSettings);
+            return _callRemoveDatapoints.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Remove Datapoints from an Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveDatapointsResponse> RemoveDatapointsAsync(RemoveDatapointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveDatapointsRequest(ref request, ref callSettings);
+            return _callRemoveDatapoints.Async(request, callSettings);
         }
     }
 

@@ -4331,8 +4331,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.SavedQuery.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery> savedQueries_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery>();
     /// <summary>
-    /// A list of SavedQueries that matches the specified filter in the
-    /// request.
+    /// A list of SavedQueries that match the specified filter in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

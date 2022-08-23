@@ -63,6 +63,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -103,6 +105,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -145,6 +149,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -185,6 +191,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -227,6 +235,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -267,12 +277,110 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                IndexStats = new IndexStats(),
+                IndexUpdateMethod = Index.Types.IndexUpdateMethod.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
             Index responseCallSettings = await client.GetIndexAsync(request.IndexName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Index responseCancellationToken = await client.GetIndexAsync(request.IndexName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpsertDatapointsRequestObject()
+        {
+            moq::Mock<IndexService.IndexServiceClient> mockGrpcClient = new moq::Mock<IndexService.IndexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                Datapoints =
+                {
+                    new IndexDatapoint(),
+                },
+            };
+            UpsertDatapointsResponse expectedResponse = new UpsertDatapointsResponse { };
+            mockGrpcClient.Setup(x => x.UpsertDatapoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
+            UpsertDatapointsResponse response = client.UpsertDatapoints(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpsertDatapointsRequestObjectAsync()
+        {
+            moq::Mock<IndexService.IndexServiceClient> mockGrpcClient = new moq::Mock<IndexService.IndexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                Datapoints =
+                {
+                    new IndexDatapoint(),
+                },
+            };
+            UpsertDatapointsResponse expectedResponse = new UpsertDatapointsResponse { };
+            mockGrpcClient.Setup(x => x.UpsertDatapointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UpsertDatapointsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
+            UpsertDatapointsResponse responseCallSettings = await client.UpsertDatapointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UpsertDatapointsResponse responseCancellationToken = await client.UpsertDatapointsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveDatapointsRequestObject()
+        {
+            moq::Mock<IndexService.IndexServiceClient> mockGrpcClient = new moq::Mock<IndexService.IndexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                DatapointIds =
+                {
+                    "datapoint_ids30693a05",
+                },
+            };
+            RemoveDatapointsResponse expectedResponse = new RemoveDatapointsResponse { };
+            mockGrpcClient.Setup(x => x.RemoveDatapoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveDatapointsResponse response = client.RemoveDatapoints(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveDatapointsRequestObjectAsync()
+        {
+            moq::Mock<IndexService.IndexServiceClient> mockGrpcClient = new moq::Mock<IndexService.IndexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                DatapointIds =
+                {
+                    "datapoint_ids30693a05",
+                },
+            };
+            RemoveDatapointsResponse expectedResponse = new RemoveDatapointsResponse { };
+            mockGrpcClient.Setup(x => x.RemoveDatapointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RemoveDatapointsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IndexServiceClient client = new IndexServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveDatapointsResponse responseCallSettings = await client.RemoveDatapointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RemoveDatapointsResponse responseCancellationToken = await client.RemoveDatapointsAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

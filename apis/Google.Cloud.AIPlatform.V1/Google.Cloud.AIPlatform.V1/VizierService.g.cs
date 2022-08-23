@@ -1636,7 +1636,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SuggestionCountFieldNumber = 2;
     private int suggestionCount_;
     /// <summary>
-    /// Required. The number of suggestions requested.
+    /// Required. The number of suggestions requested. It must be positive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

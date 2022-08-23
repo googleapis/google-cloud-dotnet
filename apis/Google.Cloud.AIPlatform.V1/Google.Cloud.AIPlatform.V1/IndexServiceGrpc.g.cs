@@ -79,6 +79,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateIndexRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateIndexRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteIndexRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest> __Marshaller_google_cloud_aiplatform_v1_UpsertDatapointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse> __Marshaller_google_cloud_aiplatform_v1_UpsertDatapointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest> __Marshaller_google_cloud_aiplatform_v1_RemoveDatapointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse> __Marshaller_google_cloud_aiplatform_v1_RemoveDatapointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
@@ -119,6 +127,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         "DeleteIndex",
         __Marshaller_google_cloud_aiplatform_v1_DeleteIndexRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest, global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse> __Method_UpsertDatapoints = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest, global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpsertDatapoints",
+        __Marshaller_google_cloud_aiplatform_v1_UpsertDatapointsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_UpsertDatapointsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest, global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse> __Method_RemoveDatapoints = new grpc::Method<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest, global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveDatapoints",
+        __Marshaller_google_cloud_aiplatform_v1_RemoveDatapointsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_RemoveDatapointsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -188,6 +212,30 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIndex(global::Google.Cloud.AIPlatform.V1.DeleteIndexRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Add/update Datapoints into an Index.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse> UpsertDatapoints(global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Remove Datapoints from an Index.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse> RemoveDatapoints(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -469,6 +517,102 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIndex, null, options, request);
       }
+      /// <summary>
+      /// Add/update Datapoints into an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse UpsertDatapoints(global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpsertDatapoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add/update Datapoints into an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse UpsertDatapoints(global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpsertDatapoints, null, options, request);
+      }
+      /// <summary>
+      /// Add/update Datapoints into an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse> UpsertDatapointsAsync(global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpsertDatapointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add/update Datapoints into an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse> UpsertDatapointsAsync(global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpsertDatapoints, null, options, request);
+      }
+      /// <summary>
+      /// Remove Datapoints from an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse RemoveDatapoints(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveDatapoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove Datapoints from an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse RemoveDatapoints(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveDatapoints, null, options, request);
+      }
+      /// <summary>
+      /// Remove Datapoints from an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse> RemoveDatapointsAsync(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveDatapointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove Datapoints from an Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse> RemoveDatapointsAsync(global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveDatapoints, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IndexServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -487,7 +631,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetIndex, serviceImpl.GetIndex)
           .AddMethod(__Method_ListIndexes, serviceImpl.ListIndexes)
           .AddMethod(__Method_UpdateIndex, serviceImpl.UpdateIndex)
-          .AddMethod(__Method_DeleteIndex, serviceImpl.DeleteIndex).Build();
+          .AddMethod(__Method_DeleteIndex, serviceImpl.DeleteIndex)
+          .AddMethod(__Method_UpsertDatapoints, serviceImpl.UpsertDatapoints)
+          .AddMethod(__Method_RemoveDatapoints, serviceImpl.RemoveDatapoints).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -502,6 +648,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListIndexes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListIndexesRequest, global::Google.Cloud.AIPlatform.V1.ListIndexesResponse>(serviceImpl.ListIndexes));
       serviceBinder.AddMethod(__Method_UpdateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateIndex));
       serviceBinder.AddMethod(__Method_DeleteIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIndex));
+      serviceBinder.AddMethod(__Method_UpsertDatapoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpsertDatapointsRequest, global::Google.Cloud.AIPlatform.V1.UpsertDatapointsResponse>(serviceImpl.UpsertDatapoints));
+      serviceBinder.AddMethod(__Method_RemoveDatapoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.RemoveDatapointsRequest, global::Google.Cloud.AIPlatform.V1.RemoveDatapointsResponse>(serviceImpl.RemoveDatapoints));
     }
 
   }
