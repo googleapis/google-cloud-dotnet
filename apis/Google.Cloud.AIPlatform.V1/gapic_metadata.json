@@ -367,10 +367,22 @@
                 "ListIndexesAsync"
               ]
             },
+            "RemoveDatapoints": {
+              "methods": [
+                "RemoveDatapoints",
+                "RemoveDatapointsAsync"
+              ]
+            },
             "UpdateIndex": {
               "methods": [
                 "UpdateIndex",
                 "UpdateIndexAsync"
+              ]
+            },
+            "UpsertDatapoints": {
+              "methods": [
+                "UpsertDatapoints",
+                "UpsertDatapointsAsync"
               ]
             }
           }

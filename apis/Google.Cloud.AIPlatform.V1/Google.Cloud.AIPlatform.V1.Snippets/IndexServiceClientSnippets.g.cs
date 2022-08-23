@@ -896,5 +896,81 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for UpsertDatapoints</summary>
+        public void UpsertDatapointsRequestObject()
+        {
+            // Snippet: UpsertDatapoints(UpsertDatapointsRequest, CallSettings)
+            // Create client
+            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            // Initialize request argument(s)
+            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                Datapoints =
+                {
+                    new IndexDatapoint(),
+                },
+            };
+            // Make the request
+            UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpsertDatapointsAsync</summary>
+        public async Task UpsertDatapointsRequestObjectAsync()
+        {
+            // Snippet: UpsertDatapointsAsync(UpsertDatapointsRequest, CallSettings)
+            // Additional: UpsertDatapointsAsync(UpsertDatapointsRequest, CancellationToken)
+            // Create client
+            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                Datapoints =
+                {
+                    new IndexDatapoint(),
+                },
+            };
+            // Make the request
+            UpsertDatapointsResponse response = await indexServiceClient.UpsertDatapointsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveDatapoints</summary>
+        public void RemoveDatapointsRequestObject()
+        {
+            // Snippet: RemoveDatapoints(RemoveDatapointsRequest, CallSettings)
+            // Create client
+            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                DatapointIds = { "", },
+            };
+            // Make the request
+            RemoveDatapointsResponse response = indexServiceClient.RemoveDatapoints(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveDatapointsAsync</summary>
+        public async Task RemoveDatapointsRequestObjectAsync()
+        {
+            // Snippet: RemoveDatapointsAsync(RemoveDatapointsRequest, CallSettings)
+            // Additional: RemoveDatapointsAsync(RemoveDatapointsRequest, CancellationToken)
+            // Create client
+            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            {
+                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                DatapointIds = { "", },
+            };
+            // Make the request
+            RemoveDatapointsResponse response = await indexServiceClient.RemoveDatapointsAsync(request);
+            // End snippet
+        }
     }
 }

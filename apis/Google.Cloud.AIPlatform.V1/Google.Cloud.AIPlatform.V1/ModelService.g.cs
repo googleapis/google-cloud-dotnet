@@ -3199,7 +3199,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The set of version aliases to merge.
     /// The alias should be at most 128 characters, and match
-    /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+    /// `[a-z][a-zA-Z0-9-]{0,126}[a-z-0-9]`.
     /// Add the `-` prefix to an alias means removing that alias from the version.
     /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
     /// the `golden` alias from the version.

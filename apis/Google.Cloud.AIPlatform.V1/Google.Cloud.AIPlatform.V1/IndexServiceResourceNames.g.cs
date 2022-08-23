@@ -67,4 +67,24 @@ namespace Google.Cloud.AIPlatform.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class UpsertDatapointsRequest
+    {
+        /// <summary><see cref="IndexName"/>-typed view over the <see cref="Index"/> resource name property.</summary>
+        public IndexName IndexAsIndexName
+        {
+            get => string.IsNullOrEmpty(Index) ? null : IndexName.Parse(Index, allowUnparsed: true);
+            set => Index = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoveDatapointsRequest
+    {
+        /// <summary><see cref="IndexName"/>-typed view over the <see cref="Index"/> resource name property.</summary>
+        public IndexName IndexAsIndexName
+        {
+            get => string.IsNullOrEmpty(Index) ? null : IndexName.Parse(Index, allowUnparsed: true);
+            set => Index = value?.ToString() ?? "";
+        }
+    }
 }

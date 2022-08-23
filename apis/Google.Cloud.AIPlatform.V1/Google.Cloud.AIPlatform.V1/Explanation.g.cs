@@ -44,7 +44,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "A+BBAyKlAQoPRXhwbGFuYXRpb25TcGVjEkoKCnBhcmFtZXRlcnMYASABKAsy",
             "MS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvblBhcmFt",
             "ZXRlcnNCA+BBAhJGCghtZXRhZGF0YRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uTWV0YWRhdGFCA+BBAiLzAgoVRXhw",
+            "aXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uTWV0YWRhdGFCA+BBASLzAgoVRXhw",
             "bGFuYXRpb25QYXJhbWV0ZXJzElwKG3NhbXBsZWRfc2hhcGxleV9hdHRyaWJ1",
             "dGlvbhgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNhbXBs",
             "ZWRTaGFwbGV5QXR0cmlidXRpb25IABJmCiBpbnRlZ3JhdGVkX2dyYWRpZW50",
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetadataFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1.ExplanationMetadata metadata_;
     /// <summary>
-    /// Required. Metadata describing the Model's input and output for explanation.
+    /// Optional. Metadata describing the Model's input and output for explanation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1692,7 +1692,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// explaining.
     ///
     /// If not populated, returns attributions for [top_k][google.cloud.aiplatform.v1.ExplanationParameters.top_k] indices of outputs.
-    /// If neither top_k nor output_indeices is populated, returns the argmax
+    /// If neither top_k nor output_indices is populated, returns the argmax
     /// index of the outputs.
     ///
     /// Only applicable to Models that predict multiple outputs (e,g, multi-class
