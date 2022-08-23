@@ -86,7 +86,7 @@ namespace Google.Cloud.Retail.V2 {
             "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlsKClNlYXJjaE1vZGUS",
             "GwoXU0VBUkNIX01PREVfVU5TUEVDSUZJRUQQABIXChNQUk9EVUNUX1NFQVJD",
             "SF9PTkxZEAESFwoTRkFDRVRFRF9TRUFSQ0hfT05MWRACQhgKFl9zcGVsbF9j",
-            "b3JyZWN0aW9uX3NwZWMiwAoKDlNlYXJjaFJlc3BvbnNlEkQKB3Jlc3VsdHMY",
+            "b3JyZWN0aW9uX3NwZWMi2QoKDlNlYXJjaFJlc3BvbnNlEkQKB3Jlc3VsdHMY",
             "ASADKAsyMy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNl",
             "LlNlYXJjaFJlc3VsdBI8CgZmYWNldHMYAiADKAsyLC5nb29nbGUuY2xvdWQu",
             "cmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLkZhY2V0EhIKCnRvdGFsX3NpemUY",
@@ -97,38 +97,39 @@ namespace Google.Cloud.Retail.V2 {
             "ZWN0X3VyaRgKIAEoCRIYChBhcHBsaWVkX2NvbnRyb2xzGAwgAygJEmkKHWlu",
             "dmFsaWRfY29uZGl0aW9uX2Jvb3N0X3NwZWNzGA4gAygLMkIuZ29vZ2xlLmNs",
             "b3VkLnJldGFpbC52Mi5TZWFyY2hSZXF1ZXN0LkJvb3N0U3BlYy5Db25kaXRp",
-            "b25Cb29zdFNwZWMa+AMKDFNlYXJjaFJlc3VsdBIKCgJpZBgBIAEoCRIwCgdw",
+            "b25Cb29zdFNwZWMakQQKDFNlYXJjaFJlc3VsdBIKCgJpZBgBIAEoCRIwCgdw",
             "cm9kdWN0GAIgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0",
             "Eh4KFm1hdGNoaW5nX3ZhcmlhbnRfY291bnQYAyABKAUSbwoXbWF0Y2hpbmdf",
             "dmFyaWFudF9maWVsZHMYBCADKAsyTi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
             "LlNlYXJjaFJlc3BvbnNlLlNlYXJjaFJlc3VsdC5NYXRjaGluZ1ZhcmlhbnRG",
             "aWVsZHNFbnRyeRJrChV2YXJpYW50X3JvbGx1cF92YWx1ZXMYBSADKAsyTC5n",
             "b29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLlNlYXJjaFJl",
-            "c3VsdC5WYXJpYW50Um9sbHVwVmFsdWVzRW50cnkaWAoaTWF0Y2hpbmdWYXJp",
-            "YW50RmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzazoCOAEaUgoYVmFyaWFudFJvbGx1",
-            "cFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdv",
-            "b2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEajgIKBUZhY2V0EgsKA2tleRgBIAEo",
-            "CRJHCgZ2YWx1ZXMYAiADKAsyNy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNl",
-            "YXJjaFJlc3BvbnNlLkZhY2V0LkZhY2V0VmFsdWUSFQoNZHluYW1pY19mYWNl",
-            "dBgDIAEoCBqXAQoKRmFjZXRWYWx1ZRIPCgV2YWx1ZRgBIAEoCUgAEjQKCGlu",
-            "dGVydmFsGAIgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbnRlcnZh",
-            "bEgAEg0KBWNvdW50GAMgASgDEhEKCW1pbl92YWx1ZRgFIAEoARIRCgltYXhf",
-            "dmFsdWUYBiABKAFCDQoLZmFjZXRfdmFsdWUaSQoSUXVlcnlFeHBhbnNpb25J",
-            "bmZvEhYKDmV4cGFuZGVkX3F1ZXJ5GAEgASgIEhsKE3Bpbm5lZF9yZXN1bHRf",
-            "Y291bnQYAiABKAMy2AIKDVNlYXJjaFNlcnZpY2US+wEKBlNlYXJjaBIlLmdv",
-            "b2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVzdBomLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9uc2UioQGC0+STApoBIkUvdjIv",
-            "e3BsYWNlbWVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyov",
-            "cGxhY2VtZW50cy8qfTpzZWFyY2g6ASpaTiJJL3YyL3twbGFjZW1lbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL3NlcnZpbmdDb25maWdz",
-            "Lyp9OnNlYXJjaDoBKhpJykEVcmV0YWlsLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULH",
-            "AQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCElNlYXJjaFNlcnZpY2VQ",
-            "cm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xv",
-            "dWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2ds",
-            "ZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "c3VsdC5WYXJpYW50Um9sbHVwVmFsdWVzRW50cnkSFwoPcGVyc29uYWxfbGFi",
+            "ZWxzGAcgAygJGlgKGk1hdGNoaW5nVmFyaWFudEZpZWxkc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRIpCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2s6AjgBGlIKGFZhcmlhbnRSb2xsdXBWYWx1ZXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6",
+            "AjgBGo4CCgVGYWNldBILCgNrZXkYASABKAkSRwoGdmFsdWVzGAIgAygLMjcu",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXNwb25zZS5GYWNldC5G",
+            "YWNldFZhbHVlEhUKDWR5bmFtaWNfZmFjZXQYAyABKAgalwEKCkZhY2V0VmFs",
+            "dWUSDwoFdmFsdWUYASABKAlIABI0CghpbnRlcnZhbBgCIAEoCzIgLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuSW50ZXJ2YWxIABINCgVjb3VudBgDIAEoAxIR",
+            "CgltaW5fdmFsdWUYBSABKAESEQoJbWF4X3ZhbHVlGAYgASgBQg0KC2ZhY2V0",
+            "X3ZhbHVlGkkKElF1ZXJ5RXhwYW5zaW9uSW5mbxIWCg5leHBhbmRlZF9xdWVy",
+            "eRgBIAEoCBIbChNwaW5uZWRfcmVzdWx0X2NvdW50GAIgASgDMtgCCg1TZWFy",
+            "Y2hTZXJ2aWNlEvsBCgZTZWFyY2gSJS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LlNlYXJjaFJlcXVlc3QaJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJj",
+            "aFJlc3BvbnNlIqEBgtPkkwKaASJFL3YyL3twbGFjZW1lbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL3BsYWNlbWVudHMvKn06c2VhcmNo",
+            "OgEqWk4iSS92Mi97cGxhY2VtZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "Y2F0YWxvZ3MvKi9zZXJ2aW5nQ29uZmlncy8qfTpzZWFyY2g6ASoaScpBFXJl",
+            "dGFpbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CxwEKGmNvbS5nb29nbGUuY2xvdWQu",
+            "cmV0YWlsLnYyQhJTZWFyY2hTZXJ2aWNlUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0",
+            "YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2ds",
+            "ZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -139,7 +140,7 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec.Types.Mode) }, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse), global::Google.Cloud.Retail.V2.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "CorrectedQuery", "AttributionToken", "NextPageToken", "QueryExpansionInfo", "RedirectUri", "AppliedControls", "InvalidConditionBoostSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult), global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Product", "MatchingVariantCount", "MatchingVariantFields", "VariantRollupValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse), global::Google.Cloud.Retail.V2.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "CorrectedQuery", "AttributionToken", "NextPageToken", "QueryExpansionInfo", "RedirectUri", "AppliedControls", "InvalidConditionBoostSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult), global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Product", "MatchingVariantCount", "MatchingVariantFields", "VariantRollupValues", "PersonalLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet), global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Parser, new[]{ "Key", "Values", "DynamicFacet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Types.FacetValue), global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Types.FacetValue.Parser, new[]{ "Value", "Interval", "Count", "MinValue", "MaxValue" }, new[]{ "FacetValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.QueryExpansionInfo), global::Google.Cloud.Retail.V2.SearchResponse.Types.QueryExpansionInfo.Parser, new[]{ "ExpandedQuery", "PinnedResultCount" }, null, null, null, null)})
           }));
@@ -489,7 +490,9 @@ namespace Google.Cloud.Retail.V2 {
     /// Boost specification to boost certain products. See more details at this
     /// [user guide](https://cloud.google.com/retail/docs/boosting).
     ///
-    /// Notice that if both [ServingConfig.boost_control_ids][] and
+    /// Notice that if both
+    /// [ServingConfig.boost_control_ids][google.cloud.retail.v2.ServingConfig.boost_control_ids]
+    /// and
     /// [SearchRequest.boost_spec][google.cloud.retail.v2.SearchRequest.boost_spec]
     /// are set, the boost conditions from both places are evaluated. If a search
     /// request matches multiple boost conditions, the final boost score is equal
@@ -650,6 +653,15 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec personalizationSpec_;
     /// <summary>
     /// The specification for personalization.
+    ///
+    /// Notice that if both
+    /// [ServingConfig.personalization_spec][google.cloud.retail.v2.ServingConfig.personalization_spec]
+    /// and
+    /// [SearchRequest.personalization_spec][google.cloud.retail.v2.SearchRequest.personalization_spec]
+    /// are set.
+    /// [SearchRequest.personalization_spec][google.cloud.retail.v2.SearchRequest.personalization_spec]
+    /// will override
+    /// [ServingConfig.personalization_spec][google.cloud.retail.v2.ServingConfig.personalization_spec].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3559,7 +3571,8 @@ namespace Google.Cloud.Retail.V2 {
             /// </summary>
             [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// Let CRS decide whether to use personalization.
+            /// Let CRS decide whether to use personalization based on quality of user
+            /// event data.
             /// </summary>
             [pbr::OriginalName("AUTO")] Auto = 1,
             /// <summary>
@@ -4391,6 +4404,7 @@ namespace Google.Cloud.Retail.V2 {
           matchingVariantCount_ = other.matchingVariantCount_;
           matchingVariantFields_ = other.matchingVariantFields_.Clone();
           variantRollupValues_ = other.variantRollupValues_.Clone();
+          personalLabels_ = other.personalLabels_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4529,6 +4543,32 @@ namespace Google.Cloud.Retail.V2 {
           get { return variantRollupValues_; }
         }
 
+        /// <summary>Field number for the "personal_labels" field.</summary>
+        public const int PersonalLabelsFieldNumber = 7;
+        private static readonly pb::FieldCodec<string> _repeated_personalLabels_codec
+            = pb::FieldCodec.ForString(58);
+        private readonly pbc::RepeatedField<string> personalLabels_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Specifies previous events related to this product for this user based on
+        /// [UserEvent][google.cloud.retail.v2.UserEvent] with same
+        /// [SearchRequest.visitor_id][google.cloud.retail.v2.SearchRequest.visitor_id]
+        /// or [UserInfo.user_id][google.cloud.retail.v2.UserInfo.user_id].
+        ///
+        /// This is set only when
+        /// [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2.SearchRequest.PersonalizationSpec.mode]
+        /// is
+        /// [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode.AUTO].
+        ///
+        /// Possible values:
+        ///
+        /// * `purchased`: Indicates that this product has been purchased before.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PersonalLabels {
+          get { return personalLabels_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4549,6 +4589,7 @@ namespace Google.Cloud.Retail.V2 {
           if (MatchingVariantCount != other.MatchingVariantCount) return false;
           if (!MatchingVariantFields.Equals(other.MatchingVariantFields)) return false;
           if (!VariantRollupValues.Equals(other.VariantRollupValues)) return false;
+          if(!personalLabels_.Equals(other.personalLabels_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4561,6 +4602,7 @@ namespace Google.Cloud.Retail.V2 {
           if (MatchingVariantCount != 0) hash ^= MatchingVariantCount.GetHashCode();
           hash ^= MatchingVariantFields.GetHashCode();
           hash ^= VariantRollupValues.GetHashCode();
+          hash ^= personalLabels_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4593,6 +4635,7 @@ namespace Google.Cloud.Retail.V2 {
           }
           matchingVariantFields_.WriteTo(output, _map_matchingVariantFields_codec);
           variantRollupValues_.WriteTo(output, _map_variantRollupValues_codec);
+          personalLabels_.WriteTo(output, _repeated_personalLabels_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4617,6 +4660,7 @@ namespace Google.Cloud.Retail.V2 {
           }
           matchingVariantFields_.WriteTo(ref output, _map_matchingVariantFields_codec);
           variantRollupValues_.WriteTo(ref output, _map_variantRollupValues_codec);
+          personalLabels_.WriteTo(ref output, _repeated_personalLabels_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4638,6 +4682,7 @@ namespace Google.Cloud.Retail.V2 {
           }
           size += matchingVariantFields_.CalculateSize(_map_matchingVariantFields_codec);
           size += variantRollupValues_.CalculateSize(_map_variantRollupValues_codec);
+          size += personalLabels_.CalculateSize(_repeated_personalLabels_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4664,6 +4709,7 @@ namespace Google.Cloud.Retail.V2 {
           }
           matchingVariantFields_.Add(other.matchingVariantFields_);
           variantRollupValues_.Add(other.variantRollupValues_);
+          personalLabels_.Add(other.personalLabels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4702,6 +4748,10 @@ namespace Google.Cloud.Retail.V2 {
                 variantRollupValues_.AddEntriesFrom(input, _map_variantRollupValues_codec);
                 break;
               }
+              case 58: {
+                personalLabels_.AddEntriesFrom(input, _repeated_personalLabels_codec);
+                break;
+              }
             }
           }
         #endif
@@ -4738,6 +4788,10 @@ namespace Google.Cloud.Retail.V2 {
               }
               case 42: {
                 variantRollupValues_.AddEntriesFrom(ref input, _map_variantRollupValues_codec);
+                break;
+              }
+              case 58: {
+                personalLabels_.AddEntriesFrom(ref input, _repeated_personalLabels_codec);
                 break;
               }
             }

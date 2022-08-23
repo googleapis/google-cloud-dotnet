@@ -79,6 +79,24 @@ namespace Google.Cloud.Retail.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest> __Marshaller_google_cloud_retail_v2_GetDefaultBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> __Marshaller_google_cloud_retail_v2_GetDefaultBranchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetCompletionConfigRequest> __Marshaller_google_cloud_retail_v2_GetCompletionConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetCompletionConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.CompletionConfig> __Marshaller_google_cloud_retail_v2_CompletionConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.CompletionConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest> __Marshaller_google_cloud_retail_v2_UpdateCompletionConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetAttributesConfigRequest> __Marshaller_google_cloud_retail_v2_GetAttributesConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetAttributesConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.AttributesConfig> __Marshaller_google_cloud_retail_v2_AttributesConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.AttributesConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest> __Marshaller_google_cloud_retail_v2_UpdateAttributesConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest> __Marshaller_google_cloud_retail_v2_AddCatalogAttributeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest> __Marshaller_google_cloud_retail_v2_RemoveCatalogAttributeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest> __Marshaller_google_cloud_retail_v2_ReplaceCatalogAttributeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Method_ListCatalogs = new grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(
@@ -111,6 +129,62 @@ namespace Google.Cloud.Retail.V2 {
         "GetDefaultBranch",
         __Marshaller_google_cloud_retail_v2_GetDefaultBranchRequest,
         __Marshaller_google_cloud_retail_v2_GetDefaultBranchResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.GetCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig> __Method_GetCompletionConfig = new grpc::Method<global::Google.Cloud.Retail.V2.GetCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCompletionConfig",
+        __Marshaller_google_cloud_retail_v2_GetCompletionConfigRequest,
+        __Marshaller_google_cloud_retail_v2_CompletionConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig> __Method_UpdateCompletionConfig = new grpc::Method<global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCompletionConfig",
+        __Marshaller_google_cloud_retail_v2_UpdateCompletionConfigRequest,
+        __Marshaller_google_cloud_retail_v2_CompletionConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.GetAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig> __Method_GetAttributesConfig = new grpc::Method<global::Google.Cloud.Retail.V2.GetAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAttributesConfig",
+        __Marshaller_google_cloud_retail_v2_GetAttributesConfigRequest,
+        __Marshaller_google_cloud_retail_v2_AttributesConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig> __Method_UpdateAttributesConfig = new grpc::Method<global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAttributesConfig",
+        __Marshaller_google_cloud_retail_v2_UpdateAttributesConfigRequest,
+        __Marshaller_google_cloud_retail_v2_AttributesConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig> __Method_AddCatalogAttribute = new grpc::Method<global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddCatalogAttribute",
+        __Marshaller_google_cloud_retail_v2_AddCatalogAttributeRequest,
+        __Marshaller_google_cloud_retail_v2_AttributesConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig> __Method_RemoveCatalogAttribute = new grpc::Method<global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveCatalogAttribute",
+        __Marshaller_google_cloud_retail_v2_RemoveCatalogAttributeRequest,
+        __Marshaller_google_cloud_retail_v2_AttributesConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig> __Method_ReplaceCatalogAttribute = new grpc::Method<global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReplaceCatalogAttribute",
+        __Marshaller_google_cloud_retail_v2_ReplaceCatalogAttributeRequest,
+        __Marshaller_google_cloud_retail_v2_AttributesConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -201,6 +275,114 @@ namespace Google.Cloud.Retail.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.CompletionConfig> GetCompletionConfig(global::Google.Cloud.Retail.V2.GetCompletionConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.CompletionConfig> UpdateCompletionConfig(global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.AttributesConfig> GetAttributesConfig(global::Google.Cloud.Retail.V2.GetAttributesConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// The catalog attributes in the request will be updated in the catalog, or
+      /// inserted if they do not exist. Existing catalog attributes not included in
+      /// the request will remain unchanged. Attributes that are assigned to
+      /// products, but do not exist at the catalog level, are always included in the
+      /// response. The product attribute is assigned default values for missing
+      /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.AttributesConfig> UpdateAttributesConfig(global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+      /// already exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.AttributesConfig> AddCatalogAttribute(global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Removes the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// remove does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.AttributesConfig> RemoveCatalogAttribute(global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Replaces the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+      /// catalog attribute with the same
+      /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// replace does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.AttributesConfig> ReplaceCatalogAttribute(global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -566,6 +748,438 @@ namespace Google.Cloud.Retail.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDefaultBranch, null, options, request);
       }
+      /// <summary>
+      /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.CompletionConfig GetCompletionConfig(global::Google.Cloud.Retail.V2.GetCompletionConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCompletionConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.CompletionConfig GetCompletionConfig(global::Google.Cloud.Retail.V2.GetCompletionConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCompletionConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.CompletionConfig> GetCompletionConfigAsync(global::Google.Cloud.Retail.V2.GetCompletionConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCompletionConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.CompletionConfig> GetCompletionConfigAsync(global::Google.Cloud.Retail.V2.GetCompletionConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCompletionConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.CompletionConfig UpdateCompletionConfig(global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCompletionConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.CompletionConfig UpdateCompletionConfig(global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCompletionConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.CompletionConfig> UpdateCompletionConfigAsync(global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCompletionConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.CompletionConfig> UpdateCompletionConfigAsync(global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCompletionConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig GetAttributesConfig(global::Google.Cloud.Retail.V2.GetAttributesConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttributesConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig GetAttributesConfig(global::Google.Cloud.Retail.V2.GetAttributesConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAttributesConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> GetAttributesConfigAsync(global::Google.Cloud.Retail.V2.GetAttributesConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttributesConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> GetAttributesConfigAsync(global::Google.Cloud.Retail.V2.GetAttributesConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAttributesConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// The catalog attributes in the request will be updated in the catalog, or
+      /// inserted if they do not exist. Existing catalog attributes not included in
+      /// the request will remain unchanged. Attributes that are assigned to
+      /// products, but do not exist at the catalog level, are always included in the
+      /// response. The product attribute is assigned default values for missing
+      /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig UpdateAttributesConfig(global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAttributesConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// The catalog attributes in the request will be updated in the catalog, or
+      /// inserted if they do not exist. Existing catalog attributes not included in
+      /// the request will remain unchanged. Attributes that are assigned to
+      /// products, but do not exist at the catalog level, are always included in the
+      /// response. The product attribute is assigned default values for missing
+      /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig UpdateAttributesConfig(global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAttributesConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// The catalog attributes in the request will be updated in the catalog, or
+      /// inserted if they do not exist. Existing catalog attributes not included in
+      /// the request will remain unchanged. Attributes that are assigned to
+      /// products, but do not exist at the catalog level, are always included in the
+      /// response. The product attribute is assigned default values for missing
+      /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> UpdateAttributesConfigAsync(global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAttributesConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// The catalog attributes in the request will be updated in the catalog, or
+      /// inserted if they do not exist. Existing catalog attributes not included in
+      /// the request will remain unchanged. Attributes that are assigned to
+      /// products, but do not exist at the catalog level, are always included in the
+      /// response. The product attribute is assigned default values for missing
+      /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> UpdateAttributesConfigAsync(global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAttributesConfig, null, options, request);
+      }
+      /// <summary>
+      /// Adds the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+      /// already exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig AddCatalogAttribute(global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddCatalogAttribute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+      /// already exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig AddCatalogAttribute(global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddCatalogAttribute, null, options, request);
+      }
+      /// <summary>
+      /// Adds the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+      /// already exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> AddCatalogAttributeAsync(global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddCatalogAttributeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+      /// already exists, an ALREADY_EXISTS error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> AddCatalogAttributeAsync(global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddCatalogAttribute, null, options, request);
+      }
+      /// <summary>
+      /// Removes the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// remove does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig RemoveCatalogAttribute(global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveCatalogAttribute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// remove does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig RemoveCatalogAttribute(global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveCatalogAttribute, null, options, request);
+      }
+      /// <summary>
+      /// Removes the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// remove does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> RemoveCatalogAttributeAsync(global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveCatalogAttributeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// remove does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> RemoveCatalogAttributeAsync(global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveCatalogAttribute, null, options, request);
+      }
+      /// <summary>
+      /// Replaces the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+      /// catalog attribute with the same
+      /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// replace does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig ReplaceCatalogAttribute(global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReplaceCatalogAttribute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Replaces the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+      /// catalog attribute with the same
+      /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// replace does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Retail.V2.AttributesConfig ReplaceCatalogAttribute(global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReplaceCatalogAttribute, null, options, request);
+      }
+      /// <summary>
+      /// Replaces the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+      /// catalog attribute with the same
+      /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// replace does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> ReplaceCatalogAttributeAsync(global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReplaceCatalogAttributeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Replaces the specified
+      /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+      /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+      /// catalog attribute with the same
+      /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+      ///
+      /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+      /// replace does not exist, a NOT_FOUND error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.AttributesConfig> ReplaceCatalogAttributeAsync(global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReplaceCatalogAttribute, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CatalogServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -583,7 +1197,14 @@ namespace Google.Cloud.Retail.V2 {
           .AddMethod(__Method_ListCatalogs, serviceImpl.ListCatalogs)
           .AddMethod(__Method_UpdateCatalog, serviceImpl.UpdateCatalog)
           .AddMethod(__Method_SetDefaultBranch, serviceImpl.SetDefaultBranch)
-          .AddMethod(__Method_GetDefaultBranch, serviceImpl.GetDefaultBranch).Build();
+          .AddMethod(__Method_GetDefaultBranch, serviceImpl.GetDefaultBranch)
+          .AddMethod(__Method_GetCompletionConfig, serviceImpl.GetCompletionConfig)
+          .AddMethod(__Method_UpdateCompletionConfig, serviceImpl.UpdateCompletionConfig)
+          .AddMethod(__Method_GetAttributesConfig, serviceImpl.GetAttributesConfig)
+          .AddMethod(__Method_UpdateAttributesConfig, serviceImpl.UpdateAttributesConfig)
+          .AddMethod(__Method_AddCatalogAttribute, serviceImpl.AddCatalogAttribute)
+          .AddMethod(__Method_RemoveCatalogAttribute, serviceImpl.RemoveCatalogAttribute)
+          .AddMethod(__Method_ReplaceCatalogAttribute, serviceImpl.ReplaceCatalogAttribute).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -597,6 +1218,13 @@ namespace Google.Cloud.Retail.V2 {
       serviceBinder.AddMethod(__Method_UpdateCatalog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.UpdateCatalogRequest, global::Google.Cloud.Retail.V2.Catalog>(serviceImpl.UpdateCatalog));
       serviceBinder.AddMethod(__Method_SetDefaultBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.SetDefaultBranch));
       serviceBinder.AddMethod(__Method_GetDefaultBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse>(serviceImpl.GetDefaultBranch));
+      serviceBinder.AddMethod(__Method_GetCompletionConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.GetCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig>(serviceImpl.GetCompletionConfig));
+      serviceBinder.AddMethod(__Method_UpdateCompletionConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.UpdateCompletionConfigRequest, global::Google.Cloud.Retail.V2.CompletionConfig>(serviceImpl.UpdateCompletionConfig));
+      serviceBinder.AddMethod(__Method_GetAttributesConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.GetAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(serviceImpl.GetAttributesConfig));
+      serviceBinder.AddMethod(__Method_UpdateAttributesConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.UpdateAttributesConfigRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(serviceImpl.UpdateAttributesConfig));
+      serviceBinder.AddMethod(__Method_AddCatalogAttribute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.AddCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(serviceImpl.AddCatalogAttribute));
+      serviceBinder.AddMethod(__Method_RemoveCatalogAttribute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(serviceImpl.RemoveCatalogAttribute));
+      serviceBinder.AddMethod(__Method_ReplaceCatalogAttribute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest, global::Google.Cloud.Retail.V2.AttributesConfig>(serviceImpl.ReplaceCatalogAttribute));
     }
 
   }

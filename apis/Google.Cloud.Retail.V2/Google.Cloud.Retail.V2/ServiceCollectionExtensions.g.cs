@@ -60,6 +60,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::ControlServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddControlServiceClient(this IServiceCollection services, sys::Action<gcrv::ControlServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::ControlServiceClientBuilder builder = new gcrv::ControlServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcrv::PredictionServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -106,6 +122,24 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcrv::SearchServiceClientBuilder builder = new gcrv::SearchServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcrv::ServingConfigServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddServingConfigServiceClient(this IServiceCollection services, sys::Action<gcrv::ServingConfigServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::ServingConfigServiceClientBuilder builder = new gcrv::ServingConfigServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

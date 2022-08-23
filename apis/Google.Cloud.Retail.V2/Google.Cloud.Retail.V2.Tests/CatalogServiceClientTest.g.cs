@@ -367,5 +367,795 @@ namespace Google.Cloud.Retail.V2.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetCompletionConfigRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig response = client.GetCompletionConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCompletionConfigRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompletionConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig responseCallSettings = await client.GetCompletionConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompletionConfig responseCancellationToken = await client.GetCompletionConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCompletionConfig()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig response = client.GetCompletionConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCompletionConfigAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompletionConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig responseCallSettings = await client.GetCompletionConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompletionConfig responseCancellationToken = await client.GetCompletionConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCompletionConfigResourceNames()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig response = client.GetCompletionConfig(request.CompletionConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCompletionConfigResourceNamesAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.GetCompletionConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompletionConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig responseCallSettings = await client.GetCompletionConfigAsync(request.CompletionConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompletionConfig responseCancellationToken = await client.GetCompletionConfigAsync(request.CompletionConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCompletionConfigRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCompletionConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig response = client.UpdateCompletionConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCompletionConfigRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCompletionConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompletionConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig responseCallSettings = await client.UpdateCompletionConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompletionConfig responseCancellationToken = await client.UpdateCompletionConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCompletionConfig()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCompletionConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig response = client.UpdateCompletionConfig(request.CompletionConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCompletionConfigAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CompletionConfig expectedResponse = new CompletionConfig
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                MatchingOrder = "matching_order5de6c173",
+                MaxSuggestions = -1310933316,
+                MinPrefixLength = 847347054,
+                SuggestionsInputConfig = new CompletionDataInputConfig(),
+                LastSuggestionsImportOperation = "last_suggestions_import_operationdd0a9ee0",
+                DenylistInputConfig = new CompletionDataInputConfig(),
+                LastDenylistImportOperation = "last_denylist_import_operation799a2156",
+                AllowlistInputConfig = new CompletionDataInputConfig(),
+                LastAllowlistImportOperation = "last_allowlist_import_operation4fb9ccd1",
+                AutoLearning = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCompletionConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompletionConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            CompletionConfig responseCallSettings = await client.UpdateCompletionConfigAsync(request.CompletionConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompletionConfig responseCancellationToken = await client.UpdateCompletionConfigAsync(request.CompletionConfig, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAttributesConfigRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.GetAttributesConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAttributesConfigRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.GetAttributesConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.GetAttributesConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAttributesConfig()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.GetAttributesConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAttributesConfigAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.GetAttributesConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.GetAttributesConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAttributesConfigResourceNames()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.GetAttributesConfig(request.AttributesConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAttributesConfigResourceNamesAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.GetAttributesConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.GetAttributesConfigAsync(request.AttributesConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.GetAttributesConfigAsync(request.AttributesConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateAttributesConfigRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAttributesConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.UpdateAttributesConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAttributesConfigRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAttributesConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.UpdateAttributesConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.UpdateAttributesConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateAttributesConfig()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAttributesConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.UpdateAttributesConfig(request.AttributesConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAttributesConfigAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAttributesConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.UpdateAttributesConfigAsync(request.AttributesConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.UpdateAttributesConfigAsync(request.AttributesConfig, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AddCatalogAttributeRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            AddCatalogAttributeRequest request = new AddCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.AddCatalogAttribute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.AddCatalogAttribute(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AddCatalogAttributeRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            AddCatalogAttributeRequest request = new AddCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.AddCatalogAttributeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.AddCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.AddCatalogAttributeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveCatalogAttributeRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            RemoveCatalogAttributeRequest request = new RemoveCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                Key = "key8a0b6e3c",
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.RemoveCatalogAttribute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.RemoveCatalogAttribute(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveCatalogAttributeRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            RemoveCatalogAttributeRequest request = new RemoveCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                Key = "key8a0b6e3c",
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.RemoveCatalogAttributeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.RemoveCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.RemoveCatalogAttributeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReplaceCatalogAttributeRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            ReplaceCatalogAttributeRequest request = new ReplaceCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.ReplaceCatalogAttribute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig response = client.ReplaceCatalogAttribute(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReplaceCatalogAttributeRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            ReplaceCatalogAttributeRequest request = new ReplaceCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            AttributesConfig expectedResponse = new AttributesConfig
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CatalogAttribute()
+                    },
+                },
+                AttributeConfigLevel = AttributeConfigLevel.ProductLevelAttributeConfig,
+            };
+            mockGrpcClient.Setup(x => x.ReplaceCatalogAttributeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AttributesConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
+            AttributesConfig responseCallSettings = await client.ReplaceCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AttributesConfig responseCancellationToken = await client.ReplaceCatalogAttributeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

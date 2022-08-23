@@ -545,5 +545,414 @@ namespace Google.Cloud.Retail.V2.Snippets
             GetDefaultBranchResponse response = await catalogServiceClient.GetDefaultBranchAsync(catalog);
             // End snippet
         }
+
+        /// <summary>Snippet for GetCompletionConfig</summary>
+        public void GetCompletionConfigRequestObject()
+        {
+            // Snippet: GetCompletionConfig(GetCompletionConfigRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            CompletionConfig response = catalogServiceClient.GetCompletionConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCompletionConfigAsync</summary>
+        public async Task GetCompletionConfigRequestObjectAsync()
+        {
+            // Snippet: GetCompletionConfigAsync(GetCompletionConfigRequest, CallSettings)
+            // Additional: GetCompletionConfigAsync(GetCompletionConfigRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCompletionConfigRequest request = new GetCompletionConfigRequest
+            {
+                CompletionConfigName = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            CompletionConfig response = await catalogServiceClient.GetCompletionConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCompletionConfig</summary>
+        public void GetCompletionConfig()
+        {
+            // Snippet: GetCompletionConfig(string, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/completionConfig";
+            // Make the request
+            CompletionConfig response = catalogServiceClient.GetCompletionConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCompletionConfigAsync</summary>
+        public async Task GetCompletionConfigAsync()
+        {
+            // Snippet: GetCompletionConfigAsync(string, CallSettings)
+            // Additional: GetCompletionConfigAsync(string, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/completionConfig";
+            // Make the request
+            CompletionConfig response = await catalogServiceClient.GetCompletionConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCompletionConfig</summary>
+        public void GetCompletionConfigResourceNames()
+        {
+            // Snippet: GetCompletionConfig(CompletionConfigName, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            CompletionConfigName name = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            CompletionConfig response = catalogServiceClient.GetCompletionConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCompletionConfigAsync</summary>
+        public async Task GetCompletionConfigResourceNamesAsync()
+        {
+            // Snippet: GetCompletionConfigAsync(CompletionConfigName, CallSettings)
+            // Additional: GetCompletionConfigAsync(CompletionConfigName, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CompletionConfigName name = CompletionConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            CompletionConfig response = await catalogServiceClient.GetCompletionConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompletionConfig</summary>
+        public void UpdateCompletionConfigRequestObject()
+        {
+            // Snippet: UpdateCompletionConfig(UpdateCompletionConfigRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CompletionConfig response = catalogServiceClient.UpdateCompletionConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompletionConfigAsync</summary>
+        public async Task UpdateCompletionConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateCompletionConfigAsync(UpdateCompletionConfigRequest, CallSettings)
+            // Additional: UpdateCompletionConfigAsync(UpdateCompletionConfigRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCompletionConfigRequest request = new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = new CompletionConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CompletionConfig response = await catalogServiceClient.UpdateCompletionConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompletionConfig</summary>
+        public void UpdateCompletionConfig()
+        {
+            // Snippet: UpdateCompletionConfig(CompletionConfig, FieldMask, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            CompletionConfig completionConfig = new CompletionConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CompletionConfig response = catalogServiceClient.UpdateCompletionConfig(completionConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompletionConfigAsync</summary>
+        public async Task UpdateCompletionConfigAsync()
+        {
+            // Snippet: UpdateCompletionConfigAsync(CompletionConfig, FieldMask, CallSettings)
+            // Additional: UpdateCompletionConfigAsync(CompletionConfig, FieldMask, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CompletionConfig completionConfig = new CompletionConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CompletionConfig response = await catalogServiceClient.UpdateCompletionConfigAsync(completionConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfig</summary>
+        public void GetAttributesConfigRequestObject()
+        {
+            // Snippet: GetAttributesConfig(GetAttributesConfigRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            AttributesConfig response = catalogServiceClient.GetAttributesConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfigAsync</summary>
+        public async Task GetAttributesConfigRequestObjectAsync()
+        {
+            // Snippet: GetAttributesConfigAsync(GetAttributesConfigRequest, CallSettings)
+            // Additional: GetAttributesConfigAsync(GetAttributesConfigRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAttributesConfigRequest request = new GetAttributesConfigRequest
+            {
+                AttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.GetAttributesConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfig</summary>
+        public void GetAttributesConfig()
+        {
+            // Snippet: GetAttributesConfig(string, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/attributesConfig";
+            // Make the request
+            AttributesConfig response = catalogServiceClient.GetAttributesConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfigAsync</summary>
+        public async Task GetAttributesConfigAsync()
+        {
+            // Snippet: GetAttributesConfigAsync(string, CallSettings)
+            // Additional: GetAttributesConfigAsync(string, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/attributesConfig";
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.GetAttributesConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfig</summary>
+        public void GetAttributesConfigResourceNames()
+        {
+            // Snippet: GetAttributesConfig(AttributesConfigName, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            AttributesConfigName name = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            AttributesConfig response = catalogServiceClient.GetAttributesConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttributesConfigAsync</summary>
+        public async Task GetAttributesConfigResourceNamesAsync()
+        {
+            // Snippet: GetAttributesConfigAsync(AttributesConfigName, CallSettings)
+            // Additional: GetAttributesConfigAsync(AttributesConfigName, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AttributesConfigName name = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.GetAttributesConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributesConfig</summary>
+        public void UpdateAttributesConfigRequestObject()
+        {
+            // Snippet: UpdateAttributesConfig(UpdateAttributesConfigRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributesConfig response = catalogServiceClient.UpdateAttributesConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributesConfigAsync</summary>
+        public async Task UpdateAttributesConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateAttributesConfigAsync(UpdateAttributesConfigRequest, CallSettings)
+            // Additional: UpdateAttributesConfigAsync(UpdateAttributesConfigRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAttributesConfigRequest request = new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = new AttributesConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.UpdateAttributesConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributesConfig</summary>
+        public void UpdateAttributesConfig()
+        {
+            // Snippet: UpdateAttributesConfig(AttributesConfig, FieldMask, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            AttributesConfig attributesConfig = new AttributesConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AttributesConfig response = catalogServiceClient.UpdateAttributesConfig(attributesConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAttributesConfigAsync</summary>
+        public async Task UpdateAttributesConfigAsync()
+        {
+            // Snippet: UpdateAttributesConfigAsync(AttributesConfig, FieldMask, CallSettings)
+            // Additional: UpdateAttributesConfigAsync(AttributesConfig, FieldMask, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AttributesConfig attributesConfig = new AttributesConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.UpdateAttributesConfigAsync(attributesConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddCatalogAttribute</summary>
+        public void AddCatalogAttributeRequestObject()
+        {
+            // Snippet: AddCatalogAttribute(AddCatalogAttributeRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            AddCatalogAttributeRequest request = new AddCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+            };
+            // Make the request
+            AttributesConfig response = catalogServiceClient.AddCatalogAttribute(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddCatalogAttributeAsync</summary>
+        public async Task AddCatalogAttributeRequestObjectAsync()
+        {
+            // Snippet: AddCatalogAttributeAsync(AddCatalogAttributeRequest, CallSettings)
+            // Additional: AddCatalogAttributeAsync(AddCatalogAttributeRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AddCatalogAttributeRequest request = new AddCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+            };
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.AddCatalogAttributeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveCatalogAttribute</summary>
+        public void RemoveCatalogAttributeRequestObject()
+        {
+            // Snippet: RemoveCatalogAttribute(RemoveCatalogAttributeRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveCatalogAttributeRequest request = new RemoveCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                Key = "",
+            };
+            // Make the request
+            AttributesConfig response = catalogServiceClient.RemoveCatalogAttribute(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveCatalogAttributeAsync</summary>
+        public async Task RemoveCatalogAttributeRequestObjectAsync()
+        {
+            // Snippet: RemoveCatalogAttributeAsync(RemoveCatalogAttributeRequest, CallSettings)
+            // Additional: RemoveCatalogAttributeAsync(RemoveCatalogAttributeRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveCatalogAttributeRequest request = new RemoveCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                Key = "",
+            };
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.RemoveCatalogAttributeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReplaceCatalogAttribute</summary>
+        public void ReplaceCatalogAttributeRequestObject()
+        {
+            // Snippet: ReplaceCatalogAttribute(ReplaceCatalogAttributeRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            ReplaceCatalogAttributeRequest request = new ReplaceCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributesConfig response = catalogServiceClient.ReplaceCatalogAttribute(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReplaceCatalogAttributeAsync</summary>
+        public async Task ReplaceCatalogAttributeRequestObjectAsync()
+        {
+            // Snippet: ReplaceCatalogAttributeAsync(ReplaceCatalogAttributeRequest, CallSettings)
+            // Additional: ReplaceCatalogAttributeAsync(ReplaceCatalogAttributeRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReplaceCatalogAttributeRequest request = new ReplaceCatalogAttributeRequest
+            {
+                AttributesConfigAsAttributesConfigName = AttributesConfigName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                CatalogAttribute = new CatalogAttribute(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AttributesConfig response = await catalogServiceClient.ReplaceCatalogAttributeAsync(request);
+            // End snippet
+        }
     }
 }

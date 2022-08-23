@@ -33,6 +33,8 @@ namespace Google.Cloud.Retail.V2
             yield return CatalogServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
+            yield return ControlReflection.Descriptor;
+            yield return ControlServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return PredictionServiceReflection.Descriptor;
             yield return ProductReflection.Descriptor;
@@ -40,6 +42,8 @@ namespace Google.Cloud.Retail.V2
             yield return PromotionReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
+            yield return ServingConfigReflection.Descriptor;
+            yield return ServingConfigServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
         }
