@@ -29,65 +29,66 @@ namespace Google.Cloud.VpcAccess.V1 {
             "dGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKEBAoJQ29ubmVjdG9y",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLIBAoJQ29ubmVjdG9y",
             "EgwKBG5hbWUYASABKAkSDwoHbmV0d29yaxgCIAEoCRIVCg1pcF9jaWRyX3Jh",
             "bmdlGAMgASgJEj4KBXN0YXRlGAQgASgOMiouZ29vZ2xlLmNsb3VkLnZwY2Fj",
             "Y2Vzcy52MS5Db25uZWN0b3IuU3RhdGVCA+BBAxIWCg5taW5fdGhyb3VnaHB1",
             "dBgFIAEoBRIWCg5tYXhfdGhyb3VnaHB1dBgGIAEoBRIfChJjb25uZWN0ZWRf",
             "cHJvamVjdHMYByADKAlCA+BBAxI7CgZzdWJuZXQYCCABKAsyKy5nb29nbGUu",
-            "Y2xvdWQudnBjYWNjZXNzLnYxLkNvbm5lY3Rvci5TdWJuZXQaKgoGU3VibmV0",
-            "EgwKBG5hbWUYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCSJeCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQ",
-            "AhIMCghERUxFVElORxADEgkKBUVSUk9SEAQSDAoIVVBEQVRJTkcQBTpn6kFk",
-            "CiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yEj5wcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdG9ycy97",
-            "Y29ubmVjdG9yfSKsAQoWQ3JlYXRlQ29ubmVjdG9yUmVxdWVzdBI5CgZwYXJl",
-            "bnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
-            "Y2F0aW9uEhkKDGNvbm5lY3Rvcl9pZBgCIAEoCUID4EECEjwKCWNvbm5lY3Rv",
-            "chgDIAEoCzIkLmdvb2dsZS5jbG91ZC52cGNhY2Nlc3MudjEuQ29ubmVjdG9y",
-            "QgPgQQIiTwoTR2V0Q29ubmVjdG9yUmVxdWVzdBI4CgRuYW1lGAEgASgJQirg",
-            "QQL6QSQKInZwY2FjY2Vzcy5nb29nbGVhcGlzLmNvbS9Db25uZWN0b3IieQoV",
-            "TGlzdENvbm5lY3RvcnNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEj",
-            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9z",
-            "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiawoWTGlzdENvbm5lY3Rv",
-            "cnNSZXNwb25zZRI4Cgpjb25uZWN0b3JzGAEgAygLMiQuZ29vZ2xlLmNsb3Vk",
-            "LnZwY2FjY2Vzcy52MS5Db25uZWN0b3ISFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIlIKFkRlbGV0ZUNvbm5lY3RvclJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq",
-            "4EEC+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yIs0B",
-            "ChFPcGVyYXRpb25NZXRhZGF0YRITCgZtZXRob2QYASABKAlCA+BBAxI0Cgtj",
-            "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI6CgZ0YXJnZXQYBSABKAlCKuBBA/pBJAoidnBjYWNjZXNz",
-            "Lmdvb2dsZWFwaXMuY29tL0Nvbm5lY3RvcjL8BgoQVnBjQWNjZXNzU2Vydmlj",
-            "ZRLoAQoPQ3JlYXRlQ29ubmVjdG9yEjEuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vz",
-            "cy52MS5DcmVhdGVDb25uZWN0b3JSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiKCAYLT5JMCOyIuL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vY29ubmVjdG9yczoJY29ubmVjdG9y2kEdcGFyZW50",
-            "LGNvbm5lY3Rvcl9pZCxjb25uZWN0b3LKQR4KCUNvbm5lY3RvchIRT3BlcmF0",
-            "aW9uTWV0YWRhdGESowEKDEdldENvbm5lY3RvchIuLmdvb2dsZS5jbG91ZC52",
-            "cGNhY2Nlc3MudjEuR2V0Q29ubmVjdG9yUmVxdWVzdBokLmdvb2dsZS5jbG91",
-            "ZC52cGNhY2Nlc3MudjEuQ29ubmVjdG9yIj2C0+STAjASLi92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3RvcnMvKn3aQQRuYW1lErYB",
-            "Cg5MaXN0Q29ubmVjdG9ycxIwLmdvb2dsZS5jbG91ZC52cGNhY2Nlc3MudjEu",
-            "TGlzdENvbm5lY3RvcnNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vz",
-            "cy52MS5MaXN0Q29ubmVjdG9yc1Jlc3BvbnNlIj+C0+STAjASLi92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3RvcnPaQQZwYXJl",
-            "bnQSzwEKD0RlbGV0ZUNvbm5lY3RvchIxLmdvb2dsZS5jbG91ZC52cGNhY2Nl",
-            "c3MudjEuRGVsZXRlQ29ubmVjdG9yUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iaoLT5JMCMCouL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovY29ubmVjdG9ycy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGEaTMpBGHZwY2FjY2Vz",
-            "cy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1CzAEKHWNvbS5nb29nbGUuY2xvdWQudnBj",
-            "YWNjZXNzLnYxQg5WcGNBY2Nlc3NQcm90b1ABWkJnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3ZwY2FjY2Vzcy92MTt2cGNh",
-            "Y2Nlc3OqAhlHb29nbGUuQ2xvdWQuVnBjQWNjZXNzLlYxygIZR29vZ2xlXENs",
-            "b3VkXFZwY0FjY2Vzc1xWMeoCHEdvb2dsZTo6Q2xvdWQ6OlZwY0FjY2Vzczo6",
-            "VjFiBnByb3RvMw=="));
+            "Y2xvdWQudnBjYWNjZXNzLnYxLkNvbm5lY3Rvci5TdWJuZXQSFAoMbWFjaGlu",
+            "ZV90eXBlGAogASgJEhUKDW1pbl9pbnN0YW5jZXMYCyABKAUSFQoNbWF4X2lu",
+            "c3RhbmNlcxgMIAEoBRoqCgZTdWJuZXQSDAoEbmFtZRgBIAEoCRISCgpwcm9q",
+            "ZWN0X2lkGAIgASgJIl4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERFTEVUSU5HEAMSCQoFRVJS",
+            "T1IQBBIMCghVUERBVElORxAFOmfqQWQKInZwY2FjY2Vzcy5nb29nbGVhcGlz",
+            "LmNvbS9Db25uZWN0b3ISPnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9jb25uZWN0b3JzL3tjb25uZWN0b3J9IqwBChZDcmVhdGVD",
+            "b25uZWN0b3JSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2Nh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGQoMY29ubmVjdG9yX2lk",
+            "GAIgASgJQgPgQQISPAoJY29ubmVjdG9yGAMgASgLMiQuZ29vZ2xlLmNsb3Vk",
+            "LnZwY2FjY2Vzcy52MS5Db25uZWN0b3JCA+BBAiJPChNHZXRDb25uZWN0b3JS",
+            "ZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoidnBjYWNjZXNzLmdvb2ds",
+            "ZWFwaXMuY29tL0Nvbm5lY3RvciJ5ChVMaXN0Q29ubmVjdG9yc1JlcXVlc3QS",
+            "OQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlz",
+            "LmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
+            "bhgDIAEoCSJrChZMaXN0Q29ubmVjdG9yc1Jlc3BvbnNlEjgKCmNvbm5lY3Rv",
+            "cnMYASADKAsyJC5nb29nbGUuY2xvdWQudnBjYWNjZXNzLnYxLkNvbm5lY3Rv",
+            "chIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiUgoWRGVsZXRlQ29ubmVjdG9y",
+            "UmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKInZwY2FjY2Vzcy5nb29n",
+            "bGVhcGlzLmNvbS9Db25uZWN0b3IizQEKEU9wZXJhdGlvbk1ldGFkYXRhEhMK",
+            "Bm1ldGhvZBgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjoKBnRhcmdldBgF",
+            "IAEoCUIq4EED+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVj",
+            "dG9yMvwGChBWcGNBY2Nlc3NTZXJ2aWNlEugBCg9DcmVhdGVDb25uZWN0b3IS",
+            "MS5nb29nbGUuY2xvdWQudnBjYWNjZXNzLnYxLkNyZWF0ZUNvbm5lY3RvclJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBgtPkkwI7",
+            "Ii4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb25uZWN0",
+            "b3JzOgljb25uZWN0b3LaQR1wYXJlbnQsY29ubmVjdG9yX2lkLGNvbm5lY3Rv",
+            "cspBHgoJQ29ubmVjdG9yEhFPcGVyYXRpb25NZXRhZGF0YRKjAQoMR2V0Q29u",
+            "bmVjdG9yEi4uZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5HZXRDb25uZWN0",
+            "b3JSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5Db25uZWN0",
+            "b3IiPYLT5JMCMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "Y29ubmVjdG9ycy8qfdpBBG5hbWUStgEKDkxpc3RDb25uZWN0b3JzEjAuZ29v",
+            "Z2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5MaXN0Q29ubmVjdG9yc1JlcXVlc3Qa",
+            "MS5nb29nbGUuY2xvdWQudnBjYWNjZXNzLnYxLkxpc3RDb25uZWN0b3JzUmVz",
+            "cG9uc2UiP4LT5JMCMBIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vY29ubmVjdG9yc9pBBnBhcmVudBLPAQoPRGVsZXRlQ29ubmVjdG9y",
+            "EjEuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5EZWxldGVDb25uZWN0b3JS",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJqgtPkkwIw",
+            "Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0b3Jz",
+            "Lyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRp",
+            "b25NZXRhZGF0YRpMykEYdnBjYWNjZXNzLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULM",
+            "AQodY29tLmdvb2dsZS5jbG91ZC52cGNhY2Nlc3MudjFCDlZwY0FjY2Vzc1By",
+            "b3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvdnBjYWNjZXNzL3YxO3ZwY2FjY2Vzc6oCGUdvb2dsZS5DbG91ZC5W",
+            "cGNBY2Nlc3MuVjHKAhlHb29nbGVcQ2xvdWRcVnBjQWNjZXNzXFYx6gIcR29v",
+            "Z2xlOjpDbG91ZDo6VnBjQWNjZXNzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.Connector), global::Google.Cloud.VpcAccess.V1.Connector.Parser, new[]{ "Name", "Network", "IpCidrRange", "State", "MinThroughput", "MaxThroughput", "ConnectedProjects", "Subnet" }, null, new[]{ typeof(global::Google.Cloud.VpcAccess.V1.Connector.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet), global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet.Parser, new[]{ "Name", "ProjectId" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.Connector), global::Google.Cloud.VpcAccess.V1.Connector.Parser, new[]{ "Name", "Network", "IpCidrRange", "State", "MinThroughput", "MaxThroughput", "ConnectedProjects", "Subnet", "MachineType", "MinInstances", "MaxInstances" }, null, new[]{ typeof(global::Google.Cloud.VpcAccess.V1.Connector.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet), global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet.Parser, new[]{ "Name", "ProjectId" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.CreateConnectorRequest), global::Google.Cloud.VpcAccess.V1.CreateConnectorRequest.Parser, new[]{ "Parent", "ConnectorId", "Connector" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.GetConnectorRequest), global::Google.Cloud.VpcAccess.V1.GetConnectorRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VpcAccess.V1.ListConnectorsRequest), global::Google.Cloud.VpcAccess.V1.ListConnectorsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
@@ -145,6 +146,9 @@ namespace Google.Cloud.VpcAccess.V1 {
       maxThroughput_ = other.maxThroughput_;
       connectedProjects_ = other.connectedProjects_.Clone();
       subnet_ = other.subnet_ != null ? other.subnet_.Clone() : null;
+      machineType_ = other.machineType_;
+      minInstances_ = other.minInstances_;
+      maxInstances_ = other.maxInstances_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -234,7 +238,7 @@ namespace Google.Cloud.VpcAccess.V1 {
     public const int MaxThroughputFieldNumber = 6;
     private int maxThroughput_;
     /// <summary>
-    /// Maximum throughput of the connector in Mbps. Default is 200, max is 1000.
+    /// Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -274,6 +278,51 @@ namespace Google.Cloud.VpcAccess.V1 {
       }
     }
 
+    /// <summary>Field number for the "machine_type" field.</summary>
+    public const int MachineTypeFieldNumber = 10;
+    private string machineType_ = "";
+    /// <summary>
+    /// Machine type of VM Instance underlying connector. Default is e2-micro
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MachineType {
+      get { return machineType_; }
+      set {
+        machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "min_instances" field.</summary>
+    public const int MinInstancesFieldNumber = 11;
+    private int minInstances_;
+    /// <summary>
+    /// Minimum value of instances in autoscaling group underlying the connector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinInstances {
+      get { return minInstances_; }
+      set {
+        minInstances_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_instances" field.</summary>
+    public const int MaxInstancesFieldNumber = 12;
+    private int maxInstances_;
+    /// <summary>
+    /// Maximum value of instances in autoscaling group underlying the connector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxInstances {
+      get { return maxInstances_; }
+      set {
+        maxInstances_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -297,6 +346,9 @@ namespace Google.Cloud.VpcAccess.V1 {
       if (MaxThroughput != other.MaxThroughput) return false;
       if(!connectedProjects_.Equals(other.connectedProjects_)) return false;
       if (!object.Equals(Subnet, other.Subnet)) return false;
+      if (MachineType != other.MachineType) return false;
+      if (MinInstances != other.MinInstances) return false;
+      if (MaxInstances != other.MaxInstances) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -312,6 +364,9 @@ namespace Google.Cloud.VpcAccess.V1 {
       if (MaxThroughput != 0) hash ^= MaxThroughput.GetHashCode();
       hash ^= connectedProjects_.GetHashCode();
       if (subnet_ != null) hash ^= Subnet.GetHashCode();
+      if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
+      if (MinInstances != 0) hash ^= MinInstances.GetHashCode();
+      if (MaxInstances != 0) hash ^= MaxInstances.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -359,6 +414,18 @@ namespace Google.Cloud.VpcAccess.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Subnet);
       }
+      if (MachineType.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(MachineType);
+      }
+      if (MinInstances != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(MinInstances);
+      }
+      if (MaxInstances != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(MaxInstances);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -398,6 +465,18 @@ namespace Google.Cloud.VpcAccess.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Subnet);
       }
+      if (MachineType.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(MachineType);
+      }
+      if (MinInstances != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(MinInstances);
+      }
+      if (MaxInstances != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(MaxInstances);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -429,6 +508,15 @@ namespace Google.Cloud.VpcAccess.V1 {
       size += connectedProjects_.CalculateSize(_repeated_connectedProjects_codec);
       if (subnet_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Subnet);
+      }
+      if (MachineType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
+      }
+      if (MinInstances != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstances);
+      }
+      if (MaxInstances != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstances);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -466,6 +554,15 @@ namespace Google.Cloud.VpcAccess.V1 {
           Subnet = new global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet();
         }
         Subnet.MergeFrom(other.Subnet);
+      }
+      if (other.MachineType.Length != 0) {
+        MachineType = other.MachineType;
+      }
+      if (other.MinInstances != 0) {
+        MinInstances = other.MinInstances;
+      }
+      if (other.MaxInstances != 0) {
+        MaxInstances = other.MaxInstances;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -517,6 +614,18 @@ namespace Google.Cloud.VpcAccess.V1 {
             input.ReadMessage(Subnet);
             break;
           }
+          case 82: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 88: {
+            MinInstances = input.ReadInt32();
+            break;
+          }
+          case 96: {
+            MaxInstances = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -565,6 +674,18 @@ namespace Google.Cloud.VpcAccess.V1 {
               Subnet = new global::Google.Cloud.VpcAccess.V1.Connector.Types.Subnet();
             }
             input.ReadMessage(Subnet);
+            break;
+          }
+          case 82: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 88: {
+            MinInstances = input.ReadInt32();
+            break;
+          }
+          case 96: {
+            MaxInstances = input.ReadInt32();
             break;
           }
         }
