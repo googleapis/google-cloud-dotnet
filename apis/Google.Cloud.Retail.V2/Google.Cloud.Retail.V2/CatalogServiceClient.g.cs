@@ -52,6 +52,13 @@ namespace Google.Cloud.Retail.V2
             UpdateCatalogSettings = existing.UpdateCatalogSettings;
             SetDefaultBranchSettings = existing.SetDefaultBranchSettings;
             GetDefaultBranchSettings = existing.GetDefaultBranchSettings;
+            GetCompletionConfigSettings = existing.GetCompletionConfigSettings;
+            UpdateCompletionConfigSettings = existing.UpdateCompletionConfigSettings;
+            GetAttributesConfigSettings = existing.GetAttributesConfigSettings;
+            UpdateAttributesConfigSettings = existing.UpdateAttributesConfigSettings;
+            AddCatalogAttributeSettings = existing.AddCatalogAttributeSettings;
+            RemoveCatalogAttributeSettings = existing.RemoveCatalogAttributeSettings;
+            ReplaceCatalogAttributeSettings = existing.ReplaceCatalogAttributeSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -141,6 +148,157 @@ namespace Google.Cloud.Retail.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDefaultBranchSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetCompletionConfig</c> and <c>CatalogServiceClient.GetCompletionConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCompletionConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.UpdateCompletionConfig</c> and <c>CatalogServiceClient.UpdateCompletionConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCompletionConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetAttributesConfig</c> and <c>CatalogServiceClient.GetAttributesConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAttributesConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.UpdateAttributesConfig</c> and <c>CatalogServiceClient.UpdateAttributesConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAttributesConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.AddCatalogAttribute</c> and <c>CatalogServiceClient.AddCatalogAttributeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddCatalogAttributeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.RemoveCatalogAttribute</c> and <c>CatalogServiceClient.RemoveCatalogAttributeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveCatalogAttributeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.ReplaceCatalogAttribute</c> and <c>CatalogServiceClient.ReplaceCatalogAttributeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReplaceCatalogAttributeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1068,6 +1226,628 @@ namespace Google.Cloud.Retail.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(CatalogName catalog, st::CancellationToken cancellationToken) =>
             GetDefaultBranchAsync(catalog, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompletionConfig GetCompletionConfig(GetCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(GetCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(GetCompletionConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetCompletionConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompletionConfig GetCompletionConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCompletionConfig(new GetCompletionConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCompletionConfigAsync(new GetCompletionConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCompletionConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompletionConfig GetCompletionConfig(CompletionConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCompletionConfig(new GetCompletionConfigRequest
+            {
+                CompletionConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(CompletionConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCompletionConfigAsync(new GetCompletionConfigRequest
+            {
+                CompletionConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full CompletionConfig resource name. Format:
+        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> GetCompletionConfigAsync(CompletionConfigName name, st::CancellationToken cancellationToken) =>
+            GetCompletionConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompletionConfig UpdateCompletionConfig(UpdateCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> UpdateCompletionConfigAsync(UpdateCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> UpdateCompletionConfigAsync(UpdateCompletionConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCompletionConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="completionConfig">
+        /// Required. The [CompletionConfig][google.cloud.retail.v2.CompletionConfig]
+        /// to update.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig], then a
+        /// PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to
+        /// update does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to update. The
+        /// following are the only supported fields:
+        /// 
+        /// * [CompletionConfig.matching_order][google.cloud.retail.v2.CompletionConfig.matching_order]
+        /// * [CompletionConfig.max_suggestions][google.cloud.retail.v2.CompletionConfig.max_suggestions]
+        /// * [CompletionConfig.min_prefix_length][google.cloud.retail.v2.CompletionConfig.min_prefix_length]
+        /// * [CompletionConfig.auto_learning][google.cloud.retail.v2.CompletionConfig.auto_learning]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompletionConfig UpdateCompletionConfig(CompletionConfig completionConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCompletionConfig(new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = gax::GaxPreconditions.CheckNotNull(completionConfig, nameof(completionConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="completionConfig">
+        /// Required. The [CompletionConfig][google.cloud.retail.v2.CompletionConfig]
+        /// to update.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig], then a
+        /// PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to
+        /// update does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to update. The
+        /// following are the only supported fields:
+        /// 
+        /// * [CompletionConfig.matching_order][google.cloud.retail.v2.CompletionConfig.matching_order]
+        /// * [CompletionConfig.max_suggestions][google.cloud.retail.v2.CompletionConfig.max_suggestions]
+        /// * [CompletionConfig.min_prefix_length][google.cloud.retail.v2.CompletionConfig.min_prefix_length]
+        /// * [CompletionConfig.auto_learning][google.cloud.retail.v2.CompletionConfig.auto_learning]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> UpdateCompletionConfigAsync(CompletionConfig completionConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCompletionConfigAsync(new UpdateCompletionConfigRequest
+            {
+                CompletionConfig = gax::GaxPreconditions.CheckNotNull(completionConfig, nameof(completionConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="completionConfig">
+        /// Required. The [CompletionConfig][google.cloud.retail.v2.CompletionConfig]
+        /// to update.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig], then a
+        /// PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to
+        /// update does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [CompletionConfig][google.cloud.retail.v2.CompletionConfig] to update. The
+        /// following are the only supported fields:
+        /// 
+        /// * [CompletionConfig.matching_order][google.cloud.retail.v2.CompletionConfig.matching_order]
+        /// * [CompletionConfig.max_suggestions][google.cloud.retail.v2.CompletionConfig.max_suggestions]
+        /// * [CompletionConfig.min_prefix_length][google.cloud.retail.v2.CompletionConfig.min_prefix_length]
+        /// * [CompletionConfig.auto_learning][google.cloud.retail.v2.CompletionConfig.auto_learning]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompletionConfig> UpdateCompletionConfigAsync(CompletionConfig completionConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCompletionConfigAsync(completionConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig GetAttributesConfig(GetAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(GetAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(GetAttributesConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetAttributesConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig GetAttributesConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributesConfig(new GetAttributesConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributesConfigAsync(new GetAttributesConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAttributesConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig GetAttributesConfig(AttributesConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributesConfig(new GetAttributesConfigRequest
+            {
+                AttributesConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(AttributesConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttributesConfigAsync(new GetAttributesConfigRequest
+            {
+                AttributesConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full AttributesConfig resource name. Format:
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> GetAttributesConfigAsync(AttributesConfigName name, st::CancellationToken cancellationToken) =>
+            GetAttributesConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig UpdateAttributesConfig(UpdateAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> UpdateAttributesConfigAsync(UpdateAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> UpdateAttributesConfigAsync(UpdateAttributesConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAttributesConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="attributesConfig">
+        /// Required. The [AttributesConfig][google.cloud.retail.v2.AttributesConfig]
+        /// to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] to update. The
+        /// following is the only supported field:
+        /// 
+        /// * [AttributesConfig.catalog_attributes][google.cloud.retail.v2.AttributesConfig.catalog_attributes]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig UpdateAttributesConfig(AttributesConfig attributesConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAttributesConfig(new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = gax::GaxPreconditions.CheckNotNull(attributesConfig, nameof(attributesConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="attributesConfig">
+        /// Required. The [AttributesConfig][google.cloud.retail.v2.AttributesConfig]
+        /// to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] to update. The
+        /// following is the only supported field:
+        /// 
+        /// * [AttributesConfig.catalog_attributes][google.cloud.retail.v2.AttributesConfig.catalog_attributes]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> UpdateAttributesConfigAsync(AttributesConfig attributesConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAttributesConfigAsync(new UpdateAttributesConfigRequest
+            {
+                AttributesConfig = gax::GaxPreconditions.CheckNotNull(attributesConfig, nameof(attributesConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="attributesConfig">
+        /// Required. The [AttributesConfig][google.cloud.retail.v2.AttributesConfig]
+        /// to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] to update. The
+        /// following is the only supported field:
+        /// 
+        /// * [AttributesConfig.catalog_attributes][google.cloud.retail.v2.AttributesConfig.catalog_attributes]
+        /// 
+        /// If not set, all supported fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> UpdateAttributesConfigAsync(AttributesConfig attributesConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAttributesConfigAsync(attributesConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+        /// already exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig AddCatalogAttribute(AddCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+        /// already exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> AddCatalogAttributeAsync(AddCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+        /// already exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> AddCatalogAttributeAsync(AddCatalogAttributeRequest request, st::CancellationToken cancellationToken) =>
+            AddCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// remove does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig RemoveCatalogAttribute(RemoveCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// remove does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> RemoveCatalogAttributeAsync(RemoveCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// remove does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> RemoveCatalogAttributeAsync(RemoveCatalogAttributeRequest request, st::CancellationToken cancellationToken) =>
+            RemoveCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Replaces the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+        /// catalog attribute with the same
+        /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// replace does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AttributesConfig ReplaceCatalogAttribute(ReplaceCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Replaces the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+        /// catalog attribute with the same
+        /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// replace does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> ReplaceCatalogAttributeAsync(ReplaceCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Replaces the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+        /// catalog attribute with the same
+        /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// replace does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AttributesConfig> ReplaceCatalogAttributeAsync(ReplaceCatalogAttributeRequest request, st::CancellationToken cancellationToken) =>
+            ReplaceCatalogAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CatalogService client wrapper implementation, for convenient use.</summary>
@@ -1083,6 +1863,20 @@ namespace Google.Cloud.Retail.V2
         private readonly gaxgrpc::ApiCall<SetDefaultBranchRequest, wkt::Empty> _callSetDefaultBranch;
 
         private readonly gaxgrpc::ApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse> _callGetDefaultBranch;
+
+        private readonly gaxgrpc::ApiCall<GetCompletionConfigRequest, CompletionConfig> _callGetCompletionConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateCompletionConfigRequest, CompletionConfig> _callUpdateCompletionConfig;
+
+        private readonly gaxgrpc::ApiCall<GetAttributesConfigRequest, AttributesConfig> _callGetAttributesConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateAttributesConfigRequest, AttributesConfig> _callUpdateAttributesConfig;
+
+        private readonly gaxgrpc::ApiCall<AddCatalogAttributeRequest, AttributesConfig> _callAddCatalogAttribute;
+
+        private readonly gaxgrpc::ApiCall<RemoveCatalogAttributeRequest, AttributesConfig> _callRemoveCatalogAttribute;
+
+        private readonly gaxgrpc::ApiCall<ReplaceCatalogAttributeRequest, AttributesConfig> _callReplaceCatalogAttribute;
 
         /// <summary>
         /// Constructs a client wrapper for the CatalogService service, with the specified gRPC client and settings.
@@ -1108,6 +1902,27 @@ namespace Google.Cloud.Retail.V2
             _callGetDefaultBranch = clientHelper.BuildApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse>("GetDefaultBranch", grpcClient.GetDefaultBranchAsync, grpcClient.GetDefaultBranch, effectiveSettings.GetDefaultBranchSettings).WithGoogleRequestParam("catalog", request => request.Catalog);
             Modify_ApiCall(ref _callGetDefaultBranch);
             Modify_GetDefaultBranchApiCall(ref _callGetDefaultBranch);
+            _callGetCompletionConfig = clientHelper.BuildApiCall<GetCompletionConfigRequest, CompletionConfig>("GetCompletionConfig", grpcClient.GetCompletionConfigAsync, grpcClient.GetCompletionConfig, effectiveSettings.GetCompletionConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCompletionConfig);
+            Modify_GetCompletionConfigApiCall(ref _callGetCompletionConfig);
+            _callUpdateCompletionConfig = clientHelper.BuildApiCall<UpdateCompletionConfigRequest, CompletionConfig>("UpdateCompletionConfig", grpcClient.UpdateCompletionConfigAsync, grpcClient.UpdateCompletionConfig, effectiveSettings.UpdateCompletionConfigSettings).WithGoogleRequestParam("completion_config.name", request => request.CompletionConfig?.Name);
+            Modify_ApiCall(ref _callUpdateCompletionConfig);
+            Modify_UpdateCompletionConfigApiCall(ref _callUpdateCompletionConfig);
+            _callGetAttributesConfig = clientHelper.BuildApiCall<GetAttributesConfigRequest, AttributesConfig>("GetAttributesConfig", grpcClient.GetAttributesConfigAsync, grpcClient.GetAttributesConfig, effectiveSettings.GetAttributesConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAttributesConfig);
+            Modify_GetAttributesConfigApiCall(ref _callGetAttributesConfig);
+            _callUpdateAttributesConfig = clientHelper.BuildApiCall<UpdateAttributesConfigRequest, AttributesConfig>("UpdateAttributesConfig", grpcClient.UpdateAttributesConfigAsync, grpcClient.UpdateAttributesConfig, effectiveSettings.UpdateAttributesConfigSettings).WithGoogleRequestParam("attributes_config.name", request => request.AttributesConfig?.Name);
+            Modify_ApiCall(ref _callUpdateAttributesConfig);
+            Modify_UpdateAttributesConfigApiCall(ref _callUpdateAttributesConfig);
+            _callAddCatalogAttribute = clientHelper.BuildApiCall<AddCatalogAttributeRequest, AttributesConfig>("AddCatalogAttribute", grpcClient.AddCatalogAttributeAsync, grpcClient.AddCatalogAttribute, effectiveSettings.AddCatalogAttributeSettings).WithGoogleRequestParam("attributes_config", request => request.AttributesConfig);
+            Modify_ApiCall(ref _callAddCatalogAttribute);
+            Modify_AddCatalogAttributeApiCall(ref _callAddCatalogAttribute);
+            _callRemoveCatalogAttribute = clientHelper.BuildApiCall<RemoveCatalogAttributeRequest, AttributesConfig>("RemoveCatalogAttribute", grpcClient.RemoveCatalogAttributeAsync, grpcClient.RemoveCatalogAttribute, effectiveSettings.RemoveCatalogAttributeSettings).WithGoogleRequestParam("attributes_config", request => request.AttributesConfig);
+            Modify_ApiCall(ref _callRemoveCatalogAttribute);
+            Modify_RemoveCatalogAttributeApiCall(ref _callRemoveCatalogAttribute);
+            _callReplaceCatalogAttribute = clientHelper.BuildApiCall<ReplaceCatalogAttributeRequest, AttributesConfig>("ReplaceCatalogAttribute", grpcClient.ReplaceCatalogAttributeAsync, grpcClient.ReplaceCatalogAttribute, effectiveSettings.ReplaceCatalogAttributeSettings).WithGoogleRequestParam("attributes_config", request => request.AttributesConfig);
+            Modify_ApiCall(ref _callReplaceCatalogAttribute);
+            Modify_ReplaceCatalogAttributeApiCall(ref _callReplaceCatalogAttribute);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1120,6 +1935,20 @@ namespace Google.Cloud.Retail.V2
         partial void Modify_SetDefaultBranchApiCall(ref gaxgrpc::ApiCall<SetDefaultBranchRequest, wkt::Empty> call);
 
         partial void Modify_GetDefaultBranchApiCall(ref gaxgrpc::ApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse> call);
+
+        partial void Modify_GetCompletionConfigApiCall(ref gaxgrpc::ApiCall<GetCompletionConfigRequest, CompletionConfig> call);
+
+        partial void Modify_UpdateCompletionConfigApiCall(ref gaxgrpc::ApiCall<UpdateCompletionConfigRequest, CompletionConfig> call);
+
+        partial void Modify_GetAttributesConfigApiCall(ref gaxgrpc::ApiCall<GetAttributesConfigRequest, AttributesConfig> call);
+
+        partial void Modify_UpdateAttributesConfigApiCall(ref gaxgrpc::ApiCall<UpdateAttributesConfigRequest, AttributesConfig> call);
+
+        partial void Modify_AddCatalogAttributeApiCall(ref gaxgrpc::ApiCall<AddCatalogAttributeRequest, AttributesConfig> call);
+
+        partial void Modify_RemoveCatalogAttributeApiCall(ref gaxgrpc::ApiCall<RemoveCatalogAttributeRequest, AttributesConfig> call);
+
+        partial void Modify_ReplaceCatalogAttributeApiCall(ref gaxgrpc::ApiCall<ReplaceCatalogAttributeRequest, AttributesConfig> call);
 
         partial void OnConstruction(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1136,6 +1965,20 @@ namespace Google.Cloud.Retail.V2
         partial void Modify_SetDefaultBranchRequest(ref SetDefaultBranchRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDefaultBranchRequest(ref GetDefaultBranchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCompletionConfigRequest(ref GetCompletionConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCompletionConfigRequest(ref UpdateCompletionConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAttributesConfigRequest(ref GetAttributesConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAttributesConfigRequest(ref UpdateAttributesConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddCatalogAttributeRequest(ref AddCatalogAttributeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveCatalogAttributeRequest(ref RemoveCatalogAttributeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReplaceCatalogAttributeRequest(ref ReplaceCatalogAttributeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all the [Catalog][google.cloud.retail.v2.Catalog]s associated with
@@ -1301,6 +2144,222 @@ namespace Google.Cloud.Retail.V2
         {
             Modify_GetDefaultBranchRequest(ref request, ref callSettings);
             return _callGetDefaultBranch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CompletionConfig GetCompletionConfig(GetCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCompletionConfigRequest(ref request, ref callSettings);
+            return _callGetCompletionConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a [CompletionConfig][google.cloud.retail.v2.CompletionConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CompletionConfig> GetCompletionConfigAsync(GetCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCompletionConfigRequest(ref request, ref callSettings);
+            return _callGetCompletionConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CompletionConfig UpdateCompletionConfig(UpdateCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCompletionConfigRequest(ref request, ref callSettings);
+            return _callUpdateCompletionConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [CompletionConfig][google.cloud.retail.v2.CompletionConfig]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CompletionConfig> UpdateCompletionConfigAsync(UpdateCompletionConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCompletionConfigRequest(ref request, ref callSettings);
+            return _callUpdateCompletionConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributesConfig GetAttributesConfig(GetAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttributesConfigRequest(ref request, ref callSettings);
+            return _callGetAttributesConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributesConfig> GetAttributesConfigAsync(GetAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttributesConfigRequest(ref request, ref callSettings);
+            return _callGetAttributesConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributesConfig UpdateAttributesConfig(UpdateAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAttributesConfigRequest(ref request, ref callSettings);
+            return _callUpdateAttributesConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// The catalog attributes in the request will be updated in the catalog, or
+        /// inserted if they do not exist. Existing catalog attributes not included in
+        /// the request will remain unchanged. Attributes that are assigned to
+        /// products, but do not exist at the catalog level, are always included in the
+        /// response. The product attribute is assigned default values for missing
+        /// catalog attribute fields, e.g., searchable and dynamic facetable options.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributesConfig> UpdateAttributesConfigAsync(UpdateAttributesConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAttributesConfigRequest(ref request, ref callSettings);
+            return _callUpdateAttributesConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+        /// already exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributesConfig AddCatalogAttribute(AddCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddCatalogAttributeRequest(ref request, ref callSettings);
+            return _callAddCatalogAttribute.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to add
+        /// already exists, an ALREADY_EXISTS error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributesConfig> AddCatalogAttributeAsync(AddCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddCatalogAttributeRequest(ref request, ref callSettings);
+            return _callAddCatalogAttribute.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// remove does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributesConfig RemoveCatalogAttribute(RemoveCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveCatalogAttributeRequest(ref request, ref callSettings);
+            return _callRemoveCatalogAttribute.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] from the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// remove does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributesConfig> RemoveCatalogAttributeAsync(RemoveCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveCatalogAttributeRequest(ref request, ref callSettings);
+            return _callRemoveCatalogAttribute.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Replaces the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+        /// catalog attribute with the same
+        /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// replace does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AttributesConfig ReplaceCatalogAttribute(ReplaceCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReplaceCatalogAttributeRequest(ref request, ref callSettings);
+            return _callReplaceCatalogAttribute.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Replaces the specified
+        /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] in the
+        /// [AttributesConfig][google.cloud.retail.v2.AttributesConfig] by updating the
+        /// catalog attribute with the same
+        /// [CatalogAttribute.key][google.cloud.retail.v2.CatalogAttribute.key].
+        /// 
+        /// If the [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] to
+        /// replace does not exist, a NOT_FOUND error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AttributesConfig> ReplaceCatalogAttributeAsync(ReplaceCatalogAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReplaceCatalogAttributeRequest(ref request, ref callSettings);
+            return _callReplaceCatalogAttribute.Async(request, callSettings);
         }
     }
 

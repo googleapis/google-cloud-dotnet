@@ -577,6 +577,683 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_sync",
+      "title": "GetCompletionConfigRequestObject",
+      "description": "Snippet for GetCompletionConfig",
+      "file": "CatalogServiceClient.GetCompletionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_async",
+      "title": "GetCompletionConfigRequestObjectAsync",
+      "description": "Snippet for GetCompletionConfigAsync",
+      "file": "CatalogServiceClient.GetCompletionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_sync_flattened",
+      "title": "GetCompletionConfig",
+      "description": "Snippet for GetCompletionConfig",
+      "file": "CatalogServiceClient.GetCompletionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_async_flattened",
+      "title": "GetCompletionConfigAsync",
+      "description": "Snippet for GetCompletionConfigAsync",
+      "file": "CatalogServiceClient.GetCompletionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_sync_flattened_resourceNames",
+      "title": "GetCompletionConfigResourceNames",
+      "description": "Snippet for GetCompletionConfig",
+      "file": "CatalogServiceClient.GetCompletionConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetCompletionConfig_async_flattened_resourceNames",
+      "title": "GetCompletionConfigResourceNamesAsync",
+      "description": "Snippet for GetCompletionConfigAsync",
+      "file": "CatalogServiceClient.GetCompletionConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompletionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateCompletionConfig_sync",
+      "title": "UpdateCompletionConfigRequestObject",
+      "description": "Snippet for UpdateCompletionConfig",
+      "file": "CatalogServiceClient.UpdateCompletionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompletionConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfig",
+        "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateCompletionConfig_async",
+      "title": "UpdateCompletionConfigRequestObjectAsync",
+      "description": "Snippet for UpdateCompletionConfigAsync",
+      "file": "CatalogServiceClient.UpdateCompletionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompletionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateCompletionConfig_sync_flattened",
+      "title": "UpdateCompletionConfig",
+      "description": "Snippet for UpdateCompletionConfig",
+      "file": "CatalogServiceClient.UpdateCompletionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompletionConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfig",
+        "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateCompletionConfig_async_flattened",
+      "title": "UpdateCompletionConfigAsync",
+      "description": "Snippet for UpdateCompletionConfigAsync",
+      "file": "CatalogServiceClient.UpdateCompletionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompletionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCompletionConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateCompletionConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_sync",
+      "title": "GetAttributesConfigRequestObject",
+      "description": "Snippet for GetAttributesConfig",
+      "file": "CatalogServiceClient.GetAttributesConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_async",
+      "title": "GetAttributesConfigRequestObjectAsync",
+      "description": "Snippet for GetAttributesConfigAsync",
+      "file": "CatalogServiceClient.GetAttributesConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_sync_flattened",
+      "title": "GetAttributesConfig",
+      "description": "Snippet for GetAttributesConfig",
+      "file": "CatalogServiceClient.GetAttributesConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_async_flattened",
+      "title": "GetAttributesConfigAsync",
+      "description": "Snippet for GetAttributesConfigAsync",
+      "file": "CatalogServiceClient.GetAttributesConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_sync_flattened_resourceNames",
+      "title": "GetAttributesConfigResourceNames",
+      "description": "Snippet for GetAttributesConfig",
+      "file": "CatalogServiceClient.GetAttributesConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_GetAttributesConfig_async_flattened_resourceNames",
+      "title": "GetAttributesConfigResourceNamesAsync",
+      "description": "Snippet for GetAttributesConfigAsync",
+      "file": "CatalogServiceClient.GetAttributesConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttributesConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.GetAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateAttributesConfig_sync",
+      "title": "UpdateAttributesConfigRequestObject",
+      "description": "Snippet for UpdateAttributesConfig",
+      "file": "CatalogServiceClient.UpdateAttributesConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributesConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfig",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateAttributesConfig_async",
+      "title": "UpdateAttributesConfigRequestObjectAsync",
+      "description": "Snippet for UpdateAttributesConfigAsync",
+      "file": "CatalogServiceClient.UpdateAttributesConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributesConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateAttributesConfig_sync_flattened",
+      "title": "UpdateAttributesConfig",
+      "description": "Snippet for UpdateAttributesConfig",
+      "file": "CatalogServiceClient.UpdateAttributesConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributesConfig",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfig",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_UpdateAttributesConfig_async_flattened",
+      "title": "UpdateAttributesConfigAsync",
+      "description": "Snippet for UpdateAttributesConfigAsync",
+      "file": "CatalogServiceClient.UpdateAttributesConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttributesConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAttributesConfig",
+          "fullName": "google.cloud.retail.v2.CatalogService.UpdateAttributesConfig",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_AddCatalogAttribute_sync",
+      "title": "AddCatalogAttributeRequestObject",
+      "description": "Snippet for AddCatalogAttribute",
+      "file": "CatalogServiceClient.AddCatalogAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddCatalogAttribute",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.AddCatalogAttribute",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "AddCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.AddCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_AddCatalogAttribute_async",
+      "title": "AddCatalogAttributeRequestObjectAsync",
+      "description": "Snippet for AddCatalogAttributeAsync",
+      "file": "CatalogServiceClient.AddCatalogAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddCatalogAttributeAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.AddCatalogAttributeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "AddCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.AddCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_RemoveCatalogAttribute_sync",
+      "title": "RemoveCatalogAttributeRequestObject",
+      "description": "Snippet for RemoveCatalogAttribute",
+      "file": "CatalogServiceClient.RemoveCatalogAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveCatalogAttribute",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.RemoveCatalogAttribute",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.RemoveCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_RemoveCatalogAttribute_async",
+      "title": "RemoveCatalogAttributeRequestObjectAsync",
+      "description": "Snippet for RemoveCatalogAttributeAsync",
+      "file": "CatalogServiceClient.RemoveCatalogAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveCatalogAttributeAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.RemoveCatalogAttributeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.RemoveCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_ReplaceCatalogAttribute_sync",
+      "title": "ReplaceCatalogAttributeRequestObject",
+      "description": "Snippet for ReplaceCatalogAttribute",
+      "file": "CatalogServiceClient.ReplaceCatalogAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceCatalogAttribute",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ReplaceCatalogAttribute",
+        "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ReplaceCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.ReplaceCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_CatalogService_ReplaceCatalogAttribute_async",
+      "title": "ReplaceCatalogAttributeRequestObjectAsync",
+      "description": "Snippet for ReplaceCatalogAttributeAsync",
+      "file": "CatalogServiceClient.ReplaceCatalogAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceCatalogAttributeAsync",
+        "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ReplaceCatalogAttributeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ReplaceCatalogAttribute",
+          "fullName": "google.cloud.retail.v2.CatalogService.ReplaceCatalogAttribute",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.retail.v2.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "retail_v2_generated_CompletionService_CompleteQuery_sync",
       "title": "CompleteQueryRequestObject",
       "description": "Snippet for CompleteQuery",
@@ -680,6 +1357,727 @@
         }
       },
       "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_sync",
+      "title": "CreateControlRequestObject",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_async",
+      "title": "CreateControlRequestObjectAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_sync_flattened",
+      "title": "CreateControl",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_async_flattened",
+      "title": "CreateControlAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_sync_flattened_resourceNames",
+      "title": "CreateControlResourceNames",
+      "description": "Snippet for CreateControl",
+      "file": "ControlServiceClient.CreateControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_CreateControl_async_flattened_resourceNames",
+      "title": "CreateControlResourceNamesAsync",
+      "description": "Snippet for CreateControlAsync",
+      "file": "ControlServiceClient.CreateControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "CreateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.CreateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_sync",
+      "title": "DeleteControlRequestObject",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_async",
+      "title": "DeleteControlRequestObjectAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_sync_flattened",
+      "title": "DeleteControl",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_async_flattened",
+      "title": "DeleteControlAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_sync_flattened_resourceNames",
+      "title": "DeleteControlResourceNames",
+      "description": "Snippet for DeleteControl",
+      "file": "ControlServiceClient.DeleteControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_DeleteControl_async_flattened_resourceNames",
+      "title": "DeleteControlResourceNamesAsync",
+      "description": "Snippet for DeleteControlAsync",
+      "file": "ControlServiceClient.DeleteControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteControl",
+          "fullName": "google.cloud.retail.v2.ControlService.DeleteControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_UpdateControl_sync",
+      "title": "UpdateControlRequestObject",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_UpdateControl_async",
+      "title": "UpdateControlRequestObjectAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_UpdateControl_sync_flattened",
+      "title": "UpdateControl",
+      "description": "Snippet for UpdateControl",
+      "file": "ControlServiceClient.UpdateControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_UpdateControl_async_flattened",
+      "title": "UpdateControlAsync",
+      "description": "Snippet for UpdateControlAsync",
+      "file": "ControlServiceClient.UpdateControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateControl",
+          "fullName": "google.cloud.retail.v2.ControlService.UpdateControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_sync",
+      "title": "GetControlRequestObject",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_async",
+      "title": "GetControlRequestObjectAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_sync_flattened",
+      "title": "GetControl",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_async_flattened",
+      "title": "GetControlAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_sync_flattened_resourceNames",
+      "title": "GetControlResourceNames",
+      "description": "Snippet for GetControl",
+      "file": "ControlServiceClient.GetControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControl",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "resultType": "Google.Cloud.Retail.V2.Control",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_GetControl_async_flattened_resourceNames",
+      "title": "GetControlResourceNamesAsync",
+      "description": "Snippet for GetControlAsync",
+      "file": "ControlServiceClient.GetControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "GetControl",
+          "fullName": "google.cloud.retail.v2.ControlService.GetControl",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_sync",
+      "title": "ListControlsRequestObject",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_async",
+      "title": "ListControlsRequestObjectAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_sync_flattened",
+      "title": "ListControls",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_async_flattened",
+      "title": "ListControlsAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_sync_flattened_resourceNames",
+      "title": "ListControlsResourceNames",
+      "description": "Snippet for ListControls",
+      "file": "ControlServiceClient.ListControlsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ControlService_ListControls_async_flattened_resourceNames",
+      "title": "ListControlsResourceNamesAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "ControlServiceClient.ListControlsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
+        "client": {
+          "shortName": "ControlServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.retail.v2.ControlService.ListControls",
+          "service": {
+            "shortName": "ControlService",
+            "fullName": "google.cloud.retail.v2.ControlService"
+          }
+        }
+      },
       "origin": "API_DEFINITION"
     },
     {
@@ -2284,6 +3682,1037 @@
         }
       },
       "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_sync",
+      "title": "CreateServingConfigRequestObject",
+      "description": "Snippet for CreateServingConfig",
+      "file": "ServingConfigServiceClient.CreateServingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_async",
+      "title": "CreateServingConfigRequestObjectAsync",
+      "description": "Snippet for CreateServingConfigAsync",
+      "file": "ServingConfigServiceClient.CreateServingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_sync_flattened",
+      "title": "CreateServingConfig",
+      "description": "Snippet for CreateServingConfig",
+      "file": "ServingConfigServiceClient.CreateServingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_async_flattened",
+      "title": "CreateServingConfigAsync",
+      "description": "Snippet for CreateServingConfigAsync",
+      "file": "ServingConfigServiceClient.CreateServingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_sync_flattened_resourceNames",
+      "title": "CreateServingConfigResourceNames",
+      "description": "Snippet for CreateServingConfig",
+      "file": "ServingConfigServiceClient.CreateServingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_CreateServingConfig_async_flattened_resourceNames",
+      "title": "CreateServingConfigResourceNamesAsync",
+      "description": "Snippet for CreateServingConfigAsync",
+      "file": "ServingConfigServiceClient.CreateServingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.CreateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_sync",
+      "title": "DeleteServingConfigRequestObject",
+      "description": "Snippet for DeleteServingConfig",
+      "file": "ServingConfigServiceClient.DeleteServingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_async",
+      "title": "DeleteServingConfigRequestObjectAsync",
+      "description": "Snippet for DeleteServingConfigAsync",
+      "file": "ServingConfigServiceClient.DeleteServingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_sync_flattened",
+      "title": "DeleteServingConfig",
+      "description": "Snippet for DeleteServingConfig",
+      "file": "ServingConfigServiceClient.DeleteServingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_async_flattened",
+      "title": "DeleteServingConfigAsync",
+      "description": "Snippet for DeleteServingConfigAsync",
+      "file": "ServingConfigServiceClient.DeleteServingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_sync_flattened_resourceNames",
+      "title": "DeleteServingConfigResourceNames",
+      "description": "Snippet for DeleteServingConfig",
+      "file": "ServingConfigServiceClient.DeleteServingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_DeleteServingConfig_async_flattened_resourceNames",
+      "title": "DeleteServingConfigResourceNamesAsync",
+      "description": "Snippet for DeleteServingConfigAsync",
+      "file": "ServingConfigServiceClient.DeleteServingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.DeleteServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_UpdateServingConfig_sync",
+      "title": "UpdateServingConfigRequestObject",
+      "description": "Snippet for UpdateServingConfig",
+      "file": "ServingConfigServiceClient.UpdateServingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.UpdateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_UpdateServingConfig_async",
+      "title": "UpdateServingConfigRequestObjectAsync",
+      "description": "Snippet for UpdateServingConfigAsync",
+      "file": "ServingConfigServiceClient.UpdateServingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.UpdateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_UpdateServingConfig_sync_flattened",
+      "title": "UpdateServingConfig",
+      "description": "Snippet for UpdateServingConfig",
+      "file": "ServingConfigServiceClient.UpdateServingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.UpdateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_UpdateServingConfig_async_flattened",
+      "title": "UpdateServingConfigAsync",
+      "description": "Snippet for UpdateServingConfigAsync",
+      "file": "ServingConfigServiceClient.UpdateServingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.UpdateServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_sync",
+      "title": "GetServingConfigRequestObject",
+      "description": "Snippet for GetServingConfig",
+      "file": "ServingConfigServiceClient.GetServingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_async",
+      "title": "GetServingConfigRequestObjectAsync",
+      "description": "Snippet for GetServingConfigAsync",
+      "file": "ServingConfigServiceClient.GetServingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_sync_flattened",
+      "title": "GetServingConfig",
+      "description": "Snippet for GetServingConfig",
+      "file": "ServingConfigServiceClient.GetServingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_async_flattened",
+      "title": "GetServingConfigAsync",
+      "description": "Snippet for GetServingConfigAsync",
+      "file": "ServingConfigServiceClient.GetServingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_sync_flattened_resourceNames",
+      "title": "GetServingConfigResourceNames",
+      "description": "Snippet for GetServingConfig",
+      "file": "ServingConfigServiceClient.GetServingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfig",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_GetServingConfig_async_flattened_resourceNames",
+      "title": "GetServingConfigResourceNamesAsync",
+      "description": "Snippet for GetServingConfigAsync",
+      "file": "ServingConfigServiceClient.GetServingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServingConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetServingConfig",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.GetServingConfig",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_sync",
+      "title": "ListServingConfigsRequestObject",
+      "description": "Snippet for ListServingConfigs",
+      "file": "ServingConfigServiceClient.ListServingConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigs",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_async",
+      "title": "ListServingConfigsRequestObjectAsync",
+      "description": "Snippet for ListServingConfigsAsync",
+      "file": "ServingConfigServiceClient.ListServingConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_sync_flattened",
+      "title": "ListServingConfigs",
+      "description": "Snippet for ListServingConfigs",
+      "file": "ServingConfigServiceClient.ListServingConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigs",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_async_flattened",
+      "title": "ListServingConfigsAsync",
+      "description": "Snippet for ListServingConfigsAsync",
+      "file": "ServingConfigServiceClient.ListServingConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_sync_flattened_resourceNames",
+      "title": "ListServingConfigsResourceNames",
+      "description": "Snippet for ListServingConfigs",
+      "file": "ServingConfigServiceClient.ListServingConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigs",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_ListServingConfigs_async_flattened_resourceNames",
+      "title": "ListServingConfigsResourceNamesAsync",
+      "description": "Snippet for ListServingConfigsAsync",
+      "file": "ServingConfigServiceClient.ListServingConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServingConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListServingConfigs",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.ListServingConfigs",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_sync",
+      "title": "AddControlRequestObject",
+      "description": "Snippet for AddControl",
+      "file": "ServingConfigServiceClient.AddControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_async",
+      "title": "AddControlRequestObjectAsync",
+      "description": "Snippet for AddControlAsync",
+      "file": "ServingConfigServiceClient.AddControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_sync_flattened",
+      "title": "AddControl",
+      "description": "Snippet for AddControl",
+      "file": "ServingConfigServiceClient.AddControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_async_flattened",
+      "title": "AddControlAsync",
+      "description": "Snippet for AddControlAsync",
+      "file": "ServingConfigServiceClient.AddControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_sync_flattened_resourceNames",
+      "title": "AddControlResourceNames",
+      "description": "Snippet for AddControl",
+      "file": "ServingConfigServiceClient.AddControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_AddControl_async_flattened_resourceNames",
+      "title": "AddControlResourceNamesAsync",
+      "description": "Snippet for AddControlAsync",
+      "file": "ServingConfigServiceClient.AddControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "AddControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.AddControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_sync",
+      "title": "RemoveControlRequestObject",
+      "description": "Snippet for RemoveControl",
+      "file": "ServingConfigServiceClient.RemoveControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_async",
+      "title": "RemoveControlRequestObjectAsync",
+      "description": "Snippet for RemoveControlAsync",
+      "file": "ServingConfigServiceClient.RemoveControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_sync_flattened",
+      "title": "RemoveControl",
+      "description": "Snippet for RemoveControl",
+      "file": "ServingConfigServiceClient.RemoveControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_async_flattened",
+      "title": "RemoveControlAsync",
+      "description": "Snippet for RemoveControlAsync",
+      "file": "ServingConfigServiceClient.RemoveControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_sync_flattened_resourceNames",
+      "title": "RemoveControlResourceNames",
+      "description": "Snippet for RemoveControl",
+      "file": "ServingConfigServiceClient.RemoveControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControl",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "resultType": "Google.Cloud.Retail.V2.ServingConfig",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ServingConfigService_RemoveControl_async_flattened_resourceNames",
+      "title": "RemoveControlResourceNamesAsync",
+      "description": "Snippet for RemoveControlAsync",
+      "file": "ServingConfigServiceClient.RemoveControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveControlAsync",
+        "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
+        "client": {
+          "shortName": "ServingConfigServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveControl",
+          "fullName": "google.cloud.retail.v2.ServingConfigService.RemoveControl",
+          "service": {
+            "shortName": "ServingConfigService",
+            "fullName": "google.cloud.retail.v2.ServingConfigService"
+          }
+        }
+      },
       "origin": "API_DEFINITION"
     },
     {

@@ -502,9 +502,9 @@ namespace Google.Cloud.Retail.V2
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
-        /// Operation.response is of type ImportResponse. Note that it is
+        /// `Operation.response` is of type `ImportResponse`. Note that it is
         /// possible for a subset of the items to be successfully inserted.
-        /// Operation.metadata is of type ImportMetadata.
+        /// `Operation.metadata` is of type `ImportMetadata`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -517,9 +517,9 @@ namespace Google.Cloud.Retail.V2
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
-        /// Operation.response is of type ImportResponse. Note that it is
+        /// `Operation.response` is of type `ImportResponse`. Note that it is
         /// possible for a subset of the items to be successfully inserted.
-        /// Operation.metadata is of type ImportMetadata.
+        /// `Operation.metadata` is of type `ImportMetadata`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -532,9 +532,9 @@ namespace Google.Cloud.Retail.V2
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
-        /// Operation.response is of type ImportResponse. Note that it is
+        /// `Operation.response` is of type `ImportResponse`. Note that it is
         /// possible for a subset of the items to be successfully inserted.
-        /// Operation.metadata is of type ImportMetadata.
+        /// `Operation.metadata` is of type `ImportMetadata`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -819,9 +819,9 @@ namespace Google.Cloud.Retail.V2
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
-        /// Operation.response is of type ImportResponse. Note that it is
+        /// `Operation.response` is of type `ImportResponse`. Note that it is
         /// possible for a subset of the items to be successfully inserted.
-        /// Operation.metadata is of type ImportMetadata.
+        /// `Operation.metadata` is of type `ImportMetadata`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -837,9 +837,9 @@ namespace Google.Cloud.Retail.V2
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
         /// 
-        /// Operation.response is of type ImportResponse. Note that it is
+        /// `Operation.response` is of type `ImportResponse`. Note that it is
         /// possible for a subset of the items to be successfully inserted.
-        /// Operation.metadata is of type ImportMetadata.
+        /// `Operation.metadata` is of type `ImportMetadata`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

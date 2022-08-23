@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
+using gcrv = Google.Cloud.Retail.V2;
 
 namespace Google.Cloud.Retail.V2
 {
@@ -71,6 +72,69 @@ namespace Google.Cloud.Retail.V2
         {
             get => string.IsNullOrEmpty(Branch) ? null : BranchName.Parse(Branch, allowUnparsed: true);
             set => Branch = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCompletionConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::CompletionConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::CompletionConfigName CompletionConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::CompletionConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAttributesConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::AttributesConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::AttributesConfigName AttributesConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::AttributesConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddCatalogAttributeRequest
+    {
+        /// <summary>
+        /// <see cref="AttributesConfigName"/>-typed view over the <see cref="AttributesConfig"/> resource name
+        /// property.
+        /// </summary>
+        public AttributesConfigName AttributesConfigAsAttributesConfigName
+        {
+            get => string.IsNullOrEmpty(AttributesConfig) ? null : AttributesConfigName.Parse(AttributesConfig, allowUnparsed: true);
+            set => AttributesConfig = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoveCatalogAttributeRequest
+    {
+        /// <summary>
+        /// <see cref="AttributesConfigName"/>-typed view over the <see cref="AttributesConfig"/> resource name
+        /// property.
+        /// </summary>
+        public AttributesConfigName AttributesConfigAsAttributesConfigName
+        {
+            get => string.IsNullOrEmpty(AttributesConfig) ? null : AttributesConfigName.Parse(AttributesConfig, allowUnparsed: true);
+            set => AttributesConfig = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReplaceCatalogAttributeRequest
+    {
+        /// <summary>
+        /// <see cref="AttributesConfigName"/>-typed view over the <see cref="AttributesConfig"/> resource name
+        /// property.
+        /// </summary>
+        public AttributesConfigName AttributesConfigAsAttributesConfigName
+        {
+            get => string.IsNullOrEmpty(AttributesConfig) ? null : AttributesConfigName.Parse(AttributesConfig, allowUnparsed: true);
+            set => AttributesConfig = value?.ToString() ?? "";
         }
     }
 }

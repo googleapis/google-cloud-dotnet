@@ -26,23 +26,70 @@ namespace Google.Cloud.Retail.V2 {
           string.Concat(
             "CiRnb29nbGUvY2xvdWQvcmV0YWlsL3YyL2NhdGFsb2cucHJvdG8SFmdvb2ds",
             "ZS5jbG91ZC5yZXRhaWwudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iXgoSUHJvZHVjdExl",
-            "dmVsQ29uZmlnEh4KFmluZ2VzdGlvbl9wcm9kdWN0X3R5cGUYASABKAkSKAog",
-            "bWVyY2hhbnRfY2VudGVyX3Byb2R1Y3RfaWRfZmllbGQYAiABKAki7AEKB0Nh",
-            "dGFsb2cSFAoEbmFtZRgBIAEoCUIG4EEC4EEFEhwKDGRpc3BsYXlfbmFtZRgC",
-            "IAEoCUIG4EEC4EEFEk0KFHByb2R1Y3RfbGV2ZWxfY29uZmlnGAQgASgLMiou",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0TGV2ZWxDb25maWdCA+BB",
-            "Ajpe6kFbCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vQ2F0YWxvZxI6cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tj",
-            "YXRhbG9nfULBAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCDENhdGFs",
-            "b2dQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUu",
-            "Q2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdv",
-            "b2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91",
+            "ZC9yZXRhaWwvdjIvY29tbW9uLnByb3RvGipnb29nbGUvY2xvdWQvcmV0YWls",
+            "L3YyL2ltcG9ydF9jb25maWcucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmln",
+            "Eh4KFmluZ2VzdGlvbl9wcm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRf",
+            "Y2VudGVyX3Byb2R1Y3RfaWRfZmllbGQYAiABKAkimwYKEENhdGFsb2dBdHRy",
+            "aWJ1dGUSEAoDa2V5GAEgASgJQgPgQQISEwoGaW5fdXNlGAkgASgIQgPgQQMS",
+            "SQoEdHlwZRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxv",
+            "Z0F0dHJpYnV0ZS5BdHRyaWJ1dGVUeXBlQgPgQQMSUgoQaW5kZXhhYmxlX29w",
+            "dGlvbhgFIAEoDjI4Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZ0F0",
+            "dHJpYnV0ZS5JbmRleGFibGVPcHRpb24SYQoYZHluYW1pY19mYWNldGFibGVf",
+            "b3B0aW9uGAYgASgOMj8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9n",
+            "QXR0cmlidXRlLkR5bmFtaWNGYWNldGFibGVPcHRpb24SVAoRc2VhcmNoYWJs",
+            "ZV9vcHRpb24YByABKA4yOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNhdGFs",
+            "b2dBdHRyaWJ1dGUuU2VhcmNoYWJsZU9wdGlvbiI4Cg1BdHRyaWJ1dGVUeXBl",
+            "EgsKB1VOS05PV04QABILCgdURVhUVUFMEAESDQoJTlVNRVJJQ0FMEAIiYgoP",
+            "SW5kZXhhYmxlT3B0aW9uEiAKHElOREVYQUJMRV9PUFRJT05fVU5TUEVDSUZJ",
+            "RUQQABIVChFJTkRFWEFCTEVfRU5BQkxFRBABEhYKEklOREVYQUJMRV9ESVNB",
+            "QkxFRBACIoEBChZEeW5hbWljRmFjZXRhYmxlT3B0aW9uEigKJERZTkFNSUNf",
+            "RkFDRVRBQkxFX09QVElPTl9VTlNQRUNJRklFRBAAEh0KGURZTkFNSUNfRkFD",
+            "RVRBQkxFX0VOQUJMRUQQARIeChpEWU5BTUlDX0ZBQ0VUQUJMRV9ESVNBQkxF",
+            "RBACImYKEFNlYXJjaGFibGVPcHRpb24SIQodU0VBUkNIQUJMRV9PUFRJT05f",
+            "VU5TUEVDSUZJRUQQABIWChJTRUFSQ0hBQkxFX0VOQUJMRUQQARIXChNTRUFS",
+            "Q0hBQkxFX0RJU0FCTEVEEAIitgMKEEF0dHJpYnV0ZXNDb25maWcSFAoEbmFt",
+            "ZRgBIAEoCUIG4EEC4EEFElsKEmNhdGFsb2dfYXR0cmlidXRlcxgCIAMoCzI/",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQXR0cmlidXRlc0NvbmZpZy5DYXRh",
+            "bG9nQXR0cmlidXRlc0VudHJ5ElEKFmF0dHJpYnV0ZV9jb25maWdfbGV2ZWwY",
+            "AyABKA4yLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkF0dHJpYnV0ZUNvbmZp",
+            "Z0xldmVsQgPgQQMaYgoWQ2F0YWxvZ0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSNwoFdmFsdWUYAiABKAsyKC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LkNhdGFsb2dBdHRyaWJ1dGU6AjgBOnjqQXUKJnJldGFpbC5nb29nbGVhcGlz",
+            "LmNvbS9BdHRyaWJ1dGVzQ29uZmlnEktwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2F0dHJpYnV0",
+            "ZXNDb25maWcimQUKEENvbXBsZXRpb25Db25maWcSFAoEbmFtZRgBIAEoCUIG",
+            "4EEC4EEFEhYKDm1hdGNoaW5nX29yZGVyGAIgASgJEhcKD21heF9zdWdnZXN0",
+            "aW9ucxgDIAEoBRIZChFtaW5fcHJlZml4X2xlbmd0aBgEIAEoBRIVCg1hdXRv",
+            "X2xlYXJuaW5nGAsgASgIElgKGHN1Z2dlc3Rpb25zX2lucHV0X2NvbmZpZxgF",
+            "IAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29tcGxldGlvbkRhdGFJ",
+            "bnB1dENvbmZpZ0ID4EEDEi4KIWxhc3Rfc3VnZ2VzdGlvbnNfaW1wb3J0X29w",
+            "ZXJhdGlvbhgGIAEoCUID4EEDElUKFWRlbnlsaXN0X2lucHV0X2NvbmZpZxgH",
+            "IAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29tcGxldGlvbkRhdGFJ",
+            "bnB1dENvbmZpZ0ID4EEDEisKHmxhc3RfZGVueWxpc3RfaW1wb3J0X29wZXJh",
+            "dGlvbhgIIAEoCUID4EEDElYKFmFsbG93bGlzdF9pbnB1dF9jb25maWcYCSAB",
+            "KAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNvbXBsZXRpb25EYXRhSW5w",
+            "dXRDb25maWdCA+BBAxIsCh9sYXN0X2FsbG93bGlzdF9pbXBvcnRfb3BlcmF0",
+            "aW9uGAogASgJQgPgQQM6eOpBdQomcmV0YWlsLmdvb2dsZWFwaXMuY29tL0Nv",
+            "bXBsZXRpb25Db25maWcSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vY29tcGxldGlvbkNvbmZp",
+            "ZyLsAQoHQ2F0YWxvZxIUCgRuYW1lGAEgASgJQgbgQQLgQQUSHAoMZGlzcGxh",
+            "eV9uYW1lGAIgASgJQgbgQQLgQQUSTQoUcHJvZHVjdF9sZXZlbF9jb25maWcY",
+            "BCABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3RMZXZlbENv",
+            "bmZpZ0ID4EECOl7qQVsKHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9n",
+            "Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0",
+            "YWxvZ3Mve2NhdGFsb2d9QsEBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "MkIMQ2F0YWxvZ1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoC",
+            "Fkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWls",
+            "XFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductLevelConfig), global::Google.Cloud.Retail.V2.ProductLevelConfig.Parser, new[]{ "IngestionProductType", "MerchantCenterProductIdField" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute), global::Google.Cloud.Retail.V2.CatalogAttribute.Parser, new[]{ "Key", "InUse", "Type", "IndexableOption", "DynamicFacetableOption", "SearchableOption" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AttributesConfig), global::Google.Cloud.Retail.V2.AttributesConfig.Parser, new[]{ "Name", "CatalogAttributes", "AttributeConfigLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CompletionConfig), global::Google.Cloud.Retail.V2.CompletionConfig.Parser, new[]{ "Name", "MatchingOrder", "MaxSuggestions", "MinPrefixLength", "AutoLearning", "SuggestionsInputConfig", "LastSuggestionsImportOperation", "DenylistInputConfig", "LastDenylistImportOperation", "AllowlistInputConfig", "LastAllowlistImportOperation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Catalog), global::Google.Cloud.Retail.V2.Catalog.Parser, new[]{ "Name", "DisplayName", "ProductLevelConfig" }, null, null, null, null)
           }));
     }
@@ -331,6 +378,1465 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
+  /// Catalog level attribute config for an attribute. For example, if customers
+  /// want to enable/disable facet for a specific attribute.
+  /// </summary>
+  public sealed partial class CatalogAttribute : pb::IMessage<CatalogAttribute>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CatalogAttribute> _parser = new pb::MessageParser<CatalogAttribute>(() => new CatalogAttribute());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CatalogAttribute> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CatalogAttribute() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CatalogAttribute(CatalogAttribute other) : this() {
+      key_ = other.key_;
+      inUse_ = other.inUse_;
+      type_ = other.type_;
+      indexableOption_ = other.indexableOption_;
+      dynamicFacetableOption_ = other.dynamicFacetableOption_;
+      searchableOption_ = other.searchableOption_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CatalogAttribute Clone() {
+      return new CatalogAttribute(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private string key_ = "";
+    /// <summary>
+    /// Required. Attribute name.
+    /// For example: `color`, `brands`, `attributes.custom_attribute`, such as
+    /// `attributes.xyz`.
+    /// To be indexable, the attribute name can contain only alpha-numeric
+    /// characters and underscores. For example, an attribute named
+    /// `attributes.abc_xyz` can be indexed, but an attribute named
+    /// `attributes.abc-xyz` cannot be indexed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "in_use" field.</summary>
+    public const int InUseFieldNumber = 9;
+    private bool inUse_;
+    /// <summary>
+    /// Output only. Indicates whether this attribute has been used by any
+    /// products. `True` if at least one [Product][google.cloud.retail.v2.Product]
+    /// is using this attribute in
+    /// [Product.attributes][google.cloud.retail.v2.Product.attributes]. Otherwise,
+    /// this field is `False`.
+    ///
+    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] can be
+    /// pre-loaded by using
+    /// [CatalogService.AddCatalogAttribute][google.cloud.retail.v2.CatalogService.AddCatalogAttribute],
+    /// [CatalogService.ImportCatalogAttributes][], or
+    /// [CatalogService.UpdateAttributesConfig][google.cloud.retail.v2.CatalogService.UpdateAttributesConfig]
+    /// APIs. This field is `False` for pre-loaded
+    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s.
+    ///
+    /// Only pre-loaded
+    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s that are
+    /// neither in use by products nor predefined can be deleted.
+    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s that are
+    /// either in use by products or are predefined cannot be deleted; however,
+    /// their configuration properties will reset to default values upon removal
+    /// request.
+    ///
+    /// After catalog changes, it takes about 10 minutes for this field to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InUse {
+      get { return inUse_; }
+      set {
+        inUse_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 10;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType type_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown;
+    /// <summary>
+    /// Output only. The type of this attribute. This is derived from the attribute
+    /// in [Product.attributes][google.cloud.retail.v2.Product.attributes].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "indexable_option" field.</summary>
+    public const int IndexableOptionFieldNumber = 5;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption indexableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified;
+    /// <summary>
+    /// When
+    /// [AttributesConfig.attribute_config_level][google.cloud.retail.v2.AttributesConfig.attribute_config_level]
+    /// is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values
+    /// are indexed so that it can be filtered, faceted, or boosted in
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption IndexableOption {
+      get { return indexableOption_; }
+      set {
+        indexableOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dynamic_facetable_option" field.</summary>
+    public const int DynamicFacetableOptionFieldNumber = 6;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption dynamicFacetableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified;
+    /// <summary>
+    /// If DYNAMIC_FACETABLE_ENABLED, attribute values are available for dynamic
+    /// facet. Could only be DYNAMIC_FACETABLE_DISABLED if
+    /// [CatalogAttribute.indexable_option][google.cloud.retail.v2.CatalogAttribute.indexable_option]
+    /// is INDEXABLE_DISABLED. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption DynamicFacetableOption {
+      get { return dynamicFacetableOption_; }
+      set {
+        dynamicFacetableOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "searchable_option" field.</summary>
+    public const int SearchableOptionFieldNumber = 7;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption searchableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified;
+    /// <summary>
+    /// When
+    /// [AttributesConfig.attribute_config_level][google.cloud.retail.v2.AttributesConfig.attribute_config_level]
+    /// is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if SEARCHABLE_ENABLED, attribute values
+    /// are searchable by text queries in
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    ///
+    /// If SEARCHABLE_ENABLED but attribute type is numerical, attribute values
+    /// will not be searchable by text queries in
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search], as
+    /// there are no text values associated to numerical attributes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption SearchableOption {
+      get { return searchableOption_; }
+      set {
+        searchableOption_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CatalogAttribute);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CatalogAttribute other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if (InUse != other.InUse) return false;
+      if (Type != other.Type) return false;
+      if (IndexableOption != other.IndexableOption) return false;
+      if (DynamicFacetableOption != other.DynamicFacetableOption) return false;
+      if (SearchableOption != other.SearchableOption) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (InUse != false) hash ^= InUse.GetHashCode();
+      if (Type != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown) hash ^= Type.GetHashCode();
+      if (IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) hash ^= IndexableOption.GetHashCode();
+      if (DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) hash ^= DynamicFacetableOption.GetHashCode();
+      if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) hash ^= SearchableOption.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) IndexableOption);
+      }
+      if (DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) DynamicFacetableOption);
+      }
+      if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SearchableOption);
+      }
+      if (InUse != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(InUse);
+      }
+      if (Type != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) IndexableOption);
+      }
+      if (DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) DynamicFacetableOption);
+      }
+      if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SearchableOption);
+      }
+      if (InUse != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(InUse);
+      }
+      if (Type != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (InUse != false) {
+        size += 1 + 1;
+      }
+      if (Type != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IndexableOption);
+      }
+      if (DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DynamicFacetableOption);
+      }
+      if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchableOption);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CatalogAttribute other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      if (other.InUse != false) {
+        InUse = other.InUse;
+      }
+      if (other.Type != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType.Unknown) {
+        Type = other.Type;
+      }
+      if (other.IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) {
+        IndexableOption = other.IndexableOption;
+      }
+      if (other.DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) {
+        DynamicFacetableOption = other.DynamicFacetableOption;
+      }
+      if (other.SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
+        SearchableOption = other.SearchableOption;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 40: {
+            IndexableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            DynamicFacetableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            SearchableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption) input.ReadEnum();
+            break;
+          }
+          case 72: {
+            InUse = input.ReadBool();
+            break;
+          }
+          case 80: {
+            Type = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 40: {
+            IndexableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            DynamicFacetableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            SearchableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption) input.ReadEnum();
+            break;
+          }
+          case 72: {
+            InUse = input.ReadBool();
+            break;
+          }
+          case 80: {
+            Type = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CatalogAttribute message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of an attribute.
+      /// </summary>
+      public enum AttributeType {
+        /// <summary>
+        /// The type of the attribute is unknown.
+        ///
+        /// Used when type cannot be derived from attribute that is not
+        /// [in_use][google.cloud.retail.v2.CatalogAttribute.in_use].
+        /// </summary>
+        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
+        /// <summary>
+        /// Textual attribute.
+        /// </summary>
+        [pbr::OriginalName("TEXTUAL")] Textual = 1,
+        /// <summary>
+        /// Numerical attribute.
+        /// </summary>
+        [pbr::OriginalName("NUMERICAL")] Numerical = 2,
+      }
+
+      /// <summary>
+      /// The status of the indexable option of a catalog attribute.
+      /// </summary>
+      public enum IndexableOption {
+        /// <summary>
+        /// Value used when unset. Defaults to
+        /// [INDEXABLE_ENABLED][google.cloud.retail.v2.CatalogAttribute.IndexableOption.INDEXABLE_ENABLED].
+        /// </summary>
+        [pbr::OriginalName("INDEXABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indexable option enabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("INDEXABLE_ENABLED")] IndexableEnabled = 1,
+        /// <summary>
+        /// Indexable option disabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("INDEXABLE_DISABLED")] IndexableDisabled = 2,
+      }
+
+      /// <summary>
+      /// The status of the dynamic facetable option of a catalog attribute.
+      /// </summary>
+      public enum DynamicFacetableOption {
+        /// <summary>
+        /// Value used when unset. Defaults to
+        /// [DYNAMIC_FACETABLE_ENABLED][google.cloud.retail.v2.CatalogAttribute.DynamicFacetableOption.DYNAMIC_FACETABLE_ENABLED].
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC_FACETABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Dynamic facetable option enabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC_FACETABLE_ENABLED")] DynamicFacetableEnabled = 1,
+        /// <summary>
+        /// Dynamic facetable option disabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC_FACETABLE_DISABLED")] DynamicFacetableDisabled = 2,
+      }
+
+      /// <summary>
+      /// The status of the searchable option of a catalog attribute.
+      /// </summary>
+      public enum SearchableOption {
+        /// <summary>
+        /// Value used when unset. Defaults to
+        /// [SEARCHABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.SearchableOption.SEARCHABLE_DISABLED].
+        /// </summary>
+        [pbr::OriginalName("SEARCHABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Searchable option enabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("SEARCHABLE_ENABLED")] SearchableEnabled = 1,
+        /// <summary>
+        /// Searchable option disabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("SEARCHABLE_DISABLED")] SearchableDisabled = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Catalog level attribute config.
+  /// </summary>
+  public sealed partial class AttributesConfig : pb::IMessage<AttributesConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AttributesConfig> _parser = new pb::MessageParser<AttributesConfig>(() => new AttributesConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AttributesConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributesConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributesConfig(AttributesConfig other) : this() {
+      name_ = other.name_;
+      catalogAttributes_ = other.catalogAttributes_.Clone();
+      attributeConfigLevel_ = other.attributeConfigLevel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributesConfig Clone() {
+      return new AttributesConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Immutable. The fully qualified resource name of the attribute
+    /// config. Format: `projects/*/locations/*/catalogs/*/attributesConfig`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "catalog_attributes" field.</summary>
+    public const int CatalogAttributesFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CatalogAttribute>.Codec _map_catalogAttributes_codec
+        = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CatalogAttribute>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.CatalogAttribute.Parser), 18);
+    private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CatalogAttribute> catalogAttributes_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CatalogAttribute>();
+    /// <summary>
+    /// Enable attribute(s) config at catalog level.
+    /// For example, indexable, dynamic_facetable, or searchable for each
+    /// attribute.
+    ///
+    /// The key is catalog attribute's name.
+    /// For example: `color`, `brands`, `attributes.custom_attribute`, such as
+    /// `attributes.xyz`.
+    ///
+    /// The maximum number of catalog attributes allowed in a request is 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Retail.V2.CatalogAttribute> CatalogAttributes {
+      get { return catalogAttributes_; }
+    }
+
+    /// <summary>Field number for the "attribute_config_level" field.</summary>
+    public const int AttributeConfigLevelFieldNumber = 3;
+    private global::Google.Cloud.Retail.V2.AttributeConfigLevel attributeConfigLevel_ = global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified;
+    /// <summary>
+    /// Output only. The
+    /// [AttributeConfigLevel][google.cloud.retail.v2.AttributeConfigLevel] used
+    /// for this catalog.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.AttributeConfigLevel AttributeConfigLevel {
+      get { return attributeConfigLevel_; }
+      set {
+        attributeConfigLevel_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AttributesConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AttributesConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!CatalogAttributes.Equals(other.CatalogAttributes)) return false;
+      if (AttributeConfigLevel != other.AttributeConfigLevel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= CatalogAttributes.GetHashCode();
+      if (AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) hash ^= AttributeConfigLevel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      catalogAttributes_.WriteTo(output, _map_catalogAttributes_codec);
+      if (AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) AttributeConfigLevel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      catalogAttributes_.WriteTo(ref output, _map_catalogAttributes_codec);
+      if (AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) AttributeConfigLevel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += catalogAttributes_.CalculateSize(_map_catalogAttributes_codec);
+      if (AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttributeConfigLevel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AttributesConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      catalogAttributes_.Add(other.catalogAttributes_);
+      if (other.AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) {
+        AttributeConfigLevel = other.AttributeConfigLevel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            catalogAttributes_.AddEntriesFrom(input, _map_catalogAttributes_codec);
+            break;
+          }
+          case 24: {
+            AttributeConfigLevel = (global::Google.Cloud.Retail.V2.AttributeConfigLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            catalogAttributes_.AddEntriesFrom(ref input, _map_catalogAttributes_codec);
+            break;
+          }
+          case 24: {
+            AttributeConfigLevel = (global::Google.Cloud.Retail.V2.AttributeConfigLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Catalog level autocomplete config for customers to customize autocomplete
+  /// feature's settings.
+  /// </summary>
+  public sealed partial class CompletionConfig : pb::IMessage<CompletionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CompletionConfig> _parser = new pb::MessageParser<CompletionConfig>(() => new CompletionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CompletionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionConfig(CompletionConfig other) : this() {
+      name_ = other.name_;
+      matchingOrder_ = other.matchingOrder_;
+      maxSuggestions_ = other.maxSuggestions_;
+      minPrefixLength_ = other.minPrefixLength_;
+      autoLearning_ = other.autoLearning_;
+      suggestionsInputConfig_ = other.suggestionsInputConfig_ != null ? other.suggestionsInputConfig_.Clone() : null;
+      lastSuggestionsImportOperation_ = other.lastSuggestionsImportOperation_;
+      denylistInputConfig_ = other.denylistInputConfig_ != null ? other.denylistInputConfig_.Clone() : null;
+      lastDenylistImportOperation_ = other.lastDenylistImportOperation_;
+      allowlistInputConfig_ = other.allowlistInputConfig_ != null ? other.allowlistInputConfig_.Clone() : null;
+      lastAllowlistImportOperation_ = other.lastAllowlistImportOperation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompletionConfig Clone() {
+      return new CompletionConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Immutable. Fully qualified name
+    /// `projects/*/locations/*/catalogs/*/completionConfig`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "matching_order" field.</summary>
+    public const int MatchingOrderFieldNumber = 2;
+    private string matchingOrder_ = "";
+    /// <summary>
+    /// Specifies the matching order for autocomplete suggestions, e.g., a query
+    /// consisting of 'sh' with 'out-of-order' specified would suggest "women's
+    /// shoes", whereas a query of 'red s' with 'exact-prefix' specified would
+    /// suggest "red shoes". Currently supported values:
+    ///
+    /// * 'out-of-order'
+    /// * 'exact-prefix'
+    ///
+    /// Default value: 'exact-prefix'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MatchingOrder {
+      get { return matchingOrder_; }
+      set {
+        matchingOrder_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "max_suggestions" field.</summary>
+    public const int MaxSuggestionsFieldNumber = 3;
+    private int maxSuggestions_;
+    /// <summary>
+    /// The maximum number of autocomplete suggestions returned per term. Default
+    /// value is 20. If left unset or set to 0, then will fallback to default
+    /// value.
+    ///
+    /// Value range is 1 to 20.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxSuggestions {
+      get { return maxSuggestions_; }
+      set {
+        maxSuggestions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_prefix_length" field.</summary>
+    public const int MinPrefixLengthFieldNumber = 4;
+    private int minPrefixLength_;
+    /// <summary>
+    /// The minimum number of characters needed to be typed in order to get
+    /// suggestions. Default value is 2. If left unset or set to 0, then will
+    /// fallback to default value.
+    ///
+    /// Value range is 1 to 20.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinPrefixLength {
+      get { return minPrefixLength_; }
+      set {
+        minPrefixLength_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_learning" field.</summary>
+    public const int AutoLearningFieldNumber = 11;
+    private bool autoLearning_;
+    /// <summary>
+    /// If set to true, the auto learning function is enabled. Auto learning uses
+    /// user data to generate suggestions using ML techniques. Default value is
+    /// false. Only after enabling auto learning can users use `cloud-retail`
+    /// data in
+    /// [CompleteQueryRequest][google.cloud.retail.v2.CompleteQueryRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AutoLearning {
+      get { return autoLearning_; }
+      set {
+        autoLearning_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "suggestions_input_config" field.</summary>
+    public const int SuggestionsInputConfigFieldNumber = 5;
+    private global::Google.Cloud.Retail.V2.CompletionDataInputConfig suggestionsInputConfig_;
+    /// <summary>
+    /// Output only. The source data for the latest import of the autocomplete
+    /// suggestion phrases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CompletionDataInputConfig SuggestionsInputConfig {
+      get { return suggestionsInputConfig_; }
+      set {
+        suggestionsInputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_suggestions_import_operation" field.</summary>
+    public const int LastSuggestionsImportOperationFieldNumber = 6;
+    private string lastSuggestionsImportOperation_ = "";
+    /// <summary>
+    /// Output only. Name of the LRO corresponding to the latest suggestion terms
+    /// list import.
+    ///
+    /// Can use [GetOperation][google.longrunning.Operations.GetOperation] API to
+    /// retrieve the latest state of the Long Running Operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LastSuggestionsImportOperation {
+      get { return lastSuggestionsImportOperation_; }
+      set {
+        lastSuggestionsImportOperation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "denylist_input_config" field.</summary>
+    public const int DenylistInputConfigFieldNumber = 7;
+    private global::Google.Cloud.Retail.V2.CompletionDataInputConfig denylistInputConfig_;
+    /// <summary>
+    /// Output only. The source data for the latest import of the autocomplete
+    /// denylist phrases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CompletionDataInputConfig DenylistInputConfig {
+      get { return denylistInputConfig_; }
+      set {
+        denylistInputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_denylist_import_operation" field.</summary>
+    public const int LastDenylistImportOperationFieldNumber = 8;
+    private string lastDenylistImportOperation_ = "";
+    /// <summary>
+    /// Output only. Name of the LRO corresponding to the latest denylist import.
+    ///
+    /// Can use [GetOperation][google.longrunning.Operations.GetOperation] API to
+    /// retrieve the latest state of the Long Running Operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LastDenylistImportOperation {
+      get { return lastDenylistImportOperation_; }
+      set {
+        lastDenylistImportOperation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "allowlist_input_config" field.</summary>
+    public const int AllowlistInputConfigFieldNumber = 9;
+    private global::Google.Cloud.Retail.V2.CompletionDataInputConfig allowlistInputConfig_;
+    /// <summary>
+    /// Output only. The source data for the latest import of the autocomplete
+    /// allowlist phrases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CompletionDataInputConfig AllowlistInputConfig {
+      get { return allowlistInputConfig_; }
+      set {
+        allowlistInputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_allowlist_import_operation" field.</summary>
+    public const int LastAllowlistImportOperationFieldNumber = 10;
+    private string lastAllowlistImportOperation_ = "";
+    /// <summary>
+    /// Output only. Name of the LRO corresponding to the latest allowlist import.
+    ///
+    /// Can use [GetOperation][google.longrunning.Operations.GetOperation] API to
+    /// retrieve the latest state of the Long Running Operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LastAllowlistImportOperation {
+      get { return lastAllowlistImportOperation_; }
+      set {
+        lastAllowlistImportOperation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CompletionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CompletionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (MatchingOrder != other.MatchingOrder) return false;
+      if (MaxSuggestions != other.MaxSuggestions) return false;
+      if (MinPrefixLength != other.MinPrefixLength) return false;
+      if (AutoLearning != other.AutoLearning) return false;
+      if (!object.Equals(SuggestionsInputConfig, other.SuggestionsInputConfig)) return false;
+      if (LastSuggestionsImportOperation != other.LastSuggestionsImportOperation) return false;
+      if (!object.Equals(DenylistInputConfig, other.DenylistInputConfig)) return false;
+      if (LastDenylistImportOperation != other.LastDenylistImportOperation) return false;
+      if (!object.Equals(AllowlistInputConfig, other.AllowlistInputConfig)) return false;
+      if (LastAllowlistImportOperation != other.LastAllowlistImportOperation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (MatchingOrder.Length != 0) hash ^= MatchingOrder.GetHashCode();
+      if (MaxSuggestions != 0) hash ^= MaxSuggestions.GetHashCode();
+      if (MinPrefixLength != 0) hash ^= MinPrefixLength.GetHashCode();
+      if (AutoLearning != false) hash ^= AutoLearning.GetHashCode();
+      if (suggestionsInputConfig_ != null) hash ^= SuggestionsInputConfig.GetHashCode();
+      if (LastSuggestionsImportOperation.Length != 0) hash ^= LastSuggestionsImportOperation.GetHashCode();
+      if (denylistInputConfig_ != null) hash ^= DenylistInputConfig.GetHashCode();
+      if (LastDenylistImportOperation.Length != 0) hash ^= LastDenylistImportOperation.GetHashCode();
+      if (allowlistInputConfig_ != null) hash ^= AllowlistInputConfig.GetHashCode();
+      if (LastAllowlistImportOperation.Length != 0) hash ^= LastAllowlistImportOperation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (MatchingOrder.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MatchingOrder);
+      }
+      if (MaxSuggestions != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxSuggestions);
+      }
+      if (MinPrefixLength != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MinPrefixLength);
+      }
+      if (suggestionsInputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SuggestionsInputConfig);
+      }
+      if (LastSuggestionsImportOperation.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LastSuggestionsImportOperation);
+      }
+      if (denylistInputConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DenylistInputConfig);
+      }
+      if (LastDenylistImportOperation.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(LastDenylistImportOperation);
+      }
+      if (allowlistInputConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(AllowlistInputConfig);
+      }
+      if (LastAllowlistImportOperation.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(LastAllowlistImportOperation);
+      }
+      if (AutoLearning != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(AutoLearning);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (MatchingOrder.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MatchingOrder);
+      }
+      if (MaxSuggestions != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxSuggestions);
+      }
+      if (MinPrefixLength != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MinPrefixLength);
+      }
+      if (suggestionsInputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SuggestionsInputConfig);
+      }
+      if (LastSuggestionsImportOperation.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LastSuggestionsImportOperation);
+      }
+      if (denylistInputConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DenylistInputConfig);
+      }
+      if (LastDenylistImportOperation.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(LastDenylistImportOperation);
+      }
+      if (allowlistInputConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(AllowlistInputConfig);
+      }
+      if (LastAllowlistImportOperation.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(LastAllowlistImportOperation);
+      }
+      if (AutoLearning != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(AutoLearning);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (MatchingOrder.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MatchingOrder);
+      }
+      if (MaxSuggestions != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxSuggestions);
+      }
+      if (MinPrefixLength != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinPrefixLength);
+      }
+      if (AutoLearning != false) {
+        size += 1 + 1;
+      }
+      if (suggestionsInputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SuggestionsInputConfig);
+      }
+      if (LastSuggestionsImportOperation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LastSuggestionsImportOperation);
+      }
+      if (denylistInputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DenylistInputConfig);
+      }
+      if (LastDenylistImportOperation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LastDenylistImportOperation);
+      }
+      if (allowlistInputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowlistInputConfig);
+      }
+      if (LastAllowlistImportOperation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LastAllowlistImportOperation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CompletionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.MatchingOrder.Length != 0) {
+        MatchingOrder = other.MatchingOrder;
+      }
+      if (other.MaxSuggestions != 0) {
+        MaxSuggestions = other.MaxSuggestions;
+      }
+      if (other.MinPrefixLength != 0) {
+        MinPrefixLength = other.MinPrefixLength;
+      }
+      if (other.AutoLearning != false) {
+        AutoLearning = other.AutoLearning;
+      }
+      if (other.suggestionsInputConfig_ != null) {
+        if (suggestionsInputConfig_ == null) {
+          SuggestionsInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+        }
+        SuggestionsInputConfig.MergeFrom(other.SuggestionsInputConfig);
+      }
+      if (other.LastSuggestionsImportOperation.Length != 0) {
+        LastSuggestionsImportOperation = other.LastSuggestionsImportOperation;
+      }
+      if (other.denylistInputConfig_ != null) {
+        if (denylistInputConfig_ == null) {
+          DenylistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+        }
+        DenylistInputConfig.MergeFrom(other.DenylistInputConfig);
+      }
+      if (other.LastDenylistImportOperation.Length != 0) {
+        LastDenylistImportOperation = other.LastDenylistImportOperation;
+      }
+      if (other.allowlistInputConfig_ != null) {
+        if (allowlistInputConfig_ == null) {
+          AllowlistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+        }
+        AllowlistInputConfig.MergeFrom(other.AllowlistInputConfig);
+      }
+      if (other.LastAllowlistImportOperation.Length != 0) {
+        LastAllowlistImportOperation = other.LastAllowlistImportOperation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            MatchingOrder = input.ReadString();
+            break;
+          }
+          case 24: {
+            MaxSuggestions = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MinPrefixLength = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            if (suggestionsInputConfig_ == null) {
+              SuggestionsInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(SuggestionsInputConfig);
+            break;
+          }
+          case 50: {
+            LastSuggestionsImportOperation = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (denylistInputConfig_ == null) {
+              DenylistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(DenylistInputConfig);
+            break;
+          }
+          case 66: {
+            LastDenylistImportOperation = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (allowlistInputConfig_ == null) {
+              AllowlistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(AllowlistInputConfig);
+            break;
+          }
+          case 82: {
+            LastAllowlistImportOperation = input.ReadString();
+            break;
+          }
+          case 88: {
+            AutoLearning = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            MatchingOrder = input.ReadString();
+            break;
+          }
+          case 24: {
+            MaxSuggestions = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MinPrefixLength = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            if (suggestionsInputConfig_ == null) {
+              SuggestionsInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(SuggestionsInputConfig);
+            break;
+          }
+          case 50: {
+            LastSuggestionsImportOperation = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (denylistInputConfig_ == null) {
+              DenylistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(DenylistInputConfig);
+            break;
+          }
+          case 66: {
+            LastDenylistImportOperation = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (allowlistInputConfig_ == null) {
+              AllowlistInputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(AllowlistInputConfig);
+            break;
+          }
+          case 82: {
+            LastAllowlistImportOperation = input.ReadString();
+            break;
+          }
+          case 88: {
+            AutoLearning = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The catalog configuration.
   /// </summary>
   public sealed partial class Catalog : pb::IMessage<Catalog>
@@ -347,7 +1853,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

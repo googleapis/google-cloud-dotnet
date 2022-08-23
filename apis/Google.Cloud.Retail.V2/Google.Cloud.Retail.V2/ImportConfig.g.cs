@@ -124,7 +124,6 @@ namespace Google.Cloud.Retail.V2 {
   #region Messages
   /// <summary>
   /// Google Cloud Storage location for input content.
-  /// format.
   /// </summary>
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -215,11 +214,13 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Supported values for control imports:
     ///
-    /// * 'control' (default): One JSON [Control][] per line.
+    /// * `control` (default): One JSON [Control][google.cloud.retail.v2.Control]
+    /// per line.
     ///
     /// Supported values for catalog attribute imports:
     ///
-    /// * 'catalog_attribute' (default): One CSV [CatalogAttribute][] per line.
+    /// * `catalog_attribute` (default): One CSV
+    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] per line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -439,9 +440,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
     ///
-    /// Only supported when
-    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
-    /// is set to `FULL`.
+    /// Only supported in
+    /// [ImportProductsRequest][google.cloud.retail.v2.ImportProductsRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -540,8 +540,7 @@ namespace Google.Cloud.Retail.V2 {
     /// * `user_event_ga360`:
     ///   The schema is available here:
     ///   https://support.google.com/analytics/answer/3437719.
-    /// * `user_event_ga4`: This feature is in private preview. Please contact the
-    ///   support team for importing Google Analytics 4 events.
+    /// * `user_event_ga4`:
     ///   The schema is available here:
     ///   https://support.google.com/analytics/answer/7029846.
     ///
@@ -1277,7 +1276,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int GcsPrefixFieldNumber = 1;
     /// <summary>
     /// Google Cloud Storage prefix for import errors. This must be an empty,
-    /// existing Cloud Storage directory. Import errors will be written to
+    /// existing Cloud Storage directory. Import errors are written to
     /// sharded files in this directory, one per line, as a JSON-encoded
     /// `google.rpc.Status` message.
     /// </summary>
@@ -1571,8 +1570,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int UpdateMaskFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Indicates which fields in the provided imported 'products' to update. If
-    /// not set, will by default update all fields.
+    /// Indicates which fields in the provided imported `products` to update. If
+    /// not set, all fields are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1605,21 +1604,16 @@ namespace Google.Cloud.Retail.V2 {
     private string notificationPubsubTopic_ = "";
     /// <summary>
     /// Full Pub/Sub topic name for receiving notification. If this field is set,
-    /// when the import is finished, a notification will be sent to
-    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// when the import is finished, a notification is sent to
+    /// specified Pub/Sub topic. The message data is JSON string of a
     /// [Operation][google.longrunning.Operation].
     ///
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has
     /// to be within the same project as
     /// [ImportProductsRequest.parent][google.cloud.retail.v2.ImportProductsRequest.parent].
-    /// Make sure that both
-    /// `cloud-retail-customer-data-access@system.gserviceaccount.com` and
-    /// `service-&lt;project number>@gcp-sa-retail.iam.gserviceaccount.com`
-    /// have the `pubsub.topics.publish` IAM permission on the topic.
-    ///
-    /// Only supported when
-    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
-    /// is set to `FULL`.
+    /// Make sure that `service-&lt;project
+    /// number>@gcp-sa-retail.iam.gserviceaccount.com` has the
+    /// `pubsub.topics.publish` IAM permission on the topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1953,15 +1947,6 @@ namespace Google.Cloud.Retail.V2 {
         /// <summary>
         /// Calculates diff and replaces the entire product dataset. Existing
         /// products may be deleted if they are not present in the source location.
-        ///
-        /// Can only be set while using
-        /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource]. And the BigQuery
-        /// dataset must be created in the data location "us (multiple regions in
-        /// United States)", otherwise a PERMISSION_DENIED error is thrown.
-        ///
-        /// Add the IAM permission "BigQuery Data Viewer" for
-        /// cloud-retail-customer-data-access@system.gserviceaccount.com before
-        /// using this feature otherwise an error is thrown.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
@@ -2351,8 +2336,8 @@ namespace Google.Cloud.Retail.V2 {
     private string notificationPubsubTopic_ = "";
     /// <summary>
     /// Pub/Sub topic for receiving notification. If this field is set,
-    /// when the import is finished, a notification will be sent to
-    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// when the import is finished, a notification is sent to
+    /// specified Pub/Sub topic. The message data is JSON string of a
     /// [Operation][google.longrunning.Operation].
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
     /// </summary>
@@ -3498,7 +3483,7 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Metadata related to the progress of the Import operation. This will be
+  /// Metadata related to the progress of the Import operation. This is
   /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
   public sealed partial class ImportMetadata : pb::IMessage<ImportMetadata>
@@ -3632,8 +3617,8 @@ namespace Google.Cloud.Retail.V2 {
     private string notificationPubsubTopic_ = "";
     /// <summary>
     /// Pub/Sub topic for receiving notification. If this field is set,
-    /// when the import is finished, a notification will be sent to
-    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// when the import is finished, a notification is sent to
+    /// specified Pub/Sub topic. The message data is JSON string of a
     /// [Operation][google.longrunning.Operation].
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
     /// </summary>

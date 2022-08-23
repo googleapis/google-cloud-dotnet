@@ -31,7 +31,7 @@ namespace Google.Cloud.Retail.V2 {
             "L3YyL3Byb21vdGlvbi5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
             "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
             "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
-            "L3dyYXBwZXJzLnByb3RvIo8NCgdQcm9kdWN0EjEKC2V4cGlyZV90aW1lGBAg",
+            "L3dyYXBwZXJzLnByb3RvItcNCgdQcm9kdWN0EjEKC2V4cGlyZV90aW1lGBAg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEi0KA3R0bBgRIAEo",
             "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEESAASEQoEbmFtZRgB",
             "IAEoCUID4EEFEg8KAmlkGAIgASgJQgPgQQUSNwoEdHlwZRgDIAEoDjIkLmdv",
@@ -59,27 +59,29 @@ namespace Google.Cloud.Retail.V2 {
             "aF90aW1lGCEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2ChJy",
             "ZXRyaWV2YWJsZV9maWVsZHMYHiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
             "bGRNYXNrEjYKCHZhcmlhbnRzGB8gAygLMh8uZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5Qcm9kdWN0QgPgQQMaWgoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRI2CgV2YWx1ZRgCIAEoCzInLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "Q3VzdG9tQXR0cmlidXRlOgI4ASJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
-            "RUQQABILCgdQUklNQVJZEAESCwoHVkFSSUFOVBACEg4KCkNPTExFQ1RJT04Q",
-            "AyJpCgxBdmFpbGFiaWxpdHkSHAoYQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVE",
-            "EAASDAoISU5fU1RPQ0sQARIQCgxPVVRfT0ZfU1RPQ0sQAhIMCghQUkVPUkRF",
-            "UhADEg0KCUJBQ0tPUkRFUhAEOoQB6kGAAQodcmV0YWlsLmdvb2dsZWFwaXMu",
-            "Y29tL1Byb2R1Y3QSX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vYnJhbmNoZXMve2JyYW5jaH0v",
-            "cHJvZHVjdHMve3Byb2R1Y3R9QgwKCmV4cGlyYXRpb25CsAIKGmNvbS5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyQgxQcm9kdWN0UHJvdG9QAVo8Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7",
-            "cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdv",
-            "b2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6",
-            "OlYy6kFsChxyZXRhaWwuZ29vZ2xlYXBpcy5jb20vQnJhbmNoEkxwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2Nh",
-            "dGFsb2d9L2JyYW5jaGVzL3ticmFuY2h9YgZwcm90bzM="));
+            "bC52Mi5Qcm9kdWN0QgPgQQMSRgoRbG9jYWxfaW52ZW50b3JpZXMYIyADKAsy",
+            "Ji5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxvY2FsSW52ZW50b3J5QgPgQQMa",
+            "WgoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgCIAEo",
+            "CzInLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ3VzdG9tQXR0cmlidXRlOgI4",
+            "ASJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZEAES",
+            "CwoHVkFSSUFOVBACEg4KCkNPTExFQ1RJT04QAyJpCgxBdmFpbGFiaWxpdHkS",
+            "HAoYQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIQ",
+            "CgxPVVRfT0ZfU1RPQ0sQAhIMCghQUkVPUkRFUhADEg0KCUJBQ0tPUkRFUhAE",
+            "OoQB6kGAAQodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSX3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97",
+            "Y2F0YWxvZ30vYnJhbmNoZXMve2JyYW5jaH0vcHJvZHVjdHMve3Byb2R1Y3R9",
+            "QgwKCmV4cGlyYXRpb25CsAIKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "QgxQcm9kdWN0UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlMqgIW",
+            "R29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxc",
+            "VjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy6kFsChxyZXRhaWwuZ29v",
+            "Z2xlYXBpcy5jb20vQnJhbmNoEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2JyYW5jaGVzL3ti",
+            "cmFuY2h9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.PromotionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Product), global::Google.Cloud.Retail.V2.Product.Parser, new[]{ "ExpireTime", "Ttl", "Name", "Id", "Type", "PrimaryProductId", "CollectionMemberIds", "Gtin", "Categories", "Title", "Brands", "Description", "LanguageCode", "Attributes", "Tags", "PriceInfo", "Rating", "AvailableTime", "Availability", "AvailableQuantity", "FulfillmentInfo", "Uri", "Images", "Audience", "ColorInfo", "Sizes", "Materials", "Patterns", "Conditions", "Promotions", "PublishTime", "RetrievableFields", "Variants" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.Retail.V2.Product.Types.Type), typeof(global::Google.Cloud.Retail.V2.Product.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Product), global::Google.Cloud.Retail.V2.Product.Parser, new[]{ "ExpireTime", "Ttl", "Name", "Id", "Type", "PrimaryProductId", "CollectionMemberIds", "Gtin", "Categories", "Title", "Brands", "Description", "LanguageCode", "Attributes", "Tags", "PriceInfo", "Rating", "AvailableTime", "Availability", "AvailableQuantity", "FulfillmentInfo", "Uri", "Images", "Audience", "ColorInfo", "Sizes", "Materials", "Patterns", "Conditions", "Promotions", "PublishTime", "RetrievableFields", "Variants", "LocalInventories" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.Retail.V2.Product.Types.Type), typeof(global::Google.Cloud.Retail.V2.Product.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -155,6 +157,7 @@ namespace Google.Cloud.Retail.V2 {
       publishTime_ = other.publishTime_ != null ? other.publishTime_.Clone() : null;
       retrievableFields_ = other.retrievableFields_ != null ? other.retrievableFields_.Clone() : null;
       variants_ = other.variants_.Clone();
+      localInventories_ = other.localInventories_.Clone();
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           ExpireTime = other.ExpireTime.Clone();
@@ -340,7 +343,7 @@ namespace Google.Cloud.Retail.V2 {
     /// Non-existent product ids are allowed.
     /// The [type][google.cloud.retail.v2.Product.type] of the members must be
     /// either [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] or
-    /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT] otherwise and
+    /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT] otherwise an
     /// INVALID_ARGUMENT error is thrown. Should not set it for other types. A
     /// maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is
     /// return.
@@ -1008,6 +1011,23 @@ namespace Google.Cloud.Retail.V2 {
       get { return variants_; }
     }
 
+    /// <summary>Field number for the "local_inventories" field.</summary>
+    public const int LocalInventoriesFieldNumber = 35;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.LocalInventory> _repeated_localInventories_codec
+        = pb::FieldCodec.ForMessage(282, global::Google.Cloud.Retail.V2.LocalInventory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory> localInventories_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory>();
+    /// <summary>
+    /// Output only. A list of local inventories specific to different places.
+    ///
+    /// This is only available for users who have Retail Search enabled, and it can
+    /// be managed by [AddLocalInventories][] and [RemoveLocalInventories][] APIs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory> LocalInventories {
+      get { return localInventories_; }
+    }
+
     private object expiration_;
     /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
     public enum ExpirationOneofCase {
@@ -1077,6 +1097,7 @@ namespace Google.Cloud.Retail.V2 {
       if (!object.Equals(PublishTime, other.PublishTime)) return false;
       if (!object.Equals(RetrievableFields, other.RetrievableFields)) return false;
       if(!variants_.Equals(other.variants_)) return false;
+      if(!localInventories_.Equals(other.localInventories_)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1118,6 +1139,7 @@ namespace Google.Cloud.Retail.V2 {
       if (publishTime_ != null) hash ^= PublishTime.GetHashCode();
       if (retrievableFields_ != null) hash ^= RetrievableFields.GetHashCode();
       hash ^= variants_.GetHashCode();
+      hash ^= localInventories_.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1229,6 +1251,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteMessage(PublishTime);
       }
       promotions_.WriteTo(output, _repeated_promotions_codec);
+      localInventories_.WriteTo(output, _repeated_localInventories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1331,6 +1354,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteMessage(PublishTime);
       }
       promotions_.WriteTo(ref output, _repeated_promotions_codec);
+      localInventories_.WriteTo(ref output, _repeated_localInventories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1414,6 +1438,7 @@ namespace Google.Cloud.Retail.V2 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RetrievableFields);
       }
       size += variants_.CalculateSize(_repeated_variants_codec);
+      size += localInventories_.CalculateSize(_repeated_localInventories_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1516,6 +1541,7 @@ namespace Google.Cloud.Retail.V2 {
         RetrievableFields.MergeFrom(other.RetrievableFields);
       }
       variants_.Add(other.variants_);
+      localInventories_.Add(other.localInventories_);
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           if (ExpireTime == null) {
@@ -1712,6 +1738,10 @@ namespace Google.Cloud.Retail.V2 {
             promotions_.AddEntriesFrom(input, _repeated_promotions_codec);
             break;
           }
+          case 282: {
+            localInventories_.AddEntriesFrom(input, _repeated_localInventories_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1891,6 +1921,10 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 274: {
             promotions_.AddEntriesFrom(ref input, _repeated_promotions_codec);
+            break;
+          }
+          case 282: {
+            localInventories_.AddEntriesFrom(ref input, _repeated_localInventories_codec);
             break;
           }
         }
