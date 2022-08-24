@@ -52,7 +52,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             CreateWorkloadSettings = existing.CreateWorkloadSettings;
             CreateWorkloadOperationsSettings = existing.CreateWorkloadOperationsSettings.Clone();
             UpdateWorkloadSettings = existing.UpdateWorkloadSettings;
-            RestrictAllowedServicesSettings = existing.RestrictAllowedServicesSettings;
             RestrictAllowedResourcesSettings = existing.RestrictAllowedResourcesSettings;
             DeleteWorkloadSettings = existing.DeleteWorkloadSettings;
             GetWorkloadSettings = existing.GetWorkloadSettings;
@@ -106,19 +105,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateWorkloadSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AssuredWorkloadsServiceClient.RestrictAllowedServices</c> and
-        /// <c>AssuredWorkloadsServiceClient.RestrictAllowedServicesAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings RestrictAllowedServicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -616,48 +602,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             UpdateWorkloadAsync(workload, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Restrict the list of services allowed in the Workload environment.
-        /// The current list of allowed services can be found at
-        /// https://cloud.google.com/assured-workloads/docs/supported-products
-        /// In addition to assuredworkloads.workload.update permission, the user should
-        /// also have orgpolicy.policy.set permission on the folder resource
-        /// to use this functionality.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual RestrictAllowedServicesResponse RestrictAllowedServices(RestrictAllowedServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Restrict the list of services allowed in the Workload environment.
-        /// The current list of allowed services can be found at
-        /// https://cloud.google.com/assured-workloads/docs/supported-products
-        /// In addition to assuredworkloads.workload.update permission, the user should
-        /// also have orgpolicy.policy.set permission on the folder resource
-        /// to use this functionality.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RestrictAllowedServicesResponse> RestrictAllowedServicesAsync(RestrictAllowedServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Restrict the list of services allowed in the Workload environment.
-        /// The current list of allowed services can be found at
-        /// https://cloud.google.com/assured-workloads/docs/supported-products
-        /// In addition to assuredworkloads.workload.update permission, the user should
-        /// also have orgpolicy.policy.set permission on the folder resource
-        /// to use this functionality.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RestrictAllowedServicesResponse> RestrictAllowedServicesAsync(RestrictAllowedServicesRequest request, st::CancellationToken cancellationToken) =>
-            RestrictAllowedServicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Restrict the list of resources allowed in the Workload environment.
         /// The current list of allowed products can be found at
         /// https://cloud.google.com/assured-workloads/docs/supported-products
@@ -991,8 +935,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             GetWorkloadAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1001,8 +945,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1011,8 +955,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1021,25 +965,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             AnalyzeWorkloadMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="project">
-        /// The Source is a project based to be moved.
-        /// This is the project's relative path in the API, formatted as
-        /// "cloudresourcemanager.googleapis.com/projects/{project_number}"
-        /// "projects/{project_number}"
-        /// "cloudresourcemanager.googleapis.com/projects/{project_id}"
-        /// "projects/{project_id}"
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
+        /// The source type is a project. Specify the project's relative resource
+        /// name, formatted as either a project number or a project ID:
+        /// "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}"
+        /// For example:
+        /// "projects/951040570662" when specifying a project number, or
+        /// "projects/my-project-123" when specifying a project ID.
         /// </param>
         /// <param name="target">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
-        /// relative path in the API, formatted as
-        /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-2".
+        /// Required. The resource ID of the folder-based destination workload. This workload is
+        /// where the source project will hypothetically be moved to. Specify the
+        /// workload's relative resource name, formatted as:
+        /// "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+        /// For example:
+        /// "organizations/123/locations/us-east1/workloads/assured-workload-2"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1051,25 +994,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="project">
-        /// The Source is a project based to be moved.
-        /// This is the project's relative path in the API, formatted as
-        /// "cloudresourcemanager.googleapis.com/projects/{project_number}"
-        /// "projects/{project_number}"
-        /// "cloudresourcemanager.googleapis.com/projects/{project_id}"
-        /// "projects/{project_id}"
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
+        /// The source type is a project. Specify the project's relative resource
+        /// name, formatted as either a project number or a project ID:
+        /// "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}"
+        /// For example:
+        /// "projects/951040570662" when specifying a project number, or
+        /// "projects/my-project-123" when specifying a project ID.
         /// </param>
         /// <param name="target">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
-        /// relative path in the API, formatted as
-        /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-2".
+        /// Required. The resource ID of the folder-based destination workload. This workload is
+        /// where the source project will hypothetically be moved to. Specify the
+        /// workload's relative resource name, formatted as:
+        /// "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+        /// For example:
+        /// "organizations/123/locations/us-east1/workloads/assured-workload-2"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1081,25 +1023,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="project">
-        /// The Source is a project based to be moved.
-        /// This is the project's relative path in the API, formatted as
-        /// "cloudresourcemanager.googleapis.com/projects/{project_number}"
-        /// "projects/{project_number}"
-        /// "cloudresourcemanager.googleapis.com/projects/{project_id}"
-        /// "projects/{project_id}"
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
+        /// The source type is a project. Specify the project's relative resource
+        /// name, formatted as either a project number or a project ID:
+        /// "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}"
+        /// For example:
+        /// "projects/951040570662" when specifying a project number, or
+        /// "projects/my-project-123" when specifying a project ID.
         /// </param>
         /// <param name="target">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
-        /// relative path in the API, formatted as
-        /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
-        /// For example,
-        /// "organizations/123/locations/us-east1/workloads/assured-workload-2".
+        /// Required. The resource ID of the folder-based destination workload. This workload is
+        /// where the source project will hypothetically be moved to. Specify the
+        /// workload's relative resource name, formatted as:
+        /// "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+        /// For example:
+        /// "organizations/123/locations/us-east1/workloads/assured-workload-2"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1235,8 +1176,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
 
         private readonly gaxgrpc::ApiCall<UpdateWorkloadRequest, Workload> _callUpdateWorkload;
 
-        private readonly gaxgrpc::ApiCall<RestrictAllowedServicesRequest, RestrictAllowedServicesResponse> _callRestrictAllowedServices;
-
         private readonly gaxgrpc::ApiCall<RestrictAllowedResourcesRequest, RestrictAllowedResourcesResponse> _callRestrictAllowedResources;
 
         private readonly gaxgrpc::ApiCall<DeleteWorkloadRequest, wkt::Empty> _callDeleteWorkload;
@@ -1265,12 +1204,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             _callCreateWorkload = clientHelper.BuildApiCall<CreateWorkloadRequest, lro::Operation>("CreateWorkload", grpcClient.CreateWorkloadAsync, grpcClient.CreateWorkload, effectiveSettings.CreateWorkloadSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkload);
             Modify_CreateWorkloadApiCall(ref _callCreateWorkload);
-            _callUpdateWorkload = clientHelper.BuildApiCall<UpdateWorkloadRequest, Workload>("UpdateWorkload", grpcClient.UpdateWorkloadAsync, grpcClient.UpdateWorkload, effectiveSettings.UpdateWorkloadSettings).WithGoogleRequestParam("workload.name", request => request.Workload?.Name);
+            _callUpdateWorkload = clientHelper.BuildApiCall<UpdateWorkloadRequest, Workload>("UpdateWorkload", grpcClient.UpdateWorkloadAsync, grpcClient.UpdateWorkload, effectiveSettings.UpdateWorkloadSettings);
             Modify_ApiCall(ref _callUpdateWorkload);
             Modify_UpdateWorkloadApiCall(ref _callUpdateWorkload);
-            _callRestrictAllowedServices = clientHelper.BuildApiCall<RestrictAllowedServicesRequest, RestrictAllowedServicesResponse>("RestrictAllowedServices", grpcClient.RestrictAllowedServicesAsync, grpcClient.RestrictAllowedServices, effectiveSettings.RestrictAllowedServicesSettings);
-            Modify_ApiCall(ref _callRestrictAllowedServices);
-            Modify_RestrictAllowedServicesApiCall(ref _callRestrictAllowedServices);
             _callRestrictAllowedResources = clientHelper.BuildApiCall<RestrictAllowedResourcesRequest, RestrictAllowedResourcesResponse>("RestrictAllowedResources", grpcClient.RestrictAllowedResourcesAsync, grpcClient.RestrictAllowedResources, effectiveSettings.RestrictAllowedResourcesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestrictAllowedResources);
             Modify_RestrictAllowedResourcesApiCall(ref _callRestrictAllowedResources);
@@ -1295,8 +1231,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
 
         partial void Modify_UpdateWorkloadApiCall(ref gaxgrpc::ApiCall<UpdateWorkloadRequest, Workload> call);
 
-        partial void Modify_RestrictAllowedServicesApiCall(ref gaxgrpc::ApiCall<RestrictAllowedServicesRequest, RestrictAllowedServicesResponse> call);
-
         partial void Modify_RestrictAllowedResourcesApiCall(ref gaxgrpc::ApiCall<RestrictAllowedResourcesRequest, RestrictAllowedResourcesResponse> call);
 
         partial void Modify_DeleteWorkloadApiCall(ref gaxgrpc::ApiCall<DeleteWorkloadRequest, wkt::Empty> call);
@@ -1315,8 +1249,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         partial void Modify_CreateWorkloadRequest(ref CreateWorkloadRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateWorkloadRequest(ref UpdateWorkloadRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_RestrictAllowedServicesRequest(ref RestrictAllowedServicesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestrictAllowedResourcesRequest(ref RestrictAllowedResourcesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1383,40 +1315,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         {
             Modify_UpdateWorkloadRequest(ref request, ref callSettings);
             return _callUpdateWorkload.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Restrict the list of services allowed in the Workload environment.
-        /// The current list of allowed services can be found at
-        /// https://cloud.google.com/assured-workloads/docs/supported-products
-        /// In addition to assuredworkloads.workload.update permission, the user should
-        /// also have orgpolicy.policy.set permission on the folder resource
-        /// to use this functionality.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override RestrictAllowedServicesResponse RestrictAllowedServices(RestrictAllowedServicesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_RestrictAllowedServicesRequest(ref request, ref callSettings);
-            return _callRestrictAllowedServices.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Restrict the list of services allowed in the Workload environment.
-        /// The current list of allowed services can be found at
-        /// https://cloud.google.com/assured-workloads/docs/supported-products
-        /// In addition to assuredworkloads.workload.update permission, the user should
-        /// also have orgpolicy.policy.set permission on the folder resource
-        /// to use this functionality.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<RestrictAllowedServicesResponse> RestrictAllowedServicesAsync(RestrictAllowedServicesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_RestrictAllowedServicesRequest(ref request, ref callSettings);
-            return _callRestrictAllowedServices.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1512,8 +1410,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         }
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1525,8 +1423,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         }
 
         /// <summary>
-        /// Analyze if the source Assured Workloads can be moved to the target Assured
-        /// Workload
+        /// A request to analyze a hypothetical move of a source project or
+        /// project-based workload to a target (destination) folder-based workload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

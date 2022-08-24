@@ -270,59 +270,6 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedServices_sync",
-      "title": "RestrictAllowedServicesRequestObject",
-      "description": "Snippet for RestrictAllowedServices",
-      "file": "AssuredWorkloadsServiceClient.RestrictAllowedServicesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "RestrictAllowedServices",
-        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedServices",
-        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse",
-        "client": {
-          "shortName": "AssuredWorkloadsServiceClient",
-          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
-        },
-        "method": {
-          "shortName": "RestrictAllowedServices",
-          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedServices",
-          "service": {
-            "shortName": "AssuredWorkloadsService",
-            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedServices_async",
-      "title": "RestrictAllowedServicesRequestObjectAsync",
-      "description": "Snippet for RestrictAllowedServicesAsync",
-      "file": "AssuredWorkloadsServiceClient.RestrictAllowedServicesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "RestrictAllowedServicesAsync",
-        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedServicesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse>",
-        "client": {
-          "shortName": "AssuredWorkloadsServiceClient",
-          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
-        },
-        "method": {
-          "shortName": "RestrictAllowedServices",
-          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedServices",
-          "service": {
-            "shortName": "AssuredWorkloadsService",
-            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedResources_sync",
       "title": "RestrictAllowedResourcesRequestObject",
       "description": "Snippet for RestrictAllowedResources",

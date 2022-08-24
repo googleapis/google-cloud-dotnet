@@ -46,12 +46,6 @@
                 "RestrictAllowedResourcesAsync"
               ]
             },
-            "RestrictAllowedServices": {
-              "methods": [
-                "RestrictAllowedServices",
-                "RestrictAllowedServicesAsync"
-              ]
-            },
             "UpdateWorkload": {
               "methods": [
                 "UpdateWorkload",
