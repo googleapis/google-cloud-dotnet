@@ -4930,7 +4930,6 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ReadConsistencyFieldNumber = 1;
     /// <summary>
     /// The non-transactional read consistency to use.
-    /// Cannot be set to `STRONG` for global queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
