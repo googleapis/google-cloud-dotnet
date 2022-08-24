@@ -88,7 +88,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "LnYxYWxwaGEuSm9iU3RhdHVzLlN0YXRlEkQKDm5ld190YXNrX3N0YXRlGAMg",
             "ASgOMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5T",
             "dGF0ZSJLCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIVChFKT0JfU1RB",
-            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIrgOChBBbGxv",
+            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIo4PChBBbGxv",
             "Y2F0aW9uUG9saWN5Ek0KCGxvY2F0aW9uGAEgASgLMjsuZ29vZ2xlLmNsb3Vk",
             "LmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5Mb2NhdGlvblBvbGlj",
             "eRJRCghpbnN0YW5jZRgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
@@ -104,55 +104,57 @@ namespace Google.Cloud.Batch.V1Alpha {
             "bGxvY2F0aW9uUG9saWN5LkxhYmVsc0VudHJ5EksKB25ldHdvcmsYByABKAsy",
             "Oi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5",
             "Lk5ldHdvcmtQb2xpY3kaRQoOTG9jYXRpb25Qb2xpY3kSGQoRYWxsb3dlZF9s",
-            "b2NhdGlvbnMYASADKAkSGAoQZGVuaWVkX2xvY2F0aW9ucxgCIAMoCRpZCgRE",
+            "b2NhdGlvbnMYASADKAkSGAoQZGVuaWVkX2xvY2F0aW9ucxgCIAMoCRpxCgRE",
             "aXNrEg8KBWltYWdlGAQgASgJSAASEgoIc25hcHNob3QYBSABKAlIABIMCgR0",
-            "eXBlGAEgASgJEg8KB3NpemVfZ2IYAiABKANCDQoLZGF0YV9zb3VyY2UajwEK",
-            "DEF0dGFjaGVkRGlzaxJFCghuZXdfZGlzaxgBIAEoCzIxLmdvb2dsZS5jbG91",
-            "ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuRGlza0gAEhcKDWV4",
-            "aXN0aW5nX2Rpc2sYAiABKAlIABITCgtkZXZpY2VfbmFtZRgDIAEoCUIKCghh",
-            "dHRhY2hlZBoqCgtBY2NlbGVyYXRvchIMCgR0eXBlGAEgASgJEg0KBWNvdW50",
-            "GAIgASgDGtkCCg5JbnN0YW5jZVBvbGljeRIhChVhbGxvd2VkX21hY2hpbmVf",
-            "dHlwZXMYASADKAlCAhgBEhQKDG1hY2hpbmVfdHlwZRgCIAEoCRIYChBtaW5f",
-            "Y3B1X3BsYXRmb3JtGAMgASgJEloKEnByb3Zpc2lvbmluZ19tb2RlbBgEIAEo",
-            "DjI+Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xp",
-            "Y3kuUHJvdmlzaW9uaW5nTW9kZWwSTgoMYWNjZWxlcmF0b3JzGAUgAygLMjgu",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5B",
-            "Y2NlbGVyYXRvchJICgVkaXNrcxgGIAMoCzI5Lmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuQXR0YWNoZWREaXNrGpkBChhJ",
-            "bnN0YW5jZVBvbGljeU9yVGVtcGxhdGUSTQoGcG9saWN5GAEgASgLMjsuZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5JbnN0",
-            "YW5jZVBvbGljeUgAEhsKEWluc3RhbmNlX3RlbXBsYXRlGAIgASgJSABCEQoP",
-            "cG9saWN5X3RlbXBsYXRlGlcKEE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0d29y",
-            "axgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEh4KFm5vX2V4dGVybmFsX2lw",
-            "X2FkZHJlc3MYAyABKAgaagoNTmV0d29ya1BvbGljeRJZChJuZXR3b3JrX2lu",
-            "dGVyZmFjZXMYASADKAsyPS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5B",
-            "bGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJbnRlcmZhY2UaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNp",
-            "b25pbmdNb2RlbBIiCh5QUk9WSVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQ",
-            "ABIMCghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIukF",
-            "CglUYXNrR3JvdXASEQoEbmFtZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgD",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPg",
-            "QQISEgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJR",
-            "ChFzY2hlZHVsaW5nX3BvbGljeRgGIAEoDjI2Lmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLlRhc2tHcm91cC5TY2hlZHVsaW5nUG9saWN5EkcKEWFsbG9j",
-            "YXRpb25fcG9saWN5GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
-            "aGEuQWxsb2NhdGlvblBvbGljeRJBCgZsYWJlbHMYCCADKAsyMS5nb29nbGUu",
-            "Y2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNrR3JvdXAuTGFiZWxzRW50cnkSQgoR",
-            "dGFza19lbnZpcm9ubWVudHMYCSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djFhbHBoYS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAog",
-            "ASgDEhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZl",
-            "X3NzaBgMIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIk4KEFNjaGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElO",
-            "R19QT0xJQ1lfVU5TUEVDSUZJRUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxF",
-            "EAE6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFza0dyb3VwEkpwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9i",
-            "fS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIvCg5TZXJ2aWNlQWNjb3VudBIN",
-            "CgVlbWFpbBgBIAEoCRIOCgZzY29wZXMYAiADKAlCzQEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYmF0Y2gudjFhbHBoYUIISm9iUHJvdG9QAVo/Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iYXRjaC92MWFscGhh",
-            "O2JhdGNoogIDR0NCqgIaR29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpH",
-            "b29nbGVcQ2xvdWRcQmF0Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJh",
-            "dGNoOjpWMWFscGhhYgZwcm90bzM="));
+            "eXBlGAEgASgJEg8KB3NpemVfZ2IYAiABKAMSFgoOZGlza19pbnRlcmZhY2UY",
+            "BiABKAlCDQoLZGF0YV9zb3VyY2UajwEKDEF0dGFjaGVkRGlzaxJFCghuZXdf",
+            "ZGlzaxgBIAEoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9j",
+            "YXRpb25Qb2xpY3kuRGlza0gAEhcKDWV4aXN0aW5nX2Rpc2sYAiABKAlIABIT",
+            "CgtkZXZpY2VfbmFtZRgDIAEoCUIKCghhdHRhY2hlZBpLCgtBY2NlbGVyYXRv",
+            "chIMCgR0eXBlGAEgASgJEg0KBWNvdW50GAIgASgDEh8KE2luc3RhbGxfZ3B1",
+            "X2RyaXZlcnMYAyABKAhCAhgBGtkCCg5JbnN0YW5jZVBvbGljeRIhChVhbGxv",
+            "d2VkX21hY2hpbmVfdHlwZXMYASADKAlCAhgBEhQKDG1hY2hpbmVfdHlwZRgC",
+            "IAEoCRIYChBtaW5fY3B1X3BsYXRmb3JtGAMgASgJEloKEnByb3Zpc2lvbmlu",
+            "Z19tb2RlbBgEIAEoDjI+Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFs",
+            "bG9jYXRpb25Qb2xpY3kuUHJvdmlzaW9uaW5nTW9kZWwSTgoMYWNjZWxlcmF0",
+            "b3JzGAUgAygLMjguZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2Nh",
+            "dGlvblBvbGljeS5BY2NlbGVyYXRvchJICgVkaXNrcxgGIAMoCzI5Lmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuQXR0YWNo",
+            "ZWREaXNrGrYBChhJbnN0YW5jZVBvbGljeU9yVGVtcGxhdGUSTQoGcG9saWN5",
+            "GAEgASgLMjsuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlv",
+            "blBvbGljeS5JbnN0YW5jZVBvbGljeUgAEhsKEWluc3RhbmNlX3RlbXBsYXRl",
+            "GAIgASgJSAASGwoTaW5zdGFsbF9ncHVfZHJpdmVycxgDIAEoCEIRCg9wb2xp",
+            "Y3lfdGVtcGxhdGUaVwoQTmV0d29ya0ludGVyZmFjZRIPCgduZXR3b3JrGAEg",
+            "ASgJEhIKCnN1Ym5ldHdvcmsYAiABKAkSHgoWbm9fZXh0ZXJuYWxfaXBfYWRk",
+            "cmVzcxgDIAEoCBpqCg1OZXR3b3JrUG9saWN5ElkKEm5ldHdvcmtfaW50ZXJm",
+            "YWNlcxgBIAMoCzI9Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9j",
+            "YXRpb25Qb2xpY3kuTmV0d29ya0ludGVyZmFjZRotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImAKEVByb3Zpc2lvbmlu",
+            "Z01vZGVsEiIKHlBST1ZJU0lPTklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwK",
+            "CFNUQU5EQVJEEAESCAoEU1BPVBACEg8KC1BSRUVNUFRJQkxFEAMi6QUKCVRh",
+            "c2tHcm91cBIRCgRuYW1lGAEgASgJQgPgQQMSPAoJdGFza19zcGVjGAMgASgL",
+            "MiQuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1NwZWNCA+BBAhIS",
+            "Cgp0YXNrX2NvdW50GAQgASgDEhMKC3BhcmFsbGVsaXNtGAUgASgDElEKEXNj",
+            "aGVkdWxpbmdfcG9saWN5GAYgASgOMjYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYx",
+            "YWxwaGEuVGFza0dyb3VwLlNjaGVkdWxpbmdQb2xpY3kSRwoRYWxsb2NhdGlv",
+            "bl9wb2xpY3kYByABKAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5B",
+            "bGxvY2F0aW9uUG9saWN5EkEKBmxhYmVscxgIIAMoCzIxLmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91cC5MYWJlbHNFbnRyeRJCChF0YXNr",
+            "X2Vudmlyb25tZW50cxgJIAMoCzInLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
+            "cGhhLkVudmlyb25tZW50EhsKE3Rhc2tfY291bnRfcGVyX25vZGUYCiABKAMS",
+            "GgoScmVxdWlyZV9ob3N0c19maWxlGAsgASgIEhYKDnBlcm1pc3NpdmVfc3No",
+            "GAwgASgIGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiTgoQU2NoZWR1bGluZ1BvbGljeRIhCh1TQ0hFRFVMSU5HX1BP",
+            "TElDWV9VTlNQRUNJRklFRBAAEhcKE0FTX1NPT05fQVNfUE9TU0lCTEUQATpv",
+            "6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXASSnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rh",
+            "c2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVt",
+            "YWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCULNAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MWFscGhhQghKb2JQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JhdGNoL3YxYWxwaGE7YmF0",
+            "Y2iiAgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2ds",
+            "ZVxDbG91ZFxCYXRjaFxWMWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6",
+            "OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -164,11 +166,11 @@ namespace Google.Cloud.Batch.V1Alpha {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.JobNotification), global::Google.Cloud.Batch.V1Alpha.JobNotification.Parser, new[]{ "PubsubTopic", "Message" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.JobNotification.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.JobNotification.Types.Message), global::Google.Cloud.Batch.V1Alpha.JobNotification.Types.Message.Parser, new[]{ "Type", "NewJobState", "NewTaskState" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Parser, new[]{ "Location", "Instance", "Instances", "InstanceTemplates", "ProvisioningModels", "ServiceAccountEmail", "ServiceAccount", "Labels", "Network" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.LocationPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.LocationPolicy.Parser, new[]{ "AllowedLocations", "DeniedLocations" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk.Parser, new[]{ "Image", "Snapshot", "Type", "SizeGb" }, new[]{ "DataSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk.Parser, new[]{ "Image", "Snapshot", "Type", "SizeGb", "DiskInterface" }, new[]{ "DataSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk.Parser, new[]{ "NewDisk", "ExistingDisk", "DeviceName" }, new[]{ "Attached" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "AllowedMachineTypes", "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "Disks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate" }, new[]{ "PolicyTemplate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers" }, new[]{ "PolicyTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             null, }),
@@ -3424,12 +3426,18 @@ namespace Google.Cloud.Batch.V1Alpha {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> allowedLocations_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// A list of allowed location names represented by internal URLs,
-        /// First location in the list must be a region.
-        /// for example,
-        /// ["regions/us-central1"] allow VMs in region us-central1,
-        /// ["regions/us-central1", "zones/us-central1-a"] only allow VMs in zone
-        /// us-central1-a.
+        /// A list of allowed location names represented by internal URLs.
+        /// Each location can be a region or a zone.
+        /// Only one region or multiple zones in one region is supported now.
+        /// For example,
+        /// ["regions/us-central1"] allow VMs in any zones in region us-central1.
+        /// ["zones/us-central1-a", "zones/us-central1-c"] only allow VMs
+        /// in zones us-central1-a and us-central1-c.
+        /// All locations end up in different regions would cause errors.
+        /// For example,
+        /// ["regions/us-central1", "zones/us-central1-a", "zones/us-central1-b",
+        /// "zones/us-west1-a"] contains 2 regions "us-central1" and
+        /// "us-west1". An error is expected in this case.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3591,7 +3599,10 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// A new persistent disk.
+      /// A new persistent disk or a local ssd.
+      /// A VM can only have one local SSD setting but multiple local SSD partitions.
+      /// https://cloud.google.com/compute/docs/disks#pdspecs.
+      /// https://cloud.google.com/compute/docs/disks#localssds.
       /// </summary>
       public sealed partial class Disk : pb::IMessage<Disk>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3629,6 +3640,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public Disk(Disk other) : this() {
           type_ = other.type_;
           sizeGb_ = other.sizeGb_;
+          diskInterface_ = other.diskInterface_;
           switch (other.DataSourceCase) {
             case DataSourceOneofCase.Image:
               Image = other.Image;
@@ -3682,7 +3694,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         private string type_ = "";
         /// <summary>
         /// Disk type as shown in `gcloud compute disk-types list`
-        /// For example, "pd-ssd", "pd-standard", "pd-balanced".
+        /// For example, "pd-ssd", "pd-standard", "pd-balanced", "local-ssd".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3699,6 +3711,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>
         /// Disk size in GB.
         /// This field is ignored if `data_source` is `disk` or `image`.
+        /// If `type` is `local-ssd`, size_gb should be a multiple of 375GB,
+        /// otherwise, the final size will be the next greater multiple of 375 GB.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3706,6 +3720,23 @@ namespace Google.Cloud.Batch.V1Alpha {
           get { return sizeGb_; }
           set {
             sizeGb_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "disk_interface" field.</summary>
+        public const int DiskInterfaceFieldNumber = 6;
+        private string diskInterface_ = "";
+        /// <summary>
+        /// Local SSDs are available through both "SCSI" and "NVMe" interfaces.
+        /// If not indicated, "NVMe" will be the default one for local ssds.
+        /// We only support "SCSI" for persistent disks now.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DiskInterface {
+          get { return diskInterface_; }
+          set {
+            diskInterface_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -3749,6 +3780,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (Snapshot != other.Snapshot) return false;
           if (Type != other.Type) return false;
           if (SizeGb != other.SizeGb) return false;
+          if (DiskInterface != other.DiskInterface) return false;
           if (DataSourceCase != other.DataSourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3761,6 +3793,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (dataSourceCase_ == DataSourceOneofCase.Snapshot) hash ^= Snapshot.GetHashCode();
           if (Type.Length != 0) hash ^= Type.GetHashCode();
           if (SizeGb != 0L) hash ^= SizeGb.GetHashCode();
+          if (DiskInterface.Length != 0) hash ^= DiskInterface.GetHashCode();
           hash ^= (int) dataSourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3796,6 +3829,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(42);
             output.WriteString(Snapshot);
           }
+          if (DiskInterface.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DiskInterface);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3822,6 +3859,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(42);
             output.WriteString(Snapshot);
           }
+          if (DiskInterface.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DiskInterface);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3844,6 +3885,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (SizeGb != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(SizeGb);
           }
+          if (DiskInterface.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DiskInterface);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -3861,6 +3905,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (other.SizeGb != 0L) {
             SizeGb = other.SizeGb;
+          }
+          if (other.DiskInterface.Length != 0) {
+            DiskInterface = other.DiskInterface;
           }
           switch (other.DataSourceCase) {
             case DataSourceOneofCase.Image:
@@ -3902,6 +3949,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 Snapshot = input.ReadString();
                 break;
               }
+              case 50: {
+                DiskInterface = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -3933,6 +3984,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 Snapshot = input.ReadString();
                 break;
               }
+              case 50: {
+                DiskInterface = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -3941,7 +3996,8 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// A new or an existing persistent disk attached to a VM instance.
+      /// A new or an existing persistent disk or a local ssd attached to a VM
+      /// instance.
       /// </summary>
       public sealed partial class AttachedDisk : pb::IMessage<AttachedDisk>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4298,6 +4354,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public Accelerator(Accelerator other) : this() {
           type_ = other.type_;
           count_ = other.count_;
+          installGpuDrivers_ = other.installGpuDrivers_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4338,6 +4395,23 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "install_gpu_drivers" field.</summary>
+        public const int InstallGpuDriversFieldNumber = 3;
+        private bool installGpuDrivers_;
+        /// <summary>
+        /// When true, Batch will install the GPU drivers.
+        /// This field will be ignored if specified.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool InstallGpuDrivers {
+          get { return installGpuDrivers_; }
+          set {
+            installGpuDrivers_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4355,6 +4429,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (Type != other.Type) return false;
           if (Count != other.Count) return false;
+          if (InstallGpuDrivers != other.InstallGpuDrivers) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4364,6 +4439,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           int hash = 1;
           if (Type.Length != 0) hash ^= Type.GetHashCode();
           if (Count != 0L) hash ^= Count.GetHashCode();
+          if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4390,6 +4466,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(16);
             output.WriteInt64(Count);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4408,6 +4488,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(16);
             output.WriteInt64(Count);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4423,6 +4507,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (Count != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
+          }
+          if (InstallGpuDrivers != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4441,6 +4528,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (other.Count != 0L) {
             Count = other.Count;
+          }
+          if (other.InstallGpuDrivers != false) {
+            InstallGpuDrivers = other.InstallGpuDrivers;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4465,6 +4555,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 Count = input.ReadInt64();
                 break;
               }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -4486,6 +4580,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 16: {
                 Count = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
                 break;
               }
             }
@@ -4898,6 +4996,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InstancePolicyOrTemplate(InstancePolicyOrTemplate other) : this() {
+          installGpuDrivers_ = other.installGpuDrivers_;
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
               Policy = other.Policy.Clone();
@@ -4948,6 +5047,18 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "install_gpu_drivers" field.</summary>
+        public const int InstallGpuDriversFieldNumber = 3;
+        private bool installGpuDrivers_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool InstallGpuDrivers {
+          get { return installGpuDrivers_; }
+          set {
+            installGpuDrivers_ = value;
+          }
+        }
+
         private object policyTemplate_;
         /// <summary>Enum of possible cases for the "policy_template" oneof.</summary>
         public enum PolicyTemplateOneofCase {
@@ -4986,6 +5097,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (!object.Equals(Policy, other.Policy)) return false;
           if (InstanceTemplate != other.InstanceTemplate) return false;
+          if (InstallGpuDrivers != other.InstallGpuDrivers) return false;
           if (PolicyTemplateCase != other.PolicyTemplateCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -4996,6 +5108,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           int hash = 1;
           if (policyTemplateCase_ == PolicyTemplateOneofCase.Policy) hash ^= Policy.GetHashCode();
           if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) hash ^= InstanceTemplate.GetHashCode();
+          if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
           hash ^= (int) policyTemplateCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -5023,6 +5136,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5041,6 +5158,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5057,6 +5178,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -5068,6 +5192,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         public void MergeFrom(InstancePolicyOrTemplate other) {
           if (other == null) {
             return;
+          }
+          if (other.InstallGpuDrivers != false) {
+            InstallGpuDrivers = other.InstallGpuDrivers;
           }
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
@@ -5109,6 +5236,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 InstanceTemplate = input.ReadString();
                 break;
               }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -5135,6 +5266,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 18: {
                 InstanceTemplate = input.ReadString();
+                break;
+              }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
                 break;
               }
             }
