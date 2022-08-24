@@ -86,10 +86,9 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
                         //if (method.Name.Contains("storage.buckets.testIamPermissions") || method.Name.Contains("storage.buckets.lockRetentionPolicy"))
                         //if (method.Name.Contains("storage.objects.get") || method.Name.Contains("storage.objects.list"))
-                        //if (method.Name.Contains("storage.hmacKey.get"))
+                       // if (method.Name.Contains("storage.hmacKey.get"))
 
-                        // if (method.Name.Contains("storage.notifications.list"))
-                        if (method.Name.Contains("storage.buckets.list"))
+                         if (method.Name.Contains("storage.notifications.list"))
                         {
                             await RunTestCase(instruction, method, expectSuccess);
                         }
@@ -210,7 +209,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             "storage.buckets.insert" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateBucket), new System.Type[] { typeof(string), typeof(string), typeof(CreateBucketOptions) }), true, true, false, false, false, false, false, false),
             "storage.buckets.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListBuckets)), true, false, false, false, false, false, false, false),
             "storage.buckets.testIamPermissions" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.TestBucketIamPermissions), new System.Type[] { typeof(string), typeof(string), typeof(TestBucketIamPermissionsOptions) }), true, true, false, false, false, false, false, false),
-            "storage.buckets.lockRetentionPolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.LockBucketRetentionPolicy), new System.Type[] { typeof(string), typeof(string), typeof(LockBucketRetentionPolicyOptions) }), false, true, false, false, false, false, false, true),
+            "storage.buckets.lockRetentionPolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.LockBucketRetentionPolicy), new System.Type[] { typeof(string), typeof(string), typeof(LockBucketRetentionPolicyOptions) }), true, true, false, false, false, false, false, true),
 
             "storage.objects.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetObject), new System.Type[] { typeof(string), typeof(string), typeof(GetObjectOptions) }), false, true, true, false, false, false, false, false),
             "storage.objects.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListObjects), new System.Type[] { typeof(string), typeof(string), typeof(ListObjectsOptions) }), false, true, false, false, false, false, false, false),

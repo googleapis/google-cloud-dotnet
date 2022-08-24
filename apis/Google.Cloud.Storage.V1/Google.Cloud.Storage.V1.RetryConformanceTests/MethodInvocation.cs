@@ -126,17 +126,22 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     if (a != null)
                         a.ReadPage(5);
                 }
-                /*
-                if (MethodInformation.Name.ToLowerInvariant().Contains("gethmackey"))
+                
+                if (MethodInformation.Name.ToLowerInvariant().Contains("listobject"))
                 {
-                    var a = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
+                    var a = Result as PagedEnumerable<Objects, Object>;
                     if (a != null)
                         a.ReadPage(5);
                 }
-                */
-                if (MethodInformation.Name.ToLowerInvariant().Contains("listnotifications"))
+                else if (MethodInformation.Name.ToLowerInvariant().Contains("listbuckets"))
                 {
-                    var a = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
+                    var a = Result as PagedEnumerable<Buckets, Bucket>;
+                    if (a != null)
+                        a.ReadPage(5);
+                }
+                else if (MethodInformation.Name.ToLowerInvariant().Contains("listnotifications"))
+                {
+                    var a = Result as PagedEnumerable<Notifications, Notification>;
                     if (a != null)
                         a.ReadPage(5);
                 }
