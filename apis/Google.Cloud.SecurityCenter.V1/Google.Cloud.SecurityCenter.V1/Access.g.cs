@@ -25,22 +25,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnByb3Rv",
-            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEivgEKBkFjY2VzcxIX",
+            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi4gIKBkFjY2VzcxIX",
             "Cg9wcmluY2lwYWxfZW1haWwYASABKAkSEQoJY2FsbGVyX2lwGAIgASgJEkIK",
             "DWNhbGxlcl9pcF9nZW8YAyABKAsyKy5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
             "ZW50ZXIudjEuR2VvbG9jYXRpb24SGQoRdXNlcl9hZ2VudF9mYW1pbHkYBCAB",
             "KAkSFAoMc2VydmljZV9uYW1lGAUgASgJEhMKC21ldGhvZF9uYW1lGAYgASgJ",
-            "IiIKC0dlb2xvY2F0aW9uEhMKC3JlZ2lvbl9jb2RlGAEgASgJQucBCiJjb20u",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQgtBY2Nlc3NQcm90b1AB",
-            "Wkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNs",
-            "b3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
-            "Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx",
-            "YgZwcm90bzM="));
+            "EhkKEXByaW5jaXBhbF9zdWJqZWN0GAcgASgJEiAKGHNlcnZpY2VfYWNjb3Vu",
+            "dF9rZXlfbmFtZRgIIAEoCRJlCh9zZXJ2aWNlX2FjY291bnRfZGVsZWdhdGlv",
+            "bl9pbmZvGAkgAygLMjwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
+            "LlNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8iUgocU2VydmljZUFjY291",
+            "bnREZWxlZ2F0aW9uSW5mbxIXCg9wcmluY2lwYWxfZW1haWwYASABKAkSGQoR",
+            "cHJpbmNpcGFsX3N1YmplY3QYAiABKAkiIgoLR2VvbG9jYXRpb24SEwoLcmVn",
+            "aW9uX2NvZGUYASABKAlC5wEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjFCC0FjY2Vzc1Byb3RvUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2Vj",
+            "dXJpdHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHK",
+            "Ah5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNs",
+            "b3VkOjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName", "PrincipalSubject", "ServiceAccountKeyName", "ServiceAccountDelegationInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo), global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo.Parser, new[]{ "PrincipalEmail", "PrincipalSubject" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Geolocation), global::Google.Cloud.SecurityCenter.V1.Geolocation.Parser, new[]{ "RegionCode" }, null, null, null, null)
           }));
     }
@@ -91,6 +97,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       userAgentFamily_ = other.userAgentFamily_;
       serviceName_ = other.serviceName_;
       methodName_ = other.methodName_;
+      principalSubject_ = other.principalSubject_;
+      serviceAccountKeyName_ = other.serviceAccountKeyName_;
+      serviceAccountDelegationInfo_ = other.serviceAccountDelegationInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -105,6 +114,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string principalEmail_ = "";
     /// <summary>
     /// Associated email, such as "foo@google.com".
+    ///
+    /// The email address of the authenticated user (or service account on behalf
+    /// of third party principal) making the request. For third party identity
+    /// callers, the `principal_subject` field is populated instead of this field.
+    /// For privacy reasons, the principal email address is sometimes redacted.
+    /// For more information, see [Caller identities in audit
+    /// logs](https://cloud.google.com/logging/docs/audit#user-id).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -192,6 +208,64 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "principal_subject" field.</summary>
+    public const int PrincipalSubjectFieldNumber = 7;
+    private string principalSubject_ = "";
+    /// <summary>
+    /// A string representing the principal_subject associated with the identity.
+    /// As compared to `principal_email`, supports principals that aren't
+    /// associated with email addresses, such as third party principals. For most
+    /// identities, the format will be `principal://iam.googleapis.com/{identity
+    /// pool name}/subjects/{subject}` except for some GKE identities
+    /// (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy
+    /// format `serviceAccount:{identity pool name}[{subject}]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrincipalSubject {
+      get { return principalSubject_; }
+      set {
+        principalSubject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_account_key_name" field.</summary>
+    public const int ServiceAccountKeyNameFieldNumber = 8;
+    private string serviceAccountKeyName_ = "";
+    /// <summary>
+    /// The name of the service account key used to create or exchange
+    /// credentials for authenticating the service account making the request.
+    /// This is a scheme-less URI full resource name. For example:
+    ///
+    /// "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccountKeyName {
+      get { return serviceAccountKeyName_; }
+      set {
+        serviceAccountKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_account_delegation_info" field.</summary>
+    public const int ServiceAccountDelegationInfoFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo> _repeated_serviceAccountDelegationInfo_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo>();
+    /// <summary>
+    /// Identity delegation history of an authenticated service account that makes
+    /// the request. It contains information on the real authorities that try to
+    /// access GCP resources by delegating on a service account. When multiple
+    /// authorities are present, they are guaranteed to be sorted based on the
+    /// original ordering of the identity delegation events.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo> ServiceAccountDelegationInfo {
+      get { return serviceAccountDelegationInfo_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -213,6 +287,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (UserAgentFamily != other.UserAgentFamily) return false;
       if (ServiceName != other.ServiceName) return false;
       if (MethodName != other.MethodName) return false;
+      if (PrincipalSubject != other.PrincipalSubject) return false;
+      if (ServiceAccountKeyName != other.ServiceAccountKeyName) return false;
+      if(!serviceAccountDelegationInfo_.Equals(other.serviceAccountDelegationInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -226,6 +303,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (UserAgentFamily.Length != 0) hash ^= UserAgentFamily.GetHashCode();
       if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
       if (MethodName.Length != 0) hash ^= MethodName.GetHashCode();
+      if (PrincipalSubject.Length != 0) hash ^= PrincipalSubject.GetHashCode();
+      if (ServiceAccountKeyName.Length != 0) hash ^= ServiceAccountKeyName.GetHashCode();
+      hash ^= serviceAccountDelegationInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -268,6 +348,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(50);
         output.WriteString(MethodName);
       }
+      if (PrincipalSubject.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(PrincipalSubject);
+      }
+      if (ServiceAccountKeyName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceAccountKeyName);
+      }
+      serviceAccountDelegationInfo_.WriteTo(output, _repeated_serviceAccountDelegationInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -302,6 +391,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(50);
         output.WriteString(MethodName);
       }
+      if (PrincipalSubject.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(PrincipalSubject);
+      }
+      if (ServiceAccountKeyName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceAccountKeyName);
+      }
+      serviceAccountDelegationInfo_.WriteTo(ref output, _repeated_serviceAccountDelegationInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -330,6 +428,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (MethodName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MethodName);
       }
+      if (PrincipalSubject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrincipalSubject);
+      }
+      if (ServiceAccountKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountKeyName);
+      }
+      size += serviceAccountDelegationInfo_.CalculateSize(_repeated_serviceAccountDelegationInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -363,6 +468,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.MethodName.Length != 0) {
         MethodName = other.MethodName;
       }
+      if (other.PrincipalSubject.Length != 0) {
+        PrincipalSubject = other.PrincipalSubject;
+      }
+      if (other.ServiceAccountKeyName.Length != 0) {
+        ServiceAccountKeyName = other.ServiceAccountKeyName;
+      }
+      serviceAccountDelegationInfo_.Add(other.serviceAccountDelegationInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -403,6 +515,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 50: {
             MethodName = input.ReadString();
+            break;
+          }
+          case 58: {
+            PrincipalSubject = input.ReadString();
+            break;
+          }
+          case 66: {
+            ServiceAccountKeyName = input.ReadString();
+            break;
+          }
+          case 74: {
+            serviceAccountDelegationInfo_.AddEntriesFrom(input, _repeated_serviceAccountDelegationInfo_codec);
             break;
           }
         }
@@ -447,6 +571,259 @@ namespace Google.Cloud.SecurityCenter.V1 {
             MethodName = input.ReadString();
             break;
           }
+          case 58: {
+            PrincipalSubject = input.ReadString();
+            break;
+          }
+          case 66: {
+            ServiceAccountKeyName = input.ReadString();
+            break;
+          }
+          case 74: {
+            serviceAccountDelegationInfo_.AddEntriesFrom(ref input, _repeated_serviceAccountDelegationInfo_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Identity delegation history of an authenticated service account.
+  /// </summary>
+  public sealed partial class ServiceAccountDelegationInfo : pb::IMessage<ServiceAccountDelegationInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ServiceAccountDelegationInfo> _parser = new pb::MessageParser<ServiceAccountDelegationInfo>(() => new ServiceAccountDelegationInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ServiceAccountDelegationInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccountDelegationInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccountDelegationInfo(ServiceAccountDelegationInfo other) : this() {
+      principalEmail_ = other.principalEmail_;
+      principalSubject_ = other.principalSubject_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccountDelegationInfo Clone() {
+      return new ServiceAccountDelegationInfo(this);
+    }
+
+    /// <summary>Field number for the "principal_email" field.</summary>
+    public const int PrincipalEmailFieldNumber = 1;
+    private string principalEmail_ = "";
+    /// <summary>
+    /// The email address of a Google account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrincipalEmail {
+      get { return principalEmail_; }
+      set {
+        principalEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "principal_subject" field.</summary>
+    public const int PrincipalSubjectFieldNumber = 2;
+    private string principalSubject_ = "";
+    /// <summary>
+    /// A string representing the principal_subject associated with the identity.
+    /// As compared to `principal_email`, supports principals that aren't
+    /// associated with email addresses, such as third party principals. For most
+    /// identities, the format will be `principal://iam.googleapis.com/{identity
+    /// pool name}/subjects/{subject}` except for some GKE identities
+    /// (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy
+    /// format `serviceAccount:{identity pool name}[{subject}]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrincipalSubject {
+      get { return principalSubject_; }
+      set {
+        principalSubject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ServiceAccountDelegationInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ServiceAccountDelegationInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PrincipalEmail != other.PrincipalEmail) return false;
+      if (PrincipalSubject != other.PrincipalSubject) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PrincipalEmail.Length != 0) hash ^= PrincipalEmail.GetHashCode();
+      if (PrincipalSubject.Length != 0) hash ^= PrincipalSubject.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PrincipalEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PrincipalEmail);
+      }
+      if (PrincipalSubject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PrincipalSubject);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PrincipalEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PrincipalEmail);
+      }
+      if (PrincipalSubject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PrincipalSubject);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PrincipalEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrincipalEmail);
+      }
+      if (PrincipalSubject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrincipalSubject);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ServiceAccountDelegationInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PrincipalEmail.Length != 0) {
+        PrincipalEmail = other.PrincipalEmail;
+      }
+      if (other.PrincipalSubject.Length != 0) {
+        PrincipalSubject = other.PrincipalSubject;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PrincipalEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            PrincipalSubject = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PrincipalEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            PrincipalSubject = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -471,7 +848,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
