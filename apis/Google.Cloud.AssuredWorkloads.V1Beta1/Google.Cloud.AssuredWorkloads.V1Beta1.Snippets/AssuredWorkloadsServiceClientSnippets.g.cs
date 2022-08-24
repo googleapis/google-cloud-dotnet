@@ -281,41 +281,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for RestrictAllowedServices</summary>
-        public void RestrictAllowedServicesRequestObject()
-        {
-            // Snippet: RestrictAllowedServices(RestrictAllowedServicesRequest, CallSettings)
-            // Create client
-            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
-            // Initialize request argument(s)
-            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
-            {
-                Name = "",
-                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
-            };
-            // Make the request
-            RestrictAllowedServicesResponse response = assuredWorkloadsServiceClient.RestrictAllowedServices(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RestrictAllowedServicesAsync</summary>
-        public async Task RestrictAllowedServicesRequestObjectAsync()
-        {
-            // Snippet: RestrictAllowedServicesAsync(RestrictAllowedServicesRequest, CallSettings)
-            // Additional: RestrictAllowedServicesAsync(RestrictAllowedServicesRequest, CancellationToken)
-            // Create client
-            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
-            {
-                Name = "",
-                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
-            };
-            // Make the request
-            RestrictAllowedServicesResponse response = await assuredWorkloadsServiceClient.RestrictAllowedServicesAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for RestrictAllowedResources</summary>
         public void RestrictAllowedResourcesRequestObject()
         {

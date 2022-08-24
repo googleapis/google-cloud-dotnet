@@ -72,10 +72,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> __Marshaller_google_cloud_assuredworkloads_v1beta1_Workload = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse> __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse> __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse.Parser));
@@ -109,14 +105,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         "UpdateWorkload",
         __Marshaller_google_cloud_assuredworkloads_v1beta1_UpdateWorkloadRequest,
         __Marshaller_google_cloud_assuredworkloads_v1beta1_Workload);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse> __Method_RestrictAllowedServices = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "RestrictAllowedServices",
-        __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedServicesRequest,
-        __Marshaller_google_cloud_assuredworkloads_v1beta1_RestrictAllowedServicesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse> __Method_RestrictAllowedResources = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse>(
@@ -196,23 +184,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
 
       /// <summary>
-      /// Restrict the list of services allowed in the Workload environment.
-      /// The current list of allowed services can be found at
-      /// https://cloud.google.com/assured-workloads/docs/supported-products
-      /// In addition to assuredworkloads.workload.update permission, the user should
-      /// also have orgpolicy.policy.set permission on the folder resource
-      /// to use this functionality.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse> RestrictAllowedServices(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Restrict the list of resources allowed in the Workload environment.
       /// The current list of allowed products can be found at
       /// https://cloud.google.com/assured-workloads/docs/supported-products
@@ -259,8 +230,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
 
       /// <summary>
-      /// Analyze if the source Assured Workloads can be moved to the target Assured
-      /// Workload
+      /// A request to analyze a hypothetical move of a source project or
+      /// project-based workload to a target (destination) folder-based workload.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -419,74 +390,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> UpdateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkload, null, options, request);
-      }
-      /// <summary>
-      /// Restrict the list of services allowed in the Workload environment.
-      /// The current list of allowed services can be found at
-      /// https://cloud.google.com/assured-workloads/docs/supported-products
-      /// In addition to assuredworkloads.workload.update permission, the user should
-      /// also have orgpolicy.policy.set permission on the folder resource
-      /// to use this functionality.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse RestrictAllowedServices(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return RestrictAllowedServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Restrict the list of services allowed in the Workload environment.
-      /// The current list of allowed services can be found at
-      /// https://cloud.google.com/assured-workloads/docs/supported-products
-      /// In addition to assuredworkloads.workload.update permission, the user should
-      /// also have orgpolicy.policy.set permission on the folder resource
-      /// to use this functionality.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse RestrictAllowedServices(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_RestrictAllowedServices, null, options, request);
-      }
-      /// <summary>
-      /// Restrict the list of services allowed in the Workload environment.
-      /// The current list of allowed services can be found at
-      /// https://cloud.google.com/assured-workloads/docs/supported-products
-      /// In addition to assuredworkloads.workload.update permission, the user should
-      /// also have orgpolicy.policy.set permission on the folder resource
-      /// to use this functionality.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse> RestrictAllowedServicesAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return RestrictAllowedServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Restrict the list of services allowed in the Workload environment.
-      /// The current list of allowed services can be found at
-      /// https://cloud.google.com/assured-workloads/docs/supported-products
-      /// In addition to assuredworkloads.workload.update permission, the user should
-      /// also have orgpolicy.policy.set permission on the folder resource
-      /// to use this functionality.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse> RestrictAllowedServicesAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_RestrictAllowedServices, null, options, request);
       }
       /// <summary>
       /// Restrict the list of resources allowed in the Workload environment.
@@ -673,8 +576,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkload, null, options, request);
       }
       /// <summary>
-      /// Analyze if the source Assured Workloads can be moved to the target Assured
-      /// Workload
+      /// A request to analyze a hypothetical move of a source project or
+      /// project-based workload to a target (destination) folder-based workload.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -687,8 +590,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return AnalyzeWorkloadMove(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyze if the source Assured Workloads can be moved to the target Assured
-      /// Workload
+      /// A request to analyze a hypothetical move of a source project or
+      /// project-based workload to a target (destination) folder-based workload.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -699,8 +602,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeWorkloadMove, null, options, request);
       }
       /// <summary>
-      /// Analyze if the source Assured Workloads can be moved to the target Assured
-      /// Workload
+      /// A request to analyze a hypothetical move of a source project or
+      /// project-based workload to a target (destination) folder-based workload.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -713,8 +616,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return AnalyzeWorkloadMoveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyze if the source Assured Workloads can be moved to the target Assured
-      /// Workload
+      /// A request to analyze a hypothetical move of a source project or
+      /// project-based workload to a target (destination) folder-based workload.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -788,7 +691,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateWorkload, serviceImpl.CreateWorkload)
           .AddMethod(__Method_UpdateWorkload, serviceImpl.UpdateWorkload)
-          .AddMethod(__Method_RestrictAllowedServices, serviceImpl.RestrictAllowedServices)
           .AddMethod(__Method_RestrictAllowedResources, serviceImpl.RestrictAllowedResources)
           .AddMethod(__Method_DeleteWorkload, serviceImpl.DeleteWorkload)
           .AddMethod(__Method_GetWorkload, serviceImpl.GetWorkload)
@@ -805,7 +707,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     {
       serviceBinder.AddMethod(__Method_CreateWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkload));
       serviceBinder.AddMethod(__Method_UpdateWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload>(serviceImpl.UpdateWorkload));
-      serviceBinder.AddMethod(__Method_RestrictAllowedServices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse>(serviceImpl.RestrictAllowedServices));
       serviceBinder.AddMethod(__Method_RestrictAllowedResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse>(serviceImpl.RestrictAllowedResources));
       serviceBinder.AddMethod(__Method_DeleteWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkload));
       serviceBinder.AddMethod(__Method_GetWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload>(serviceImpl.GetWorkload));
