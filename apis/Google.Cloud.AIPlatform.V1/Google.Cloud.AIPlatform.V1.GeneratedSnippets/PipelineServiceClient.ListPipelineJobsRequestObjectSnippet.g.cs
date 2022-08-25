@@ -20,6 +20,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
 
     public sealed partial class GeneratedPipelineServiceClientSnippets
@@ -39,6 +40,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
+                ReadMask = new FieldMask(),
             };
             // Make the request
             PagedEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobs(request);
