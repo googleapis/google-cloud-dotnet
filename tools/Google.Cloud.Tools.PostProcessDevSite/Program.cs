@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -98,6 +98,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
             CopyApiDirectory();
             FixExternalReferences();
+            AddFriendlyNames();
             RegenerateToc();
             CopyGuides();
             AddGuidesToToc();
@@ -195,6 +196,49 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
             YamlNode GetChildByName(YamlMappingNode parent, string name) =>
                 parent.Children.FirstOrDefault(node => node.Key is YamlScalarNode key && key.Value == name).Value;
+        }
+
+        /// <summary>
+        /// Add a friendlyApiName value to every metadata YML file, based on the package name and product name.
+        /// </summary>
+        private void AddFriendlyNames()
+        {
+            var dir = Path.Combine(_devSiteRoot, "api");
+            var api = _apiCatalog[_apiId];
+            string apiVersion = api.Id.Split('.').Last().ToLowerInvariant();
+            if (!apiVersion.StartsWith("v"))
+            {
+                apiVersion = null;
+            }
+            string friendlyName = api.ProductName is null ? api.Id
+                : apiVersion is null ? $"{api.ProductName} API"
+                : $"{api.ProductName} {apiVersion} API";
+
+            foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
+            {
+                if (Path.GetFileName(yamlFile) == "toc.yml")
+                {
+                    continue;
+                }
+                var yaml = new YamlStream();
+                using (var reader = File.OpenText(yamlFile))
+                {
+                    yaml.Load(reader);
+                }
+
+                var doc = (YamlMappingNode) yaml.Documents[0].RootNode;
+                doc.Add("friendlyApiName", friendlyName);
+
+                // Note: this rewriting adds a "..." at the end of each file.
+                // That indicates the end of a YAML document, and is fine.
+                // We have to add the YamlMime header line ourselves as that isn't
+                // preserved otherwise.
+                using (var writer = File.CreateText(yamlFile))
+                {
+                    writer.WriteLine("### YamlMime:ManagedReference");
+                    yaml.Save(writer, assignAnchors: false);
+                }
+            }
         }
 
         private void RegenerateToc()
@@ -303,7 +347,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
         private void CreateDocUploaderMetadata()
         {
-            var apiMetadata = ApiCatalog.Load()[_apiId];
+            var apiMetadata = _apiCatalog[_apiId];
             var docUploaderMetadata = new JObject
             {
                 ["version"] = apiMetadata.Version,
