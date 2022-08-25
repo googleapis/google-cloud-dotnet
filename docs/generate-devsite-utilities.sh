@@ -162,10 +162,6 @@ cd devsite
 
 echo 'Creating metadata file'
 
-# Make sure we have the most recent version of pip, then install the gcp-docuploader package
-python -m pip install -q --upgrade pip
-python -m pip install -q gcp-docuploader
-
 XREF_TMP=""
 for xref in "${XREFS[@]}"
 do

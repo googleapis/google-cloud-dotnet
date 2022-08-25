@@ -39,6 +39,12 @@ export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-com
 export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
 
 PYTHON3=$(source toolversions.sh && echo $PYTHON3)
+
+# Make sure we have the most recent version of pip, then install other packages.
+# (If we're being called from autorelease, this will already have been done...)
+python -m pip install -r .kokoro/pip-requirements.txt
+python -m pip install -r .kokoro/requirements.txt
+
 DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
 GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"

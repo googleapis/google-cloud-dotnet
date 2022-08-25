@@ -14,10 +14,6 @@ declare -r SERVICE_ACCOUNT_JSON=$(realpath $3)
 declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$4
 declare -r DEVSITE_STAGING_BUCKET=$5
 
-# Make sure we have the most recent version of pip, then install the gcp-docuploader package
-python -m pip install --upgrade pip
-python -m pip install -q gcp-docuploader
-
 for nupkg in $NUPKG_DIR/*.nupkg
 do
   pair=$(basename $nupkg | sed -r 's/^(.*)\.([0-9]+\.[0-9]+\.[0-9]+(-.*)?)\.nupkg$/\1 \2/g')

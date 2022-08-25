@@ -39,6 +39,10 @@ fi
 
 PYTHON3=$(source toolversions.sh && echo $PYTHON3)
 
+# Update required packages
+python -m pip install -r .kokoro/pip-requirements.txt
+python -m pip install -r .kokoro/requirements.txt
+
 DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 
 cd docs

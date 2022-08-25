@@ -34,10 +34,6 @@ cp output/help/obj/snippets/* output/devsite-help/examples
 
 cd output/devsite-help
 
-# Make sure we have the most recent version of pip, then install the gcp-docuploader package
-python -m pip install -q --upgrade pip
-python -m pip install -q gcp-docuploader
-
 # Create the docs metadata. We assume we may need to refer to any of the utility libraries.
 # We also refer to Datastore, PubSub and Storage.
 python -m docuploader create-metadata \
