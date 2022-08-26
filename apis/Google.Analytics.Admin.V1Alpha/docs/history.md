@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-alpha02, released 2022-08-26
+
+### New features
+
+- Add `RunAccessReport` method to the Admin API v1alpha ([commit aefb670](https://github.com/googleapis/google-cloud-dotnet/commit/aefb670273c7d80966120278a4be22648601bd4e))
+- Add `GetAudience`, 'ListAudience', 'CreateAudience', 'UpdateAudience', 'ArchiveAudience' methods to the Admin API v1alpha ([commit 12697c8](https://github.com/googleapis/google-cloud-dotnet/commit/12697c884fbb2bb660ff58413c6d4ef5a1b7436f))
+- Add `GetAttributionSettings`, `UpdateAttributionSettings` methods to the Admin API v1alpha ([commit 12697c8](https://github.com/googleapis/google-cloud-dotnet/commit/12697c884fbb2bb660ff58413c6d4ef5a1b7436f))
+
 ## Version 2.0.0-alpha01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
