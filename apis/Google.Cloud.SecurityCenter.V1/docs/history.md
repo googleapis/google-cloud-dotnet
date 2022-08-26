@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.3.0, released 2022-08-26
+
+### New features
+
+- ServiceAccountKeyName, serviceAccountDelegationInfo, and principalSubject attributes added to the existing access attribute. These new attributes provide additional context about the principals that are associated with the finding ([commit 5870e2d](https://github.com/googleapis/google-cloud-dotnet/commit/5870e2dfdb9221503f15406e530bdb42c86830a9))
+- Adding database access information, such as queries field to a finding. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself ([commit e48b4d0](https://github.com/googleapis/google-cloud-dotnet/commit/e48b4d01db1d5d636b298d9c85918c43b528ffb9))
+- Adding uris to indicator of compromise (IOC) field ([commit 70d4dca](https://github.com/googleapis/google-cloud-dotnet/commit/70d4dca37b7f50c8f243fcd8b17a23ce3a544663))
+
 ## Version 3.2.0, released 2022-07-25
 
 ### New features
