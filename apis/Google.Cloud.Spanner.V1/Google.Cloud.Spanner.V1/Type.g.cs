@@ -37,13 +37,13 @@ namespace Google.Cloud.Spanner.V1 {
             "EhkKFVRZUEVfQ09ERV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2",
             "NBACEgsKB0ZMT0FUNjQQAxINCglUSU1FU1RBTVAQBBIICgREQVRFEAUSCgoG",
             "U1RSSU5HEAYSCQoFQllURVMQBxIJCgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsK",
-            "B05VTUVSSUMQChIICgRKU09OEAsqSgoSVHlwZUFubm90YXRpb25Db2RlEiQK",
+            "B05VTUVSSUMQChIICgRKU09OEAsqWAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
             "IFRZUEVfQU5OT1RBVElPTl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVN",
-            "RVJJQxACQq8BChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCCVR5cGVQcm90b1AB",
-            "Wjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3NwYW5u",
-            "ZXIvdjE7c3Bhbm5lcqoCF0dvb2dsZS5DbG91ZC5TcGFubmVyLlYxygIXR29v",
-            "Z2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3VkOjpTcGFubmVy",
-            "OjpWMWIGcHJvdG8z"));
+            "RVJJQxACEgwKCFBHX0pTT05CEANCrwEKFWNvbS5nb29nbGUuc3Bhbm5lci52",
+            "MUIJVHlwZVByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvc3Bhbm5lci92MTtzcGFubmVyqgIXR29vZ2xlLkNsb3VkLlNw",
+            "YW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6",
+            "Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -163,6 +163,15 @@ namespace Google.Cloud.Spanner.V1 {
     /// Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_NUMERIC")] PgNumeric = 2,
+    /// <summary>
+    /// PostgreSQL compatible JSONB type. This annotation needs to be applied to
+    /// [Type][google.spanner.v1.Type] instances having [JSON][google.spanner.v1.TypeCode.JSON]
+    /// type code to specify that values of this type should be treated as
+    /// PostgreSQL JSONB values. Currently this annotation is always needed for
+    /// [JSON][google.spanner.v1.TypeCode.JSON] when a client interacts with PostgreSQL-enabled
+    /// Spanner databases.
+    /// </summary>
+    [pbr::OriginalName("PG_JSONB")] PgJsonb = 3,
   }
 
   #endregion
