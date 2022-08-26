@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-08-26
+
+### New features
+
+- Add BatchGetEffectiveIamPolicies API ([commit 88fdb03](https://github.com/googleapis/google-cloud-dotnet/commit/88fdb03b166e7ad9ae20f3934eacd0c37567844d))
+- Release of query system ([commit 9677dd3](https://github.com/googleapis/google-cloud-dotnet/commit/9677dd35a3b7b2f1721b9db8485f6da2ca553510))
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
