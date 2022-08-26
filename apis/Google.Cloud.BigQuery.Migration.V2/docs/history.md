@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2022-08-26
+
+### New features
+
+- Add MySQL dialect to bigquerymigration v2 client library ([commit 039f088](https://github.com/googleapis/google-cloud-dotnet/commit/039f088e2f44d416ea484ca7c71ce157e7782698))
+
 ## Version 1.0.0-beta02, released 2022-07-25
 
 ### New features
