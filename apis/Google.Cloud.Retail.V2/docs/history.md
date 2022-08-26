@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.2.0, released 2022-08-26
+
+### New features
+
+- Release Control and ServingConfig serivces to v2 version ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+- Release AttributesConfig APIs to v2 version ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+- Release CompletionConfig APIs to v2 version ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+- Add local inventories info to the Product resource ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+
+### Documentation improvements
+
+- Improved documentation for Fullfillment and Inventory API in ProductService ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+- Minor documentation format and typo fixes ([commit 9b81234](https://github.com/googleapis/google-cloud-dotnet/commit/9b81234dbc18271c2bb690e2a35e9b09ffb9fb04))
+
 ## Version 2.1.0, released 2022-08-04
 
 ### New features
