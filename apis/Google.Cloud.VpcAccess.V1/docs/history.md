@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-08-26
+
+### New features
+
+- Adds support for configuring scaling settings ([commit a9bbe6f](https://github.com/googleapis/google-cloud-dotnet/commit/a9bbe6f8aa80cfa8a6e23b614d506508fa787c61))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
