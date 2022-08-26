@@ -12,8 +12,8 @@ source ./populatesecrets.sh
 populate_all_secrets
 
 # Make sure we have the most recent version of pip, then install other packages.
-python -m pip install --require-hashes -r .kokoro/pip-requirements.txt
-python -m pip install --require-hashes -r .kokoro/requirements.txt
+python -m pip install --require-hashes -r pip-requirements.txt
+python -m pip install --require-hashes -r requirements.txt
 
 # The publish reporter script uses "python3" which doesn't exist on Windows.
 # Work out what we should use instead, and fix up the script.
