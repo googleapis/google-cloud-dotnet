@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.2.0, released 2022-08-26
+
+### New features
+
+- Allow users to set Apache Avro output format options through avro_serialization_options param in TableReadOptions message ([commit 9c2cc6c](https://github.com/googleapis/google-cloud-dotnet/commit/9c2cc6cb2215773f75923eddec131204b6da03ea))
+
+### Documentation improvements
+
+- Clarify size limitations for AppendRowsRequest ([commit 8b061b5](https://github.com/googleapis/google-cloud-dotnet/commit/8b061b52b56c6bc7649d2b62a7771ea9ef48da69))
+
 ## Version 3.1.0, released 2022-07-11
 
 ### Bug fixes
