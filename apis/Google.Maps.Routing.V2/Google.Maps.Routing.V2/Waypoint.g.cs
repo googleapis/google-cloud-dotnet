@@ -189,7 +189,7 @@ namespace Google.Maps.Routing.V2 {
     /// value, the route will pass through the location so that the vehicle can
     /// stop at the side of road that the location is biased towards from the
     /// center of the road. This option works only for 'DRIVE' and 'TWO_WHEELER'
-    /// travel modes, and when the 'location_type' is set to 'location'.
+    /// travel modes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
