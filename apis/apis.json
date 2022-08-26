@@ -4143,7 +4143,7 @@
     },
     {
       "id": "Google.Maps.Routing.V2",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Maps Routing",
       "productUrl": "https://developers.google.com/maps/documentation/routes_preferred",
