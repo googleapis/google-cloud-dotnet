@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-08-26
+
+### New features
+
+- Added support for BigQuery destination and PostgreSQL source types ([commit 675d15d](https://github.com/googleapis/google-cloud-dotnet/commit/675d15ddd7a0ff36cfdd35e2f1257669a25a464f))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
