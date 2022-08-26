@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-08-26
+
+### New features
+
+- Added support for evaluating missing data in AlertPolicy ([commit ed778dd](https://github.com/googleapis/google-cloud-dotnet/commit/ed778dddb80267c3d3ffad3905dcc6f808ebcb07))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
