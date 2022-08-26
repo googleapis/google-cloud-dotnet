@@ -36,4 +36,5 @@
   "380757b": "skip", // Regenerate after metadata ordering (again; commits are a little odd here)
   "f22bb35": "skip", // Fixing OSConfig
   "2096786": "skip", // Regenerate after gRPC change
+  "e85a0e1": "skip", // Remove unused imports in protos
 }
