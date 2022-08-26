@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.3.0, released 2022-08-26
+
+### New features
+
+- Add read_mask to ListPipelineJobsRequest in aiplatform v1 pipeline_service ([commit 099522b](https://github.com/googleapis/google-cloud-dotnet/commit/099522b4f29dc941b522f23d9c32aadf6b4b7d63))
+- Add input_artifacts to PipelineJob.runtime_config in aiplatform v1 pipeline_job ([commit 099522b](https://github.com/googleapis/google-cloud-dotnet/commit/099522b4f29dc941b522f23d9c32aadf6b4b7d63))
+- Add UpsertDatapoints and RemoveDatapoints rpcs to IndexService in aiplatform v1 index_service.proto ([commit 592d099](https://github.com/googleapis/google-cloud-dotnet/commit/592d0997fa583f3741b60490fdd4cb131e5ac100))
+
 ## Version 2.2.0, released 2022-08-04
 
 ### New features
