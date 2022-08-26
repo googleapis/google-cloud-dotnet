@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-08-26
+
+### New features
+
+- Added field_mask to ProcessRequest object in document_processor_service.proto ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- Added parent_ids to Revision object in document.proto ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- Added integer_values, float_values and non_present to Entity object in document.proto ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- Added corrected_key_text, correct_value_text to FormField object in document.proto ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- Added OperationMetadata resource ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- Added Barcode support ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+- **BREAKING CHANGE** Added Processor Management and Processor Version support to v1 library ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+
+### Breaking changes
+
+- Changed the name field for ProcessRequest and BatchProcessorRequest to accept * so the name field can accept Processor and ProcessorVersion. ([commit a750fad](https://github.com/googleapis/google-cloud-dotnet/commit/a750fad672712acf62c7b5d4a98b7095bfeed4ea))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
