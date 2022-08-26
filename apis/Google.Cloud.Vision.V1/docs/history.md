@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-08-26
+
+### New features
+
+- Add TextDetectionParams.advanced_ocr_options ([commit 015ebe7](https://github.com/googleapis/google-cloud-dotnet/commit/015ebe7060f4a86ecff348623180e37964140870))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
