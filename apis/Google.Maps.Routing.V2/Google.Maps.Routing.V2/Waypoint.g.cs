@@ -147,8 +147,7 @@ namespace Google.Maps.Routing.V2 {
     /// added to the `legs` array, but they do route the journey through the
     /// waypoint. You can only set this value on waypoints that are intermediates.
     /// The request fails if you set this field on terminal waypoints.
-    /// If
-    /// [ComputeRoutesRequest][google.maps.routing.v2.ComputeRoutesRequest.optimize_waypoint_order]
+    /// If `ComputeRoutesRequest.optimize_waypoint_order`
     /// is set to true then this field cannot be set to
     /// true; otherwise, the request fails.
     /// </summary>
