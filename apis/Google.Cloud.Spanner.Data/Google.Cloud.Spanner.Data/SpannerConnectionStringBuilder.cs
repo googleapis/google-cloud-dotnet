@@ -54,9 +54,19 @@ namespace Google.Cloud.Spanner.Data
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
-        
+        private const string DatabaseRoleKeyword = "DatabaseRole";
+
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
+
+        /// <summary>
+        /// The database role for the sessions created by this connection.
+        /// </summary>
+        public string DatabaseRole
+        {
+            get => GetValueOrDefault(DatabaseRoleKeyword);
+            set => this[DatabaseRoleKeyword] = value;
+        }
 
         /// <summary>
         /// Optional path to a JSON Credential file. If a Credential is not supplied, Cloud Spanner

@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 initialSessions.ForEach(s => s.ReleaseToPool(false));
                 cts = new CancellationTokenSource(10000);
                 await pool.WhenPoolReady(_fixture.DatabaseName, cts.Token);
-                Logger.DefaultLogger.Info(pool.GetStatisticsSnapshot(_fixture.DatabaseName).ToString());
+                Logger.DefaultLogger.Info(pool.GetSegmentStatisticsSnapshot(_fixture.DatabaseName).ToString());
                 var refreshedSessions = await AcquireSessionsAsync(pool);
 
                 // We should still have the same sessions...

@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -50,6 +50,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         public sealed class TargetedSessionPoolTests
         {
             private static readonly DatabaseName s_databaseName = new DatabaseName("project", "instance", "database");
+            private static readonly string s_databaseRole = "test";
 
             // The time to delay in tests that need to wait for all the sessions to be acquired (or fail).
             // Reducing this time will make the tests faster, but at the cost of flakiness.
@@ -76,7 +77,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                      WriteSessionsFraction = 0.2
                 };
                 var parent = new SessionPool(client, options);
-                return new TargetedSessionPool(parent, s_databaseName, acquireSessionsImmediately);
+                return new TargetedSessionPool(parent, SessionPoolSegmentKey.Create(s_databaseName), acquireSessionsImmediately);
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
@@ -926,6 +927,22 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await pool.ShutdownPoolAsync(default);
                     await Assert.ThrowsAsync<InvalidOperationException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
                 });
+            }
+
+            [Fact]
+            public async Task BatchCreateSession_WithDatabaseRoleAsync()
+            {
+                var spannerClientMock = new SessionTestingSpannerClient();
+                var parent = new SessionPool(spannerClientMock, new SessionPoolOptions());
+                var targetedSessionPool = new TargetedSessionPool(parent, SessionPoolSegmentKey.Create(s_databaseName).WithDatabaseRole(s_databaseRole), acquireSessionsImmediately: true);
+
+                // Give the pool a minute to fill up
+                await spannerClientMock.Scheduler.RunForSecondsAsync(60);
+
+                BatchCreateSessionsRequest batchCreateSessionsRequest;
+                Assert.True(spannerClientMock.BatchCreateSessionRequests.TryDequeue(out batchCreateSessionsRequest));
+                Assert.Equal(s_databaseRole, batchCreateSessionsRequest.SessionTemplate.CreatorRole);
+                Assert.Equal(s_databaseName, batchCreateSessionsRequest.DatabaseAsDatabaseName);
             }
 
             private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)

@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Common.V1;
+using System;
+using System.Linq;
 using Xunit;
 using static Google.Cloud.Spanner.V1.SessionPool;
 
@@ -25,8 +27,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             [Fact]
             public void AllProperties()
             {
-                var db1Stats = new DatabaseStatistics(
-                    databaseName: new DatabaseName("project", "instance", "db1"),
+                var db1Stats = new SessionPoolSegmentStatistics(
+                    SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db1")),
                     activeSessionCount: 4,
                     readPoolCount: 5,
                     readWritePoolCount: 10,
@@ -36,8 +38,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     readWriteTransactionRequestsPrewarmed: 95L,
                     healthy: true,
                     shutdown: false);
-                var db2Stats = new DatabaseStatistics(
-                    databaseName: new DatabaseName("project", "instance", "db2"),
+                var db2Stats = new SessionPoolSegmentStatistics(
+                    SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db2")),
                     activeSessionCount: 8,
                     readPoolCount: 7,
                     readWritePoolCount: 3,
@@ -47,8 +49,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     readWriteTransactionRequestsPrewarmed: 195L,
                     healthy: true,
                     shutdown: false);
-                var db3Stats = new DatabaseStatistics(
-                    databaseName: new DatabaseName("project", "instance", "db3"),
+                var db3Stats = new SessionPoolSegmentStatistics(
+                    SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db3")),
                     activeSessionCount: 3,
                     readPoolCount: 0,
                     readWritePoolCount: 0,
@@ -58,14 +60,25 @@ namespace Google.Cloud.Spanner.V1.Tests
                     readWriteTransactionRequestsPrewarmed: 500L,
                     healthy: true,
                     shutdown: false);
-                var allStats = new[] { db1Stats, db2Stats, db3Stats };
+                var db4Stats = new SessionPoolSegmentStatistics(
+                    SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db1")).WithDatabaseRole("dbrole"),
+                    activeSessionCount: 5,
+                    readPoolCount: 0,
+                    readWritePoolCount: 0,
+                    inFlightCreationCount: 4,
+                    pendingAcquisitionCount: 0,
+                    readWriteTransactionRequests: 100L,
+                    readWriteTransactionRequestsPrewarmed: 95L,
+                    healthy: true,
+                    shutdown: false);
+                var allStats = new[] { db1Stats, db2Stats, db3Stats, db4Stats };
                 var statistics = new Statistics(allStats);
 
-                Assert.Equal(allStats, statistics.PerDatabaseStatistics);
-                Assert.Equal(15, statistics.TotalActiveSessionCount);
+                Assert.Equal(allStats, statistics.PerSegmentStatistics);
+                Assert.Equal(20, statistics.TotalActiveSessionCount);
                 Assert.Equal(12, statistics.TotalReadPoolCount);
                 Assert.Equal(13, statistics.TotalReadWritePoolCount);
-                Assert.Equal(21, statistics.TotalInFlightCreationCount);
+                Assert.Equal(25, statistics.TotalInFlightCreationCount);
                 Assert.Equal(3, statistics.TotalPendingAcquisitionCount);
             }
         }
