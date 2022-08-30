@@ -37,6 +37,7 @@ namespace Google.Cloud.WebSecurityScanner.V1
             yield return ScanConfigErrorReflection.Descriptor;
             yield return ScanRunReflection.Descriptor;
             yield return ScanRunErrorTraceReflection.Descriptor;
+            yield return ScanRunLogReflection.Descriptor;
             yield return ScanRunWarningTraceReflection.Descriptor;
             yield return WebSecurityScannerReflection.Descriptor;
         }
