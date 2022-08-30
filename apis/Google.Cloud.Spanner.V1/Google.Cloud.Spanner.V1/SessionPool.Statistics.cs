@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,37 +26,44 @@ namespace Google.Cloud.Spanner.V1
         public sealed class Statistics
         {
             /// <summary>
-            /// The total of <see cref="DatabaseStatistics.ReadPoolCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.ReadPoolCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalReadPoolCount => PerDatabaseStatistics.Sum(d => d.ReadPoolCount);
+            public int TotalReadPoolCount => PerSegmentStatistics.Sum(d => d.ReadPoolCount);
 
             /// <summary>
-            /// The total of <see cref="DatabaseStatistics.ReadWritePoolCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.ReadWritePoolCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalReadWritePoolCount => PerDatabaseStatistics.Sum(d => d.ReadWritePoolCount);
+            public int TotalReadWritePoolCount => PerSegmentStatistics.Sum(d => d.ReadWritePoolCount);
 
             /// <summary>
-            /// The total of <see cref="DatabaseStatistics.ActiveSessionCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.ActiveSessionCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalActiveSessionCount => PerDatabaseStatistics.Sum(d => d.ActiveSessionCount);
+            public int TotalActiveSessionCount => PerSegmentStatistics.Sum(d => d.ActiveSessionCount);
 
             /// <summary>
-            /// The total of <see cref="DatabaseStatistics.InFlightCreationCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.InFlightCreationCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalInFlightCreationCount => PerDatabaseStatistics.Sum(d => d.InFlightCreationCount);
+            public int TotalInFlightCreationCount => PerSegmentStatistics.Sum(d => d.InFlightCreationCount);
 
             /// <summary>
-            /// The total of <see cref="DatabaseStatistics.PendingAcquisitionCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.PendingAcquisitionCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalPendingAcquisitionCount => PerDatabaseStatistics.Sum(d => d.PendingAcquisitionCount);
+            public int TotalPendingAcquisitionCount => PerSegmentStatistics.Sum(d => d.PendingAcquisitionCount);
 
             /// <summary>
-            /// The statistics broken down by database. This is never null, but may be empty.
+            /// The statistics broken down by <see cref="SessionPoolSegmentKey"/>. This is never null, but may be empty.
             /// </summary>
-            public IReadOnlyList<DatabaseStatistics> PerDatabaseStatistics { get; }
+            [Obsolete("Use PerSegmentStatistics instead. Both properties return the same data, but PerSegmentStatistics name" +
+                " better represents the fact that sessions are pooled based on aspects other than database name.")]
+            public IReadOnlyList<DatabaseStatistics> PerDatabaseStatistics => PerSegmentStatistics.Select(s => new DatabaseStatistics(s)).ToList().AsReadOnly();
 
-            internal Statistics(IReadOnlyList<DatabaseStatistics> perDatabaseStatistics) =>
-                PerDatabaseStatistics = perDatabaseStatistics;
+            /// <summary>
+            /// The statistics broken down by <see cref="SessionPoolSegmentKey"/>. This is never null, but may be empty.
+            ///</summary>
+            public IReadOnlyList<SessionPoolSegmentStatistics> PerSegmentStatistics { get; }
+
+            internal Statistics(IReadOnlyList<SessionPoolSegmentStatistics> perSessionPoolSegmentStatistics) =>
+                PerSegmentStatistics = perSessionPoolSegmentStatistics;
         }
     }
 }

@@ -251,7 +251,6 @@ provides a simple method to accomplish this:
 
 If you want to diagnose session management issues,
 `SpannerConnection` provides a method to fetch a snapshot of
-the statistics for the session pool associated with the database
-associated with the connection:
+the statistics for the session pool associated with the connection:
 
-{{sample:SpannerConnection.GetSessionPoolDatabaseStatistics}}
+{{sample:SpannerConnection.GetSessionPoolSegmentStatistics}}

@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             public ConcurrentQueue<ExecuteSqlRequest> ExecuteSqlRequests { get; } = new ConcurrentQueue<ExecuteSqlRequest>();
             public ConcurrentQueue<RollbackRequest> RollbackRequests { get; } = new ConcurrentQueue<RollbackRequest>();
+            public ConcurrentQueue<BatchCreateSessionsRequest> BatchCreateSessionRequests { get; } = new ConcurrentQueue<BatchCreateSessionsRequest>();
 
             // TODO: Keep track of created and deleted session names?
 
@@ -80,6 +81,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public override async Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(BatchCreateSessionsRequest request, CallSettings callSettings = null)
             {
                 await CheckFailAllRpcs();
+                BatchCreateSessionRequests.Enqueue(request.Clone());
                 await Scheduler.Delay(CreateSessionDelay);
                 var database = request.DatabaseAsDatabaseName;
                 BatchCreateSessionsResponse response = new BatchCreateSessionsResponse();

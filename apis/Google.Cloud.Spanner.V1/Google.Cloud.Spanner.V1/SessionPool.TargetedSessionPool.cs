@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.V1
 
             // Read-only state
             private readonly object _lock = new object();
-            private readonly DatabaseName _databaseName;
+            private readonly SessionPoolSegmentKey _segmentKey;
             // Clone before use, this will hold the amount of sessions to create in each batch
             // so it can't be shared amongst requests.
             private readonly BatchCreateSessionsRequest _batchCreateSessionRequestTemplate;
@@ -106,15 +106,16 @@ namespace Google.Cloud.Spanner.V1
             private long _rwTransactionRequests;
             private long _rwTransactionRequestsPrewarmed;
 
-            internal TargetedSessionPool(SessionPool parent, DatabaseName databaseName, bool acquireSessionsImmediately) : base(parent)
+            internal TargetedSessionPool(SessionPool parent, SessionPoolSegmentKey key, bool acquireSessionsImmediately) : base(parent)
             {
-                _databaseName = GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+                _segmentKey = GaxPreconditions.CheckNotNull(key, nameof(key));
                 _batchCreateSessionRequestTemplate = new BatchCreateSessionsRequest
                 {
-                    DatabaseAsDatabaseName = databaseName,
+                    DatabaseAsDatabaseName = key.DatabaseName,
                     SessionTemplate = new Session
                     {
-                        Labels = { parent.Options.SessionLabels }
+                        Labels = { parent.Options.SessionLabels },
+                        CreatorRole = key.DatabaseRole ?? ""
                     }
                 };
 
@@ -777,7 +778,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch(Exception e)
                 {
-                    Parent._logger.Warn(() => $"Failed to batch create sessions for {_databaseName}", e);
+                    Parent._logger.Warn(() => $"Failed to batch create sessions for {_segmentKey}", e);
                     throw;
                 }
                 finally
@@ -802,7 +803,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     if (writeHealthChangedLog)
                     {
-                        Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
+                        Parent._logger.Info(() => $"Session pool for {_segmentKey} is now {(success ? "healthy" : "unhealthy")}.");
                     }
                 }
             }
@@ -844,12 +845,12 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            internal DatabaseStatistics GetStatisticsSnapshot()
+            internal SessionPoolSegmentStatistics GetStatisticsSnapshot()
             {
                 lock (_lock)
                 {
-                    return new DatabaseStatistics(
-                        _databaseName,
+                    return new SessionPoolSegmentStatistics(
+                        _segmentKey,
                         ActiveSessionCount,
                         _readOnlySessions.Count,
                         _readWriteSessions.Count,
@@ -922,7 +923,7 @@ namespace Google.Cloud.Spanner.V1
                 // the active session count and in-flight session creation count to hit 0... but it means we don't need to worry
                 // about race conditions of one thread checking the shutdown flag just before it was set, but then adding a
                 // pending acquisition just after we've cancelled everything.
-                Parent._logger.Debug(() => $"Executing shutdown for {_databaseName}");
+                Parent._logger.Debug(() => $"Executing shutdown for {_segmentKey}");
                 try
                 {
                     while (true)
@@ -988,7 +989,7 @@ namespace Google.Cloud.Spanner.V1
                 // However we complete, signal that shutdown is finished.
                 finally
                 {
-                    Parent._logger.Debug(() => $"Shutdown complete for {_databaseName}");
+                    Parent._logger.Debug(() => $"Shutdown complete for {_segmentKey}");
                     tcsToSignal.TrySetResult(0);
                 }
             }

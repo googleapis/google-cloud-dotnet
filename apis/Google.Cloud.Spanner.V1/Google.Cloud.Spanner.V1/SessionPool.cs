@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,8 +53,8 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         internal SpannerClient Client { get; }
 
-        private readonly ConcurrentDictionary<DatabaseName, TargetedSessionPool> _targetedPools =
-            new ConcurrentDictionary<DatabaseName, TargetedSessionPool>();
+        private readonly ConcurrentDictionary<SessionPoolSegmentKey, TargetedSessionPool> _targetedPools =
+            new ConcurrentDictionary<SessionPoolSegmentKey, TargetedSessionPool>();
 
         /// <summary>
         /// Creates a session pool for the given client.
@@ -133,26 +133,61 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Provides a snapshot of statistics for a database-specific pool.
+        /// This is equivalent to calling <see cref="GetSegmentStatisticsSnapshot(SessionPoolSegmentKey)"/> passing a segment key
+        /// with a null database role.
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>
+        [Obsolete("Use the overload GetPoolStatisticsSnapshot(DatabaseName) instead.")]
         public DatabaseStatistics GetStatisticsSnapshot(DatabaseName databaseName)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            return _targetedPools.TryGetValue(databaseName, out var pool) ? pool.GetStatisticsSnapshot() : null;
+            var poolStatistics = GetSegmentStatisticsSnapshot(databaseName);
+            return (poolStatistics is null) ? null : new DatabaseStatistics(poolStatistics);
         }
 
         /// <summary>
+        /// Provides a snapshot of statistics for the pool associated with the given <see cref="SessionPoolSegmentKey"/>.
+        /// </summary>
+        /// <returns>A snapshot of statistics for this pool.</returns>
+        public SessionPoolSegmentStatistics GetSegmentStatisticsSnapshot(SessionPoolSegmentKey key)
+        {
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+            return _targetedPools.TryGetValue(key, out var pool) ? pool.GetStatisticsSnapshot() : null;
+        }
+
+        /// <summary>
+        /// Provides a snapshot of statistics for the pool associated with the given database.
+        /// This is equivalent to calling <see cref="GetSegmentStatisticsSnapshot(SessionPoolSegmentKey)"/> passing a segment key
+        /// with a null database role.
+        /// </summary>
+        /// <returns>A snapshot of statistics for this pool.</returns>
+        public SessionPoolSegmentStatistics GetSegmentStatisticsSnapshot(DatabaseName databaseName) =>
+            _targetedPools.TryGetValue(SessionPoolSegmentKey.Create(databaseName), out var pool) ? pool.GetStatisticsSnapshot() : null;
+
+        /// <summary>
         /// Asynchronously acquires a session, potentially associated with a transaction.
+        /// This is equivalent to calling <see cref="AcquireSessionAsync(SessionPoolSegmentKey, TransactionOptions, CancellationToken)"/>
+        /// passing a segment key with a null database role.
         /// </summary>
         /// <param name="databaseName">The name of the database to acquire the session for.</param>
         /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
         /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
-        public Task<PooledSession> AcquireSessionAsync(DatabaseName databaseName, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        public Task<PooledSession> AcquireSessionAsync(DatabaseName databaseName, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(SessionPoolSegmentKey.Create(databaseName), transactionOptions, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>, potentially associated with a transaction.
+        /// </summary>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, CancellationToken cancellationToken)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
             return targetedPool.AcquireSessionAsync(transactionOptions, cancellationToken);
         }
 
@@ -197,6 +232,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Returns a task indicating when the session pool associated with the given database name is populated up to its minimum size.
+        /// This is equivalent to calling <see cref="WhenPoolReady(SessionPoolSegmentKey, CancellationToken)"/> passing a segment key
+        /// with a null database role.
         /// </summary>
         /// <remarks>
         /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
@@ -205,16 +242,31 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="databaseName">The database whose session pool should be populated. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
-        public Task WhenPoolReady(DatabaseName databaseName, CancellationToken cancellationToken = default)
+        public Task WhenPoolReady(DatabaseName databaseName, CancellationToken cancellationToken = default) =>
+            WhenPoolReady(SessionPoolSegmentKey.Create(databaseName), cancellationToken);
+
+        /// <summary>
+        /// Returns a task indicating when the session pool for the given <see cref="SessionPoolSegmentKey"/> is populated up to its minimum size.
+        /// </summary>
+        /// <remarks>
+        /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
+        /// the returned task will be faulted with an <see cref="RpcException"/>.
+        /// </remarks>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> whose session pool should be populated.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
+        public Task WhenPoolReady(SessionPoolSegmentKey key, CancellationToken cancellationToken = default)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true)); ;
             return targetedPool.WhenPoolReady(cancellationToken);
         }
 
         /// <summary>
         /// Shuts down the session pool associated with the given database name.
         /// Further attempts to acquire sessions will fail immediately.
+        /// This is equivalent to calling <see cref="ShutdownPoolAsync(SessionPoolSegmentKey, CancellationToken)"/> passing a segment key
+        /// with a null database role.
         /// </summary>
         /// <remarks>
         /// This call will delete all pooled sessions, and wait for all active sessions to be released back to the pool
@@ -223,12 +275,26 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="databaseName">The database whose session pool should be shut down. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the returned task. This does not cancel the shutdown itself.</param>
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
-        public Task ShutdownPoolAsync(DatabaseName databaseName, CancellationToken cancellationToken)
+        public Task ShutdownPoolAsync(DatabaseName databaseName, CancellationToken cancellationToken) =>
+            ShutdownPoolAsync(SessionPoolSegmentKey.Create(databaseName), cancellationToken);
+
+        /// <summary>
+        /// Shuts down the session pool of the given SessionPoolSegmentKey.
+        /// Further attempts to acquire sessions will fail immediately.
+        /// </summary>
+        /// <remarks>
+        /// This call will delete all pooled sessions, and wait for all active sessions to be released back to the pool
+        /// and also deleted.
+        /// </remarks>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> whose session pool should be shutdown.</param>
+        /// <param name="cancellationToken">An optional token for canceling the returned task. This does not cancel the shutdown itself.</param>
+        /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
+        public Task ShutdownPoolAsync(SessionPoolSegmentKey key, CancellationToken cancellationToken)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
             // Note that we do potentially create a pool, so that we consistently end the call with a shut-down session pool
             // associated with the given name.
-            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: false));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: false));
             return targetedPool.ShutdownPoolAsync(cancellationToken);
         }
 

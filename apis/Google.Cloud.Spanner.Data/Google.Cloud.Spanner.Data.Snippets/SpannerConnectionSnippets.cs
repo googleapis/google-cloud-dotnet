@@ -426,15 +426,15 @@ namespace Google.Cloud.Spanner.Data.Snippets
         }
 
         [Fact]
-        public void GetSessionPoolDatabaseStatistics()
+        public void GetSessionPoolSegmentStatistics()
         {
             string connectionString = _fixture.ConnectionString;
 
-            // Sample: GetSessionPoolDatabaseStatistics
-            // Additional: GetSessionPoolDatabaseStatistics
+            // Sample: GetSessionPoolSegmentStatistics
+            // Additional: GetSessionPoolSegmentStatistics
             using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                SessionPool.DatabaseStatistics stats = connection.GetSessionPoolDatabaseStatistics();
+                SessionPool.SessionPoolSegmentStatistics stats = connection.GetSessionPoolSegmentStatistics();
                 if (stats is null)
                 {
                     Console.WriteLine("No session pool for this connection string yet");

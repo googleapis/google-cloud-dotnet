@@ -26,6 +26,7 @@ using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Spanner.V1.SessionPool;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using Transaction = System.Transactions.Transaction;
 
@@ -644,10 +645,9 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
         public async Task WhenSessionPoolReady(CancellationToken cancellationToken = default)
         {
-            DatabaseName databaseName = Builder.DatabaseName;
-            GaxPreconditions.CheckState(databaseName != null, $"{nameof(WhenSessionPoolReady)} cannot be used without a database.");
+            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(WhenSessionPoolReady));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.WhenPoolReady(databaseName, cancellationToken).ConfigureAwait(false);
+            await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -661,10 +661,9 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
         public async Task ShutdownSessionPoolAsync(CancellationToken cancellationToken = default)
         {
-            DatabaseName databaseName = Builder.DatabaseName;
-            GaxPreconditions.CheckState(databaseName != null, $"{nameof(ShutdownSessionPoolAsync)} cannot be used without a database.");
+            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(ShutdownSessionPoolAsync));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.ShutdownPoolAsync(databaseName, cancellationToken).ConfigureAwait(false);
+            await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -673,11 +672,31 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
         /// for the database specified in the connection string.</returns>
+        [Obsolete("Use GetSessionPoolStatistics instead. Both methods return the same data, but the GetSessionPoolStatistics name better reflects the fact that sessions are pooled on aspects other than database name.")]
         public SessionPool.DatabaseStatistics GetSessionPoolDatabaseStatistics()
         {
             DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{nameof(GetSessionPoolDatabaseStatistics)} cannot be used without a database.");
             return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), databaseName);
+        }
+
+        /// <summary>
+        /// Retrieves statistics for the session pool associated with the corresponding <see cref="SessionPoolSegmentKey"/>. The connection string must
+        /// include a database name.
+        /// </summary>
+        /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
+        /// associated with the <see cref="SessionPoolSegmentKey"/>.</returns>
+        public SessionPool.SessionPoolSegmentStatistics GetSessionPoolSegmentStatistics()
+        {
+            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(GetSessionPoolSegmentStatistics));
+            return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), sessionPoolSegmentKey);
+        }
+
+        private SessionPoolSegmentKey  GetSessionPoolSegmentKey(string operationName)
+        {
+            DatabaseName databaseName = Builder.DatabaseName;
+            GaxPreconditions.CheckState(databaseName != null, $"{operationName} cannot be used without a database.");
+            return SessionPoolSegmentKey.Create(databaseName).WithDatabaseRole(Builder.DatabaseRole);
         }
 
         /// <summary>
@@ -825,7 +844,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
-            return pool.AcquireSessionAsync(databaseName, options, cancellationToken);
+            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
+            return pool.AcquireSessionAsync(sessionPoolSegmentKey, options, cancellationToken);
         }
 
         internal Task<SpannerTransaction> BeginTransactionImplAsync(

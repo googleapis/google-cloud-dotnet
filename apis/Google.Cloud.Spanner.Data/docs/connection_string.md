@@ -176,3 +176,13 @@ Examples:
 
 - SpannerToClrTypeDefaultMappings=DateToDateTime
 - SpannerToClrTypeDefaultMappings=DateToSpannerDate
+
+## DatabaseRole
+
+The database role associated with this connection string. This option is only used if Fine Grained
+Access Control is enabled for the Spanner instance. If Fine Grained Access Control is enabled for
+this Spanner instance, and a database role is not provided the default (public) role will be used.
+
+Example (given you have created the "read" role):
+
+- DatabaseRole=read

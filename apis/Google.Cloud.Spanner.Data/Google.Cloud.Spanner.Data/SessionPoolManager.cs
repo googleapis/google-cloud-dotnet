@@ -28,6 +28,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
+using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -161,6 +162,15 @@ namespace Google.Cloud.Spanner.Data
         internal IReadOnlyList<Statistics> GetStatistics() =>
             _targetedPools.ToArray().Select(tp => tp.Value.GetStatisticsSnapshot()).ToList().AsReadOnly();
 
+        internal SessionPoolSegmentStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, SessionPoolSegmentKey key)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+            _targetedPools.TryGetValue(options, out var targetedPool);
+            return targetedPool?.SessionPoolOrNull?.GetSegmentStatisticsSnapshot(key);
+        }
+
+        [Obsolete("We still need to call this method for implementing the obsolete SpannerConnection.GetSessionPoolDatabaseStatistics()")]
         internal SessionPool.DatabaseStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, DatabaseName databaseName)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
@@ -242,9 +252,9 @@ namespace Google.Cloud.Spanner.Data
                 }
                 else
                 {
-                    foreach (var databaseStatistics in SessionPoolStatistics.PerDatabaseStatistics)
+                    foreach (var segmentStatistics in SessionPoolStatistics.PerSegmentStatistics)
                     {
-                        builder.AppendLine($"  {databaseStatistics}");
+                        builder.AppendLine($"  {segmentStatistics}");
                     }
                 }
                 return builder.ToString();

@@ -21,6 +21,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -162,7 +163,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var cancellationToken = new CancellationTokenSource(30000).Token;
             await pool.WhenPoolReady(_fixture.DatabaseName, cancellationToken);
 
-            logger.Info($"Prewarm complete. Pool stats: {pool.GetStatisticsSnapshot(_fixture.DatabaseName)}");
+            logger.Info($"Prewarm complete. Pool stats: {pool.GetSegmentStatisticsSnapshot(_fixture.DatabaseName)}");
 
             // Now run the test, with performance logging enabled, but without debug logging.
             // (Debug logging can write a lot to our log file, breaking the test.)

@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Spanner.V1.SessionPool;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -35,6 +36,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         private static readonly DatabaseName s_sampleDatabaseName = new DatabaseName("project", "instance", "database");
         private static readonly DatabaseName s_sampleDatabaseName2 = new DatabaseName("project", "instance", "database2");
+        private static readonly string s_databaseRole = "testrole";
         private static readonly SessionName s_sampleSessionName = new SessionName("project", "instance", "database", "session");
         private static readonly ByteString s_sampleTransactionId = ByteString.CopyFromUtf8("transaction-id");
 
@@ -76,7 +78,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Our session should be ready, the pool should be up to size, and we should
             // have created 11 sessions in total.
             var session = await acquisitionTask;
-            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            var stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
+
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(11, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
@@ -84,7 +87,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             // If we allow the maintenance pool to run until T=5 minutes, we should have evicted
             // all the 10 sessions in the pool and replaced them.
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(4));
-            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
+
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(21, client.SessionsCreated);
             Assert.Equal(10, client.SessionsDeleted);
@@ -113,7 +117,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Our session should be ready, the pool should be up to size, and we should
             // have created 11 sessions in total.
             var session = await acquisitionTask;
-            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            var stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
+
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(11, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
@@ -128,7 +133,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
             session = await acquisitionTask;
-            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
+
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(12, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
@@ -136,7 +142,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             // If we allow the maintenance pool to run until T=5 minutes, we should have evicted
             // all the old 9 sessions in the pool and replaced them with 9 new ones.
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(2));
-            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
+
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(21, client.SessionsCreated);
             Assert.Equal(9, client.SessionsDeleted);
@@ -169,8 +176,8 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // Now the shutdown task should have completed, and the stats will know that it's shut down.
             await shutdownTask;
+            var stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
             Assert.True(stats.Shutdown);
 
             // We can't get sessions any more for this database
@@ -208,13 +215,13 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
-        public void GetStatisticsSnapshot_UnrepresentedDatabase()
+        public void GetSegmentStatisticsSnapshot_UnrepresentedDatabase()
         {
             var client = new SessionTestingSpannerClient();
             var options = new SessionPoolOptions();
             var sessionPool = new SessionPool(client, options);
             // We haven't used the database in this session pool, so there are no statistics for it.
-            Assert.Null(sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName));
+            Assert.Null(sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName));
         }
 
         [Fact(Timeout = TestTimeoutMilliseconds)]
@@ -226,25 +233,24 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MinimumPooledSessions = 10,
             };
             var sessionPool = new SessionPool(client, options);
-            var acquisitionTask1 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
-            var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
+            var acquisitionTask1 = sessionPool.AcquireSessionAsync(SessionPoolSegmentKey.Create(s_sampleDatabaseName).WithDatabaseRole(s_databaseRole), new TransactionOptions(), default);
+            var acquisitionTask2 = sessionPool.AcquireSessionAsync(SessionPoolSegmentKey.Create(s_sampleDatabaseName2), new TransactionOptions(), default);
 
             // Wait a little in real time because session creation tasks 
             // are started in a controlled fire and forget manner.
             // Let's give time for stats to be updated.
             await Task.Delay(TimeSpan.FromMilliseconds(250));
-
             var stats = sessionPool.GetStatisticsSnapshot();
-            Assert.Equal(2, stats.PerDatabaseStatistics.Count);
+
+            Assert.Equal(2, stats.PerSegmentStatistics.Count);
             Assert.Equal(2, stats.TotalActiveSessionCount);
             Assert.Equal(0, stats.TotalReadPoolCount);
             // We've asked for 2 sessions, and the databases "know" they need 10 in the pool (each), so
             // there will be 22 in-flight requests in total.
             Assert.Equal(22, stats.TotalInFlightCreationCount);
 
-            Assert.Contains(stats.PerDatabaseStatistics, s => s.DatabaseName == s_sampleDatabaseName);
-            Assert.Contains(stats.PerDatabaseStatistics, s => s.DatabaseName == s_sampleDatabaseName2);
-
+            Assert.Contains(stats.PerSegmentStatistics, s => s.DatabaseName == s_sampleDatabaseName && s.DatabaseRole == s_databaseRole);
+            Assert.Contains(stats.PerSegmentStatistics, s => s.DatabaseName == s_sampleDatabaseName2 && s.DatabaseRole is null);
             // xUnit waits until tasks registered in its synchronization context have completed before considering the
             // test itself complete, so we need to let the pool complete the acquisition tasks.
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(2));
