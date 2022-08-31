@@ -1,0 +1,37 @@
+[
+  {
+    "method": "SearchAgents",
+    "client": "AgentsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListAnswerRecords",
+    "client": "AnswerRecordsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListConversationProfiles",
+    "client": "ConversationProfilesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListConversations",
+    "client": "ConversationsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListKnowledgeBases",
+    "client": "KnowledgeBasesClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]

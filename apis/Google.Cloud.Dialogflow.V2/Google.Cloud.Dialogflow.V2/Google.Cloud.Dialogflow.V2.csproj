@@ -4,7 +4,7 @@
     <Version>4.1.0</Version>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Google Dialogflow API.</Description>
+    <Description>Recommended Google client library to access the Google Dialogflow API (v2).</Description>
     <PackageTags>dialogflow;iot;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>

@@ -74,6 +74,7 @@
     "apis/Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common/**",
     "apis/Google.Cloud.Dialogflow.Cx.V3/Google.Cloud.Dialogflow.Cx.V3/**",
     "apis/Google.Cloud.Dialogflow.V2/Google.Cloud.Dialogflow.V2/**",
+    "apis/Google.Cloud.Dialogflow.V2Beta1/Google.Cloud.Dialogflow.V2Beta1/**",
     "apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2/**",
     "apis/Google.Cloud.DocumentAI.V1/Google.Cloud.DocumentAI.V1/**",
     "apis/Google.Cloud.DocumentAI.V1Beta3/Google.Cloud.DocumentAI.V1Beta3/**",
