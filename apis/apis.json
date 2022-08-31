@@ -1410,7 +1410,7 @@
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
       "version": "4.1.0",
       "type": "grpc",
-      "description": "Recommended Google client library to access the Google Dialogflow API.",
+      "description": "Recommended Google client library to access the Google Dialogflow API (v2).",
       "tags": [
         "dialogflow",
         "iot"
@@ -1426,6 +1426,23 @@
       },
       "shortName": "dialogflow",
       "serviceConfigFile": "dialogflow_v2.yaml"
+    },
+    {
+      "id": "Google.Cloud.Dialogflow.V2Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Dialogflow",
+      "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
+      "description": "Recommended Google client library to access the Google Dialogflow API (v2beta1).",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/dialogflow/v2beta1",
+      "shortName": "dialogflow",
+      "serviceConfigFile": "dialogflow_v2beta1.yaml"
     },
     {
       "id": "Google.Cloud.Dlp.V2",
