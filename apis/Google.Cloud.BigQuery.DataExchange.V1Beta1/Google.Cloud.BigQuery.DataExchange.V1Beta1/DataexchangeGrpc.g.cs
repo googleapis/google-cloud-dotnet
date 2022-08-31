@@ -24,11 +24,12 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
-  /// The AnalyticsHubService API facilitates data sharing within and across
-  /// organizations. It allows data providers to publish Listings --- a
-  /// discoverable and searchable SKU representing a dataset. Data consumers can
-  /// subscribe to Listings. Upon subscription, AnalyticsHub provisions a "Linked
-  /// Datasets" surfacing the data in the consumer's project.
+  /// The `AnalyticsHubService` API facilitates data sharing within and across
+  /// organizations. It allows data providers to publish listings that reference
+  /// shared datasets. With Analytics Hub, users can discover and search for
+  /// listings that they have access to. Subscribers can view and subscribe to
+  /// listings. When you subscribe to a listing, Analytics Hub creates a linked
+  /// dataset in your project.
   /// </summary>
   public static partial class AnalyticsHubService
   {
@@ -247,7 +248,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public abstract partial class AnalyticsHubServiceBase
     {
       /// <summary>
-      /// Lists DataExchanges in a given project and location.
+      /// Lists all data exchanges in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -259,7 +260,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Lists DataExchanges from projects in a given organization and location.
+      /// Lists all data exchanges from projects in a given organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -271,7 +273,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Gets details of a single DataExchange.
+      /// Gets the details of a data exchange.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -283,7 +285,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new DataExchange in a given project and location.
+      /// Creates a new data exchange.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -295,7 +297,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Updates the parameters of a single DataExchange.
+      /// Updates an existing data exchange.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -307,7 +309,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Deletes a single DataExchange.
+      /// Deletes an existing data exchange.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -319,7 +321,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Lists Listings in a given project and location.
+      /// Lists all listings in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -331,7 +333,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Gets details of a single Listing.
+      /// Gets the details of a listing.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -343,7 +345,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new Listing in a given project and location.
+      /// Creates a new listing.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -355,7 +357,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Updates the parameters of a single Listing.
+      /// Updates an existing listing.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -367,8 +369,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Deletes a single Listing, as long as there are no subscriptions
-      /// associated with the source of this Listing.
+      /// Deletes a listing.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -380,10 +381,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Subscribes to a single Listing.
+      /// Subscribes to a listing.
       ///
-      /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
-      /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
+      /// Currently, with Analytics Hub, you can create listings that
+      /// reference only BigQuery datasets.
+      /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
       /// creates a linked dataset in the subscriber's project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -396,7 +398,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Gets the IAM policy for a dataExchange or a listing.
+      /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -408,7 +410,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Sets the IAM policy for a dataExchange or a listing.
+      /// Sets the IAM policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -420,8 +422,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Returns the permissions that a caller has on a specified dataExchange or
-      /// listing.
+      /// Returns the permissions that a caller has.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -462,7 +463,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
 
       /// <summary>
-      /// Lists DataExchanges in a given project and location.
+      /// Lists all data exchanges in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,7 +476,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListDataExchanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataExchanges in a given project and location.
+      /// Lists all data exchanges in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -486,7 +487,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataExchanges, null, options, request);
       }
       /// <summary>
-      /// Lists DataExchanges in a given project and location.
+      /// Lists all data exchanges in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -499,7 +500,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListDataExchangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataExchanges in a given project and location.
+      /// Lists all data exchanges in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -510,7 +511,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataExchanges, null, options, request);
       }
       /// <summary>
-      /// Lists DataExchanges from projects in a given organization and location.
+      /// Lists all data exchanges from projects in a given organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -523,7 +525,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListOrgDataExchanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataExchanges from projects in a given organization and location.
+      /// Lists all data exchanges from projects in a given organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -534,7 +537,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListOrgDataExchanges, null, options, request);
       }
       /// <summary>
-      /// Lists DataExchanges from projects in a given organization and location.
+      /// Lists all data exchanges from projects in a given organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -547,7 +551,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListOrgDataExchangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataExchanges from projects in a given organization and location.
+      /// Lists all data exchanges from projects in a given organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -558,7 +563,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListOrgDataExchanges, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single DataExchange.
+      /// Gets the details of a data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -571,7 +576,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetDataExchange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single DataExchange.
+      /// Gets the details of a data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -582,7 +587,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataExchange, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single DataExchange.
+      /// Gets the details of a data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -595,7 +600,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetDataExchangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single DataExchange.
+      /// Gets the details of a data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -606,7 +611,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataExchange, null, options, request);
       }
       /// <summary>
-      /// Creates a new DataExchange in a given project and location.
+      /// Creates a new data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -619,7 +624,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CreateDataExchange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new DataExchange in a given project and location.
+      /// Creates a new data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -630,7 +635,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataExchange, null, options, request);
       }
       /// <summary>
-      /// Creates a new DataExchange in a given project and location.
+      /// Creates a new data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -643,7 +648,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CreateDataExchangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new DataExchange in a given project and location.
+      /// Creates a new data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -654,7 +659,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataExchange, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single DataExchange.
+      /// Updates an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -667,7 +672,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return UpdateDataExchange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single DataExchange.
+      /// Updates an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -678,7 +683,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDataExchange, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single DataExchange.
+      /// Updates an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -691,7 +696,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return UpdateDataExchangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single DataExchange.
+      /// Updates an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -702,7 +707,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataExchange, null, options, request);
       }
       /// <summary>
-      /// Deletes a single DataExchange.
+      /// Deletes an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -715,7 +720,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return DeleteDataExchange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single DataExchange.
+      /// Deletes an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,7 +731,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataExchange, null, options, request);
       }
       /// <summary>
-      /// Deletes a single DataExchange.
+      /// Deletes an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,7 +744,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return DeleteDataExchangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single DataExchange.
+      /// Deletes an existing data exchange.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -750,7 +755,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataExchange, null, options, request);
       }
       /// <summary>
-      /// Lists Listings in a given project and location.
+      /// Lists all listings in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -763,7 +768,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListListings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Listings in a given project and location.
+      /// Lists all listings in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -774,7 +779,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListListings, null, options, request);
       }
       /// <summary>
-      /// Lists Listings in a given project and location.
+      /// Lists all listings in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -787,7 +792,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return ListListingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Listings in a given project and location.
+      /// Lists all listings in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -798,7 +803,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListListings, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Listing.
+      /// Gets the details of a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -811,7 +816,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetListing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Listing.
+      /// Gets the details of a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -822,7 +827,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetListing, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Listing.
+      /// Gets the details of a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -835,7 +840,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetListingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Listing.
+      /// Gets the details of a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -846,7 +851,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetListing, null, options, request);
       }
       /// <summary>
-      /// Creates a new Listing in a given project and location.
+      /// Creates a new listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -859,7 +864,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CreateListing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Listing in a given project and location.
+      /// Creates a new listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -870,7 +875,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateListing, null, options, request);
       }
       /// <summary>
-      /// Creates a new Listing in a given project and location.
+      /// Creates a new listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -883,7 +888,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CreateListingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Listing in a given project and location.
+      /// Creates a new listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -894,7 +899,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateListing, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single Listing.
+      /// Updates an existing listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -907,7 +912,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return UpdateListing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single Listing.
+      /// Updates an existing listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -918,7 +923,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateListing, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single Listing.
+      /// Updates an existing listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -931,7 +936,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return UpdateListingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single Listing.
+      /// Updates an existing listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -942,8 +947,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateListing, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Listing, as long as there are no subscriptions
-      /// associated with the source of this Listing.
+      /// Deletes a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -956,8 +960,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return DeleteListing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Listing, as long as there are no subscriptions
-      /// associated with the source of this Listing.
+      /// Deletes a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -968,8 +971,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteListing, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Listing, as long as there are no subscriptions
-      /// associated with the source of this Listing.
+      /// Deletes a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -982,8 +984,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return DeleteListingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Listing, as long as there are no subscriptions
-      /// associated with the source of this Listing.
+      /// Deletes a listing.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -994,10 +995,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteListing, null, options, request);
       }
       /// <summary>
-      /// Subscribes to a single Listing.
+      /// Subscribes to a listing.
       ///
-      /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
-      /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
+      /// Currently, with Analytics Hub, you can create listings that
+      /// reference only BigQuery datasets.
+      /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
       /// creates a linked dataset in the subscriber's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1011,10 +1013,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return SubscribeListing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Subscribes to a single Listing.
+      /// Subscribes to a listing.
       ///
-      /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
-      /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
+      /// Currently, with Analytics Hub, you can create listings that
+      /// reference only BigQuery datasets.
+      /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
       /// creates a linked dataset in the subscriber's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1026,10 +1029,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SubscribeListing, null, options, request);
       }
       /// <summary>
-      /// Subscribes to a single Listing.
+      /// Subscribes to a listing.
       ///
-      /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
-      /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
+      /// Currently, with Analytics Hub, you can create listings that
+      /// reference only BigQuery datasets.
+      /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
       /// creates a linked dataset in the subscriber's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1043,10 +1047,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return SubscribeListingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Subscribes to a single Listing.
+      /// Subscribes to a listing.
       ///
-      /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
-      /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
+      /// Currently, with Analytics Hub, you can create listings that
+      /// reference only BigQuery datasets.
+      /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
       /// creates a linked dataset in the subscriber's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1058,7 +1063,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SubscribeListing, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM policy for a dataExchange or a listing.
+      /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1071,7 +1076,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM policy for a dataExchange or a listing.
+      /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1082,7 +1087,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM policy for a dataExchange or a listing.
+      /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1095,7 +1100,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM policy for a dataExchange or a listing.
+      /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1106,7 +1111,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the IAM policy for a dataExchange or a listing.
+      /// Sets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1119,7 +1124,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the IAM policy for a dataExchange or a listing.
+      /// Sets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1130,7 +1135,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the IAM policy for a dataExchange or a listing.
+      /// Sets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1143,7 +1148,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the IAM policy for a dataExchange or a listing.
+      /// Sets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1154,8 +1159,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified dataExchange or
-      /// listing.
+      /// Returns the permissions that a caller has.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1168,8 +1172,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified dataExchange or
-      /// listing.
+      /// Returns the permissions that a caller has.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1180,8 +1183,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified dataExchange or
-      /// listing.
+      /// Returns the permissions that a caller has.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1194,8 +1196,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified dataExchange or
-      /// listing.
+      /// Returns the permissions that a caller has.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

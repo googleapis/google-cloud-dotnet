@@ -568,7 +568,8 @@
       ],
       "dependencies": {
         "Google.Cloud.BigQuery.DataExchange.Common": "project",
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/dataexchange/v1beta1",
