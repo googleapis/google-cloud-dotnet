@@ -28,199 +28,210 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
             "ZGF0YWV4Y2hhbmdlLnByb3RvEipnb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
             "YWV4Y2hhbmdlLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
             "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjZn",
-            "b29nbGUvY2xvdWQvYmlncXVlcnkvZGF0YWV4Y2hhbmdlL2NvbW1vbi9jb21t",
-            "b24ucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29v",
-            "Z2xlL2lhbS92MS9wb2xpY3kucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0",
-            "eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aHmdv",
-            "b2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byK1AgoMRGF0YUV4Y2hhbmdl",
-            "EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
-            "AhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEhwKD3ByaW1hcnlfY29udGFj",
-            "dBgEIAEoCUID4EEBEhoKDWRvY3VtZW50YXRpb24YBSABKAlCA+BBARIaCg1s",
-            "aXN0aW5nX2NvdW50GAYgASgFQgPgQQMSEQoEaWNvbhgHIAEoDEID4EEBOnTq",
-            "QXEKKGFuYWx5dGljc2h1Yi5nb29nbGVhcGlzLmNvbS9EYXRhRXhjaGFuZ2US",
-            "RXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRh",
-            "RXhjaGFuZ2VzL3tkYXRhX2V4Y2hhbmdlfSI/CgxEYXRhUHJvdmlkZXISEQoE",
-            "bmFtZRgBIAEoCUID4EEBEhwKD3ByaW1hcnlfY29udGFjdBgCIAEoCUID4EEB",
-            "IjwKCVB1Ymxpc2hlchIRCgRuYW1lGAEgASgJQgPgQQESHAoPcHJpbWFyeV9j",
-            "b250YWN0GAIgASgJQgPgQQEiTwobRGVzdGluYXRpb25EYXRhc2V0UmVmZXJl",
-            "bmNlEhcKCmRhdGFzZXRfaWQYASABKAlCA+BBAhIXCgpwcm9qZWN0X2lkGAIg",
-            "ASgJQgPgQQIilgMKEkRlc3RpbmF0aW9uRGF0YXNldBJnChFkYXRhc2V0X3Jl",
-            "ZmVyZW5jZRgBIAEoCzJHLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhj",
-            "aGFuZ2UudjFiZXRhMS5EZXN0aW5hdGlvbkRhdGFzZXRSZWZlcmVuY2VCA+BB",
-            "AhI4Cg1mcmllbmRseV9uYW1lGAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cmluZ1ZhbHVlQgPgQQESNgoLZGVzY3JpcHRpb24YAyABKAsyHC5nb29nbGUu",
-            "cHJvdG9idWYuU3RyaW5nVmFsdWVCA+BBARJfCgZsYWJlbHMYBCADKAsySi5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGVz",
-            "dGluYXRpb25EYXRhc2V0LkxhYmVsc0VudHJ5QgPgQQESFQoIbG9jYXRpb24Y",
-            "BSABKAlCA+BBAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIvQGCgdMaXN0aW5nEhEKBG5hbWUYASABKAlCA+BBAxIZ",
-            "CgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEo",
-            "CUID4EEBEhwKD3ByaW1hcnlfY29udGFjdBgEIAEoCUID4EEBEhoKDWRvY3Vt",
-            "ZW50YXRpb24YBSABKAlCA+BBARJqChBiaWdxdWVyeV9kYXRhc2V0GAYgASgL",
-            "MkkuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGEx",
-            "Lkxpc3RpbmcuQmlnUXVlcnlEYXRhc2V0U291cmNlQgPgQQJIABJNCgVzdGF0",
-            "ZRgHIAEoDjI5Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2Uu",
-            "djFiZXRhMS5MaXN0aW5nLlN0YXRlQgPgQQMSEQoEaWNvbhgIIAEoDEID4EEB",
-            "ElQKDWRhdGFfcHJvdmlkZXIYCSABKAsyOC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGF0YVByb3ZpZGVyQgPgQQESTAoK",
-            "Y2F0ZWdvcmllcxgKIAMoDjIzLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRh",
-            "ZXhjaGFuZ2UuY29tbW9uLkNhdGVnb3J5QgPgQQESTQoJcHVibGlzaGVyGAsg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJl",
-            "dGExLlB1Ymxpc2hlckID4EEBEhsKDnJlcXVlc3RfYWNjZXNzGAwgASgJQgPg",
-            "QQEaTgoVQmlnUXVlcnlEYXRhc2V0U291cmNlEjUKB2RhdGFzZXQYASABKAlC",
-            "JPpBIQofYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20vRGF0YXNldCIqCgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABOoIB6kF/CiNh",
-            "bmFseXRpY3NodWIuZ29vZ2xlYXBpcy5jb20vTGlzdGluZxJYcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFFeGNoYW5nZXMv",
-            "e2RhdGFfZXhjaGFuZ2V9L2xpc3RpbmdzL3tsaXN0aW5nfUIICgZzb3VyY2Ui",
-            "fAoYTGlzdERhdGFFeGNoYW5nZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp",
-            "4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJ",
-            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkihgEKGUxpc3RE",
-            "YXRhRXhjaGFuZ2VzUmVzcG9uc2USUAoOZGF0YV9leGNoYW5nZXMYASADKAsy",
-            "OC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEu",
-            "RGF0YUV4Y2hhbmdlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJfChtMaXN0",
-            "T3JnRGF0YUV4Y2hhbmdlc1JlcXVlc3QSGQoMb3JnYW5pemF0aW9uGAEgASgJ",
-            "QgPgQQISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAki",
-            "iQEKHExpc3RPcmdEYXRhRXhjaGFuZ2VzUmVzcG9uc2USUAoOZGF0YV9leGNo",
-            "YW5nZXMYASADKAsyOC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hh",
-            "bmdlLnYxYmV0YTEuRGF0YUV4Y2hhbmdlEhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCSJYChZHZXREYXRhRXhjaGFuZ2VSZXF1ZXN0Ej4KBG5hbWUYASABKAlC",
-            "MOBBAvpBKgooYW5hbHl0aWNzaHViLmdvb2dsZWFwaXMuY29tL0RhdGFFeGNo",
-            "YW5nZSLLAQoZQ3JlYXRlRGF0YUV4Y2hhbmdlUmVxdWVzdBI5CgZwYXJlbnQY",
-            "ASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0",
-            "aW9uEh0KEGRhdGFfZXhjaGFuZ2VfaWQYAiABKAlCA+BBAhJUCg1kYXRhX2V4",
-            "Y2hhbmdlGAMgASgLMjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNo",
-            "YW5nZS52MWJldGExLkRhdGFFeGNoYW5nZUID4EECIqcBChlVcGRhdGVEYXRh",
-            "RXhjaGFuZ2VSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkZpZWxkTWFza0ID4EECElQKDWRhdGFfZXhjaGFuZ2UYAiAB",
-            "KAsyOC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0",
-            "YTEuRGF0YUV4Y2hhbmdlQgPgQQIiWwoZRGVsZXRlRGF0YUV4Y2hhbmdlUmVx",
-            "dWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFuYWx5dGljc2h1Yi5nb29n",
-            "bGVhcGlzLmNvbS9EYXRhRXhjaGFuZ2UifgoTTGlzdExpc3RpbmdzUmVxdWVz",
-            "dBJACgZwYXJlbnQYASABKAlCMOBBAvpBKgooYW5hbHl0aWNzaHViLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFFeGNoYW5nZRIRCglwYWdlX3NpemUYAiABKAUSEgoK",
-            "cGFnZV90b2tlbhgDIAEoCSJ2ChRMaXN0TGlzdGluZ3NSZXNwb25zZRJFCghs",
-            "aXN0aW5ncxgBIAMoCzIzLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhj",
-            "aGFuZ2UudjFiZXRhMS5MaXN0aW5nEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSJOChFHZXRMaXN0aW5nUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUK",
-            "I2FuYWx5dGljc2h1Yi5nb29nbGVhcGlzLmNvbS9MaXN0aW5nIrwBChRDcmVh",
-            "dGVMaXN0aW5nUmVxdWVzdBJACgZwYXJlbnQYASABKAlCMOBBAvpBKgooYW5h",
-            "bHl0aWNzaHViLmdvb2dsZWFwaXMuY29tL0RhdGFFeGNoYW5nZRIXCgpsaXN0",
-            "aW5nX2lkGAIgASgJQgPgQQISSQoHbGlzdGluZxgDIAEoCzIzLmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5MaXN0aW5nQgPg",
-            "QQIilwEKFFVwZGF0ZUxpc3RpbmdSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEkkKB2xpc3Rp",
-            "bmcYAiABKAsyMy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdl",
-            "LnYxYmV0YTEuTGlzdGluZ0ID4EECIlEKFERlbGV0ZUxpc3RpbmdSZXF1ZXN0",
-            "EjkKBG5hbWUYASABKAlCK+BBAvpBJQojYW5hbHl0aWNzaHViLmdvb2dsZWFw",
-            "aXMuY29tL0xpc3RpbmciwgEKF1N1YnNjcmliZUxpc3RpbmdSZXF1ZXN0EjkK",
-            "BG5hbWUYASABKAlCK+BBAvpBJQojYW5hbHl0aWNzaHViLmdvb2dsZWFwaXMu",
-            "Y29tL0xpc3RpbmcSXQoTZGVzdGluYXRpb25fZGF0YXNldBgDIAEoCzI+Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EZXN0",
-            "aW5hdGlvbkRhdGFzZXRIAEINCgtkZXN0aW5hdGlvbiIaChhTdWJzY3JpYmVM",
-            "aXN0aW5nUmVzcG9uc2Uyph0KE0FuYWx5dGljc0h1YlNlcnZpY2US6QEKEUxp",
-            "c3REYXRhRXhjaGFuZ2VzEkQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFl",
-            "eGNoYW5nZS52MWJldGExLkxpc3REYXRhRXhjaGFuZ2VzUmVxdWVzdBpFLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5MaXN0",
-            "RGF0YUV4Y2hhbmdlc1Jlc3BvbnNlIkeC0+STAjgSNi92MWJldGExL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YUV4Y2hhbmdlc9pBBnBh",
-            "cmVudBKDAgoUTGlzdE9yZ0RhdGFFeGNoYW5nZXMSRy5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdE9yZ0RhdGFFeGNo",
-            "YW5nZXNSZXF1ZXN0GkguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNo",
-            "YW5nZS52MWJldGExLkxpc3RPcmdEYXRhRXhjaGFuZ2VzUmVzcG9uc2UiWILT",
-            "5JMCQxJBL3YxYmV0YTEve29yZ2FuaXphdGlvbj1vcmdhbml6YXRpb25zLyov",
-            "bG9jYXRpb25zLyp9L2RhdGFFeGNoYW5nZXPaQQxvcmdhbml6YXRpb24S1gEK",
-            "D0dldERhdGFFeGNoYW5nZRJCLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRh",
-            "ZXhjaGFuZ2UudjFiZXRhMS5HZXREYXRhRXhjaGFuZ2VSZXF1ZXN0GjguZ29v",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5n",
+            "b29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEv",
+            "cG9saWN5LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdv",
+            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvd3JhcHBlcnMucHJvdG8itQIKDERhdGFFeGNoYW5nZRIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3Jp",
+            "cHRpb24YAyABKAlCA+BBARIcCg9wcmltYXJ5X2NvbnRhY3QYBCABKAlCA+BB",
+            "ARIaCg1kb2N1bWVudGF0aW9uGAUgASgJQgPgQQESGgoNbGlzdGluZ19jb3Vu",
+            "dBgGIAEoBUID4EEDEhEKBGljb24YByABKAxCA+BBATp06kFxCihhbmFseXRp",
+            "Y3NodWIuZ29vZ2xlYXBpcy5jb20vRGF0YUV4Y2hhbmdlEkVwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YUV4Y2hhbmdlcy97",
+            "ZGF0YV9leGNoYW5nZX0iPwoMRGF0YVByb3ZpZGVyEhEKBG5hbWUYASABKAlC",
+            "A+BBARIcCg9wcmltYXJ5X2NvbnRhY3QYAiABKAlCA+BBASI8CglQdWJsaXNo",
+            "ZXISEQoEbmFtZRgBIAEoCUID4EEBEhwKD3ByaW1hcnlfY29udGFjdBgCIAEo",
+            "CUID4EEBIk8KG0Rlc3RpbmF0aW9uRGF0YXNldFJlZmVyZW5jZRIXCgpkYXRh",
+            "c2V0X2lkGAEgASgJQgPgQQISFwoKcHJvamVjdF9pZBgCIAEoCUID4EECIpYD",
+            "ChJEZXN0aW5hdGlvbkRhdGFzZXQSZwoRZGF0YXNldF9yZWZlcmVuY2UYASAB",
+            "KAsyRy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0",
+            "YTEuRGVzdGluYXRpb25EYXRhc2V0UmVmZXJlbmNlQgPgQQISOAoNZnJpZW5k",
+            "bHlfbmFtZRgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZUID",
+            "4EEBEjYKC2Rlc2NyaXB0aW9uGAMgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cmluZ1ZhbHVlQgPgQQESXwoGbGFiZWxzGAQgAygLMkouZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkRlc3RpbmF0aW9uRGF0",
+            "YXNldC5MYWJlbHNFbnRyeUID4EEBEhUKCGxvY2F0aW9uGAUgASgJQgPgQQIa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASK3CwoHTGlzdGluZxJqChBiaWdxdWVyeV9kYXRhc2V0GAYgASgLMkkuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkxpc3Rp",
+            "bmcuQmlnUXVlcnlEYXRhc2V0U291cmNlQgPgQQJIABIRCgRuYW1lGAEgASgJ",
+            "QgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRp",
+            "b24YAyABKAlCA+BBARIcCg9wcmltYXJ5X2NvbnRhY3QYBCABKAlCA+BBARIa",
+            "Cg1kb2N1bWVudGF0aW9uGAUgASgJQgPgQQESTQoFc3RhdGUYByABKA4yOS5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlz",
+            "dGluZy5TdGF0ZUID4EEDEhEKBGljb24YCCABKAxCA+BBARJUCg1kYXRhX3By",
+            "b3ZpZGVyGAkgASgLMjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNo",
+            "YW5nZS52MWJldGExLkRhdGFQcm92aWRlckID4EEBElUKCmNhdGVnb3JpZXMY",
+            "CiADKA4yPC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYx",
+            "YmV0YTEuTGlzdGluZy5DYXRlZ29yeUID4EEBEk0KCXB1Ymxpc2hlchgLIAEo",
+            "CzI1Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRh",
+            "MS5QdWJsaXNoZXJCA+BBARIbCg5yZXF1ZXN0X2FjY2VzcxgMIAEoCUID4EEB",
+            "Gk4KFUJpZ1F1ZXJ5RGF0YXNldFNvdXJjZRI1CgdkYXRhc2V0GAEgASgJQiT6",
+            "QSEKH2JpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL0RhdGFzZXQiKgoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQASK3BAoIQ2F0ZWdv",
+            "cnkSGAoUQ0FURUdPUllfVU5TUEVDSUZJRUQQABITCg9DQVRFR09SWV9PVEhF",
+            "UlMQARImCiJDQVRFR09SWV9BRFZFUlRJU0lOR19BTkRfTUFSS0VUSU5HEAIS",
+            "FQoRQ0FURUdPUllfQ09NTUVSQ0UQAxIkCiBDQVRFR09SWV9DTElNQVRFX0FO",
+            "RF9FTlZJUk9OTUVOVBAEEhkKFUNBVEVHT1JZX0RFTU9HUkFQSElDUxAFEhYK",
+            "EkNBVEVHT1JZX0VDT05PTUlDUxAGEhYKEkNBVEVHT1JZX0VEVUNBVElPThAH",
+            "EhMKD0NBVEVHT1JZX0VORVJHWRAIEhYKEkNBVEVHT1JZX0ZJTkFOQ0lBTBAJ",
+            "EhMKD0NBVEVHT1JZX0dBTUlORxAKEhcKE0NBVEVHT1JZX0dFT1NQQVRJQUwQ",
+            "CxIoCiRDQVRFR09SWV9IRUFMVEhDQVJFX0FORF9MSUZFX1NDSUVOQ0UQDBIS",
+            "Cg5DQVRFR09SWV9NRURJQRANEhoKFkNBVEVHT1JZX1BVQkxJQ19TRUNUT1IQ",
+            "DhITCg9DQVRFR09SWV9SRVRBSUwQDxITCg9DQVRFR09SWV9TUE9SVFMQEBIh",
+            "Ch1DQVRFR09SWV9TQ0lFTkNFX0FORF9SRVNFQVJDSBAREikKJUNBVEVHT1JZ",
+            "X1RSQU5TUE9SVEFUSU9OX0FORF9MT0dJU1RJQ1MQEhIfChtDQVRFR09SWV9U",
+            "UkFWRUxfQU5EX1RPVVJJU00QEzqCAepBfwojYW5hbHl0aWNzaHViLmdvb2ds",
+            "ZWFwaXMuY29tL0xpc3RpbmcSWHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9kYXRhRXhjaGFuZ2VzL3tkYXRhX2V4Y2hhbmdlfS9s",
+            "aXN0aW5ncy97bGlzdGluZ31CCAoGc291cmNlInwKGExpc3REYXRhRXhjaGFu",
+            "Z2VzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
+            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAMgASgJIoYBChlMaXN0RGF0YUV4Y2hhbmdlc1Jlc3Bv",
+            "bnNlElAKDmRhdGFfZXhjaGFuZ2VzGAEgAygLMjguZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkRhdGFFeGNoYW5nZRIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiXwobTGlzdE9yZ0RhdGFFeGNoYW5nZXNS",
+            "ZXF1ZXN0EhkKDG9yZ2FuaXphdGlvbhgBIAEoCUID4EECEhEKCXBhZ2Vfc2l6",
+            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIokBChxMaXN0T3JnRGF0YUV4",
+            "Y2hhbmdlc1Jlc3BvbnNlElAKDmRhdGFfZXhjaGFuZ2VzGAEgAygLMjguZ29v",
             "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkRhdGFF",
-            "eGNoYW5nZSJFgtPkkwI4EjYvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMvKn3aQQRuYW1lEvsBChJDcmVhdGVE",
-            "YXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hh",
-            "bmdlLnYxYmV0YTEuQ3JlYXRlRGF0YUV4Y2hhbmdlUmVxdWVzdBo4Lmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EYXRhRXhj",
-            "aGFuZ2UiZILT5JMCRyI2L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9kYXRhRXhjaGFuZ2VzOg1kYXRhX2V4Y2hhbmdl2kEUcGFy",
-            "ZW50LGRhdGFfZXhjaGFuZ2USjgIKElVwZGF0ZURhdGFFeGNoYW5nZRJFLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5VcGRh",
-            "dGVEYXRhRXhjaGFuZ2VSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmRhdGFleGNoYW5nZS52MWJldGExLkRhdGFFeGNoYW5nZSJ3gtPkkwJVMkQv",
-            "djFiZXRhMS97ZGF0YV9leGNoYW5nZS5uYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZGF0YUV4Y2hhbmdlcy8qfToNZGF0YV9leGNoYW5nZdpBGWRhdGFf",
-            "ZXhjaGFuZ2UsdXBkYXRlX21hc2sSugEKEkRlbGV0ZURhdGFFeGNoYW5nZRJF",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5E",
-            "ZWxldGVEYXRhRXhjaGFuZ2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IkWC0+STAjgqNi92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZGF0YUV4Y2hhbmdlcy8qfdpBBG5hbWUS5QEKDExpc3RMaXN0aW5n",
-            "cxI/Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRh",
-            "MS5MaXN0TGlzdGluZ3NSZXF1ZXN0GkAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmRhdGFleGNoYW5nZS52MWJldGExLkxpc3RMaXN0aW5nc1Jlc3BvbnNlIlKC",
-            "0+STAkMSQS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9kYXRhRXhjaGFuZ2VzLyp9L2xpc3Rpbmdz2kEGcGFyZW50EtIBCgpHZXRM",
-            "aXN0aW5nEj0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52",
-            "MWJldGExLkdldExpc3RpbmdSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkxpc3RpbmciUILT5JMCQxJBL3Yx",
-            "YmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhjaGFu",
-            "Z2VzLyovbGlzdGluZ3MvKn3aQQRuYW1lEusBCg1DcmVhdGVMaXN0aW5nEkAu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkNy",
-            "ZWF0ZUxpc3RpbmdSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRh",
-            "dGFleGNoYW5nZS52MWJldGExLkxpc3RpbmciY4LT5JMCTCJBL3YxYmV0YTEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMv",
-            "Kn0vbGlzdGluZ3M6B2xpc3RpbmfaQQ5wYXJlbnQsbGlzdGluZxL4AQoNVXBk",
-            "YXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFu",
-            "Z2UudjFiZXRhMS5VcGRhdGVMaXN0aW5nUmVxdWVzdBozLmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5MaXN0aW5nInCC0+ST",
-            "AlQySS92MWJldGExL3tsaXN0aW5nLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9kYXRhRXhjaGFuZ2VzLyovbGlzdGluZ3MvKn06B2xpc3RpbmfaQRNs",
-            "aXN0aW5nLHVwZGF0ZV9tYXNrErsBCg1EZWxldGVMaXN0aW5nEkAuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkRlbGV0ZUxp",
-            "c3RpbmdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IlCC0+STAkMq",
-            "QS92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4",
-            "Y2hhbmdlcy8qL2xpc3RpbmdzLyp92kEEbmFtZRL8AQoQU3Vic2NyaWJlTGlz",
-            "dGluZxJDLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFi",
-            "ZXRhMS5TdWJzY3JpYmVMaXN0aW5nUmVxdWVzdBpELmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5TdWJzY3JpYmVMaXN0aW5n",
-            "UmVzcG9uc2UiXYLT5JMCUCJLL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyovbGlzdGluZ3MvKn06c3Vic2Ny",
-            "aWJlOgEq2kEEbmFtZRL4AQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52",
-            "MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3ki",
-            "rAGC0+STAqUBIkcvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyp9OmdldElhbVBvbGljeToBKlpXIlIv",
-            "djFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
-            "RXhjaGFuZ2VzLyovbGlzdGluZ3MvKn06Z2V0SWFtUG9saWN5OgEqEvgBCgxT",
-            "ZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVl",
-            "c3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKsAYLT5JMCpQEiRy92MWJldGEx",
-            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5n",
-            "ZXMvKn06c2V0SWFtUG9saWN5OgEqWlciUi92MWJldGExL3tyZXNvdXJjZT1w",
+            "eGNoYW5nZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWAoWR2V0RGF0YUV4",
+            "Y2hhbmdlUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFuYWx5dGlj",
+            "c2h1Yi5nb29nbGVhcGlzLmNvbS9EYXRhRXhjaGFuZ2UiywEKGUNyZWF0ZURh",
+            "dGFFeGNoYW5nZVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxv",
+            "Y2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIdChBkYXRhX2V4Y2hh",
+            "bmdlX2lkGAIgASgJQgPgQQISVAoNZGF0YV9leGNoYW5nZRgDIAEoCzI4Lmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EYXRh",
+            "RXhjaGFuZ2VCA+BBAiKnAQoZVXBkYXRlRGF0YUV4Y2hhbmdlUmVxdWVzdBI0",
+            "Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2tCA+BBAhJUCg1kYXRhX2V4Y2hhbmdlGAIgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkRhdGFFeGNoYW5nZUID",
+            "4EECIlsKGURlbGV0ZURhdGFFeGNoYW5nZVJlcXVlc3QSPgoEbmFtZRgBIAEo",
+            "CUIw4EEC+kEqCihhbmFseXRpY3NodWIuZ29vZ2xlYXBpcy5jb20vRGF0YUV4",
+            "Y2hhbmdlIn4KE0xpc3RMaXN0aW5nc1JlcXVlc3QSQAoGcGFyZW50GAEgASgJ",
+            "QjDgQQL6QSoKKGFuYWx5dGljc2h1Yi5nb29nbGVhcGlzLmNvbS9EYXRhRXhj",
+            "aGFuZ2USEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAki",
+            "dgoUTGlzdExpc3RpbmdzUmVzcG9uc2USRQoIbGlzdGluZ3MYASADKAsyMy5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlz",
+            "dGluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiTgoRR2V0TGlzdGluZ1Jl",
+            "cXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNhbmFseXRpY3NodWIuZ29v",
+            "Z2xlYXBpcy5jb20vTGlzdGluZyK8AQoUQ3JlYXRlTGlzdGluZ1JlcXVlc3QS",
+            "QAoGcGFyZW50GAEgASgJQjDgQQL6QSoKKGFuYWx5dGljc2h1Yi5nb29nbGVh",
+            "cGlzLmNvbS9EYXRhRXhjaGFuZ2USFwoKbGlzdGluZ19pZBgCIAEoCUID4EEC",
+            "EkkKB2xpc3RpbmcYAyABKAsyMy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
+            "YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdGluZ0ID4EECIpcBChRVcGRhdGVMaXN0",
+            "aW5nUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2tCA+BBAhJJCgdsaXN0aW5nGAIgASgLMjMuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkxpc3RpbmdC",
+            "A+BBAiJRChREZWxldGVMaXN0aW5nUmVxdWVzdBI5CgRuYW1lGAEgASgJQivg",
+            "QQL6QSUKI2FuYWx5dGljc2h1Yi5nb29nbGVhcGlzLmNvbS9MaXN0aW5nIsIB",
+            "ChdTdWJzY3JpYmVMaXN0aW5nUmVxdWVzdBJdChNkZXN0aW5hdGlvbl9kYXRh",
+            "c2V0GAMgASgLMj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5n",
+            "ZS52MWJldGExLkRlc3RpbmF0aW9uRGF0YXNldEgAEjkKBG5hbWUYASABKAlC",
+            "K+BBAvpBJQojYW5hbHl0aWNzaHViLmdvb2dsZWFwaXMuY29tL0xpc3RpbmdC",
+            "DQoLZGVzdGluYXRpb24iGgoYU3Vic2NyaWJlTGlzdGluZ1Jlc3BvbnNlMqYd",
+            "ChNBbmFseXRpY3NIdWJTZXJ2aWNlEukBChFMaXN0RGF0YUV4Y2hhbmdlcxJE",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5M",
+            "aXN0RGF0YUV4Y2hhbmdlc1JlcXVlc3QaRS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdERhdGFFeGNoYW5nZXNSZXNw",
+            "b25zZSJHgtPkkwI4EjYvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2RhdGFFeGNoYW5nZXPaQQZwYXJlbnQSgwIKFExpc3RPcmdE",
+            "YXRhRXhjaGFuZ2VzEkcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNo",
+            "YW5nZS52MWJldGExLkxpc3RPcmdEYXRhRXhjaGFuZ2VzUmVxdWVzdBpILmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5MaXN0",
+            "T3JnRGF0YUV4Y2hhbmdlc1Jlc3BvbnNlIliC0+STAkMSQS92MWJldGExL3tv",
+            "cmdhbml6YXRpb249b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9kYXRh",
+            "RXhjaGFuZ2Vz2kEMb3JnYW5pemF0aW9uEtYBCg9HZXREYXRhRXhjaGFuZ2US",
+            "Qi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEu",
+            "R2V0RGF0YUV4Y2hhbmdlUmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EYXRhRXhjaGFuZ2UiRYLT5JMCOBI2",
+            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhj",
+            "aGFuZ2VzLyp92kEEbmFtZRL7AQoSQ3JlYXRlRGF0YUV4Y2hhbmdlEkUuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkNyZWF0",
+            "ZURhdGFFeGNoYW5nZVJlcXVlc3QaOC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "ZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGF0YUV4Y2hhbmdlImSC0+STAkciNi92",
+            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YUV4",
+            "Y2hhbmdlczoNZGF0YV9leGNoYW5nZdpBFHBhcmVudCxkYXRhX2V4Y2hhbmdl",
+            "Eo4CChJVcGRhdGVEYXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuVXBkYXRlRGF0YUV4Y2hhbmdlUmVx",
+            "dWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFi",
+            "ZXRhMS5EYXRhRXhjaGFuZ2Uid4LT5JMCVTJEL3YxYmV0YTEve2RhdGFfZXhj",
+            "aGFuZ2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5n",
+            "ZXMvKn06DWRhdGFfZXhjaGFuZ2XaQRlkYXRhX2V4Y2hhbmdlLHVwZGF0ZV9t",
+            "YXNrEroBChJEZWxldGVEYXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGVsZXRlRGF0YUV4Y2hhbmdl",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJFgtPkkwI4KjYvdjFi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5n",
+            "ZXMvKn3aQQRuYW1lEuUBCgxMaXN0TGlzdGluZ3MSPy5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdExpc3RpbmdzUmVx",
+            "dWVzdBpALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFi",
+            "ZXRhMS5MaXN0TGlzdGluZ3NSZXNwb25zZSJSgtPkkwJDEkEvdjFiZXRhMS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8q",
+            "fS9saXN0aW5nc9pBBnBhcmVudBLSAQoKR2V0TGlzdGluZxI9Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5HZXRMaXN0aW5n",
+            "UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2Uu",
+            "djFiZXRhMS5MaXN0aW5nIlCC0+STAkMSQS92MWJldGExL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8qL2xpc3RpbmdzLyp9",
+            "2kEEbmFtZRLrAQoNQ3JlYXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5DcmVhdGVMaXN0aW5nUmVxdWVz",
+            "dBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRh",
+            "MS5MaXN0aW5nImOC0+STAkwiQS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyp9L2xpc3RpbmdzOgdsaXN0",
+            "aW5n2kEOcGFyZW50LGxpc3RpbmcS+AEKDVVwZGF0ZUxpc3RpbmcSQC5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuVXBkYXRl",
+            "TGlzdGluZ1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4",
+            "Y2hhbmdlLnYxYmV0YTEuTGlzdGluZyJwgtPkkwJUMkkvdjFiZXRhMS97bGlz",
+            "dGluZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdl",
+            "cy8qL2xpc3RpbmdzLyp9OgdsaXN0aW5n2kETbGlzdGluZyx1cGRhdGVfbWFz",
+            "axK7AQoNRGVsZXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5k",
+            "YXRhZXhjaGFuZ2UudjFiZXRhMS5EZWxldGVMaXN0aW5nUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJQgtPkkwJDKkEvdjFiZXRhMS97bmFtZT1w",
             "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMvKi9saXN0aW5n",
-            "cy8qfTpzZXRJYW1Qb2xpY3k6ASoSpAIKElRlc3RJYW1QZXJtaXNzaW9ucxIo",
-            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdv",
-            "b2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiuAGC0+ST",
-            "ArEBIk0vdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9kYXRhRXhjaGFuZ2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpdIlgv",
-            "djFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
-            "RXhjaGFuZ2VzLyovbGlzdGluZ3MvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq",
-            "GnjKQRthbmFseXRpY3NodWIuZ29vZ2xlYXBpcy5jb23SQVdodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C8wIKLmNvbS5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTFCEURhdGFF",
-            "eGNoYW5nZVByb3RvUAFaVmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvZGF0YWV4Y2hhbmdlL3YxYmV0YTE7",
-            "ZGF0YWV4Y2hhbmdlqgIqR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkRhdGFFeGNo",
-            "YW5nZS5WMUJldGExygIqR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XERhdGFFeGNo",
-            "YW5nZVxWMWJldGEx6gIuR29vZ2xlOjpDbG91ZDo6QmlncXVlcnk6OkRhdGFF",
-            "eGNoYW5nZTo6VjFiZXRhMepBSAofYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YXNldBIlcHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0",
-            "fWIGcHJvdG8z"));
+            "cy8qfdpBBG5hbWUS/AEKEFN1YnNjcmliZUxpc3RpbmcSQy5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuU3Vic2NyaWJlTGlz",
+            "dGluZ1JlcXVlc3QaRC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hh",
+            "bmdlLnYxYmV0YTEuU3Vic2NyaWJlTGlzdGluZ1Jlc3BvbnNlIl2C0+STAlAi",
+            "Sy92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4",
+            "Y2hhbmdlcy8qL2xpc3RpbmdzLyp9OnN1YnNjcmliZToBKtpBBG5hbWUS+AEK",
+            "DEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVx",
+            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IqwBgtPkkwKlASJHL3YxYmV0",
+            "YTEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hh",
+            "bmdlcy8qfTpnZXRJYW1Qb2xpY3k6ASpaVyJSL3YxYmV0YTEve3Jlc291cmNl",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8qL2xpc3Rp",
+            "bmdzLyp9OmdldElhbVBvbGljeToBKhL4AQoMU2V0SWFtUG9saWN5EiIuZ29v",
+            "Z2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52",
+            "MS5Qb2xpY3kirAGC0+STAqUBIkcvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyp9OnNldElhbVBvbGlj",
+            "eToBKlpXIlIvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9kYXRhRXhjaGFuZ2VzLyovbGlzdGluZ3MvKn06c2V0SWFtUG9saWN5",
+            "OgEqEqQCChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRl",
+            "c3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJ",
+            "YW1QZXJtaXNzaW9uc1Jlc3BvbnNlIrgBgtPkkwKxASJNL3YxYmV0YTEve3Jl",
+            "c291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8q",
+            "fTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaXSJYL3YxYmV0YTEve3Jlc291cmNl",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8qL2xpc3Rp",
+            "bmdzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhp4ykEbYW5hbHl0aWNzaHVi",
+            "Lmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLXBsYXRmb3JtQvMCCi5jb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LmRhdGFleGNoYW5nZS52MWJldGExQhFEYXRhRXhjaGFuZ2VQcm90b1ABWlZn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Jp",
+            "Z3F1ZXJ5L2RhdGFleGNoYW5nZS92MWJldGExO2RhdGFleGNoYW5nZaoCKkdv",
+            "b2dsZS5DbG91ZC5CaWdRdWVyeS5EYXRhRXhjaGFuZ2UuVjFCZXRhMcoCKkdv",
+            "b2dsZVxDbG91ZFxCaWdRdWVyeVxEYXRhRXhjaGFuZ2VcVjFiZXRhMeoCLkdv",
+            "b2dsZTo6Q2xvdWQ6OkJpZ3F1ZXJ5OjpEYXRhRXhjaGFuZ2U6OlYxYmV0YTHq",
+            "QUgKH2JpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSJXByb2plY3Rz",
+            "L3twcm9qZWN0fS9kYXRhc2V0cy97ZGF0YXNldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.DataExchange.Common.CommonReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange.Parser, new[]{ "Name", "DisplayName", "Description", "PrimaryContact", "Documentation", "ListingCount", "Icon" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataProvider), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataProvider.Parser, new[]{ "Name", "PrimaryContact" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Publisher), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Publisher.Parser, new[]{ "Name", "PrimaryContact" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DestinationDatasetReference), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DestinationDatasetReference.Parser, new[]{ "DatasetId", "ProjectId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DestinationDataset), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DestinationDataset.Parser, new[]{ "DatasetReference", "FriendlyName", "Description", "Labels", "Location" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Parser, new[]{ "Name", "DisplayName", "Description", "PrimaryContact", "Documentation", "BigqueryDataset", "State", "Icon", "DataProvider", "Categories", "Publisher", "RequestAccess" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource.Parser, new[]{ "Dataset" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Parser, new[]{ "BigqueryDataset", "Name", "DisplayName", "Description", "PrimaryContact", "Documentation", "State", "Icon", "DataProvider", "Categories", "Publisher", "RequestAccess" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State), typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource.Parser, new[]{ "Dataset" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse.Parser, new[]{ "DataExchanges", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesRequest.Parser, new[]{ "Organization", "PageSize", "PageToken" }, null, null, null, null),
@@ -235,7 +246,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateListingRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateListingRequest.Parser, new[]{ "Parent", "ListingId", "Listing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateListingRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateListingRequest.Parser, new[]{ "UpdateMask", "Listing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteListingRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteListingRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest.Parser, new[]{ "Name", "DestinationDataset" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest.Parser, new[]{ "DestinationDataset", "Name" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse), global::Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse.Parser, null, null, null, null, null)
           }));
     }
@@ -244,9 +255,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// A data exchange is a container that enables data sharing.
-  /// It contains a set of listings of the data sources along with descriptive
-  /// information of the data exchange.
+  /// A data exchange is a container that lets you share data. Along with the
+  /// descriptive information about the data exchange, it contains listings that
+  /// reference shared datasets.
   /// </summary>
   public sealed partial class DataExchange : pb::IMessage<DataExchange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -320,7 +331,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     /// <summary>
     /// Required. Human-readable display name of the data exchange. The display name must
     /// contain only Unicode letters, numbers (0-9), underscores (_), dashes (-),
-    /// spaces ( ), and can't start or end with spaces.
+    /// spaces ( ), ampersands (&amp;) and must not start or end with spaces.
     /// Default value is an empty string.
     /// Max length: 63 bytes.
     /// </summary>
@@ -337,10 +348,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Optional. Short description of the data exchange that can consist of sentences
-    /// or paragraphs. The description must not contain Unicode non-characters as
-    /// well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage
-    /// returns (CR), and page breaks (FF).
+    /// Optional. Description of the data exchange. The description must not contain Unicode
+    /// non-characters as well as C0 and C1 control codes except tabs (HT),
+    /// new lines (LF), carriage returns (CR), and page breaks (FF).
     /// Default value is an empty string.
     /// Max length: 2000 bytes.
     /// </summary>
@@ -357,8 +367,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int PrimaryContactFieldNumber = 4;
     private string primaryContact_ = "";
     /// <summary>
-    /// Optional. Email, URL or other reference of the primary point of contact of the data
-    /// exchange
+    /// Optional. Email or URL of the primary point of contact of the data exchange.
     /// Max Length: 1000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -407,7 +416,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     /// Optional. Base64 encoded image representing the data exchange. Max Size: 3.0MiB
     /// Expected image dimensions are 512x512 pixels, however the API only
     /// performs validation on size of the encoded data.
-    /// Note: For byte fields, the contents of the field are base64-encoded (which
+    /// Note: For byte fields, the content of the fields are base64-encoded (which
     /// increases the size of the data by 33-36%) when using JSON on the wire.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -697,7 +706,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Contains details of the Data Provider.
+  /// Contains details of the data provider.
   /// </summary>
   public sealed partial class DataProvider : pb::IMessage<DataProvider>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -748,7 +757,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optional. Name of the Data Provider.
+    /// Optional. Name of the data provider.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -763,7 +772,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int PrimaryContactFieldNumber = 2;
     private string primaryContact_ = "";
     /// <summary>
-    /// Optional. Email or URL of the Data Provider.
+    /// Optional. Email or URL of the data provider.
     /// Max Length: 1000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -933,7 +942,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Contains details of the Publisher.
+  /// Contains details of the listing publisher.
   /// </summary>
   public sealed partial class Publisher : pb::IMessage<Publisher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -984,7 +993,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optional. Name of the listing Publisher.
+    /// Optional. Name of the listing publisher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -999,7 +1008,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int PrimaryContactFieldNumber = 2;
     private string primaryContact_ = "";
     /// <summary>
-    /// Optional. Email or URL of the listing Publisher.
+    /// Optional. Email or URL of the listing publisher.
     /// Max Length: 1000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1169,7 +1178,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Defines the Destination BigQuery Dataset Reference.
+  /// Contains the reference that identifies a destination bigquery dataset.
   /// </summary>
   public sealed partial class DestinationDatasetReference : pb::IMessage<DestinationDatasetReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1406,7 +1415,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Defines the Destination BigQuery Dataset.
+  /// Defines the destination bigquery dataset.
   /// </summary>
   public sealed partial class DestinationDataset : pb::IMessage<DestinationDataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1846,6 +1855,21 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       return new Listing(this);
     }
 
+    /// <summary>Field number for the "bigquery_dataset" field.</summary>
+    public const int BigqueryDatasetFieldNumber = 6;
+    /// <summary>
+    /// Required. Shared dataset i.e. BigQuery dataset source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource BigqueryDataset {
+      get { return sourceCase_ == SourceOneofCase.BigqueryDataset ? (global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.BigqueryDataset;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
@@ -1868,7 +1892,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     /// <summary>
     /// Required. Human-readable display name of the listing. The display name must contain
     /// only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces
-    /// ( ), and can't start or end with spaces.
+    /// ( ), ampersands (&amp;) and can't start or end with spaces.
     /// Default value is an empty string.
     /// Max length: 63 bytes.
     /// </summary>
@@ -1885,10 +1909,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Optional. Short description of the listing that can consist of sentences or
-    /// paragraphs. The description must not contain Unicode non-characters as
-    /// well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage
-    /// returns (CR), and page breaks (FF).
+    /// Optional. Short description of the listing. The description must not contain
+    /// Unicode non-characters and C0 and C1 control codes except tabs (HT),
+    /// new lines (LF), carriage returns (CR), and page breaks (FF).
     /// Default value is an empty string.
     /// Max length: 2000 bytes.
     /// </summary>
@@ -1932,26 +1955,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
     }
 
-    /// <summary>Field number for the "bigquery_dataset" field.</summary>
-    public const int BigqueryDatasetFieldNumber = 6;
-    /// <summary>
-    /// Required. Shared dataset i.e. BigQuery dataset source.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource BigqueryDataset {
-      get { return sourceCase_ == SourceOneofCase.BigqueryDataset ? (global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.BigQueryDatasetSource) source_ : null; }
-      set {
-        source_ = value;
-        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.BigqueryDataset;
-      }
-    }
-
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 7;
     private global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State state_ = global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State.Unspecified;
     /// <summary>
-    /// Output only. Current state of the Listing.
+    /// Output only. Current state of the listing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1985,7 +1993,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DataProviderFieldNumber = 9;
     private global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataProvider dataProvider_;
     /// <summary>
-    /// Optional. The details of the Data Provider who owns the source data.
+    /// Optional. Details of the data provider who owns the source data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1998,15 +2006,15 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
 
     /// <summary>Field number for the "categories" field.</summary>
     public const int CategoriesFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.DataExchange.Common.Category> _repeated_categories_codec
-        = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::Google.Cloud.BigQuery.DataExchange.Common.Category) x);
-    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.Common.Category> categories_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.Common.Category>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category> _repeated_categories_codec
+        = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category> categories_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category>();
     /// <summary>
-    /// Optional. Categories of the Listing. Up to two categories are allowed.
+    /// Optional. Categories of the listing. Up to two categories are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.Common.Category> Categories {
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.Category> Categories {
       get { return categories_; }
     }
 
@@ -2014,7 +2022,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int PublisherFieldNumber = 11;
     private global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Publisher publisher_;
     /// <summary>
-    /// Optional. The details of the Publisher who owns the listing and has rights to share
+    /// Optional. Details of the publisher who owns the listing and who can share
     /// the source data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2078,12 +2086,12 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(BigqueryDataset, other.BigqueryDataset)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
       if (PrimaryContact != other.PrimaryContact) return false;
       if (Documentation != other.Documentation) return false;
-      if (!object.Equals(BigqueryDataset, other.BigqueryDataset)) return false;
       if (State != other.State) return false;
       if (Icon != other.Icon) return false;
       if (!object.Equals(DataProvider, other.DataProvider)) return false;
@@ -2098,12 +2106,12 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (sourceCase_ == SourceOneofCase.BigqueryDataset) hash ^= BigqueryDataset.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (PrimaryContact.Length != 0) hash ^= PrimaryContact.GetHashCode();
       if (Documentation.Length != 0) hash ^= Documentation.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.BigqueryDataset) hash ^= BigqueryDataset.GetHashCode();
       if (State != global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       if (dataProvider_ != null) hash ^= DataProvider.GetHashCode();
@@ -2239,6 +2247,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (sourceCase_ == SourceOneofCase.BigqueryDataset) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDataset);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -2253,9 +2264,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       }
       if (Documentation.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Documentation);
-      }
-      if (sourceCase_ == SourceOneofCase.BigqueryDataset) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDataset);
       }
       if (State != global::Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
@@ -2492,7 +2500,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// State of the Listing
+      /// State of the listing.
       /// </summary>
       public enum State {
         /// <summary>
@@ -2501,18 +2509,45 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Subscribable state. Users with dataexchange.listings.subscribe permission
-        /// can subscribe to this Listing.
+        /// can subscribe to this listing.
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 1,
       }
 
       /// <summary>
-      /// A reference to a Shared dataset. It's an existing BigQuery dataset with a
-      /// collection of objects, such as tables and views, that you want to share
+      /// Listing categories.
+      /// </summary>
+      public enum Category {
+        [pbr::OriginalName("CATEGORY_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("CATEGORY_OTHERS")] Others = 1,
+        [pbr::OriginalName("CATEGORY_ADVERTISING_AND_MARKETING")] AdvertisingAndMarketing = 2,
+        [pbr::OriginalName("CATEGORY_COMMERCE")] Commerce = 3,
+        [pbr::OriginalName("CATEGORY_CLIMATE_AND_ENVIRONMENT")] ClimateAndEnvironment = 4,
+        [pbr::OriginalName("CATEGORY_DEMOGRAPHICS")] Demographics = 5,
+        [pbr::OriginalName("CATEGORY_ECONOMICS")] Economics = 6,
+        [pbr::OriginalName("CATEGORY_EDUCATION")] Education = 7,
+        [pbr::OriginalName("CATEGORY_ENERGY")] Energy = 8,
+        [pbr::OriginalName("CATEGORY_FINANCIAL")] Financial = 9,
+        [pbr::OriginalName("CATEGORY_GAMING")] Gaming = 10,
+        [pbr::OriginalName("CATEGORY_GEOSPATIAL")] Geospatial = 11,
+        [pbr::OriginalName("CATEGORY_HEALTHCARE_AND_LIFE_SCIENCE")] HealthcareAndLifeScience = 12,
+        [pbr::OriginalName("CATEGORY_MEDIA")] Media = 13,
+        [pbr::OriginalName("CATEGORY_PUBLIC_SECTOR")] PublicSector = 14,
+        [pbr::OriginalName("CATEGORY_RETAIL")] Retail = 15,
+        [pbr::OriginalName("CATEGORY_SPORTS")] Sports = 16,
+        [pbr::OriginalName("CATEGORY_SCIENCE_AND_RESEARCH")] ScienceAndResearch = 17,
+        [pbr::OriginalName("CATEGORY_TRANSPORTATION_AND_LOGISTICS")] TransportationAndLogistics = 18,
+        [pbr::OriginalName("CATEGORY_TRAVEL_AND_TOURISM")] TravelAndTourism = 19,
+      }
+
+      /// <summary>
+      /// A reference to a shared dataset. It is an existing BigQuery dataset with a
+      /// collection of objects such as tables and views that you want to share
       /// with subscribers.
-      /// Upon subscription to a Listing, Data Exchange creates a Linked dataset in
+      /// When subscriber's subscribe to a listing, Analytics Hub creates a linked
+      /// dataset in
       /// the subscriber's project. A Linked dataset is an opaque, read-only BigQuery
-      /// dataset that serves as a "symbolic link" to a shared dataset.
+      /// dataset that serves as a _symbolic link_ to a shared dataset.
       /// </summary>
       public sealed partial class BigQueryDatasetSource : pb::IMessage<BigQueryDatasetSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2713,7 +2748,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for requesting list of DataExchanges.
+  /// Message for requesting the list of data exchanges.
   /// </summary>
   public sealed partial class ListDataExchangesRequest : pb::IMessage<ListDataExchangesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2765,7 +2800,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource path of the DataExchanges.
+    /// Required. The parent resource path of the data exchanges.
     /// e.g. `projects/myproject/locations/US`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2991,7 +3026,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for response to listing DataExchanges.
+  /// Message for response to the list of data exchanges.
   /// </summary>
   public sealed partial class ListDataExchangesResponse : pb::IMessage<ListDataExchangesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3044,7 +3079,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange> dataExchanges_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>();
     /// <summary>
-    /// The list of DataExchange.
+    /// The list of data exchanges.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3215,8 +3250,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for requesting list of DataExchanges from projects in an organization
-  /// and location.
+  /// Message for requesting the list of data exchanges from projects in an
+  /// organization and location.
   /// </summary>
   public sealed partial class ListOrgDataExchangesRequest : pb::IMessage<ListOrgDataExchangesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3494,7 +3529,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for response to listing DataExchanges in an organization and
+  /// Message for response to listing data exchanges in an organization and
   /// location.
   /// </summary>
   public sealed partial class ListOrgDataExchangesResponse : pb::IMessage<ListOrgDataExchangesResponse>
@@ -3548,7 +3583,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange> dataExchanges_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>();
     /// <summary>
-    /// The list of DataExchange.
+    /// The list of data exchanges.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3719,7 +3754,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for getting a DataExchange.
+  /// Message for getting a data exchange.
   /// </summary>
   public sealed partial class GetDataExchangeRequest : pb::IMessage<GetDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3769,7 +3804,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the DataExchange.
+    /// Required. The resource name of the data exchange.
     /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3915,7 +3950,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for creating a DataExchange.
+  /// Message for creating a data exchange.
   /// </summary>
   public sealed partial class CreateDataExchangeRequest : pb::IMessage<CreateDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3967,7 +4002,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource path of the DataExchange.
+    /// Required. The parent resource path of the data exchange.
     /// e.g. `projects/myproject/locations/US`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3983,7 +4018,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DataExchangeIdFieldNumber = 2;
     private string dataExchangeId_ = "";
     /// <summary>
-    /// Required. The ID of the DataExchange to create.
+    /// Required. The ID of the data exchange.
     /// Must contain only Unicode letters, numbers (0-9), underscores (_).
     /// Should not use characters that require URL-escaping, or characters
     /// outside of ASCII, spaces.
@@ -4002,7 +4037,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DataExchangeFieldNumber = 3;
     private global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange dataExchange_;
     /// <summary>
-    /// Required. The DataExchange to create.
+    /// Required. The data exchange to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4204,7 +4239,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for updating a DataExchange.
+  /// Message for updating a data exchange.
   /// </summary>
   public sealed partial class UpdateDataExchangeRequest : pb::IMessage<UpdateDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4255,10 +4290,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Field mask is used to specify the fields to be overwritten in the
-    /// DataExchange resource by the update.
-    /// The fields specified in the update_mask are relative to the resource, not
-    /// the full request.
+    /// Required. Field mask specifies the fields to update in the data exchange
+    /// resource. The fields specified in the
+    /// `updateMask` are relative to the resource and are not a full request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4273,7 +4307,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int DataExchangeFieldNumber = 2;
     private global::Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange dataExchange_;
     /// <summary>
-    /// Required. The DataExchange to update.
+    /// Required. The data exchange to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4460,7 +4494,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for deleting a DataExchange.
+  /// Message for deleting a data exchange.
   /// </summary>
   public sealed partial class DeleteDataExchangeRequest : pb::IMessage<DeleteDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4510,8 +4544,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name of the DataExchange to delete.
-    /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+    /// Required. The full name of the data exchange resource that you want to delete.
+    /// For example, `projects/myproject/locations/US/dataExchanges/123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4656,7 +4690,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for requesting list of Listings.
+  /// Message for requesting the list of listings.
   /// </summary>
   public sealed partial class ListListingsRequest : pb::IMessage<ListListingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4934,7 +4968,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for response to listing Listings.
+  /// Message for response to the list of Listings.
   /// </summary>
   public sealed partial class ListListingsResponse : pb::IMessage<ListListingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5158,7 +5192,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for getting a Listing.
+  /// Message for getting a listing.
   /// </summary>
   public sealed partial class GetListingRequest : pb::IMessage<GetListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5354,7 +5388,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for creating a Listing.
+  /// Message for creating a listing.
   /// </summary>
   public sealed partial class CreateListingRequest : pb::IMessage<CreateListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5422,7 +5456,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int ListingIdFieldNumber = 2;
     private string listingId_ = "";
     /// <summary>
-    /// Required. The ID of the Listing to create.
+    /// Required. The ID of the listing to create.
     /// Must contain only Unicode letters, numbers (0-9), underscores (_).
     /// Should not use characters that require URL-escaping, or characters
     /// outside of ASCII, spaces.
@@ -5694,10 +5728,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Field mask is used to specify the fields to be overwritten in the
-    /// Listing resource by the update.
-    /// The fields specified in the update_mask are relative to the resource, not
-    /// the full request.
+    /// Required. Field mask specifies the fields to update in the listing resource. The
+    /// fields specified in the `updateMask` are relative to the resource and are
+    /// not a full request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5899,7 +5932,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for deleting a Listing.
+  /// Message for deleting a listing.
   /// </summary>
   public sealed partial class DeleteListingRequest : pb::IMessage<DeleteListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6095,7 +6128,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for subscribing a Listing.
+  /// Message for subscribing to a listing.
   /// </summary>
   public sealed partial class SubscribeListingRequest : pb::IMessage<SubscribeListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6147,22 +6180,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       return new SubscribeListingRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Required. Resource name of the listing to subscribe to.
-    /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "destination_dataset" field.</summary>
     public const int DestinationDatasetFieldNumber = 3;
     /// <summary>
@@ -6175,6 +6192,22 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       set {
         destination_ = value;
         destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.DestinationDataset;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of the listing that you want to subscribe to.
+    /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6213,8 +6246,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
       if (!object.Equals(DestinationDataset, other.DestinationDataset)) return false;
+      if (Name != other.Name) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6223,8 +6256,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (destinationCase_ == DestinationOneofCase.DestinationDataset) hash ^= DestinationDataset.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6280,11 +6313,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
       if (destinationCase_ == DestinationOneofCase.DestinationDataset) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestinationDataset);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6374,8 +6407,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   }
 
   /// <summary>
-  /// Message for response to subscribing a Listing.
-  /// Empty for now.
+  /// Message for response when you subscribe to a listing.
   /// </summary>
   public sealed partial class SubscribeListingResponse : pb::IMessage<SubscribeListingResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
