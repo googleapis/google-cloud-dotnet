@@ -33,7 +33,6 @@
     "apis/Google.Cloud.BeyondCorp.ClientGateways.V1/Google.Cloud.BeyondCorp.ClientGateways.V1/**",
     "apis/Google.Cloud.BigQuery.Connection.V1/Google.Cloud.BigQuery.Connection.V1/**",
     "apis/Google.Cloud.BigQuery.DataExchange.V1Beta1/Google.Cloud.BigQuery.DataExchange.V1Beta1/**",
-    "apis/Google.Cloud.BigQuery.DataExchange.Common/Google.Cloud.BigQuery.DataExchange.Common/**",
     "apis/Google.Cloud.BigQuery.DataTransfer.V1/Google.Cloud.BigQuery.DataTransfer.V1/**",
     "apis/Google.Cloud.BigQuery.Migration.V2/Google.Cloud.BigQuery.Migration.V2/**",
     "apis/Google.Cloud.BigQuery.Reservation.V1/Google.Cloud.BigQuery.Reservation.V1/**",

@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.DataExchange.V1Beta1", "Google.Cloud.BigQuery.DataExchange.V1Beta1\Google.Cloud.BigQuery.DataExchange.V1Beta1.csproj", "{5C344396-2CB2-4D55-BB05-E310EA0E4D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.DataExchange.Common", "..\Google.Cloud.BigQuery.DataExchange.Common\Google.Cloud.BigQuery.DataExchange.Common\Google.Cloud.BigQuery.DataExchange.Common.csproj", "{F298BD79-E0FF-4571-BF59-0897351FBEFE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.DataExchange.V1Beta1.GeneratedSnippets", "Google.Cloud.BigQuery.DataExchange.V1Beta1.GeneratedSnippets\Google.Cloud.BigQuery.DataExchange.V1Beta1.GeneratedSnippets.csproj", "{24CF4594-536A-41AA-83F9-938E4C0B76CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{A83DF56A-0942-4383-B552-C2650628C9E0}"
@@ -42,18 +40,6 @@ Global
 		{5C344396-2CB2-4D55-BB05-E310EA0E4D7B}.Release|x64.Build.0 = Release|Any CPU
 		{5C344396-2CB2-4D55-BB05-E310EA0E4D7B}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C344396-2CB2-4D55-BB05-E310EA0E4D7B}.Release|x86.Build.0 = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|x64.Build.0 = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Debug|x86.Build.0 = Debug|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|x64.ActiveCfg = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|x64.Build.0 = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|x86.ActiveCfg = Release|Any CPU
-		{F298BD79-E0FF-4571-BF59-0897351FBEFE}.Release|x86.Build.0 = Release|Any CPU
 		{24CF4594-536A-41AA-83F9-938E4C0B76CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24CF4594-536A-41AA-83F9-938E4C0B76CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24CF4594-536A-41AA-83F9-938E4C0B76CF}.Debug|x64.ActiveCfg = Debug|Any CPU
