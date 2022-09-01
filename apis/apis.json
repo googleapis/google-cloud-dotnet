@@ -567,7 +567,6 @@
         "analytics"
       ],
       "dependencies": {
-        "Google.Cloud.BigQuery.DataExchange.Common": "project",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0"
       },
@@ -575,22 +574,6 @@
       "protoPath": "google/cloud/bigquery/dataexchange/v1beta1",
       "shortName": "analyticshub",
       "serviceConfigFile": "analyticshub_v1beta1.yaml"
-    },
-    {
-      "id": "Google.Cloud.BigQuery.DataExchange.Common",
-      "version": "2.0.0-beta01",
-      "targetFrameworks": "netstandard2.1;net462",
-      "type": "other",
-      "noVersionHistory": true,
-      "description": "Version-agnostic types for the Google BigQuery Data Exchange API.",
-      "tags": [
-        "bigquery"
-      ],
-      "generator": "proto",
-      "protoPath": "google/cloud/bigquery/dataexchange/common",
-      "dependencies": {
-        "Google.Api.CommonProtos": "2.6.0"
-      }
     },
     {
       "id": "Google.Cloud.BigQuery.DataTransfer.V1",
@@ -4216,14 +4199,6 @@
     "google/watcher/v1": "Meta-API, mostly replaced by PubSub"
   },
   "packageGroups": [
-    {
-      "id": "Google.Cloud.BigQuery.DataExchange",
-      "displayName": "BigQuery DataExchange",
-      "packageIds": [
-        "Google.Cloud.BigQuery.DataExchange.Common",
-        "Google.Cloud.BigQuery.DataExchange.V1Beta1"
-      ]
-    },
     {
       "id": "Google.Cloud.Spanner",
       "displayName": "Spanner",
