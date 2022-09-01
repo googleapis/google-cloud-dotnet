@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Dialogflow.V2", "Google.Cloud.Dialogflow.V2\Google.Cloud.Dialogflow.V2.csproj", "{FAFF3EAB-F87E-4869-9512-174B54B1F466}"
 EndProject
@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Dialogflow.V2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{C04468AF-156E-46D3-91A2-4D33549BE796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dialogflow.V2.PatchProtos", "Google.Cloud.Dialogflow.V2.PatchProtos\Google.Cloud.Dialogflow.V2.PatchProtos.csproj", "{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dialogflow.V2.GeneratedSnippets", "Google.Cloud.Dialogflow.V2.GeneratedSnippets\Google.Cloud.Dialogflow.V2.GeneratedSnippets.csproj", "{F8A40863-CB71-483A-9E99-4E92487CBF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Dialogflow.V2.GeneratedSnippets", "Google.Cloud.Dialogflow.V2.GeneratedSnippets\Google.Cloud.Dialogflow.V2.GeneratedSnippets.csproj", "{F8A40863-CB71-483A-9E99-4E92487CBF6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,18 +85,6 @@ Global
 		{C04468AF-156E-46D3-91A2-4D33549BE796}.Release|x64.Build.0 = Release|Any CPU
 		{C04468AF-156E-46D3-91A2-4D33549BE796}.Release|x86.ActiveCfg = Release|Any CPU
 		{C04468AF-156E-46D3-91A2-4D33549BE796}.Release|x86.Build.0 = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|x64.Build.0 = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Debug|x86.Build.0 = Debug|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x64.ActiveCfg = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x64.Build.0 = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x86.ActiveCfg = Release|Any CPU
-		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x86.Build.0 = Release|Any CPU
 		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|x64.ActiveCfg = Debug|Any CPU
