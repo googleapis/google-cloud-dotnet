@@ -410,7 +410,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -460,7 +460,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -485,7 +485,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -510,7 +510,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -535,7 +535,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation profiles from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -587,8 +587,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -603,8 +603,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -619,8 +619,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -632,8 +632,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -648,8 +648,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -664,8 +664,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the conversation profile.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -720,7 +720,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -743,7 +743,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -766,7 +766,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -785,7 +785,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -808,7 +808,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -831,7 +831,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -850,7 +850,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -873,7 +873,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -896,7 +896,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to create.
@@ -1039,8 +1039,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1055,8 +1055,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1071,8 +1071,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1084,8 +1084,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1100,8 +1100,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1116,8 +1116,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation profile to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1243,8 +1243,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1274,8 +1274,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1305,8 +1305,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1404,8 +1404,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1428,8 +1428,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1452,8 +1452,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
-        /// config. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -291,12 +291,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
         /// If not set, a default time range is used. The field
-        /// &amp;lt;code&amp;gt;time_range_begin&amp;lt;/code&amp;gt; in the response will specify the beginning
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
         /// of this time range.
-        /// Only &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit
-        /// &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list. If a &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list is given, also
-        /// &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with zero occurrences are returned.
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -331,12 +331,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
         /// If not set, a default time range is used. The field
-        /// &amp;lt;code&amp;gt;time_range_begin&amp;lt;/code&amp;gt; in the response will specify the beginning
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
         /// of this time range.
-        /// Only &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit
-        /// &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list. If a &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list is given, also
-        /// &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with zero occurrences are returned.
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -371,12 +371,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
         /// If not set, a default time range is used. The field
-        /// &amp;lt;code&amp;gt;time_range_begin&amp;lt;/code&amp;gt; in the response will specify the beginning
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
         /// of this time range.
-        /// Only &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit
-        /// &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list. If a &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list is given, also
-        /// &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with zero occurrences are returned.
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -411,12 +411,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
         /// If not set, a default time range is used. The field
-        /// &amp;lt;code&amp;gt;time_range_begin&amp;lt;/code&amp;gt; in the response will specify the beginning
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
         /// of this time range.
-        /// Only &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit
-        /// &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list. If a &amp;lt;code&amp;gt;group_id&amp;lt;/code&amp;gt; list is given, also
-        /// &amp;lt;code&amp;gt;ErrorGroupStats&amp;lt;/code&amp;gt; with zero occurrences are returned.
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

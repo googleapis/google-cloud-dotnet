@@ -686,7 +686,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -711,7 +711,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -736,7 +736,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -761,7 +761,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -784,7 +784,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -800,7 +800,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -816,7 +816,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -858,7 +858,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -867,7 +867,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -888,7 +888,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -897,7 +897,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -918,7 +918,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -927,7 +927,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -944,7 +944,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -953,7 +953,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -974,7 +974,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -983,7 +983,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -1013,7 +1013,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1074,7 +1074,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1142,7 +1142,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1214,7 +1214,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1268,7 +1268,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1342,7 +1342,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1558,7 +1558,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1576,7 +1576,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1627,7 +1627,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2261,7 +2261,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2281,7 +2281,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2301,7 +2301,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2347,7 +2347,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2363,7 +2363,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2371,7 +2371,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2387,7 +2387,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2403,7 +2403,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2411,7 +2411,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2427,7 +2427,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2443,7 +2443,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2451,7 +2451,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2462,7 +2462,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2478,7 +2478,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2486,7 +2486,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2502,7 +2502,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2518,7 +2518,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2526,7 +2526,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2542,7 +2542,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -2558,7 +2558,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// backup will be created from. The backup will be stored in the
         /// location(s) specified in the instance configuration of this
         /// instance. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create.
@@ -2566,7 +2566,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="backupId">
         /// Required. The id of the backup to be created. The `backup_id` appended to
         /// `parent` forms the full backup name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2577,7 +2577,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2597,7 +2597,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2617,7 +2617,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2663,7 +2663,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2675,12 +2675,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2688,7 +2688,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2712,7 +2712,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2724,12 +2724,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2737,7 +2737,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2761,7 +2761,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2773,12 +2773,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2786,7 +2786,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2804,7 +2804,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2816,12 +2816,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2829,7 +2829,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2853,7 +2853,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2865,12 +2865,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2878,7 +2878,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2902,7 +2902,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -2914,12 +2914,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
         /// The `backup_id` appended to `parent` forms the full backup_uri of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="sourceBackup">
         /// Required. The source backup to be copied.
@@ -2927,7 +2927,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Once CopyBackup is in progress, the source backup cannot be deleted or
         /// cleaned up on expiration until CopyBackup is finished.
         /// Values are of the form:
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="expireTime">
         /// Required. The expiration time of the backup in microsecond granularity.
@@ -2974,7 +2974,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2990,7 +2990,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3006,7 +3006,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3019,7 +3019,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3035,7 +3035,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3051,7 +3051,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3189,7 +3189,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3205,7 +3205,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3221,7 +3221,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3234,7 +3234,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3250,7 +3250,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3266,7 +3266,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="name">
         /// Required. Name of the backup to delete.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3302,7 +3302,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance to list backups from.  Values are of the
-        /// form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3329,7 +3329,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance to list backups from.  Values are of the
-        /// form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3356,7 +3356,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance to list backups from.  Values are of the
-        /// form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3383,7 +3383,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance to list backups from.  Values are of the
-        /// form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3409,7 +3409,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3434,7 +3434,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3459,7 +3459,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3510,7 +3510,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3528,17 +3528,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3556,7 +3556,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3574,17 +3574,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3602,7 +3602,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3620,17 +3620,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3643,7 +3643,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3661,17 +3661,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3689,7 +3689,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3707,17 +3707,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3735,7 +3735,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -3753,17 +3753,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// restored database. This instance must be in the same project and
         /// have the same instance configuration as the instance containing
         /// the source backup. Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="databaseId">
         /// Required. The id of the database to create and restore to. This
         /// database must not already exist. The `database_id` appended to
         /// `parent` forms the full database name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database_id&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database_id&gt;`.
         /// </param>
         /// <param name="backup">
         /// Name of the backup from which to restore.  Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3773,7 +3773,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3789,7 +3789,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3805,7 +3805,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3814,7 +3814,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the database operations.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3837,7 +3837,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3846,7 +3846,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the database operations.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3869,7 +3869,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3878,7 +3878,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the database operations.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3901,7 +3901,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3910,7 +3910,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the database operations.
-        /// Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3933,7 +3933,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3951,7 +3951,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3969,7 +3969,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -3980,7 +3980,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the backup operations. Values are of
-        /// the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4003,7 +4003,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -4014,7 +4014,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the backup operations. Values are of
-        /// the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4037,7 +4037,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -4048,7 +4048,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the backup operations. Values are of
-        /// the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4071,7 +4071,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -4082,7 +4082,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance of the backup operations. Values are of
-        /// the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4126,7 +4126,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4152,7 +4152,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4178,7 +4178,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4204,7 +4204,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4464,7 +4464,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -4483,7 +4483,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -4530,7 +4530,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -4548,7 +4548,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -4745,7 +4745,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -4768,7 +4768,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts creating a new Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
@@ -4794,7 +4794,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -4817,7 +4817,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Starts copying a Cloud Spanner Backup.
         /// The returned backup [long-running operation][google.longrunning.Operation]
         /// will have a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track copying of the backup. The operation is associated
         /// with the destination backup.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
@@ -4945,7 +4945,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -4973,7 +4973,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// instance configuration as the instance containing
         /// the backup. The returned database [long-running
         /// operation][google.longrunning.Operation] has a name of the format
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`,
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`,
         /// and can be used to track the progress of the operation, and to cancel it.
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
@@ -4998,7 +4998,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -5017,7 +5017,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
         /// A database operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -5036,7 +5036,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
@@ -5057,7 +5057,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
         /// the given instance. A backup operation has a name of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
         /// [metadata][google.longrunning.Operation.metadata] field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned

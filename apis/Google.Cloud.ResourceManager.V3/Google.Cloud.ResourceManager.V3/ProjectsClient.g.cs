@@ -814,7 +814,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | id, projectId           | Filters by projectId.                        |
         /// | state, lifecycleState   | Filters by state.                            |
         /// | labels                  | Filters by label name or value.              |
-        /// | labels.&amp;lt;key&amp;gt; (where *key* is the name of a label) | Filters by label
+        /// | labels.&lt;key&gt; (where *key* is the name of a label) | Filters by label
         /// name. |
         /// ```
         /// 
@@ -831,7 +831,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | NAME:howl        | Equivalent to above.                                |
         /// | labels.color:*   | The project has the label `color`.                  |
         /// | labels.color:red | The project's label `color` has the value `red`.    |
-        /// | labels.color:red&amp;amp;nbsp;labels.size:big | The project's label `color` has
+        /// | labels.color:red&amp;nbsp;labels.size:big | The project's label `color` has
         /// the value `red` and its label `size` has the value `big`.                |
         /// ```
         /// 
@@ -885,7 +885,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | id, projectId           | Filters by projectId.                        |
         /// | state, lifecycleState   | Filters by state.                            |
         /// | labels                  | Filters by label name or value.              |
-        /// | labels.&amp;lt;key&amp;gt; (where *key* is the name of a label) | Filters by label
+        /// | labels.&lt;key&gt; (where *key* is the name of a label) | Filters by label
         /// name. |
         /// ```
         /// 
@@ -902,7 +902,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | NAME:howl        | Equivalent to above.                                |
         /// | labels.color:*   | The project has the label `color`.                  |
         /// | labels.color:red | The project's label `color` has the value `red`.    |
-        /// | labels.color:red&amp;amp;nbsp;labels.size:big | The project's label `color` has
+        /// | labels.color:red&amp;nbsp;labels.size:big | The project's label `color` has
         /// the value `red` and its label `size` has the value `big`.                |
         /// ```
         /// 

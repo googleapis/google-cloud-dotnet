@@ -344,7 +344,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to list all session entity types from.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -377,7 +377,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to list all session entity types from.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -410,7 +410,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to list all session entity types from.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -443,7 +443,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to list all session entity types from.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -514,9 +514,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -538,9 +538,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -562,9 +562,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -583,9 +583,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -607,9 +607,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -631,9 +631,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -704,7 +704,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -734,7 +734,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -764,7 +764,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -790,7 +790,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -820,7 +820,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -850,7 +850,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The session to create a session entity type for.
         /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User ID}/
-        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1063,9 +1063,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1087,9 +1087,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1111,9 +1111,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1132,9 +1132,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1156,9 +1156,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1180,9 +1180,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}/entityTypes/{Entity Type
-        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
-        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
-        /// Name&amp;gt;`.
+        /// Display Name&gt;` or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment
+        /// ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type Display
+        /// Name&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>

@@ -501,7 +501,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -517,7 +517,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -533,7 +533,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -546,7 +546,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -562,7 +562,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -578,7 +578,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -804,7 +804,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -820,7 +820,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -836,7 +836,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -849,7 +849,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -865,7 +865,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -881,7 +881,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

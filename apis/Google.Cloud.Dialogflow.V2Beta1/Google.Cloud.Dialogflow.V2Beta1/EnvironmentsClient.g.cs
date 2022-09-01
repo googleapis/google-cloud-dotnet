@@ -341,8 +341,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/agent`
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -368,8 +368,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/agent`
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -395,8 +395,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/agent`
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -422,8 +422,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/agent`
-        /// - `projects/&amp;lt;Project Number / ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/agent`
+        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

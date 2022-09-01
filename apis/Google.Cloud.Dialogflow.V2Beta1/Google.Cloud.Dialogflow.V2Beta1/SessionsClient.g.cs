@@ -332,14 +332,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment
@@ -393,14 +393,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment
@@ -454,14 +454,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment
@@ -511,14 +511,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment
@@ -572,14 +572,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment
@@ -633,14 +633,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Supported formats:
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`,
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
-        /// ID&amp;gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
+        /// ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
+        /// ID&gt;/sessions/&lt;Session ID&gt;`,
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
+        /// ID&gt;`,
         /// 
         /// If `Location ID` is not specified we assume default 'us' location. If
         /// `Environment ID` is not specified, we assume default 'draft' environment

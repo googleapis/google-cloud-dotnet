@@ -3691,7 +3691,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// When updating a finding, an empty mask is treated as updating all mutable
         /// fields and replacing source_properties.  Individual source_properties can
-        /// be added/updated by using "source_properties.&amp;lt;property key&amp;gt;" in the field
+        /// be added/updated by using "source_properties.&lt;property key&gt;" in the field
         /// mask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3721,7 +3721,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// When updating a finding, an empty mask is treated as updating all mutable
         /// fields and replacing source_properties.  Individual source_properties can
-        /// be added/updated by using "source_properties.&amp;lt;property key&amp;gt;" in the field
+        /// be added/updated by using "source_properties.&lt;property key&gt;" in the field
         /// mask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3751,7 +3751,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// When updating a finding, an empty mask is treated as updating all mutable
         /// fields and replacing source_properties.  Individual source_properties can
-        /// be added/updated by using "source_properties.&amp;lt;property key&amp;gt;" in the field
+        /// be added/updated by using "source_properties.&lt;property key&gt;" in the field
         /// mask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4155,7 +4155,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// The field mask must not contain duplicate fields.
         /// If empty or set to "marks", all marks will be replaced.  Individual
-        /// marks can be updated using "marks.&amp;lt;mark_key&amp;gt;".
+        /// marks can be updated using "marks.&lt;mark_key&gt;".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4177,7 +4177,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// The field mask must not contain duplicate fields.
         /// If empty or set to "marks", all marks will be replaced.  Individual
-        /// marks can be updated using "marks.&amp;lt;mark_key&amp;gt;".
+        /// marks can be updated using "marks.&lt;mark_key&gt;".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4199,7 +4199,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// 
         /// The field mask must not contain duplicate fields.
         /// If empty or set to "marks", all marks will be replaced.  Individual
-        /// marks can be updated using "marks.&amp;lt;mark_key&amp;gt;".
+        /// marks can be updated using "marks.&lt;mark_key&gt;".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

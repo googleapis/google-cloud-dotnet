@@ -464,7 +464,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -483,7 +483,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -502,7 +502,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -518,7 +518,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -537,7 +537,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -556,7 +556,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -784,7 +784,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -811,7 +811,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -838,7 +838,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -884,7 +884,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -903,7 +903,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -922,7 +922,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -938,7 +938,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -957,7 +957,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -976,7 +976,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// - `projects/{Project ID}/agent/versions/{Version ID}`
         /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
-        /// ID&amp;gt;`
+        /// ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

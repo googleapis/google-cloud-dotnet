@@ -1392,10 +1392,10 @@ namespace Google.Cloud.Asset.V1
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
         /// "ACTIVE" as a word.
-        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
+        /// * `createTime&lt;1609459200` to find Cloud resources that were created before
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
+        /// * `updateTime&gt;1609459200` to find Cloud resources that were updated after
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word
@@ -1501,10 +1501,10 @@ namespace Google.Cloud.Asset.V1
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
         /// "ACTIVE" as a word.
-        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
+        /// * `createTime&lt;1609459200` to find Cloud resources that were created before
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
+        /// * `updateTime&gt;1609459200` to find Cloud resources that were updated after
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word

@@ -890,7 +890,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -906,7 +906,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -922,7 +922,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -935,7 +935,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -951,7 +951,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -967,7 +967,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the conversation. Format:
         /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
-        /// ID&amp;gt;`.
+        /// ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`.
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1226,7 +1226,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;`
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

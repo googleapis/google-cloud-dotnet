@@ -66,7 +66,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -104,7 +104,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -128,7 +128,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -268,7 +268,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -284,7 +284,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -300,7 +300,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -313,7 +313,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -329,7 +329,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -345,7 +345,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -358,7 +358,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -379,7 +379,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -400,7 +400,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -417,7 +417,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -438,7 +438,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -459,7 +459,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="name">
         /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the

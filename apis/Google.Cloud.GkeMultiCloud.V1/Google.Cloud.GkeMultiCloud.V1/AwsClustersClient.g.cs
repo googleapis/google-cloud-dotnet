@@ -576,7 +576,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -590,7 +590,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -615,7 +615,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -629,7 +629,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -654,7 +654,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -668,7 +668,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -688,7 +688,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -702,7 +702,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -727,7 +727,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -741,7 +741,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -766,7 +766,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
         /// will be created.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -780,7 +780,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -995,7 +995,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1015,7 +1015,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1052,7 +1052,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location which owns this collection of
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1161,7 +1161,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location which owns this collection of
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location which owns this collection of
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1223,7 +1223,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The parent location which owns this collection of
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources.
         /// 
-        /// Location names are formatted as `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;`.
+        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1334,7 +1334,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1361,7 +1361,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1412,7 +1412,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1439,7 +1439,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on GCP resource names.
@@ -1583,7 +1583,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1597,7 +1597,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1622,7 +1622,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1636,7 +1636,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1661,7 +1661,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1675,7 +1675,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1695,7 +1695,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1709,7 +1709,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1734,7 +1734,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1748,7 +1748,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1773,7 +1773,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -1787,7 +1787,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// 
         /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
         /// resource name formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
         /// </param>
@@ -1988,7 +1988,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2008,7 +2008,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2028,7 +2028,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2045,7 +2045,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2065,7 +2065,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2085,7 +2085,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2121,7 +2121,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2152,7 +2152,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2183,7 +2183,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2214,7 +2214,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// `AwsCluster` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2314,7 +2314,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2338,7 +2338,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2362,7 +2362,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2383,7 +2383,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2407,7 +2407,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2431,7 +2431,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsClusters/&amp;lt;cluster-id&amp;gt;/awsNodePools/&amp;lt;node-pool-id&amp;gt;`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2479,7 +2479,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2500,7 +2500,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2521,7 +2521,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2539,7 +2539,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2560,7 +2560,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2581,7 +2581,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
-        /// `projects/&amp;lt;project-id&amp;gt;/locations/&amp;lt;region&amp;gt;/awsServerConfig`.
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
