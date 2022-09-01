@@ -100,7 +100,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversation_ = "";
     /// <summary>
     /// The conversation this notification refers to.
-    /// Format: `projects/{Project ID}/conversations/{Conversation ID}`.
+    /// Format: `projects/&lt;Project ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,7 +116,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string participant_ = "";
     /// <summary>
     /// The participant that the suggestion is compiled for.
-    /// Format: `projects/{Project ID}/conversations/{Conversation
+    /// Format: `projects/&lt;Project ID>/conversations/&lt;Conversation
     /// ID>/participants/&lt;Participant ID>`. It will not be set in legacy workflow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -271,7 +271,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The document resource name.
     /// The name must be empty when creating a document.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -334,7 +334,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The URI where the file content is located.
     ///
     /// For documents stored in Google Cloud Storage, these URIs must have
-    /// the form `gs://{bucket-name}/{object-name}`.
+    /// the form `gs://&lt;bucket-name>/&lt;object-name>`.
     ///
     /// NOTE: External URLs must correspond to public webpages, i.e., they must
     /// be indexed by Google Search. In particular, URLs for showing documents in
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the document to retrieve.
-    /// Format `projects/{Project ID}/locations/{Location
+    /// Format `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1391,7 +1391,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The knowledge base to list all documents for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1952,7 +1952,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The knowledge base to create a document for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2205,7 +2205,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The knowledge base to import documents into.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2224,8 +2224,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The path can include a wildcard.
     ///
     /// These URIs may have the forms
-    /// `gs://{bucket-name}/{object-name}`.
-    /// `gs://{bucket-name}/{object-path}/*.{extension}`.
+    /// `gs://&lt;bucket-name>/&lt;object-name>`.
+    /// `gs://&lt;bucket-name>/&lt;object-path>/*.&lt;extension>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3014,7 +3014,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the document to delete.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3474,7 +3474,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the document to reload.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3493,7 +3493,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// only gcs uri is supported.
     ///
     /// For documents stored in Google Cloud Storage, these URIs must have
-    /// the form `gs://{bucket-name}/{object-name}`.
+    /// the form `gs://&lt;bucket-name>/&lt;object-name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3827,7 +3827,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the document to export.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

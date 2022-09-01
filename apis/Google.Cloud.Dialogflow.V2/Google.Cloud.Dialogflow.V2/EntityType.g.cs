@@ -262,7 +262,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The unique identifier of the entity type.
     /// Required for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType] and
     /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes] methods.
-    /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -938,7 +938,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all entity types from.
-    /// Format: `projects/{Project ID}/agent`.
+    /// Format: `projects/&lt;Project ID>/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1483,7 +1483,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the entity type.
-    /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;EntityType ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to create a entity type for.
-    /// Format: `projects/{Project ID}/agent`.
+    /// Format: `projects/&lt;Project ID>/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2308,7 +2308,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the entity type to delete.
-    /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;EntityType ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2515,7 +2515,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to update or create entity types in.
-    /// Format: `projects/{Project ID}/agent`.
+    /// Format: `projects/&lt;Project ID>/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3107,7 +3107,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to delete all entities types for. Format:
-    /// `projects/{Project ID}/agent`.
+    /// `projects/&lt;Project ID>/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3334,7 +3334,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to create entities in. Format:
-    /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3604,7 +3604,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to update or create entities in.
-    /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3921,7 +3921,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to delete entries for. Format:
-    /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3940,7 +3940,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The reference `values` of the entities to delete. Note that
     /// these are not fully-qualified names, i.e. they don't start with
-    /// `projects/{Project ID}`.
+    /// `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

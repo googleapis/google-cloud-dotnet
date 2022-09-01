@@ -223,8 +223,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string session_ = "";
     /// <summary>
     /// Required. The name of the session this query is sent to. Format:
-    /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
-    /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`, or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
     /// ID>/sessions/&lt;Session ID>`. If `Environment ID` is not specified, we assume
     /// default 'draft' environment (`Environment ID` might be referred to as
     /// environment name at some places). If `User ID` is not specified, we are
@@ -2147,7 +2147,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The collection of output contexts. If applicable,
     /// `output_contexts.parameters` contains entries with name
-    /// `{parameter name}.original` containing the original parameter values
+    /// `&lt;parameter name>.original` containing the original parameter values
     /// before the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2838,8 +2838,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the session the query is sent to.
     /// Format of the session name:
-    /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
-    /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`, or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
     /// ID>/sessions/&lt;Session ID>`. If `Environment ID` is not specified, we assume
     /// default 'draft' environment. If `User ID` is not specified, we are using
     /// "-". It's up to the API caller to choose an appropriate `Session ID` and
@@ -4501,7 +4501,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   /// <summary>
   /// Events allow for matching intents by event name instead of the natural
-  /// language input. For instance, input `{event: { name: "welcome_event",
+  /// language input. For instance, input `&lt;event: { name: "welcome_event",
   /// parameters: { name: "Sam" } }>` can trigger a personalized welcome response.
   /// The parameter `name` may be used by the agent in the response:
   /// `"Hello #welcome_event.name! What can I do for you today?"`.

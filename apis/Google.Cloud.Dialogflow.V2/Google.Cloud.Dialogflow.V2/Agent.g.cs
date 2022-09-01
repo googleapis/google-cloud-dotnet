@@ -223,7 +223,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project of this agent.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -932,7 +932,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to fetch is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to delete is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1579,7 +1579,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to list agents from.
-    /// Format: `projects/{Project ID or '-'}`.
+    /// Format: `projects/&lt;Project ID or '-'>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to train is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2277,7 +2277,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to export is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2294,7 +2294,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The [Google Cloud Storage](https://cloud.google.com/storage/docs/)
     /// URI to export the agent to.
-    /// The format of this URI must be `gs://{bucket-name}/{object-name}`.
+    /// The format of this URI must be `gs://&lt;bucket-name>/&lt;object-name>`.
     /// If left unspecified, the serialized agent is returned inline.
     ///
     /// Dialogflow performs a write operation for the Cloud Storage object
@@ -2799,7 +2799,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to import is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3115,7 +3115,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent to restore is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3423,7 +3423,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project that the agent is associated with.
-    /// Format: `projects/{Project ID}`.
+    /// Format: `projects/&lt;Project ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

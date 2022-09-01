@@ -387,7 +387,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -407,7 +407,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -427,7 +427,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -443,7 +443,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -463,7 +463,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -483,7 +483,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the conversation adding the participant.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="participant">
@@ -526,7 +526,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,7 +542,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -571,7 +571,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,7 +587,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -603,7 +603,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the participant. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -634,7 +634,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation to list all participants from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -660,7 +660,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation to list all participants from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -686,7 +686,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation to list all participants from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -712,7 +712,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation to list all participants from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -862,7 +862,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -887,7 +887,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -912,7 +912,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -933,7 +933,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -958,7 +958,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -983,7 +983,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="textInput">
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1029,7 +1029,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1054,7 +1054,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1075,7 +1075,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="eventInput">
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1206,7 +1206,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1237,7 +1237,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1346,7 +1346,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1380,7 +1380,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1424,7 +1424,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1441,7 +1441,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1458,7 +1458,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1472,7 +1472,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1489,7 +1489,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the participant to fetch suggestion for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

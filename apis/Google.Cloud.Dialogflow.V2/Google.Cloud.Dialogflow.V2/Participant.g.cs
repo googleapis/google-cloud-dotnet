@@ -319,7 +319,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Optional. The unique identifier of this participant.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -679,7 +679,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Optional. The unique identifier of the message.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1227,7 +1227,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Resource identifier of the conversation adding the participant.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1472,7 +1472,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the participant. Format:
-    /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/conversations/&lt;Conversation
     /// ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1671,7 +1671,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The conversation to list all participants from.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2440,7 +2440,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string participant_ = "";
     /// <summary>
     /// Required. The name of the participant this text comes from.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3685,7 +3685,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the participant to fetch suggestion for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3704,7 +3704,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The name of the latest conversation message to compile suggestion
     /// for. If empty, it will be the latest message of the conversation.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4032,7 +4032,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The name of the latest conversation message used to compile
     /// suggestion for.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4289,7 +4289,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the participant to fetch suggestion for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4308,7 +4308,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The name of the latest conversation message to compile suggestion
     /// for. If empty, it will be the latest message of the conversation.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4636,7 +4636,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The name of the latest conversation message used to compile
     /// suggestion for.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4893,7 +4893,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the participant to fetch suggestion for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/participants/&lt;Participant ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4929,7 +4929,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The name of the latest conversation message to compile suggestion
     /// for. If empty, it will be the latest message of the conversation.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5244,7 +5244,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The name of the latest conversation message used to compile
     /// suggestion for.
     ///
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>/messages/&lt;Message ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6489,7 +6489,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Indicates which Knowledge Document this answer was extracted
     /// from.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/agent/knowledgeBases/&lt;Knowledge Base ID>/documents/&lt;Document ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

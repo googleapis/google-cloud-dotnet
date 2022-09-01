@@ -342,8 +342,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all environments from.
         /// Format:
         /// 
-        /// - `projects/{Project ID}/agent`
-        /// - `projects/{Project ID}/locations/{Location ID}/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -370,8 +370,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all environments from.
         /// Format:
         /// 
-        /// - `projects/{Project ID}/agent`
-        /// - `projects/{Project ID}/locations/{Location ID}/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -398,8 +398,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all environments from.
         /// Format:
         /// 
-        /// - `projects/{Project ID}/agent`
-        /// - `projects/{Project ID}/locations/{Location ID}/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -426,8 +426,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all environments from.
         /// Format:
         /// 
-        /// - `projects/{Project ID}/agent`
-        /// - `projects/{Project ID}/locations/{Location ID}/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

@@ -323,7 +323,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -348,7 +348,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -373,7 +373,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -398,7 +398,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -423,7 +423,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -448,7 +448,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list of knowledge bases for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -500,7 +500,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -516,7 +516,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -532,7 +532,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -545,7 +545,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -561,7 +561,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -577,7 +577,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to retrieve.
-        /// Format `projects/{Project ID}/locations/{Location
+        /// Format `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -617,7 +617,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -636,7 +636,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -655,7 +655,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -670,7 +670,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -689,7 +689,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -708,7 +708,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -723,7 +723,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -742,7 +742,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -761,7 +761,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a knowledge base for.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="knowledgeBase">
         /// Required. The knowledge base to create.
@@ -803,7 +803,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -819,7 +819,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -835,7 +835,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -848,7 +848,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -864,7 +864,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -880,7 +880,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the knowledge base to delete.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

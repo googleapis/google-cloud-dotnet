@@ -184,7 +184,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Output only. The unique identifier of this conversation.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -217,7 +217,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The Conversation Profile to be used to configure this
     /// Conversation. This field cannot be updated.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -709,7 +709,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Resource identifier of the project creating the conversation.
-    /// Format: `projects/{Project ID}/locations/{Location ID}`.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project from which to list all conversation.
-    /// Format: `projects/{Project ID}/locations/{Location ID}`.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// and the value to use for filtering:
     /// &lt;ul>
     ///   &lt;li>The value must be a string, a number, or a boolean.&lt;/li>
-    ///   &lt;li>The comparison operator must be either `=`,`!=`, `}`, or `{`.&lt;/li>
+    ///   &lt;li>The comparison operator must be either `=`,`!=`, `>`, or `&lt;`.&lt;/li>
     ///   &lt;li>To filter on multiple expressions, separate the
     ///       expressions with `AND` or `OR` (omitting both implies `AND`).&lt;/li>
     ///   &lt;li>For clarity, expressions can be enclosed in parentheses.&lt;/li>
@@ -1560,7 +1560,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the conversation. Format:
-    /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/conversations/&lt;Conversation
     /// ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. Resource identifier of the conversation to close.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the conversation to list messages for.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversations/&lt;Conversation ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1976,8 +1976,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. Filter on message fields. Currently predicates on `create_time`
     /// and `create_time_epoch_microseconds` are supported. `create_time` only
     /// support milliseconds accuracy. E.g.,
-    /// `create_time_epoch_microseconds } 1551790877964485` or
-    /// `create_time } 2017-01-15T01:30:15.01Z`.
+    /// `create_time_epoch_microseconds > 1551790877964485` or
+    /// `create_time > 2017-01-15T01:30:15.01Z`.
     ///
     /// For more information about filtering, see
     /// [API Filtering](https://aip.dev/160).

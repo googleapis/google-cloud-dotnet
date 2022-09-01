@@ -112,7 +112,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The unique identifier of the conversation this notification
     /// refers to.
-    /// Format: `projects/{Project ID}/conversations/{Conversation ID}`.
+    /// Format: `projects/&lt;Project ID>/conversations/&lt;Conversation ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

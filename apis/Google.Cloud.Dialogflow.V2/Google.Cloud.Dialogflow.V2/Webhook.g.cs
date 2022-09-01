@@ -118,8 +118,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The unique identifier of detectIntent request session.
     /// Can be used to identify end-user inside webhook implementation.
-    /// Format: `projects/{Project ID}/agent/sessions/{Session ID}`, or
-    /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`, or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
     /// ID>/sessions/&lt;Session ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

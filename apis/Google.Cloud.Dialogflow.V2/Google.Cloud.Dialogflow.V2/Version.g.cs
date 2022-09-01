@@ -179,8 +179,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Output only. The unique identifier of this agent version.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/versions/{Version ID}`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+    /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
     ///   ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -579,8 +579,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The agent to list all versions from.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1083,8 +1083,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the version.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/versions/{Version ID}`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+    /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
     ///   ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1284,8 +1284,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The agent to create a version for.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1532,8 +1532,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The version to update.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/versions/{Version ID}`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+    /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
     ///   ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1789,8 +1789,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the version to delete.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/versions/{Version ID}`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+    /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
     ///   ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
