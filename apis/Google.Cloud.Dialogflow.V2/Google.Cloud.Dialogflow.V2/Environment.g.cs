@@ -219,8 +219,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Output only. The unique identifier of this agent environment.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/environments/{Environment ID}`
-    /// - `projects/{Project ID}/locations/{Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     ///
     /// The environment ID for the default environment is `-`.
@@ -257,8 +257,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The agent version loaded into this environment.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/versions/{Version ID}`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+    /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
     ///   ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1037,8 +1037,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The agent to list all environments from.
     /// Format:
     ///
-    /// - `projects/{Project ID}/agent`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1541,8 +1541,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the environment.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/environments/{Environment ID}`
-    /// - `projects/{Project ID}/locations/{Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     ///
     /// The environment ID for the default environment is `-`.
@@ -1745,8 +1745,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The agent to create an environment for.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2327,8 +2327,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the environment to delete.
     /// / Format:
     ///
-    /// - `projects/{Project ID}/agent/environments/{Environment ID}`
-    /// - `projects/{Project ID}/locations/{Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     ///
     /// The environment ID for the default environment is `-`.
@@ -2531,8 +2531,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the environment to retrieve history for.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/environments/{Environment ID}`
-    /// - `projects/{Project ID}/locations/{Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     ///
     /// The environment ID for the default environment is `-`.
@@ -2814,8 +2814,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Output only. The name of the environment this history is for.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/environments/{Environment ID}`
-    /// - `projects/{Project ID}/locations/{Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///    ID>/agent/environments/&lt;Environment ID>`
     ///
     /// The environment ID for the default environment is `-`.

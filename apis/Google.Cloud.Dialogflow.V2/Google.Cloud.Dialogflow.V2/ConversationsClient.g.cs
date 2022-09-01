@@ -399,7 +399,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -471,7 +471,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -503,7 +503,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -539,7 +539,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -575,7 +575,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -607,7 +607,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -643,7 +643,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -679,7 +679,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -712,7 +712,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -737,7 +737,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -762,7 +762,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -787,7 +787,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -812,7 +812,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -837,7 +837,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project from which to list all conversation.
-        /// Format: `projects/{Project ID}/locations/{Location ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -889,7 +889,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -905,7 +905,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -921,7 +921,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -934,7 +934,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -950,7 +950,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -966,7 +966,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the conversation. Format:
-        /// `projects/{Project ID}/locations/{Location ID}/conversations/{Conversation
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/conversations/&lt;Conversation
         /// ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1044,7 +1044,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1058,7 +1058,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1075,7 +1075,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. Resource identifier of the conversation to close.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1104,7 +1104,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1130,12 +1130,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
@@ -1160,12 +1160,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
@@ -1190,12 +1190,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
@@ -1220,12 +1220,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the conversation to list messages for.
-        /// Format: `projects/{Project ID}/locations/{Location
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`
         /// </param>
         /// <param name="pageToken">
@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
-        /// `create_time_epoch_microseconds }
+        /// `create_time_epoch_microseconds &gt;
         /// [first item's create_time of previous request]` and empty page_token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

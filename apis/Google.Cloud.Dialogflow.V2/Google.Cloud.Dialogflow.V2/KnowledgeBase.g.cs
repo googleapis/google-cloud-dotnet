@@ -176,7 +176,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The knowledge base resource name.
     /// The name must be empty when creating a knowledge base.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -457,7 +457,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to list of knowledge bases for.
-    /// Format: `projects/{Project ID}/locations/{Location ID}`.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1021,7 +1021,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the knowledge base to retrieve.
-    /// Format `projects/{Project ID}/locations/{Location
+    /// Format `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to create a knowledge base for.
-    /// Format: `projects/{Project ID}/locations/{Location ID}`.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1464,7 +1464,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the knowledge base to delete.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/knowledgeBases/&lt;Knowledge Base ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

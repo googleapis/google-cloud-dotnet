@@ -635,7 +635,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Output only. ConversationDataset resource name. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1095,7 +1095,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to create conversation dataset for. Format:
-    /// `projects/{Project ID}/locations/{Location ID}`
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1340,7 +1340,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation dataset to retrieve. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location name to list all conversation datasets for.
-    /// Format: `projects/{Project ID}/locations/{Location ID}`
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2042,7 +2042,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation dataset to delete. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2240,7 +2240,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. Dataset resource name. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2487,7 +2487,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationDataset_ = "";
     /// <summary>
     /// The resource name of the imported conversation dataset. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2764,7 +2764,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationDataset_ = "";
     /// <summary>
     /// The resource name of the imported conversation dataset. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

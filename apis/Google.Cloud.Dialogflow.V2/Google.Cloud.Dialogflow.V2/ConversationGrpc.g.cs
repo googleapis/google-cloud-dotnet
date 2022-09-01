@@ -200,7 +200,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
-      /// `create_time_epoch_microseconds }
+      /// `create_time_epoch_microseconds >
       /// [first item's create_time of previous request]` and empty page_token.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -509,7 +509,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
-      /// `create_time_epoch_microseconds }
+      /// `create_time_epoch_microseconds >
       /// [first item's create_time of previous request]` and empty page_token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -526,7 +526,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
-      /// `create_time_epoch_microseconds }
+      /// `create_time_epoch_microseconds >
       /// [first item's create_time of previous request]` and empty page_token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -541,7 +541,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
-      /// `create_time_epoch_microseconds }
+      /// `create_time_epoch_microseconds >
       /// [first item's create_time of previous request]` and empty page_token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
-      /// `create_time_epoch_microseconds }
+      /// `create_time_epoch_microseconds >
       /// [first item's create_time of previous request]` and empty page_token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

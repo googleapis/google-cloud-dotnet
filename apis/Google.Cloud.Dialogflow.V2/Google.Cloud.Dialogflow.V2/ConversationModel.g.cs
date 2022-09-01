@@ -305,7 +305,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// ConversationModel resource name. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -908,7 +908,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the evaluation. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model
     /// ID>/evaluations/&lt;Evaluation ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private string allowlistDocument_ = "";
         /// <summary>
         /// The allowlist document resource name.
-        /// Format: `projects/{Project ID}/knowledgeBases/{Knowledge Base
+        /// Format: `projects/&lt;Project ID>/knowledgeBases/&lt;Knowledge Base
         /// ID>/documents/&lt;Document ID>`. Only used for smart reply model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1884,7 +1884,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private string allowlistDocument_ = "";
         /// <summary>
         /// The allowlist document resource name.
-        /// Format: `projects/{Project ID}/knowledgeBases/{Knowledge Base
+        /// Format: `projects/&lt;Project ID>/knowledgeBases/&lt;Knowledge Base
         /// ID>/documents/&lt;Document ID>`. Only used for smart compose model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2129,7 +2129,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string dataset_ = "";
     /// <summary>
     /// Required. ConversationDataset resource name. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationDatasets/&lt;Conversation Dataset ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3232,7 +3232,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// The project to create conversation model for. Format:
-    /// `projects/{Project ID}`
+    /// `projects/&lt;Project ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3477,7 +3477,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation model to retrieve. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3676,7 +3676,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to list all conversation models for.
-    /// Format: `projects/{Project ID}`
+    /// Format: `projects/&lt;Project ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4178,7 +4178,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation model to delete. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4375,7 +4375,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation model to deploy. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4572,7 +4572,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation model to undeploy. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4769,7 +4769,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The conversation model evaluation resource name. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model
     /// ID>/evaluations/&lt;Evaluation ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4969,7 +4969,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The conversation model resource name. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5472,7 +5472,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The conversation model resource name. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationModels/&lt;Conversation Model ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5719,7 +5719,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModel_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model Id}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6048,7 +6048,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModel_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model Id}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6294,7 +6294,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModel_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model Id}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6540,7 +6540,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModel_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/conversationModels/{Conversation Model Id}`
+    /// `projects/&lt;Project ID>/conversationModels/&lt;Conversation Model Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6790,7 +6790,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModelEvaluation_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationModels/&lt;Conversation Model Id>/evaluations/&lt;Evaluation Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6807,7 +6807,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationModel_ = "";
     /// <summary>
     /// The resource name of the conversation model. Format:
-    /// `projects/{Project ID}/locations/{Location
+    /// `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/conversationModels/&lt;Conversation Model Id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -156,8 +156,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The unique identifier of the fulfillment.
     /// Supported formats:
     ///
-    /// - `projects/{Project ID}/agent/fulfillment`
-    /// - `projects/{Project ID}/locations/{Location ID}/agent/fulfillment`
+    /// - `projects/&lt;Project ID>/agent/fulfillment`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/fulfillment`
     ///
     /// This field is not used for Fulfillment in an Environment.
     /// </summary>
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the fulfillment.
-    /// Format: `projects/{Project ID}/agent/fulfillment`.
+    /// Format: `projects/&lt;Project ID>/agent/fulfillment`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

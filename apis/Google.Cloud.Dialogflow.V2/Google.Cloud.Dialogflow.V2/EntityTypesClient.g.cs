@@ -512,7 +512,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -537,7 +537,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -562,7 +562,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -587,7 +587,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -612,7 +612,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -645,7 +645,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -678,7 +678,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -711,7 +711,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all entity types from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -771,7 +771,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -786,7 +786,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -801,7 +801,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -813,7 +813,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -828,7 +828,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -843,7 +843,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -855,7 +855,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -878,7 +878,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -901,7 +901,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -920,7 +920,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -943,7 +943,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -966,7 +966,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1074,7 +1074,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1308,7 +1308,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a entity type for.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityType">
         /// Required. The entity type to create.
@@ -1537,7 +1537,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1556,7 +1556,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1575,7 +1575,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1629,7 +1629,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;EntityType ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1837,7 +1837,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -1873,7 +1873,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -1909,7 +1909,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -1938,7 +1938,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -1974,7 +1974,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -2010,7 +2010,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/{Project ID}/agent`.
+        /// `projects/&lt;Project ID&gt;/agent`.
         /// </param>
         /// <param name="entityTypeNames">
         /// Required. The names entity types to delete. All names must point to the
@@ -2132,7 +2132,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2167,7 +2167,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2202,7 +2202,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2230,7 +2230,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2265,7 +2265,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2300,7 +2300,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2328,7 +2328,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2371,7 +2371,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2414,7 +2414,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2449,7 +2449,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2492,7 +2492,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2535,7 +2535,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to create entities in. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to create.
@@ -2671,7 +2671,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2708,7 +2708,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2745,7 +2745,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2775,7 +2775,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2812,7 +2812,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2849,7 +2849,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2879,7 +2879,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2924,7 +2924,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -2969,7 +2969,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -3006,7 +3006,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -3051,7 +3051,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -3096,7 +3096,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to update or create entities in.
-        /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// Format: `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entities">
         /// Required. The entities to update or create.
@@ -3224,12 +3224,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3261,12 +3261,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3298,12 +3298,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3328,12 +3328,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3365,12 +3365,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3402,12 +3402,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3432,12 +3432,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -3477,12 +3477,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -3522,12 +3522,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -3559,12 +3559,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -3604,12 +3604,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -3649,12 +3649,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the entity type to delete entries for. Format:
-        /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
+        /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
         /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
-        /// `projects/{Project ID}`.
+        /// `projects/&lt;Project ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.

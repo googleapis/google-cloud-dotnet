@@ -196,7 +196,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of this answer record.
-    /// Format: `projects/{Project ID}/locations/{Location
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/answerRecords/&lt;Answer Record ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -523,7 +523,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to list all answer records for in reverse
-    /// chronological order. Format: `projects/{Project ID}/locations/{Location
+    /// chronological order. Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
