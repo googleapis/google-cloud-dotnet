@@ -71,6 +71,11 @@ string Unescape(string summary)
             builder.Append("<");
             i += 3;
         }
+        else if (inBackticks && summary[i] == '&' && summary.Substring(i, 4) == "&gt;")
+        {
+            builder.Append(">");
+            i += 3;
+        }
         else
         {
             builder.Append(summary[i]);
