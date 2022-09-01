@@ -11,7 +11,7 @@ declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.21.3
 declare -r GRPC_VERSION=2.47.0
-declare -r GAPIC_GENERATOR_VERSION=1.4.4
+declare -r GAPIC_GENERATOR_VERSION=1.4.8
 
 # Tools that only run under Windows (at the moment)
 declare -r DOCFX=$TOOL_PACKAGES/docfx.$DOCFX_VERSION/docfx.exe
