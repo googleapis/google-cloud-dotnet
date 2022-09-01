@@ -3758,10 +3758,6 @@ namespace Google.Cloud.Batch.V1 {
         /// <summary>Field number for the "install_gpu_drivers" field.</summary>
         public const int InstallGpuDriversFieldNumber = 3;
         private bool installGpuDrivers_;
-        /// <summary>
-        /// When true, Batch will install the GPU drivers.
-        /// This field will be ignored if specified.
-        /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
