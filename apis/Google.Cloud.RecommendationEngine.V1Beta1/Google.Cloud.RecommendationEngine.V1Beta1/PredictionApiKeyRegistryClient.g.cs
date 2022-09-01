@@ -553,7 +553,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -568,7 +568,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -583,7 +583,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -595,7 +595,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -610,7 +610,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -625,7 +625,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

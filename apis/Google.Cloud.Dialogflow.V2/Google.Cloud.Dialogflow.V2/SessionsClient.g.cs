@@ -334,7 +334,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`
@@ -389,7 +389,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`
@@ -444,7 +444,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`
@@ -495,7 +495,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`
@@ -550,7 +550,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`
@@ -605,7 +605,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the session this query is sent to. Format:
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// ID&gt;/sessions/&lt;Session ID&gt;`. If `Environment ID` is not specified, we assume
         /// default 'draft' environment (`Environment ID` might be referred to as
         /// environment name at some places). If `User ID` is not specified, we are
         /// using "-". It's up to the API caller to choose an appropriate `Session ID`

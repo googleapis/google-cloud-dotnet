@@ -4327,7 +4327,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4344,7 +4344,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4361,7 +4361,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4375,7 +4375,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4392,7 +4392,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4409,7 +4409,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;'
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;'
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4439,25 +4439,25 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation search parent (project ID). Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. To search evaluations, you can filter by the following:
         /// 
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id (the last part of
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id (the last part of
         /// [EvaluationJob.name][google.cloud.datalabeling.v1beta1.EvaluationJob.name])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id (the &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; portion
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.model_id (the &lt;var&gt;{model_name}&lt;/var&gt; portion
         /// of [EvaluationJob.modelVersion][google.cloud.datalabeling.v1beta1.EvaluationJob.model_version])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start (Minimum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start (Minimum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end (Maximum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end (Maximum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
-        /// * annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name (the Evaluation contains a
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
+        /// * annotation&lt;span&gt;_&lt;/span&gt;spec.display_name (the Evaluation contains a
         /// metric for the annotation spec with this
         /// [displayName][google.cloud.datalabeling.v1beta1.AnnotationSpec.display_name])
         /// 
@@ -4465,14 +4465,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// operator. The following examples shows a string that filters by several
         /// critiera:
         /// 
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id =
-        /// &amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt; AND evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id =
-        /// &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start =
-        /// &amp;lt;var&amp;gt;{timestamp_1}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end =
-        /// &amp;lt;var&amp;gt;{timestamp_2}&amp;lt;/var&amp;gt; AND annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name =
-        /// &amp;lt;var&amp;gt;{display_name}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id =
+        /// &lt;var&gt;{evaluation_job_id}&lt;/var&gt; AND evaluation&lt;span&gt;_&lt;/span&gt;job.model_id =
+        /// &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start =
+        /// &lt;var&gt;{timestamp_1}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end =
+        /// &lt;var&gt;{timestamp_2}&lt;/var&gt; AND annotation&lt;span&gt;_&lt;/span&gt;spec.display_name =
+        /// &lt;var&gt;{display_name}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4498,25 +4498,25 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation search parent (project ID). Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. To search evaluations, you can filter by the following:
         /// 
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id (the last part of
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id (the last part of
         /// [EvaluationJob.name][google.cloud.datalabeling.v1beta1.EvaluationJob.name])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id (the &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; portion
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.model_id (the &lt;var&gt;{model_name}&lt;/var&gt; portion
         /// of [EvaluationJob.modelVersion][google.cloud.datalabeling.v1beta1.EvaluationJob.model_version])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start (Minimum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start (Minimum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end (Maximum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end (Maximum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
-        /// * annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name (the Evaluation contains a
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
+        /// * annotation&lt;span&gt;_&lt;/span&gt;spec.display_name (the Evaluation contains a
         /// metric for the annotation spec with this
         /// [displayName][google.cloud.datalabeling.v1beta1.AnnotationSpec.display_name])
         /// 
@@ -4524,14 +4524,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// operator. The following examples shows a string that filters by several
         /// critiera:
         /// 
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id =
-        /// &amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt; AND evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id =
-        /// &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start =
-        /// &amp;lt;var&amp;gt;{timestamp_1}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end =
-        /// &amp;lt;var&amp;gt;{timestamp_2}&amp;lt;/var&amp;gt; AND annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name =
-        /// &amp;lt;var&amp;gt;{display_name}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id =
+        /// &lt;var&gt;{evaluation_job_id}&lt;/var&gt; AND evaluation&lt;span&gt;_&lt;/span&gt;job.model_id =
+        /// &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start =
+        /// &lt;var&gt;{timestamp_1}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end =
+        /// &lt;var&gt;{timestamp_2}&lt;/var&gt; AND annotation&lt;span&gt;_&lt;/span&gt;spec.display_name =
+        /// &lt;var&gt;{display_name}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4557,25 +4557,25 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation search parent (project ID). Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. To search evaluations, you can filter by the following:
         /// 
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id (the last part of
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id (the last part of
         /// [EvaluationJob.name][google.cloud.datalabeling.v1beta1.EvaluationJob.name])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id (the &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; portion
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.model_id (the &lt;var&gt;{model_name}&lt;/var&gt; portion
         /// of [EvaluationJob.modelVersion][google.cloud.datalabeling.v1beta1.EvaluationJob.model_version])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start (Minimum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start (Minimum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end (Maximum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end (Maximum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
-        /// * annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name (the Evaluation contains a
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
+        /// * annotation&lt;span&gt;_&lt;/span&gt;spec.display_name (the Evaluation contains a
         /// metric for the annotation spec with this
         /// [displayName][google.cloud.datalabeling.v1beta1.AnnotationSpec.display_name])
         /// 
@@ -4583,14 +4583,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// operator. The following examples shows a string that filters by several
         /// critiera:
         /// 
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id =
-        /// &amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt; AND evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id =
-        /// &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start =
-        /// &amp;lt;var&amp;gt;{timestamp_1}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end =
-        /// &amp;lt;var&amp;gt;{timestamp_2}&amp;lt;/var&amp;gt; AND annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name =
-        /// &amp;lt;var&amp;gt;{display_name}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id =
+        /// &lt;var&gt;{evaluation_job_id}&lt;/var&gt; AND evaluation&lt;span&gt;_&lt;/span&gt;job.model_id =
+        /// &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start =
+        /// &lt;var&gt;{timestamp_1}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end =
+        /// &lt;var&gt;{timestamp_2}&lt;/var&gt; AND annotation&lt;span&gt;_&lt;/span&gt;spec.display_name =
+        /// &lt;var&gt;{display_name}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4616,25 +4616,25 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation search parent (project ID). Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. To search evaluations, you can filter by the following:
         /// 
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id (the last part of
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id (the last part of
         /// [EvaluationJob.name][google.cloud.datalabeling.v1beta1.EvaluationJob.name])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id (the &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; portion
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.model_id (the &lt;var&gt;{model_name}&lt;/var&gt; portion
         /// of [EvaluationJob.modelVersion][google.cloud.datalabeling.v1beta1.EvaluationJob.model_version])
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start (Minimum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start (Minimum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end (Maximum
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end (Maximum
         /// threshold for the
         /// [evaluationJobRunTime][google.cloud.datalabeling.v1beta1.Evaluation.evaluation_job_run_time] that created
         /// the evaluation)
-        /// * evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
-        /// * annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name (the Evaluation contains a
+        /// * evaluation&lt;span&gt;_&lt;/span&gt;job.job_state ([EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state])
+        /// * annotation&lt;span&gt;_&lt;/span&gt;spec.display_name (the Evaluation contains a
         /// metric for the annotation spec with this
         /// [displayName][google.cloud.datalabeling.v1beta1.AnnotationSpec.display_name])
         /// 
@@ -4642,14 +4642,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// operator. The following examples shows a string that filters by several
         /// critiera:
         /// 
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_id =
-        /// &amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt; AND evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id =
-        /// &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_start =
-        /// &amp;lt;var&amp;gt;{timestamp_1}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.evaluation_job_run_time_end =
-        /// &amp;lt;var&amp;gt;{timestamp_2}&amp;lt;/var&amp;gt; AND annotation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;spec.display_name =
-        /// &amp;lt;var&amp;gt;{display_name}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_id =
+        /// &lt;var&gt;{evaluation_job_id}&lt;/var&gt; AND evaluation&lt;span&gt;_&lt;/span&gt;job.model_id =
+        /// &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_start =
+        /// &lt;var&gt;{timestamp_1}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.evaluation_job_run_time_end =
+        /// &lt;var&gt;{timestamp_2}&lt;/var&gt; AND annotation&lt;span&gt;_&lt;/span&gt;spec.display_name =
+        /// &lt;var&gt;{display_name}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4706,7 +4706,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// Required. Name of the [Evaluation][google.cloud.datalabeling.v1beta1.Evaluation] resource to search for example
         /// comparisons from. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4737,7 +4737,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// Required. Name of the [Evaluation][google.cloud.datalabeling.v1beta1.Evaluation] resource to search for example
         /// comparisons from. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4769,7 +4769,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// Required. Name of the [Evaluation][google.cloud.datalabeling.v1beta1.Evaluation] resource to search for example
         /// comparisons from. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4800,7 +4800,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// Required. Name of the [Evaluation][google.cloud.datalabeling.v1beta1.Evaluation] resource to search for example
         /// comparisons from. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/datasets/&amp;lt;var&amp;gt;{dataset_id}&amp;lt;/var&amp;gt;/evaluations/&amp;lt;var&amp;gt;{evaluation_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/datasets/&lt;var&gt;{dataset_id}&lt;/var&gt;/evaluations/&lt;var&gt;{evaluation_id}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4855,7 +4855,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -4874,7 +4874,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -4893,7 +4893,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -4908,7 +4908,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -4927,7 +4927,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -4946,7 +4946,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="job">
         /// Required. The evaluation job to create.
@@ -5120,7 +5120,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5136,7 +5136,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5152,7 +5152,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5165,7 +5165,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5181,7 +5181,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5197,7 +5197,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5241,7 +5241,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5258,7 +5258,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5275,7 +5275,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5289,7 +5289,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5306,7 +5306,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5323,7 +5323,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be paused. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5367,7 +5367,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5384,7 +5384,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5401,7 +5401,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5415,7 +5415,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5432,7 +5432,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5449,7 +5449,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be resumed. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5489,7 +5489,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5505,7 +5505,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5521,7 +5521,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5534,7 +5534,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5550,7 +5550,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5566,7 +5566,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// <param name="name">
         /// Required. Name of the evaluation job that is going to be deleted. Format:
         /// 
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;/evaluationJobs/&amp;lt;var&amp;gt;{evaluation_job_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;/evaluationJobs/&lt;var&gt;{evaluation_job_id}&lt;/var&gt;"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5599,7 +5599,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. You can filter the jobs to list by model_id (also known as
@@ -5608,8 +5608,8 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// evaluation job state (as described in [EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state]). To filter
         /// by both criteria, use the `AND` operator or the `OR` operator. For example,
         /// you can use the following string for your filter:
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id = &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.state = &amp;lt;var&amp;gt;{evaluation_job_state}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.model_id = &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.state = &lt;var&gt;{evaluation_job_state}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5636,7 +5636,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. You can filter the jobs to list by model_id (also known as
@@ -5645,8 +5645,8 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// evaluation job state (as described in [EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state]). To filter
         /// by both criteria, use the `AND` operator or the `OR` operator. For example,
         /// you can use the following string for your filter:
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id = &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.state = &amp;lt;var&amp;gt;{evaluation_job_state}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.model_id = &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.state = &lt;var&gt;{evaluation_job_state}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5673,7 +5673,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. You can filter the jobs to list by model_id (also known as
@@ -5682,8 +5682,8 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// evaluation job state (as described in [EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state]). To filter
         /// by both criteria, use the `AND` operator or the `OR` operator. For example,
         /// you can use the following string for your filter:
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id = &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.state = &amp;lt;var&amp;gt;{evaluation_job_state}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.model_id = &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.state = &lt;var&gt;{evaluation_job_state}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5710,7 +5710,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. Evaluation job resource parent. Format:
-        /// "projects/&amp;lt;var&amp;gt;{project_id}&amp;lt;/var&amp;gt;"
+        /// "projects/&lt;var&gt;{project_id}&lt;/var&gt;"
         /// </param>
         /// <param name="filter">
         /// Optional. You can filter the jobs to list by model_id (also known as
@@ -5719,8 +5719,8 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// evaluation job state (as described in [EvaluationJob.state][google.cloud.datalabeling.v1beta1.EvaluationJob.state]). To filter
         /// by both criteria, use the `AND` operator or the `OR` operator. For example,
         /// you can use the following string for your filter:
-        /// "evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.model_id = &amp;lt;var&amp;gt;{model_name}&amp;lt;/var&amp;gt; AND
-        /// evaluation&amp;lt;span&amp;gt;_&amp;lt;/span&amp;gt;job.state = &amp;lt;var&amp;gt;{evaluation_job_state}&amp;lt;/var&amp;gt;"
+        /// "evaluation&lt;span&gt;_&lt;/span&gt;job.model_id = &lt;var&gt;{model_name}&lt;/var&gt; AND
+        /// evaluation&lt;span&gt;_&lt;/span&gt;job.state = &lt;var&gt;{evaluation_job_state}&lt;/var&gt;"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

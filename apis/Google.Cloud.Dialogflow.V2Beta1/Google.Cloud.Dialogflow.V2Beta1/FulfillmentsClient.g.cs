@@ -274,8 +274,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -292,8 +292,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -310,8 +310,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -325,8 +325,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -343,8 +343,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -361,8 +361,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. The name of the fulfillment.
         /// Supported formats:
         /// 
-        /// - `projects/&amp;lt;Project ID&amp;gt;/agent/fulfillment`
-        /// - `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/agent/fulfillment`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

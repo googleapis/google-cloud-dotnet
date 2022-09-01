@@ -512,7 +512,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -533,7 +533,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -554,7 +554,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -602,7 +602,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="parent">
@@ -644,7 +644,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="parent">
@@ -686,7 +686,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="parent">
@@ -721,7 +721,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -743,7 +743,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -765,7 +765,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -814,7 +814,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -846,7 +846,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -878,7 +878,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -1236,7 +1236,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1260,7 +1260,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are
         /// incomplete, the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;AMBIGUOUS&amp;lt;/code&amp;gt;. For more information,
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
         /// see the Connectivity Test documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1285,7 +1285,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
@@ -1310,7 +1310,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// (for example, they contain non-existent resources in the network, or the
         /// user does not have read permissions to the network configurations of
         /// listed projects), then the reachability result returns a value of
-        /// &amp;lt;code&amp;gt;UNKNOWN&amp;lt;/code&amp;gt;.
+        /// &lt;code&gt;UNKNOWN&lt;/code&gt;.
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation

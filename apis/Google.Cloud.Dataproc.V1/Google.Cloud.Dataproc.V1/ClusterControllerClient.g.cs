@@ -694,32 +694,32 @@ namespace Google.Cloud.Dataproc.V1
         /// }
         /// }
         /// }
-        /// &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Currently, only the following fields can be updated:
+        /// &lt;strong&gt;Note:&lt;/strong&gt; Currently, only the following fields can be updated:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tbody&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Mask&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Purpose&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;labels&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Update labels&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize primary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.secondary_worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize secondary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;config.autoscaling_config.policy_uri&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Use, stop using, or
-        /// change autoscaling policies&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/tbody&amp;gt;
-        /// &amp;lt;/table&amp;gt;
+        /// &lt;table&gt;
+        /// &lt;tbody&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;Mask&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;&lt;strong&gt;Purpose&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;labels&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Update labels&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize primary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        /// change autoscaling policies&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;/tbody&gt;
+        /// &lt;/table&gt;
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -779,32 +779,32 @@ namespace Google.Cloud.Dataproc.V1
         /// }
         /// }
         /// }
-        /// &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Currently, only the following fields can be updated:
+        /// &lt;strong&gt;Note:&lt;/strong&gt; Currently, only the following fields can be updated:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tbody&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Mask&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Purpose&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;labels&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Update labels&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize primary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.secondary_worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize secondary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;config.autoscaling_config.policy_uri&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Use, stop using, or
-        /// change autoscaling policies&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/tbody&amp;gt;
-        /// &amp;lt;/table&amp;gt;
+        /// &lt;table&gt;
+        /// &lt;tbody&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;Mask&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;&lt;strong&gt;Purpose&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;labels&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Update labels&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize primary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        /// change autoscaling policies&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;/tbody&gt;
+        /// &lt;/table&gt;
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -864,32 +864,32 @@ namespace Google.Cloud.Dataproc.V1
         /// }
         /// }
         /// }
-        /// &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Currently, only the following fields can be updated:
+        /// &lt;strong&gt;Note:&lt;/strong&gt; Currently, only the following fields can be updated:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tbody&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Mask&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Purpose&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;labels&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Update labels&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize primary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;config.secondary_worker_config.num_instances&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;Resize secondary worker group&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;config.autoscaling_config.policy_uri&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Use, stop using, or
-        /// change autoscaling policies&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/tbody&amp;gt;
-        /// &amp;lt;/table&amp;gt;
+        /// &lt;table&gt;
+        /// &lt;tbody&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;Mask&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;&lt;strong&gt;Purpose&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;labels&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Update labels&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize primary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+        /// &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;tr&gt;
+        /// &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        /// change autoscaling policies&lt;/td&gt;
+        /// &lt;/tr&gt;
+        /// &lt;/tbody&gt;
+        /// &lt;/table&gt;
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

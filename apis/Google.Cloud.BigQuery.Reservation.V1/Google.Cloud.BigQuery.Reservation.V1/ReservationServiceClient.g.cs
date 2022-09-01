@@ -2664,8 +2664,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2693,8 +2693,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2722,8 +2722,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2772,8 +2772,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2822,8 +2822,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2872,8 +2872,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -2920,11 +2920,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -2943,11 +2943,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -2966,11 +2966,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -2989,11 +2989,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3018,11 +3018,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3047,11 +3047,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3073,11 +3073,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3102,11 +3102,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3131,11 +3131,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -3166,7 +3166,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3198,7 +3198,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3230,7 +3230,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3289,7 +3289,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3348,7 +3348,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3407,7 +3407,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -3466,7 +3466,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -3494,7 +3494,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -3522,7 +3522,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -3577,7 +3577,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -3632,7 +3632,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -3687,7 +3687,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -4894,8 +4894,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -4926,8 +4926,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
         /// In this example, ListAssignments will just return the above two assignments
         /// for reservation `res1`, and no expansion/merge will happen.
@@ -4956,11 +4956,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -4982,11 +4982,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`.
         /// * Reservation `res1` exists and was created previously.
         /// * CreateAssignment was used previously to define the following
-        /// associations between entities and reservations: `&amp;lt;organizationA, res1&amp;gt;`
-        /// and `&amp;lt;project1, res1&amp;gt;`
+        /// associations between entities and reservations: `&lt;organizationA, res1&gt;`
+        /// and `&lt;project1, res1&gt;`
         /// 
-        /// In this example, deletion of the `&amp;lt;organizationA, res1&amp;gt;` assignment won't
-        /// affect the other assignment `&amp;lt;project1, res1&amp;gt;`. After said deletion,
+        /// In this example, deletion of the `&lt;organizationA, res1&gt;` assignment won't
+        /// affect the other assignment `&lt;project1, res1&gt;`. After said deletion,
         /// queries from `project1` will still use `res1` while queries from
         /// `project2` will switch to use on-demand mode.
         /// </summary>
@@ -5017,7 +5017,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -5052,7 +5052,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// 
@@ -5087,7 +5087,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
@@ -5118,7 +5118,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// differences:
         /// 
         /// 1. permission on the assignee will be verified in this API.
-        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
         /// </summary>

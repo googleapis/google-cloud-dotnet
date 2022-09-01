@@ -4526,11 +4526,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Examples:
         /// 
-        /// * `feature_id: foo` --&amp;gt; Matches a Feature with ID containing the substring
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
         /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&amp;gt; Matches a Feature with ID containing the
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
         /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&amp;gt; Matches a Feature with ID
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
         /// containing the substring `foo` and description containing the substring
         /// `bar`.
         /// 
@@ -4548,12 +4548,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
-        /// * `description = "foo bar"` --&amp;gt; Any Feature with description exactly equal
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
-        /// * `value_type = DOUBLE` --&amp;gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&amp;gt; Features having both
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
         /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&amp;gt; Any Feature which has a label with `env` as the
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
         /// key.
         /// </param>
         /// <param name="pageToken">
@@ -4614,11 +4614,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Examples:
         /// 
-        /// * `feature_id: foo` --&amp;gt; Matches a Feature with ID containing the substring
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
         /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&amp;gt; Matches a Feature with ID containing the
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
         /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&amp;gt; Matches a Feature with ID
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
         /// containing the substring `foo` and description containing the substring
         /// `bar`.
         /// 
@@ -4636,12 +4636,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
-        /// * `description = "foo bar"` --&amp;gt; Any Feature with description exactly equal
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
-        /// * `value_type = DOUBLE` --&amp;gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&amp;gt; Features having both
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
         /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&amp;gt; Any Feature which has a label with `env` as the
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
         /// key.
         /// </param>
         /// <param name="pageToken">
@@ -4702,11 +4702,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Examples:
         /// 
-        /// * `feature_id: foo` --&amp;gt; Matches a Feature with ID containing the substring
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
         /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&amp;gt; Matches a Feature with ID containing the
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
         /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&amp;gt; Matches a Feature with ID
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
         /// containing the substring `foo` and description containing the substring
         /// `bar`.
         /// 
@@ -4724,12 +4724,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
-        /// * `description = "foo bar"` --&amp;gt; Any Feature with description exactly equal
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
-        /// * `value_type = DOUBLE` --&amp;gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&amp;gt; Features having both
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
         /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&amp;gt; Any Feature which has a label with `env` as the
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
         /// key.
         /// </param>
         /// <param name="pageToken">
@@ -4790,11 +4790,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Examples:
         /// 
-        /// * `feature_id: foo` --&amp;gt; Matches a Feature with ID containing the substring
+        /// * `feature_id: foo` --&gt; Matches a Feature with ID containing the substring
         /// `foo` (eg. `foo`, `foofeature`, `barfoo`).
-        /// * `feature_id: foo*feature` --&amp;gt; Matches a Feature with ID containing the
+        /// * `feature_id: foo*feature` --&gt; Matches a Feature with ID containing the
         /// substring `foo*feature` (eg. `foobarfeature`).
-        /// * `feature_id: foo AND description: bar` --&amp;gt; Matches a Feature with ID
+        /// * `feature_id: foo AND description: bar` --&gt; Matches a Feature with ID
         /// containing the substring `foo` and description containing the substring
         /// `bar`.
         /// 
@@ -4812,12 +4812,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
-        /// * `description = "foo bar"` --&amp;gt; Any Feature with description exactly equal
+        /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
-        /// * `value_type = DOUBLE` --&amp;gt; Features whose type is DOUBLE.
-        /// * `labels.active = yes AND labels.env = prod` --&amp;gt; Features having both
+        /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
+        /// * `labels.active = yes AND labels.env = prod` --&gt; Features having both
         /// (active: yes) and (env: prod) labels.
-        /// * `labels.env: *` --&amp;gt; Any Feature which has a label with `env` as the
+        /// * `labels.env: *` --&gt; Any Feature which has a label with `env` as the
         /// key.
         /// </param>
         /// <param name="pageToken">

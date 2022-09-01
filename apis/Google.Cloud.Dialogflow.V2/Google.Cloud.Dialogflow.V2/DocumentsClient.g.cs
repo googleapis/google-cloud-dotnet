@@ -494,7 +494,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to list all documents for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -520,7 +520,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to list all documents for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -546,7 +546,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to list all documents for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -572,7 +572,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to list all documents for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -625,7 +625,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -641,7 +641,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -657,7 +657,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -670,7 +670,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -686,7 +686,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -702,7 +702,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to retrieve.
         /// Format `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -796,7 +796,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -823,7 +823,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -850,7 +850,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -873,7 +873,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -900,7 +900,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -927,7 +927,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The knowledge base to create a document for.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;`.
         /// </param>
         /// <param name="document">
         /// Required. The document to create.
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1156,7 +1156,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1201,7 +1201,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1225,7 +1225,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to delete.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`.
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1494,7 +1494,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,
@@ -1568,7 +1568,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,
@@ -1601,7 +1601,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,
@@ -1638,7 +1638,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,
@@ -1675,7 +1675,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the document to reload.
         /// Format: `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/knowledgeBases/&amp;lt;Knowledge Base ID&amp;gt;/documents/&amp;lt;Document ID&amp;gt;`
+        /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
         /// Optional. The path of gcs source file for reloading document content. For now,

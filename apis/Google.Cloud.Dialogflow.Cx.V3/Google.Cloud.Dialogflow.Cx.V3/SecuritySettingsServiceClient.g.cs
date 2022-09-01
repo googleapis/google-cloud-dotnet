@@ -342,7 +342,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -361,7 +361,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -380,7 +380,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -395,7 +395,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -414,7 +414,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -433,7 +433,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -479,8 +479,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -496,8 +496,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -513,8 +513,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -527,8 +527,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -544,8 +544,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -561,8 +561,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;security settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -675,7 +675,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -700,7 +700,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -725,7 +725,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -750,7 +750,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -802,8 +802,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -818,8 +818,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -834,8 +834,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -847,8 +847,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -863,8 +863,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -879,8 +879,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/securitySettings/&amp;lt;Security Settings ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

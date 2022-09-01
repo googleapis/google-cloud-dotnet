@@ -3456,8 +3456,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3477,8 +3477,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3498,8 +3498,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3515,8 +3515,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3536,8 +3536,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3557,8 +3557,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the phrase matcher. Required. The location to create
         /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4289,8 +4289,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.
@@ -4310,8 +4310,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.
@@ -4331,8 +4331,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.
@@ -4348,8 +4348,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.
@@ -4369,8 +4369,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.
@@ -4390,8 +4390,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <param name="parent">
         /// Required. The parent resource of the view. Required. The location to create
         /// a view for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
+        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="view">
         /// Required. The view resource to create.

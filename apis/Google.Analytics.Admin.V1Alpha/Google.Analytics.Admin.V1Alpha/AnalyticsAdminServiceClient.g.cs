@@ -6444,8 +6444,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6457,8 +6457,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6470,8 +6470,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6483,8 +6483,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -6505,8 +6505,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -6527,8 +6527,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -6545,8 +6545,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -6567,8 +6567,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -6589,8 +6589,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="parent">
@@ -7312,7 +7312,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Cancels a DisplayVideo360AdvertiserLinkProposal.
         /// Cancelling can mean either:
-        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Declining a proposal initiated from Display &amp; Video 360
         /// - Withdrawing a proposal initiated from Google Analytics
         /// After being cancelled, a proposal will eventually be deleted automatically.
         /// </summary>
@@ -7325,7 +7325,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Cancels a DisplayVideo360AdvertiserLinkProposal.
         /// Cancelling can mean either:
-        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Declining a proposal initiated from Display &amp; Video 360
         /// - Withdrawing a proposal initiated from Google Analytics
         /// After being cancelled, a proposal will eventually be deleted automatically.
         /// </summary>
@@ -7338,7 +7338,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Cancels a DisplayVideo360AdvertiserLinkProposal.
         /// Cancelling can mean either:
-        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Declining a proposal initiated from Display &amp; Video 360
         /// - Withdrawing a proposal initiated from Google Analytics
         /// After being cancelled, a proposal will eventually be deleted automatically.
         /// </summary>
@@ -9881,7 +9881,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// in Google Analytics 360. This method is only available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
@@ -9902,7 +9902,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// in Google Analytics 360. This method is only available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
@@ -9923,7 +9923,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// in Google Analytics 360. This method is only available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
@@ -11872,8 +11872,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -11888,8 +11888,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Creates a DisplayVideo360AdvertiserLink.
         /// This can only be utilized by users who have proper authorization both on
-        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
-        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp; Video 360 advertiser should
         /// instead seek to create a DisplayVideo360LinkProposal.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -12080,7 +12080,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Cancels a DisplayVideo360AdvertiserLinkProposal.
         /// Cancelling can mean either:
-        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Declining a proposal initiated from Display &amp; Video 360
         /// - Withdrawing a proposal initiated from Google Analytics
         /// After being cancelled, a proposal will eventually be deleted automatically.
         /// </summary>
@@ -12096,7 +12096,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Cancels a DisplayVideo360AdvertiserLinkProposal.
         /// Cancelling can mean either:
-        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Declining a proposal initiated from Display &amp; Video 360
         /// - Withdrawing a proposal initiated from Google Analytics
         /// After being cancelled, a proposal will eventually be deleted automatically.
         /// </summary>
@@ -12698,7 +12698,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// in Google Analytics 360. This method is only available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
@@ -12722,7 +12722,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// in Google Analytics 360. This method is only available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp;amp; Admob that can retrieve
+        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see

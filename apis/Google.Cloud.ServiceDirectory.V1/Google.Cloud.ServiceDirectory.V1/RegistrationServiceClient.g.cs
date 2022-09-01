@@ -647,7 +647,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -676,7 +676,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -705,7 +705,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -729,7 +729,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -758,7 +758,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -787,7 +787,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="namespaceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1330,7 +1330,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1358,7 +1358,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="serviceId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1878,7 +1878,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1906,7 +1906,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1929,7 +1929,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must
@@ -1985,7 +1985,7 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// </param>
         /// <param name="endpointId">
         /// Required. The Resource ID must be 1-63 characters long, and comply with
-        /// &amp;lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&amp;gt;RFC1035&amp;lt;/a&amp;gt;.
+        /// &lt;a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank"&gt;RFC1035&lt;/a&gt;.
         /// Specifically, the name must be 1-63 characters long and match the regular
         /// expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first
         /// character must be a lowercase letter, and all following characters must

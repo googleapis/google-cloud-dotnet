@@ -484,8 +484,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -500,8 +500,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -516,8 +516,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -529,8 +529,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -545,8 +545,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -561,8 +561,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -574,8 +574,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -590,8 +590,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -606,8 +606,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -736,8 +736,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -752,8 +752,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -768,8 +768,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -781,8 +781,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -797,8 +797,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -813,8 +813,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -826,8 +826,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -842,8 +842,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -858,8 +858,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -904,8 +904,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -935,8 +935,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -966,8 +966,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -997,8 +997,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1028,8 +1028,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1059,8 +1059,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;` or
-        /// `projects/&amp;lt;Project ID or '-'&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID or '-'&gt;` or
+        /// `projects/&lt;Project ID or '-'&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1190,8 +1190,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1219,8 +1219,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1248,8 +1248,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1274,8 +1274,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1303,8 +1303,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1332,8 +1332,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1358,8 +1358,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1387,8 +1387,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1416,8 +1416,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1514,8 +1514,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1538,8 +1538,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1562,8 +1562,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1583,8 +1583,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1607,8 +1607,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1631,8 +1631,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1652,8 +1652,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1676,8 +1676,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1700,8 +1700,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -3224,9 +3224,9 @@ namespace Google.Cloud.AutoML.V1
         /// 
         /// Some examples of using the filter are:
         /// 
-        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// * `annotation_spec_id!=4` --&gt; The model evaluation was done for
         /// annotation spec with ID different than 4.
-        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// * `NOT annotation_spec_id:*` --&gt; The model evaluation was done for
         /// aggregate of all annotation specs.
         /// </param>
         /// <param name="pageToken">
@@ -3264,9 +3264,9 @@ namespace Google.Cloud.AutoML.V1
         /// 
         /// Some examples of using the filter are:
         /// 
-        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// * `annotation_spec_id!=4` --&gt; The model evaluation was done for
         /// annotation spec with ID different than 4.
-        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// * `NOT annotation_spec_id:*` --&gt; The model evaluation was done for
         /// aggregate of all annotation specs.
         /// </param>
         /// <param name="pageToken">
@@ -3304,9 +3304,9 @@ namespace Google.Cloud.AutoML.V1
         /// 
         /// Some examples of using the filter are:
         /// 
-        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// * `annotation_spec_id!=4` --&gt; The model evaluation was done for
         /// annotation spec with ID different than 4.
-        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// * `NOT annotation_spec_id:*` --&gt; The model evaluation was done for
         /// aggregate of all annotation specs.
         /// </param>
         /// <param name="pageToken">
@@ -3344,9 +3344,9 @@ namespace Google.Cloud.AutoML.V1
         /// 
         /// Some examples of using the filter are:
         /// 
-        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// * `annotation_spec_id!=4` --&gt; The model evaluation was done for
         /// annotation spec with ID different than 4.
-        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// * `NOT annotation_spec_id:*` --&gt; The model evaluation was done for
         /// aggregate of all annotation specs.
         /// </param>
         /// <param name="pageToken">

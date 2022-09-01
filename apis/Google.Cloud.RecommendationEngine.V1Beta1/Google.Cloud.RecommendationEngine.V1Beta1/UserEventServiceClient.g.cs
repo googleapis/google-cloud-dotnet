@@ -747,8 +747,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// returned events. This is a sequence of terms, where each term applies some
         /// kind of a restriction to the returned user events. Use this expression to
         /// restrict results to a specific time range, or filter events by eventType.
-        /// eg: eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
-        /// eventTime&amp;lt;"2012-04-23T18:25:43.511Z" eventType=search
+        /// eg: eventTime &gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
+        /// eventTime&lt;"2012-04-23T18:25:43.511Z" eventType=search
         /// 
         /// We expect only 3 types of fields:
         /// 
@@ -766,13 +766,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// 
         /// Some examples of valid filters expressions:
         /// 
-        /// * Example 1: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
-        /// eventTime &amp;lt; "2012-04-23T18:30:43.511Z"
-        /// * Example 2: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// * Example 1: eventTime &gt; "2012-04-23T18:25:43.511Z"
+        /// eventTime &lt; "2012-04-23T18:30:43.511Z"
+        /// * Example 2: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// eventType = detail-page-view
         /// * Example 3: eventsMissingCatalogItems
-        /// eventType = search eventTime &amp;lt; "2018-04-23T18:30:43.511Z"
-        /// * Example 4: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// eventType = search eventTime &lt; "2018-04-23T18:30:43.511Z"
+        /// * Example 4: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// * Example 5: eventType = search
         /// * Example 6: eventsMissingCatalogItems
         /// </param>
@@ -807,8 +807,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// returned events. This is a sequence of terms, where each term applies some
         /// kind of a restriction to the returned user events. Use this expression to
         /// restrict results to a specific time range, or filter events by eventType.
-        /// eg: eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
-        /// eventTime&amp;lt;"2012-04-23T18:25:43.511Z" eventType=search
+        /// eg: eventTime &gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
+        /// eventTime&lt;"2012-04-23T18:25:43.511Z" eventType=search
         /// 
         /// We expect only 3 types of fields:
         /// 
@@ -826,13 +826,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// 
         /// Some examples of valid filters expressions:
         /// 
-        /// * Example 1: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
-        /// eventTime &amp;lt; "2012-04-23T18:30:43.511Z"
-        /// * Example 2: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// * Example 1: eventTime &gt; "2012-04-23T18:25:43.511Z"
+        /// eventTime &lt; "2012-04-23T18:30:43.511Z"
+        /// * Example 2: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// eventType = detail-page-view
         /// * Example 3: eventsMissingCatalogItems
-        /// eventType = search eventTime &amp;lt; "2018-04-23T18:30:43.511Z"
-        /// * Example 4: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// eventType = search eventTime &lt; "2018-04-23T18:30:43.511Z"
+        /// * Example 4: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// * Example 5: eventType = search
         /// * Example 6: eventsMissingCatalogItems
         /// </param>
@@ -867,8 +867,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// returned events. This is a sequence of terms, where each term applies some
         /// kind of a restriction to the returned user events. Use this expression to
         /// restrict results to a specific time range, or filter events by eventType.
-        /// eg: eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
-        /// eventTime&amp;lt;"2012-04-23T18:25:43.511Z" eventType=search
+        /// eg: eventTime &gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
+        /// eventTime&lt;"2012-04-23T18:25:43.511Z" eventType=search
         /// 
         /// We expect only 3 types of fields:
         /// 
@@ -886,13 +886,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// 
         /// Some examples of valid filters expressions:
         /// 
-        /// * Example 1: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
-        /// eventTime &amp;lt; "2012-04-23T18:30:43.511Z"
-        /// * Example 2: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// * Example 1: eventTime &gt; "2012-04-23T18:25:43.511Z"
+        /// eventTime &lt; "2012-04-23T18:30:43.511Z"
+        /// * Example 2: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// eventType = detail-page-view
         /// * Example 3: eventsMissingCatalogItems
-        /// eventType = search eventTime &amp;lt; "2018-04-23T18:30:43.511Z"
-        /// * Example 4: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// eventType = search eventTime &lt; "2018-04-23T18:30:43.511Z"
+        /// * Example 4: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// * Example 5: eventType = search
         /// * Example 6: eventsMissingCatalogItems
         /// </param>
@@ -927,8 +927,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// returned events. This is a sequence of terms, where each term applies some
         /// kind of a restriction to the returned user events. Use this expression to
         /// restrict results to a specific time range, or filter events by eventType.
-        /// eg: eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
-        /// eventTime&amp;lt;"2012-04-23T18:25:43.511Z" eventType=search
+        /// eg: eventTime &gt; "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
+        /// eventTime&lt;"2012-04-23T18:25:43.511Z" eventType=search
         /// 
         /// We expect only 3 types of fields:
         /// 
@@ -946,13 +946,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// 
         /// Some examples of valid filters expressions:
         /// 
-        /// * Example 1: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
-        /// eventTime &amp;lt; "2012-04-23T18:30:43.511Z"
-        /// * Example 2: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// * Example 1: eventTime &gt; "2012-04-23T18:25:43.511Z"
+        /// eventTime &lt; "2012-04-23T18:30:43.511Z"
+        /// * Example 2: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// eventType = detail-page-view
         /// * Example 3: eventsMissingCatalogItems
-        /// eventType = search eventTime &amp;lt; "2018-04-23T18:30:43.511Z"
-        /// * Example 4: eventTime &amp;gt; "2012-04-23T18:25:43.511Z"
+        /// eventType = search eventTime &lt; "2018-04-23T18:30:43.511Z"
+        /// * Example 4: eventTime &gt; "2012-04-23T18:25:43.511Z"
         /// * Example 5: eventType = search
         /// * Example 6: eventsMissingCatalogItems
         /// </param>
@@ -1060,10 +1060,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.
@@ -1106,10 +1106,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.
@@ -1152,10 +1152,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.
@@ -1193,10 +1193,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.
@@ -1239,10 +1239,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.
@@ -1285,10 +1285,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// * userId - field of type string. Specifying this will delete all events
         /// associated with a user.
         /// Example 1: Deleting all events in a time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventTime &amp;lt;
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventTime &lt;
         /// "2012-04-23T18:30:43.511Z"`
         /// Example 2: Deleting specific eventType in time range.
-        /// `eventTime &amp;gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
+        /// `eventTime &gt; "2012-04-23T18:25:43.511Z" eventType = "detail-page-view"`
         /// Example 3: Deleting all events for a specific visitor
         /// `visitorId = visitor1024`
         /// The filtering fields are assumed to have an implicit AND.

@@ -1921,8 +1921,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">
@@ -1979,8 +1979,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">
@@ -2037,8 +2037,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">
@@ -2082,8 +2082,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">
@@ -2140,8 +2140,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">
@@ -2198,8 +2198,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
-        /// The total number of files matched should be &amp;lt;= 100.
-        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The total number of files matched should be &lt;= 100.
+        /// The total content size to translate should be &lt;= 100M Unicode codepoints.
         /// The files must use UTF-8 encoding.
         /// </param>
         /// <param name="outputConfig">

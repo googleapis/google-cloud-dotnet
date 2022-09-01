@@ -553,7 +553,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -578,7 +578,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -603,7 +603,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -623,7 +623,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -648,7 +648,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -673,7 +673,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="deploymentId">
         /// Required. The id to use for this deployment.  The full name of the created
-        /// resource will be `projects/&amp;lt;project_number&amp;gt;/deployments/&amp;lt;deployment_id&amp;gt;`.
+        /// resource will be `projects/&lt;project_number&gt;/deployments/&lt;deployment_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

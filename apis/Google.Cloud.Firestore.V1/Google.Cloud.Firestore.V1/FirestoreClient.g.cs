@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcfv = Google.Cloud.Firestore.V1;
 using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -855,13 +856,13 @@ namespace Google.Cloud.Firestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CommitResponse Commit(string database, scg::IEnumerable<Write> writes, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CommitResponse Commit(string database, scg::IEnumerable<gcfv::Write> writes, gaxgrpc::CallSettings callSettings = null) =>
             Commit(new CommitRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                 Writes =
                 {
-                    writes ?? linq::Enumerable.Empty<Write>(),
+                    writes ?? linq::Enumerable.Empty<gcfv::Write>(),
                 },
             }, callSettings);
 
@@ -879,13 +880,13 @@ namespace Google.Cloud.Firestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CommitResponse> CommitAsync(string database, scg::IEnumerable<Write> writes, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CommitResponse> CommitAsync(string database, scg::IEnumerable<gcfv::Write> writes, gaxgrpc::CallSettings callSettings = null) =>
             CommitAsync(new CommitRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                 Writes =
                 {
-                    writes ?? linq::Enumerable.Empty<Write>(),
+                    writes ?? linq::Enumerable.Empty<gcfv::Write>(),
                 },
             }, callSettings);
 
@@ -903,7 +904,7 @@ namespace Google.Cloud.Firestore.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CommitResponse> CommitAsync(string database, scg::IEnumerable<Write> writes, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CommitResponse> CommitAsync(string database, scg::IEnumerable<gcfv::Write> writes, st::CancellationToken cancellationToken) =>
             CommitAsync(database, writes, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

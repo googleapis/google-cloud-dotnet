@@ -1120,7 +1120,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
         /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
         /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
         /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1327,7 +1327,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1343,7 +1343,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1383,7 +1383,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
         /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.

@@ -506,7 +506,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// 
         /// The Google Service Management implementation accepts the following
         /// forms:
-        /// - project:&amp;lt;project_id&amp;gt;
+        /// - project:&lt;project_id&gt;
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -543,7 +543,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// 
         /// The Google Service Management implementation accepts the following
         /// forms:
-        /// - project:&amp;lt;project_id&amp;gt;
+        /// - project:&lt;project_id&gt;
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -651,7 +651,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -670,7 +670,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -689,7 +689,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -734,7 +734,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="service">
         /// Required. Initial values for the service resource.
@@ -758,7 +758,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="service">
         /// Required. Initial values for the service resource.
@@ -782,7 +782,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="service">
         /// Required. Initial values for the service resource.
@@ -800,7 +800,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -816,7 +816,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -832,7 +832,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -874,7 +874,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -897,7 +897,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -920,7 +920,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -938,7 +938,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -952,7 +952,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -966,7 +966,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1401,7 +1401,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1423,7 +1423,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1472,7 +1472,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -1511,7 +1511,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -1550,7 +1550,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -1769,7 +1769,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1813,7 +1813,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1862,7 +1862,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -1895,7 +1895,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -1928,7 +1928,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
@@ -2327,7 +2327,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2349,7 +2349,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// reliability purposes, a production service should be hosted in a
         /// dedicated producer project.
         /// 
-        /// Operation&amp;lt;response: ManagedService&amp;gt;
+        /// Operation&lt;response: ManagedService&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2371,7 +2371,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2390,7 +2390,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// to restore the service. After 30 days, the service will be permanently
         /// deleted.
         /// 
-        /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
+        /// Operation&lt;response: google.protobuf.Empty&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2410,7 +2410,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2427,7 +2427,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// The target service must exist and must have been deleted within the
         /// last 30 days.
         /// 
-        /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
+        /// Operation&lt;response: UndeleteServiceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2543,7 +2543,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2568,7 +2568,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// existing service configurtions are kept for each service. The rest will be
         /// deleted eventually.
         /// 
-        /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
+        /// Operation&lt;response: SubmitConfigSourceResponse&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2648,7 +2648,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2673,7 +2673,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// already part of the set of 100 most recent) rollouts are kept for each
         /// service. The rest will be deleted eventually.
         /// 
-        /// Operation&amp;lt;response: Rollout&amp;gt;
+        /// Operation&lt;response: Rollout&gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

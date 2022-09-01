@@ -330,9 +330,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -359,9 +359,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -388,9 +388,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -417,9 +417,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -473,11 +473,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -493,11 +493,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -513,11 +513,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -530,11 +530,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -550,11 +550,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -570,11 +570,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -614,9 +614,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -637,9 +637,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -660,9 +660,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -679,9 +679,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -702,9 +702,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -725,9 +725,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;` or `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
@@ -771,11 +771,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to update.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="updateMask">
@@ -795,11 +795,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to update.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="updateMask">
@@ -819,11 +819,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to update.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="updateMask">
@@ -866,11 +866,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -886,11 +886,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -906,11 +906,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -923,11 +923,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -943,11 +943,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -963,11 +963,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type ID&amp;gt;` or
-        /// `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/environments/&amp;lt;Environment ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity
-        /// Type ID&amp;gt;`. If `Environment ID` is not specified, we assume default 'draft'
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type ID&gt;` or
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// ID&gt;/environments/&lt;Environment ID&gt;/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity
+        /// Type ID&gt;`. If `Environment ID` is not specified, we assume default 'draft'
         /// environment.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

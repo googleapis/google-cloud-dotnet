@@ -321,8 +321,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -348,8 +348,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -375,8 +375,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -402,8 +402,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -429,8 +429,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -456,8 +456,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all answer records for in reverse
-        /// chronological order. Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location
-        /// ID&amp;gt;`.
+        /// chronological order. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
