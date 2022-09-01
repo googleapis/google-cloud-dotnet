@@ -57,13 +57,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "TimestampField", SpannerDbType.Timestamp, new DateTime(2017, 1, 31, 3, 15, 30) },
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
-            { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" }
+            { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
+            { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -366,7 +367,12 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new List<string>(GetJsonStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Json),
                 "[ \"\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"[]\" ]", TestType.ClrToValue
             };
-
+            // JSONB cannot be converted from Value to a Clr type, as there is no unique Clr type for JSONB.
+            yield return new object[]
+            {
+                new List<string>(GetJsonStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgJsonb),
+                "[ \"\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"[]\" ]", TestType.ClrToValue
+            };
             // List test cases (various source/target list types)
             yield return new object[]
             {
