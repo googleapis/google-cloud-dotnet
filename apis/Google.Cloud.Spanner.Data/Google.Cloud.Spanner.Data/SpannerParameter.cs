@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -149,7 +149,7 @@ namespace Google.Cloud.Spanner.Data
                     $"{nameof(SpannerDbType)} must be set to one of "
                     + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
-                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.Numeric)},"
+                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.PgJsonb)}, {nameof(SpannerDbType.Numeric)},"
                     + $" {nameof(SpannerDbType.PgNumeric)})");
             }
             return Value;

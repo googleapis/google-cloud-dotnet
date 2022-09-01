@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -142,11 +142,18 @@ namespace Google.Cloud.Spanner.Data
                 return false;
             }
 
-            // Special handling for NUMERIC{PG}, as other types are just based on TypeCode and we need to keep the code backward compatible.
-            if (string.Equals(complexName.Trim(), "NUMERIC{PG}", StringComparison.OrdinalIgnoreCase))
+            var trimmedComplexName = complexName.Trim();
+            // Special handling for NUMERIC{PG} and JSONB{PG}, as other types are just based on TypeCode and we need to keep the code backward compatible.
+            if (string.Equals(trimmedComplexName, "NUMERIC{PG}", StringComparison.OrdinalIgnoreCase))
             {
                 type.Code = TypeCode.Numeric;
                 type.TypeAnnotation = TypeAnnotationCode.PgNumeric;
+                return true;
+            }
+            else if (string.Equals(trimmedComplexName, "JSONB{PG}", StringComparison.OrdinalIgnoreCase))
+            {
+                type.Code = TypeCode.Json;
+                type.TypeAnnotation = TypeAnnotationCode.PgJsonb;
                 return true;
             }
 
@@ -210,6 +217,10 @@ namespace Google.Cloud.Spanner.Data
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {
                 return "NUMERIC{PG}";
+            }
+            else if (TypeAnnotationCode == TypeAnnotationCode.PgJsonb)
+            {
+                return "JSONB{PG}";
             }
 
             return Size.HasValue ? $"{TypeCode.GetOriginalName()}({Size})" : TypeCode.GetOriginalName();
