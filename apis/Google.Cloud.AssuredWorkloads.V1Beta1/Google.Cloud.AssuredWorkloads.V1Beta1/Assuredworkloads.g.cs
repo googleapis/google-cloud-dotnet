@@ -58,7 +58,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKFUxpc3RX",
             "b3JrbG9hZHNSZXNwb25zZRJCCgl3b3JrbG9hZHMYASADKAsyLy5nb29nbGUu",
             "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSKiGwoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSLSGwoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
             "CUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElQKCXJlc291cmNl",
             "cxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
             "YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQMSYwoRY29tcGxpYW5jZV9y",
@@ -88,71 +88,72 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "ZW5hYmxlX3NvdmVyZWlnbl9jb250cm9scxgSIAEoCEID4EEBEmsKF3NhYV9l",
             "bnJvbGxtZW50X3Jlc3BvbnNlGBQgASgLMkUuZ29vZ2xlLmNsb3VkLmFzc3Vy",
             "ZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50UmVz",
-            "cG9uc2VCA+BBAxqOAgoMUmVzb3VyY2VJbmZvEhMKC3Jlc291cmNlX2lkGAEg",
-            "ASgDEmAKDXJlc291cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQuYXNz",
-            "dXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5mby5S",
-            "ZXNvdXJjZVR5cGUihgEKDFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASGAoQQ09OU1VNRVJfUFJPSkVDVBABGgIIARITCg9D",
-            "T05TVU1FUl9GT0xERVIQBBIbChdFTkNSWVBUSU9OX0tFWVNfUFJPSkVDVBAC",
-            "EgsKB0tFWVJJTkcQAxqTAQoLS01TU2V0dGluZ3MSQQoSbmV4dF9yb3RhdGlv",
-            "bl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIJ4EEC",
-            "4EEE4EEFEj0KD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbkIJ4EEC4EEE4EEFOgIYARpsCgtJTDRTZXR0aW5ncxJZ",
-            "CgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdv",
-            "cmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgbgQQTgQQU6",
-            "AhgBGm0KDENKSVNTZXR0aW5ncxJZCgxrbXNfc2V0dGluZ3MYASABKAsyOy5n",
-            "b29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2Fk",
-            "LktNU1NldHRpbmdzQgbgQQTgQQU6AhgBGnQKE0ZlZHJhbXBIaWdoU2V0dGlu",
-            "Z3MSWQoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3Vy",
-            "ZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IG4EEE",
-            "4EEFOgIYARp4ChdGZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJZCgxrbXNfc2V0",
-            "dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52",
-            "MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgbgQQTgQQU6AhgBGp8BChBS",
-            "ZXNvdXJjZVNldHRpbmdzEhMKC3Jlc291cmNlX2lkGAEgASgJEmAKDXJlc291",
-            "cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
-            "cy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5mby5SZXNvdXJjZVR5cGUS",
-            "FAoMZGlzcGxheV9uYW1lGAMgASgJGoYEChVTYWFFbnJvbGxtZW50UmVzcG9u",
-            "c2USawoMc2V0dXBfc3RhdHVzGAEgASgOMlAuZ29vZ2xlLmNsb3VkLmFzc3Vy",
-            "ZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50UmVz",
-            "cG9uc2UuU2V0dXBTdGF0ZUgAiAEBEmYKDHNldHVwX2Vycm9ycxgCIAMoDjJQ",
+            "cG9uc2VCA+BBAxIuCiFjb21wbGlhbnRfYnV0X2Rpc2FsbG93ZWRfc2Vydmlj",
+            "ZXMYGCADKAlCA+BBAxqOAgoMUmVzb3VyY2VJbmZvEhMKC3Jlc291cmNlX2lk",
+            "GAEgASgDEmAKDXJlc291cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQu",
+            "YXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5m",
+            "by5SZXNvdXJjZVR5cGUihgEKDFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASGAoQQ09OU1VNRVJfUFJPSkVDVBABGgIIARIT",
+            "Cg9DT05TVU1FUl9GT0xERVIQBBIbChdFTkNSWVBUSU9OX0tFWVNfUFJPSkVD",
+            "VBACEgsKB0tFWVJJTkcQAxqTAQoLS01TU2V0dGluZ3MSQQoSbmV4dF9yb3Rh",
+            "dGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIJ",
+            "4EEC4EEE4EEFEj0KD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkIJ4EEC4EEE4EEFOgIYARpsCgtJTDRTZXR0aW5n",
+            "cxJZCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJl",
+            "ZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgbgQQTg",
+            "QQU6AhgBGm0KDENKSVNTZXR0aW5ncxJZCgxrbXNfc2V0dGluZ3MYASABKAsy",
+            "Oy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmts",
+            "b2FkLktNU1NldHRpbmdzQgbgQQTgQQU6AhgBGnQKE0ZlZHJhbXBIaWdoU2V0",
+            "dGluZ3MSWQoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFz",
+            "c3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IG",
+            "4EEE4EEFOgIYARp4ChdGZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJZCgxrbXNf",
+            "c2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
+            "cy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgbgQQTgQQU6AhgBGp8B",
+            "ChBSZXNvdXJjZVNldHRpbmdzEhMKC3Jlc291cmNlX2lkGAEgASgJEmAKDXJl",
+            "c291cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmts",
+            "b2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5mby5SZXNvdXJjZVR5",
+            "cGUSFAoMZGlzcGxheV9uYW1lGAMgASgJGoYEChVTYWFFbnJvbGxtZW50UmVz",
+            "cG9uc2USawoMc2V0dXBfc3RhdHVzGAEgASgOMlAuZ29vZ2xlLmNsb3VkLmFz",
+            "c3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50",
+            "UmVzcG9uc2UuU2V0dXBTdGF0ZUgAiAEBEmYKDHNldHVwX2Vycm9ycxgCIAMo",
+            "DjJQLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29y",
+            "a2xvYWQuU2FhRW5yb2xsbWVudFJlc3BvbnNlLlNldHVwRXJyb3IiUgoKU2V0",
+            "dXBTdGF0ZRIbChdTRVRVUF9TVEFURV9VTlNQRUNJRklFRBAAEhIKDlNUQVRV",
+            "U19QRU5ESU5HEAESEwoPU1RBVFVTX0NPTVBMRVRFEAIisgEKClNldHVwRXJy",
+            "b3ISGwoXU0VUVVBfRVJST1JfVU5TUEVDSUZJRUQQABIcChhFUlJPUl9JTlZB",
+            "TElEX0JBU0VfU0VUVVAQARImCiJFUlJPUl9NSVNTSU5HX0VYVEVSTkFMX1NJ",
+            "R05JTkdfS0VZEAISIwofRVJST1JfTk9UX0FMTF9TRVJWSUNFU19FTlJPTExF",
+            "RBADEhwKGEVSUk9SX1NFVFVQX0NIRUNLX0ZBSUxFRBAEQg8KDV9zZXR1cF9z",
+            "dGF0dXMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASKBAgoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JF",
+            "R0lNRV9VTlNQRUNJRklFRBAAEgcKA0lMNBABEggKBENKSVMQAhIQCgxGRURS",
+            "QU1QX0hJR0gQAxIUChBGRURSQU1QX01PREVSQVRFEAQSFgoSVVNfUkVHSU9O",
+            "QUxfQUNDRVNTEAUSCQoFSElQQUEQBhILCgdISVRSVVNUEAcSGgoWRVVfUkVH",
+            "SU9OU19BTkRfU1VQUE9SVBAIEhoKFkNBX1JFR0lPTlNfQU5EX1NVUFBPUlQQ",
+            "CRIICgRJVEFSEAoSHQoZQVVfUkVHSU9OU19BTkRfVVNfU1VQUE9SVBALIn8K",
+            "EkthakVucm9sbG1lbnRTdGF0ZRIkCiBLQUpfRU5ST0xMTUVOVF9TVEFURV9V",
+            "TlNQRUNJRklFRBAAEiAKHEtBSl9FTlJPTExNRU5UX1NUQVRFX1BFTkRJTkcQ",
+            "ARIhCh1LQUpfRU5ST0xMTUVOVF9TVEFURV9DT01QTEVURRACOnXqQXIKKGFz",
+            "c3VyZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSRm9yZ2Fu",
+            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "d29ya2xvYWRzL3t3b3JrbG9hZH1CHAoaY29tcGxpYW5jZV9yZWdpbWVfc2V0",
+            "dGluZ3MiywIKH0NyZWF0ZVdvcmtsb2FkT3BlcmF0aW9uTWV0YWRhdGESNAoL",
+            "Y3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQESGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESEwoGcGFyZW50GAMg",
+            "ASgJQgPgQQESYAoRY29tcGxpYW5jZV9yZWdpbWUYBCABKA4yQC5nb29nbGUu",
+            "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkNvbXBs",
+            "aWFuY2VSZWdpbWVCA+BBARJgChFyZXNvdXJjZV9zZXR0aW5ncxgFIAMoCzJA",
             "Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xv",
-            "YWQuU2FhRW5yb2xsbWVudFJlc3BvbnNlLlNldHVwRXJyb3IiUgoKU2V0dXBT",
-            "dGF0ZRIbChdTRVRVUF9TVEFURV9VTlNQRUNJRklFRBAAEhIKDlNUQVRVU19Q",
-            "RU5ESU5HEAESEwoPU1RBVFVTX0NPTVBMRVRFEAIisgEKClNldHVwRXJyb3IS",
-            "GwoXU0VUVVBfRVJST1JfVU5TUEVDSUZJRUQQABIcChhFUlJPUl9JTlZBTElE",
-            "X0JBU0VfU0VUVVAQARImCiJFUlJPUl9NSVNTSU5HX0VYVEVSTkFMX1NJR05J",
-            "TkdfS0VZEAISIwofRVJST1JfTk9UX0FMTF9TRVJWSUNFU19FTlJPTExFRBAD",
-            "EhwKGEVSUk9SX1NFVFVQX0NIRUNLX0ZBSUxFRBAEQg8KDV9zZXR1cF9zdGF0",
-            "dXMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASKBAgoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JFR0lN",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0lMNBABEggKBENKSVMQAhIQCgxGRURSQU1Q",
-            "X0hJR0gQAxIUChBGRURSQU1QX01PREVSQVRFEAQSFgoSVVNfUkVHSU9OQUxf",
-            "QUNDRVNTEAUSCQoFSElQQUEQBhILCgdISVRSVVNUEAcSGgoWRVVfUkVHSU9O",
-            "U19BTkRfU1VQUE9SVBAIEhoKFkNBX1JFR0lPTlNfQU5EX1NVUFBPUlQQCRII",
-            "CgRJVEFSEAoSHQoZQVVfUkVHSU9OU19BTkRfVVNfU1VQUE9SVBALIn8KEkth",
-            "akVucm9sbG1lbnRTdGF0ZRIkCiBLQUpfRU5ST0xMTUVOVF9TVEFURV9VTlNQ",
-            "RUNJRklFRBAAEiAKHEtBSl9FTlJPTExNRU5UX1NUQVRFX1BFTkRJTkcQARIh",
-            "Ch1LQUpfRU5ST0xMTUVOVF9TVEFURV9DT01QTEVURRACOnXqQXIKKGFzc3Vy",
-            "ZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSRm9yZ2FuaXph",
-            "dGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29y",
-            "a2xvYWRzL3t3b3JrbG9hZH1CHAoaY29tcGxpYW5jZV9yZWdpbWVfc2V0dGlu",
-            "Z3MiywIKH0NyZWF0ZVdvcmtsb2FkT3BlcmF0aW9uTWV0YWRhdGESNAoLY3Jl",
-            "YXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQESGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESEwoGcGFyZW50GAMgASgJ",
-            "QgPgQQESYAoRY29tcGxpYW5jZV9yZWdpbWUYBCABKA4yQC5nb29nbGUuY2xv",
-            "dWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkNvbXBsaWFu",
-            "Y2VSZWdpbWVCA+BBARJgChFyZXNvdXJjZV9zZXR0aW5ncxgFIAMoCzJALmdv",
-            "b2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQu",
-            "UmVzb3VyY2VTZXR0aW5nc0ID4EEBQvYCCiljb20uZ29vZ2xlLmNsb3VkLmFz",
-            "c3VyZWR3b3JrbG9hZHMudjFiZXRhMUIVQXNzdXJlZHdvcmtsb2Fkc1Byb3Rv",
-            "UAFaVWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvYXNzdXJlZHdvcmtsb2Fkcy92MWJldGExO2Fzc3VyZWR3b3JrbG9hZHOq",
-            "AiVHb29nbGUuQ2xvdWQuQXNzdXJlZFdvcmtsb2Fkcy5WMUJldGExygIlR29v",
-            "Z2xlXENsb3VkXEFzc3VyZWRXb3JrbG9hZHNcVjFiZXRhMeoCKEdvb2dsZTo6",
-            "Q2xvdWQ6OkFzc3VyZWRXb3JrbG9hZHM6OlYxYmV0YTHqQV0KKGFzc3VyZWR3",
-            "b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SMW9yZ2FuaXphdGlv",
-            "bnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3Rv",
-            "Mw=="));
+            "YWQuUmVzb3VyY2VTZXR0aW5nc0ID4EEBQvYCCiljb20uZ29vZ2xlLmNsb3Vk",
+            "LmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMUIVQXNzdXJlZHdvcmtsb2Fkc1By",
+            "b3RvUAFaVWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvYXNzdXJlZHdvcmtsb2Fkcy92MWJldGExO2Fzc3VyZWR3b3JrbG9h",
+            "ZHOqAiVHb29nbGUuQ2xvdWQuQXNzdXJlZFdvcmtsb2Fkcy5WMUJldGExygIl",
+            "R29vZ2xlXENsb3VkXEFzc3VyZWRXb3JrbG9hZHNcVjFiZXRhMeoCKEdvb2ds",
+            "ZTo6Q2xvdWQ6OkFzc3VyZWRXb3JrbG9hZHM6OlYxYmV0YTHqQV0KKGFzc3Vy",
+            "ZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SMW9yZ2FuaXph",
+            "dGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +167,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse.Parser, new[]{ "Blockers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse.Parser, new[]{ "Workloads", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings", "KajEnrollmentState", "EnableSovereignControls", "SaaEnrollmentResponse" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings", "KajEnrollmentState", "EnableSovereignControls", "SaaEnrollmentResponse", "CompliantButDisallowedServices" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
@@ -2690,6 +2691,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       kajEnrollmentState_ = other.kajEnrollmentState_;
       enableSovereignControls_ = other.enableSovereignControls_;
       saaEnrollmentResponse_ = other.saaEnrollmentResponse_ != null ? other.saaEnrollmentResponse_.Clone() : null;
+      compliantButDisallowedServices_ = other.compliantButDisallowedServices_.Clone();
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           Il4Settings = other.Il4Settings.Clone();
@@ -3020,6 +3022,23 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "compliant_but_disallowed_services" field.</summary>
+    public const int CompliantButDisallowedServicesFieldNumber = 24;
+    private static readonly pb::FieldCodec<string> _repeated_compliantButDisallowedServices_codec
+        = pb::FieldCodec.ForString(194);
+    private readonly pbc::RepeatedField<string> compliantButDisallowedServices_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Urls for services which are compliant for this Assured Workload, but which
+    /// are currently disallowed by the ResourceUsageRestriction org policy.
+    /// Invoke RestrictAllowedResources endpoint to allow your project developers
+    /// to use these services in their environment."
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CompliantButDisallowedServices {
+      get { return compliantButDisallowedServices_; }
+    }
+
     private object complianceRegimeSettings_;
     /// <summary>Enum of possible cases for the "compliance_regime_settings" oneof.</summary>
     public enum ComplianceRegimeSettingsOneofCase {
@@ -3076,6 +3095,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (KajEnrollmentState != other.KajEnrollmentState) return false;
       if (EnableSovereignControls != other.EnableSovereignControls) return false;
       if (!object.Equals(SaaEnrollmentResponse, other.SaaEnrollmentResponse)) return false;
+      if(!compliantButDisallowedServices_.Equals(other.compliantButDisallowedServices_)) return false;
       if (ComplianceRegimeSettingsCase != other.ComplianceRegimeSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3102,6 +3122,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) hash ^= KajEnrollmentState.GetHashCode();
       if (EnableSovereignControls != false) hash ^= EnableSovereignControls.GetHashCode();
       if (saaEnrollmentResponse_ != null) hash ^= SaaEnrollmentResponse.GetHashCode();
+      hash ^= compliantButDisallowedServices_.GetHashCode();
       hash ^= (int) complianceRegimeSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3184,6 +3205,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(SaaEnrollmentResponse);
       }
+      compliantButDisallowedServices_.WriteTo(output, _repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3257,6 +3279,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(SaaEnrollmentResponse);
       }
+      compliantButDisallowedServices_.WriteTo(ref output, _repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3315,6 +3338,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (saaEnrollmentResponse_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SaaEnrollmentResponse);
       }
+      size += compliantButDisallowedServices_.CalculateSize(_repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3372,6 +3396,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         }
         SaaEnrollmentResponse.MergeFrom(other.SaaEnrollmentResponse);
       }
+      compliantButDisallowedServices_.Add(other.compliantButDisallowedServices_);
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           if (Il4Settings == null) {
@@ -3515,6 +3540,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             input.ReadMessage(SaaEnrollmentResponse);
             break;
           }
+          case 194: {
+            compliantButDisallowedServices_.AddEntriesFrom(input, _repeated_compliantButDisallowedServices_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3629,6 +3658,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
               SaaEnrollmentResponse = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse();
             }
             input.ReadMessage(SaaEnrollmentResponse);
+            break;
+          }
+          case 194: {
+            compliantButDisallowedServices_.AddEntriesFrom(ref input, _repeated_compliantButDisallowedServices_codec);
             break;
           }
         }
