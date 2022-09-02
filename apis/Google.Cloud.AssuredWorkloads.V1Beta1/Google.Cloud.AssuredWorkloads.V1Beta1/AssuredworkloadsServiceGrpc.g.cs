@@ -230,8 +230,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
 
       /// <summary>
-      /// A request to analyze a hypothetical move of a source project or
-      /// project-based workload to a target (destination) folder-based workload.
+      /// Analyze if the source Assured Workloads can be moved to the target Assured
+      /// Workload
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -576,8 +576,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkload, null, options, request);
       }
       /// <summary>
-      /// A request to analyze a hypothetical move of a source project or
-      /// project-based workload to a target (destination) folder-based workload.
+      /// Analyze if the source Assured Workloads can be moved to the target Assured
+      /// Workload
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -590,8 +590,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return AnalyzeWorkloadMove(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// A request to analyze a hypothetical move of a source project or
-      /// project-based workload to a target (destination) folder-based workload.
+      /// Analyze if the source Assured Workloads can be moved to the target Assured
+      /// Workload
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -602,8 +602,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeWorkloadMove, null, options, request);
       }
       /// <summary>
-      /// A request to analyze a hypothetical move of a source project or
-      /// project-based workload to a target (destination) folder-based workload.
+      /// Analyze if the source Assured Workloads can be moved to the target Assured
+      /// Workload
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -616,8 +616,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         return AnalyzeWorkloadMoveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// A request to analyze a hypothetical move of a source project or
-      /// project-based workload to a target (destination) folder-based workload.
+      /// Analyze if the source Assured Workloads can be moved to the target Assured
+      /// Workload
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -935,8 +935,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             GetWorkloadAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -945,8 +945,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -955,8 +955,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -965,8 +965,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             AnalyzeWorkloadMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="project">
         /// The source type is a project. Specify the project's relative resource
@@ -994,8 +994,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="project">
         /// The source type is a project. Specify the project's relative resource
@@ -1023,8 +1023,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="project">
         /// The source type is a project. Specify the project's relative resource
@@ -1410,8 +1410,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         }
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1423,8 +1423,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         }
 
         /// <summary>
-        /// A request to analyze a hypothetical move of a source project or
-        /// project-based workload to a target (destination) folder-based workload.
+        /// Analyze if the source Assured Workloads can be moved to the target Assured
+        /// Workload
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
