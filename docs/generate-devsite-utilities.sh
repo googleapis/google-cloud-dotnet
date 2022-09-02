@@ -76,16 +76,12 @@ case $1 in
     )
     ;;
   grpc)
-    declare -r REPO=https://github.com/grpc/grpc
-    # gRPC itself is on 1.x, even though Grpc.Core is on 2.x
-    # We work with the Grpc.Core version (which we use later in the metadata)
-    # so replace the first '2.' with '1.' here.
-    declare -r TAG=v${VERSION/2./1.}
+    declare -r REPO=https://github.com/grpc/grpc-dotnet
+    declare -r TAG=v$VERSION
     declare -r DEVSITE_PACKAGE=Grpc.Core
     declare -a PROJECTS=(
-      'src/csharp/Grpc.Auth'
-      'src/csharp/Grpc.Core'
-      'src/csharp/Grpc.Core.Api'
+      'src/Grpc.Auth'
+      'src/Grpc.Core.Api'
     )
     declare -r TARGET_FRAMEWORK=netstandard2.0
     declare -a XREFS=(
