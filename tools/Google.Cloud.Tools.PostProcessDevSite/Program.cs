@@ -200,6 +200,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
         /// <summary>
         /// Add a friendlyApiName value to every metadata YML file, based on the package name and product name.
+        /// This needs to be a child of the first entry in the "items" list.
         /// </summary>
         private void AddFriendlyNames()
         {
@@ -227,8 +228,17 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 }
 
                 var doc = (YamlMappingNode) yaml.Documents[0].RootNode;
-                doc.Add("friendlyApiName", friendlyName);
+                if (!doc.Children.TryGetValue("items", out var itemsNode) ||
+                    itemsNode is not YamlSequenceNode items ||
+                    items.Children.Count == 0 ||
+                    items.Children[0] is not YamlMappingNode firstItem)
+                {
+                    continue;
+                }
 
+                // Okay, we've found a root "items" node which is a sequence, and
+                // the first element is a mapping node. Add the friendly API name and save.
+                firstItem.Add("friendlyApiName", friendlyName);
                 // Note: this rewriting adds a "..." at the end of each file.
                 // That indicates the end of a YAML document, and is fine.
                 // We have to add the YamlMime header line ourselves as that isn't
