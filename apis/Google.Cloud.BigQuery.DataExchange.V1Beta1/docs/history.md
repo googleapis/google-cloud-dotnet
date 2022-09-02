@@ -1,5 +1,27 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-09-02
+
+### Bug fixes
+
+- **BREAKING CHANGE** Refactor references to Category message ([commit 56b0759](https://github.com/googleapis/google-cloud-dotnet/commit/56b0759444c88b64334b25873891ff81edcd74bd))
+
+### New features
+
+- **BREAKING CHANGE** Update BigQuery Analytics Hub API v1beta1 client ([commit 56b0759](https://github.com/googleapis/google-cloud-dotnet/commit/56b0759444c88b64334b25873891ff81edcd74bd))
+
+### Documentation improvements
+
+- Improve proto documentation. ([commit 56b0759](https://github.com/googleapis/google-cloud-dotnet/commit/56b0759444c88b64334b25873891ff81edcd74bd))
+
+### Breaking changes
+
+- Refresh current dataexchange/v1beta1/* directory to include recent change in protos. Removed common directory and use local enum Category ([commit 56b0759](https://github.com/googleapis/google-cloud-dotnet/commit/56b0759444c88b64334b25873891ff81edcd74bd))
+
+Note that the Google.Cloud.BigQuery.DataExchange.Common package is
+no longer a dependency of this package, and will be delisted from
+nuget.org.
+
 ## Version 2.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
