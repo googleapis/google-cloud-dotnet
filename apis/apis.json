@@ -2012,6 +2012,26 @@
       "serviceConfigFile": "iam_meta_api.yaml"
     },
     {
+      "id": "Google.Cloud.Iam.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Identity and Access Management (IAM)",
+      "productUrl": "https://cloud.google.com/iam/",
+      "description": "Recommended Google client library to access the Google Cloud IAM API (v2) which manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls.",
+      "tags": [
+        "IAM",
+        "Identity",
+        "Access"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/iam/v2",
+      "shortName": "iam",
+      "serviceConfigFile": "iam_v2.yaml"
+    },
+    {
       "id": "Google.Cloud.Iap.V1",
       "version": "2.0.0",
       "type": "grpc",
