@@ -1,0 +1,587 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Iam.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.iam.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "iam_v2_generated_Policies_ListPolicies_sync",
+      "title": "ListPoliciesRequestObject",
+      "description": "Snippet for ListPolicies",
+      "file": "PoliciesClient.ListPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicies",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPolicies",
+          "fullName": "google.iam.v2.Policies.ListPolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListPolicies_async",
+      "title": "ListPoliciesRequestObjectAsync",
+      "description": "Snippet for ListPoliciesAsync",
+      "file": "PoliciesClient.ListPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPolicies",
+          "fullName": "google.iam.v2.Policies.ListPolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListPolicies_sync_flattened",
+      "title": "ListPolicies",
+      "description": "Snippet for ListPolicies",
+      "file": "PoliciesClient.ListPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicies",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPolicies",
+          "fullName": "google.iam.v2.Policies.ListPolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListPolicies_async_flattened",
+      "title": "ListPoliciesAsync",
+      "description": "Snippet for ListPoliciesAsync",
+      "file": "PoliciesClient.ListPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPolicies",
+          "fullName": "google.iam.v2.Policies.ListPolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_GetPolicy_sync",
+      "title": "GetPolicyRequestObject",
+      "description": "Snippet for GetPolicy",
+      "file": "PoliciesClient.GetPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicy",
+        "resultType": "Google.Cloud.Iam.V2.Policy",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.iam.v2.Policies.GetPolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_GetPolicy_async",
+      "title": "GetPolicyRequestObjectAsync",
+      "description": "Snippet for GetPolicyAsync",
+      "file": "PoliciesClient.GetPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.iam.v2.Policies.GetPolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_GetPolicy_sync_flattened",
+      "title": "GetPolicy",
+      "description": "Snippet for GetPolicy",
+      "file": "PoliciesClient.GetPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicy",
+        "resultType": "Google.Cloud.Iam.V2.Policy",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.iam.v2.Policies.GetPolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_GetPolicy_async_flattened",
+      "title": "GetPolicyAsync",
+      "description": "Snippet for GetPolicyAsync",
+      "file": "PoliciesClient.GetPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.iam.v2.Policies.GetPolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_CreatePolicy_sync",
+      "title": "CreatePolicyRequestObject",
+      "description": "Snippet for CreatePolicy",
+      "file": "PoliciesClient.CreatePolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicy",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePolicy",
+          "fullName": "google.iam.v2.Policies.CreatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_CreatePolicy_async",
+      "title": "CreatePolicyRequestObjectAsync",
+      "description": "Snippet for CreatePolicyAsync",
+      "file": "PoliciesClient.CreatePolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePolicy",
+          "fullName": "google.iam.v2.Policies.CreatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_CreatePolicy_sync_flattened",
+      "title": "CreatePolicy",
+      "description": "Snippet for CreatePolicy",
+      "file": "PoliciesClient.CreatePolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicy",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePolicy",
+          "fullName": "google.iam.v2.Policies.CreatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_CreatePolicy_async_flattened",
+      "title": "CreatePolicyAsync",
+      "description": "Snippet for CreatePolicyAsync",
+      "file": "PoliciesClient.CreatePolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePolicy",
+          "fullName": "google.iam.v2.Policies.CreatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_UpdatePolicy_sync",
+      "title": "UpdatePolicyRequestObject",
+      "description": "Snippet for UpdatePolicy",
+      "file": "PoliciesClient.UpdatePolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.UpdatePolicy",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.iam.v2.Policies.UpdatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_UpdatePolicy_async",
+      "title": "UpdatePolicyRequestObjectAsync",
+      "description": "Snippet for UpdatePolicyAsync",
+      "file": "PoliciesClient.UpdatePolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.UpdatePolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.iam.v2.Policies.UpdatePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_DeletePolicy_sync",
+      "title": "DeletePolicyRequestObject",
+      "description": "Snippet for DeletePolicy",
+      "file": "PoliciesClient.DeletePolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicy",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePolicy",
+          "fullName": "google.iam.v2.Policies.DeletePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_DeletePolicy_async",
+      "title": "DeletePolicyRequestObjectAsync",
+      "description": "Snippet for DeletePolicyAsync",
+      "file": "PoliciesClient.DeletePolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePolicy",
+          "fullName": "google.iam.v2.Policies.DeletePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_DeletePolicy_sync_flattened",
+      "title": "DeletePolicy",
+      "description": "Snippet for DeletePolicy",
+      "file": "PoliciesClient.DeletePolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicy",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicy",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePolicy",
+          "fullName": "google.iam.v2.Policies.DeletePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_DeletePolicy_async_flattened",
+      "title": "DeletePolicyAsync",
+      "description": "Snippet for DeletePolicyAsync",
+      "file": "PoliciesClient.DeletePolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePolicy",
+          "fullName": "google.iam.v2.Policies.DeletePolicy",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListApplicablePolicies_sync",
+      "title": "ListApplicablePoliciesRequestObject",
+      "description": "Snippet for ListApplicablePolicies",
+      "file": "PoliciesClient.ListApplicablePoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListApplicablePolicies",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListApplicablePolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListApplicablePoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListApplicablePolicies",
+          "fullName": "google.iam.v2.Policies.ListApplicablePolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListApplicablePolicies_async",
+      "title": "ListApplicablePoliciesRequestObjectAsync",
+      "description": "Snippet for ListApplicablePoliciesAsync",
+      "file": "PoliciesClient.ListApplicablePoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListApplicablePoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListApplicablePoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListApplicablePoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListApplicablePolicies",
+          "fullName": "google.iam.v2.Policies.ListApplicablePolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListApplicablePolicies_sync_flattened",
+      "title": "ListApplicablePolicies",
+      "description": "Snippet for ListApplicablePolicies",
+      "file": "PoliciesClient.ListApplicablePoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListApplicablePolicies",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListApplicablePolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListApplicablePoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListApplicablePolicies",
+          "fullName": "google.iam.v2.Policies.ListApplicablePolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v2_generated_Policies_ListApplicablePolicies_async_flattened",
+      "title": "ListApplicablePoliciesAsync",
+      "description": "Snippet for ListApplicablePoliciesAsync",
+      "file": "PoliciesClient.ListApplicablePoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListApplicablePoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListApplicablePoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListApplicablePoliciesResponse, Google.Cloud.Iam.V2.Policy>",
+        "client": {
+          "shortName": "PoliciesClient",
+          "fullName": "Google.Cloud.Iam.V2.PoliciesClient"
+        },
+        "method": {
+          "shortName": "ListApplicablePolicies",
+          "fullName": "google.iam.v2.Policies.ListApplicablePolicies",
+          "service": {
+            "shortName": "Policies",
+            "fullName": "google.iam.v2.Policies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    }
+  ]
+}
