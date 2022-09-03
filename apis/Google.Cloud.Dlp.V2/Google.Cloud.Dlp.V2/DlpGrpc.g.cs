@@ -530,7 +530,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Returns a list of the sensitive information types that the DLP API
+      /// Returns a list of the sensitive information types that DLP API
       /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
       /// learn more.
       /// </summary>
@@ -544,7 +544,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Creates an InspectTemplate for re-using frequently used configuration
+      /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
       /// </summary>
@@ -610,7 +610,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
       /// more.
@@ -821,7 +821,7 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Deletes a long-running DlpJob. This method indicates that the client is
-      /// no longer interested in the DlpJob result. The job will be cancelled if
+      /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ReidentifyContent, null, options, request);
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that the DLP API
+      /// Returns a list of the sensitive information types that DLP API
       /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
       /// learn more.
       /// </summary>
@@ -1286,7 +1286,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that the DLP API
+      /// Returns a list of the sensitive information types that DLP API
       /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
       /// learn more.
       /// </summary>
@@ -1299,7 +1299,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInfoTypes, null, options, request);
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that the DLP API
+      /// Returns a list of the sensitive information types that DLP API
       /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
       /// learn more.
       /// </summary>
@@ -1314,7 +1314,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that the DLP API
+      /// Returns a list of the sensitive information types that DLP API
       /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
       /// learn more.
       /// </summary>
@@ -1327,7 +1327,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListInfoTypes, null, options, request);
       }
       /// <summary>
-      /// Creates an InspectTemplate for re-using frequently used configuration
+      /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
       /// </summary>
@@ -1342,7 +1342,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an InspectTemplate for re-using frequently used configuration
+      /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
       /// </summary>
@@ -1355,7 +1355,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates an InspectTemplate for re-using frequently used configuration
+      /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
       /// </summary>
@@ -1370,7 +1370,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an InspectTemplate for re-using frequently used configuration
+      /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
       /// </summary>
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
       /// more.
@@ -1607,7 +1607,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
       /// more.
@@ -1621,7 +1621,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
       /// more.
@@ -1637,7 +1637,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
       /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
       /// more.
@@ -2432,7 +2432,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a long-running DlpJob. This method indicates that the client is
-      /// no longer interested in the DlpJob result. The job will be cancelled if
+      /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -2449,7 +2449,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a long-running DlpJob. This method indicates that the client is
-      /// no longer interested in the DlpJob result. The job will be cancelled if
+      /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -2464,7 +2464,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a long-running DlpJob. This method indicates that the client is
-      /// no longer interested in the DlpJob result. The job will be cancelled if
+      /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -2481,7 +2481,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a long-running DlpJob. This method indicates that the client is
-      /// no longer interested in the DlpJob result. The job will be cancelled if
+      /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
