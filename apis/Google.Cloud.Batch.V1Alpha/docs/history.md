@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-alpha03, released 2022-09-05
+
+### Bug fixes
+
+- Mark service_account_email as deprecated ([commit 28348ae](https://github.com/googleapis/google-cloud-dotnet/commit/28348ae1f06940c5c6ac8ee7403e537b2af1ec12))
+
+### Documentation improvements
+
+- Removing comment from a deprecated field ([commit 28348ae](https://github.com/googleapis/google-cloud-dotnet/commit/28348ae1f06940c5c6ac8ee7403e537b2af1ec12))
+
 ## Version 1.0.0-alpha02, released 2022-08-26
 
 ### New features
