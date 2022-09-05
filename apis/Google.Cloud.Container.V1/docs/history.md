@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-09-05
+
+### Documentation improvements
+
+- BinaryAuthorization.enabled field is marked as deprecated ([commit de50331](https://github.com/googleapis/google-cloud-dotnet/commit/de503317d05e819ab1ace265afcd62911050df8e))
+
 ## Version 3.1.0, released 2022-07-11
 
 ### New features
