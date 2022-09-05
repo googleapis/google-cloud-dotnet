@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.2.0, released 2022-09-05
+
+### New features
+
+- Add Deidentify action ([commit c74e772](https://github.com/googleapis/google-cloud-dotnet/commit/c74e77280744b8cfe3827bdbc152889cf96fbb17))
+
 ## Version 4.1.0, released 2022-07-25
 
 ### New features
