@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2022-09-05
+
+### Documentation improvements
+
+- Update documentation for RoutingPreference to better describe behaviors ([commit 991aeac](https://github.com/googleapis/google-cloud-dotnet/commit/991aeac0e3443845dde54cfd651cb057d92c9d46))
+- Update comment for Waypoint.side_of_road to accurately describe functionality ([commit 0ec23a7](https://github.com/googleapis/google-cloud-dotnet/commit/0ec23a74a4f77572e6f8115e3417a1787410bf66))
+
 ## Version 1.0.0-beta03, released 2022-08-26
 
 ### New features
