@@ -37,4 +37,5 @@
   "f22bb35": "skip", // Fixing OSConfig
   "2096786": "skip", // Regenerate after gRPC change
   "e85a0e1": "skip", // Remove unused imports in protos
+  "3b1e263": "skip", // Regenerate with new generator (fixes XML escaping)
 }
