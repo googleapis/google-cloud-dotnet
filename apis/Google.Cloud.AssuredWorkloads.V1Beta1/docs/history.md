@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2022-09-05
+
+### New features
+
+- Add compliant_but_disallowed_services field to the v1beta1 Workload proto ([commit b632564](https://github.com/googleapis/google-cloud-dotnet/commit/b63256454b6baf3b7e879508b441d305250c5a9b))
+- Updated v1beta1 analyzeWorkloadMove documentation ([commit 80d91f3](https://github.com/googleapis/google-cloud-dotnet/commit/80d91f38efd947425ce6f785d523857e16fbf1eb))
+
 ## Version 2.0.0-beta03, released 2022-07-25
 
 ### New features
