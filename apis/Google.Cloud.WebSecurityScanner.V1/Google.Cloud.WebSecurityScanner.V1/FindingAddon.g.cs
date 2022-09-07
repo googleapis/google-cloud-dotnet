@@ -47,13 +47,16 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "RVRFUlMQCBIQCgxVUkxfRlJBR01FTlQQCRIQCgxIVE1MX0NPTU1FTlQQChIT",
             "Cg9QT1NUX1BBUkFNRVRFUlMQCxIMCghQUk9UT0NPTBAMEg4KClNUT1JFRF9Y",
             "U1MQDRIPCgtTQU1FX09SSUdJThAOEhkKFVVTRVJfQ09OVFJPTExBQkxFX1VS",
-            "TBAPQoUCCiZjb20uZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52",
-            "MUIRRmluZGluZ0FkZG9uUHJvdG9QAVpUZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC93ZWJzZWN1cml0eXNjYW5uZXIvdjE7",
-            "d2Vic2VjdXJpdHlzY2FubmVyqgIiR29vZ2xlLkNsb3VkLldlYlNlY3VyaXR5",
-            "U2Nhbm5lci5WMcoCIkdvb2dsZVxDbG91ZFxXZWJTZWN1cml0eVNjYW5uZXJc",
-            "VjHqAiVHb29nbGU6OkNsb3VkOjpXZWJTZWN1cml0eVNjYW5uZXI6OlYxYgZw",
-            "cm90bzM="));
+            "TBAPIqkBCgNYeGUSFQoNcGF5bG9hZF92YWx1ZRgBIAEoCRJKChBwYXlsb2Fk",
+            "X2xvY2F0aW9uGAIgASgOMjAuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nh",
+            "bm5lci52MS5YeGUuTG9jYXRpb24iPwoITG9jYXRpb24SGAoUTE9DQVRJT05f",
+            "VU5TUEVDSUZJRUQQABIZChVDT01QTEVURV9SRVFVRVNUX0JPRFkQAUKFAgom",
+            "Y29tLmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjFCEUZpbmRp",
+            "bmdBZGRvblByb3RvUAFaVGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxO3dlYnNlY3Vy",
+            "aXR5c2Nhbm5lcqoCIkdvb2dsZS5DbG91ZC5XZWJTZWN1cml0eVNjYW5uZXIu",
+            "VjHKAiJHb29nbGVcQ2xvdWRcV2ViU2VjdXJpdHlTY2FubmVyXFYx6gIlR29v",
+            "Z2xlOjpDbG91ZDo6V2ViU2VjdXJpdHlTY2FubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,7 +65,8 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ViolatingResource), global::Google.Cloud.WebSecurityScanner.V1.ViolatingResource.Parser, new[]{ "ContentType", "ResourceUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.VulnerableParameters), global::Google.Cloud.WebSecurityScanner.V1.VulnerableParameters.Parser, new[]{ "ParameterNames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.VulnerableHeaders), global::Google.Cloud.WebSecurityScanner.V1.VulnerableHeaders.Parser, new[]{ "Headers", "MissingHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.VulnerableHeaders.Types.Header), global::Google.Cloud.WebSecurityScanner.V1.VulnerableHeaders.Types.Header.Parser, new[]{ "Name", "Value" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.Xss), global::Google.Cloud.WebSecurityScanner.V1.Xss.Parser, new[]{ "StackTraces", "ErrorMessage", "AttackVector", "StoredXssSeedingUrl" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.Xss.Types.AttackVector) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.Xss), global::Google.Cloud.WebSecurityScanner.V1.Xss.Parser, new[]{ "StackTraces", "ErrorMessage", "AttackVector", "StoredXssSeedingUrl" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.Xss.Types.AttackVector) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.Xxe), global::Google.Cloud.WebSecurityScanner.V1.Xxe.Parser, new[]{ "PayloadValue", "PayloadLocation" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location) }, null, null)
           }));
     }
     #endregion
@@ -1809,6 +1813,264 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         /// user-controllable
         /// </summary>
         [pbr::OriginalName("USER_CONTROLLABLE_URL")] UserControllableUrl = 15,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Information reported for an XXE.
+  /// </summary>
+  public sealed partial class Xxe : pb::IMessage<Xxe>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Xxe> _parser = new pb::MessageParser<Xxe>(() => new Xxe());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Xxe> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.WebSecurityScanner.V1.FindingAddonReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Xxe() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Xxe(Xxe other) : this() {
+      payloadValue_ = other.payloadValue_;
+      payloadLocation_ = other.payloadLocation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Xxe Clone() {
+      return new Xxe(this);
+    }
+
+    /// <summary>Field number for the "payload_value" field.</summary>
+    public const int PayloadValueFieldNumber = 1;
+    private string payloadValue_ = "";
+    /// <summary>
+    /// The XML string that triggered the XXE vulnerability. Non-payload values
+    /// might be redacted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PayloadValue {
+      get { return payloadValue_; }
+      set {
+        payloadValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "payload_location" field.</summary>
+    public const int PayloadLocationFieldNumber = 2;
+    private global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location payloadLocation_ = global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified;
+    /// <summary>
+    /// Location within the request where the payload was placed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location PayloadLocation {
+      get { return payloadLocation_; }
+      set {
+        payloadLocation_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Xxe);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Xxe other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PayloadValue != other.PayloadValue) return false;
+      if (PayloadLocation != other.PayloadLocation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PayloadValue.Length != 0) hash ^= PayloadValue.GetHashCode();
+      if (PayloadLocation != global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified) hash ^= PayloadLocation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PayloadValue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PayloadValue);
+      }
+      if (PayloadLocation != global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PayloadLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PayloadValue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PayloadValue);
+      }
+      if (PayloadLocation != global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PayloadLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PayloadValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PayloadValue);
+      }
+      if (PayloadLocation != global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PayloadLocation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Xxe other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PayloadValue.Length != 0) {
+        PayloadValue = other.PayloadValue;
+      }
+      if (other.PayloadLocation != global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location.Unspecified) {
+        PayloadLocation = other.PayloadLocation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PayloadValue = input.ReadString();
+            break;
+          }
+          case 16: {
+            PayloadLocation = (global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PayloadValue = input.ReadString();
+            break;
+          }
+          case 16: {
+            PayloadLocation = (global::Google.Cloud.WebSecurityScanner.V1.Xxe.Types.Location) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Xxe message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Locations within a request where XML was substituted.
+      /// </summary>
+      public enum Location {
+        /// <summary>
+        /// Unknown Location.
+        /// </summary>
+        [pbr::OriginalName("LOCATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The XML payload replaced the complete request body.
+        /// </summary>
+        [pbr::OriginalName("COMPLETE_REQUEST_BODY")] CompleteRequestBody = 1,
       }
 
     }

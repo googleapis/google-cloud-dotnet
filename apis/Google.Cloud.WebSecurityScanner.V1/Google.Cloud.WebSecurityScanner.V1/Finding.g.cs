@@ -28,7 +28,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "cHJvdG8SImdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aNmdvb2dsZS9jbG91ZC93ZWJzZWN1cml0eXNjYW5uZXIv",
-            "djEvZmluZGluZ19hZGRvbi5wcm90byKxBwoHRmluZGluZxIMCgRuYW1lGAEg",
+            "djEvZmluZGluZ19hZGRvbi5wcm90byLsBwoHRmluZGluZxIMCgRuYW1lGAEg",
             "ASgJEhQKDGZpbmRpbmdfdHlwZRgCIAEoCRJLCghzZXZlcml0eRgRIAEoDjI0",
             "Lmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjEuRmluZGluZy5T",
             "ZXZlcml0eUID4EEDEhMKC2h0dHBfbWV0aG9kGAMgASgJEhIKCmZ1enplZF91",
@@ -44,22 +44,23 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "bmVyLnYxLlZ1bG5lcmFibGVIZWFkZXJzElcKFXZ1bG5lcmFibGVfcGFyYW1l",
             "dGVycxgNIAEoCzI4Lmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIu",
             "djEuVnVsbmVyYWJsZVBhcmFtZXRlcnMSNAoDeHNzGA4gASgLMicuZ29vZ2xl",
-            "LmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MS5Yc3MiUQoIU2V2ZXJpdHkS",
-            "GAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJ",
-            "R0gQAhIKCgZNRURJVU0QAxIHCgNMT1cQBDqEAepBgAEKKXdlYnNlY3VyaXR5",
-            "c2Nhbm5lci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nElNwcm9qZWN0cy97cHJv",
-            "amVjdH0vc2NhbkNvbmZpZ3Mve3NjYW5fY29uZmlnfS9zY2FuUnVucy97c2Nh",
-            "bl9ydW59L2ZpbmRpbmdzL3tmaW5kaW5nfUKAAgomY29tLmdvb2dsZS5jbG91",
-            "ZC53ZWJzZWN1cml0eXNjYW5uZXIudjFCDEZpbmRpbmdQcm90b1ABWlRnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3dlYnNl",
-            "Y3VyaXR5c2Nhbm5lci92MTt3ZWJzZWN1cml0eXNjYW5uZXKqAiJHb29nbGUu",
-            "Q2xvdWQuV2ViU2VjdXJpdHlTY2FubmVyLlYxygIiR29vZ2xlXENsb3VkXFdl",
-            "YlNlY3VyaXR5U2Nhbm5lclxWMeoCJUdvb2dsZTo6Q2xvdWQ6OldlYlNlY3Vy",
-            "aXR5U2Nhbm5lcjo6VjFiBnByb3RvMw=="));
+            "LmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MS5Yc3MSOQoDeHhlGBIgASgL",
+            "MicuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MS5YeGVCA+BB",
+            "AyJRCghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENS",
+            "SVRJQ0FMEAESCAoESElHSBACEgoKBk1FRElVTRADEgcKA0xPVxAEOoQB6kGA",
+            "AQopd2Vic2VjdXJpdHlzY2FubmVyLmdvb2dsZWFwaXMuY29tL0ZpbmRpbmcS",
+            "U3Byb2plY3RzL3twcm9qZWN0fS9zY2FuQ29uZmlncy97c2Nhbl9jb25maWd9",
+            "L3NjYW5SdW5zL3tzY2FuX3J1bn0vZmluZGluZ3Mve2ZpbmRpbmd9QoACCiZj",
+            "b20uZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MUIMRmluZGlu",
+            "Z1Byb3RvUAFaVGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxO3dlYnNlY3VyaXR5c2Nh",
+            "bm5lcqoCIkdvb2dsZS5DbG91ZC5XZWJTZWN1cml0eVNjYW5uZXIuVjHKAiJH",
+            "b29nbGVcQ2xvdWRcV2ViU2VjdXJpdHlTY2FubmVyXFYx6gIlR29vZ2xlOjpD",
+            "bG91ZDo6V2ViU2VjdXJpdHlTY2FubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.FindingAddonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.Finding), global::Google.Cloud.WebSecurityScanner.V1.Finding.Parser, new[]{ "Name", "FindingType", "Severity", "HttpMethod", "FuzzedUrl", "Body", "Description", "ReproductionUrl", "FrameUrl", "FinalUrl", "TrackingId", "Form", "OutdatedLibrary", "ViolatingResource", "VulnerableHeaders", "VulnerableParameters", "Xss" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.Finding.Types.Severity) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.Finding), global::Google.Cloud.WebSecurityScanner.V1.Finding.Parser, new[]{ "Name", "FindingType", "Severity", "HttpMethod", "FuzzedUrl", "Body", "Description", "ReproductionUrl", "FrameUrl", "FinalUrl", "TrackingId", "Form", "OutdatedLibrary", "ViolatingResource", "VulnerableHeaders", "VulnerableParameters", "Xss", "Xxe" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.Finding.Types.Severity) }, null, null)
           }));
     }
     #endregion
@@ -121,6 +122,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       vulnerableHeaders_ = other.vulnerableHeaders_ != null ? other.vulnerableHeaders_.Clone() : null;
       vulnerableParameters_ = other.vulnerableParameters_ != null ? other.vulnerableParameters_.Clone() : null;
       xss_ = other.xss_ != null ? other.xss_.Clone() : null;
+      xxe_ = other.xxe_ != null ? other.xxe_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -397,6 +399,21 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "xxe" field.</summary>
+    public const int XxeFieldNumber = 18;
+    private global::Google.Cloud.WebSecurityScanner.V1.Xxe xxe_;
+    /// <summary>
+    /// Output only. An addon containing information reported for an XXE, if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebSecurityScanner.V1.Xxe Xxe {
+      get { return xxe_; }
+      set {
+        xxe_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -429,6 +446,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       if (!object.Equals(VulnerableHeaders, other.VulnerableHeaders)) return false;
       if (!object.Equals(VulnerableParameters, other.VulnerableParameters)) return false;
       if (!object.Equals(Xss, other.Xss)) return false;
+      if (!object.Equals(Xxe, other.Xxe)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -453,6 +471,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       if (vulnerableHeaders_ != null) hash ^= VulnerableHeaders.GetHashCode();
       if (vulnerableParameters_ != null) hash ^= VulnerableParameters.GetHashCode();
       if (xss_ != null) hash ^= Xss.GetHashCode();
+      if (xxe_ != null) hash ^= Xxe.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -539,6 +558,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) Severity);
       }
+      if (xxe_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Xxe);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -617,6 +640,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) Severity);
       }
+      if (xxe_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Xxe);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -677,6 +704,9 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       }
       if (xss_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Xss);
+      }
+      if (xxe_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Xxe);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -758,6 +788,12 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           Xss = new global::Google.Cloud.WebSecurityScanner.V1.Xss();
         }
         Xss.MergeFrom(other.Xss);
+      }
+      if (other.xxe_ != null) {
+        if (xxe_ == null) {
+          Xxe = new global::Google.Cloud.WebSecurityScanner.V1.Xxe();
+        }
+        Xxe.MergeFrom(other.Xxe);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -860,6 +896,13 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             Severity = (global::Google.Cloud.WebSecurityScanner.V1.Finding.Types.Severity) input.ReadEnum();
             break;
           }
+          case 146: {
+            if (xxe_ == null) {
+              Xxe = new global::Google.Cloud.WebSecurityScanner.V1.Xxe();
+            }
+            input.ReadMessage(Xxe);
+            break;
+          }
         }
       }
     #endif
@@ -959,6 +1002,13 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           }
           case 136: {
             Severity = (global::Google.Cloud.WebSecurityScanner.V1.Finding.Types.Severity) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (xxe_ == null) {
+              Xxe = new global::Google.Cloud.WebSecurityScanner.V1.Xxe();
+            }
+            input.ReadMessage(Xxe);
             break;
           }
         }

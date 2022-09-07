@@ -348,7 +348,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Output only.
       /// Defines an error reason code.
-      /// Next id: 7
+      /// Next id: 8
       /// </summary>
       public enum Code {
         /// <summary>
