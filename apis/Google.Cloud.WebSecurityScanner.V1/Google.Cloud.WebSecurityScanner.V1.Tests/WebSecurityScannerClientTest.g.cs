@@ -57,6 +57,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.CreateScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -94,6 +95,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.CreateScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -163,6 +165,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.GetScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -199,6 +202,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.GetScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -238,6 +242,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.UpdateScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -275,6 +280,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
                 StaticIpScan = false,
+                IgnoreHttpStatusErrors = false,
             };
             mockGrpcClient.Setup(x => x.UpdateScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -510,6 +516,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 VulnerableHeaders = new VulnerableHeaders(),
                 Form = new Form(),
                 Severity = Finding.Types.Severity.Medium,
+                Xxe = new Xxe(),
             };
             mockGrpcClient.Setup(x => x.GetFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
@@ -545,6 +552,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 VulnerableHeaders = new VulnerableHeaders(),
                 Form = new Form(),
                 Severity = Finding.Types.Severity.Medium,
+                Xxe = new Xxe(),
             };
             mockGrpcClient.Setup(x => x.GetFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);

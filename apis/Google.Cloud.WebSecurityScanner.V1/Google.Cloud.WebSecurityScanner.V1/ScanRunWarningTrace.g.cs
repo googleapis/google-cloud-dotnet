@@ -26,18 +26,19 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           string.Concat(
             "Cj9nb29nbGUvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxL3NjYW5fcnVu",
             "X3dhcm5pbmdfdHJhY2UucHJvdG8SImdvb2dsZS5jbG91ZC53ZWJzZWN1cml0",
-            "eXNjYW5uZXIudjEi6QEKE1NjYW5SdW5XYXJuaW5nVHJhY2USSgoEY29kZRgB",
+            "eXNjYW5uZXIudjEilQIKE1NjYW5SdW5XYXJuaW5nVHJhY2USSgoEY29kZRgB",
             "IAEoDjI8Lmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjEuU2Nh",
-            "blJ1bldhcm5pbmdUcmFjZS5Db2RlIoUBCgRDb2RlEhQKEENPREVfVU5TUEVD",
+            "blJ1bldhcm5pbmdUcmFjZS5Db2RlIrEBCgRDb2RlEhQKEENPREVfVU5TUEVD",
             "SUZJRUQQABIeChpJTlNVRkZJQ0lFTlRfQ1JBV0xfUkVTVUxUUxABEhoKFlRP",
             "T19NQU5ZX0NSQVdMX1JFU1VMVFMQAhIXChNUT09fTUFOWV9GVVpaX1RBU0tT",
-            "EAMSEgoOQkxPQ0tFRF9CWV9JQVAQBEKMAgomY29tLmdvb2dsZS5jbG91ZC53",
-            "ZWJzZWN1cml0eXNjYW5uZXIudjFCGFNjYW5SdW5XYXJuaW5nVHJhY2VQcm90",
-            "b1ABWlRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3dlYnNlY3VyaXR5c2Nhbm5lci92MTt3ZWJzZWN1cml0eXNjYW5uZXKq",
-            "AiJHb29nbGUuQ2xvdWQuV2ViU2VjdXJpdHlTY2FubmVyLlYxygIiR29vZ2xl",
-            "XENsb3VkXFdlYlNlY3VyaXR5U2Nhbm5lclxWMeoCJUdvb2dsZTo6Q2xvdWQ6",
-            "OldlYlNlY3VyaXR5U2Nhbm5lcjo6VjFiBnByb3RvMw=="));
+            "EAMSEgoOQkxPQ0tFRF9CWV9JQVAQBBIqCiZOT19TVEFSVElOR19VUkxfRk9V",
+            "TkRfRk9SX01BTkFHRURfU0NBThAFQowCCiZjb20uZ29vZ2xlLmNsb3VkLndl",
+            "YnNlY3VyaXR5c2Nhbm5lci52MUIYU2NhblJ1bldhcm5pbmdUcmFjZVByb3Rv",
+            "UAFaVGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxO3dlYnNlY3VyaXR5c2Nhbm5lcqoC",
+            "Ikdvb2dsZS5DbG91ZC5XZWJTZWN1cml0eVNjYW5uZXIuVjHKAiJHb29nbGVc",
+            "Q2xvdWRcV2ViU2VjdXJpdHlTY2FubmVyXFYx6gIlR29vZ2xlOjpDbG91ZDo6",
+            "V2ViU2VjdXJpdHlTY2FubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -279,6 +280,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         /// Indicates that a scan is blocked by IAP.
         /// </summary>
         [pbr::OriginalName("BLOCKED_BY_IAP")] BlockedByIap = 4,
+        /// <summary>
+        /// Indicates that no seeds is found for a scan
+        /// </summary>
+        [pbr::OriginalName("NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN")] NoStartingUrlFoundForManagedScan = 5,
       }
 
     }

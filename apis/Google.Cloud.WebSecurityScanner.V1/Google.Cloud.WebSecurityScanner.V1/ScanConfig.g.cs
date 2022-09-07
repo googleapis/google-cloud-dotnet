@@ -27,7 +27,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "CjRnb29nbGUvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxL3NjYW5fY29u",
             "ZmlnLnByb3RvEiJnb29nbGUuY2xvdWQud2Vic2VjdXJpdHlzY2FubmVyLnYx",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIpkNCgpTY2FuQ29uZmlnEgwKBG5hbWUY",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIsQNCgpTY2FuQ29uZmlnEgwKBG5hbWUY",
             "ASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEg8KB21heF9xcHMYAyABKAUS",
             "FQoNc3RhcnRpbmdfdXJscxgEIAMoCRJVCg5hdXRoZW50aWNhdGlvbhgFIAEo",
             "CzI9Lmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjEuU2NhbkNv",
@@ -40,42 +40,43 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "c2Nhbm5lci52MS5TY2FuQ29uZmlnLkV4cG9ydFRvU2VjdXJpdHlDb21tYW5k",
             "Q2VudGVyEkwKCnJpc2tfbGV2ZWwYDCABKA4yOC5nb29nbGUuY2xvdWQud2Vi",
             "c2VjdXJpdHlzY2FubmVyLnYxLlNjYW5Db25maWcuUmlza0xldmVsEhQKDG1h",
-            "bmFnZWRfc2NhbhgNIAEoCBIWCg5zdGF0aWNfaXBfc2NhbhgOIAEoCBrPBQoO",
-            "QXV0aGVudGljYXRpb24SZQoOZ29vZ2xlX2FjY291bnQYASABKAsySy5nb29n",
-            "bGUuY2xvdWQud2Vic2VjdXJpdHlzY2FubmVyLnYxLlNjYW5Db25maWcuQXV0",
-            "aGVudGljYXRpb24uR29vZ2xlQWNjb3VudEgAEmUKDmN1c3RvbV9hY2NvdW50",
-            "GAIgASgLMksuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MS5T",
-            "Y2FuQ29uZmlnLkF1dGhlbnRpY2F0aW9uLkN1c3RvbUFjY291bnRIABJlCg5p",
-            "YXBfY3JlZGVudGlhbBgEIAEoCzJLLmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0",
-            "eXNjYW5uZXIudjEuU2NhbkNvbmZpZy5BdXRoZW50aWNhdGlvbi5JYXBDcmVk",
-            "ZW50aWFsSAAaMwoNR29vZ2xlQWNjb3VudBIQCgh1c2VybmFtZRgBIAEoCRIQ",
-            "CghwYXNzd29yZBgCIAEoCRpGCg1DdXN0b21BY2NvdW50EhAKCHVzZXJuYW1l",
-            "GAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEhEKCWxvZ2luX3VybBgDIAEoCRr4",
-            "AQoNSWFwQ3JlZGVudGlhbBKOAQodaWFwX3Rlc3Rfc2VydmljZV9hY2NvdW50",
-            "X2luZm8YASABKAsyZS5nb29nbGUuY2xvdWQud2Vic2VjdXJpdHlzY2FubmVy",
-            "LnYxLlNjYW5Db25maWcuQXV0aGVudGljYXRpb24uSWFwQ3JlZGVudGlhbC5J",
-            "YXBUZXN0U2VydmljZUFjY291bnRJbmZvSAAaQwoZSWFwVGVzdFNlcnZpY2VB",
-            "Y2NvdW50SW5mbxImChl0YXJnZXRfYXVkaWVuY2VfY2xpZW50X2lkGAEgASgJ",
-            "QgPgQQJCEQoPaWFwX2NyZWRlbnRpYWxzQhAKDmF1dGhlbnRpY2F0aW9uGl0K",
-            "CFNjaGVkdWxlEjEKDXNjaGVkdWxlX3RpbWUYASABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEh4KFmludGVydmFsX2R1cmF0aW9uX2RheXMYAiAB",
-            "KAUiYAoJVXNlckFnZW50EhoKFlVTRVJfQUdFTlRfVU5TUEVDSUZJRUQQABIQ",
-            "CgxDSFJPTUVfTElOVVgQARISCg5DSFJPTUVfQU5EUk9JRBACEhEKDVNBRkFS",
-            "SV9JUEhPTkUQAyI8CglSaXNrTGV2ZWwSGgoWUklTS19MRVZFTF9VTlNQRUNJ",
-            "RklFRBAAEgoKBk5PUk1BTBABEgcKA0xPVxACIm0KHUV4cG9ydFRvU2VjdXJp",
-            "dHlDb21tYW5kQ2VudGVyEjEKLUVYUE9SVF9UT19TRUNVUklUWV9DT01NQU5E",
-            "X0NFTlRFUl9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxF",
-            "RBACQoMCCiZjb20uZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52",
-            "MUIPU2NhbkNvbmZpZ1Byb3RvUAFaVGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxO3dl",
-            "YnNlY3VyaXR5c2Nhbm5lcqoCIkdvb2dsZS5DbG91ZC5XZWJTZWN1cml0eVNj",
-            "YW5uZXIuVjHKAiJHb29nbGVcQ2xvdWRcV2ViU2VjdXJpdHlTY2FubmVyXFYx",
-            "6gIlR29vZ2xlOjpDbG91ZDo6V2ViU2VjdXJpdHlTY2FubmVyOjpWMWIGcHJv",
-            "dG8z"));
+            "bmFnZWRfc2NhbhgNIAEoCBIWCg5zdGF0aWNfaXBfc2NhbhgOIAEoCBIhChlp",
+            "Z25vcmVfaHR0cF9zdGF0dXNfZXJyb3JzGA8gASgIGtcFCg5BdXRoZW50aWNh",
+            "dGlvbhJpCg5nb29nbGVfYWNjb3VudBgBIAEoCzJLLmdvb2dsZS5jbG91ZC53",
+            "ZWJzZWN1cml0eXNjYW5uZXIudjEuU2NhbkNvbmZpZy5BdXRoZW50aWNhdGlv",
+            "bi5Hb29nbGVBY2NvdW50QgIYAUgAEmUKDmN1c3RvbV9hY2NvdW50GAIgASgL",
+            "MksuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52MS5TY2FuQ29u",
+            "ZmlnLkF1dGhlbnRpY2F0aW9uLkN1c3RvbUFjY291bnRIABJlCg5pYXBfY3Jl",
+            "ZGVudGlhbBgEIAEoCzJLLmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5u",
+            "ZXIudjEuU2NhbkNvbmZpZy5BdXRoZW50aWNhdGlvbi5JYXBDcmVkZW50aWFs",
+            "SAAaNwoNR29vZ2xlQWNjb3VudBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNz",
+            "d29yZBgCIAEoCToCGAEaRgoNQ3VzdG9tQWNjb3VudBIQCgh1c2VybmFtZRgB",
+            "IAEoCRIQCghwYXNzd29yZBgCIAEoCRIRCglsb2dpbl91cmwYAyABKAka+AEK",
+            "DUlhcENyZWRlbnRpYWwSjgEKHWlhcF90ZXN0X3NlcnZpY2VfYWNjb3VudF9p",
+            "bmZvGAEgASgLMmUuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52",
+            "MS5TY2FuQ29uZmlnLkF1dGhlbnRpY2F0aW9uLklhcENyZWRlbnRpYWwuSWFw",
+            "VGVzdFNlcnZpY2VBY2NvdW50SW5mb0gAGkMKGUlhcFRlc3RTZXJ2aWNlQWNj",
+            "b3VudEluZm8SJgoZdGFyZ2V0X2F1ZGllbmNlX2NsaWVudF9pZBgBIAEoCUID",
+            "4EECQhEKD2lhcF9jcmVkZW50aWFsc0IQCg5hdXRoZW50aWNhdGlvbhpdCghT",
+            "Y2hlZHVsZRIxCg1zY2hlZHVsZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIeChZpbnRlcnZhbF9kdXJhdGlvbl9kYXlzGAIgASgF",
+            "ImAKCVVzZXJBZ2VudBIaChZVU0VSX0FHRU5UX1VOU1BFQ0lGSUVEEAASEAoM",
+            "Q0hST01FX0xJTlVYEAESEgoOQ0hST01FX0FORFJPSUQQAhIRCg1TQUZBUklf",
+            "SVBIT05FEAMiPAoJUmlza0xldmVsEhoKFlJJU0tfTEVWRUxfVU5TUEVDSUZJ",
+            "RUQQABIKCgZOT1JNQUwQARIHCgNMT1cQAiJtCh1FeHBvcnRUb1NlY3VyaXR5",
+            "Q29tbWFuZENlbnRlchIxCi1FWFBPUlRfVE9fU0VDVVJJVFlfQ09NTUFORF9D",
+            "RU5URVJfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQ",
+            "AkKDAgomY29tLmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjFC",
+            "D1NjYW5Db25maWdQcm90b1ABWlRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3dlYnNlY3VyaXR5c2Nhbm5lci92MTt3ZWJz",
+            "ZWN1cml0eXNjYW5uZXKqAiJHb29nbGUuQ2xvdWQuV2ViU2VjdXJpdHlTY2Fu",
+            "bmVyLlYxygIiR29vZ2xlXENsb3VkXFdlYlNlY3VyaXR5U2Nhbm5lclxWMeoC",
+            "JUdvb2dsZTo6Q2xvdWQ6OldlYlNlY3VyaXR5U2Nhbm5lcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Parser, new[]{ "Name", "DisplayName", "MaxQps", "StartingUrls", "Authentication", "UserAgent", "BlacklistPatterns", "Schedule", "ExportToSecurityCommandCenter", "RiskLevel", "ManagedScan", "StaticIpScan" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.UserAgent), typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.RiskLevel), typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.ExportToSecurityCommandCenter) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Parser, new[]{ "GoogleAccount", "CustomAccount", "IapCredential" }, new[]{ "Authentication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.GoogleAccount), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.GoogleAccount.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Parser, new[]{ "Name", "DisplayName", "MaxQps", "StartingUrls", "Authentication", "UserAgent", "BlacklistPatterns", "Schedule", "ExportToSecurityCommandCenter", "RiskLevel", "ManagedScan", "StaticIpScan", "IgnoreHttpStatusErrors" }, null, new[]{ typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.UserAgent), typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.RiskLevel), typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.ExportToSecurityCommandCenter) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Parser, new[]{ "GoogleAccount", "CustomAccount", "IapCredential" }, new[]{ "Authentication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.GoogleAccount), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.GoogleAccount.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.CustomAccount), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.CustomAccount.Parser, new[]{ "Username", "Password", "LoginUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.IapCredential), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.IapCredential.Parser, new[]{ "IapTestServiceAccountInfo" }, new[]{ "IapCredentials" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo.Parser, new[]{ "TargetAudienceClientId" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Schedule), global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Schedule.Parser, new[]{ "ScheduleTime", "IntervalDurationDays" }, null, null, null, null)})
@@ -134,6 +135,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       riskLevel_ = other.riskLevel_;
       managedScan_ = other.managedScan_;
       staticIpScan_ = other.staticIpScan_;
+      ignoreHttpStatusErrors_ = other.ignoreHttpStatusErrors_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -331,6 +333,21 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "ignore_http_status_errors" field.</summary>
+    public const int IgnoreHttpStatusErrorsFieldNumber = 15;
+    private bool ignoreHttpStatusErrors_;
+    /// <summary>
+    /// Whether to keep scanning even if most requests return HTTP error codes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IgnoreHttpStatusErrors {
+      get { return ignoreHttpStatusErrors_; }
+      set {
+        ignoreHttpStatusErrors_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -358,6 +375,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       if (RiskLevel != other.RiskLevel) return false;
       if (ManagedScan != other.ManagedScan) return false;
       if (StaticIpScan != other.StaticIpScan) return false;
+      if (IgnoreHttpStatusErrors != other.IgnoreHttpStatusErrors) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -377,6 +395,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       if (RiskLevel != global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.RiskLevel.Unspecified) hash ^= RiskLevel.GetHashCode();
       if (ManagedScan != false) hash ^= ManagedScan.GetHashCode();
       if (StaticIpScan != false) hash ^= StaticIpScan.GetHashCode();
+      if (IgnoreHttpStatusErrors != false) hash ^= IgnoreHttpStatusErrors.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -437,6 +456,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         output.WriteRawTag(112);
         output.WriteBool(StaticIpScan);
       }
+      if (IgnoreHttpStatusErrors != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IgnoreHttpStatusErrors);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -489,6 +512,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         output.WriteRawTag(112);
         output.WriteBool(StaticIpScan);
       }
+      if (IgnoreHttpStatusErrors != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IgnoreHttpStatusErrors);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -529,6 +556,9 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         size += 1 + 1;
       }
       if (StaticIpScan != false) {
+        size += 1 + 1;
+      }
+      if (IgnoreHttpStatusErrors != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -580,6 +610,9 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       }
       if (other.StaticIpScan != false) {
         StaticIpScan = other.StaticIpScan;
+      }
+      if (other.IgnoreHttpStatusErrors != false) {
+        IgnoreHttpStatusErrors = other.IgnoreHttpStatusErrors;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -650,6 +683,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             StaticIpScan = input.ReadBool();
             break;
           }
+          case 120: {
+            IgnoreHttpStatusErrors = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -717,6 +754,10 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           }
           case 112: {
             StaticIpScan = input.ReadBool();
+            break;
+          }
+          case 120: {
+            IgnoreHttpStatusErrors = input.ReadBool();
             break;
           }
         }
@@ -853,6 +894,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         /// <summary>
         /// Authentication using a Google account.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Types.Authentication.Types.GoogleAccount GoogleAccount {
@@ -1146,6 +1188,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// <summary>
           /// Describes authentication configuration that uses a Google account.
           /// </summary>
+          [global::System.ObsoleteAttribute]
           public sealed partial class GoogleAccount : pb::IMessage<GoogleAccount>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

@@ -3,7 +3,7 @@
 //     source: google/cloud/websecurityscanner/v1/web_security_scanner.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
