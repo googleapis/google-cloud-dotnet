@@ -34,6 +34,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             GetWriteStreamRequest request = new GetWriteStreamRequest
             {
                 WriteStreamName = WriteStreamName.FromProjectDatasetTableStream("[PROJECT]", "[DATASET]", "[TABLE]", "[STREAM]"),
+                View = WriteStreamView.Unspecified,
             };
             // Make the request
             WriteStream response = bigQueryWriteClient.GetWriteStream(request);
