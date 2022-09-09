@@ -615,6 +615,24 @@
       "serviceConfigFile": "bigquerydatatransfer_v1.yaml"
     },
     {
+      "id": "Google.Cloud.BigQuery.Logging.V1",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.1;net462",
+      "productName": "BigQuery Audit Data Logging",
+      "productUrl": "https://cloud.google.com/bigquery",
+      "type": "other",
+      "description": "Protobuf messages for Google Cloud BigQuery audit data logs.",
+      "tags": [
+        "BigQuery",
+        "logs"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/cloud/bigquery/logging/v1"
+    },
+    {
       "id": "Google.Cloud.BigQuery.Migration.V2",
       "version": "1.0.0-beta03",
       "type": "grpc",
