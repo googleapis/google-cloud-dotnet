@@ -204,10 +204,29 @@
       "serviceConfigFile": "apigeeregistry_v1.yaml"
     },
     {
+      "id": "Google.Cloud.AppEngine.Logging.V1",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.1;net462",
+      "productName": "App Engine Logging Data",
+      "productUrl": "https://cloud.google.com/appengine",
+      "type": "other",
+      "description": "Protobuf messages for Google Cloud App Engine logs.",
+      "tags": [
+        "app",
+        "engine",
+        "appengine"
+      ],
+      "dependencies": {
+        "Google.Cloud.Logging.Type": "4.0.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/appengine/logging/v1"
+    },
+    {
       "id": "Google.Cloud.AppEngine.V1",
       "version": "2.0.0",
       "type": "grpc",
-      "productName": "App Engine Audit Data",
+      "productName": "App Engine",
       "productUrl": "https://cloud.google.com/appengine",
       "description": "Recommended Google client library to access the App Engine API, which provisions and manages developers' App Engine applications.",
       "tags": [
