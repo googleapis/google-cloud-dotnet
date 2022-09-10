@@ -92,6 +92,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest> __Marshaller_google_storagetransfer_v1_DeleteTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest> __Marshaller_google_storagetransfer_v1_CreateAgentPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.AgentPool> __Marshaller_google_storagetransfer_v1_AgentPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.AgentPool.Parser));
@@ -169,6 +171,14 @@ namespace Google.Cloud.StorageTransfer.V1 {
         "RunTransferJob",
         __Marshaller_google_storagetransfer_v1_RunTransferJobRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTransferJob = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTransferJob",
+        __Marshaller_google_storagetransfer_v1_DeleteTransferJobRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool> __Method_CreateAgentPool = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(
@@ -328,6 +338,19 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunTransferJob(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a transfer job. Deleting a transfer job sets its status to
+      /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferJob(global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -870,6 +893,58 @@ namespace Google.Cloud.StorageTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RunTransferJob, null, options, request);
       }
       /// <summary>
+      /// Deletes a transfer job. Deleting a transfer job sets its status to
+      /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferJob(global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a transfer job. Deleting a transfer job sets its status to
+      /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferJob(global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTransferJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a transfer job. Deleting a transfer job sets its status to
+      /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a transfer job. Deleting a transfer job sets its status to
+      /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTransferJob, null, options, request);
+      }
+      /// <summary>
       /// Creates an agent pool resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1131,6 +1206,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
           .AddMethod(__Method_PauseTransferOperation, serviceImpl.PauseTransferOperation)
           .AddMethod(__Method_ResumeTransferOperation, serviceImpl.ResumeTransferOperation)
           .AddMethod(__Method_RunTransferJob, serviceImpl.RunTransferJob)
+          .AddMethod(__Method_DeleteTransferJob, serviceImpl.DeleteTransferJob)
           .AddMethod(__Method_CreateAgentPool, serviceImpl.CreateAgentPool)
           .AddMethod(__Method_UpdateAgentPool, serviceImpl.UpdateAgentPool)
           .AddMethod(__Method_GetAgentPool, serviceImpl.GetAgentPool)
@@ -1153,6 +1229,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       serviceBinder.AddMethod(__Method_PauseTransferOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PauseTransferOperation));
       serviceBinder.AddMethod(__Method_ResumeTransferOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ResumeTransferOperation));
       serviceBinder.AddMethod(__Method_RunTransferJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest, global::Google.LongRunning.Operation>(serviceImpl.RunTransferJob));
+      serviceBinder.AddMethod(__Method_DeleteTransferJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTransferJob));
       serviceBinder.AddMethod(__Method_CreateAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.CreateAgentPool));
       serviceBinder.AddMethod(__Method_UpdateAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.UpdateAgentPool));
       serviceBinder.AddMethod(__Method_GetAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.GetAgentPool));

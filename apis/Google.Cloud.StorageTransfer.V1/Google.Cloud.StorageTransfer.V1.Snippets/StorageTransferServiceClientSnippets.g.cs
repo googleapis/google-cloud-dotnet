@@ -371,6 +371,41 @@ namespace Google.Cloud.StorageTransfer.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTransferJob</summary>
+        public void DeleteTransferJobRequestObject()
+        {
+            // Snippet: DeleteTransferJob(DeleteTransferJobRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteTransferJobRequest request = new DeleteTransferJobRequest
+            {
+                JobName = "",
+                ProjectId = "",
+            };
+            // Make the request
+            storageTransferServiceClient.DeleteTransferJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTransferJobAsync</summary>
+        public async Task DeleteTransferJobRequestObjectAsync()
+        {
+            // Snippet: DeleteTransferJobAsync(DeleteTransferJobRequest, CallSettings)
+            // Additional: DeleteTransferJobAsync(DeleteTransferJobRequest, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteTransferJobRequest request = new DeleteTransferJobRequest
+            {
+                JobName = "",
+                ProjectId = "",
+            };
+            // Make the request
+            await storageTransferServiceClient.DeleteTransferJobAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateAgentPool</summary>
         public void CreateAgentPoolRequestObject()
         {

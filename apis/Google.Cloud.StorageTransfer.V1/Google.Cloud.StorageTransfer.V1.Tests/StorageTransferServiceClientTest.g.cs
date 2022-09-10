@@ -340,6 +340,41 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void DeleteTransferJobRequestObject()
+        {
+            moq::Mock<StorageTransferService.StorageTransferServiceClient> mockGrpcClient = new moq::Mock<StorageTransferService.StorageTransferServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteTransferJobRequest request = new DeleteTransferJobRequest
+            {
+                JobName = "job_namedc176648",
+                ProjectId = "project_id43ad98b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
+            client.DeleteTransferJob(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferJobRequestObjectAsync()
+        {
+            moq::Mock<StorageTransferService.StorageTransferServiceClient> mockGrpcClient = new moq::Mock<StorageTransferService.StorageTransferServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteTransferJobRequest request = new DeleteTransferJobRequest
+            {
+                JobName = "job_namedc176648",
+                ProjectId = "project_id43ad98b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
+            await client.DeleteTransferJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferJobAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateAgentPoolRequestObject()
         {
             moq::Mock<StorageTransferService.StorageTransferServiceClient> mockGrpcClient = new moq::Mock<StorageTransferService.StorageTransferServiceClient>(moq::MockBehavior.Strict);
