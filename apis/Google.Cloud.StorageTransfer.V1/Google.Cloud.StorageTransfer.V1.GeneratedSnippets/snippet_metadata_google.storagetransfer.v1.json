@@ -433,6 +433,58 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteTransferJob_sync",
+      "title": "DeleteTransferJobRequestObject",
+      "description": "Snippet for DeleteTransferJob",
+      "file": "StorageTransferServiceClient.DeleteTransferJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTransferJob",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteTransferJob",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTransferJob",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteTransferJob",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteTransferJob_async",
+      "title": "DeleteTransferJobRequestObjectAsync",
+      "description": "Snippet for DeleteTransferJobAsync",
+      "file": "StorageTransferServiceClient.DeleteTransferJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTransferJobAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteTransferJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTransferJob",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteTransferJob",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_sync",
       "title": "CreateAgentPoolRequestObject",
       "description": "Snippet for CreateAgentPool",

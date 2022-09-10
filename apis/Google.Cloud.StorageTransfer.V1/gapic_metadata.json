@@ -28,6 +28,12 @@
                 "DeleteAgentPoolAsync"
               ]
             },
+            "DeleteTransferJob": {
+              "methods": [
+                "DeleteTransferJob",
+                "DeleteTransferJobAsync"
+              ]
+            },
             "GetAgentPool": {
               "methods": [
                 "GetAgentPool",
