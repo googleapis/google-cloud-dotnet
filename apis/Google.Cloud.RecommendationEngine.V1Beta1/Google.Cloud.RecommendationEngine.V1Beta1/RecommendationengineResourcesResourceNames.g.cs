@@ -260,12 +260,12 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+            /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
             /// </summary>
             ProjectLocationCatalogCatalogItemPath = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationCatalogCatalogItemPath = new gax::PathTemplate("projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}");
+        private static gax::PathTemplate s_projectLocationCatalogCatalogItemPath = new gax::PathTemplate("projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}");
 
         /// <summary>Creates a <see cref="CatalogItemPathName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -278,7 +278,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
 
         /// <summary>
         /// Creates a <see cref="CatalogItemPathName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -290,7 +290,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CatalogItemPathName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -298,14 +298,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="catalogItemPathId">The <c>CatalogItemPath</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CatalogItemPathName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string catalogId, string catalogItemPathId) =>
             FormatProjectLocationCatalogCatalogItemPath(projectId, locationId, catalogId, catalogItemPathId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CatalogItemPathName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -313,7 +313,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="catalogItemPathId">The <c>CatalogItemPath</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CatalogItemPathName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>.
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>.
         /// </returns>
         public static string FormatProjectLocationCatalogCatalogItemPath(string projectId, string locationId, string catalogId, string catalogItemPathId) =>
             s_projectLocationCatalogCatalogItemPath.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(catalogId, nameof(catalogId)), gax::GaxPreconditions.CheckNotNullOrEmpty(catalogItemPathId, nameof(catalogItemPathId)));
@@ -326,7 +326,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -344,7 +344,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -368,7 +368,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -390,7 +390,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -439,7 +439,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="CatalogItemPathName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path=**}</c>
+        /// <c>projects/{project}/locations/{location}/catalogs/{catalog}/catalogItems/{catalog_item_path}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
