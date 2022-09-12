@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -21,6 +21,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.CreateCommonTestBucket", "Google.Cloud.Storage.V1.CreateCommonTestBucket\Google.Cloud.Storage.V1.CreateCommonTestBucket.csproj", "{2D1C6480-6B51-45F1-8BC7-6A68D4AC8A11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1.BenchmarkingTool", "Google.Cloud.Storage.V1.BenchmarkingTool\Google.Cloud.Storage.V1.BenchmarkingTool.csproj", "{6AD12A44-5465-4929-9F55-629AC494883F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1.RetryConformanceTests", "Google.Cloud.Storage.V1.RetryConformanceTests\Google.Cloud.Storage.V1.RetryConformanceTests.csproj", "{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,6 +154,18 @@ Global
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x64.Build.0 = Release|Any CPU
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x86.ActiveCfg = Release|Any CPU
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x86.Build.0 = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|x64.Build.0 = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Debug|x86.Build.0 = Debug|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|x64.ActiveCfg = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|x64.Build.0 = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|x86.ActiveCfg = Release|Any CPU
+		{320B9728-ADEE-4295-B0F1-C2F5EEA40AC3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
