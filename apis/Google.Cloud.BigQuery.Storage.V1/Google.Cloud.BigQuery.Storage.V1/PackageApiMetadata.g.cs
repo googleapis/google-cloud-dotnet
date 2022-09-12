@@ -29,6 +29,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AnnotationsReflection.Descriptor;
             yield return ArrowReflection.Descriptor;
             yield return AvroReflection.Descriptor;
             yield return ProtobufReflection.Descriptor;
