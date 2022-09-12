@@ -27,66 +27,67 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             "CkBzdG9yYWdlL3YxL3Byb3RvL2dvb2dsZS9jbG91ZC9jb25mb3JtYW5jZS9z",
             "dG9yYWdlL3YxL3Rlc3RzLnByb3RvEiNnb29nbGUuY2xvdWQuY29uZm9ybWFu",
             "Y2Uuc3RvcmFnZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byKtAQoIVGVzdEZpbGUSTAoQc2lnbmluZ192NF90ZXN0cxgBIAMoCzIyLmdv",
+            "byLyAQoIVGVzdEZpbGUSTAoQc2lnbmluZ192NF90ZXN0cxgBIAMoCzIyLmdv",
             "b2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlNpZ25pbmdWNFRl",
             "c3QSUwoUcG9zdF9wb2xpY3lfdjRfdGVzdHMYAiADKAsyNS5nb29nbGUuY2xv",
-            "dWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb3N0UG9saWN5VjRUZXN0IokF",
-            "Cg1TaWduaW5nVjRUZXN0EhAKCGZpbGVOYW1lGAEgASgJEhMKC2Rlc2NyaXB0",
-            "aW9uGAIgASgJEg4KBmJ1Y2tldBgDIAEoCRIOCgZvYmplY3QYBCABKAkSDgoG",
-            "bWV0aG9kGAUgASgJEhIKCmV4cGlyYXRpb24YBiABKAMSLQoJdGltZXN0YW1w",
-            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgtleHBlY3Rl",
-            "ZFVybBgIIAEoCRJQCgdoZWFkZXJzGAkgAygLMj8uZ29vZ2xlLmNsb3VkLmNv",
-            "bmZvcm1hbmNlLnN0b3JhZ2UudjEuU2lnbmluZ1Y0VGVzdC5IZWFkZXJzRW50",
-            "cnkSYQoQcXVlcnlfcGFyYW1ldGVycxgKIAMoCzJHLmdvb2dsZS5jbG91ZC5j",
-            "b25mb3JtYW5jZS5zdG9yYWdlLnYxLlNpZ25pbmdWNFRlc3QuUXVlcnlQYXJh",
-            "bWV0ZXJzRW50cnkSDgoGc2NoZW1lGAsgASgJEj8KCHVybFN0eWxlGAwgASgO",
-            "Mi0uZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuVXJsU3R5",
-            "bGUSGwoTYnVja2V0Qm91bmRIb3N0bmFtZRgNIAEoCRIgChhleHBlY3RlZENh",
-            "bm9uaWNhbFJlcXVlc3QYDiABKAkSHAoUZXhwZWN0ZWRTdHJpbmdUb1NpZ24Y",
-            "DyABKAkaLgoMSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEaNgoUUXVlcnlQYXJhbWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASIoChJDb25kaXRpb25hbE1hdGNoZXMSEgoK",
-            "ZXhwcmVzc2lvbhgBIAMoCSJCChBQb2xpY3lDb25kaXRpb25zEhoKEmNvbnRl",
-            "bnRMZW5ndGhSYW5nZRgBIAMoBRISCgpzdGFydHNXaXRoGAIgAygJIqYDCgtQ",
-            "b2xpY3lJbnB1dBIOCgZzY2hlbWUYASABKAkSPwoIdXJsU3R5bGUYAiABKA4y",
-            "LS5nb29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5VcmxTdHls",
-            "ZRIbChNidWNrZXRCb3VuZEhvc3RuYW1lGAMgASgJEg4KBmJ1Y2tldBgEIAEo",
-            "CRIOCgZvYmplY3QYBSABKAkSEgoKZXhwaXJhdGlvbhgGIAEoBRItCgl0aW1l",
-            "c3RhbXAYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkwKBmZp",
-            "ZWxkcxgIIAMoCzI8Lmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdl",
-            "LnYxLlBvbGljeUlucHV0LkZpZWxkc0VudHJ5EkkKCmNvbmRpdGlvbnMYCSAB",
-            "KAsyNS5nb29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb2xp",
-            "Y3lDb25kaXRpb25zGi0KC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEiuAEKDFBvbGljeU91dHB1dBILCgN1cmwYASABKAkS",
-            "TQoGZmllbGRzGAIgAygLMj0uZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0",
-            "b3JhZ2UudjEuUG9saWN5T3V0cHV0LkZpZWxkc0VudHJ5Eh0KFWV4cGVjdGVk",
-            "RGVjb2RlZFBvbGljeRgDIAEoCRotCgtGaWVsZHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIrcBChBQb3N0UG9saWN5VjRUZXN0EhMK",
-            "C2Rlc2NyaXB0aW9uGAEgASgJEkUKC3BvbGljeUlucHV0GAIgASgLMjAuZ29v",
-            "Z2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5SW5wdXQS",
-            "RwoMcG9saWN5T3V0cHV0GAMgASgLMjEuZ29vZ2xlLmNsb3VkLmNvbmZvcm1h",
-            "bmNlLnN0b3JhZ2UudjEuUG9saWN5T3V0cHV0IlAKClJldHJ5VGVzdHMSQgoK",
-            "cmV0cnlUZXN0cxgBIAMoCzIuLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5z",
-            "dG9yYWdlLnYxLlJldHJ5VGVzdCInCg9JbnN0cnVjdGlvbkxpc3QSFAoMaW5z",
-            "dHJ1Y3Rpb25zGAEgAygJImcKBk1ldGhvZBIMCgRuYW1lGAEgASgJEkAKCXJl",
-            "c291cmNlcxgCIAMoDjItLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9y",
-            "YWdlLnYxLlJlc291cmNlEg0KBWdyb3VwGAMgASgJIuQBCglSZXRyeVRlc3QS",
-            "CgoCaWQYASABKAUSEwoLZGVzY3JpcHRpb24YAiABKAkSQwoFY2FzZXMYAyAD",
-            "KAsyNC5nb29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5JbnN0",
-            "cnVjdGlvbkxpc3QSPAoHbWV0aG9kcxgEIAMoCzIrLmdvb2dsZS5jbG91ZC5j",
-            "b25mb3JtYW5jZS5zdG9yYWdlLnYxLk1ldGhvZBIcChRwcmVjb25kaXRpb25Q",
-            "cm92aWRlZBgFIAEoCBIVCg1leHBlY3RTdWNjZXNzGAYgASgIKk8KCFVybFN0",
-            "eWxlEg4KClBBVEhfU1RZTEUQABIYChRWSVJUVUFMX0hPU1RFRF9TVFlMRRAB",
-            "EhkKFUJVQ0tFVF9CT1VORF9IT1NUTkFNRRACKkIKCFJlc291cmNlEgoKBkJV",
-            "Q0tFVBAAEgoKBk9CSkVDVBABEhAKDE5PVElGSUNBVElPThACEgwKCEhNQUNf",
-            "S0VZEANCfAonY29tLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdl",
-            "LnYxUAFaI2dvb2dsZS9jbG91ZC9jb25mb3JtYW5jZS9zdG9yYWdlL3YxqgIp",
-            "R29vZ2xlLkNsb3VkLlN0b3JhZ2UuVjEuVGVzdHMuQ29uZm9ybWFuY2ViBnBy",
-            "b3RvMw=="));
+            "dWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb3N0UG9saWN5VjRUZXN0EkMK",
+            "C3JldHJ5X3Rlc3RzGAMgAygLMi4uZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNl",
+            "LnN0b3JhZ2UudjEuUmV0cnlUZXN0IokFCg1TaWduaW5nVjRUZXN0EhAKCGZp",
+            "bGVOYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4KBmJ1Y2tldBgD",
+            "IAEoCRIOCgZvYmplY3QYBCABKAkSDgoGbWV0aG9kGAUgASgJEhIKCmV4cGly",
+            "YXRpb24YBiABKAMSLQoJdGltZXN0YW1wGAcgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBITCgtleHBlY3RlZFVybBgIIAEoCRJQCgdoZWFkZXJz",
+            "GAkgAygLMj8uZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEu",
+            "U2lnbmluZ1Y0VGVzdC5IZWFkZXJzRW50cnkSYQoQcXVlcnlfcGFyYW1ldGVy",
+            "cxgKIAMoCzJHLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYx",
+            "LlNpZ25pbmdWNFRlc3QuUXVlcnlQYXJhbWV0ZXJzRW50cnkSDgoGc2NoZW1l",
+            "GAsgASgJEj8KCHVybFN0eWxlGAwgASgOMi0uZ29vZ2xlLmNsb3VkLmNvbmZv",
+            "cm1hbmNlLnN0b3JhZ2UudjEuVXJsU3R5bGUSGwoTYnVja2V0Qm91bmRIb3N0",
+            "bmFtZRgNIAEoCRIgChhleHBlY3RlZENhbm9uaWNhbFJlcXVlc3QYDiABKAkS",
+            "HAoUZXhwZWN0ZWRTdHJpbmdUb1NpZ24YDyABKAkaLgoMSGVhZGVyc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNgoUUXVlcnlQYXJh",
+            "bWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIo",
+            "ChJDb25kaXRpb25hbE1hdGNoZXMSEgoKZXhwcmVzc2lvbhgBIAMoCSJCChBQ",
+            "b2xpY3lDb25kaXRpb25zEhoKEmNvbnRlbnRMZW5ndGhSYW5nZRgBIAMoBRIS",
+            "CgpzdGFydHNXaXRoGAIgAygJIqYDCgtQb2xpY3lJbnB1dBIOCgZzY2hlbWUY",
+            "ASABKAkSPwoIdXJsU3R5bGUYAiABKA4yLS5nb29nbGUuY2xvdWQuY29uZm9y",
+            "bWFuY2Uuc3RvcmFnZS52MS5VcmxTdHlsZRIbChNidWNrZXRCb3VuZEhvc3Ru",
+            "YW1lGAMgASgJEg4KBmJ1Y2tldBgEIAEoCRIOCgZvYmplY3QYBSABKAkSEgoK",
+            "ZXhwaXJhdGlvbhgGIAEoBRItCgl0aW1lc3RhbXAYByABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEkwKBmZpZWxkcxgIIAMoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlBvbGljeUlucHV0LkZpZWxk",
+            "c0VudHJ5EkkKCmNvbmRpdGlvbnMYCSABKAsyNS5nb29nbGUuY2xvdWQuY29u",
+            "Zm9ybWFuY2Uuc3RvcmFnZS52MS5Qb2xpY3lDb25kaXRpb25zGi0KC0ZpZWxk",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiuAEKDFBv",
+            "bGljeU91dHB1dBILCgN1cmwYASABKAkSTQoGZmllbGRzGAIgAygLMj0uZ29v",
+            "Z2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5T3V0cHV0",
+            "LkZpZWxkc0VudHJ5Eh0KFWV4cGVjdGVkRGVjb2RlZFBvbGljeRgDIAEoCRot",
+            "CgtGaWVsZHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IrcBChBQb3N0UG9saWN5VjRUZXN0EhMKC2Rlc2NyaXB0aW9uGAEgASgJEkUK",
+            "C3BvbGljeUlucHV0GAIgASgLMjAuZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNl",
+            "LnN0b3JhZ2UudjEuUG9saWN5SW5wdXQSRwoMcG9saWN5T3V0cHV0GAMgASgL",
+            "MjEuZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5",
+            "T3V0cHV0IlAKClJldHJ5VGVzdHMSQgoKcmV0cnlUZXN0cxgBIAMoCzIuLmdv",
+            "b2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlJldHJ5VGVzdCIn",
+            "Cg9JbnN0cnVjdGlvbkxpc3QSFAoMaW5zdHJ1Y3Rpb25zGAEgAygJImcKBk1l",
+            "dGhvZBIMCgRuYW1lGAEgASgJEkAKCXJlc291cmNlcxgCIAMoDjItLmdvb2ds",
+            "ZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlJlc291cmNlEg0KBWdy",
+            "b3VwGAMgASgJIuQBCglSZXRyeVRlc3QSCgoCaWQYASABKAUSEwoLZGVzY3Jp",
+            "cHRpb24YAiABKAkSQwoFY2FzZXMYAyADKAsyNC5nb29nbGUuY2xvdWQuY29u",
+            "Zm9ybWFuY2Uuc3RvcmFnZS52MS5JbnN0cnVjdGlvbkxpc3QSPAoHbWV0aG9k",
+            "cxgEIAMoCzIrLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYx",
+            "Lk1ldGhvZBIcChRwcmVjb25kaXRpb25Qcm92aWRlZBgFIAEoCBIVCg1leHBl",
+            "Y3RTdWNjZXNzGAYgASgIKk8KCFVybFN0eWxlEg4KClBBVEhfU1RZTEUQABIY",
+            "ChRWSVJUVUFMX0hPU1RFRF9TVFlMRRABEhkKFUJVQ0tFVF9CT1VORF9IT1NU",
+            "TkFNRRACKkIKCFJlc291cmNlEgoKBkJVQ0tFVBAAEgoKBk9CSkVDVBABEhAK",
+            "DE5PVElGSUNBVElPThACEgwKCEhNQUNfS0VZEANCfAonY29tLmdvb2dsZS5j",
+            "bG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxUAFaI2dvb2dsZS9jbG91ZC9j",
+            "b25mb3JtYW5jZS9zdG9yYWdlL3YxqgIpR29vZ2xlLkNsb3VkLlN0b3JhZ2Uu",
+            "VjEuVGVzdHMuQ29uZm9ybWFuY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.UrlStyle), typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.Resource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile), global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile.Parser, new[]{ "SigningV4Tests", "PostPolicyV4Tests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile), global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile.Parser, new[]{ "SigningV4Tests", "PostPolicyV4Tests", "RetryTests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test), global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test.Parser, new[]{ "FileName", "Description", "Bucket", "Object", "Method", "Expiration", "Timestamp", "ExpectedUrl", "Headers", "QueryParameters", "Scheme", "UrlStyle", "BucketBoundHostname", "ExpectedCanonicalRequest", "ExpectedStringToSign" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.ConditionalMatches), global::Google.Cloud.Storage.V1.Tests.Conformance.ConditionalMatches.Parser, new[]{ "Expression" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyConditions), global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyConditions.Parser, new[]{ "ContentLengthRange", "StartsWith" }, null, null, null, null),
@@ -159,6 +160,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     public TestFile(TestFile other) : this() {
       signingV4Tests_ = other.signingV4Tests_.Clone();
       postPolicyV4Tests_ = other.postPolicyV4Tests_.Clone();
+      retryTests_ = other.retryTests_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -190,6 +192,22 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       get { return postPolicyV4Tests_; }
     }
 
+    /// <summary>Field number for the "retry_tests" field.</summary>
+    public const int RetryTestsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Storage.V1.Tests.Conformance.RetryTest> _repeated_retryTests_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Storage.V1.Tests.Conformance.RetryTest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.RetryTest> retryTests_ = new pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.RetryTest>();
+    /// <summary>
+    /// Note: type is RetryTest rather than RetryTests.
+    /// The data file can be loaded as either a TestFile or
+    /// a RetryTests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.RetryTest> RetryTests {
+      get { return retryTests_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -207,6 +225,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
       if(!signingV4Tests_.Equals(other.signingV4Tests_)) return false;
       if(!postPolicyV4Tests_.Equals(other.postPolicyV4Tests_)) return false;
+      if(!retryTests_.Equals(other.retryTests_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -216,6 +235,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       int hash = 1;
       hash ^= signingV4Tests_.GetHashCode();
       hash ^= postPolicyV4Tests_.GetHashCode();
+      hash ^= retryTests_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -236,6 +256,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     #else
       signingV4Tests_.WriteTo(output, _repeated_signingV4Tests_codec);
       postPolicyV4Tests_.WriteTo(output, _repeated_postPolicyV4Tests_codec);
+      retryTests_.WriteTo(output, _repeated_retryTests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -248,6 +269,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       signingV4Tests_.WriteTo(ref output, _repeated_signingV4Tests_codec);
       postPolicyV4Tests_.WriteTo(ref output, _repeated_postPolicyV4Tests_codec);
+      retryTests_.WriteTo(ref output, _repeated_retryTests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -260,6 +282,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       int size = 0;
       size += signingV4Tests_.CalculateSize(_repeated_signingV4Tests_codec);
       size += postPolicyV4Tests_.CalculateSize(_repeated_postPolicyV4Tests_codec);
+      size += retryTests_.CalculateSize(_repeated_retryTests_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -274,6 +297,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
       signingV4Tests_.Add(other.signingV4Tests_);
       postPolicyV4Tests_.Add(other.postPolicyV4Tests_);
+      retryTests_.Add(other.retryTests_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -297,6 +321,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             postPolicyV4Tests_.AddEntriesFrom(input, _repeated_postPolicyV4Tests_codec);
             break;
           }
+          case 26: {
+            retryTests_.AddEntriesFrom(input, _repeated_retryTests_codec);
+            break;
+          }
         }
       }
     #endif
@@ -318,6 +346,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
           }
           case 18: {
             postPolicyV4Tests_.AddEntriesFrom(ref input, _repeated_postPolicyV4Tests_codec);
+            break;
+          }
+          case 26: {
+            retryTests_.AddEntriesFrom(ref input, _repeated_retryTests_codec);
             break;
           }
         }
