@@ -58,6 +58,7 @@ namespace Google.Cloud.Firestore.V1
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
             RunQuerySettings = existing.RunQuerySettings;
+            RunAggregationQuerySettings = existing.RunAggregationQuerySettings;
             PartitionQuerySettings = existing.PartitionQuerySettings;
             WriteSettings = existing.WriteSettings;
             WriteStreamingSettings = existing.WriteStreamingSettings;
@@ -237,6 +238,13 @@ namespace Google.Cloud.Firestore.V1
         /// </summary>
         /// <remarks>Timeout: 300 seconds.</remarks>
         public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreClient.RunAggregationQuery</c> and <c>FirestoreClient.RunAggregationQueryAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 300 seconds.</remarks>
+        public gaxgrpc::CallSettings RunAggregationQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1004,6 +1012,34 @@ namespace Google.Cloud.Firestore.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Server streaming methods for
+        /// <see cref="RunAggregationQuery(RunAggregationQueryRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class RunAggregationQueryStream : gaxgrpc::ServerStreamingBase<RunAggregationQueryResponse>
+        {
+        }
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// 
+        /// Rather than producing [Document][google.firestore.v1.Document] results like [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery],
+        /// this API allows running an aggregation to produce a series of
+        /// [AggregationResult][google.firestore.v1.AggregationResult] server-side.
+        /// 
+        /// High-Level Example:
+        /// 
+        /// ```
+        /// -- Return the number of documents in table given a filter.
+        /// SELECT COUNT(*) FROM ( SELECT * FROM k where a = true );
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual RunAggregationQueryStream RunAggregationQuery(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Partitions a query by returning partition cursors that can be used to run
         /// the query in parallel. The returned partition cursors are split points that
         /// can be used by RunQuery as starting/end points for the query results.
@@ -1241,6 +1277,8 @@ namespace Google.Cloud.Firestore.V1
 
         private readonly gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<RunAggregationQueryRequest, RunAggregationQueryResponse> _callRunAggregationQuery;
+
         private readonly gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> _callPartitionQuery;
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> _callWrite;
@@ -1292,6 +1330,9 @@ namespace Google.Cloud.Firestore.V1
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
+            _callRunAggregationQuery = clientHelper.BuildApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse>("RunAggregationQuery", grpcClient.RunAggregationQuery, effectiveSettings.RunAggregationQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRunAggregationQuery);
+            Modify_RunAggregationQueryApiCall(ref _callRunAggregationQuery);
             _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionQueryResponse>("PartitionQuery", grpcClient.PartitionQueryAsync, grpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPartitionQuery);
             Modify_PartitionQueryApiCall(ref _callPartitionQuery);
@@ -1337,6 +1378,8 @@ namespace Google.Cloud.Firestore.V1
 
         partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
 
+        partial void Modify_RunAggregationQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunAggregationQueryRequest, RunAggregationQueryResponse> call);
+
         partial void Modify_PartitionQueryApiCall(ref gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> call);
 
         partial void Modify_WriteApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> call);
@@ -1374,6 +1417,8 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1602,6 +1647,38 @@ namespace Google.Cloud.Firestore.V1
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return new RunQueryStreamImpl(_callRunQuery.Call(request, callSettings));
+        }
+
+        internal sealed partial class RunAggregationQueryStreamImpl : RunAggregationQueryStream
+        {
+            /// <summary>Construct the server streaming method for <c>RunAggregationQuery</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public RunAggregationQueryStreamImpl(grpccore::AsyncServerStreamingCall<RunAggregationQueryResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<RunAggregationQueryResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// 
+        /// Rather than producing [Document][google.firestore.v1.Document] results like [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery],
+        /// this API allows running an aggregation to produce a series of
+        /// [AggregationResult][google.firestore.v1.AggregationResult] server-side.
+        /// 
+        /// High-Level Example:
+        /// 
+        /// ```
+        /// -- Return the number of documents in table given a filter.
+        /// SELECT COUNT(*) FROM ( SELECT * FROM k where a = true );
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override FirestoreClient.RunAggregationQueryStream RunAggregationQuery(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunAggregationQueryRequest(ref request, ref callSettings);
+            return new RunAggregationQueryStreamImpl(_callRunAggregationQuery.Call(request, callSettings));
         }
 
         /// <summary>

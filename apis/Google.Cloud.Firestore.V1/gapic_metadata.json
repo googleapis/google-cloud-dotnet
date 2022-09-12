@@ -82,6 +82,12 @@
                 "RollbackAsync"
               ]
             },
+            "RunAggregationQuery": {
+              "methods": [
+                "RunAggregationQuery",
+                "RunAggregationQueryAsync"
+              ]
+            },
             "RunQuery": {
               "methods": [
                 "RunQuery",

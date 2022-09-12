@@ -71,13 +71,22 @@ namespace Google.Cloud.Firestore.V1 {
             "CgpQcm9qZWN0aW9uEkMKBmZpZWxkcxgCIAMoCzIzLmdvb2dsZS5maXJlc3Rv",
             "cmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlIkUKCURpcmVj",
             "dGlvbhIZChVESVJFQ1RJT05fVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQ",
-            "ARIOCgpERVNDRU5ESU5HEAIiRAoGQ3Vyc29yEioKBnZhbHVlcxgBIAMoCzIa",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUSDgoGYmVmb3JlGAIgASgIQsMB",
-            "Chdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIKUXVlcnlQcm90b1ABWjxnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS92",
-            "MTtmaXJlc3RvcmWiAgRHQ0ZTqgIZR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5W",
-            "McoCGUdvb2dsZVxDbG91ZFxGaXJlc3RvcmVcVjHqAhxHb29nbGU6OkNsb3Vk",
-            "OjpGaXJlc3RvcmU6OlYxYgZwcm90bzM="));
+            "ARIOCgpERVNDRU5ESU5HEAIiggMKGlN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1",
+            "ZXJ5EkAKEHN0cnVjdHVyZWRfcXVlcnkYASABKAsyJC5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeUgAElYKDGFnZ3JlZ2F0aW9ucxgDIAMo",
+            "CzI7Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9u",
+            "UXVlcnkuQWdncmVnYXRpb25CA+BBARq7AQoLQWdncmVnYXRpb24SUgoFY291",
+            "bnQYASABKAsyQS5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dy",
+            "ZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLkNvdW50SAASEgoFYWxpYXMYByAB",
+            "KAlCA+BBARo4CgVDb3VudBIvCgV1cF90bxgBIAEoCzIbLmdvb2dsZS5wcm90",
+            "b2J1Zi5JbnQ2NFZhbHVlQgPgQQFCCgoIb3BlcmF0b3JCDAoKcXVlcnlfdHlw",
+            "ZSJECgZDdXJzb3ISKgoGdmFsdWVzGAEgAygLMhouZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MS5WYWx1ZRIOCgZiZWZvcmUYAiABKAhCwwEKF2NvbS5nb29nbGUuZmly",
+            "ZXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvZmlyZXN0b3JlL3YxO2ZpcmVzdG9yZaICBEdD",
+            "RlOqAhlHb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxygIZR29vZ2xlXENsb3Vk",
+            "XEZpcmVzdG9yZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,6 +98,7 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Parser, new[]{ "StructuredQuery", "Aggregations" }, new[]{ "QueryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Parser, new[]{ "Count", "Alias" }, new[]{ "Operator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count.Parser, new[]{ "UpTo" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null, null)
           }));
     }
@@ -231,7 +241,37 @@ namespace Google.Cloud.Firestore.V1 {
     public const int StartAtFieldNumber = 7;
     private global::Google.Cloud.Firestore.V1.Cursor startAt_;
     /// <summary>
-    /// A starting point for the query results.
+    /// A potential prefix of a position in the result set to start the query at.
+    ///
+    /// The ordering of the result set is based on the `ORDER BY` clause of the
+    /// original query.
+    ///
+    /// ```
+    /// SELECT * FROM k WHERE a = 1 AND b > 2 ORDER BY b ASC, __name__ ASC;
+    /// ```
+    ///
+    /// This query's results are ordered by `(b ASC, __name__ ASC)`.
+    ///
+    /// Cursors can reference either the full ordering or a prefix of the location,
+    /// though it cannot reference more fields than what are in the provided
+    /// `ORDER BY`.
+    ///
+    /// Continuing off the example above, attaching the following start cursors
+    /// will have varying impact:
+    ///
+    /// - `START BEFORE (2, /k/123)`: start the query right before `a = 1 AND
+    ///    b > 2 AND __name__ > /k/123`.
+    /// - `START AFTER (10)`: start the query right after `a = 1 AND b > 10`.
+    ///
+    /// Unlike `OFFSET` which requires scanning over the first N results to skip,
+    /// a start cursor allows the query to begin at a logical position. This
+    /// position is not required to match an actual result, it will scan forward
+    /// from this position to find the next document.
+    ///
+    /// Requires:
+    ///
+    /// * The number of values cannot be greater than the number of fields
+    ///   specified in the `ORDER BY` clause.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -246,7 +286,15 @@ namespace Google.Cloud.Firestore.V1 {
     public const int EndAtFieldNumber = 8;
     private global::Google.Cloud.Firestore.V1.Cursor endAt_;
     /// <summary>
-    /// A end point for the query results.
+    /// A potential prefix of a position in the result set to end the query at.
+    ///
+    /// This is similar to `START_AT` but with it controlling the end position
+    /// rather than the start position.
+    ///
+    /// Requires:
+    ///
+    /// * The number of values cannot be greater than the number of fields
+    ///   specified in the `ORDER BY` clause.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,10 +309,14 @@ namespace Google.Cloud.Firestore.V1 {
     public const int OffsetFieldNumber = 6;
     private int offset_;
     /// <summary>
-    /// The number of results to skip.
+    /// The number of documents to skip before returning the first result.
     ///
-    /// Applies before limit, but after all other constraints. Must be >= 0 if
-    /// specified.
+    /// This applies after the constraints specified by the `WHERE`, `START AT`, &amp;
+    /// `END AT` but before the `LIMIT` clause.
+    ///
+    /// Requires:
+    ///
+    /// * The value must be greater than or equal to zero if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -283,7 +335,10 @@ namespace Google.Cloud.Firestore.V1 {
     /// The maximum number of results to return.
     ///
     /// Applies after all other constraints.
-    /// Must be >= 0 if specified.
+    ///
+    /// Requires:
+    ///
+    /// * The value must be greater than or equal to zero if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2434,7 +2489,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// A reference to a field, such as `max(messages.time) as max_time`.
+      /// A reference to a field in a document, ex: `stats.operations`.
       /// </summary>
       public sealed partial class FieldReference : pb::IMessage<FieldReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2483,6 +2538,13 @@ namespace Google.Cloud.Firestore.V1 {
         /// <summary>Field number for the "field_path" field.</summary>
         public const int FieldPathFieldNumber = 2;
         private string fieldPath_ = "";
+        /// <summary>
+        /// The relative path of the document being referenced.
+        ///
+        /// Requires:
+        ///
+        /// * Conform to [document field name][google.firestore.v1.Document.fields] limitations.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FieldPath {
@@ -2818,6 +2880,824 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
+  /// Firestore query for running an aggregation over a [StructuredQuery][google.firestore.v1.StructuredQuery].
+  /// </summary>
+  public sealed partial class StructuredAggregationQuery : pb::IMessage<StructuredAggregationQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StructuredAggregationQuery> _parser = new pb::MessageParser<StructuredAggregationQuery>(() => new StructuredAggregationQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StructuredAggregationQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredAggregationQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredAggregationQuery(StructuredAggregationQuery other) : this() {
+      aggregations_ = other.aggregations_.Clone();
+      switch (other.QueryTypeCase) {
+        case QueryTypeOneofCase.StructuredQuery:
+          StructuredQuery = other.StructuredQuery.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredAggregationQuery Clone() {
+      return new StructuredAggregationQuery(this);
+    }
+
+    /// <summary>Field number for the "structured_query" field.</summary>
+    public const int StructuredQueryFieldNumber = 1;
+    /// <summary>
+    /// Nested structured query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.StructuredQuery StructuredQuery {
+      get { return queryTypeCase_ == QueryTypeOneofCase.StructuredQuery ? (global::Google.Cloud.Firestore.V1.StructuredQuery) queryType_ : null; }
+      set {
+        queryType_ = value;
+        queryTypeCase_ = value == null ? QueryTypeOneofCase.None : QueryTypeOneofCase.StructuredQuery;
+      }
+    }
+
+    /// <summary>Field number for the "aggregations" field.</summary>
+    public const int AggregationsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation> _repeated_aggregations_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation> aggregations_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation>();
+    /// <summary>
+    /// Optional. Series of aggregations to apply over the results of the `structured_query`.
+    ///
+    /// Requires:
+    ///
+    /// * A minimum of one and maximum of five aggregations per query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation> Aggregations {
+      get { return aggregations_; }
+    }
+
+    private object queryType_;
+    /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
+    public enum QueryTypeOneofCase {
+      None = 0,
+      StructuredQuery = 1,
+    }
+    private QueryTypeOneofCase queryTypeCase_ = QueryTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryTypeOneofCase QueryTypeCase {
+      get { return queryTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryType() {
+      queryTypeCase_ = QueryTypeOneofCase.None;
+      queryType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StructuredAggregationQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StructuredAggregationQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StructuredQuery, other.StructuredQuery)) return false;
+      if(!aggregations_.Equals(other.aggregations_)) return false;
+      if (QueryTypeCase != other.QueryTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) hash ^= StructuredQuery.GetHashCode();
+      hash ^= aggregations_.GetHashCode();
+      hash ^= (int) queryTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StructuredQuery);
+      }
+      aggregations_.WriteTo(output, _repeated_aggregations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StructuredQuery);
+      }
+      aggregations_.WriteTo(ref output, _repeated_aggregations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredQuery);
+      }
+      size += aggregations_.CalculateSize(_repeated_aggregations_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StructuredAggregationQuery other) {
+      if (other == null) {
+        return;
+      }
+      aggregations_.Add(other.aggregations_);
+      switch (other.QueryTypeCase) {
+        case QueryTypeOneofCase.StructuredQuery:
+          if (StructuredQuery == null) {
+            StructuredQuery = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+          }
+          StructuredQuery.MergeFrom(other.StructuredQuery);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Firestore.V1.StructuredQuery subBuilder = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
+              subBuilder.MergeFrom(StructuredQuery);
+            }
+            input.ReadMessage(subBuilder);
+            StructuredQuery = subBuilder;
+            break;
+          }
+          case 26: {
+            aggregations_.AddEntriesFrom(input, _repeated_aggregations_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Firestore.V1.StructuredQuery subBuilder = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
+              subBuilder.MergeFrom(StructuredQuery);
+            }
+            input.ReadMessage(subBuilder);
+            StructuredQuery = subBuilder;
+            break;
+          }
+          case 26: {
+            aggregations_.AddEntriesFrom(ref input, _repeated_aggregations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the StructuredAggregationQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines a aggregation that produces a single result.
+      /// </summary>
+      public sealed partial class Aggregation : pb::IMessage<Aggregation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Aggregation> _parser = new pb::MessageParser<Aggregation>(() => new Aggregation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Aggregation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Aggregation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Aggregation(Aggregation other) : this() {
+          alias_ = other.alias_;
+          switch (other.OperatorCase) {
+            case OperatorOneofCase.Count:
+              Count = other.Count.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Aggregation Clone() {
+          return new Aggregation(this);
+        }
+
+        /// <summary>Field number for the "count" field.</summary>
+        public const int CountFieldNumber = 1;
+        /// <summary>
+        /// Count aggregator.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count Count {
+          get { return operatorCase_ == OperatorOneofCase.Count ? (global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count) operator_ : null; }
+          set {
+            operator_ = value;
+            operatorCase_ = value == null ? OperatorOneofCase.None : OperatorOneofCase.Count;
+          }
+        }
+
+        /// <summary>Field number for the "alias" field.</summary>
+        public const int AliasFieldNumber = 7;
+        private string alias_ = "";
+        /// <summary>
+        /// Optional. Optional name of the field to store the result of the aggregation into.
+        ///
+        /// If not provided, Firestore will pick a default name following the format
+        /// `field_&lt;incremental_id++>`. For example:
+        ///
+        /// ```
+        /// AGGREGATE
+        ///   COUNT_UP_TO(1) AS count_up_to_1,
+        ///   COUNT_UP_TO(2),
+        ///   COUNT_UP_TO(3) AS count_up_to_3,
+        ///   COUNT_UP_TO(4)
+        /// OVER (
+        ///   ...
+        /// );
+        /// ```
+        ///
+        /// becomes:
+        ///
+        /// ```
+        /// AGGREGATE
+        ///   COUNT_UP_TO(1) AS count_up_to_1,
+        ///   COUNT_UP_TO(2) AS field_1,
+        ///   COUNT_UP_TO(3) AS count_up_to_3,
+        ///   COUNT_UP_TO(4) AS field_2
+        /// OVER (
+        ///   ...
+        /// );
+        /// ```
+        ///
+        /// Requires:
+        ///
+        /// * Must be unique across all aggregation aliases.
+        /// * Conform to [document field name][google.firestore.v1.Document.fields] limitations.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Alias {
+          get { return alias_; }
+          set {
+            alias_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        private object operator_;
+        /// <summary>Enum of possible cases for the "operator" oneof.</summary>
+        public enum OperatorOneofCase {
+          None = 0,
+          Count = 1,
+        }
+        private OperatorOneofCase operatorCase_ = OperatorOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OperatorOneofCase OperatorCase {
+          get { return operatorCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOperator() {
+          operatorCase_ = OperatorOneofCase.None;
+          operator_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Aggregation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Aggregation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Count, other.Count)) return false;
+          if (Alias != other.Alias) return false;
+          if (OperatorCase != other.OperatorCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (operatorCase_ == OperatorOneofCase.Count) hash ^= Count.GetHashCode();
+          if (Alias.Length != 0) hash ^= Alias.GetHashCode();
+          hash ^= (int) operatorCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (operatorCase_ == OperatorOneofCase.Count) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Count);
+          }
+          if (Alias.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Alias);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (operatorCase_ == OperatorOneofCase.Count) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Count);
+          }
+          if (Alias.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Alias);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (operatorCase_ == OperatorOneofCase.Count) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Count);
+          }
+          if (Alias.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Alias);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Aggregation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Alias.Length != 0) {
+            Alias = other.Alias;
+          }
+          switch (other.OperatorCase) {
+            case OperatorOneofCase.Count:
+              if (Count == null) {
+                Count = new global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count();
+              }
+              Count.MergeFrom(other.Count);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count subBuilder = new global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count();
+                if (operatorCase_ == OperatorOneofCase.Count) {
+                  subBuilder.MergeFrom(Count);
+                }
+                input.ReadMessage(subBuilder);
+                Count = subBuilder;
+                break;
+              }
+              case 58: {
+                Alias = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count subBuilder = new global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count();
+                if (operatorCase_ == OperatorOneofCase.Count) {
+                  subBuilder.MergeFrom(Count);
+                }
+                input.ReadMessage(subBuilder);
+                Count = subBuilder;
+                break;
+              }
+              case 58: {
+                Alias = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Aggregation message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Count of documents that match the query.
+          ///
+          /// The `COUNT(*)` aggregation function operates on the entire document
+          /// so it does not require a field reference.
+          /// </summary>
+          public sealed partial class Count : pb::IMessage<Count>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Count> _parser = new pb::MessageParser<Count>(() => new Count());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Count> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Count() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Count(Count other) : this() {
+              UpTo = other.UpTo;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Count Clone() {
+              return new Count(this);
+            }
+
+            /// <summary>Field number for the "up_to" field.</summary>
+            public const int UpToFieldNumber = 1;
+            private static readonly pb::FieldCodec<long?> _single_upTo_codec = pb::FieldCodec.ForStructWrapper<long>(10);
+            private long? upTo_;
+            /// <summary>
+            /// Optional. Optional constraint on the maximum number of documents to count.
+            ///
+            /// This provides a way to set an upper bound on the number of documents
+            /// to scan, limiting latency and cost.
+            ///
+            /// Unspecified is interpreted as no bound.
+            ///
+            /// High-Level Example:
+            ///
+            /// ```
+            /// AGGREGATE COUNT_UP_TO(1000) OVER ( SELECT * FROM k );
+            /// ```
+            ///
+            /// Requires:
+            ///
+            /// * Must be greater than zero when present.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long? UpTo {
+              get { return upTo_; }
+              set {
+                upTo_ = value;
+              }
+            }
+
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Count);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Count other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (UpTo != other.UpTo) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (upTo_ != null) hash ^= UpTo.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (upTo_ != null) {
+                _single_upTo_codec.WriteTagAndValue(output, UpTo);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (upTo_ != null) {
+                _single_upTo_codec.WriteTagAndValue(ref output, UpTo);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (upTo_ != null) {
+                size += _single_upTo_codec.CalculateSizeWithTag(UpTo);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Count other) {
+              if (other == null) {
+                return;
+              }
+              if (other.upTo_ != null) {
+                if (upTo_ == null || other.UpTo != 0L) {
+                  UpTo = other.UpTo;
+                }
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    long? value = _single_upTo_codec.Read(input);
+                    if (upTo_ == null || value != 0L) {
+                      UpTo = value;
+                    }
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    long? value = _single_upTo_codec.Read(ref input);
+                    if (upTo_ == null || value != 0L) {
+                      UpTo = value;
+                    }
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A position in a query result set.
   /// </summary>
   public sealed partial class Cursor : pb::IMessage<Cursor>
@@ -2834,7 +3714,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

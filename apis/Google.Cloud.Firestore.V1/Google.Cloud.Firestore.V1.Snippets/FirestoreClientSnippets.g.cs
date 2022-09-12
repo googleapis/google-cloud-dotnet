@@ -550,6 +550,34 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunAggregationQuery</summary>
+        public async Task RunAggregationQueryRequestObject()
+        {
+            // Snippet: RunAggregationQuery(RunAggregationQueryRequest, CallSettings)
+            // Create client
+            FirestoreClient firestoreClient = FirestoreClient.Create();
+            // Initialize request argument(s)
+            RunAggregationQueryRequest request = new RunAggregationQueryRequest
+            {
+                Parent = "",
+                StructuredAggregationQuery = new StructuredAggregationQuery(),
+                Transaction = ByteString.Empty,
+            };
+            // Make the request, returning a streaming response
+            FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<RunAggregationQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                RunAggregationQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for PartitionQuery</summary>
         public void PartitionQueryRequestObject()
         {
