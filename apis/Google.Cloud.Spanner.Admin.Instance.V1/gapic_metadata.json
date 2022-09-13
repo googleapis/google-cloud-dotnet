@@ -16,22 +16,10 @@
                 "CreateInstanceAsync"
               ]
             },
-            "CreateInstanceConfig": {
-              "methods": [
-                "CreateInstanceConfig",
-                "CreateInstanceConfigAsync"
-              ]
-            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
-              ]
-            },
-            "DeleteInstanceConfig": {
-              "methods": [
-                "DeleteInstanceConfig",
-                "DeleteInstanceConfigAsync"
               ]
             },
             "GetIamPolicy": {
@@ -50,12 +38,6 @@
               "methods": [
                 "GetInstanceConfig",
                 "GetInstanceConfigAsync"
-              ]
-            },
-            "ListInstanceConfigOperations": {
-              "methods": [
-                "ListInstanceConfigOperations",
-                "ListInstanceConfigOperationsAsync"
               ]
             },
             "ListInstanceConfigs": {
@@ -86,12 +68,6 @@
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
-              ]
-            },
-            "UpdateInstanceConfig": {
-              "methods": [
-                "UpdateInstanceConfig",
-                "UpdateInstanceConfigAsync"
               ]
             }
           }

@@ -20,7 +20,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -41,7 +40,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
-                InstanceDeadline = new Timestamp(),
             };
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(request);

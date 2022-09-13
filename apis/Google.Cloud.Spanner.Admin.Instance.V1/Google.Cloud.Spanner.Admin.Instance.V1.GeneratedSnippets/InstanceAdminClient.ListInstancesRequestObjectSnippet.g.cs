@@ -20,7 +20,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Protobuf.WellKnownTypes;
     using System;
 
     public sealed partial class GeneratedInstanceAdminClientSnippets
@@ -39,7 +38,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
-                InstanceDeadline = new Timestamp(),
             };
             // Make the request
             PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(request);

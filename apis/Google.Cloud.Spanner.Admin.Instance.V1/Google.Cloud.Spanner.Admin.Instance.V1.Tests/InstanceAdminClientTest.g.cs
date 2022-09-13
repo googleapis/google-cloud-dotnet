@@ -51,19 +51,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -90,19 +77,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -131,19 +105,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -170,19 +131,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -211,19 +159,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -250,19 +185,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     "leader_optionscedbfd6e",
                 },
-                ConfigType = InstanceConfig.Types.Type.GoogleManaged,
-                OptionalReplicas = { new ReplicaInfo(), },
-                BaseConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Labels =
-                {
-                    {
-                        "key8a0b6e3c",
-                        "value60c16320"
-                    },
-                },
-                Etag = "etage8ad7218",
-                Reconciling = false,
-                State = InstanceConfig.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -270,109 +192,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceConfig responseCancellationToken = await client.GetInstanceConfigAsync(request.InstanceConfigName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteInstanceConfigRequestObject()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Etag = "etage8ad7218",
-                ValidateOnly = true,
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            client.DeleteInstanceConfig(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteInstanceConfigRequestObjectAsync()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-                Etag = "etage8ad7218",
-                ValidateOnly = true,
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            await client.DeleteInstanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteInstanceConfigAsync(request, st::CancellationToken.None);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteInstanceConfig()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            client.DeleteInstanceConfig(request.Name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteInstanceConfigAsync()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            await client.DeleteInstanceConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteInstanceConfigAsync(request.Name, st::CancellationToken.None);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteInstanceConfigResourceNames()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            client.DeleteInstanceConfig(request.InstanceConfigName);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteInstanceConfigResourceNamesAsync()
-        {
-            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
-            {
-                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null, null);
-            await client.DeleteInstanceConfigAsync(request.InstanceConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteInstanceConfigAsync(request.InstanceConfigName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
