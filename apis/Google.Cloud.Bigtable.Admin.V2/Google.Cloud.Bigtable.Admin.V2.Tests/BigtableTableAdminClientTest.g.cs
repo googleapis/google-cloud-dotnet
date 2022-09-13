@@ -67,6 +67,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -109,6 +110,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -149,6 +151,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -187,6 +190,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -227,6 +231,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -265,6 +270,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -304,6 +310,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -341,6 +348,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -379,6 +387,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -415,6 +424,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -453,6 +463,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -489,6 +500,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -630,6 +642,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -670,6 +683,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -712,6 +726,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -752,6 +767,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -794,6 +810,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
@@ -834,6 +851,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
                 Granularity = Table.Types.TimestampGranularity.Unspecified,
                 RestoreInfo = new RestoreInfo(),
+                DeletionProtection = false,
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);

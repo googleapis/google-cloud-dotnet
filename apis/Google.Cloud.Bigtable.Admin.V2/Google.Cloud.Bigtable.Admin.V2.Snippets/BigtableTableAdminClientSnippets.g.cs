@@ -699,6 +699,134 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateTable</summary>
+        public void UpdateTableRequestObject()
+        {
+            // Snippet: UpdateTable(UpdateTableRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateTableRequest request = new UpdateTableRequest
+            {
+                Table = new Table(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Table, UpdateTableMetadata> response = bigtableTableAdminClient.UpdateTable(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UpdateTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UpdateTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTableAsync</summary>
+        public async Task UpdateTableRequestObjectAsync()
+        {
+            // Snippet: UpdateTableAsync(UpdateTableRequest, CallSettings)
+            // Additional: UpdateTableAsync(UpdateTableRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateTableRequest request = new UpdateTableRequest
+            {
+                Table = new Table(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Table, UpdateTableMetadata> response = await bigtableTableAdminClient.UpdateTableAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UpdateTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UpdateTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTable</summary>
+        public void UpdateTable()
+        {
+            // Snippet: UpdateTable(Table, FieldMask, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            Table table = new Table();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Table, UpdateTableMetadata> response = bigtableTableAdminClient.UpdateTable(table, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UpdateTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UpdateTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTableAsync</summary>
+        public async Task UpdateTableAsync()
+        {
+            // Snippet: UpdateTableAsync(Table, FieldMask, CallSettings)
+            // Additional: UpdateTableAsync(Table, FieldMask, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Table table = new Table();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Table, UpdateTableMetadata> response = await bigtableTableAdminClient.UpdateTableAsync(table, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UpdateTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UpdateTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteTable</summary>
         public void DeleteTableRequestObject()
         {

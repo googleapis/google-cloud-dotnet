@@ -54,6 +54,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableFromSnapshotOperationsSettings = existing.CreateTableFromSnapshotOperationsSettings.Clone();
             ListTablesSettings = existing.ListTablesSettings;
             GetTableSettings = existing.GetTableSettings;
+            UpdateTableSettings = existing.UpdateTableSettings;
+            UpdateTableOperationsSettings = existing.UpdateTableOperationsSettings.Clone();
             DeleteTableSettings = existing.DeleteTableSettings;
             UndeleteTableSettings = existing.UndeleteTableSettings;
             UndeleteTableOperationsSettings = existing.UndeleteTableOperationsSettings.Clone();
@@ -166,6 +168,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTableSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.UpdateTable</c> and <c>BigtableTableAdminClient.UpdateTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.UpdateTable</c> and
+        /// <c>BigtableTableAdminClient.UpdateTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateTableOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1388,6 +1420,139 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Table> GetTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
             GetTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Table, UpdateTableMetadata> UpdateTable(UpdateTableRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UpdateTableMetadata>> UpdateTableAsync(UpdateTableRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UpdateTableMetadata>> UpdateTableAsync(UpdateTableRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateTable</c>.</summary>
+        public virtual lro::OperationsClient UpdateTableOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateTable</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Table, UpdateTableMetadata> PollOnceUpdateTable(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Table, UpdateTableMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateTable</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Table, UpdateTableMetadata>> PollOnceUpdateTableAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Table, UpdateTableMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="table">
+        /// Required. The table to update.
+        /// The table's `name` field is used to identify the table to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// field should be updated. This mask is relative to the `table` field, not to
+        /// the request message. The wildcard (*) path is currently not supported.
+        /// Currently UpdateTable is only supported for the following field:
+        /// * `deletion_protection`
+        /// If `column_families` is set in `update_mask`, it will return an
+        /// UNIMPLEMENTED error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Table, UpdateTableMetadata> UpdateTable(Table table, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTable(new UpdateTableRequest
+            {
+                Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="table">
+        /// Required. The table to update.
+        /// The table's `name` field is used to identify the table to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// field should be updated. This mask is relative to the `table` field, not to
+        /// the request message. The wildcard (*) path is currently not supported.
+        /// Currently UpdateTable is only supported for the following field:
+        /// * `deletion_protection`
+        /// If `column_families` is set in `update_mask`, it will return an
+        /// UNIMPLEMENTED error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UpdateTableMetadata>> UpdateTableAsync(Table table, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTableAsync(new UpdateTableRequest
+            {
+                Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="table">
+        /// Required. The table to update.
+        /// The table's `name` field is used to identify the table to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// field should be updated. This mask is relative to the `table` field, not to
+        /// the request message. The wildcard (*) path is currently not supported.
+        /// Currently UpdateTable is only supported for the following field:
+        /// * `deletion_protection`
+        /// If `column_families` is set in `update_mask`, it will return an
+        /// UNIMPLEMENTED error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UpdateTableMetadata>> UpdateTableAsync(Table table, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTableAsync(table, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently deletes a specified table and all of its data.
@@ -4278,6 +4443,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<GetTableRequest, Table> _callGetTable;
 
+        private readonly gaxgrpc::ApiCall<UpdateTableRequest, lro::Operation> _callUpdateTable;
+
         private readonly gaxgrpc::ApiCall<DeleteTableRequest, wkt::Empty> _callDeleteTable;
 
         private readonly gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> _callUndeleteTable;
@@ -4328,6 +4495,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             BigtableTableAdminSettings effectiveSettings = settings ?? BigtableTableAdminSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateTableFromSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings, logger);
+            UpdateTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTableOperationsSettings, logger);
             UndeleteTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteTableOperationsSettings, logger);
             SnapshotTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
@@ -4344,6 +4512,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>("GetTable", grpcClient.GetTableAsync, grpcClient.GetTable, effectiveSettings.GetTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTable);
             Modify_GetTableApiCall(ref _callGetTable);
+            _callUpdateTable = clientHelper.BuildApiCall<UpdateTableRequest, lro::Operation>("UpdateTable", grpcClient.UpdateTableAsync, grpcClient.UpdateTable, effectiveSettings.UpdateTableSettings).WithGoogleRequestParam("table.name", request => request.Table?.Name);
+            Modify_ApiCall(ref _callUpdateTable);
+            Modify_UpdateTableApiCall(ref _callUpdateTable);
             _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, wkt::Empty>("DeleteTable", grpcClient.DeleteTableAsync, grpcClient.DeleteTable, effectiveSettings.DeleteTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTable);
             Modify_DeleteTableApiCall(ref _callDeleteTable);
@@ -4414,6 +4585,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_GetTableApiCall(ref gaxgrpc::ApiCall<GetTableRequest, Table> call);
 
+        partial void Modify_UpdateTableApiCall(ref gaxgrpc::ApiCall<UpdateTableRequest, lro::Operation> call);
+
         partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, wkt::Empty> call);
 
         partial void Modify_UndeleteTableApiCall(ref gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> call);
@@ -4464,6 +4637,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTableRequest(ref UpdateTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4618,6 +4793,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_GetTableRequest(ref request, ref callSettings);
             return _callGetTable.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateTable</c>.</summary>
+        public override lro::OperationsClient UpdateTableOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Table, UpdateTableMetadata> UpdateTable(UpdateTableRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTableRequest(ref request, ref callSettings);
+            return new lro::Operation<Table, UpdateTableMetadata>(_callUpdateTable.Sync(request, callSettings), UpdateTableOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Table, UpdateTableMetadata>> UpdateTableAsync(UpdateTableRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTableRequest(ref request, ref callSettings);
+            return new lro::Operation<Table, UpdateTableMetadata>(await _callUpdateTable.Async(request, callSettings).ConfigureAwait(false), UpdateTableOperationsClient);
         }
 
         /// <summary>

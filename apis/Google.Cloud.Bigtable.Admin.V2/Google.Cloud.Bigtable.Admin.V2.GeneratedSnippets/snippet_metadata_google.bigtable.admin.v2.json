@@ -3520,6 +3520,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateTable_sync",
+      "title": "UpdateTableRequestObject",
+      "description": "Snippet for UpdateTable",
+      "file": "BigtableTableAdminClient.UpdateTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTable",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTable",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateTable_async",
+      "title": "UpdateTableRequestObjectAsync",
+      "description": "Snippet for UpdateTableAsync",
+      "file": "BigtableTableAdminClient.UpdateTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTableAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTableAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateTable_sync_flattened",
+      "title": "UpdateTable",
+      "description": "Snippet for UpdateTable",
+      "file": "BigtableTableAdminClient.UpdateTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTable",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTable",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateTable_async_flattened",
+      "title": "UpdateTableAsync",
+      "description": "Snippet for UpdateTableAsync",
+      "file": "BigtableTableAdminClient.UpdateTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTableAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTableAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteTable_sync",
       "title": "DeleteTableRequestObject",
       "description": "Snippet for DeleteTable",
