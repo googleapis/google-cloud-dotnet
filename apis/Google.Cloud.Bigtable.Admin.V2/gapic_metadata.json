@@ -282,6 +282,12 @@
                 "UpdateBackup",
                 "UpdateBackupAsync"
               ]
+            },
+            "UpdateTable": {
+              "methods": [
+                "UpdateTable",
+                "UpdateTableAsync"
+              ]
             }
           }
         }

@@ -81,6 +81,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest> __Marshaller_google_bigtable_admin_v2_GetTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest> __Marshaller_google_bigtable_admin_v2_UpdateTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest> __Marshaller_google_bigtable_admin_v2_DeleteTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -168,6 +170,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "GetTable",
         __Marshaller_google_bigtable_admin_v2_GetTableRequest,
         __Marshaller_google_bigtable_admin_v2_Table);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest, global::Google.LongRunning.Operation> __Method_UpdateTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTable",
+        __Marshaller_google_bigtable_admin_v2_UpdateTableRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -384,6 +394,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Table> GetTable(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a specified table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateTable(global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -925,6 +947,54 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> GetTableAsync(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTable, null, options, request);
+      }
+      /// <summary>
+      /// Updates a specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateTable(global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateTable(global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTable, null, options, request);
+      }
+      /// <summary>
+      /// Updates a specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTableAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTableAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTable, null, options, request);
       }
       /// <summary>
       /// Permanently deletes a specified table and all of its data.
@@ -2068,6 +2138,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_CreateTableFromSnapshot, serviceImpl.CreateTableFromSnapshot)
           .AddMethod(__Method_ListTables, serviceImpl.ListTables)
           .AddMethod(__Method_GetTable, serviceImpl.GetTable)
+          .AddMethod(__Method_UpdateTable, serviceImpl.UpdateTable)
           .AddMethod(__Method_DeleteTable, serviceImpl.DeleteTable)
           .AddMethod(__Method_UndeleteTable, serviceImpl.UndeleteTable)
           .AddMethod(__Method_ModifyColumnFamilies, serviceImpl.ModifyColumnFamilies)
@@ -2100,6 +2171,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_CreateTableFromSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTableFromSnapshot));
       serviceBinder.AddMethod(__Method_ListTables, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse>(serviceImpl.ListTables));
       serviceBinder.AddMethod(__Method_GetTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.GetTable));
+      serviceBinder.AddMethod(__Method_UpdateTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTable));
       serviceBinder.AddMethod(__Method_DeleteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTable));
       serviceBinder.AddMethod(__Method_UndeleteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeleteTable));
       serviceBinder.AddMethod(__Method_ModifyColumnFamilies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.ModifyColumnFamilies));
