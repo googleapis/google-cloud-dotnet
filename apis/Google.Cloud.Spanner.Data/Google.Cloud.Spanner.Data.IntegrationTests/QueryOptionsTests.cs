@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google Inc. All Rights Reserved.
+// Copyright 2020 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,10 +33,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public QueryOptionsTests(ReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task PointReadWithConnectionLevelQueryOptions()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't yet support an optimizer statistics package");
+            // Emulator doesn't yet support an optimizer statistics package.
             using (var connection = _fixture.GetConnection())
             {
                 connection.QueryOptions = QueryOptions.Empty
@@ -54,10 +55,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task PointReadWithQueryLevelOptions()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't yet support an optimizer statistics package");
+            // Emulator doesn't yet support an optimizer statistics package.
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
@@ -75,10 +77,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task PointReadWithInvalidConnectionLevelQueryOptions()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't fail with invalid optimizer versions");
+            // Emulator doesn't fail with invalid optimizer versions.
             using (var connection = _fixture.GetConnection())
             {
                 connection.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("invalid");

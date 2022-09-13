@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,10 +88,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task RetriesOnce()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
+            // Requires multiple read/write transactions which is not supported on emulator.
             string key = _fixture.CreateTestRows();
 
             ManualResetEventSlim firstTaskUpdateAttempted = new ManualResetEventSlim(false);

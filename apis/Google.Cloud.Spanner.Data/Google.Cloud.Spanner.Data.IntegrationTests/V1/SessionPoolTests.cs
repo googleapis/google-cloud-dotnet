@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Data;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.Data.IntegrationTests;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -90,10 +91,11 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task SessionLabels()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator does not support filtering by labels");
+            // Emulator does not support filtering by labels.
             string guid = Guid.NewGuid().ToString().ToLowerInvariant();
             var options = new SessionPoolOptions
             {

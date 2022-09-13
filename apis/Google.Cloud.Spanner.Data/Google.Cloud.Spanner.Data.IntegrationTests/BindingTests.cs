@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(SpannerDatabaseFixture))]
     [CommonTestDiagnostics]
+    [Trait(Constants.Category, Constants.GSQL)]
     public class BindingTests
     {
         private readonly SpannerDatabaseFixture _fixture;
@@ -239,26 +241,29 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             new DateTime?[] { });
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task BindJson()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the JSON type");
+            // The emulator doesn't yet support the JSON type.
             await TestBindNonNull(SpannerDbType.Json, "{\"key\":\"value\"}", r => r.GetString(0));
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task BindJsonArray()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the JSON type");
+            // The emulator doesn't yet support the JSON type.
             await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.Json),
                 new string[] { "{\"key\":\"value\"}", null, "{\"other-key\":\"other-value\"}" });
         }
-
-        [SkippableFact]
+        
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task BindJsonEmptyArray()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the JSON type");
+            // The emulator doesn't yet support the JSON type.
             await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Json), new string[] { });
         }
     }

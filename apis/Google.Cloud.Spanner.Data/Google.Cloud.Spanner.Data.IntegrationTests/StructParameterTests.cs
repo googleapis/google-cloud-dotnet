@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -304,10 +305,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task SelectStructFails()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator allows structs to be selected");
+            // Emulator allows structs to be selected.
             var structParam = new SpannerStruct
             {
                 { "x", SpannerDbType.Int64, 1 },
@@ -326,10 +328,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SkipOnEmulator, Constants.Yes)]
         public async Task SelectStructArrayFails()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator allows struct arrays to be selected");
+            // Emulator allows struct arrays to be selected.
             var structParam = new SpannerStruct
             {
                 { "x", SpannerDbType.Int64, 1 },
