@@ -49,6 +49,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Region = "regionedb20d96",
                 Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -87,6 +88,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Region = "regionedb20d96",
                 Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -127,6 +129,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Region = "regionedb20d96",
                 Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -165,6 +168,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Region = "regionedb20d96",
                 Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",

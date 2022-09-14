@@ -46,6 +46,7 @@ namespace Google.Cloud.Compute.V1
         private SslPoliciesSettings(SslPoliciesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -59,6 +60,27 @@ namespace Google.Cloud.Compute.V1
         }
 
         partial void OnCopy(SslPoliciesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SslPoliciesClient.AggregatedList</c> and <c>SslPoliciesClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SslPoliciesClient.Delete</c>
@@ -354,6 +376,76 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC SslPolicies client</summary>
         public virtual SslPolicies.SslPoliciesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedList(AggregatedListSslPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedListAsync(AggregatedListSslPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedList(new AggregatedListSslPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedListAsync(new AggregatedListSslPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
@@ -891,6 +983,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class SslPoliciesClientImpl : SslPoliciesClient
     {
+        private readonly gaxgrpc::ApiCall<AggregatedListSslPoliciesRequest, SslPoliciesAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteSslPolicyRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetSslPolicyRequest, SslPolicy> _callGet;
@@ -917,6 +1011,9 @@ namespace Google.Cloud.Compute.V1
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSslPoliciesRequest, SslPoliciesAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteSslPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -940,6 +1037,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListSslPoliciesRequest, SslPoliciesAggregatedList> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteSslPolicyRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetSslPolicyRequest, SslPolicy> call);
@@ -957,6 +1056,8 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The underlying gRPC SslPolicies client</summary>
         public override SslPolicies.SslPoliciesClient GrpcClient { get; }
 
+        partial void Modify_AggregatedListSslPoliciesRequest(ref AggregatedListSslPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteSslPolicyRequest(ref DeleteSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSslPolicyRequest(ref GetSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
@@ -968,6 +1069,32 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListAvailableFeaturesSslPoliciesRequest(ref ListAvailableFeaturesSslPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchSslPolicyRequest(ref PatchSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedList(AggregatedListSslPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListSslPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListSslPoliciesRequest, SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>> AggregatedListAsync(AggregatedListSslPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListSslPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListSslPoliciesRequest, SslPoliciesAggregatedList, scg::KeyValuePair<string, SslPoliciesScopedList>>(_callAggregatedList, request, callSettings);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1141,6 +1268,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListSslPoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListSslPoliciesRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -1151,10 +1288,10 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
-    public partial class SslPoliciesList : gaxgrpc::IPageResponse<SslPolicy>
+    public partial class SslPoliciesAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, SslPoliciesScopedList>>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<SslPolicy> GetEnumerator() => Items.GetEnumerator();
+        public scg::IEnumerator<scg::KeyValuePair<string, SslPoliciesScopedList>> GetEnumerator() => Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

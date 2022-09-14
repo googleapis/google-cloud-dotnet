@@ -490,6 +490,23 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendBucket"/> message.</summary>
+        public static class BackendBucket
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.BackendBucket.Types.CompressionMode"/> enum.</summary>
+            public static class CompressionMode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendBucket.Types.CompressionMode.UndefinedCompressionMode"/>.</summary>
+                public const string UndefinedCompressionMode = "UNDEFINED_COMPRESSION_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendBucket.Types.CompressionMode.Automatic"/>.</summary>
+                public const string Automatic = "AUTOMATIC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendBucket.Types.CompressionMode.Disabled"/>.</summary>
+                public const string Disabled = "DISABLED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendBucketCdnPolicy"/> message.</summary>
         public static class BackendBucketCdnPolicy
         {
@@ -516,6 +533,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendService"/> message.</summary>
         public static class BackendService
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.CompressionMode"/> enum.</summary>
+            public static class CompressionMode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.CompressionMode.UndefinedCompressionMode"/>.</summary>
+                public const string UndefinedCompressionMode = "UNDEFINED_COMPRESSION_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.CompressionMode.Automatic"/>.</summary>
+                public const string Automatic = "AUTOMATIC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.CompressionMode.Disabled"/>.</summary>
+                public const string Disabled = "DISABLED";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.LoadBalancingScheme"/> enum.</summary>
             public static class LoadBalancingScheme
             {
@@ -4755,6 +4785,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ShareSettings.Types.ShareType.Local"/>.</summary>
                 public const string Local = "LOCAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ShareSettings.Types.ShareType.Organization"/>.</summary>
+                public const string Organization = "ORGANIZATION";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ShareSettings.Types.ShareType.Unspecified"/>.</summary>
                 public const string Unspecified = "SHARE_TYPE_UNSPECIFIED";

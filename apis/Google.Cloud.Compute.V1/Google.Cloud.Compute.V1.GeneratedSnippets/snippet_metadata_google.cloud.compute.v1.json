@@ -843,6 +843,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_Addresses_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "AddressesClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.AddressesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "AddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.AddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Addresses.SetLabels",
+          "service": {
+            "shortName": "Addresses",
+            "fullName": "google.cloud.compute.v1.Addresses"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Addresses_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "AddressesClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.AddressesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "AddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.AddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Addresses.SetLabels",
+          "service": {
+            "shortName": "Addresses",
+            "fullName": "google.cloud.compute.v1.Addresses"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Addresses_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "AddressesClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.AddressesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "AddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.AddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Addresses.SetLabels",
+          "service": {
+            "shortName": "Addresses",
+            "fullName": "google.cloud.compute.v1.Addresses"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Addresses_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "AddressesClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.AddressesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "AddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.AddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Addresses.SetLabels",
+          "service": {
+            "shortName": "Addresses",
+            "fullName": "google.cloud.compute.v1.Addresses"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_Autoscalers_AggregatedList_sync",
       "title": "AggregatedListRequestObject",
       "description": "Snippet for AggregatedList",
@@ -3131,6 +3235,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_BackendServices_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "BackendServicesClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "BackendServicesClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "BackendServicesClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "BackendServicesClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_BackendServices_Insert_sync",
       "title": "InsertRequestObject",
       "description": "Snippet for Insert",
@@ -3538,6 +3746,110 @@
         "method": {
           "shortName": "SetEdgeSecurityPolicy",
           "fullName": "google.cloud.compute.v1.BackendServices.SetEdgeSecurityPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "BackendServicesClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "BackendServicesClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "BackendServicesClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "BackendServices",
+            "fullName": "google.cloud.compute.v1.BackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_BackendServices_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "BackendServicesClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.BackendServicesClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "BackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.BackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.BackendServices.SetIamPolicy",
           "service": {
             "shortName": "BackendServices",
             "fullName": "google.cloud.compute.v1.BackendServices"
@@ -9778,6 +10090,110 @@
         "method": {
           "shortName": "List",
           "fullName": "google.cloud.compute.v1.GlobalAddresses.List",
+          "service": {
+            "shortName": "GlobalAddresses",
+            "fullName": "google.cloud.compute.v1.GlobalAddresses"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalAddresses_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "GlobalAddressesClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "GlobalAddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.GlobalAddresses.SetLabels",
+          "service": {
+            "shortName": "GlobalAddresses",
+            "fullName": "google.cloud.compute.v1.GlobalAddresses"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalAddresses_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "GlobalAddressesClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "GlobalAddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.GlobalAddresses.SetLabels",
+          "service": {
+            "shortName": "GlobalAddresses",
+            "fullName": "google.cloud.compute.v1.GlobalAddresses"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalAddresses_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "GlobalAddressesClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "GlobalAddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.GlobalAddresses.SetLabels",
+          "service": {
+            "shortName": "GlobalAddresses",
+            "fullName": "google.cloud.compute.v1.GlobalAddresses"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalAddresses_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "GlobalAddressesClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "GlobalAddressesClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalAddressesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.GlobalAddresses.SetLabels",
           "service": {
             "shortName": "GlobalAddresses",
             "fullName": "google.cloud.compute.v1.GlobalAddresses"
@@ -23619,6 +24035,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_InterconnectAttachments_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "InterconnectAttachmentsClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.InterconnectAttachments.SetLabels",
+          "service": {
+            "shortName": "InterconnectAttachments",
+            "fullName": "google.cloud.compute.v1.InterconnectAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_InterconnectAttachments_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "InterconnectAttachmentsClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.InterconnectAttachments.SetLabels",
+          "service": {
+            "shortName": "InterconnectAttachments",
+            "fullName": "google.cloud.compute.v1.InterconnectAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_InterconnectAttachments_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "InterconnectAttachmentsClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.InterconnectAttachments.SetLabels",
+          "service": {
+            "shortName": "InterconnectAttachments",
+            "fullName": "google.cloud.compute.v1.InterconnectAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_InterconnectAttachments_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "InterconnectAttachmentsClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.InterconnectAttachments.SetLabels",
+          "service": {
+            "shortName": "InterconnectAttachments",
+            "fullName": "google.cloud.compute.v1.InterconnectAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_InterconnectLocations_Get_sync",
       "title": "GetRequestObject",
       "description": "Snippet for Get",
@@ -24442,6 +24962,110 @@
         "method": {
           "shortName": "Patch",
           "fullName": "google.cloud.compute.v1.Interconnects.Patch",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "InterconnectsClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetLabels",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "InterconnectsClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetLabels",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "InterconnectsClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetLabels",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "InterconnectsClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetLabels",
           "service": {
             "shortName": "Interconnects",
             "fullName": "google.cloud.compute.v1.Interconnects"
@@ -37347,6 +37971,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_RegionBackendServices_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "RegionBackendServicesClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "RegionBackendServicesClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "RegionBackendServicesClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "RegionBackendServicesClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.GetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_RegionBackendServices_Insert_sync",
       "title": "InsertRequestObject",
       "description": "Snippet for Insert",
@@ -37650,6 +38378,110 @@
         "method": {
           "shortName": "Patch",
           "fullName": "google.cloud.compute.v1.RegionBackendServices.Patch",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "RegionBackendServicesClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "RegionBackendServicesClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "RegionBackendServicesClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.SetIamPolicy",
+          "service": {
+            "shortName": "RegionBackendServices",
+            "fullName": "google.cloud.compute.v1.RegionBackendServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionBackendServices_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "RegionBackendServicesClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionBackendServicesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionBackendServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionBackendServices.SetIamPolicy",
           "service": {
             "shortName": "RegionBackendServices",
             "fullName": "google.cloud.compute.v1.RegionBackendServices"
@@ -47331,6 +48163,630 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Delete_sync",
+      "title": "DeleteRequestObject",
+      "description": "Snippet for Delete",
+      "file": "RegionSslPoliciesClient.DeleteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Delete",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Delete_async",
+      "title": "DeleteRequestObjectAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "RegionSslPoliciesClient.DeleteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Delete",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Delete_sync_flattened",
+      "title": "Delete",
+      "description": "Snippet for Delete",
+      "file": "RegionSslPoliciesClient.DeleteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Delete",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Delete_async_flattened",
+      "title": "DeleteAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "RegionSslPoliciesClient.DeleteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Delete",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "RegionSslPoliciesClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.SslPolicy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Get",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "RegionSslPoliciesClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Get",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "RegionSslPoliciesClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.SslPolicy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Get",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "RegionSslPoliciesClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Get",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Insert_sync",
+      "title": "InsertRequestObject",
+      "description": "Snippet for Insert",
+      "file": "RegionSslPoliciesClient.InsertRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Insert",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Insert_async",
+      "title": "InsertRequestObjectAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "RegionSslPoliciesClient.InsertRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Insert",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Insert_sync_flattened",
+      "title": "Insert",
+      "description": "Snippet for Insert",
+      "file": "RegionSslPoliciesClient.InsertSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Insert",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Insert_async_flattened",
+      "title": "InsertAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "RegionSslPoliciesClient.InsertAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Insert",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "RegionSslPoliciesClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.SslPoliciesList, Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.List",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "RegionSslPoliciesClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.SslPoliciesList, Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.List",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "RegionSslPoliciesClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.SslPoliciesList, Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.List",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "RegionSslPoliciesClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.SslPoliciesList, Google.Cloud.Compute.V1.SslPolicy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.List",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_ListAvailableFeatures_sync",
+      "title": "ListAvailableFeaturesRequestObject",
+      "description": "Snippet for ListAvailableFeatures",
+      "file": "RegionSslPoliciesClient.ListAvailableFeaturesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAvailableFeatures",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAvailableFeatures",
+        "resultType": "Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListAvailableFeatures",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.ListAvailableFeatures",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_ListAvailableFeatures_async",
+      "title": "ListAvailableFeaturesRequestObjectAsync",
+      "description": "Snippet for ListAvailableFeaturesAsync",
+      "file": "RegionSslPoliciesClient.ListAvailableFeaturesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAvailableFeaturesAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAvailableFeaturesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListAvailableFeatures",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.ListAvailableFeatures",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_ListAvailableFeatures_sync_flattened",
+      "title": "ListAvailableFeatures",
+      "description": "Snippet for ListAvailableFeatures",
+      "file": "RegionSslPoliciesClient.ListAvailableFeaturesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAvailableFeatures",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAvailableFeatures",
+        "resultType": "Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListAvailableFeatures",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.ListAvailableFeatures",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_ListAvailableFeatures_async_flattened",
+      "title": "ListAvailableFeaturesAsync",
+      "description": "Snippet for ListAvailableFeaturesAsync",
+      "file": "RegionSslPoliciesClient.ListAvailableFeaturesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAvailableFeaturesAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.ListAvailableFeaturesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListAvailableFeatures",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.ListAvailableFeatures",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Patch_sync",
+      "title": "PatchRequestObject",
+      "description": "Snippet for Patch",
+      "file": "RegionSslPoliciesClient.PatchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Patch",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Patch",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Patch",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Patch_async",
+      "title": "PatchRequestObjectAsync",
+      "description": "Snippet for PatchAsync",
+      "file": "RegionSslPoliciesClient.PatchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.PatchAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Patch",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Patch_sync_flattened",
+      "title": "Patch",
+      "description": "Snippet for Patch",
+      "file": "RegionSslPoliciesClient.PatchSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Patch",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.Patch",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Patch",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_Patch_async_flattened",
+      "title": "PatchAsync",
+      "description": "Snippet for PatchAsync",
+      "file": "RegionSslPoliciesClient.PatchAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.PatchAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.Patch",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_RegionTargetHttpProxies_Delete_sync",
       "title": "DeleteRequestObject",
       "description": "Snippet for Delete",
@@ -48573,6 +50029,422 @@
           "service": {
             "shortName": "RegionTargetHttpsProxies",
             "fullName": "google.cloud.compute.v1.RegionTargetHttpsProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Delete_sync",
+      "title": "DeleteRequestObject",
+      "description": "Snippet for Delete",
+      "file": "RegionTargetTcpProxiesClient.DeleteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Delete",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Delete_async",
+      "title": "DeleteRequestObjectAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "RegionTargetTcpProxiesClient.DeleteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Delete",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Delete_sync_flattened",
+      "title": "Delete",
+      "description": "Snippet for Delete",
+      "file": "RegionTargetTcpProxiesClient.DeleteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Delete",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Delete_async_flattened",
+      "title": "DeleteAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "RegionTargetTcpProxiesClient.DeleteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Delete",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "RegionTargetTcpProxiesClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.TargetTcpProxy",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Get",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "RegionTargetTcpProxiesClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Get",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "RegionTargetTcpProxiesClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.TargetTcpProxy",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Get",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "RegionTargetTcpProxiesClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Get",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Insert_sync",
+      "title": "InsertRequestObject",
+      "description": "Snippet for Insert",
+      "file": "RegionTargetTcpProxiesClient.InsertRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Insert",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Insert_async",
+      "title": "InsertRequestObjectAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "RegionTargetTcpProxiesClient.InsertRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Insert",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Insert_sync_flattened",
+      "title": "Insert",
+      "description": "Snippet for Insert",
+      "file": "RegionTargetTcpProxiesClient.InsertSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Insert",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_Insert_async_flattened",
+      "title": "InsertAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "RegionTargetTcpProxiesClient.InsertAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.Insert",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "RegionTargetTcpProxiesClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyList, Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.List",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "RegionTargetTcpProxiesClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyList, Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.List",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "RegionTargetTcpProxiesClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyList, Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.List",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionTargetTcpProxies_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "RegionTargetTcpProxiesClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyList, Google.Cloud.Compute.V1.TargetTcpProxy>",
+        "client": {
+          "shortName": "RegionTargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionTargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies.List",
+          "service": {
+            "shortName": "RegionTargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.RegionTargetTcpProxies"
           }
         }
       },
@@ -53987,6 +55859,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_SecurityPolicies_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "SecurityPoliciesClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "SecurityPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.SecurityPolicies.SetLabels",
+          "service": {
+            "shortName": "SecurityPolicies",
+            "fullName": "google.cloud.compute.v1.SecurityPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SecurityPolicies_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "SecurityPoliciesClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "SecurityPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.SecurityPolicies.SetLabels",
+          "service": {
+            "shortName": "SecurityPolicies",
+            "fullName": "google.cloud.compute.v1.SecurityPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SecurityPolicies_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "SecurityPoliciesClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "SecurityPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.SecurityPolicies.SetLabels",
+          "service": {
+            "shortName": "SecurityPolicies",
+            "fullName": "google.cloud.compute.v1.SecurityPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SecurityPolicies_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "SecurityPoliciesClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "SecurityPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SecurityPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.SecurityPolicies.SetLabels",
+          "service": {
+            "shortName": "SecurityPolicies",
+            "fullName": "google.cloud.compute.v1.SecurityPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_ServiceAttachments_AggregatedList_sync",
       "title": "AggregatedListRequestObject",
       "description": "Snippet for AggregatedList",
@@ -56269,6 +58245,110 @@
           "service": {
             "shortName": "SslCertificates",
             "fullName": "google.cloud.compute.v1.SslCertificates"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_AggregatedList_sync",
+      "title": "AggregatedListRequestObject",
+      "description": "Snippet for AggregatedList",
+      "file": "SslPoliciesClient.AggregatedListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.SslPoliciesAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.SslPoliciesScopedList>>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.SslPolicies.AggregatedList",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_AggregatedList_async",
+      "title": "AggregatedListRequestObjectAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "SslPoliciesClient.AggregatedListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.SslPoliciesAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.SslPoliciesScopedList>>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.SslPolicies.AggregatedList",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_AggregatedList_sync_flattened",
+      "title": "AggregatedList",
+      "description": "Snippet for AggregatedList",
+      "file": "SslPoliciesClient.AggregatedListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.SslPoliciesAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.SslPoliciesScopedList>>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.SslPolicies.AggregatedList",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_AggregatedList_async_flattened",
+      "title": "AggregatedListAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "SslPoliciesClient.AggregatedListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.SslPoliciesAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.SslPoliciesScopedList>>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.SslPolicies.AggregatedList",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
           }
         }
       },
@@ -64283,6 +66363,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_TargetVpnGateways_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "TargetVpnGatewaysClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetVpnGatewaysClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.TargetVpnGateways.SetLabels",
+          "service": {
+            "shortName": "TargetVpnGateways",
+            "fullName": "google.cloud.compute.v1.TargetVpnGateways"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetVpnGateways_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "TargetVpnGatewaysClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetVpnGatewaysClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.TargetVpnGateways.SetLabels",
+          "service": {
+            "shortName": "TargetVpnGateways",
+            "fullName": "google.cloud.compute.v1.TargetVpnGateways"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetVpnGateways_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "TargetVpnGatewaysClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetVpnGatewaysClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.TargetVpnGateways.SetLabels",
+          "service": {
+            "shortName": "TargetVpnGateways",
+            "fullName": "google.cloud.compute.v1.TargetVpnGateways"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetVpnGateways_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "TargetVpnGatewaysClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetVpnGatewaysClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetVpnGatewaysClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.TargetVpnGateways.SetLabels",
+          "service": {
+            "shortName": "TargetVpnGateways",
+            "fullName": "google.cloud.compute.v1.TargetVpnGateways"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_UrlMaps_AggregatedList_sync",
       "title": "AggregatedListRequestObject",
       "description": "Snippet for AggregatedList",
@@ -66562,6 +68746,110 @@
         "method": {
           "shortName": "List",
           "fullName": "google.cloud.compute.v1.VpnTunnels.List",
+          "service": {
+            "shortName": "VpnTunnels",
+            "fullName": "google.cloud.compute.v1.VpnTunnels"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_VpnTunnels_SetLabels_sync",
+      "title": "SetLabelsRequestObject",
+      "description": "Snippet for SetLabels",
+      "file": "VpnTunnelsClient.SetLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "VpnTunnelsClient",
+          "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.VpnTunnels.SetLabels",
+          "service": {
+            "shortName": "VpnTunnels",
+            "fullName": "google.cloud.compute.v1.VpnTunnels"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_VpnTunnels_SetLabels_async",
+      "title": "SetLabelsRequestObjectAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "VpnTunnelsClient.SetLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "VpnTunnelsClient",
+          "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.VpnTunnels.SetLabels",
+          "service": {
+            "shortName": "VpnTunnels",
+            "fullName": "google.cloud.compute.v1.VpnTunnels"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_VpnTunnels_SetLabels_sync_flattened",
+      "title": "SetLabels",
+      "description": "Snippet for SetLabels",
+      "file": "VpnTunnelsClient.SetLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabels",
+        "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient.SetLabels",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "VpnTunnelsClient",
+          "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.VpnTunnels.SetLabels",
+          "service": {
+            "shortName": "VpnTunnels",
+            "fullName": "google.cloud.compute.v1.VpnTunnels"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_VpnTunnels_SetLabels_async_flattened",
+      "title": "SetLabelsAsync",
+      "description": "Snippet for SetLabelsAsync",
+      "file": "VpnTunnelsClient.SetLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetLabelsAsync",
+        "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient.SetLabelsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "VpnTunnelsClient",
+          "fullName": "Google.Cloud.Compute.V1.VpnTunnelsClient"
+        },
+        "method": {
+          "shortName": "SetLabels",
+          "fullName": "google.cloud.compute.v1.VpnTunnels.SetLabels",
           "service": {
             "shortName": "VpnTunnels",
             "fullName": "google.cloud.compute.v1.VpnTunnels"

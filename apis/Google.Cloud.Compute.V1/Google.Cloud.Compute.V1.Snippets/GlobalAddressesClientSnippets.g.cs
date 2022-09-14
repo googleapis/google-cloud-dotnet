@@ -542,5 +542,137 @@ namespace Google.Cloud.Compute.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabelsRequestObject()
+        {
+            // Snippet: SetLabels(SetLabelsGlobalAddressRequest, CallSettings)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = GlobalAddressesClient.Create();
+            // Initialize request argument(s)
+            SetLabelsGlobalAddressRequest request = new SetLabelsGlobalAddressRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = globalAddressesClient.SetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsRequestObjectAsync()
+        {
+            // Snippet: SetLabelsAsync(SetLabelsGlobalAddressRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsGlobalAddressRequest, CancellationToken)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = await GlobalAddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetLabelsGlobalAddressRequest request = new SetLabelsGlobalAddressRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.SetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabels()
+        {
+            // Snippet: SetLabels(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = GlobalAddressesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = globalAddressesClient.SetLabels(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync()
+        {
+            // Snippet: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CancellationToken)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = await GlobalAddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

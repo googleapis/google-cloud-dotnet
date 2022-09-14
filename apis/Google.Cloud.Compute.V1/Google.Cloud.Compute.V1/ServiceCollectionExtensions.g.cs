@@ -1029,6 +1029,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionSslPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionSslPoliciesClient(this IServiceCollection services, sys::Action<gccv::RegionSslPoliciesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionSslPoliciesClientBuilder builder = new gccv::RegionSslPoliciesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::RegionTargetHttpProxiesClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -1060,6 +1078,24 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::RegionTargetHttpsProxiesClientBuilder builder = new gccv::RegionTargetHttpsProxiesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionTargetTcpProxiesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionTargetTcpProxiesClient(this IServiceCollection services, sys::Action<gccv::RegionTargetTcpProxiesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionTargetTcpProxiesClientBuilder builder = new gccv::RegionTargetTcpProxiesClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

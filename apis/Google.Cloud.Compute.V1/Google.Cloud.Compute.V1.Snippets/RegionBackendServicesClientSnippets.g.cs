@@ -301,6 +301,76 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRegionBackendServiceRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = regionBackendServicesClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRegionBackendServiceRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRegionBackendServiceRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await regionBackendServicesClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, string, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            // Make the request
+            Policy response = regionBackendServicesClient.GetIamPolicy(project, region, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            // Make the request
+            Policy response = await regionBackendServicesClient.GetIamPolicyAsync(project, region, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
@@ -766,6 +836,78 @@ namespace Google.Cloud.Compute.V1.Snippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRegionBackendServiceRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = regionBackendServicesClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRegionBackendServiceRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRegionBackendServiceRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await regionBackendServicesClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, string, RegionSetPolicyRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
+            // Make the request
+            Policy response = regionBackendServicesClient.SetIamPolicy(project, region, resource, regionSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, string, RegionSetPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, string, RegionSetPolicyRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
+            // Make the request
+            Policy response = await regionBackendServicesClient.SetIamPolicyAsync(project, region, resource, regionSetPolicyRequestResource);
             // End snippet
         }
 

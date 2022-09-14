@@ -38,6 +38,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SetLabelsAddressRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteAutoscalerRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -366,6 +375,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertGlobalAddressRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class SetLabelsGlobalAddressRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
@@ -971,6 +985,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SetLabelsInterconnectAttachmentRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteInterconnectRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -982,6 +1005,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PatchInterconnectRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class SetLabelsInterconnectRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
@@ -1857,6 +1885,33 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteRegionSslPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionSslPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchRegionSslPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRegionTargetHttpProxyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1921,6 +1976,24 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetUrlMapRegionTargetHttpsProxyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteRegionTargetTcpProxyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionTargetTcpProxyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -2091,6 +2164,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class RemoveRuleSecurityPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class SetLabelsSecurityPolicyRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
@@ -2436,6 +2514,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SetLabelsTargetVpnGatewayRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteUrlMapRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -2498,6 +2585,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertVpnTunnelRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetLabelsVpnTunnelRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

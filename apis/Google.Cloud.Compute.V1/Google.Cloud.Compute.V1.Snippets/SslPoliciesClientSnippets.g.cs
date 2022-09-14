@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
 {
     using Google.Api.Gax;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
@@ -27,6 +28,200 @@ namespace Google.Cloud.Compute.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedSslPoliciesClientSnippets
     {
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedListRequestObject()
+        {
+            // Snippet: AggregatedList(AggregatedListSslPoliciesRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            AggregatedListSslPoliciesRequest request = new AggregatedListSslPoliciesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SslPoliciesAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, SslPoliciesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, SslPoliciesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListRequestObjectAsync()
+        {
+            // Snippet: AggregatedListAsync(AggregatedListSslPoliciesRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregatedListSslPoliciesRequest request = new AggregatedListSslPoliciesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, SslPoliciesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SslPoliciesAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, SslPoliciesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, SslPoliciesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedList()
+        {
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SslPoliciesAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, SslPoliciesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, SslPoliciesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListAsync()
+        {
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, SslPoliciesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SslPoliciesAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, SslPoliciesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, SslPoliciesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, SslPoliciesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {
