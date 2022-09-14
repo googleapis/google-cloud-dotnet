@@ -57,6 +57,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
                 Protocol = "protocola08b7881",
+                CompressionMode = "compression_mode2efad835",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 ServiceBindings =
@@ -131,6 +132,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
                 Protocol = "protocola08b7881",
+                CompressionMode = "compression_mode2efad835",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 ServiceBindings =
@@ -207,6 +209,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
                 Protocol = "protocola08b7881",
+                CompressionMode = "compression_mode2efad835",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 ServiceBindings =
@@ -281,6 +284,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
                 Protocol = "protocola08b7881",
+                CompressionMode = "compression_mode2efad835",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 ServiceBindings =
@@ -452,6 +456,236 @@ namespace Google.Cloud.Compute.V1.Tests
             BackendServiceGroupHealth responseCallSettings = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendServiceGroupHealth responseCancellationToken = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicyRequestObject()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                OptionsRequestedPolicyVersion = -1471234741,
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy response = client.GetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                OptionsRequestedPolicyVersion = -1471234741,
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicy()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy response = client.GetIamPolicy(request.Project, request.Region, request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIamPolicyRegionBackendServiceRequest request = new GetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy responseCallSettings = await client.GetIamPolicyAsync(request.Project, request.Region, request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Project, request.Region, request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetIamPolicyRequestObject()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy response = client.SetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetIamPolicy()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy response = client.SetIamPolicy(request.Project, request.Region, request.Resource, request.RegionSetPolicyRequestResource);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
+        {
+            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetIamPolicyRegionBackendServiceRequest request = new SetIamPolicyRegionBackendServiceRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Etag = "etage8ad7218",
+                Rules = { new Rule(), },
+                AuditConfigs = { new AuditConfig(), },
+                Version = 271578922,
+                Bindings = { new Binding(), },
+                IamOwned = false,
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
+            Policy responseCallSettings = await client.SetIamPolicyAsync(request.Project, request.Region, request.Resource, request.RegionSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Project, request.Region, request.Resource, request.RegionSetPolicyRequestResource, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

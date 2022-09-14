@@ -66,6 +66,12 @@
                 "List",
                 "ListAsync"
               ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
             }
           }
         }
@@ -226,6 +232,12 @@
                 "GetHealthAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "Insert": {
               "methods": [
                 "Insert",
@@ -248,6 +260,12 @@
               "methods": [
                 "SetEdgeSecurityPolicy",
                 "SetEdgeSecurityPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
               ]
             },
             "SetSecurityPolicy": {
@@ -671,6 +689,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
               ]
             }
           }
@@ -1587,6 +1611,12 @@
                 "Patch",
                 "PatchAsync"
               ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
             }
           }
         }
@@ -1652,6 +1682,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
               ]
             }
           }
@@ -2551,6 +2587,12 @@
                 "GetHealthAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "Insert": {
               "methods": [
                 "Insert",
@@ -2567,6 +2609,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
               ]
             },
             "Update": {
@@ -3257,6 +3305,51 @@
         }
       }
     },
+    "RegionSslPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionSslPoliciesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "ListAvailableFeatures": {
+              "methods": [
+                "ListAvailableFeatures",
+                "ListAvailableFeaturesAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "RegionTargetHttpProxies": {
       "clients": {
         "grpc": {
@@ -3341,6 +3434,39 @@
               "methods": [
                 "SetUrlMap",
                 "SetUrlMapAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionTargetTcpProxies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionTargetTcpProxiesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
               ]
             }
           }
@@ -3717,6 +3843,12 @@
                 "RemoveRule",
                 "RemoveRuleAsync"
               ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
             }
           }
         }
@@ -3886,6 +4018,12 @@
         "grpc": {
           "libraryClient": "SslPoliciesClient",
           "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -4428,6 +4566,12 @@
                 "List",
                 "ListAsync"
               ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
             }
           }
         }
@@ -4586,6 +4730,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
               ]
             }
           }

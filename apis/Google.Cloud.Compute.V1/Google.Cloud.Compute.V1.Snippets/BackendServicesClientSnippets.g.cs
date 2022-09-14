@@ -752,6 +752,72 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyBackendServiceRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyBackendServiceRequest request = new GetIamPolicyBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = backendServicesClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyBackendServiceRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyBackendServiceRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyBackendServiceRequest request = new GetIamPolicyBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await backendServicesClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = backendServicesClient.GetIamPolicy(project, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = await backendServicesClient.GetIamPolicyAsync(project, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
@@ -1339,6 +1405,74 @@ namespace Google.Cloud.Compute.V1.Snippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyBackendServiceRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyBackendServiceRequest request = new SetIamPolicyBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = backendServicesClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyBackendServiceRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyBackendServiceRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyBackendServiceRequest request = new SetIamPolicyBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await backendServicesClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = backendServicesClient.SetIamPolicy(project, resource, globalSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = await backendServicesClient.SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource);
             // End snippet
         }
 
