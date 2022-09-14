@@ -616,7 +616,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Logging.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0",
       "targetFrameworks": "netstandard2.1;net462",
       "productName": "BigQuery Audit Data Logging",
       "productUrl": "https://cloud.google.com/bigquery",
