@@ -55,6 +55,7 @@ namespace Google.Cloud.Compute.V1
             DeleteSignedUrlKeyOperationsSettings = existing.DeleteSignedUrlKeyOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             GetHealthSettings = existing.GetHealthSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
@@ -62,6 +63,7 @@ namespace Google.Cloud.Compute.V1
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             SetEdgeSecurityPolicySettings = existing.SetEdgeSecurityPolicySettings;
             SetEdgeSecurityPolicyOperationsSettings = existing.SetEdgeSecurityPolicyOperationsSettings.Clone();
+            SetIamPolicySettings = existing.SetIamPolicySettings;
             SetSecurityPolicySettings = existing.SetSecurityPolicySettings;
             SetSecurityPolicyOperationsSettings = existing.SetSecurityPolicyOperationsSettings.Clone();
             UpdateSettings = existing.UpdateSettings;
@@ -217,6 +219,27 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendServicesClient.GetIamPolicy</c> and <c>BackendServicesClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BackendServicesClient.Insert</c> and <c>BackendServicesClient.InsertAsync</c>.
         /// </summary>
         /// <remarks>
@@ -326,6 +349,18 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendServicesClient.SetIamPolicy</c> and <c>BackendServicesClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1095,6 +1130,83 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(project, backendService, resourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(GetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyBackendServiceRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(string project, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new GetIamPolicyBackendServiceRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new GetIamPolicyBackendServiceRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1493,6 +1605,94 @@ namespace Google.Cloud.Compute.V1
             SetEdgeSecurityPolicyAsync(project, backendService, securityPolicyReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(SetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyBackendServiceRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(string project, string resource, GlobalSetPolicyRequest globalSetPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new SetIamPolicyBackendServiceRequest
+            {
+                GlobalSetPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetPolicyRequestResource, nameof(globalSetPolicyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string resource, GlobalSetPolicyRequest globalSetPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new SetIamPolicyBackendServiceRequest
+            {
+                GlobalSetPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetPolicyRequestResource, nameof(globalSetPolicyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string resource, GlobalSetPolicyRequest globalSetPolicyRequestResource, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1740,6 +1940,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth> _callGetHealth;
 
+        private readonly gaxgrpc::ApiCall<GetIamPolicyBackendServiceRequest, Policy> _callGetIamPolicy;
+
         private readonly gaxgrpc::ApiCall<InsertBackendServiceRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListBackendServicesRequest, BackendServiceList> _callList;
@@ -1747,6 +1949,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<PatchBackendServiceRequest, Operation> _callPatch;
 
         private readonly gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendServiceRequest, Operation> _callSetEdgeSecurityPolicy;
+
+        private readonly gaxgrpc::ApiCall<SetIamPolicyBackendServiceRequest, Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<SetSecurityPolicyBackendServiceRequest, Operation> _callSetSecurityPolicy;
 
@@ -1789,6 +1993,9 @@ namespace Google.Cloud.Compute.V1
             _callGetHealth = clientHelper.BuildApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth>("GetHealth", grpcClient.GetHealthAsync, grpcClient.GetHealth, effectiveSettings.GetHealthSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callGetHealth);
             Modify_GetHealthApiCall(ref _callGetHealth);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyBackendServiceRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
             _callInsert = clientHelper.BuildApiCall<InsertBackendServiceRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -1801,6 +2008,9 @@ namespace Google.Cloud.Compute.V1
             _callSetEdgeSecurityPolicy = clientHelper.BuildApiCall<SetEdgeSecurityPolicyBackendServiceRequest, Operation>("SetEdgeSecurityPolicy", grpcClient.SetEdgeSecurityPolicyAsync, grpcClient.SetEdgeSecurityPolicy, effectiveSettings.SetEdgeSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callSetEdgeSecurityPolicy);
             Modify_SetEdgeSecurityPolicyApiCall(ref _callSetEdgeSecurityPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyBackendServiceRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
             _callSetSecurityPolicy = clientHelper.BuildApiCall<SetSecurityPolicyBackendServiceRequest, Operation>("SetSecurityPolicy", grpcClient.SetSecurityPolicyAsync, grpcClient.SetSecurityPolicy, effectiveSettings.SetSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callSetSecurityPolicy);
             Modify_SetSecurityPolicyApiCall(ref _callSetSecurityPolicy);
@@ -1824,6 +2034,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetHealthApiCall(ref gaxgrpc::ApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyBackendServiceRequest, Policy> call);
+
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertBackendServiceRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListBackendServicesRequest, BackendServiceList> call);
@@ -1831,6 +2043,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchBackendServiceRequest, Operation> call);
 
         partial void Modify_SetEdgeSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendServiceRequest, Operation> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyBackendServiceRequest, Policy> call);
 
         partial void Modify_SetSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetSecurityPolicyBackendServiceRequest, Operation> call);
 
@@ -1853,6 +2067,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetHealthBackendServiceRequest(ref GetHealthBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetIamPolicyBackendServiceRequest(ref GetIamPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_InsertBackendServiceRequest(ref InsertBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackendServicesRequest(ref ListBackendServicesRequest request, ref gaxgrpc::CallSettings settings);
@@ -1860,6 +2076,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PatchBackendServiceRequest(ref PatchBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetEdgeSecurityPolicyBackendServiceRequest(ref SetEdgeSecurityPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyBackendServiceRequest(ref SetIamPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetSecurityPolicyBackendServiceRequest(ref SetSecurityPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2038,6 +2256,30 @@ namespace Google.Cloud.Compute.V1
             return _callGetHealth.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy GetIamPolicy(GetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyBackendServiceRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyBackendServiceRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>Insert</c>.</summary>
         public override lro::OperationsClient InsertOperationsClient { get; }
 
@@ -2159,6 +2401,30 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetEdgeSecurityPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy SetIamPolicy(SetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyBackendServiceRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyBackendServiceRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>

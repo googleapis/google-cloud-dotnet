@@ -1409,5 +1409,137 @@ namespace Google.Cloud.Compute.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabelsRequestObject()
+        {
+            // Snippet: SetLabels(SetLabelsSecurityPolicyRequest, CallSettings)
+            // Create client
+            SecurityPoliciesClient securityPoliciesClient = SecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            SetLabelsSecurityPolicyRequest request = new SetLabelsSecurityPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = securityPoliciesClient.SetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = securityPoliciesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsRequestObjectAsync()
+        {
+            // Snippet: SetLabelsAsync(SetLabelsSecurityPolicyRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsSecurityPolicyRequest, CancellationToken)
+            // Create client
+            SecurityPoliciesClient securityPoliciesClient = await SecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetLabelsSecurityPolicyRequest request = new SetLabelsSecurityPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await securityPoliciesClient.SetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await securityPoliciesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabels()
+        {
+            // Snippet: SetLabels(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Create client
+            SecurityPoliciesClient securityPoliciesClient = SecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = securityPoliciesClient.SetLabels(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = securityPoliciesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync()
+        {
+            // Snippet: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CancellationToken)
+            // Create client
+            SecurityPoliciesClient securityPoliciesClient = await SecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await securityPoliciesClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await securityPoliciesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

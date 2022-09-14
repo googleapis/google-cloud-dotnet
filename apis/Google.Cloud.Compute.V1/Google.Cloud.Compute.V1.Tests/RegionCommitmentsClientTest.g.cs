@@ -55,8 +55,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     new ResourceCommitment(),
                 },
                 Status = "status5444cb9a",
+                MergeSourceCommitments =
+                {
+                    "merge_source_commitments6366ea06",
+                },
                 StatusMessage = "status_message2c618f86",
                 Reservations = { new Reservation(), },
+                SplitSourceCommitment = "split_source_commitment73cc06be",
                 Description = "description2cf9da67",
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
@@ -97,8 +102,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     new ResourceCommitment(),
                 },
                 Status = "status5444cb9a",
+                MergeSourceCommitments =
+                {
+                    "merge_source_commitments6366ea06",
+                },
                 StatusMessage = "status_message2c618f86",
                 Reservations = { new Reservation(), },
+                SplitSourceCommitment = "split_source_commitment73cc06be",
                 Description = "description2cf9da67",
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
@@ -141,8 +151,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     new ResourceCommitment(),
                 },
                 Status = "status5444cb9a",
+                MergeSourceCommitments =
+                {
+                    "merge_source_commitments6366ea06",
+                },
                 StatusMessage = "status_message2c618f86",
                 Reservations = { new Reservation(), },
+                SplitSourceCommitment = "split_source_commitment73cc06be",
                 Description = "description2cf9da67",
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
@@ -183,8 +198,13 @@ namespace Google.Cloud.Compute.V1.Tests
                     new ResourceCommitment(),
                 },
                 Status = "status5444cb9a",
+                MergeSourceCommitments =
+                {
+                    "merge_source_commitments6366ea06",
+                },
                 StatusMessage = "status_message2c618f86",
                 Reservations = { new Reservation(), },
+                SplitSourceCommitment = "split_source_commitment73cc06be",
                 Description = "description2cf9da67",
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",

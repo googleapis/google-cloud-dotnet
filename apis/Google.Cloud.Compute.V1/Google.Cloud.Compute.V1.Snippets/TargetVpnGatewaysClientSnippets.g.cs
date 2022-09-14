@@ -753,5 +753,143 @@ namespace Google.Cloud.Compute.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabelsRequestObject()
+        {
+            // Snippet: SetLabels(SetLabelsTargetVpnGatewayRequest, CallSettings)
+            // Create client
+            TargetVpnGatewaysClient targetVpnGatewaysClient = TargetVpnGatewaysClient.Create();
+            // Initialize request argument(s)
+            SetLabelsTargetVpnGatewayRequest request = new SetLabelsTargetVpnGatewayRequest
+            {
+                RequestId = "",
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetVpnGatewaysClient.SetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetVpnGatewaysClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsRequestObjectAsync()
+        {
+            // Snippet: SetLabelsAsync(SetLabelsTargetVpnGatewayRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsTargetVpnGatewayRequest, CancellationToken)
+            // Create client
+            TargetVpnGatewaysClient targetVpnGatewaysClient = await TargetVpnGatewaysClient.CreateAsync();
+            // Initialize request argument(s)
+            SetLabelsTargetVpnGatewayRequest request = new SetLabelsTargetVpnGatewayRequest
+            {
+                RequestId = "",
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetVpnGatewaysClient.SetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetVpnGatewaysClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabels()
+        {
+            // Snippet: SetLabels(string, string, string, RegionSetLabelsRequest, CallSettings)
+            // Create client
+            TargetVpnGatewaysClient targetVpnGatewaysClient = TargetVpnGatewaysClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetVpnGatewaysClient.SetLabels(project, region, resource, regionSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetVpnGatewaysClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync()
+        {
+            // Snippet: SetLabelsAsync(string, string, string, RegionSetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(string, string, string, RegionSetLabelsRequest, CancellationToken)
+            // Create client
+            TargetVpnGatewaysClient targetVpnGatewaysClient = await TargetVpnGatewaysClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetVpnGatewaysClient.SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetVpnGatewaysClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

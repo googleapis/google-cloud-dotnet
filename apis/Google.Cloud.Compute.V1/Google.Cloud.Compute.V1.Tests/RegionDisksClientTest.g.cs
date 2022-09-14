@@ -63,6 +63,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
+                Params = new DiskParams(),
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
@@ -142,6 +143,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
+                Params = new DiskParams(),
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
@@ -223,6 +225,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
+                Params = new DiskParams(),
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
@@ -302,6 +305,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
+                Params = new DiskParams(),
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
