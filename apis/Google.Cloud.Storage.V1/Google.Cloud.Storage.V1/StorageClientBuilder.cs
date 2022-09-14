@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Http;
+using Google.Apis.Services;
 using Google.Apis.Storage.v1;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,12 +37,19 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public EncryptionKey EncryptionKey { get; set; }
 
+        /// <summary>
+        /// Whether GZip should be enabled for the underlying client. This is currently internal
+        /// so that we are able to modify it for retry conformance testing, but if we want to expose
+        /// it publicly we should probably do so in ClientBuilderBase.
+        /// </summary>
+        internal bool GZipEnabled { get; set; } = true;
+
         /// <inheritdoc />
         public override StorageClient Build()
         {
             Validate();
             var initializer = CreateServiceInitializer();
-            var service = new StorageService(initializer);
+            var service = new StorageService(initializer);            
             return new StorageClientImpl(service, EncryptionKey);
         }
 
@@ -52,6 +60,22 @@ namespace Google.Cloud.Storage.V1
             var initializer = await CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
             var service = new StorageService(initializer);
             return new StorageClientImpl(service, EncryptionKey);
+        }
+
+        /// <inheritdoc />
+        protected override BaseClientService.Initializer CreateServiceInitializer()
+        {
+            var initializer = base.CreateServiceInitializer();
+            initializer.GZipEnabled = GZipEnabled;
+            return initializer;
+        }
+
+        /// <inheritdoc />
+        protected override async Task<BaseClientService.Initializer> CreateServiceInitializerAsync(CancellationToken cancellationToken)
+        {
+            var initializer = await base.CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
+            initializer.GZipEnabled = GZipEnabled;
+            return initializer;
         }
 
         /// <inheritdoc />
