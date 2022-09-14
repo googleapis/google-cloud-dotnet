@@ -45,7 +45,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "MS9zZWN1cml0eV9tYXJrcy5wcm90bxoyZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5",
             "Y2VudGVyL3YxL3Z1bG5lcmFiaWxpdHkucHJvdG8aHGdvb2dsZS9wcm90b2J1",
             "Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8ihBQKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkS",
+            "dG8iphQKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkS",
             "FQoNcmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgEIAEoDjItLmdvb2ds",
             "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlN0YXRlEhAKCGNh",
             "dGVnb3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgGIAEoCRJYChFzb3VyY2Vf",
@@ -75,43 +75,43 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "c3MSTAoIY29udGFjdHMYISADKAsyNS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
             "ZW50ZXIudjEuRmluZGluZy5Db250YWN0c0VudHJ5QgPgQQMSPwoLY29tcGxp",
             "YW5jZXMYIiADKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEu",
-            "Q29tcGxpYW5jZRITCgtkZXNjcmlwdGlvbhglIAEoCRJCCgxleGZpbHRyYXRp",
-            "b24YJiABKAsyLC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXhm",
-            "aWx0cmF0aW9uEkAKDGlhbV9iaW5kaW5ncxgnIAMoCzIqLmdvb2dsZS5jbG91",
-            "ZC5zZWN1cml0eWNlbnRlci52MS5JYW1CaW5kaW5nEhIKCm5leHRfc3RlcHMY",
-            "KCABKAkSPQoKY29udGFpbmVycxgqIAMoCzIpLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eWNlbnRlci52MS5Db250YWluZXISPgoKa3ViZXJuZXRlcxgrIAEoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5LdWJlcm5ldGVzEjoK",
-            "CGRhdGFiYXNlGCwgASgLMiguZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxLkRhdGFiYXNlGk8KFVNvdXJjZVByb3BlcnRpZXNFbnRyeRILCgNrZXkY",
-            "ASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6",
-            "AjgBGmYKFEV4dGVybmFsU3lzdGVtc0VudHJ5EgsKA2tleRgBIAEoCRI9CgV2",
-            "YWx1ZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5F",
-            "eHRlcm5hbFN5c3RlbToCOAEaXwoNQ29udGFjdHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSPQoFdmFsdWUYAiABKAsyLi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
-            "ZXIudjEuQ29udGFjdERldGFpbHM6AjgBIjgKBVN0YXRlEhUKEVNUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiJRCghTZXZl",
-            "cml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJQ0FMEAES",
-            "CAoESElHSBACEgoKBk1FRElVTRADEgcKA0xPVxAEIkMKBE11dGUSFAoQTVVU",
-            "RV9VTlNQRUNJRklFRBAAEgkKBU1VVEVEEAESCwoHVU5NVVRFRBACEg0KCVVO",
-            "REVGSU5FRBAEIoIBCgxGaW5kaW5nQ2xhc3MSHQoZRklORElOR19DTEFTU19V",
-            "TlNQRUNJRklFRBAAEgoKBlRIUkVBVBABEhEKDVZVTE5FUkFCSUxJVFkQAhIU",
-            "ChBNSVNDT05GSUdVUkFUSU9OEAMSDwoLT0JTRVJWQVRJT04QBBINCglTQ0Nf",
-            "RVJST1IQBTrbAepB1wEKJXNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29t",
-            "L0ZpbmRpbmcSQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc291cmNl",
-            "cy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNGZvbGRlcnMve2ZvbGRl",
-            "cn0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNnByb2pl",
-            "Y3RzL3twcm9qZWN0fS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5k",
-            "aW5nfULaAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MVAB",
-            "Wkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNs",
-            "b3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
-            "Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx",
-            "YgZwcm90bzM="));
+            "Q29tcGxpYW5jZRIgChNwYXJlbnRfZGlzcGxheV9uYW1lGCQgASgJQgPgQQMS",
+            "EwoLZGVzY3JpcHRpb24YJSABKAkSQgoMZXhmaWx0cmF0aW9uGCYgASgLMiwu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkV4ZmlsdHJhdGlvbhJA",
+            "CgxpYW1fYmluZGluZ3MYJyADKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjEuSWFtQmluZGluZxISCgpuZXh0X3N0ZXBzGCggASgJEj0KCmNv",
+            "bnRhaW5lcnMYKiADKAsyKS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djEuQ29udGFpbmVyEj4KCmt1YmVybmV0ZXMYKyABKAsyKi5nb29nbGUuY2xv",
+            "dWQuc2VjdXJpdHljZW50ZXIudjEuS3ViZXJuZXRlcxI6CghkYXRhYmFzZRgs",
+            "IAEoCzIoLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5EYXRhYmFz",
+            "ZRpPChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZh",
+            "bHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ARpmChRFeHRl",
+            "cm5hbFN5c3RlbXNFbnRyeRILCgNrZXkYASABKAkSPQoFdmFsdWUYAiABKAsy",
+            "Li5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXh0ZXJuYWxTeXN0",
+            "ZW06AjgBGl8KDUNvbnRhY3RzRW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVl",
+            "GAIgASgLMi4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbnRh",
+            "Y3REZXRhaWxzOgI4ASI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "EgoKBkFDVElWRRABEgwKCElOQUNUSVZFEAIiUQoIU2V2ZXJpdHkSGAoUU0VW",
+            "RVJJVFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIK",
+            "CgZNRURJVU0QAxIHCgNMT1cQBCJDCgRNdXRlEhQKEE1VVEVfVU5TUEVDSUZJ",
+            "RUQQABIJCgVNVVRFRBABEgsKB1VOTVVURUQQAhINCglVTkRFRklORUQQBCKC",
+            "AQoMRmluZGluZ0NsYXNzEh0KGUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZUSFJFQVQQARIRCg1WVUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklH",
+            "VVJBVElPThADEg8KC09CU0VSVkFUSU9OEAQSDQoJU0NDX0VSUk9SEAU62wHq",
+            "QdcBCiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0v",
+            "ZmluZGluZ3Mve2ZpbmRpbmd9EjRmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMv",
+            "e3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjZwcm9qZWN0cy97cHJvamVj",
+            "dH0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ31C2gEKImNv",
+            "bS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNl",
+            "bnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0",
+            "eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoC",
+            "IUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ComplianceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ConnectionReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ContactDetailsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ContainerReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.DatabaseReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExfiltrationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IamBindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.KubernetesReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MitreAttackReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ProcessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "Processes", "Contacts", "Compliances", "Description", "Exfiltration", "IamBindings", "NextSteps", "Containers", "Kubernetes", "Database" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "Processes", "Contacts", "Compliances", "ParentDisplayName", "Description", "Exfiltration", "IamBindings", "NextSteps", "Containers", "Kubernetes", "Database" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, })
           }));
     }
     #endregion
@@ -186,6 +186,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       processes_ = other.processes_.Clone();
       contacts_ = other.contacts_.Clone();
       compliances_ = other.compliances_.Clone();
+      parentDisplayName_ = other.parentDisplayName_;
       description_ = other.description_;
       exfiltration_ = other.exfiltration_ != null ? other.exfiltration_.Clone() : null;
       iamBindings_ = other.iamBindings_.Clone();
@@ -503,8 +504,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Parser), 178);
     private readonly pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem> externalSystems_ = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>();
     /// <summary>
-    /// Output only. Third party SIEM/SOAR fields within SCC, contains external
-    /// system information and external system finding fields.
+    /// Output only. Third party SIEM/SOAR fields within SCC, contains external system
+    /// information and external system finding fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -596,9 +597,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.ContactDetails.Parser), 266);
     private readonly pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails> contacts_ = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails>();
     /// <summary>
-    /// Output only. Map containing the point of contacts for the given finding.
-    /// The key represents the type of contact, while the value contains a list of
-    /// all the contacts that pertain. Please refer to:
+    /// Output only. Map containing the points of contact for the given finding. The key
+    /// represents the type of contact, while the value contains a list of all the
+    /// contacts that pertain. Please refer to:
     /// https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-categories
     ///
     ///     {
@@ -633,6 +634,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Compliance> Compliances {
       get { return compliances_; }
+    }
+
+    /// <summary>Field number for the "parent_display_name" field.</summary>
+    public const int ParentDisplayNameFieldNumber = 36;
+    private string parentDisplayName_ = "";
+    /// <summary>
+    /// Output only. The human readable display name of the finding source such as
+    /// "Event Threat Detection" or "Security Health Analytics".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParentDisplayName {
+      get { return parentDisplayName_; }
+      set {
+        parentDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "description" field.</summary>
@@ -779,6 +796,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if(!processes_.Equals(other.processes_)) return false;
       if (!Contacts.Equals(other.Contacts)) return false;
       if(!compliances_.Equals(other.compliances_)) return false;
+      if (ParentDisplayName != other.ParentDisplayName) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(Exfiltration, other.Exfiltration)) return false;
       if(!iamBindings_.Equals(other.iamBindings_)) return false;
@@ -818,6 +836,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       hash ^= processes_.GetHashCode();
       hash ^= Contacts.GetHashCode();
       hash ^= compliances_.GetHashCode();
+      if (ParentDisplayName.Length != 0) hash ^= ParentDisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (exfiltration_ != null) hash ^= Exfiltration.GetHashCode();
       hash ^= iamBindings_.GetHashCode();
@@ -925,6 +944,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
       connections_.WriteTo(output, _repeated_connections_codec);
       contacts_.WriteTo(output, _map_contacts_codec);
       compliances_.WriteTo(output, _repeated_compliances_codec);
+      if (ParentDisplayName.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(ParentDisplayName);
+      }
       if (Description.Length != 0) {
         output.WriteRawTag(170, 2);
         output.WriteString(Description);
@@ -1039,6 +1062,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
       connections_.WriteTo(ref output, _repeated_connections_codec);
       contacts_.WriteTo(ref output, _map_contacts_codec);
       compliances_.WriteTo(ref output, _repeated_compliances_codec);
+      if (ParentDisplayName.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(ParentDisplayName);
+      }
       if (Description.Length != 0) {
         output.WriteRawTag(170, 2);
         output.WriteString(Description);
@@ -1134,6 +1161,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       size += processes_.CalculateSize(_repeated_processes_codec);
       size += contacts_.CalculateSize(_map_contacts_codec);
       size += compliances_.CalculateSize(_repeated_compliances_codec);
+      if (ParentDisplayName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ParentDisplayName);
+      }
       if (Description.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
@@ -1250,6 +1280,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       processes_.Add(other.processes_);
       contacts_.Add(other.contacts_);
       compliances_.Add(other.compliances_);
+      if (other.ParentDisplayName.Length != 0) {
+        ParentDisplayName = other.ParentDisplayName;
+      }
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -1413,6 +1446,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 274: {
             compliances_.AddEntriesFrom(input, _repeated_compliances_codec);
+            break;
+          }
+          case 290: {
+            ParentDisplayName = input.ReadString();
             break;
           }
           case 298: {
@@ -1589,6 +1626,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 274: {
             compliances_.AddEntriesFrom(ref input, _repeated_compliances_codec);
+            break;
+          }
+          case 290: {
+            ParentDisplayName = input.ReadString();
             break;
           }
           case 298: {
