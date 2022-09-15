@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0, released 2022-09-15
+
+No API surface changes; just dependency updates and promotion to GA.
+
 ## Version 2.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
@@ -34,6 +38,7 @@ issues.
 
 - [Commit 2460a97](https://github.com/googleapis/google-cloud-dotnet/commit/2460a97):
   - docs: fix typos and docstring formatting
+
 ## Version 1.0.0-beta01, released 2021-10-11
 
 Initial release.
