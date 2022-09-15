@@ -1,0 +1,31 @@
+[
+  {
+    "method": "List",
+    "client": "FirewallsClient",
+    "arguments": {
+      "project": "${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "List",
+    "client": "DisksClient",
+    "arguments": {
+      "project": "${PROJECT_ID}",
+      "zone": "us-central1-c"
+    }
+  },
+  {
+    "method": "List",
+    "client": "SnapshotsClient",
+    "arguments": {
+      "project": "${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "List",
+    "client": "ZonesClient",
+    "arguments": {
+      "project": "${PROJECT_ID}"
+    }
+  }
+]
