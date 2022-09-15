@@ -924,6 +924,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -952,6 +953,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -982,6 +984,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1010,6 +1013,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1040,6 +1044,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1068,6 +1073,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1099,6 +1105,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1128,6 +1135,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1159,6 +1167,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1188,6 +1197,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1219,6 +1229,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1248,6 +1259,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1278,6 +1290,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UploadServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1306,6 +1319,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyAlgorithm = ServiceAccountKeyAlgorithm.KeyAlgUnspecified,
                 KeyOrigin = ServiceAccountKeyOrigin.GoogleProvided,
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UploadServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
@@ -1406,6 +1420,192 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountKeyAsync(request.KeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountKeyAsync(request.KeyName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DisableServiceAccountKeyRequestObject()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.DisableServiceAccountKey(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DisableServiceAccountKeyRequestObjectAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.DisableServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DisableServiceAccountKeyAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DisableServiceAccountKey()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.DisableServiceAccountKey(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DisableServiceAccountKeyAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.DisableServiceAccountKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DisableServiceAccountKeyAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DisableServiceAccountKeyResourceNames()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.DisableServiceAccountKey(request.KeyName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DisableServiceAccountKeyResourceNamesAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DisableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.DisableServiceAccountKeyAsync(request.KeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DisableServiceAccountKeyAsync(request.KeyName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void EnableServiceAccountKeyRequestObject()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.EnableServiceAccountKey(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task EnableServiceAccountKeyRequestObjectAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.EnableServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.EnableServiceAccountKeyAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void EnableServiceAccountKey()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.EnableServiceAccountKey(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task EnableServiceAccountKeyAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.EnableServiceAccountKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.EnableServiceAccountKeyAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void EnableServiceAccountKeyResourceNames()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            client.EnableServiceAccountKey(request.KeyName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task EnableServiceAccountKeyResourceNamesAsync()
+        {
+            moq::Mock<IAM.IAMClient> mockGrpcClient = new moq::Mock<IAM.IAMClient>(moq::MockBehavior.Strict);
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnableServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
+            await client.EnableServiceAccountKeyAsync(request.KeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.EnableServiceAccountKeyAsync(request.KeyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 

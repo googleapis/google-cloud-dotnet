@@ -3,7 +3,7 @@
 //     source: google/iam/admin/v1/iam.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,9 +33,9 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// * **Service account keys**, which service accounts use to authenticate with
   ///   Google APIs
   /// * **IAM policies for service accounts**, which specify the roles that a
-  ///   member has for the service account
+  ///   principal has for the service account
   /// * **IAM custom roles**, which help you limit the number of permissions that
-  ///   you grant to members
+  ///   you grant to principals
   ///
   /// In addition, you can use this service to complete the following tasks, among
   /// others:
@@ -43,6 +43,16 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// * Test whether a service account can use specific permissions
   /// * Check which roles you can grant for a specific resource
   /// * Lint, or validate, condition expressions in an IAM policy
+  ///
+  /// When you read data from the IAM API, each read is eventually consistent. In
+  /// other words, if you write data with the IAM API, then immediately read that
+  /// data, the read operation might return an older version of the data. To deal
+  /// with this behavior, your application can retry the request with truncated
+  /// exponential backoff.
+  ///
+  /// In contrast, writing data to the IAM API is sequentially consistent. In other
+  /// words, write operations are always processed in the order in which they were
+  /// received.
   /// </summary>
   public static partial class IAM
   {
@@ -119,6 +129,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_UploadServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_DeleteServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_DisableServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_EnableServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.SignBlobRequest> __Marshaller_google_iam_admin_v1_SignBlobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.SignBlobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -280,6 +294,22 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __ServiceName,
         "DeleteServiceAccountKey",
         __Marshaller_google_iam_admin_v1_DeleteServiceAccountKeyRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DisableServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableServiceAccountKey",
+        __Marshaller_google_iam_admin_v1_DisableServiceAccountKeyRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EnableServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnableServiceAccountKey",
+        __Marshaller_google_iam_admin_v1_EnableServiceAccountKeyRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -454,7 +484,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// Updates a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
-      /// You can update only the `display_name` and `description` fields.
+      /// You can update only the `display_name` field.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -605,7 +635,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
 
       /// <summary>
-      /// Creates a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey], using a public key that you provide.
+      /// Uploads the public key portion of a key pair that you manage, and
+      /// associates the public key with a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
+      ///
+      /// After you upload the public key, you can use the private key from the key
+      /// pair as a service account key.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -626,6 +660,31 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey]. A disabled service account key can be
+      /// re-enabled with [EnableServiceAccountKey][google.iam.admin.v1.IAM.EnableServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -671,7 +730,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
 
       /// <summary>
       /// Gets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount]. This IAM
-      /// policy specifies which members have access to the service account.
+      /// policy specifies which principals have access to the service account.
       ///
       /// This method does not tell you whether the service account has been granted
       /// any roles on other resources. To check whether a service account has role
@@ -694,7 +753,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// Sets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
       /// Use this method to grant or revoke access to the service account. For
-      /// example, you could grant a member the ability to impersonate the service
+      /// example, you could grant a principal the ability to impersonate the service
       /// account.
       ///
       /// This method does not enable the service account to access other resources.
@@ -706,8 +765,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// 3. Call the resource's `setIamPolicy` method to update its IAM policy.
       ///
       /// For detailed instructions, see
-      /// [Granting roles to a service account for specific
-      /// resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts).
+      /// [Manage access to project, folders, and
+      /// organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts)
+      /// or [Manage access to other
+      /// resources](https://cloud.google.com/iam/help/access/manage-other-resources).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -799,7 +860,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// When you delete a custom role, the following changes occur immediately:
       ///
-      /// * You cannot bind a member to the custom role in an IAM
+      /// * You cannot bind a principal to the custom role in an IAM
       /// [Policy][google.iam.v1.Policy].
       /// * Existing bindings to the custom role are not changed, but they have no
       /// effect.
@@ -836,7 +897,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
 
       /// <summary>
       /// Lists every permission that you can test on a resource. A permission is
-      /// testable if you can check whether a member has that permission on the
+      /// testable if you can check whether a principal has that permission on the
       /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1060,7 +1121,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// Updates a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
-      /// You can update only the `display_name` and `description` fields.
+      /// You can update only the `display_name` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1078,7 +1139,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// Updates a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
-      /// You can update only the `display_name` and `description` fields.
+      /// You can update only the `display_name` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1094,7 +1155,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// Updates a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
-      /// You can update only the `display_name` and `description` fields.
+      /// You can update only the `display_name` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1112,7 +1173,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// Updates a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
-      /// You can update only the `display_name` and `description` fields.
+      /// You can update only the `display_name` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1679,7 +1740,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceAccountKey, null, options, request);
       }
       /// <summary>
-      /// Creates a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey], using a public key that you provide.
+      /// Uploads the public key portion of a key pair that you manage, and
+      /// associates the public key with a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
+      ///
+      /// After you upload the public key, you can use the private key from the key
+      /// pair as a service account key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1692,7 +1757,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
         return UploadServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey], using a public key that you provide.
+      /// Uploads the public key portion of a key pair that you manage, and
+      /// associates the public key with a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
+      ///
+      /// After you upload the public key, you can use the private key from the key
+      /// pair as a service account key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1703,7 +1772,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UploadServiceAccountKey, null, options, request);
       }
       /// <summary>
-      /// Creates a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey], using a public key that you provide.
+      /// Uploads the public key portion of a key pair that you manage, and
+      /// associates the public key with a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
+      ///
+      /// After you upload the public key, you can use the private key from the key
+      /// pair as a service account key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1716,7 +1789,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
         return UploadServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey], using a public key that you provide.
+      /// Uploads the public key portion of a key pair that you manage, and
+      /// associates the public key with a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
+      ///
+      /// After you upload the public key, you can use the private key from the key
+      /// pair as a service account key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1781,6 +1858,106 @@ namespace Google.Cloud.Iam.Admin.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteServiceAccountKey, null, options, request);
+      }
+      /// <summary>
+      /// Disable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey]. A disabled service account key can be
+      /// re-enabled with [EnableServiceAccountKey][google.iam.admin.v1.IAM.EnableServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DisableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey]. A disabled service account key can be
+      /// re-enabled with [EnableServiceAccountKey][google.iam.admin.v1.IAM.EnableServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DisableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableServiceAccountKey, null, options, request);
+      }
+      /// <summary>
+      /// Disable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey]. A disabled service account key can be
+      /// re-enabled with [EnableServiceAccountKey][google.iam.admin.v1.IAM.EnableServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey]. A disabled service account key can be
+      /// re-enabled with [EnableServiceAccountKey][google.iam.admin.v1.IAM.EnableServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableServiceAccountKey, null, options, request);
+      }
+      /// <summary>
+      /// Enable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnableServiceAccountKey, null, options, request);
+      }
+      /// <summary>
+      /// Enable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enable a [ServiceAccountKey][google.iam.admin.v1.ServiceAccountKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnableServiceAccountKey, null, options, request);
       }
       /// <summary>
       /// **Note:** This method is deprecated. Use the
@@ -1940,7 +2117,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Gets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount]. This IAM
-      /// policy specifies which members have access to the service account.
+      /// policy specifies which principals have access to the service account.
       ///
       /// This method does not tell you whether the service account has been granted
       /// any roles on other resources. To check whether a service account has role
@@ -1962,7 +2139,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Gets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount]. This IAM
-      /// policy specifies which members have access to the service account.
+      /// policy specifies which principals have access to the service account.
       ///
       /// This method does not tell you whether the service account has been granted
       /// any roles on other resources. To check whether a service account has role
@@ -1982,7 +2159,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Gets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount]. This IAM
-      /// policy specifies which members have access to the service account.
+      /// policy specifies which principals have access to the service account.
       ///
       /// This method does not tell you whether the service account has been granted
       /// any roles on other resources. To check whether a service account has role
@@ -2004,7 +2181,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Gets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount]. This IAM
-      /// policy specifies which members have access to the service account.
+      /// policy specifies which principals have access to the service account.
       ///
       /// This method does not tell you whether the service account has been granted
       /// any roles on other resources. To check whether a service account has role
@@ -2026,7 +2203,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// Sets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
       /// Use this method to grant or revoke access to the service account. For
-      /// example, you could grant a member the ability to impersonate the service
+      /// example, you could grant a principal the ability to impersonate the service
       /// account.
       ///
       /// This method does not enable the service account to access other resources.
@@ -2038,8 +2215,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// 3. Call the resource's `setIamPolicy` method to update its IAM policy.
       ///
       /// For detailed instructions, see
-      /// [Granting roles to a service account for specific
-      /// resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts).
+      /// [Manage access to project, folders, and
+      /// organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts)
+      /// or [Manage access to other
+      /// resources](https://cloud.google.com/iam/help/access/manage-other-resources).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2055,7 +2234,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// Sets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
       /// Use this method to grant or revoke access to the service account. For
-      /// example, you could grant a member the ability to impersonate the service
+      /// example, you could grant a principal the ability to impersonate the service
       /// account.
       ///
       /// This method does not enable the service account to access other resources.
@@ -2067,8 +2246,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// 3. Call the resource's `setIamPolicy` method to update its IAM policy.
       ///
       /// For detailed instructions, see
-      /// [Granting roles to a service account for specific
-      /// resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts).
+      /// [Manage access to project, folders, and
+      /// organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts)
+      /// or [Manage access to other
+      /// resources](https://cloud.google.com/iam/help/access/manage-other-resources).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2082,7 +2263,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// Sets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
       /// Use this method to grant or revoke access to the service account. For
-      /// example, you could grant a member the ability to impersonate the service
+      /// example, you could grant a principal the ability to impersonate the service
       /// account.
       ///
       /// This method does not enable the service account to access other resources.
@@ -2094,8 +2275,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// 3. Call the resource's `setIamPolicy` method to update its IAM policy.
       ///
       /// For detailed instructions, see
-      /// [Granting roles to a service account for specific
-      /// resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts).
+      /// [Manage access to project, folders, and
+      /// organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts)
+      /// or [Manage access to other
+      /// resources](https://cloud.google.com/iam/help/access/manage-other-resources).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2111,7 +2294,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// Sets the IAM policy that is attached to a [ServiceAccount][google.iam.admin.v1.ServiceAccount].
       ///
       /// Use this method to grant or revoke access to the service account. For
-      /// example, you could grant a member the ability to impersonate the service
+      /// example, you could grant a principal the ability to impersonate the service
       /// account.
       ///
       /// This method does not enable the service account to access other resources.
@@ -2123,8 +2306,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// 3. Call the resource's `setIamPolicy` method to update its IAM policy.
       ///
       /// For detailed instructions, see
-      /// [Granting roles to a service account for specific
-      /// resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts).
+      /// [Manage access to project, folders, and
+      /// organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-to-service-accounts)
+      /// or [Manage access to other
+      /// resources](https://cloud.google.com/iam/help/access/manage-other-resources).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2443,7 +2628,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// When you delete a custom role, the following changes occur immediately:
       ///
-      /// * You cannot bind a member to the custom role in an IAM
+      /// * You cannot bind a principal to the custom role in an IAM
       /// [Policy][google.iam.v1.Policy].
       /// * Existing bindings to the custom role are not changed, but they have no
       /// effect.
@@ -2472,7 +2657,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// When you delete a custom role, the following changes occur immediately:
       ///
-      /// * You cannot bind a member to the custom role in an IAM
+      /// * You cannot bind a principal to the custom role in an IAM
       /// [Policy][google.iam.v1.Policy].
       /// * Existing bindings to the custom role are not changed, but they have no
       /// effect.
@@ -2499,7 +2684,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// When you delete a custom role, the following changes occur immediately:
       ///
-      /// * You cannot bind a member to the custom role in an IAM
+      /// * You cannot bind a principal to the custom role in an IAM
       /// [Policy][google.iam.v1.Policy].
       /// * Existing bindings to the custom role are not changed, but they have no
       /// effect.
@@ -2528,7 +2713,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       ///
       /// When you delete a custom role, the following changes occur immediately:
       ///
-      /// * You cannot bind a member to the custom role in an IAM
+      /// * You cannot bind a principal to the custom role in an IAM
       /// [Policy][google.iam.v1.Policy].
       /// * Existing bindings to the custom role are not changed, but they have no
       /// effect.
@@ -2600,7 +2785,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Lists every permission that you can test on a resource. A permission is
-      /// testable if you can check whether a member has that permission on the
+      /// testable if you can check whether a principal has that permission on the
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2615,7 +2800,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Lists every permission that you can test on a resource. A permission is
-      /// testable if you can check whether a member has that permission on the
+      /// testable if you can check whether a principal has that permission on the
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2628,7 +2813,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Lists every permission that you can test on a resource. A permission is
-      /// testable if you can check whether a member has that permission on the
+      /// testable if you can check whether a principal has that permission on the
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2643,7 +2828,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       /// <summary>
       /// Lists every permission that you can test on a resource. A permission is
-      /// testable if you can check whether a member has that permission on the
+      /// testable if you can check whether a principal has that permission on the
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2814,6 +2999,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
           .AddMethod(__Method_CreateServiceAccountKey, serviceImpl.CreateServiceAccountKey)
           .AddMethod(__Method_UploadServiceAccountKey, serviceImpl.UploadServiceAccountKey)
           .AddMethod(__Method_DeleteServiceAccountKey, serviceImpl.DeleteServiceAccountKey)
+          .AddMethod(__Method_DisableServiceAccountKey, serviceImpl.DisableServiceAccountKey)
+          .AddMethod(__Method_EnableServiceAccountKey, serviceImpl.EnableServiceAccountKey)
           .AddMethod(__Method_SignBlob, serviceImpl.SignBlob)
           .AddMethod(__Method_SignJwt, serviceImpl.SignJwt)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
@@ -2852,6 +3039,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
       serviceBinder.AddMethod(__Method_CreateServiceAccountKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey>(serviceImpl.CreateServiceAccountKey));
       serviceBinder.AddMethod(__Method_UploadServiceAccountKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey>(serviceImpl.UploadServiceAccountKey));
       serviceBinder.AddMethod(__Method_DeleteServiceAccountKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteServiceAccountKey));
+      serviceBinder.AddMethod(__Method_DisableServiceAccountKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DisableServiceAccountKey));
+      serviceBinder.AddMethod(__Method_EnableServiceAccountKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EnableServiceAccountKey));
       serviceBinder.AddMethod(__Method_SignBlob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.SignBlobRequest, global::Google.Cloud.Iam.Admin.V1.SignBlobResponse>(serviceImpl.SignBlob));
       serviceBinder.AddMethod(__Method_SignJwt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.SignJwtRequest, global::Google.Cloud.Iam.Admin.V1.SignJwtResponse>(serviceImpl.SignJwt));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
