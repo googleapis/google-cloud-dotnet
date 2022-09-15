@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -66,18 +66,22 @@ namespace Google.Cloud.Tools.ReleaseManager
         public void Execute(Assembly assembly, string projectId)
         {
             var clientType = FindClient(assembly);
+            var transports = FindTransports(clientType).Split(',').Select(t => t.Trim());
             var method = FindMethod(clientType);
             var arguments = ConvertArguments(method, projectId);
-            var clientInstance = CreateClient(clientType);
 
             if (Skip is object)
             {
                 Console.WriteLine($"*** Skipping test for {clientType.Name}.{Method}: {Skip} ***");
                 return;
             }
-            Console.WriteLine($"Running test for {clientType.Name}.{Method}");
-            var result = method.Invoke(clientInstance, arguments);
-            DisplayResult(result);
+            foreach (var transport in transports)
+            {
+                Console.WriteLine($"Running test for {clientType.Name}.{Method} with transport {transport}");
+                var clientInstance = CreateClient(clientType, transport);
+                var result = method.Invoke(clientInstance, arguments);
+                DisplayResult(result);
+            }
         }
 
         private Type FindClient(Assembly assembly)
@@ -93,10 +97,27 @@ namespace Google.Cloud.Tools.ReleaseManager
             return type ?? throw new UserErrorException($"No such client type {typeName} in assembly");
         }
 
-        private object CreateClient(Type clientType)
+        private string FindTransports(Type clientType)
+        {
+            dynamic metadata = clientType.GetProperty("ServiceMetadata", BindingFlags.Public | BindingFlags.Static).GetValue(null);
+            return metadata.Transports.ToString();
+        }
+
+        private object CreateClient(Type clientType, string transport)
         {
             var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
             var builder = Activator.CreateInstance(builderType);
+            // We only actually need to set the gRPC adapter explicitly if there's more than one transport,
+            // and if we're trying to use REST. It's simplest to always do it for REST though.
+            // We fetch everything via reflection to avoid a direct dependency on GAX which could interfere with the
+            // client's dependency.
+            if (transport == "Rest")
+            {
+                var restTransport = builderType.BaseType.Assembly.GetType("Google.Api.Gax.Grpc.Rest.RestGrpcAdapter")
+                    .GetProperty("Default", BindingFlags.Public | BindingFlags.Static)
+                    .GetValue(null);
+                builderType.GetProperty("GrpcAdapter").SetValue(builder, restTransport);
+            }
             builderType.GetProperty("Endpoint").SetValue(builder, Endpoint);
             return builderType.GetMethod("Build", Type.EmptyTypes, null).Invoke(builder, new object[0]);
         }
