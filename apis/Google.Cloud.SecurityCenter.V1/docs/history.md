@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2022-09-15
+
+### New features
+
+- Added parent display name i.e. source display name for a finding as one of the finding attributes ([commit 06caca6](https://github.com/googleapis/google-cloud-dotnet/commit/06caca62de216151cf837952a4e10f1d99e6899e))
+
 ## Version 3.3.0, released 2022-08-26
 
 ### New features
