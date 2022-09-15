@@ -3614,7 +3614,7 @@
     },
     {
       "id": "Google.Cloud.StorageTransfer.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Storage Transfer",
       "productUrl": "https://cloud.google.com/storage-transfer-service",
@@ -3626,7 +3626,7 @@
         "gcs"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
