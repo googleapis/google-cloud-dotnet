@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.3.0, released 2022-09-15
+
+### New features
+
+- Add proto annotation for non-ascii field mapping ([commit ec6eae4](https://github.com/googleapis/google-cloud-dotnet/commit/ec6eae416255d035935ef97ce9880693498160e6))
+- Add location to WriteStream and add WriteStreamView support ([commit b7711a6](https://github.com/googleapis/google-cloud-dotnet/commit/b7711a6da9d6d3ba4e04e72d961ec082acfc3923))
+
 ## Version 3.2.0, released 2022-08-26
 
 ### New features
