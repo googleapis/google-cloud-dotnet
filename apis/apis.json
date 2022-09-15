@@ -456,7 +456,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -465,9 +465,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appconnections/v1",
@@ -476,7 +478,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnectors.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
       "description": "Recommended Google client library to access the BeyondCorp Enterprise AppConnectors API.",
@@ -484,9 +486,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appconnectors/v1",
@@ -495,7 +499,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppGateways.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp AppGateways",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -504,9 +508,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appgateways/v1",
@@ -515,7 +521,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp Client Connector Services",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -524,9 +530,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/clientconnectorservices/v1",
@@ -535,7 +543,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp Client Connector Services",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -544,9 +552,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/clientgateways/v1",
