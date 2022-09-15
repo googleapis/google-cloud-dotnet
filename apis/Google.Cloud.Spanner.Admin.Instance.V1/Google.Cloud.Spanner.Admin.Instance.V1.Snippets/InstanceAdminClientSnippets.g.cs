@@ -393,6 +393,702 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstanceConfig</summary>
+        public void CreateInstanceConfigRequestObject()
+        {
+            // Snippet: CreateInstanceConfig(CreateInstanceConfigRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            CreateInstanceConfigRequest request = new CreateInstanceConfigRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                InstanceConfigId = "",
+                InstanceConfig = new InstanceConfig(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = instanceAdminClient.CreateInstanceConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstanceConfigAsync</summary>
+        public async Task CreateInstanceConfigRequestObjectAsync()
+        {
+            // Snippet: CreateInstanceConfigAsync(CreateInstanceConfigRequest, CallSettings)
+            // Additional: CreateInstanceConfigAsync(CreateInstanceConfigRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateInstanceConfigRequest request = new CreateInstanceConfigRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                InstanceConfigId = "",
+                InstanceConfig = new InstanceConfig(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = await instanceAdminClient.CreateInstanceConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstanceConfig</summary>
+        public void CreateInstanceConfig()
+        {
+            // Snippet: CreateInstanceConfig(string, InstanceConfig, string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            InstanceConfig instanceConfig = new InstanceConfig();
+            string instanceConfigId = "";
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = instanceAdminClient.CreateInstanceConfig(parent, instanceConfig, instanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstanceConfigAsync</summary>
+        public async Task CreateInstanceConfigAsync()
+        {
+            // Snippet: CreateInstanceConfigAsync(string, InstanceConfig, string, CallSettings)
+            // Additional: CreateInstanceConfigAsync(string, InstanceConfig, string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            InstanceConfig instanceConfig = new InstanceConfig();
+            string instanceConfigId = "";
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = await instanceAdminClient.CreateInstanceConfigAsync(parent, instanceConfig, instanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstanceConfig</summary>
+        public void CreateInstanceConfigResourceNames()
+        {
+            // Snippet: CreateInstanceConfig(ProjectName, InstanceConfig, string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            InstanceConfig instanceConfig = new InstanceConfig();
+            string instanceConfigId = "";
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = instanceAdminClient.CreateInstanceConfig(parent, instanceConfig, instanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstanceConfigAsync</summary>
+        public async Task CreateInstanceConfigResourceNamesAsync()
+        {
+            // Snippet: CreateInstanceConfigAsync(ProjectName, InstanceConfig, string, CallSettings)
+            // Additional: CreateInstanceConfigAsync(ProjectName, InstanceConfig, string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            InstanceConfig instanceConfig = new InstanceConfig();
+            string instanceConfigId = "";
+            // Make the request
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> response = await instanceAdminClient.CreateInstanceConfigAsync(parent, instanceConfig, instanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, CreateInstanceConfigMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceConfig</summary>
+        public void UpdateInstanceConfigRequestObject()
+        {
+            // Snippet: UpdateInstanceConfig(UpdateInstanceConfigRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateInstanceConfigRequest request = new UpdateInstanceConfigRequest
+            {
+                InstanceConfig = new InstanceConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> response = instanceAdminClient.UpdateInstanceConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceConfigAsync</summary>
+        public async Task UpdateInstanceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateInstanceConfigAsync(UpdateInstanceConfigRequest, CallSettings)
+            // Additional: UpdateInstanceConfigAsync(UpdateInstanceConfigRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateInstanceConfigRequest request = new UpdateInstanceConfigRequest
+            {
+                InstanceConfig = new InstanceConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> response = await instanceAdminClient.UpdateInstanceConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceConfig</summary>
+        public void UpdateInstanceConfig()
+        {
+            // Snippet: UpdateInstanceConfig(InstanceConfig, FieldMask, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceConfig instanceConfig = new InstanceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> response = instanceAdminClient.UpdateInstanceConfig(instanceConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceConfigAsync</summary>
+        public async Task UpdateInstanceConfigAsync()
+        {
+            // Snippet: UpdateInstanceConfigAsync(InstanceConfig, FieldMask, CallSettings)
+            // Additional: UpdateInstanceConfigAsync(InstanceConfig, FieldMask, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceConfig instanceConfig = new InstanceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> response = await instanceAdminClient.UpdateInstanceConfigAsync(instanceConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstanceConfig, UpdateInstanceConfigMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfig</summary>
+        public void DeleteInstanceConfigRequestObject()
+        {
+            // Snippet: DeleteInstanceConfig(DeleteInstanceConfigRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
+            {
+                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Etag = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            instanceAdminClient.DeleteInstanceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfigAsync</summary>
+        public async Task DeleteInstanceConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteInstanceConfigAsync(DeleteInstanceConfigRequest, CallSettings)
+            // Additional: DeleteInstanceConfigAsync(DeleteInstanceConfigRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteInstanceConfigRequest request = new DeleteInstanceConfigRequest
+            {
+                InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Etag = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            await instanceAdminClient.DeleteInstanceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfig</summary>
+        public void DeleteInstanceConfig()
+        {
+            // Snippet: DeleteInstanceConfig(string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instanceConfigs/[INSTANCE_CONFIG]";
+            // Make the request
+            instanceAdminClient.DeleteInstanceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfigAsync</summary>
+        public async Task DeleteInstanceConfigAsync()
+        {
+            // Snippet: DeleteInstanceConfigAsync(string, CallSettings)
+            // Additional: DeleteInstanceConfigAsync(string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instanceConfigs/[INSTANCE_CONFIG]";
+            // Make the request
+            await instanceAdminClient.DeleteInstanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfig</summary>
+        public void DeleteInstanceConfigResourceNames()
+        {
+            // Snippet: DeleteInstanceConfig(InstanceConfigName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceConfigName name = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]");
+            // Make the request
+            instanceAdminClient.DeleteInstanceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceConfigAsync</summary>
+        public async Task DeleteInstanceConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteInstanceConfigAsync(InstanceConfigName, CallSettings)
+            // Additional: DeleteInstanceConfigAsync(InstanceConfigName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceConfigName name = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]");
+            // Make the request
+            await instanceAdminClient.DeleteInstanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperations</summary>
+        public void ListInstanceConfigOperationsRequestObject()
+        {
+            // Snippet: ListInstanceConfigOperations(ListInstanceConfigOperationsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperationsAsync</summary>
+        public async Task ListInstanceConfigOperationsRequestObjectAsync()
+        {
+            // Snippet: ListInstanceConfigOperationsAsync(ListInstanceConfigOperationsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperations</summary>
+        public void ListInstanceConfigOperations()
+        {
+            // Snippet: ListInstanceConfigOperations(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperationsAsync</summary>
+        public async Task ListInstanceConfigOperationsAsync()
+        {
+            // Snippet: ListInstanceConfigOperationsAsync(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperations</summary>
+        public void ListInstanceConfigOperationsResourceNames()
+        {
+            // Snippet: ListInstanceConfigOperations(ProjectName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigOperationsAsync</summary>
+        public async Task ListInstanceConfigOperationsResourceNamesAsync()
+        {
+            // Snippet: ListInstanceConfigOperationsAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()
         {
