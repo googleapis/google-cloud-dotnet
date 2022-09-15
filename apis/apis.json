@@ -395,7 +395,7 @@
     },
     {
       "id": "Google.Cloud.BareMetalSolution.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Bare Metal Solution",
       "productUrl": "https://cloud.google.com/bare-metal/",
@@ -405,9 +405,11 @@
         "hardware"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/baremetalsolution/v2",
