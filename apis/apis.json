@@ -653,7 +653,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Migration.V2",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BigQuery Migration",
       "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
@@ -662,7 +662,10 @@
         "BigQuery",
         "migration"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Grpc.Core": "2.46.3"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/migration/v2",
       "shortName": "bigquerymigration",
