@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-09-15
+
+### Bug fixes
+
+- Fix recommendationengine resource name configuration ([commit c9e5588](https://github.com/googleapis/google-cloud-dotnet/commit/c9e558821f1b2f9451015cb3cf34142f2ae95d1d))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
