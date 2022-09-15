@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.2.0, released 2022-09-15
+
+### Documentation improvements
+
+- Added an explicit note that DetectIntentRequest's text input is limited by 256 characters ([commit 0fd3a71](https://github.com/googleapis/google-cloud-dotnet/commit/0fd3a71d2b6bead1e2fb0e0761add19f4785d2ee))
+
 ## Version 4.1.0, released 2022-07-11
 
 ### New features
