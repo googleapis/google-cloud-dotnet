@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-09-15
+
+### Documentation improvements
+
+- Update comments for image annotator OCR models ([commit b495598](https://github.com/googleapis/google-cloud-dotnet/commit/b4955984e3dc273e4ee9d64941fb5e9576d9fc02))
+
 ## Version 3.1.0, released 2022-08-26
 
 ### New features
