@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.1.0, released 2022-09-15
+
+### Bug fixes
+
+- Added fix to return a list of the endpoints that encountered errors during crawl, along with the specific error message when the starting URL returns Http errors ([commit 241ecd9](https://github.com/googleapis/google-cloud-dotnet/commit/241ecd9e352f949ab56b594048b7df1f78b706bf))
+- GoogleAccount is deprecated ([commit 241ecd9](https://github.com/googleapis/google-cloud-dotnet/commit/241ecd9e352f949ab56b594048b7df1f78b706bf))
+
+### New features
+
+- Added NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN to ScanRunWarningTrace.Code ([commit 241ecd9](https://github.com/googleapis/google-cloud-dotnet/commit/241ecd9e352f949ab56b594048b7df1f78b706bf))
+
+### Documentation improvements
+
+- Publish Scan Run logging proto for documentation ([commit 77e3503](https://github.com/googleapis/google-cloud-dotnet/commit/77e350322753a7d19b114a61e500c501358eea6e))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
