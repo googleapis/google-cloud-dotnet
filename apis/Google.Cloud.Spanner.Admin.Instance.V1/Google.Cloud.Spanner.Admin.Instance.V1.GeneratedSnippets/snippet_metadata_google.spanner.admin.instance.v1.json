@@ -321,6 +321,572 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_sync",
+      "title": "CreateInstanceConfigRequestObject",
+      "description": "Snippet for CreateInstanceConfig",
+      "file": "InstanceAdminClient.CreateInstanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_async",
+      "title": "CreateInstanceConfigRequestObjectAsync",
+      "description": "Snippet for CreateInstanceConfigAsync",
+      "file": "InstanceAdminClient.CreateInstanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_sync_flattened",
+      "title": "CreateInstanceConfig",
+      "description": "Snippet for CreateInstanceConfig",
+      "file": "InstanceAdminClient.CreateInstanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_async_flattened",
+      "title": "CreateInstanceConfigAsync",
+      "description": "Snippet for CreateInstanceConfigAsync",
+      "file": "InstanceAdminClient.CreateInstanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_sync_flattened_resourceNames",
+      "title": "CreateInstanceConfigResourceNames",
+      "description": "Snippet for CreateInstanceConfig",
+      "file": "InstanceAdminClient.CreateInstanceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstanceConfig_async_flattened_resourceNames",
+      "title": "CreateInstanceConfigResourceNamesAsync",
+      "description": "Snippet for CreateInstanceConfigAsync",
+      "file": "InstanceAdminClient.CreateInstanceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstanceConfig_sync",
+      "title": "UpdateInstanceConfigRequestObject",
+      "description": "Snippet for UpdateInstanceConfig",
+      "file": "InstanceAdminClient.UpdateInstanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstanceConfig_async",
+      "title": "UpdateInstanceConfigRequestObjectAsync",
+      "description": "Snippet for UpdateInstanceConfigAsync",
+      "file": "InstanceAdminClient.UpdateInstanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstanceConfig_sync_flattened",
+      "title": "UpdateInstanceConfig",
+      "description": "Snippet for UpdateInstanceConfig",
+      "file": "InstanceAdminClient.UpdateInstanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstanceConfig_async_flattened",
+      "title": "UpdateInstanceConfigAsync",
+      "description": "Snippet for UpdateInstanceConfigAsync",
+      "file": "InstanceAdminClient.UpdateInstanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_sync",
+      "title": "DeleteInstanceConfigRequestObject",
+      "description": "Snippet for DeleteInstanceConfig",
+      "file": "InstanceAdminClient.DeleteInstanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_async",
+      "title": "DeleteInstanceConfigRequestObjectAsync",
+      "description": "Snippet for DeleteInstanceConfigAsync",
+      "file": "InstanceAdminClient.DeleteInstanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_sync_flattened",
+      "title": "DeleteInstanceConfig",
+      "description": "Snippet for DeleteInstanceConfig",
+      "file": "InstanceAdminClient.DeleteInstanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_async_flattened",
+      "title": "DeleteInstanceConfigAsync",
+      "description": "Snippet for DeleteInstanceConfigAsync",
+      "file": "InstanceAdminClient.DeleteInstanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_sync_flattened_resourceNames",
+      "title": "DeleteInstanceConfigResourceNames",
+      "description": "Snippet for DeleteInstanceConfig",
+      "file": "InstanceAdminClient.DeleteInstanceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfig",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstanceConfig_async_flattened_resourceNames",
+      "title": "DeleteInstanceConfigResourceNamesAsync",
+      "description": "Snippet for DeleteInstanceConfigAsync",
+      "file": "InstanceAdminClient.DeleteInstanceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceConfigAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstanceConfig",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_sync",
+      "title": "ListInstanceConfigOperationsRequestObject",
+      "description": "Snippet for ListInstanceConfigOperations",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_async",
+      "title": "ListInstanceConfigOperationsRequestObjectAsync",
+      "description": "Snippet for ListInstanceConfigOperationsAsync",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_sync_flattened",
+      "title": "ListInstanceConfigOperations",
+      "description": "Snippet for ListInstanceConfigOperations",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_async_flattened",
+      "title": "ListInstanceConfigOperationsAsync",
+      "description": "Snippet for ListInstanceConfigOperationsAsync",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_sync_flattened_resourceNames",
+      "title": "ListInstanceConfigOperationsResourceNames",
+      "description": "Snippet for ListInstanceConfigOperations",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstanceConfigOperations_async_flattened_resourceNames",
+      "title": "ListInstanceConfigOperationsResourceNamesAsync",
+      "description": "Snippet for ListInstanceConfigOperationsAsync",
+      "file": "InstanceAdminClient.ListInstanceConfigOperationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstanceConfigOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstanceConfigOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstances_sync",
       "title": "ListInstancesRequestObject",
       "description": "Snippet for ListInstances",
