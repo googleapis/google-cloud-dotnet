@@ -3895,7 +3895,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -3905,7 +3905,10 @@
         "mobile",
         "content"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Grpc.Core": "2.46.3"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/video/stitcher/v1",
       "shortName": "videostitcher",
