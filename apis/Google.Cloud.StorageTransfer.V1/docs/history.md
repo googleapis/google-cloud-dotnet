@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.1.0, released 2022-09-15
+
+### New features
+
+- Add default retry configuration ([commit 97a6f02](https://github.com/googleapis/google-cloud-dotnet/commit/97a6f0222a3cfbb3748248e1d840a0a449d8530b))
+- Add DeleteTransferJob operation ([commit 97a6f02](https://github.com/googleapis/google-cloud-dotnet/commit/97a6f0222a3cfbb3748248e1d840a0a449d8530b))
+- Add AWS S3 compatible data source ([commit 97a6f02](https://github.com/googleapis/google-cloud-dotnet/commit/97a6f0222a3cfbb3748248e1d840a0a449d8530b))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
