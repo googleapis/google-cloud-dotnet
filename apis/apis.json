@@ -144,7 +144,7 @@
     },
     {
       "id": "Google.Cloud.ApiKeys.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "API Keys",
       "productUrl": "https://cloud.google.com/api-keys/docs",
@@ -154,7 +154,9 @@
         "authorization"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/api/apikeys/v2",
@@ -395,7 +397,7 @@
     },
     {
       "id": "Google.Cloud.BareMetalSolution.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Bare Metal Solution",
       "productUrl": "https://cloud.google.com/bare-metal/",
@@ -405,9 +407,11 @@
         "hardware"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/baremetalsolution/v2",
@@ -456,7 +460,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -465,9 +469,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appconnections/v1",
@@ -476,7 +482,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnectors.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
       "description": "Recommended Google client library to access the BeyondCorp Enterprise AppConnectors API.",
@@ -484,9 +490,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appconnectors/v1",
@@ -495,7 +503,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppGateways.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp AppGateways",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -504,9 +512,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/appgateways/v1",
@@ -515,7 +525,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp Client Connector Services",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -524,9 +534,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/clientconnectorservices/v1",
@@ -535,7 +547,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BeyondCorp Client Connector Services",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
@@ -544,9 +556,11 @@
         "beyondcorp"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/beyondcorp/clientgateways/v1",
@@ -653,7 +667,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Migration.V2",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BigQuery Migration",
       "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
@@ -662,7 +676,10 @@
         "BigQuery",
         "migration"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Grpc.Core": "2.46.3"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/migration/v2",
       "shortName": "bigquerymigration",
@@ -898,7 +915,7 @@
     },
     {
       "id": "Google.Cloud.CertificateManager.V1",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Certificate Manager",
       "productUrl": "https://cloud.google.com/certificate-manager/docs",
@@ -909,8 +926,10 @@
         "certificates"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/certificatemanager/v1",
@@ -1793,7 +1812,7 @@
     },
     {
       "id": "Google.Cloud.Functions.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
@@ -1802,9 +1821,11 @@
         "functions"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/functions/v2",
@@ -1980,7 +2001,7 @@
     },
     {
       "id": "Google.Cloud.GkeMultiCloud.V1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Anthos Multi-Cloud",
       "productUrl": "https://cloud.google.com/anthos/clusters/docs/multi-cloud",
@@ -1993,7 +2014,9 @@
         "azure"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/gkemulticloud/v1",
@@ -2595,7 +2618,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "AI Platform Notebooks",
       "productUrl": "https://cloud.google.com/ai-platform-notebooks",
@@ -2605,7 +2628,9 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v1",
@@ -3850,7 +3875,7 @@
     },
     {
       "id": "Google.Cloud.Video.LiveStream.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Live Stream",
       "productUrl": "https://cloud.google.com/livestream/docs/",
@@ -3861,7 +3886,9 @@
         "transcoding"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/video/livestream/v1",
@@ -3870,7 +3897,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -3880,7 +3907,10 @@
         "mobile",
         "content"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Grpc.Core": "2.46.3"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/video/stitcher/v1",
       "shortName": "videostitcher",

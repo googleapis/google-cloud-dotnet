@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0, released 2022-09-15
+
+No API surface changes; just dependency updates and promotion to GA.
+
 ## Version 2.0.0-beta02, released 2022-07-11
 
 ### Bug fixes
