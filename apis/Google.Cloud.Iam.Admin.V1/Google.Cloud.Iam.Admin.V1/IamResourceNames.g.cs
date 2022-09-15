@@ -602,6 +602,30 @@ namespace Google.Cloud.Iam.Admin.V1
         }
     }
 
+    public partial class DisableServiceAccountKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gciav::KeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gciav::KeyName KeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gciav::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EnableServiceAccountKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gciav::KeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gciav::KeyName KeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gciav::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SignBlobRequest
     {
         /// <summary>
