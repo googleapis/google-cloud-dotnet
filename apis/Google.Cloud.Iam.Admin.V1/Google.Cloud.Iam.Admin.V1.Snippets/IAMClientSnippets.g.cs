@@ -1167,6 +1167,180 @@ namespace Google.Cloud.Iam.Admin.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DisableServiceAccountKey</summary>
+        public void DisableServiceAccountKeyRequestObject()
+        {
+            // Snippet: DisableServiceAccountKey(DisableServiceAccountKeyRequest, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            // Make the request
+            iAMClient.DisableServiceAccountKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableServiceAccountKeyAsync</summary>
+        public async Task DisableServiceAccountKeyRequestObjectAsync()
+        {
+            // Snippet: DisableServiceAccountKeyAsync(DisableServiceAccountKeyRequest, CallSettings)
+            // Additional: DisableServiceAccountKeyAsync(DisableServiceAccountKeyRequest, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            DisableServiceAccountKeyRequest request = new DisableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            // Make the request
+            await iAMClient.DisableServiceAccountKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableServiceAccountKey</summary>
+        public void DisableServiceAccountKey()
+        {
+            // Snippet: DisableServiceAccountKey(string, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/serviceAccounts/[SERVICE_ACCOUNT]/keys/[KEY]";
+            // Make the request
+            iAMClient.DisableServiceAccountKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableServiceAccountKeyAsync</summary>
+        public async Task DisableServiceAccountKeyAsync()
+        {
+            // Snippet: DisableServiceAccountKeyAsync(string, CallSettings)
+            // Additional: DisableServiceAccountKeyAsync(string, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/serviceAccounts/[SERVICE_ACCOUNT]/keys/[KEY]";
+            // Make the request
+            await iAMClient.DisableServiceAccountKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableServiceAccountKey</summary>
+        public void DisableServiceAccountKeyResourceNames()
+        {
+            // Snippet: DisableServiceAccountKey(KeyName, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]");
+            // Make the request
+            iAMClient.DisableServiceAccountKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableServiceAccountKeyAsync</summary>
+        public async Task DisableServiceAccountKeyResourceNamesAsync()
+        {
+            // Snippet: DisableServiceAccountKeyAsync(KeyName, CallSettings)
+            // Additional: DisableServiceAccountKeyAsync(KeyName, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]");
+            // Make the request
+            await iAMClient.DisableServiceAccountKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKey</summary>
+        public void EnableServiceAccountKeyRequestObject()
+        {
+            // Snippet: EnableServiceAccountKey(EnableServiceAccountKeyRequest, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            // Make the request
+            iAMClient.EnableServiceAccountKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKeyAsync</summary>
+        public async Task EnableServiceAccountKeyRequestObjectAsync()
+        {
+            // Snippet: EnableServiceAccountKeyAsync(EnableServiceAccountKeyRequest, CallSettings)
+            // Additional: EnableServiceAccountKeyAsync(EnableServiceAccountKeyRequest, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            EnableServiceAccountKeyRequest request = new EnableServiceAccountKeyRequest
+            {
+                KeyName = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]"),
+            };
+            // Make the request
+            await iAMClient.EnableServiceAccountKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKey</summary>
+        public void EnableServiceAccountKey()
+        {
+            // Snippet: EnableServiceAccountKey(string, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/serviceAccounts/[SERVICE_ACCOUNT]/keys/[KEY]";
+            // Make the request
+            iAMClient.EnableServiceAccountKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKeyAsync</summary>
+        public async Task EnableServiceAccountKeyAsync()
+        {
+            // Snippet: EnableServiceAccountKeyAsync(string, CallSettings)
+            // Additional: EnableServiceAccountKeyAsync(string, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/serviceAccounts/[SERVICE_ACCOUNT]/keys/[KEY]";
+            // Make the request
+            await iAMClient.EnableServiceAccountKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKey</summary>
+        public void EnableServiceAccountKeyResourceNames()
+        {
+            // Snippet: EnableServiceAccountKey(KeyName, CallSettings)
+            // Create client
+            IAMClient iAMClient = IAMClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]");
+            // Make the request
+            iAMClient.EnableServiceAccountKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableServiceAccountKeyAsync</summary>
+        public async Task EnableServiceAccountKeyResourceNamesAsync()
+        {
+            // Snippet: EnableServiceAccountKeyAsync(KeyName, CallSettings)
+            // Additional: EnableServiceAccountKeyAsync(KeyName, CancellationToken)
+            // Create client
+            IAMClient iAMClient = await IAMClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectServiceAccountKey("[PROJECT]", "[SERVICE_ACCOUNT]", "[KEY]");
+            // Make the request
+            await iAMClient.EnableServiceAccountKeyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for SignBlob</summary>
         public void SignBlobRequestObject()
         {

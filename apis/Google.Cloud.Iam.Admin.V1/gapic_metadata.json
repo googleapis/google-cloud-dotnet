@@ -52,10 +52,22 @@
                 "DisableServiceAccountAsync"
               ]
             },
+            "DisableServiceAccountKey": {
+              "methods": [
+                "DisableServiceAccountKey",
+                "DisableServiceAccountKeyAsync"
+              ]
+            },
             "EnableServiceAccount": {
               "methods": [
                 "EnableServiceAccount",
                 "EnableServiceAccountAsync"
+              ]
+            },
+            "EnableServiceAccountKey": {
+              "methods": [
+                "EnableServiceAccountKey",
+                "EnableServiceAccountKeyAsync"
               ]
             },
             "GetIamPolicy": {

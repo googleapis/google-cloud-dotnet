@@ -1561,6 +1561,310 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_sync",
+      "title": "DisableServiceAccountKeyRequestObject",
+      "description": "Snippet for DisableServiceAccountKey",
+      "file": "IAMClient.DisableServiceAccountKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_async",
+      "title": "DisableServiceAccountKeyRequestObjectAsync",
+      "description": "Snippet for DisableServiceAccountKeyAsync",
+      "file": "IAMClient.DisableServiceAccountKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_sync_flattened",
+      "title": "DisableServiceAccountKey",
+      "description": "Snippet for DisableServiceAccountKey",
+      "file": "IAMClient.DisableServiceAccountKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_async_flattened",
+      "title": "DisableServiceAccountKeyAsync",
+      "description": "Snippet for DisableServiceAccountKeyAsync",
+      "file": "IAMClient.DisableServiceAccountKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_sync_flattened_resourceNames",
+      "title": "DisableServiceAccountKeyResourceNames",
+      "description": "Snippet for DisableServiceAccountKey",
+      "file": "IAMClient.DisableServiceAccountKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_DisableServiceAccountKey_async_flattened_resourceNames",
+      "title": "DisableServiceAccountKeyResourceNamesAsync",
+      "description": "Snippet for DisableServiceAccountKeyAsync",
+      "file": "IAMClient.DisableServiceAccountKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.DisableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "DisableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.DisableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_sync",
+      "title": "EnableServiceAccountKeyRequestObject",
+      "description": "Snippet for EnableServiceAccountKey",
+      "file": "IAMClient.EnableServiceAccountKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_async",
+      "title": "EnableServiceAccountKeyRequestObjectAsync",
+      "description": "Snippet for EnableServiceAccountKeyAsync",
+      "file": "IAMClient.EnableServiceAccountKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_sync_flattened",
+      "title": "EnableServiceAccountKey",
+      "description": "Snippet for EnableServiceAccountKey",
+      "file": "IAMClient.EnableServiceAccountKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_async_flattened",
+      "title": "EnableServiceAccountKeyAsync",
+      "description": "Snippet for EnableServiceAccountKeyAsync",
+      "file": "IAMClient.EnableServiceAccountKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_sync_flattened_resourceNames",
+      "title": "EnableServiceAccountKeyResourceNames",
+      "description": "Snippet for EnableServiceAccountKey",
+      "file": "IAMClient.EnableServiceAccountKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKey",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKey",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iam_v1_generated_IAM_EnableServiceAccountKey_async_flattened_resourceNames",
+      "title": "EnableServiceAccountKeyResourceNamesAsync",
+      "description": "Snippet for EnableServiceAccountKeyAsync",
+      "file": "IAMClient.EnableServiceAccountKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableServiceAccountKeyAsync",
+        "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient.EnableServiceAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IAMClient",
+          "fullName": "Google.Cloud.Iam.Admin.V1.IAMClient"
+        },
+        "method": {
+          "shortName": "EnableServiceAccountKey",
+          "fullName": "google.iam.admin.v1.IAM.EnableServiceAccountKey",
+          "service": {
+            "shortName": "IAM",
+            "fullName": "google.iam.admin.v1.IAM"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "iam_v1_generated_IAM_SignBlob_sync",
       "title": "SignBlobRequestObject",
       "description": "Snippet for SignBlob",
