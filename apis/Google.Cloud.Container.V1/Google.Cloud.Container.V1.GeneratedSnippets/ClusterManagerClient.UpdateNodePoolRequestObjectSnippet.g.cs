@@ -48,6 +48,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 GcfsConfig = new GcfsConfig(),
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
+                LoggingConfig = new NodePoolLoggingConfig(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
