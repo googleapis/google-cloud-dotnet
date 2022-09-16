@@ -1,0 +1,169 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Security.PublicCA.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.security.publicca.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_sync",
+      "title": "CreateExternalAccountKeyRequestObject",
+      "description": "Snippet for CreateExternalAccountKey",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKey",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_async",
+      "title": "CreateExternalAccountKeyRequestObjectAsync",
+      "description": "Snippet for CreateExternalAccountKeyAsync",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKeyAsync",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_sync_flattened",
+      "title": "CreateExternalAccountKey",
+      "description": "Snippet for CreateExternalAccountKey",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKey",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_async_flattened",
+      "title": "CreateExternalAccountKeyAsync",
+      "description": "Snippet for CreateExternalAccountKeyAsync",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKeyAsync",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_sync_flattened_resourceNames",
+      "title": "CreateExternalAccountKeyResourceNames",
+      "description": "Snippet for CreateExternalAccountKey",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKey",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_async_flattened_resourceNames",
+      "title": "CreateExternalAccountKeyResourceNamesAsync",
+      "description": "Snippet for CreateExternalAccountKeyAsync",
+      "file": "PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExternalAccountKeyAsync",
+        "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
+        "client": {
+          "shortName": "PublicCertificateAuthorityServiceClient",
+          "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExternalAccountKey",
+          "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService.CreateExternalAccountKey",
+          "service": {
+            "shortName": "PublicCertificateAuthorityService",
+            "fullName": "google.cloud.security.publicca.v1beta1.PublicCertificateAuthorityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    }
+  ]
+}
