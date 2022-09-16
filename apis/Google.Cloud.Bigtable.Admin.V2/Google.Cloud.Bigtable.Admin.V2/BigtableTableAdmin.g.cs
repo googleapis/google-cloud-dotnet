@@ -3256,8 +3256,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Required. The table to update.
     /// The table's `name` field is used to identify the table to update.
-    /// Format:
-    /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
