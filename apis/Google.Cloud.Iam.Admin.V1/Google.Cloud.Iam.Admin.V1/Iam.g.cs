@@ -25,13 +25,13 @@ namespace Google.Cloud.Iam.Admin.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1nb29nbGUvaWFtL2FkbWluL3YxL2lhbS5wcm90bxITZ29vZ2xlLmlhbS5h",
-            "ZG1pbi52MRoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xlL2lh",
-            "bS92MS9wb2xpY3kucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90",
-            "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2V4cHIucHJv",
-            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ivgIKDlNlcnZpY2VB",
+            "ZG1pbi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xl",
+            "L2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9pYW0v",
+            "djEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJv",
+            "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3Rv",
+            "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8aFmdvb2dsZS90eXBlL2V4cHIucHJvdG8ivgIKDlNlcnZpY2VB",
             "Y2NvdW50EgwKBG5hbWUYASABKAkSFwoKcHJvamVjdF9pZBgCIAEoCUID4EED",
             "EhYKCXVuaXF1ZV9pZBgEIAEoCUID4EEDEhIKBWVtYWlsGAUgASgJQgPgQQMS",
             "GQoMZGlzcGxheV9uYW1lGAYgASgJQgPgQQESEAoEZXRhZxgHIAEoDEICGAES",
@@ -68,227 +68,239 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "X1VOU1BFQ0lGSUVEEAASEAoMVVNFUl9NQU5BR0VEEAESEgoOU1lTVEVNX01B",
             "TkFHRUQQAiJWCh5MaXN0U2VydmljZUFjY291bnRLZXlzUmVzcG9uc2USNAoE",
             "a2V5cxgBIAMoCzImLmdvb2dsZS5pYW0uYWRtaW4udjEuU2VydmljZUFjY291",
-            "bnRLZXkilgEKG0dldFNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBIsCgRuYW1l",
-            "GAEgASgJQh7gQQL6QRgKFmlhbS5nb29nbGVhcGlzLmNvbS9LZXkSSQoPcHVi",
+            "bnRLZXkimwEKG0dldFNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBIsCgRuYW1l",
+            "GAEgASgJQh7gQQL6QRgKFmlhbS5nb29nbGVhcGlzLmNvbS9LZXkSTgoPcHVi",
             "bGljX2tleV90eXBlGAIgASgOMjAuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2",
-            "aWNlQWNjb3VudFB1YmxpY0tleVR5cGUixAQKEVNlcnZpY2VBY2NvdW50S2V5",
-            "EgwKBG5hbWUYASABKAkSSwoQcHJpdmF0ZV9rZXlfdHlwZRgCIAEoDjIxLmdv",
-            "b2dsZS5pYW0uYWRtaW4udjEuU2VydmljZUFjY291bnRQcml2YXRlS2V5VHlw",
-            "ZRJGCg1rZXlfYWxnb3JpdGhtGAggASgOMi8uZ29vZ2xlLmlhbS5hZG1pbi52",
-            "MS5TZXJ2aWNlQWNjb3VudEtleUFsZ29yaXRobRIYChBwcml2YXRlX2tleV9k",
-            "YXRhGAMgASgMEhcKD3B1YmxpY19rZXlfZGF0YRgHIAEoDBI0ChB2YWxpZF9h",
-            "ZnRlcl90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI1",
-            "ChF2YWxpZF9iZWZvcmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASQAoKa2V5X29yaWdpbhgJIAEoDjIsLmdvb2dsZS5pYW0uYWRt",
-            "aW4udjEuU2VydmljZUFjY291bnRLZXlPcmlnaW4STAoIa2V5X3R5cGUYCiAB",
-            "KA4yOi5nb29nbGUuaWFtLmFkbWluLnYxLkxpc3RTZXJ2aWNlQWNjb3VudEtl",
-            "eXNSZXF1ZXN0LktleVR5cGU6XOpBWQoWaWFtLmdvb2dsZWFwaXMuY29tL0tl",
-            "eRI/cHJvamVjdHMve3Byb2plY3R9L3NlcnZpY2VBY2NvdW50cy97c2Vydmlj",
-            "ZV9hY2NvdW50fS9rZXlzL3trZXl9Iu4BCh5DcmVhdGVTZXJ2aWNlQWNjb3Vu",
-            "dEtleVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFpYW0uZ29vZ2xl",
-            "YXBpcy5jb20vU2VydmljZUFjY291bnQSSwoQcHJpdmF0ZV9rZXlfdHlwZRgC",
-            "IAEoDjIxLmdvb2dsZS5pYW0uYWRtaW4udjEuU2VydmljZUFjY291bnRQcml2",
-            "YXRlS2V5VHlwZRJGCg1rZXlfYWxnb3JpdGhtGAMgASgOMi8uZ29vZ2xlLmlh",
-            "bS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudEtleUFsZ29yaXRobSJHCh5VcGxv",
-            "YWRTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSDAoEbmFtZRgBIAEoCRIXCg9w",
-            "dWJsaWNfa2V5X2RhdGEYAiABKAwiTgoeRGVsZXRlU2VydmljZUFjY291bnRL",
-            "ZXlSZXF1ZXN0EiwKBG5hbWUYASABKAlCHuBBAvpBGAoWaWFtLmdvb2dsZWFw",
-            "aXMuY29tL0tleSJqCg9TaWduQmxvYlJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr",
-            "GAHgQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudBIc",
-            "Cg1ieXRlc190b19zaWduGAIgASgMQgUYAeBBAiI9ChBTaWduQmxvYlJlc3Bv",
-            "bnNlEhIKBmtleV9pZBgBIAEoCUICGAESFQoJc2lnbmF0dXJlGAIgASgMQgIY",
-            "ASJjCg5TaWduSnd0UmVxdWVzdBI5CgRuYW1lGAEgASgJQisYAeBBAvpBIwoh",
-            "aWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50EhYKB3BheWxvYWQY",
-            "AiABKAlCBRgB4EECIj0KD1NpZ25Kd3RSZXNwb25zZRISCgZrZXlfaWQYASAB",
-            "KAlCAhgBEhYKCnNpZ25lZF9qd3QYAiABKAlCAhgBIoYCCgRSb2xlEgwKBG5h",
-            "bWUYASABKAkSDQoFdGl0bGUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkS",
-            "HAoUaW5jbHVkZWRfcGVybWlzc2lvbnMYByADKAkSOAoFc3RhZ2UYCCABKA4y",
-            "KS5nb29nbGUuaWFtLmFkbWluLnYxLlJvbGUuUm9sZUxhdW5jaFN0YWdlEgwK",
-            "BGV0YWcYCSABKAwSDwoHZGVsZXRlZBgLIAEoCCJVCg9Sb2xlTGF1bmNoU3Rh",
-            "Z2USCQoFQUxQSEEQABIICgRCRVRBEAESBgoCR0EQAhIOCgpERVBSRUNBVEVE",
-            "EAQSDAoIRElTQUJMRUQQBRIHCgNFQVAQBiKRAQoaUXVlcnlHcmFudGFibGVS",
-            "b2xlc1JlcXVlc3QSHwoSZnVsbF9yZXNvdXJjZV9uYW1lGAEgASgJQgPgQQIS",
-            "KwoEdmlldxgCIAEoDjIdLmdvb2dsZS5pYW0uYWRtaW4udjEuUm9sZVZpZXcS",
-            "EQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiYAobUXVl",
-            "cnlHcmFudGFibGVSb2xlc1Jlc3BvbnNlEigKBXJvbGVzGAEgAygLMhkuZ29v",
-            "Z2xlLmlhbS5hZG1pbi52MS5Sb2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSKUAQoQTGlzdFJvbGVzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlCBvpBAwoB",
-            "KhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIrCgR2",
-            "aWV3GAQgASgOMh0uZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlVmlldxIUCgxz",
-            "aG93X2RlbGV0ZWQYBiABKAgiVgoRTGlzdFJvbGVzUmVzcG9uc2USKAoFcm9s",
-            "ZXMYASADKAsyGS5nb29nbGUuaWFtLmFkbWluLnYxLlJvbGUSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIiYKDkdldFJvbGVSZXF1ZXN0EhQKBG5hbWUYASAB",
-            "KAlCBvpBAwoBKiJlChFDcmVhdGVSb2xlUmVxdWVzdBIWCgZwYXJlbnQYASAB",
-            "KAlCBvpBAwoBKhIPCgdyb2xlX2lkGAIgASgJEicKBHJvbGUYAyABKAsyGS5n",
-            "b29nbGUuaWFtLmFkbWluLnYxLlJvbGUigwEKEVVwZGF0ZVJvbGVSZXF1ZXN0",
-            "EhQKBG5hbWUYASABKAlCBvpBAwoBKhInCgRyb2xlGAIgASgLMhkuZ29vZ2xl",
-            "LmlhbS5hZG1pbi52MS5Sb2xlEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayI3ChFEZWxldGVSb2xlUmVxdWVzdBIU",
-            "CgRuYW1lGAEgASgJQgb6QQMKASoSDAoEZXRhZxgCIAEoDCI5ChNVbmRlbGV0",
-            "ZVJvbGVSZXF1ZXN0EhQKBG5hbWUYASABKAlCBvpBAwoBKhIMCgRldGFnGAIg",
-            "ASgMIskDCgpQZXJtaXNzaW9uEgwKBG5hbWUYASABKAkSDQoFdGl0bGUYAiAB",
-            "KAkSEwoLZGVzY3JpcHRpb24YAyABKAkSJAoYb25seV9pbl9wcmVkZWZpbmVk",
-            "X3JvbGVzGAQgASgIQgIYARJECgVzdGFnZRgFIAEoDjI1Lmdvb2dsZS5pYW0u",
-            "YWRtaW4udjEuUGVybWlzc2lvbi5QZXJtaXNzaW9uTGF1bmNoU3RhZ2USWwoa",
-            "Y3VzdG9tX3JvbGVzX3N1cHBvcnRfbGV2ZWwYBiABKA4yNy5nb29nbGUuaWFt",
-            "LmFkbWluLnYxLlBlcm1pc3Npb24uQ3VzdG9tUm9sZXNTdXBwb3J0TGV2ZWwS",
-            "FAoMYXBpX2Rpc2FibGVkGAcgASgIEhoKEnByaW1hcnlfcGVybWlzc2lvbhgI",
-            "IAEoCSJEChVQZXJtaXNzaW9uTGF1bmNoU3RhZ2USCQoFQUxQSEEQABIICgRC",
-            "RVRBEAESBgoCR0EQAhIOCgpERVBSRUNBVEVEEAMiSAoXQ3VzdG9tUm9sZXNT",
-            "dXBwb3J0TGV2ZWwSDQoJU1VQUE9SVEVEEAASCwoHVEVTVElORxABEhEKDU5P",
-            "VF9TVVBQT1JURUQQAiJkCh9RdWVyeVRlc3RhYmxlUGVybWlzc2lvbnNSZXF1",
-            "ZXN0EhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRIRCglwYWdlX3NpemUY",
-            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJxCiBRdWVyeVRlc3RhYmxlUGVy",
-            "bWlzc2lvbnNSZXNwb25zZRI0CgtwZXJtaXNzaW9ucxgBIAMoCzIfLmdvb2ds",
-            "ZS5pYW0uYWRtaW4udjEuUGVybWlzc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiOwodUXVlcnlBdWRpdGFibGVTZXJ2aWNlc1JlcXVlc3QSGgoSZnVs",
-            "bF9yZXNvdXJjZV9uYW1lGAEgASgJIpoBCh5RdWVyeUF1ZGl0YWJsZVNlcnZp",
-            "Y2VzUmVzcG9uc2USVgoIc2VydmljZXMYASADKAsyRC5nb29nbGUuaWFtLmFk",
-            "bWluLnYxLlF1ZXJ5QXVkaXRhYmxlU2VydmljZXNSZXNwb25zZS5BdWRpdGFi",
-            "bGVTZXJ2aWNlGiAKEEF1ZGl0YWJsZVNlcnZpY2USDAoEbmFtZRgBIAEoCSJm",
-            "ChFMaW50UG9saWN5UmVxdWVzdBIaChJmdWxsX3Jlc291cmNlX25hbWUYASAB",
-            "KAkSJgoJY29uZGl0aW9uGAUgASgLMhEuZ29vZ2xlLnR5cGUuRXhwckgAQg0K",
-            "C2xpbnRfb2JqZWN0IvMCCgpMaW50UmVzdWx0EjQKBWxldmVsGAEgASgOMiUu",
-            "Z29vZ2xlLmlhbS5hZG1pbi52MS5MaW50UmVzdWx0LkxldmVsEhwKFHZhbGlk",
-            "YXRpb25fdW5pdF9uYW1lGAIgASgJEjoKCHNldmVyaXR5GAMgASgOMiguZ29v",
-            "Z2xlLmlhbS5hZG1pbi52MS5MaW50UmVzdWx0LlNldmVyaXR5EhIKCmZpZWxk",
-            "X25hbWUYBSABKAkSFwoPbG9jYXRpb25fb2Zmc2V0GAYgASgFEhUKDWRlYnVn",
-            "X21lc3NhZ2UYByABKAkiLQoFTGV2ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQ",
-            "ABINCglDT05ESVRJT04QAyJiCghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQ",
-            "RUNJRklFRBAAEgkKBUVSUk9SEAESCwoHV0FSTklORxACEgoKBk5PVElDRRAD",
-            "EggKBElORk8QBBIOCgpERVBSRUNBVEVEEAUiSwoSTGludFBvbGljeVJlc3Bv",
-            "bnNlEjUKDGxpbnRfcmVzdWx0cxgBIAMoCzIfLmdvb2dsZS5pYW0uYWRtaW4u",
-            "djEuTGludFJlc3VsdCphChpTZXJ2aWNlQWNjb3VudEtleUFsZ29yaXRobRIX",
-            "ChNLRVlfQUxHX1VOU1BFQ0lGSUVEEAASFAoQS0VZX0FMR19SU0FfMTAyNBAB",
-            "EhQKEEtFWV9BTEdfUlNBXzIwNDgQAipsChxTZXJ2aWNlQWNjb3VudFByaXZh",
-            "dGVLZXlUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIUChBUWVBFX1BLQ1Mx",
-            "Ml9GSUxFEAESIAocVFlQRV9HT09HTEVfQ1JFREVOVElBTFNfRklMRRACKl0K",
-            "G1NlcnZpY2VBY2NvdW50UHVibGljS2V5VHlwZRINCglUWVBFX05PTkUQABIW",
-            "ChJUWVBFX1g1MDlfUEVNX0ZJTEUQARIXChNUWVBFX1JBV19QVUJMSUNfS0VZ",
-            "EAIqWQoXU2VydmljZUFjY291bnRLZXlPcmlnaW4SFgoST1JJR0lOX1VOU1BF",
-            "Q0lGSUVEEAASEQoNVVNFUl9QUk9WSURFRBABEhMKD0dPT0dMRV9QUk9WSURF",
-            "RBACKh8KCFJvbGVWaWV3EgkKBUJBU0lDEAASCAoERlVMTBABMrMoCgNJQU0S",
-            "rgEKE0xpc3RTZXJ2aWNlQWNjb3VudHMSLy5nb29nbGUuaWFtLmFkbWluLnYx",
-            "Lkxpc3RTZXJ2aWNlQWNjb3VudHNSZXF1ZXN0GjAuZ29vZ2xlLmlhbS5hZG1p",
-            "bi52MS5MaXN0U2VydmljZUFjY291bnRzUmVzcG9uc2UiNILT5JMCJxIlL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyp9L3NlcnZpY2VBY2NvdW50c9pBBG5hbWUSnwEK",
-            "EUdldFNlcnZpY2VBY2NvdW50Ei0uZ29vZ2xlLmlhbS5hZG1pbi52MS5HZXRT",
-            "ZXJ2aWNlQWNjb3VudFJlcXVlc3QaIy5nb29nbGUuaWFtLmFkbWluLnYxLlNl",
-            "cnZpY2VBY2NvdW50IjaC0+STAikSJy92MS97bmFtZT1wcm9qZWN0cy8qL3Nl",
-            "cnZpY2VBY2NvdW50cy8qfdpBBG5hbWUSwQEKFENyZWF0ZVNlcnZpY2VBY2Nv",
-            "dW50EjAuZ29vZ2xlLmlhbS5hZG1pbi52MS5DcmVhdGVTZXJ2aWNlQWNjb3Vu",
-            "dFJlcXVlc3QaIy5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50",
-            "IlKC0+STAioiJS92MS97bmFtZT1wcm9qZWN0cy8qfS9zZXJ2aWNlQWNjb3Vu",
-            "dHM6ASraQR9uYW1lLGFjY291bnRfaWQsc2VydmljZV9hY2NvdW50EpQBChRV",
-            "cGRhdGVTZXJ2aWNlQWNjb3VudBIjLmdvb2dsZS5pYW0uYWRtaW4udjEuU2Vy",
-            "dmljZUFjY291bnQaIy5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2Nv",
-            "dW50IjKC0+STAiwaJy92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2Nv",
-            "dW50cy8qfToBKhKvAQoTUGF0Y2hTZXJ2aWNlQWNjb3VudBIvLmdvb2dsZS5p",
-            "YW0uYWRtaW4udjEuUGF0Y2hTZXJ2aWNlQWNjb3VudFJlcXVlc3QaIy5nb29n",
-            "bGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50IkKC0+STAjwyNy92MS97",
-            "c2VydmljZV9hY2NvdW50Lm5hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3Vu",
-            "dHMvKn06ASoSmAEKFERlbGV0ZVNlcnZpY2VBY2NvdW50EjAuZ29vZ2xlLmlh",
-            "bS5hZG1pbi52MS5EZWxldGVTZXJ2aWNlQWNjb3VudFJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiNoLT5JMCKSonL3YxL3tuYW1lPXByb2plY3Rz",
-            "Lyovc2VydmljZUFjY291bnRzLyp92kEEbmFtZRK+AQoWVW5kZWxldGVTZXJ2",
-            "aWNlQWNjb3VudBIyLmdvb2dsZS5pYW0uYWRtaW4udjEuVW5kZWxldGVTZXJ2",
-            "aWNlQWNjb3VudFJlcXVlc3QaMy5nb29nbGUuaWFtLmFkbWluLnYxLlVuZGVs",
-            "ZXRlU2VydmljZUFjY291bnRSZXNwb25zZSI7gtPkkwI1IjAvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudHMvKn06dW5kZWxldGU6ASoSmwEK",
-            "FEVuYWJsZVNlcnZpY2VBY2NvdW50EjAuZ29vZ2xlLmlhbS5hZG1pbi52MS5F",
-            "bmFibGVTZXJ2aWNlQWNjb3VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiOYLT5JMCMyIuL3YxL3tuYW1lPXByb2plY3RzLyovc2VydmljZUFj",
-            "Y291bnRzLyp9OmVuYWJsZToBKhKeAQoVRGlzYWJsZVNlcnZpY2VBY2NvdW50",
-            "EjEuZ29vZ2xlLmlhbS5hZG1pbi52MS5EaXNhYmxlU2VydmljZUFjY291bnRS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjqC0+STAjQiLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpkaXNhYmxlOgEq",
-            "EsgBChZMaXN0U2VydmljZUFjY291bnRLZXlzEjIuZ29vZ2xlLmlhbS5hZG1p",
-            "bi52MS5MaXN0U2VydmljZUFjY291bnRLZXlzUmVxdWVzdBozLmdvb2dsZS5p",
-            "YW0uYWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50S2V5c1Jlc3BvbnNlIkWC",
-            "0+STAi4SLC92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8q",
-            "fS9rZXlz2kEObmFtZSxrZXlfdHlwZXMSvwEKFEdldFNlcnZpY2VBY2NvdW50",
-            "S2V5EjAuZ29vZ2xlLmlhbS5hZG1pbi52MS5HZXRTZXJ2aWNlQWNjb3VudEtl",
-            "eVJlcXVlc3QaJi5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50",
-            "S2V5Ik2C0+STAjASLi92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2Nv",
-            "dW50cy8qL2tleXMvKn3aQRRuYW1lLHB1YmxpY19rZXlfdHlwZRLVAQoXQ3Jl",
-            "YXRlU2VydmljZUFjY291bnRLZXkSMy5nb29nbGUuaWFtLmFkbWluLnYxLkNy",
-            "ZWF0ZVNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBomLmdvb2dsZS5pYW0uYWRt",
-            "aW4udjEuU2VydmljZUFjY291bnRLZXkiXYLT5JMCMSIsL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovc2VydmljZUFjY291bnRzLyp9L2tleXM6ASraQSNuYW1lLHBy",
-            "aXZhdGVfa2V5X3R5cGUsa2V5X2FsZ29yaXRobRK2AQoXVXBsb2FkU2Vydmlj",
-            "ZUFjY291bnRLZXkSMy5nb29nbGUuaWFtLmFkbWluLnYxLlVwbG9hZFNlcnZp",
-            "Y2VBY2NvdW50S2V5UmVxdWVzdBomLmdvb2dsZS5pYW0uYWRtaW4udjEuU2Vy",
-            "dmljZUFjY291bnRLZXkiPoLT5JMCOCIzL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "c2VydmljZUFjY291bnRzLyp9L2tleXM6dXBsb2FkOgEqEqUBChdEZWxldGVT",
-            "ZXJ2aWNlQWNjb3VudEtleRIzLmdvb2dsZS5pYW0uYWRtaW4udjEuRGVsZXRl",
-            "U2VydmljZUFjY291bnRLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5Ij2C0+STAjAqLi92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2Nv",
-            "dW50cy8qL2tleXMvKn3aQQRuYW1lEqwBCghTaWduQmxvYhIkLmdvb2dsZS5p",
-            "YW0uYWRtaW4udjEuU2lnbkJsb2JSZXF1ZXN0GiUuZ29vZ2xlLmlhbS5hZG1p",
-            "bi52MS5TaWduQmxvYlJlc3BvbnNlIlOIAgGC0+STAjUiMC92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpzaWduQmxvYjoBKtpBEm5h",
-            "bWUsYnl0ZXNfdG9fc2lnbhKiAQoHU2lnbkp3dBIjLmdvb2dsZS5pYW0uYWRt",
-            "aW4udjEuU2lnbkp3dFJlcXVlc3QaJC5nb29nbGUuaWFtLmFkbWluLnYxLlNp",
-            "Z25Kd3RSZXNwb25zZSJMiAIBgtPkkwI0Ii8vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9zZXJ2aWNlQWNjb3VudHMvKn06c2lnbkp3dDoBKtpBDG5hbWUscGF5bG9h",
-            "ZBKWAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xp",
-            "Y3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiS4LT5JMCOiI4L3Yx",
-            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpnZXRJ",
-            "YW1Qb2xpY3naQQhyZXNvdXJjZRKgAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xl",
-            "LmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Q",
-            "b2xpY3kiVYLT5JMCPSI4L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL3NlcnZp",
-            "Y2VBY2NvdW50cy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xp",
-            "Y3kSywEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVz",
-            "dElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElh",
-            "bVBlcm1pc3Npb25zUmVzcG9uc2UiYILT5JMCQyI+L3YxL3tyZXNvdXJjZT1w",
-            "cm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTp0ZXN0SWFtUGVybWlzc2lv",
-            "bnM6ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxK3AQoTUXVlcnlHcmFudGFi",
-            "bGVSb2xlcxIvLmdvb2dsZS5pYW0uYWRtaW4udjEuUXVlcnlHcmFudGFibGVS",
-            "b2xlc1JlcXVlc3QaMC5nb29nbGUuaWFtLmFkbWluLnYxLlF1ZXJ5R3JhbnRh",
-            "YmxlUm9sZXNSZXNwb25zZSI9gtPkkwIiIh0vdjEvcm9sZXM6cXVlcnlHcmFu",
-            "dGFibGVSb2xlczoBKtpBEmZ1bGxfcmVzb3VyY2VfbmFtZRK0AQoJTGlzdFJv",
-            "bGVzEiUuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXF1ZXN0GiYu",
-            "Z29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXNwb25zZSJYgtPkkwJS",
-            "EgkvdjEvcm9sZXNaJBIiL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfS9y",
-            "b2xlc1ofEh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9yb2xlcxKsAQoHR2V0",
-            "Um9sZRIjLmdvb2dsZS5pYW0uYWRtaW4udjEuR2V0Um9sZVJlcXVlc3QaGS5n",
-            "b29nbGUuaWFtLmFkbWluLnYxLlJvbGUiYYLT5JMCWxISL3YxL3tuYW1lPXJv",
-            "bGVzLyp9WiQSIi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovcm9sZXMvKn1a",
-            "HxIdL3YxL3tuYW1lPXByb2plY3RzLyovcm9sZXMvKn0SogEKCkNyZWF0ZVJv",
-            "bGUSJi5nb29nbGUuaWFtLmFkbWluLnYxLkNyZWF0ZVJvbGVSZXF1ZXN0Ghku",
-            "Z29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlIlGC0+STAksiIi92MS97cGFyZW50",
-            "PW9yZ2FuaXphdGlvbnMvKn0vcm9sZXM6ASpaIiIdL3YxL3twYXJlbnQ9cHJv",
-            "amVjdHMvKn0vcm9sZXM6ASoSqAEKClVwZGF0ZVJvbGUSJi5nb29nbGUuaWFt",
-            "LmFkbWluLnYxLlVwZGF0ZVJvbGVSZXF1ZXN0GhkuZ29vZ2xlLmlhbS5hZG1p",
-            "bi52MS5Sb2xlIleC0+STAlEyIi92MS97bmFtZT1vcmdhbml6YXRpb25zLyov",
-            "cm9sZXMvKn06BHJvbGVaJTIdL3YxL3tuYW1lPXByb2plY3RzLyovcm9sZXMv",
-            "Kn06BHJvbGUSnAEKCkRlbGV0ZVJvbGUSJi5nb29nbGUuaWFtLmFkbWluLnYx",
-            "LkRlbGV0ZVJvbGVSZXF1ZXN0GhkuZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xl",
-            "IkuC0+STAkUqIi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovcm9sZXMvKn1a",
-            "HyodL3YxL3tuYW1lPXByb2plY3RzLyovcm9sZXMvKn0SuAEKDFVuZGVsZXRl",
-            "Um9sZRIoLmdvb2dsZS5pYW0uYWRtaW4udjEuVW5kZWxldGVSb2xlUmVxdWVz",
-            "dBoZLmdvb2dsZS5pYW0uYWRtaW4udjEuUm9sZSJjgtPkkwJdIisvdjEve25h",
-            "bWU9b3JnYW5pemF0aW9ucy8qL3JvbGVzLyp9OnVuZGVsZXRlOgEqWisiJi92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL3JvbGVzLyp9OnVuZGVsZXRlOgEqErwBChhR",
-            "dWVyeVRlc3RhYmxlUGVybWlzc2lvbnMSNC5nb29nbGUuaWFtLmFkbWluLnYx",
-            "LlF1ZXJ5VGVzdGFibGVQZXJtaXNzaW9uc1JlcXVlc3QaNS5nb29nbGUuaWFt",
-            "LmFkbWluLnYxLlF1ZXJ5VGVzdGFibGVQZXJtaXNzaW9uc1Jlc3BvbnNlIjOC",
-            "0+STAi0iKC92MS9wZXJtaXNzaW9uczpxdWVyeVRlc3RhYmxlUGVybWlzc2lv",
-            "bnM6ASoStAEKFlF1ZXJ5QXVkaXRhYmxlU2VydmljZXMSMi5nb29nbGUuaWFt",
-            "LmFkbWluLnYxLlF1ZXJ5QXVkaXRhYmxlU2VydmljZXNSZXF1ZXN0GjMuZ29v",
-            "Z2xlLmlhbS5hZG1pbi52MS5RdWVyeUF1ZGl0YWJsZVNlcnZpY2VzUmVzcG9u",
-            "c2UiMYLT5JMCKyImL3YxL2lhbVBvbGljaWVzOnF1ZXJ5QXVkaXRhYmxlU2Vy",
-            "dmljZXM6ASoShAEKCkxpbnRQb2xpY3kSJi5nb29nbGUuaWFtLmFkbWluLnYx",
-            "LkxpbnRQb2xpY3lSZXF1ZXN0GicuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaW50",
-            "UG9saWN5UmVzcG9uc2UiJYLT5JMCHyIaL3YxL2lhbVBvbGljaWVzOmxpbnRQ",
-            "b2xpY3k6ASoaRspBEmlhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CmgEKF2NvbS5n",
-            "b29nbGUuaWFtLmFkbWluLnYxQghJYW1Qcm90b1ABWjhnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lhbS9hZG1pbi92MTthZG1pbvgB",
-            "AaoCGUdvb2dsZS5DbG91ZC5JYW0uQWRtaW4uVjHKAhlHb29nbGVcQ2xvdWRc",
-            "SWFtXEFkbWluXFYxYgZwcm90bzM="));
+            "aWNlQWNjb3VudFB1YmxpY0tleVR5cGVCA+BBASLWBAoRU2VydmljZUFjY291",
+            "bnRLZXkSDAoEbmFtZRgBIAEoCRJLChBwcml2YXRlX2tleV90eXBlGAIgASgO",
+            "MjEuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudFByaXZhdGVL",
+            "ZXlUeXBlEkYKDWtleV9hbGdvcml0aG0YCCABKA4yLy5nb29nbGUuaWFtLmFk",
+            "bWluLnYxLlNlcnZpY2VBY2NvdW50S2V5QWxnb3JpdGhtEhgKEHByaXZhdGVf",
+            "a2V5X2RhdGEYAyABKAwSFwoPcHVibGljX2tleV9kYXRhGAcgASgMEjQKEHZh",
+            "bGlkX2FmdGVyX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEjUKEXZhbGlkX2JlZm9yZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBJACgprZXlfb3JpZ2luGAkgASgOMiwuZ29vZ2xlLmlh",
+            "bS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudEtleU9yaWdpbhJMCghrZXlfdHlw",
+            "ZRgKIAEoDjI6Lmdvb2dsZS5pYW0uYWRtaW4udjEuTGlzdFNlcnZpY2VBY2Nv",
+            "dW50S2V5c1JlcXVlc3QuS2V5VHlwZRIQCghkaXNhYmxlZBgLIAEoCDpc6kFZ",
+            "ChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5Ej9wcm9qZWN0cy97cHJvamVjdH0v",
+            "c2VydmljZUFjY291bnRzL3tzZXJ2aWNlX2FjY291bnR9L2tleXMve2tleX0i",
+            "7gEKHkNyZWF0ZVNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBI3CgRuYW1lGAEg",
+            "ASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3Vu",
+            "dBJLChBwcml2YXRlX2tleV90eXBlGAIgASgOMjEuZ29vZ2xlLmlhbS5hZG1p",
+            "bi52MS5TZXJ2aWNlQWNjb3VudFByaXZhdGVLZXlUeXBlEkYKDWtleV9hbGdv",
+            "cml0aG0YAyABKA4yLy5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2Nv",
+            "dW50S2V5QWxnb3JpdGhtIkcKHlVwbG9hZFNlcnZpY2VBY2NvdW50S2V5UmVx",
+            "dWVzdBIMCgRuYW1lGAEgASgJEhcKD3B1YmxpY19rZXlfZGF0YRgCIAEoDCJO",
+            "Ch5EZWxldGVTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSLAoEbmFtZRgBIAEo",
+            "CUIe4EEC+kEYChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5Ik8KH0Rpc2FibGVT",
+            "ZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSLAoEbmFtZRgBIAEoCUIe4EEC+kEY",
+            "ChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5Ik4KHkVuYWJsZVNlcnZpY2VBY2Nv",
+            "dW50S2V5UmVxdWVzdBIsCgRuYW1lGAEgASgJQh7gQQL6QRgKFmlhbS5nb29n",
+            "bGVhcGlzLmNvbS9LZXkiagoPU2lnbkJsb2JSZXF1ZXN0EjkKBG5hbWUYASAB",
+            "KAlCKxgB4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291",
+            "bnQSHAoNYnl0ZXNfdG9fc2lnbhgCIAEoDEIFGAHgQQIiPQoQU2lnbkJsb2JS",
+            "ZXNwb25zZRISCgZrZXlfaWQYASABKAlCAhgBEhUKCXNpZ25hdHVyZRgCIAEo",
+            "DEICGAEiYwoOU2lnbkp3dFJlcXVlc3QSOQoEbmFtZRgBIAEoCUIrGAHgQQL6",
+            "QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudBIWCgdwYXls",
+            "b2FkGAIgASgJQgUYAeBBAiI9Cg9TaWduSnd0UmVzcG9uc2USEgoGa2V5X2lk",
+            "GAEgASgJQgIYARIWCgpzaWduZWRfand0GAIgASgJQgIYASKGAgoEUm9sZRIM",
+            "CgRuYW1lGAEgASgJEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMg",
+            "ASgJEhwKFGluY2x1ZGVkX3Blcm1pc3Npb25zGAcgAygJEjgKBXN0YWdlGAgg",
+            "ASgOMikuZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlLlJvbGVMYXVuY2hTdGFn",
+            "ZRIMCgRldGFnGAkgASgMEg8KB2RlbGV0ZWQYCyABKAgiVQoPUm9sZUxhdW5j",
+            "aFN0YWdlEgkKBUFMUEhBEAASCAoEQkVUQRABEgYKAkdBEAISDgoKREVQUkVD",
+            "QVRFRBAEEgwKCERJU0FCTEVEEAUSBwoDRUFQEAYikQEKGlF1ZXJ5R3JhbnRh",
+            "YmxlUm9sZXNSZXF1ZXN0Eh8KEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCUID",
+            "4EECEisKBHZpZXcYAiABKA4yHS5nb29nbGUuaWFtLmFkbWluLnYxLlJvbGVW",
+            "aWV3EhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJImAK",
+            "G1F1ZXJ5R3JhbnRhYmxlUm9sZXNSZXNwb25zZRIoCgVyb2xlcxgBIAMoCzIZ",
+            "Lmdvb2dsZS5pYW0uYWRtaW4udjEuUm9sZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkilAEKEExpc3RSb2xlc1JlcXVlc3QSFgoGcGFyZW50GAEgASgJQgb6",
+            "QQMKASoSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkS",
+            "KwoEdmlldxgEIAEoDjIdLmdvb2dsZS5pYW0uYWRtaW4udjEuUm9sZVZpZXcS",
+            "FAoMc2hvd19kZWxldGVkGAYgASgIIlYKEUxpc3RSb2xlc1Jlc3BvbnNlEigK",
+            "BXJvbGVzGAEgAygLMhkuZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSImCg5HZXRSb2xlUmVxdWVzdBIUCgRuYW1l",
+            "GAEgASgJQgb6QQMKASoiZQoRQ3JlYXRlUm9sZVJlcXVlc3QSFgoGcGFyZW50",
+            "GAEgASgJQgb6QQMKASoSDwoHcm9sZV9pZBgCIAEoCRInCgRyb2xlGAMgASgL",
+            "MhkuZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlIoMBChFVcGRhdGVSb2xlUmVx",
+            "dWVzdBIUCgRuYW1lGAEgASgJQgb6QQMKASoSJwoEcm9sZRgCIAEoCzIZLmdv",
+            "b2dsZS5pYW0uYWRtaW4udjEuUm9sZRIvCgt1cGRhdGVfbWFzaxgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siNwoRRGVsZXRlUm9sZVJlcXVl",
+            "c3QSFAoEbmFtZRgBIAEoCUIG+kEDCgEqEgwKBGV0YWcYAiABKAwiOQoTVW5k",
+            "ZWxldGVSb2xlUmVxdWVzdBIUCgRuYW1lGAEgASgJQgb6QQMKASoSDAoEZXRh",
+            "ZxgCIAEoDCLJAwoKUGVybWlzc2lvbhIMCgRuYW1lGAEgASgJEg0KBXRpdGxl",
+            "GAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEiQKGG9ubHlfaW5fcHJlZGVm",
+            "aW5lZF9yb2xlcxgEIAEoCEICGAESRAoFc3RhZ2UYBSABKA4yNS5nb29nbGUu",
+            "aWFtLmFkbWluLnYxLlBlcm1pc3Npb24uUGVybWlzc2lvbkxhdW5jaFN0YWdl",
+            "ElsKGmN1c3RvbV9yb2xlc19zdXBwb3J0X2xldmVsGAYgASgOMjcuZ29vZ2xl",
+            "LmlhbS5hZG1pbi52MS5QZXJtaXNzaW9uLkN1c3RvbVJvbGVzU3VwcG9ydExl",
+            "dmVsEhQKDGFwaV9kaXNhYmxlZBgHIAEoCBIaChJwcmltYXJ5X3Blcm1pc3Np",
+            "b24YCCABKAkiRAoVUGVybWlzc2lvbkxhdW5jaFN0YWdlEgkKBUFMUEhBEAAS",
+            "CAoEQkVUQRABEgYKAkdBEAISDgoKREVQUkVDQVRFRBADIkgKF0N1c3RvbVJv",
+            "bGVzU3VwcG9ydExldmVsEg0KCVNVUFBPUlRFRBAAEgsKB1RFU1RJTkcQARIR",
+            "Cg1OT1RfU1VQUE9SVEVEEAIiZAofUXVlcnlUZXN0YWJsZVBlcm1pc3Npb25z",
+            "UmVxdWVzdBIaChJmdWxsX3Jlc291cmNlX25hbWUYASABKAkSEQoJcGFnZV9z",
+            "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkicQogUXVlcnlUZXN0YWJs",
+            "ZVBlcm1pc3Npb25zUmVzcG9uc2USNAoLcGVybWlzc2lvbnMYASADKAsyHy5n",
+            "b29nbGUuaWFtLmFkbWluLnYxLlBlcm1pc3Npb24SFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJIjsKHVF1ZXJ5QXVkaXRhYmxlU2VydmljZXNSZXF1ZXN0EhoK",
+            "EmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCSKaAQoeUXVlcnlBdWRpdGFibGVT",
+            "ZXJ2aWNlc1Jlc3BvbnNlElYKCHNlcnZpY2VzGAEgAygLMkQuZ29vZ2xlLmlh",
+            "bS5hZG1pbi52MS5RdWVyeUF1ZGl0YWJsZVNlcnZpY2VzUmVzcG9uc2UuQXVk",
+            "aXRhYmxlU2VydmljZRogChBBdWRpdGFibGVTZXJ2aWNlEgwKBG5hbWUYASAB",
+            "KAkiZgoRTGludFBvbGljeVJlcXVlc3QSGgoSZnVsbF9yZXNvdXJjZV9uYW1l",
+            "GAEgASgJEiYKCWNvbmRpdGlvbhgFIAEoCzIRLmdvb2dsZS50eXBlLkV4cHJI",
+            "AEINCgtsaW50X29iamVjdCLzAgoKTGludFJlc3VsdBI0CgVsZXZlbBgBIAEo",
+            "DjIlLmdvb2dsZS5pYW0uYWRtaW4udjEuTGludFJlc3VsdC5MZXZlbBIcChR2",
+            "YWxpZGF0aW9uX3VuaXRfbmFtZRgCIAEoCRI6CghzZXZlcml0eRgDIAEoDjIo",
+            "Lmdvb2dsZS5pYW0uYWRtaW4udjEuTGludFJlc3VsdC5TZXZlcml0eRISCgpm",
+            "aWVsZF9uYW1lGAUgASgJEhcKD2xvY2F0aW9uX29mZnNldBgGIAEoBRIVCg1k",
+            "ZWJ1Z19tZXNzYWdlGAcgASgJIi0KBUxldmVsEhUKEUxFVkVMX1VOU1BFQ0lG",
+            "SUVEEAASDQoJQ09ORElUSU9OEAMiYgoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlf",
+            "VU5TUEVDSUZJRUQQABIJCgVFUlJPUhABEgsKB1dBUk5JTkcQAhIKCgZOT1RJ",
+            "Q0UQAxIICgRJTkZPEAQSDgoKREVQUkVDQVRFRBAFIksKEkxpbnRQb2xpY3lS",
+            "ZXNwb25zZRI1CgxsaW50X3Jlc3VsdHMYASADKAsyHy5nb29nbGUuaWFtLmFk",
+            "bWluLnYxLkxpbnRSZXN1bHQqYQoaU2VydmljZUFjY291bnRLZXlBbGdvcml0",
+            "aG0SFwoTS0VZX0FMR19VTlNQRUNJRklFRBAAEhQKEEtFWV9BTEdfUlNBXzEw",
+            "MjQQARIUChBLRVlfQUxHX1JTQV8yMDQ4EAIqbAocU2VydmljZUFjY291bnRQ",
+            "cml2YXRlS2V5VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASFAoQVFlQRV9Q",
+            "S0NTMTJfRklMRRABEiAKHFRZUEVfR09PR0xFX0NSRURFTlRJQUxTX0ZJTEUQ",
+            "AipdChtTZXJ2aWNlQWNjb3VudFB1YmxpY0tleVR5cGUSDQoJVFlQRV9OT05F",
+            "EAASFgoSVFlQRV9YNTA5X1BFTV9GSUxFEAESFwoTVFlQRV9SQVdfUFVCTElD",
+            "X0tFWRACKlkKF1NlcnZpY2VBY2NvdW50S2V5T3JpZ2luEhYKEk9SSUdJTl9V",
+            "TlNQRUNJRklFRBAAEhEKDVVTRVJfUFJPVklERUQQARITCg9HT09HTEVfUFJP",
+            "VklERUQQAiofCghSb2xlVmlldxIJCgVCQVNJQxAAEggKBEZVTEwQATKaKwoD",
+            "SUFNEq4BChNMaXN0U2VydmljZUFjY291bnRzEi8uZ29vZ2xlLmlhbS5hZG1p",
+            "bi52MS5MaXN0U2VydmljZUFjY291bnRzUmVxdWVzdBowLmdvb2dsZS5pYW0u",
+            "YWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50c1Jlc3BvbnNlIjSC0+STAicS",
+            "JS92MS97bmFtZT1wcm9qZWN0cy8qfS9zZXJ2aWNlQWNjb3VudHPaQQRuYW1l",
+            "Ep8BChFHZXRTZXJ2aWNlQWNjb3VudBItLmdvb2dsZS5pYW0uYWRtaW4udjEu",
+            "R2V0U2VydmljZUFjY291bnRSZXF1ZXN0GiMuZ29vZ2xlLmlhbS5hZG1pbi52",
+            "MS5TZXJ2aWNlQWNjb3VudCI2gtPkkwIpEicvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9zZXJ2aWNlQWNjb3VudHMvKn3aQQRuYW1lEsEBChRDcmVhdGVTZXJ2aWNl",
+            "QWNjb3VudBIwLmdvb2dsZS5pYW0uYWRtaW4udjEuQ3JlYXRlU2VydmljZUFj",
+            "Y291bnRSZXF1ZXN0GiMuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNj",
+            "b3VudCJSgtPkkwIqIiUvdjEve25hbWU9cHJvamVjdHMvKn0vc2VydmljZUFj",
+            "Y291bnRzOgEq2kEfbmFtZSxhY2NvdW50X2lkLHNlcnZpY2VfYWNjb3VudBKU",
+            "AQoUVXBkYXRlU2VydmljZUFjY291bnQSIy5nb29nbGUuaWFtLmFkbWluLnYx",
+            "LlNlcnZpY2VBY2NvdW50GiMuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNl",
+            "QWNjb3VudCIygtPkkwIsGicvdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
+            "QWNjb3VudHMvKn06ASoSrwEKE1BhdGNoU2VydmljZUFjY291bnQSLy5nb29n",
+            "bGUuaWFtLmFkbWluLnYxLlBhdGNoU2VydmljZUFjY291bnRSZXF1ZXN0GiMu",
+            "Z29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudCJCgtPkkwI8Mjcv",
+            "djEve3NlcnZpY2VfYWNjb3VudC5uYW1lPXByb2plY3RzLyovc2VydmljZUFj",
+            "Y291bnRzLyp9OgEqEpgBChREZWxldGVTZXJ2aWNlQWNjb3VudBIwLmdvb2ds",
+            "ZS5pYW0uYWRtaW4udjEuRGVsZXRlU2VydmljZUFjY291bnRSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IjaC0+STAikqJy92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfdpBBG5hbWUSvgEKFlVuZGVsZXRl",
+            "U2VydmljZUFjY291bnQSMi5nb29nbGUuaWFtLmFkbWluLnYxLlVuZGVsZXRl",
+            "U2VydmljZUFjY291bnRSZXF1ZXN0GjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5V",
+            "bmRlbGV0ZVNlcnZpY2VBY2NvdW50UmVzcG9uc2UiO4LT5JMCNSIwL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovc2VydmljZUFjY291bnRzLyp9OnVuZGVsZXRlOgEq",
+            "EpsBChRFbmFibGVTZXJ2aWNlQWNjb3VudBIwLmdvb2dsZS5pYW0uYWRtaW4u",
+            "djEuRW5hYmxlU2VydmljZUFjY291bnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5IjmC0+STAjMiLi92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZp",
+            "Y2VBY2NvdW50cy8qfTplbmFibGU6ASoSngEKFURpc2FibGVTZXJ2aWNlQWNj",
+            "b3VudBIxLmdvb2dsZS5pYW0uYWRtaW4udjEuRGlzYWJsZVNlcnZpY2VBY2Nv",
+            "dW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI6gtPkkwI0Ii8v",
+            "djEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudHMvKn06ZGlzYWJs",
+            "ZToBKhLIAQoWTGlzdFNlcnZpY2VBY2NvdW50S2V5cxIyLmdvb2dsZS5pYW0u",
+            "YWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50S2V5c1JlcXVlc3QaMy5nb29n",
+            "bGUuaWFtLmFkbWluLnYxLkxpc3RTZXJ2aWNlQWNjb3VudEtleXNSZXNwb25z",
+            "ZSJFgtPkkwIuEiwvdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3Vu",
+            "dHMvKn0va2V5c9pBDm5hbWUsa2V5X3R5cGVzEr8BChRHZXRTZXJ2aWNlQWNj",
+            "b3VudEtleRIwLmdvb2dsZS5pYW0uYWRtaW4udjEuR2V0U2VydmljZUFjY291",
+            "bnRLZXlSZXF1ZXN0GiYuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNj",
+            "b3VudEtleSJNgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
+            "QWNjb3VudHMvKi9rZXlzLyp92kEUbmFtZSxwdWJsaWNfa2V5X3R5cGUS1QEK",
+            "F0NyZWF0ZVNlcnZpY2VBY2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52",
+            "MS5DcmVhdGVTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QaJi5nb29nbGUuaWFt",
+            "LmFkbWluLnYxLlNlcnZpY2VBY2NvdW50S2V5Il2C0+STAjEiLC92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfS9rZXlzOgEq2kEjbmFt",
+            "ZSxwcml2YXRlX2tleV90eXBlLGtleV9hbGdvcml0aG0StgEKF1VwbG9hZFNl",
+            "cnZpY2VBY2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5VcGxvYWRT",
+            "ZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QaJi5nb29nbGUuaWFtLmFkbWluLnYx",
+            "LlNlcnZpY2VBY2NvdW50S2V5Ij6C0+STAjgiMy92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL3NlcnZpY2VBY2NvdW50cy8qfS9rZXlzOnVwbG9hZDoBKhKlAQoXRGVs",
+            "ZXRlU2VydmljZUFjY291bnRLZXkSMy5nb29nbGUuaWFtLmFkbWluLnYxLkRl",
+            "bGV0ZVNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSI9gtPkkwIwKi4vdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
+            "QWNjb3VudHMvKi9rZXlzLyp92kEEbmFtZRKyAQoYRGlzYWJsZVNlcnZpY2VB",
+            "Y2NvdW50S2V5EjQuZ29vZ2xlLmlhbS5hZG1pbi52MS5EaXNhYmxlU2Vydmlj",
+            "ZUFjY291bnRLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkiC",
+            "0+STAjsiNi92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8q",
+            "L2tleXMvKn06ZGlzYWJsZToBKtpBBG5hbWUSrwEKF0VuYWJsZVNlcnZpY2VB",
+            "Y2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5FbmFibGVTZXJ2aWNl",
+            "QWNjb3VudEtleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiR4LT",
+            "5JMCOiI1L3YxL3tuYW1lPXByb2plY3RzLyovc2VydmljZUFjY291bnRzLyov",
+            "a2V5cy8qfTplbmFibGU6ASraQQRuYW1lEqwBCghTaWduQmxvYhIkLmdvb2ds",
+            "ZS5pYW0uYWRtaW4udjEuU2lnbkJsb2JSZXF1ZXN0GiUuZ29vZ2xlLmlhbS5h",
+            "ZG1pbi52MS5TaWduQmxvYlJlc3BvbnNlIlOIAgGC0+STAjUiMC92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpzaWduQmxvYjoBKtpB",
+            "Em5hbWUsYnl0ZXNfdG9fc2lnbhKiAQoHU2lnbkp3dBIjLmdvb2dsZS5pYW0u",
+            "YWRtaW4udjEuU2lnbkp3dFJlcXVlc3QaJC5nb29nbGUuaWFtLmFkbWluLnYx",
+            "LlNpZ25Kd3RSZXNwb25zZSJMiAIBgtPkkwI0Ii8vdjEve25hbWU9cHJvamVj",
+            "dHMvKi9zZXJ2aWNlQWNjb3VudHMvKn06c2lnbkp3dDoBKtpBDG5hbWUscGF5",
+            "bG9hZBKWAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Q",
+            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiS4LT5JMCOiI4",
+            "L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpn",
+            "ZXRJYW1Qb2xpY3naQQhyZXNvdXJjZRKgAQoMU2V0SWFtUG9saWN5EiIuZ29v",
+            "Z2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52",
+            "MS5Qb2xpY3kiVYLT5JMCPSI4L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL3Nl",
+            "cnZpY2VBY2NvdW50cy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxw",
+            "b2xpY3kSywEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEu",
+            "VGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVz",
+            "dElhbVBlcm1pc3Npb25zUmVzcG9uc2UiYILT5JMCQyI+L3YxL3tyZXNvdXJj",
+            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTp0ZXN0SWFtUGVybWlz",
+            "c2lvbnM6ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxK3AQoTUXVlcnlHcmFu",
+            "dGFibGVSb2xlcxIvLmdvb2dsZS5pYW0uYWRtaW4udjEuUXVlcnlHcmFudGFi",
+            "bGVSb2xlc1JlcXVlc3QaMC5nb29nbGUuaWFtLmFkbWluLnYxLlF1ZXJ5R3Jh",
+            "bnRhYmxlUm9sZXNSZXNwb25zZSI9gtPkkwIiIh0vdjEvcm9sZXM6cXVlcnlH",
+            "cmFudGFibGVSb2xlczoBKtpBEmZ1bGxfcmVzb3VyY2VfbmFtZRK0AQoJTGlz",
+            "dFJvbGVzEiUuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXF1ZXN0",
+            "GiYuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXNwb25zZSJYgtPk",
+            "kwJSEgkvdjEvcm9sZXNaJBIiL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8q",
+            "fS9yb2xlc1ofEh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9yb2xlcxKsAQoH",
+            "R2V0Um9sZRIjLmdvb2dsZS5pYW0uYWRtaW4udjEuR2V0Um9sZVJlcXVlc3Qa",
+            "GS5nb29nbGUuaWFtLmFkbWluLnYxLlJvbGUiYYLT5JMCWxISL3YxL3tuYW1l",
+            "PXJvbGVzLyp9WiQSIi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovcm9sZXMv",
+            "Kn1aHxIdL3YxL3tuYW1lPXByb2plY3RzLyovcm9sZXMvKn0SogEKCkNyZWF0",
+            "ZVJvbGUSJi5nb29nbGUuaWFtLmFkbWluLnYxLkNyZWF0ZVJvbGVSZXF1ZXN0",
+            "GhkuZ29vZ2xlLmlhbS5hZG1pbi52MS5Sb2xlIlGC0+STAksiIi92MS97cGFy",
+            "ZW50PW9yZ2FuaXphdGlvbnMvKn0vcm9sZXM6ASpaIiIdL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn0vcm9sZXM6ASoSqAEKClVwZGF0ZVJvbGUSJi5nb29nbGUu",
+            "aWFtLmFkbWluLnYxLlVwZGF0ZVJvbGVSZXF1ZXN0GhkuZ29vZ2xlLmlhbS5h",
+            "ZG1pbi52MS5Sb2xlIleC0+STAlEyIi92MS97bmFtZT1vcmdhbml6YXRpb25z",
+            "Lyovcm9sZXMvKn06BHJvbGVaJTIdL3YxL3tuYW1lPXByb2plY3RzLyovcm9s",
+            "ZXMvKn06BHJvbGUSnAEKCkRlbGV0ZVJvbGUSJi5nb29nbGUuaWFtLmFkbWlu",
+            "LnYxLkRlbGV0ZVJvbGVSZXF1ZXN0GhkuZ29vZ2xlLmlhbS5hZG1pbi52MS5S",
+            "b2xlIkuC0+STAkUqIi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovcm9sZXMv",
+            "Kn1aHyodL3YxL3tuYW1lPXByb2plY3RzLyovcm9sZXMvKn0SuAEKDFVuZGVs",
+            "ZXRlUm9sZRIoLmdvb2dsZS5pYW0uYWRtaW4udjEuVW5kZWxldGVSb2xlUmVx",
+            "dWVzdBoZLmdvb2dsZS5pYW0uYWRtaW4udjEuUm9sZSJjgtPkkwJdIisvdjEv",
+            "e25hbWU9b3JnYW5pemF0aW9ucy8qL3JvbGVzLyp9OnVuZGVsZXRlOgEqWisi",
+            "Ji92MS97bmFtZT1wcm9qZWN0cy8qL3JvbGVzLyp9OnVuZGVsZXRlOgEqErwB",
+            "ChhRdWVyeVRlc3RhYmxlUGVybWlzc2lvbnMSNC5nb29nbGUuaWFtLmFkbWlu",
+            "LnYxLlF1ZXJ5VGVzdGFibGVQZXJtaXNzaW9uc1JlcXVlc3QaNS5nb29nbGUu",
+            "aWFtLmFkbWluLnYxLlF1ZXJ5VGVzdGFibGVQZXJtaXNzaW9uc1Jlc3BvbnNl",
+            "IjOC0+STAi0iKC92MS9wZXJtaXNzaW9uczpxdWVyeVRlc3RhYmxlUGVybWlz",
+            "c2lvbnM6ASoStAEKFlF1ZXJ5QXVkaXRhYmxlU2VydmljZXMSMi5nb29nbGUu",
+            "aWFtLmFkbWluLnYxLlF1ZXJ5QXVkaXRhYmxlU2VydmljZXNSZXF1ZXN0GjMu",
+            "Z29vZ2xlLmlhbS5hZG1pbi52MS5RdWVyeUF1ZGl0YWJsZVNlcnZpY2VzUmVz",
+            "cG9uc2UiMYLT5JMCKyImL3YxL2lhbVBvbGljaWVzOnF1ZXJ5QXVkaXRhYmxl",
+            "U2VydmljZXM6ASoShAEKCkxpbnRQb2xpY3kSJi5nb29nbGUuaWFtLmFkbWlu",
+            "LnYxLkxpbnRQb2xpY3lSZXF1ZXN0GicuZ29vZ2xlLmlhbS5hZG1pbi52MS5M",
+            "aW50UG9saWN5UmVzcG9uc2UiJYLT5JMCHyIaL3YxL2lhbVBvbGljaWVzOmxp",
+            "bnRQb2xpY3k6ASoaRspBEmlhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkAEKF2Nv",
+            "bS5nb29nbGUuaWFtLmFkbWluLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvaWFtL2FkbWluL3YxO2FkbWlu+AEBqgIZR29v",
+            "Z2xlLkNsb3VkLklhbS5BZG1pbi5WMcoCGUdvb2dsZVxDbG91ZFxJYW1cQWRt",
+            "aW5cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyAlgorithm), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPrivateKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPublicKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyOrigin), typeof(global::Google.Cloud.Iam.Admin.V1.RoleView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccount), global::Google.Cloud.Iam.Admin.V1.ServiceAccount.Parser, new[]{ "Name", "ProjectId", "UniqueId", "Email", "DisplayName", "Etag", "Description", "Oauth2ClientId", "Disabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest), global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest.Parser, new[]{ "Name", "AccountId", "ServiceAccount" }, null, null, null, null),
@@ -304,10 +316,12 @@ namespace Google.Cloud.Iam.Admin.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest), global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Parser, new[]{ "Name", "KeyTypes" }, null, new[]{ typeof(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse), global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse.Parser, new[]{ "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest.Parser, new[]{ "Name", "PublicKeyType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey), global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey.Parser, new[]{ "Name", "PrivateKeyType", "KeyAlgorithm", "PrivateKeyData", "PublicKeyData", "ValidAfterTime", "ValidBeforeTime", "KeyOrigin", "KeyType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey), global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey.Parser, new[]{ "Name", "PrivateKeyType", "KeyAlgorithm", "PrivateKeyData", "PublicKeyData", "ValidAfterTime", "ValidBeforeTime", "KeyOrigin", "KeyType", "Disabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest.Parser, new[]{ "Name", "PrivateKeyType", "KeyAlgorithm" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest.Parser, new[]{ "Name", "PublicKeyData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest), global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest), global::Google.Cloud.Iam.Admin.V1.SignBlobRequest.Parser, new[]{ "Name", "BytesToSign" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.SignBlobResponse), global::Google.Cloud.Iam.Admin.V1.SignBlobResponse.Parser, new[]{ "KeyId", "Signature" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest), global::Google.Cloud.Iam.Admin.V1.SignJwtRequest.Parser, new[]{ "Name", "Payload" }, null, null, null, null),
@@ -379,7 +393,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// </summary>
   public enum ServiceAccountPublicKeyType {
     /// <summary>
-    /// Unspecified. Returns nothing here.
+    /// Do not return the public key.
     /// </summary>
     [pbr::OriginalName("TYPE_NONE")] TypeNone = 0,
     /// <summary>
@@ -2176,8 +2190,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [PatchServiceAccount][google.iam.admin.v1.PatchServiceAccount].
+  /// The service account patch request.
   ///
   /// You can patch only the `display_name` and `description` fields. You must use
   /// the `update_mask` field to specify which of these fields you want to patch.
@@ -3743,8 +3756,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
     public const int PublicKeyTypeFieldNumber = 2;
     private global::Google.Cloud.Iam.Admin.V1.ServiceAccountPublicKeyType publicKeyType_ = global::Google.Cloud.Iam.Admin.V1.ServiceAccountPublicKeyType.TypeNone;
     /// <summary>
-    /// The output format of the public key requested.
-    /// X509_PEM is the default output format.
+    /// Optional. The output format of the public key. The default is `TYPE_NONE`, which
+    /// means that the public key is not returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3981,6 +3994,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       validBeforeTime_ = other.validBeforeTime_ != null ? other.validBeforeTime_.Clone() : null;
       keyOrigin_ = other.keyOrigin_;
       keyType_ = other.keyType_;
+      disabled_ = other.disabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4140,6 +4154,21 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "disabled" field.</summary>
+    public const int DisabledFieldNumber = 11;
+    private bool disabled_;
+    /// <summary>
+    /// The key status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Disabled {
+      get { return disabled_; }
+      set {
+        disabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4164,6 +4193,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       if (!object.Equals(ValidBeforeTime, other.ValidBeforeTime)) return false;
       if (KeyOrigin != other.KeyOrigin) return false;
       if (KeyType != other.KeyType) return false;
+      if (Disabled != other.Disabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4180,6 +4210,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       if (validBeforeTime_ != null) hash ^= ValidBeforeTime.GetHashCode();
       if (KeyOrigin != global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyOrigin.OriginUnspecified) hash ^= KeyOrigin.GetHashCode();
       if (KeyType != global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType.Unspecified) hash ^= KeyType.GetHashCode();
+      if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4234,6 +4265,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) KeyType);
       }
+      if (Disabled != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(Disabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4280,6 +4315,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) KeyType);
       }
+      if (Disabled != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(Disabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4316,6 +4355,9 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       if (KeyType != global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KeyType);
+      }
+      if (Disabled != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4361,6 +4403,9 @@ namespace Google.Cloud.Iam.Admin.V1 {
       }
       if (other.KeyType != global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType.Unspecified) {
         KeyType = other.KeyType;
+      }
+      if (other.Disabled != false) {
+        Disabled = other.Disabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4419,6 +4464,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
             KeyType = (global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType) input.ReadEnum();
             break;
           }
+          case 88: {
+            Disabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4474,6 +4523,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
           }
           case 80: {
             KeyType = (global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Types.KeyType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            Disabled = input.ReadBool();
             break;
           }
         }
@@ -4837,10 +4890,10 @@ namespace Google.Cloud.Iam.Admin.V1 {
     public const int PublicKeyDataFieldNumber = 2;
     private pb::ByteString publicKeyData_ = pb::ByteString.Empty;
     /// <summary>
-    /// A field that allows clients to upload their own public key. If set,
-    /// use this public key data to create a service account key for given
-    /// service account.
-    /// Please note, the expected format for this field is X509_PEM.
+    /// The public key to associate with the service account. Must be an RSA public
+    /// key that is wrapped in an X.509 v3 certificate. Include the first line,
+    /// `-----BEGIN CERTIFICATE-----`, and the last line,
+    /// `-----END CERTIFICATE-----`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5208,6 +5261,406 @@ namespace Google.Cloud.Iam.Admin.V1 {
   }
 
   /// <summary>
+  /// The service account key disable request.
+  /// </summary>
+  public sealed partial class DisableServiceAccountKeyRequest : pb::IMessage<DisableServiceAccountKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DisableServiceAccountKeyRequest> _parser = new pb::MessageParser<DisableServiceAccountKeyRequest>(() => new DisableServiceAccountKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DisableServiceAccountKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableServiceAccountKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableServiceAccountKeyRequest(DisableServiceAccountKeyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableServiceAccountKeyRequest Clone() {
+      return new DisableServiceAccountKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the service account key in the following format:
+    /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+    ///
+    /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+    /// the account. The `ACCOUNT` value can be the `email` address or the
+    /// `unique_id` of the service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DisableServiceAccountKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DisableServiceAccountKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DisableServiceAccountKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The service account key enable request.
+  /// </summary>
+  public sealed partial class EnableServiceAccountKeyRequest : pb::IMessage<EnableServiceAccountKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnableServiceAccountKeyRequest> _parser = new pb::MessageParser<EnableServiceAccountKeyRequest>(() => new EnableServiceAccountKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnableServiceAccountKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableServiceAccountKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableServiceAccountKeyRequest(EnableServiceAccountKeyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableServiceAccountKeyRequest Clone() {
+      return new EnableServiceAccountKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the service account key in the following format:
+    /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+    ///
+    /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+    /// the account. The `ACCOUNT` value can be the `email` address or the
+    /// `unique_id` of the service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnableServiceAccountKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnableServiceAccountKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnableServiceAccountKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Deprecated. [Migrate to Service Account Credentials
   /// API](https://cloud.google.com/iam/help/credentials/migrate-api).
   ///
@@ -5227,7 +5680,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5477,7 +5930,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5723,7 +6176,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5788,8 +6241,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// JWT Claims Set. For example: `{"sub": "user@example.com", "iat": 313435}`
     ///
     /// If the JWT Claims Set contains an expiration time (`exp`) claim, it must be
-    /// an integer timestamp that is not in the past and no more than 1 hour in the
-    /// future.
+    /// an integer timestamp that is not in the past and no more than 12 hours in
+    /// the future.
     ///
     /// If the JWT Claims Set does not contain an expiration time (`exp`) claim,
     /// this claim is added automatically, with a timestamp that is 1 hour in the
@@ -5982,7 +6435,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6225,7 +6678,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6668,8 +7121,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
         /// </summary>
         [pbr::OriginalName("DEPRECATED")] Deprecated = 4,
         /// <summary>
-        /// This role is disabled and will not contribute permissions to any members
-        /// it is granted to in policies.
+        /// This role is disabled and will not contribute permissions to any
+        /// principals it is granted to in policies.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 5,
         /// <summary>
@@ -6700,7 +7153,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7019,7 +7472,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7244,7 +7697,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7284,26 +7737,29 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `parent` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`roles`](/iam/reference/rest/v1/roles),
-    /// [`projects`](/iam/reference/rest/v1/projects.roles), or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `parent` value format is described below:
+    /// [`roles`](https://cloud.google.com/iam/reference/rest/v1/roles),
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles),
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `parent` value format is described below:
     ///
-    /// * [`roles.list()`](/iam/reference/rest/v1/roles/list): An empty string.
+    /// * [`roles.list()`](https://cloud.google.com/iam/reference/rest/v1/roles/list): An empty string.
     ///   This method doesn't require a resource; it simply returns all
-    ///   [predefined roles](/iam/docs/understanding-roles#predefined_roles) in
-    ///   Cloud IAM. Example request URL:
-    ///   `https://iam.googleapis.com/v1/roles`
+    ///   [predefined
+    ///   roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+    ///   in Cloud IAM. Example request URL: `https://iam.googleapis.com/v1/roles`
     ///
-    /// * [`projects.roles.list()`](/iam/reference/rest/v1/projects.roles/list):
+    /// * [`projects.roles.list()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/list):
     ///   `projects/{PROJECT_ID}`. This method lists all project-level
-    ///   [custom roles](/iam/docs/understanding-custom-roles).
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
     ///   Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles`
     ///
-    /// * [`organizations.roles.list()`](/iam/reference/rest/v1/organizations.roles/list):
+    /// * [`organizations.roles.list()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/list):
     ///   `organizations/{ORGANIZATION_ID}`. This method lists all
-    ///   organization-level [custom roles](/iam/docs/understanding-custom-roles).
+    ///   organization-level [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
     ///   Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles`
     ///
@@ -7630,7 +8086,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7855,7 +8311,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7891,26 +8347,30 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `name` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`roles`](/iam/reference/rest/v1/roles),
-    /// [`projects`](/iam/reference/rest/v1/projects.roles), or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `name` value format is described below:
+    /// [`roles`](https://cloud.google.com/iam/reference/rest/v1/roles),
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles),
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `name` value format is described below:
     ///
-    /// * [`roles.get()`](/iam/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
+    /// * [`roles.get()`](https://cloud.google.com/iam/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
     ///   This method returns results from all
-    ///   [predefined roles](/iam/docs/understanding-roles#predefined_roles) in
-    ///   Cloud IAM. Example request URL:
+    ///   [predefined
+    ///   roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+    ///   in Cloud IAM. Example request URL:
     ///   `https://iam.googleapis.com/v1/roles/{ROLE_NAME}`
     ///
-    /// * [`projects.roles.get()`](/iam/reference/rest/v1/projects.roles/get):
+    /// * [`projects.roles.get()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/get):
     ///   `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
-    ///   [custom roles](/iam/docs/understanding-custom-roles) that have been
-    ///   created at the project level. Example request URL:
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+    ///   have been created at the project level. Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
-    /// * [`organizations.roles.get()`](/iam/reference/rest/v1/organizations.roles/get):
+    /// * [`organizations.roles.get()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/get):
     ///   `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-    ///   returns only [custom roles](/iam/docs/understanding-custom-roles) that
+    ///   returns only [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
     ///   have been created at the organization level. Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
@@ -8076,7 +8536,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8114,20 +8574,23 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `parent` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`projects`](/iam/reference/rest/v1/projects.roles) or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `parent` value format is described below:
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `parent` value format is described below:
     ///
-    /// * [`projects.roles.create()`](/iam/reference/rest/v1/projects.roles/create):
+    /// * [`projects.roles.create()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/create):
     ///   `projects/{PROJECT_ID}`. This method creates project-level
-    ///   [custom roles](/iam/docs/understanding-custom-roles).
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
     ///   Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles`
     ///
-    /// * [`organizations.roles.create()`](/iam/reference/rest/v1/organizations.roles/create):
+    /// * [`organizations.roles.create()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/create):
     ///   `organizations/{ORGANIZATION_ID}`. This method creates organization-level
-    ///   [custom roles](/iam/docs/understanding-custom-roles). Example request
-    ///   URL:
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
+    ///   Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles`
     ///
     /// Note: Wildcard (*) values are invalid; you must specify a complete project
@@ -8383,7 +8846,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8421,19 +8884,22 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `name` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`projects`](/iam/reference/rest/v1/projects.roles) or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `name` value format is described below:
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `name` value format is described below:
     ///
-    /// * [`projects.roles.patch()`](/iam/reference/rest/v1/projects.roles/patch):
+    /// * [`projects.roles.patch()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/patch):
     ///   `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
-    ///   [custom roles](/iam/docs/understanding-custom-roles) that have been
-    ///   created at the project level. Example request URL:
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+    ///   have been created at the project level. Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
-    /// * [`organizations.roles.patch()`](/iam/reference/rest/v1/organizations.roles/patch):
+    /// * [`organizations.roles.patch()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/patch):
     ///   `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-    ///   updates only [custom roles](/iam/docs/understanding-custom-roles) that
+    ///   updates only [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
     ///   have been created at the organization level. Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
@@ -8695,7 +9161,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8732,19 +9198,22 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `name` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`projects`](/iam/reference/rest/v1/projects.roles) or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `name` value format is described below:
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `name` value format is described below:
     ///
-    /// * [`projects.roles.delete()`](/iam/reference/rest/v1/projects.roles/delete):
+    /// * [`projects.roles.delete()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/delete):
     ///   `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only
-    ///   [custom roles](/iam/docs/understanding-custom-roles) that have been
-    ///   created at the project level. Example request URL:
+    ///   [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+    ///   have been created at the project level. Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
-    /// * [`organizations.roles.delete()`](/iam/reference/rest/v1/organizations.roles/delete):
+    /// * [`organizations.roles.delete()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/delete):
     ///   `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-    ///   deletes only [custom roles](/iam/docs/understanding-custom-roles) that
+    ///   deletes only [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
     ///   have been created at the organization level. Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
@@ -8949,7 +9418,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8986,19 +9455,22 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// <summary>
     /// The `name` parameter's value depends on the target resource for the
     /// request, namely
-    /// [`projects`](/iam/reference/rest/v1/projects.roles) or
-    /// [`organizations`](/iam/reference/rest/v1/organizations.roles). Each
-    /// resource type's `name` value format is described below:
+    /// [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+    /// or
+    /// [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+    /// Each resource type's `name` value format is described below:
     ///
-    /// * [`projects.roles.undelete()`](/iam/reference/rest/v1/projects.roles/undelete):
+    /// * [`projects.roles.undelete()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/undelete):
     ///   `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes
-    ///   only [custom roles](/iam/docs/understanding-custom-roles) that have been
-    ///   created at the project level. Example request URL:
+    ///   only [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+    ///   have been created at the project level. Example request URL:
     ///   `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
-    /// * [`organizations.roles.undelete()`](/iam/reference/rest/v1/organizations.roles/undelete):
+    /// * [`organizations.roles.undelete()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/undelete):
     ///   `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-    ///   undeletes only [custom roles](/iam/docs/understanding-custom-roles) that
+    ///   undeletes only [custom
+    ///   roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
     ///   have been created at the organization level. Example request URL:
     ///   `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
     ///
@@ -9203,7 +9675,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9691,7 +10163,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// </summary>
       public enum CustomRolesSupportLevel {
         /// <summary>
-        /// Permission is fully supported for custom role use.
+        /// Default state. Permission is fully supported for custom role use.
         /// </summary>
         [pbr::OriginalName("SUPPORTED")] Supported = 0,
         /// <summary>
@@ -9726,7 +10198,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10009,7 +10481,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10234,7 +10706,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10434,7 +10906,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10822,7 +11294,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11108,7 +11580,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11536,7 +12008,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         /// This includes the following common scenarios:
         ///
         /// - Unsatisfiable condition: Expired timestamp in date/time condition.
-        /// - Ineffective condition: Condition on a &lt;member, role> pair which is
+        /// - Ineffective condition: Condition on a &lt;principal, role> pair which is
         ///   granted unconditionally in another binding of the same policy.
         /// </summary>
         [pbr::OriginalName("WARNING")] Warning = 2,
@@ -11582,7 +12054,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.Cloud.Iam.Admin.V1.IamReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1521,6 +1521,7 @@ namespace Google.Cloud.Container.V1.Tests
                 GcfsConfig = new GcfsConfig(),
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
+                LoggingConfig = new NodePoolLoggingConfig(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1591,6 +1592,7 @@ namespace Google.Cloud.Container.V1.Tests
                 GcfsConfig = new GcfsConfig(),
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
+                LoggingConfig = new NodePoolLoggingConfig(),
             };
             Operation expectedResponse = new Operation
             {

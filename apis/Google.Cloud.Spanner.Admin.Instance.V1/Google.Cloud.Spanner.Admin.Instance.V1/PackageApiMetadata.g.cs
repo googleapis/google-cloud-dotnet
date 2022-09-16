@@ -29,6 +29,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return CommonReflection.Descriptor;
             yield return SpannerInstanceAdminReflection.Descriptor;
         }
     }

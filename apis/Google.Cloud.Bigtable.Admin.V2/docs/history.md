@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2022-09-15
+
+### New features
+
+- Publish CBT deletion_protection field in Table, UpdateTableRequest, and UpdateTable API ([commit 03206ec](https://github.com/googleapis/google-cloud-dotnet/commit/03206ec644621286273ef0833573cd14b5dd0321))
+
 ## Version 3.2.0, released 2022-07-27
 
 ### New features

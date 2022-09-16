@@ -731,11 +731,11 @@
       "protoPath": "google/cloud/bigquery/storage/v1",
       "productName": "Google BigQuery Storage",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/storage/",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Storage API.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Grpc.Core": "2.46.3"
       },
       "tags": [
@@ -750,7 +750,7 @@
       "protoPath": "google/bigtable/admin/v2",
       "productName": "Google Cloud Bigtable Administration",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
@@ -758,14 +758,14 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Bigtable.Common.V2": "3.0.0",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.0.0"
+        "Google.Api.Gax.Grpc.Testing": "4.1.1"
       },
       "shortName": "bigtableadmin",
       "serviceConfigFile": "bigtableadmin_v2.yaml"
@@ -1014,7 +1014,7 @@
     },
     {
       "id": "Google.Cloud.Compute.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "regapic",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",
@@ -1023,7 +1023,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
@@ -1034,7 +1034,7 @@
     },
     {
       "id": "Google.Cloud.ContactCenterInsights.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
@@ -1045,7 +1045,7 @@
         "feedback"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -1467,7 +1467,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "4.1.0",
+      "version": "4.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API (v2).",
       "tags": [
@@ -1475,7 +1475,7 @@
         "iot"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
@@ -2981,7 +2981,7 @@
     },
     {
       "id": "Google.Cloud.RecommendationEngine.V1Beta1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Recommendations AI",
       "productUrl": "https://cloud.google.com/recommendations",
@@ -3276,11 +3276,11 @@
       "protoPath": "google/cloud/securitycenter/v1",
       "productName": "Google Cloud Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
@@ -3614,7 +3614,7 @@
     },
     {
       "id": "Google.Cloud.StorageTransfer.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Storage Transfer",
       "productUrl": "https://cloud.google.com/storage-transfer-service",
@@ -3626,7 +3626,7 @@
         "gcs"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -3637,7 +3637,7 @@
     },
     {
       "id": "Google.Cloud.Talent.V4",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
@@ -3647,7 +3647,7 @@
         "Jobs"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -3799,11 +3799,11 @@
       "protoPath": "google/devtools/cloudtrace/v2",
       "productName": "Google Cloud Trace",
       "productUrl": "https://cloud.google.com/trace/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Trace V2 API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Grpc.Core": "2.46.3"
       },
       "tags": [
@@ -3964,7 +3964,7 @@
       "protoPath": "google/cloud/vision/v1",
       "productName": "Google Cloud Vision",
       "productUrl": "https://cloud.google.com/vision",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
@@ -3972,7 +3972,7 @@
         "Vision"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -4047,7 +4047,7 @@
     },
     {
       "id": "Google.Cloud.WebSecurityScanner.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Web Security Scanner",
       "productUrl": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview",
@@ -4057,7 +4057,7 @@
         "scanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
