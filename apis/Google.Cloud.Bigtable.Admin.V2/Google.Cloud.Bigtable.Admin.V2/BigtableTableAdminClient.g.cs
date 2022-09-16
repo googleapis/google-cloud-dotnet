@@ -1480,8 +1480,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="table">
         /// Required. The table to update.
         /// The table's `name` field is used to identify the table to update.
-        /// Format:
-        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
@@ -1508,8 +1506,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="table">
         /// Required. The table to update.
         /// The table's `name` field is used to identify the table to update.
-        /// Format:
-        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
@@ -1536,8 +1532,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="table">
         /// Required. The table to update.
         /// The table's `name` field is used to identify the table to update.
-        /// Format:
-        /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
