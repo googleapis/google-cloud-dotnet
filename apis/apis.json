@@ -3248,6 +3248,24 @@
       "serviceConfigFile": "privateca_v1beta1.yaml"
     },
     {
+      "id": "Google.Cloud.Security.PublicCA.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Public Certificate Authority",
+      "productUrl": "cloud.google.com/certificate-manager/docs/public-ca/",
+      "description": "Recommended Google client library to access the Public Certificate Authority API, which may be used to create and manage ACME external account binding keys associated with Google Trust Services' publicly trusted certificate authority.",
+      "tags": [
+        "security",
+        "certificates",
+        "public-ca"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/security/publicca/v1beta1",
+      "shortName": "publicca",
+      "serviceConfigFile": "publicca_v1beta1.yaml"
+    },
+    {
       "id": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/securitycenter/settings/v1beta1",
