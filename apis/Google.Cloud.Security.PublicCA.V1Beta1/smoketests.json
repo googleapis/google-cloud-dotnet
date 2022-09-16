@@ -1,0 +1,10 @@
+[
+  {
+    "method": "CreateExternalAccountKey",
+    "client": "PublicCertificateAuthorityServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global",
+      "externalAccountKey": {}
+    }
+  }
+]
