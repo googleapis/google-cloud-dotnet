@@ -1,5 +1,14 @@
 # Version history
 
+## Version 4.1.0, released 2022-09-20
+
+### New features
+
+- Add custom instance config operations ([commit 58cadb7](https://github.com/googleapis/google-cloud-dotnet/commit/58cadb75ce7df48e18fc7c26e9dbe45e0f2eb128))
+- Adds auto-generated CL for googleapis for jsonb ([commit b8b8752](https://github.com/googleapis/google-cloud-dotnet/commit/b8b875219dfa03dcdee429156698194764bd6026))
+- Add ListDatabaseRoles API to support role based access control ([commit 98e2aae](https://github.com/googleapis/google-cloud-dotnet/commit/98e2aae9c7fc7b8ce08ff38597baf2f4ef0d4dc3))
+- Adding two new fields for Instance create_time and update_time ([commit d002223](https://github.com/googleapis/google-cloud-dotnet/commit/d00222363fbcf7bdaaa6c35b218a9757fd1ef603))
+
 ## Version 4.0.0, released 2022-06-22
 
 First GA release of v4.0. Please see release notes for 4.0.0-beta01 and 4.0.0-beta02 for details of breaking changes since v3.x
