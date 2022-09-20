@@ -438,6 +438,7 @@ namespace Google.Cloud.Language.V1.Tests
             ClassifyTextRequest request = new ClassifyTextRequest
             {
                 Document = new Document(),
+                ClassificationModelOptions = new ClassificationModelOptions(),
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
@@ -460,6 +461,7 @@ namespace Google.Cloud.Language.V1.Tests
             ClassifyTextRequest request = new ClassifyTextRequest
             {
                 Document = new Document(),
+                ClassificationModelOptions = new ClassificationModelOptions(),
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
