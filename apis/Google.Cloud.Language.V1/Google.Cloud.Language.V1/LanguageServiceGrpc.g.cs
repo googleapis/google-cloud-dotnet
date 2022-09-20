@@ -17,7 +17,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-//
 #pragma warning disable 0414, 1591, 8981
 #region Designer generated code
 
@@ -175,8 +174,10 @@ namespace Google.Cloud.Language.V1 {
       }
 
       /// <summary>
-      /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-      /// sentiment associated with each entity and its mentions.
+      /// Finds entities, similar to
+      /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+      /// in the text and analyzes sentiment associated with each entity and its
+      /// mentions.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -360,8 +361,10 @@ namespace Google.Cloud.Language.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeEntities, null, options, request);
       }
       /// <summary>
-      /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-      /// sentiment associated with each entity and its mentions.
+      /// Finds entities, similar to
+      /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+      /// in the text and analyzes sentiment associated with each entity and its
+      /// mentions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -374,8 +377,10 @@ namespace Google.Cloud.Language.V1 {
         return AnalyzeEntitySentiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-      /// sentiment associated with each entity and its mentions.
+      /// Finds entities, similar to
+      /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+      /// in the text and analyzes sentiment associated with each entity and its
+      /// mentions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -386,8 +391,10 @@ namespace Google.Cloud.Language.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeEntitySentiment, null, options, request);
       }
       /// <summary>
-      /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-      /// sentiment associated with each entity and its mentions.
+      /// Finds entities, similar to
+      /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+      /// in the text and analyzes sentiment associated with each entity and its
+      /// mentions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -400,8 +407,10 @@ namespace Google.Cloud.Language.V1 {
         return AnalyzeEntitySentimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-      /// sentiment associated with each entity and its mentions.
+      /// Finds entities, similar to
+      /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+      /// in the text and analyzes sentiment associated with each entity and its
+      /// mentions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

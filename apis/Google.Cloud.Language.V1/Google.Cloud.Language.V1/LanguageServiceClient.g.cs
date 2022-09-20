@@ -357,7 +357,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate sentence offsets.
@@ -375,7 +375,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate sentence offsets.
@@ -393,7 +393,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate sentence offsets.
@@ -407,7 +407,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -421,7 +421,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -435,7 +435,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -481,7 +481,7 @@ namespace Google.Cloud.Language.V1
         /// other properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -501,7 +501,7 @@ namespace Google.Cloud.Language.V1
         /// other properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -521,7 +521,7 @@ namespace Google.Cloud.Language.V1
         /// other properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -532,8 +532,10 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitiesAsync(document, encodingType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,8 +544,10 @@ namespace Google.Cloud.Language.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,8 +556,10 @@ namespace Google.Cloud.Language.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -562,11 +568,13 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitySentimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -581,11 +589,13 @@ namespace Google.Cloud.Language.V1
             }, callSettings);
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -600,11 +610,13 @@ namespace Google.Cloud.Language.V1
             }, callSettings);
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -653,7 +665,7 @@ namespace Google.Cloud.Language.V1
         /// properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -673,7 +685,7 @@ namespace Google.Cloud.Language.V1
         /// properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -693,7 +705,7 @@ namespace Google.Cloud.Language.V1
         /// properties.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -734,7 +746,7 @@ namespace Google.Cloud.Language.V1
         /// Classifies a document into categories.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -748,7 +760,7 @@ namespace Google.Cloud.Language.V1
         /// Classifies a document into categories.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -762,7 +774,7 @@ namespace Google.Cloud.Language.V1
         /// Classifies a document into categories.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -804,10 +816,10 @@ namespace Google.Cloud.Language.V1
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="features">
-        /// The enabled features.
+        /// Required. The enabled features.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -827,10 +839,10 @@ namespace Google.Cloud.Language.V1
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="features">
-        /// The enabled features.
+        /// Required. The enabled features.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -850,10 +862,10 @@ namespace Google.Cloud.Language.V1
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
         /// <param name="document">
-        /// Input document.
+        /// Required. Input document.
         /// </param>
         /// <param name="features">
-        /// The enabled features.
+        /// Required. The enabled features.
         /// </param>
         /// <param name="encodingType">
         /// The encoding type used by the API to calculate offsets.
@@ -999,8 +1011,10 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1012,8 +1026,10 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

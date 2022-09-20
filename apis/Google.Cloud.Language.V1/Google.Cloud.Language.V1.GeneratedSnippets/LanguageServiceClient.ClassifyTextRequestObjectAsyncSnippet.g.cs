@@ -35,6 +35,7 @@ namespace Google.Cloud.Language.V1.Snippets
             ClassifyTextRequest request = new ClassifyTextRequest
             {
                 Document = new Document(),
+                ClassificationModelOptions = new ClassificationModelOptions(),
             };
             // Make the request
             ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(request);
