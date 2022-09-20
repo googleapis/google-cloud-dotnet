@@ -129,85 +129,99 @@ namespace Google.Cloud.Language.V1 {
             "EgoKBlBST1BFUhABEgoKBkNPTU1PThACIjEKCFRleHRTcGFuEg8KB2NvbnRl",
             "bnQYASABKAkSFAoMYmVnaW5fb2Zmc2V0GAIgASgFIjoKFkNsYXNzaWZpY2F0",
             "aW9uQ2F0ZWdvcnkSDAoEbmFtZRgBIAEoCRISCgpjb25maWRlbmNlGAIgASgC",
-            "IpMBChdBbmFseXplU2VudGltZW50UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEo",
-            "CzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EECEj0K",
-            "DWVuY29kaW5nX3R5cGUYAiABKA4yJi5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
-            "djEuRW5jb2RpbmdUeXBlIqQBChhBbmFseXplU2VudGltZW50UmVzcG9uc2US",
-            "PwoSZG9jdW1lbnRfc2VudGltZW50GAEgASgLMiMuZ29vZ2xlLmNsb3VkLmxh",
-            "bmd1YWdlLnYxLlNlbnRpbWVudBIQCghsYW5ndWFnZRgCIAEoCRI1CglzZW50",
-            "ZW5jZXMYAyADKAsyIi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuU2VudGVu",
-            "Y2UimQEKHUFuYWx5emVFbnRpdHlTZW50aW1lbnRSZXF1ZXN0EjkKCGRvY3Vt",
-            "ZW50GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkRvY3VtZW50",
-            "QgPgQQISPQoNZW5jb2RpbmdfdHlwZRgCIAEoDjImLmdvb2dsZS5jbG91ZC5s",
-            "YW5ndWFnZS52MS5FbmNvZGluZ1R5cGUiZgoeQW5hbHl6ZUVudGl0eVNlbnRp",
-            "bWVudFJlc3BvbnNlEjIKCGVudGl0aWVzGAEgAygLMiAuZ29vZ2xlLmNsb3Vk",
-            "Lmxhbmd1YWdlLnYxLkVudGl0eRIQCghsYW5ndWFnZRgCIAEoCSKSAQoWQW5h",
-            "bHl6ZUVudGl0aWVzUmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2ds",
-            "ZS5jbG91ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EECEj0KDWVuY29kaW5n",
-            "X3R5cGUYAiABKA4yJi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuRW5jb2Rp",
-            "bmdUeXBlIl8KF0FuYWx5emVFbnRpdGllc1Jlc3BvbnNlEjIKCGVudGl0aWVz",
-            "GAEgAygLMiAuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkVudGl0eRIQCghs",
-            "YW5ndWFnZRgCIAEoCSKQAQoUQW5hbHl6ZVN5bnRheFJlcXVlc3QSOQoIZG9j",
-            "dW1lbnQYASABKAsyIi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuRG9jdW1l",
-            "bnRCA+BBAhI9Cg1lbmNvZGluZ190eXBlGAIgASgOMiYuZ29vZ2xlLmNsb3Vk",
-            "Lmxhbmd1YWdlLnYxLkVuY29kaW5nVHlwZSKRAQoVQW5hbHl6ZVN5bnRheFJl",
-            "c3BvbnNlEjUKCXNlbnRlbmNlcxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5n",
-            "dWFnZS52MS5TZW50ZW5jZRIvCgZ0b2tlbnMYAiADKAsyHy5nb29nbGUuY2xv",
-            "dWQubGFuZ3VhZ2UudjEuVG9rZW4SEAoIbGFuZ3VhZ2UYAyABKAkiUAoTQ2xh",
-            "c3NpZnlUZXh0UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5j",
-            "bG91ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EECIlwKFENsYXNzaWZ5VGV4",
-            "dFJlc3BvbnNlEkQKCmNhdGVnb3JpZXMYASADKAsyMC5nb29nbGUuY2xvdWQu",
-            "bGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25DYXRlZ29yeSL6AgoTQW5ub3Rh",
-            "dGVUZXh0UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5jbG91",
-            "ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EECEk0KCGZlYXR1cmVzGAIgASgL",
-            "MjYuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFubm90YXRlVGV4dFJlcXVl",
-            "c3QuRmVhdHVyZXNCA+BBAhI9Cg1lbmNvZGluZ190eXBlGAMgASgOMiYuZ29v",
-            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLkVuY29kaW5nVHlwZRqZAQoIRmVhdHVy",
-            "ZXMSFgoOZXh0cmFjdF9zeW50YXgYASABKAgSGAoQZXh0cmFjdF9lbnRpdGll",
-            "cxgCIAEoCBIiChpleHRyYWN0X2RvY3VtZW50X3NlbnRpbWVudBgDIAEoCBIg",
-            "ChhleHRyYWN0X2VudGl0eV9zZW50aW1lbnQYBCABKAgSFQoNY2xhc3NpZnlf",
-            "dGV4dBgGIAEoCCLLAgoUQW5ub3RhdGVUZXh0UmVzcG9uc2USNQoJc2VudGVu",
-            "Y2VzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLlNlbnRlbmNl",
-            "Ei8KBnRva2VucxgCIAMoCzIfLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5U",
-            "b2tlbhIyCghlbnRpdGllcxgDIAMoCzIgLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
-            "ZS52MS5FbnRpdHkSPwoSZG9jdW1lbnRfc2VudGltZW50GAQgASgLMiMuZ29v",
-            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLlNlbnRpbWVudBIQCghsYW5ndWFnZRgF",
-            "IAEoCRJECgpjYXRlZ29yaWVzGAYgAygLMjAuZ29vZ2xlLmNsb3VkLmxhbmd1",
-            "YWdlLnYxLkNsYXNzaWZpY2F0aW9uQ2F0ZWdvcnkqOAoMRW5jb2RpbmdUeXBl",
-            "EggKBE5PTkUQABIICgRVVEY4EAESCQoFVVRGMTYQAhIJCgVVVEYzMhADMrAK",
-            "Cg9MYW5ndWFnZVNlcnZpY2USyAEKEEFuYWx5emVTZW50aW1lbnQSMS5nb29n",
-            "bGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVNlbnRpbWVudFJlcXVlc3Qa",
-            "Mi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVNlbnRpbWVudFJl",
-            "c3BvbnNlIk2C0+STAiMiHi92MS9kb2N1bWVudHM6YW5hbHl6ZVNlbnRpbWVu",
-            "dDoBKtpBFmRvY3VtZW50LGVuY29kaW5nX3R5cGXaQQhkb2N1bWVudBLEAQoP",
-            "QW5hbHl6ZUVudGl0aWVzEjAuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFu",
-            "YWx5emVFbnRpdGllc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
-            "djEuQW5hbHl6ZUVudGl0aWVzUmVzcG9uc2UiTILT5JMCIiIdL3YxL2RvY3Vt",
-            "ZW50czphbmFseXplRW50aXRpZXM6ASraQRZkb2N1bWVudCxlbmNvZGluZ190",
-            "eXBl2kEIZG9jdW1lbnQS4AEKFkFuYWx5emVFbnRpdHlTZW50aW1lbnQSNy5n",
-            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZUVudGl0eVNlbnRpbWVu",
-            "dFJlcXVlc3QaOC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZUVu",
-            "dGl0eVNlbnRpbWVudFJlc3BvbnNlIlOC0+STAikiJC92MS9kb2N1bWVudHM6",
-            "YW5hbHl6ZUVudGl0eVNlbnRpbWVudDoBKtpBFmRvY3VtZW50LGVuY29kaW5n",
-            "X3R5cGXaQQhkb2N1bWVudBK8AQoNQW5hbHl6ZVN5bnRheBIuLmdvb2dsZS5j",
-            "bG91ZC5sYW5ndWFnZS52MS5BbmFseXplU3ludGF4UmVxdWVzdBovLmdvb2ds",
-            "ZS5jbG91ZC5sYW5ndWFnZS52MS5BbmFseXplU3ludGF4UmVzcG9uc2UiSoLT",
-            "5JMCICIbL3YxL2RvY3VtZW50czphbmFseXplU3ludGF4OgEq2kEWZG9jdW1l",
-            "bnQsZW5jb2RpbmdfdHlwZdpBCGRvY3VtZW50Ep8BCgxDbGFzc2lmeVRleHQS",
-            "LS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZnlUZXh0UmVxdWVz",
-            "dBouLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5DbGFzc2lmeVRleHRSZXNw",
-            "b25zZSIwgtPkkwIfIhovdjEvZG9jdW1lbnRzOmNsYXNzaWZ5VGV4dDoBKtpB",
-            "CGRvY3VtZW50EsoBCgxBbm5vdGF0ZVRleHQSLS5nb29nbGUuY2xvdWQubGFu",
-            "Z3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5s",
-            "YW5ndWFnZS52MS5Bbm5vdGF0ZVRleHRSZXNwb25zZSJbgtPkkwIfIhovdjEv",
-            "ZG9jdW1lbnRzOmFubm90YXRlVGV4dDoBKtpBH2RvY3VtZW50LGZlYXR1cmVz",
-            "LGVuY29kaW5nX3R5cGXaQRFkb2N1bWVudCxmZWF0dXJlcxp6ykEXbGFuZ3Vh",
-            "Z2UuZ29vZ2xlYXBpcy5jb23SQV1odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLWxhbmd1YWdlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CeAocY29tLmdvb2dsZS5jbG91ZC5s",
-            "YW5ndWFnZS52MUIUTGFuZ3VhZ2VTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9sYW5ndWFnZS92",
-            "MTtsYW5ndWFnZWIGcHJvdG8z"));
+            "IrgDChpDbGFzc2lmaWNhdGlvbk1vZGVsT3B0aW9ucxJQCgh2MV9tb2RlbBgB",
+            "IAEoCzI8Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5DbGFzc2lmaWNhdGlv",
+            "bk1vZGVsT3B0aW9ucy5WMU1vZGVsSAASUAoIdjJfbW9kZWwYAiABKAsyPC5n",
+            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25Nb2RlbE9w",
+            "dGlvbnMuVjJNb2RlbEgAGgkKB1YxTW9kZWwa3AEKB1YyTW9kZWwSeQoaY29u",
+            "dGVudF9jYXRlZ29yaWVzX3ZlcnNpb24YASABKA4yVS5nb29nbGUuY2xvdWQu",
+            "bGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25Nb2RlbE9wdGlvbnMuVjJNb2Rl",
+            "bC5Db250ZW50Q2F0ZWdvcmllc1ZlcnNpb24iVgoYQ29udGVudENhdGVnb3Jp",
+            "ZXNWZXJzaW9uEioKJkNPTlRFTlRfQ0FURUdPUklFU19WRVJTSU9OX1VOU1BF",
+            "Q0lGSUVEEAASBgoCVjEQARIGCgJWMhACQgwKCm1vZGVsX3R5cGUikwEKF0Fu",
+            "YWx5emVTZW50aW1lbnRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMiIuZ29v",
+            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLkRvY3VtZW50QgPgQQISPQoNZW5jb2Rp",
+            "bmdfdHlwZRgCIAEoDjImLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5FbmNv",
+            "ZGluZ1R5cGUipAEKGEFuYWx5emVTZW50aW1lbnRSZXNwb25zZRI/ChJkb2N1",
+            "bWVudF9zZW50aW1lbnQYASABKAsyIy5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
+            "djEuU2VudGltZW50EhAKCGxhbmd1YWdlGAIgASgJEjUKCXNlbnRlbmNlcxgD",
+            "IAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50ZW5jZSKZAQod",
+            "QW5hbHl6ZUVudGl0eVNlbnRpbWVudFJlcXVlc3QSOQoIZG9jdW1lbnQYASAB",
+            "KAsyIi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuRG9jdW1lbnRCA+BBAhI9",
+            "Cg1lbmNvZGluZ190eXBlGAIgASgOMiYuZ29vZ2xlLmNsb3VkLmxhbmd1YWdl",
+            "LnYxLkVuY29kaW5nVHlwZSJmCh5BbmFseXplRW50aXR5U2VudGltZW50UmVz",
+            "cG9uc2USMgoIZW50aXRpZXMYASADKAsyIC5nb29nbGUuY2xvdWQubGFuZ3Vh",
+            "Z2UudjEuRW50aXR5EhAKCGxhbmd1YWdlGAIgASgJIpIBChZBbmFseXplRW50",
+            "aXRpZXNSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMiIuZ29vZ2xlLmNsb3Vk",
+            "Lmxhbmd1YWdlLnYxLkRvY3VtZW50QgPgQQISPQoNZW5jb2RpbmdfdHlwZRgC",
+            "IAEoDjImLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5FbmNvZGluZ1R5cGUi",
+            "XwoXQW5hbHl6ZUVudGl0aWVzUmVzcG9uc2USMgoIZW50aXRpZXMYASADKAsy",
+            "IC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuRW50aXR5EhAKCGxhbmd1YWdl",
+            "GAIgASgJIpABChRBbmFseXplU3ludGF4UmVxdWVzdBI5Cghkb2N1bWVudBgB",
+            "IAEoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EEC",
+            "Ej0KDWVuY29kaW5nX3R5cGUYAiABKA4yJi5nb29nbGUuY2xvdWQubGFuZ3Vh",
+            "Z2UudjEuRW5jb2RpbmdUeXBlIpEBChVBbmFseXplU3ludGF4UmVzcG9uc2US",
+            "NQoJc2VudGVuY2VzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYx",
+            "LlNlbnRlbmNlEi8KBnRva2VucxgCIAMoCzIfLmdvb2dsZS5jbG91ZC5sYW5n",
+            "dWFnZS52MS5Ub2tlbhIQCghsYW5ndWFnZRgDIAEoCSKsAQoTQ2xhc3NpZnlU",
+            "ZXh0UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5jbG91ZC5s",
+            "YW5ndWFnZS52MS5Eb2N1bWVudEID4EECEloKHGNsYXNzaWZpY2F0aW9uX21v",
+            "ZGVsX29wdGlvbnMYAyABKAsyNC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEu",
+            "Q2xhc3NpZmljYXRpb25Nb2RlbE9wdGlvbnMiXAoUQ2xhc3NpZnlUZXh0UmVz",
+            "cG9uc2USRAoKY2F0ZWdvcmllcxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5sYW5n",
+            "dWFnZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5ItYDChNBbm5vdGF0ZVRl",
+            "eHRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYxLkRvY3VtZW50QgPgQQISTQoIZmVhdHVyZXMYAiABKAsyNi5n",
+            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVxdWVzdC5G",
+            "ZWF0dXJlc0ID4EECEj0KDWVuY29kaW5nX3R5cGUYAyABKA4yJi5nb29nbGUu",
+            "Y2xvdWQubGFuZ3VhZ2UudjEuRW5jb2RpbmdUeXBlGvUBCghGZWF0dXJlcxIW",
+            "Cg5leHRyYWN0X3N5bnRheBgBIAEoCBIYChBleHRyYWN0X2VudGl0aWVzGAIg",
+            "ASgIEiIKGmV4dHJhY3RfZG9jdW1lbnRfc2VudGltZW50GAMgASgIEiAKGGV4",
+            "dHJhY3RfZW50aXR5X3NlbnRpbWVudBgEIAEoCBIVCg1jbGFzc2lmeV90ZXh0",
+            "GAYgASgIEloKHGNsYXNzaWZpY2F0aW9uX21vZGVsX29wdGlvbnMYCiABKAsy",
+            "NC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25Nb2Rl",
+            "bE9wdGlvbnMiywIKFEFubm90YXRlVGV4dFJlc3BvbnNlEjUKCXNlbnRlbmNl",
+            "cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50ZW5jZRIv",
+            "CgZ0b2tlbnMYAiADKAsyHy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuVG9r",
+            "ZW4SMgoIZW50aXRpZXMYAyADKAsyIC5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
+            "djEuRW50aXR5Ej8KEmRvY3VtZW50X3NlbnRpbWVudBgEIAEoCzIjLmdvb2ds",
+            "ZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50aW1lbnQSEAoIbGFuZ3VhZ2UYBSAB",
+            "KAkSRAoKY2F0ZWdvcmllcxgGIAMoCzIwLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
+            "ZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5KjgKDEVuY29kaW5nVHlwZRII",
+            "CgROT05FEAASCAoEVVRGOBABEgkKBVVURjE2EAISCQoFVVRGMzIQAzKwCgoP",
+            "TGFuZ3VhZ2VTZXJ2aWNlEsgBChBBbmFseXplU2VudGltZW50EjEuZ29vZ2xl",
+            "LmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVTZW50aW1lbnRSZXF1ZXN0GjIu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVTZW50aW1lbnRSZXNw",
+            "b25zZSJNgtPkkwIjIh4vdjEvZG9jdW1lbnRzOmFuYWx5emVTZW50aW1lbnQ6",
+            "ASraQRZkb2N1bWVudCxlbmNvZGluZ190eXBl2kEIZG9jdW1lbnQSxAEKD0Fu",
+            "YWx5emVFbnRpdGllcxIwLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5BbmFs",
+            "eXplRW50aXRpZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYx",
+            "LkFuYWx5emVFbnRpdGllc1Jlc3BvbnNlIkyC0+STAiIiHS92MS9kb2N1bWVu",
+            "dHM6YW5hbHl6ZUVudGl0aWVzOgEq2kEWZG9jdW1lbnQsZW5jb2RpbmdfdHlw",
+            "ZdpBCGRvY3VtZW50EuABChZBbmFseXplRW50aXR5U2VudGltZW50EjcuZ29v",
+            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVFbnRpdHlTZW50aW1lbnRS",
+            "ZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVFbnRp",
+            "dHlTZW50aW1lbnRSZXNwb25zZSJTgtPkkwIpIiQvdjEvZG9jdW1lbnRzOmFu",
+            "YWx5emVFbnRpdHlTZW50aW1lbnQ6ASraQRZkb2N1bWVudCxlbmNvZGluZ190",
+            "eXBl2kEIZG9jdW1lbnQSvAEKDUFuYWx5emVTeW50YXgSLi5nb29nbGUuY2xv",
+            "dWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVN5bnRheFJlcXVlc3QaLy5nb29nbGUu",
+            "Y2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVN5bnRheFJlc3BvbnNlIkqC0+ST",
+            "AiAiGy92MS9kb2N1bWVudHM6YW5hbHl6ZVN5bnRheDoBKtpBFmRvY3VtZW50",
+            "LGVuY29kaW5nX3R5cGXaQQhkb2N1bWVudBKfAQoMQ2xhc3NpZnlUZXh0Ei0u",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkNsYXNzaWZ5VGV4dFJlcXVlc3Qa",
+            "Li5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZnlUZXh0UmVzcG9u",
+            "c2UiMILT5JMCHyIaL3YxL2RvY3VtZW50czpjbGFzc2lmeVRleHQ6ASraQQhk",
+            "b2N1bWVudBLKAQoMQW5ub3RhdGVUZXh0Ei0uZ29vZ2xlLmNsb3VkLmxhbmd1",
+            "YWdlLnYxLkFubm90YXRlVGV4dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVzcG9uc2UiW4LT5JMCHyIaL3YxL2Rv",
+            "Y3VtZW50czphbm5vdGF0ZVRleHQ6ASraQR9kb2N1bWVudCxmZWF0dXJlcyxl",
+            "bmNvZGluZ190eXBl2kERZG9jdW1lbnQsZmVhdHVyZXMaespBF2xhbmd1YWdl",
+            "Lmdvb2dsZWFwaXMuY29t0kFdaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1sYW5ndWFnZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQngKHGNvbS5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjFCFExhbmd1YWdlU2VydmljZVByb3RvUAFaQGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvbGFuZ3VhZ2UvdjE7",
+            "bGFuZ3VhZ2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -221,6 +235,8 @@ namespace Google.Cloud.Language.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.EntityMention), global::Google.Cloud.Language.V1.EntityMention.Parser, new[]{ "Text", "Type", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.EntityMention.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.TextSpan), global::Google.Cloud.Language.V1.TextSpan.Parser, new[]{ "Content", "BeginOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationCategory), global::Google.Cloud.Language.V1.ClassificationCategory.Parser, new[]{ "Name", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationModelOptions), global::Google.Cloud.Language.V1.ClassificationModelOptions.Parser, new[]{ "V1Model", "V2Model" }, new[]{ "ModelType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model), global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model), global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Parser, new[]{ "ContentCategoriesVersion" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest), global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentResponse), global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser, new[]{ "DocumentSentiment", "Language", "Sentences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
@@ -229,9 +245,9 @@ namespace Google.Cloud.Language.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse), global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser, new[]{ "Entities", "Language" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser, new[]{ "Sentences", "Tokens", "Language" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document", "ClassificationModelOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextResponse), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser, new[]{ "Categories" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText", "ClassificationModelOptions" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories" }, null, null, null, null)
           }));
     }
@@ -276,6 +292,7 @@ namespace Google.Cloud.Language.V1 {
 
   #region Messages
   /// <summary>
+  /// ################################################################ #
   ///
   /// Represents the input to API methods.
   /// </summary>
@@ -730,8 +747,8 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeSentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-    /// true, this field will contain the sentiment for the sentence.
+    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+    /// is set to true, this field will contain the sentiment for the sentence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1059,9 +1076,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-    /// true, this field will contain the aggregate sentiment expressed for this
-    /// entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
+    /// is set to true, this field will contain the aggregate sentiment expressed
+    /// for this entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1357,48 +1374,57 @@ namespace Google.Cloud.Language.V1 {
         /// </summary>
         [pbr::OriginalName("OTHER")] Other = 7,
         /// <summary>
-        /// Phone number&lt;br>&lt;br>
+        /// Phone number
+        ///
         /// The metadata lists the phone number, formatted according to local
-        /// convention, plus whichever additional elements appear in the text:&lt;ul>
-        /// &lt;li>&lt;code>number&lt;/code> &amp;ndash; the actual number, broken down into
-        /// sections as per local convention&lt;/li> &lt;li>&lt;code>national_prefix&lt;/code>
-        /// &amp;ndash; country code, if detected&lt;/li> &lt;li>&lt;code>area_code&lt;/code> &amp;ndash;
-        /// region or area code, if detected&lt;/li> &lt;li>&lt;code>extension&lt;/code> &amp;ndash;
-        /// phone extension (to be dialed after connection), if detected&lt;/li>&lt;/ul>
+        /// convention, plus whichever additional elements appear in the text:
+        ///
+        /// * `number` - the actual number, broken down into sections as per local
+        /// convention
+        /// * `national_prefix` - country code, if detected
+        /// * `area_code` - region or area code, if detected
+        /// * `extension` - phone extension (to be dialed after connection), if
+        /// detected
         /// </summary>
         [pbr::OriginalName("PHONE_NUMBER")] PhoneNumber = 9,
         /// <summary>
-        /// Address&lt;br>&lt;br>
+        /// Address
+        ///
         /// The metadata identifies the street number and locality plus whichever
-        /// additional elements appear in the text:&lt;ul>
-        /// &lt;li>&lt;code>street_number&lt;/code> &amp;ndash; street number&lt;/li>
-        /// &lt;li>&lt;code>locality&lt;/code> &amp;ndash; city or town&lt;/li>
-        /// &lt;li>&lt;code>street_name&lt;/code> &amp;ndash; street/route name, if detected&lt;/li>
-        /// &lt;li>&lt;code>postal_code&lt;/code> &amp;ndash; postal code, if detected&lt;/li>
-        /// &lt;li>&lt;code>country&lt;/code> &amp;ndash; country, if detected&lt;/li>
-        /// &lt;li>&lt;code>broad_region&lt;/code> &amp;ndash; administrative area, such as the
-        /// state, if detected&lt;/li> &lt;li>&lt;code>narrow_region&lt;/code> &amp;ndash; smaller
-        /// administrative area, such as county, if detected&lt;/li>
-        /// &lt;li>&lt;code>sublocality&lt;/code> &amp;ndash; used in Asian addresses to demark a
-        /// district within a city, if detected&lt;/li>&lt;/ul>
+        /// additional elements appear in the text:
+        ///
+        /// * `street_number` - street number
+        /// * `locality` - city or town
+        /// * `street_name` - street/route name, if detected
+        /// * `postal_code` - postal code, if detected
+        /// * `country` - country, if detected&lt;
+        /// * `broad_region` - administrative area, such as the state, if detected
+        /// * `narrow_region` - smaller administrative area, such as county, if
+        /// detected
+        /// * `sublocality` - used in Asian addresses to demark a district within a
+        /// city, if detected
         /// </summary>
         [pbr::OriginalName("ADDRESS")] Address = 10,
         /// <summary>
-        /// Date&lt;br>&lt;br>
-        /// The metadata identifies the components of the date:&lt;ul>
-        /// &lt;li>&lt;code>year&lt;/code> &amp;ndash; four digit year, if detected&lt;/li>
-        /// &lt;li>&lt;code>month&lt;/code> &amp;ndash; two digit month number, if detected&lt;/li>
-        /// &lt;li>&lt;code>day&lt;/code> &amp;ndash; two digit day number, if detected&lt;/li>&lt;/ul>
+        /// Date
+        ///
+        /// The metadata identifies the components of the date:
+        ///
+        /// * `year` - four digit year, if detected
+        /// * `month` - two digit month number, if detected
+        /// * `day` - two digit day number, if detected
         /// </summary>
         [pbr::OriginalName("DATE")] Date = 11,
         /// <summary>
-        /// Number&lt;br>&lt;br>
+        /// Number
+        ///
         /// The metadata is the number itself.
         /// </summary>
         [pbr::OriginalName("NUMBER")] Number = 12,
         /// <summary>
-        /// Price&lt;br>&lt;br>
-        /// The metadata identifies the &lt;code>value&lt;/code> and &lt;code>currency&lt;/code>.
+        /// Price
+        ///
+        /// The metadata identifies the `value` and `currency`.
         /// </summary>
         [pbr::OriginalName("PRICE")] Price = 13,
       }
@@ -3713,9 +3739,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-    /// true, this field will contain the sentiment expressed for this mention of
-    /// the entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
+    /// is set to true, this field will contain the sentiment expressed for this
+    /// mention of the entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4019,7 +4045,9 @@ namespace Google.Cloud.Language.V1 {
     private int beginOffset_;
     /// <summary>
     /// The API calculates the beginning offset of the content in the original
-    /// document according to the [EncodingType][google.cloud.language.v1.EncodingType] specified in the API request.
+    /// document according to the
+    /// [EncodingType][google.cloud.language.v1.EncodingType] specified in the API
+    /// request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4425,6 +4453,688 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
+  /// Model options available for classification requests.
+  /// </summary>
+  public sealed partial class ClassificationModelOptions : pb::IMessage<ClassificationModelOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ClassificationModelOptions> _parser = new pb::MessageParser<ClassificationModelOptions>(() => new ClassificationModelOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ClassificationModelOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClassificationModelOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClassificationModelOptions(ClassificationModelOptions other) : this() {
+      switch (other.ModelTypeCase) {
+        case ModelTypeOneofCase.V1Model:
+          V1Model = other.V1Model.Clone();
+          break;
+        case ModelTypeOneofCase.V2Model:
+          V2Model = other.V2Model.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClassificationModelOptions Clone() {
+      return new ClassificationModelOptions(this);
+    }
+
+    /// <summary>Field number for the "v1_model" field.</summary>
+    public const int V1ModelFieldNumber = 1;
+    /// <summary>
+    /// Setting this field will use the V1 model and V1 content categories
+    /// version. The V1 model is a legacy model; support for this will be
+    /// discontinued in the future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model V1Model {
+      get { return modelTypeCase_ == ModelTypeOneofCase.V1Model ? (global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model) modelType_ : null; }
+      set {
+        modelType_ = value;
+        modelTypeCase_ = value == null ? ModelTypeOneofCase.None : ModelTypeOneofCase.V1Model;
+      }
+    }
+
+    /// <summary>Field number for the "v2_model" field.</summary>
+    public const int V2ModelFieldNumber = 2;
+    /// <summary>
+    /// Setting this field will use the V2 model with the appropriate content
+    /// categories version. The V2 model is a better performing model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model V2Model {
+      get { return modelTypeCase_ == ModelTypeOneofCase.V2Model ? (global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model) modelType_ : null; }
+      set {
+        modelType_ = value;
+        modelTypeCase_ = value == null ? ModelTypeOneofCase.None : ModelTypeOneofCase.V2Model;
+      }
+    }
+
+    private object modelType_;
+    /// <summary>Enum of possible cases for the "model_type" oneof.</summary>
+    public enum ModelTypeOneofCase {
+      None = 0,
+      V1Model = 1,
+      V2Model = 2,
+    }
+    private ModelTypeOneofCase modelTypeCase_ = ModelTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModelTypeOneofCase ModelTypeCase {
+      get { return modelTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModelType() {
+      modelTypeCase_ = ModelTypeOneofCase.None;
+      modelType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ClassificationModelOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ClassificationModelOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(V1Model, other.V1Model)) return false;
+      if (!object.Equals(V2Model, other.V2Model)) return false;
+      if (ModelTypeCase != other.ModelTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (modelTypeCase_ == ModelTypeOneofCase.V1Model) hash ^= V1Model.GetHashCode();
+      if (modelTypeCase_ == ModelTypeOneofCase.V2Model) hash ^= V2Model.GetHashCode();
+      hash ^= (int) modelTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (modelTypeCase_ == ModelTypeOneofCase.V1Model) {
+        output.WriteRawTag(10);
+        output.WriteMessage(V1Model);
+      }
+      if (modelTypeCase_ == ModelTypeOneofCase.V2Model) {
+        output.WriteRawTag(18);
+        output.WriteMessage(V2Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (modelTypeCase_ == ModelTypeOneofCase.V1Model) {
+        output.WriteRawTag(10);
+        output.WriteMessage(V1Model);
+      }
+      if (modelTypeCase_ == ModelTypeOneofCase.V2Model) {
+        output.WriteRawTag(18);
+        output.WriteMessage(V2Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (modelTypeCase_ == ModelTypeOneofCase.V1Model) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V1Model);
+      }
+      if (modelTypeCase_ == ModelTypeOneofCase.V2Model) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V2Model);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ClassificationModelOptions other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ModelTypeCase) {
+        case ModelTypeOneofCase.V1Model:
+          if (V1Model == null) {
+            V1Model = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model();
+          }
+          V1Model.MergeFrom(other.V1Model);
+          break;
+        case ModelTypeOneofCase.V2Model:
+          if (V2Model == null) {
+            V2Model = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model();
+          }
+          V2Model.MergeFrom(other.V2Model);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model subBuilder = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model();
+            if (modelTypeCase_ == ModelTypeOneofCase.V1Model) {
+              subBuilder.MergeFrom(V1Model);
+            }
+            input.ReadMessage(subBuilder);
+            V1Model = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model subBuilder = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model();
+            if (modelTypeCase_ == ModelTypeOneofCase.V2Model) {
+              subBuilder.MergeFrom(V2Model);
+            }
+            input.ReadMessage(subBuilder);
+            V2Model = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model subBuilder = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V1Model();
+            if (modelTypeCase_ == ModelTypeOneofCase.V1Model) {
+              subBuilder.MergeFrom(V1Model);
+            }
+            input.ReadMessage(subBuilder);
+            V1Model = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model subBuilder = new global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model();
+            if (modelTypeCase_ == ModelTypeOneofCase.V2Model) {
+              subBuilder.MergeFrom(V2Model);
+            }
+            input.ReadMessage(subBuilder);
+            V2Model = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ClassificationModelOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Options for the V1 model.
+      /// </summary>
+      public sealed partial class V1Model : pb::IMessage<V1Model>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<V1Model> _parser = new pb::MessageParser<V1Model>(() => new V1Model());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<V1Model> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Language.V1.ClassificationModelOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V1Model() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V1Model(V1Model other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V1Model Clone() {
+          return new V1Model(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as V1Model);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(V1Model other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(V1Model other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Options for the V2 model.
+      /// </summary>
+      public sealed partial class V2Model : pb::IMessage<V2Model>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<V2Model> _parser = new pb::MessageParser<V2Model>(() => new V2Model());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<V2Model> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Language.V1.ClassificationModelOptions.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V2Model() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V2Model(V2Model other) : this() {
+          contentCategoriesVersion_ = other.contentCategoriesVersion_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public V2Model Clone() {
+          return new V2Model(this);
+        }
+
+        /// <summary>Field number for the "content_categories_version" field.</summary>
+        public const int ContentCategoriesVersionFieldNumber = 1;
+        private global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion contentCategoriesVersion_ = global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified;
+        /// <summary>
+        /// The content categories used for classification.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion ContentCategoriesVersion {
+          get { return contentCategoriesVersion_; }
+          set {
+            contentCategoriesVersion_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as V2Model);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(V2Model other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ContentCategoriesVersion != other.ContentCategoriesVersion) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ContentCategoriesVersion != global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified) hash ^= ContentCategoriesVersion.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ContentCategoriesVersion != global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ContentCategoriesVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ContentCategoriesVersion != global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ContentCategoriesVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ContentCategoriesVersion != global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentCategoriesVersion);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(V2Model other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ContentCategoriesVersion != global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion.Unspecified) {
+            ContentCategoriesVersion = other.ContentCategoriesVersion;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ContentCategoriesVersion = (global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ContentCategoriesVersion = (global::Google.Cloud.Language.V1.ClassificationModelOptions.Types.V2Model.Types.ContentCategoriesVersion) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the V2Model message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The content categories used for classification.
+          /// </summary>
+          public enum ContentCategoriesVersion {
+            /// <summary>
+            /// If `ContentCategoriesVersion` is not specified, this option will
+            /// default to `V1`.
+            /// </summary>
+            [pbr::OriginalName("CONTENT_CATEGORIES_VERSION_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Legacy content categories of our initial launch in 2017.
+            /// </summary>
+            [pbr::OriginalName("V1")] V1 = 1,
+            /// <summary>
+            /// Updated content categories in 2022.
+            /// </summary>
+            [pbr::OriginalName("V2")] V2 = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The sentiment analysis request message.
   /// </summary>
   public sealed partial class AnalyzeSentimentRequest : pb::IMessage<AnalyzeSentimentRequest>
@@ -4441,7 +5151,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4476,7 +5186,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4685,7 +5395,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4738,7 +5448,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4960,7 +5671,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4995,7 +5706,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5204,7 +5915,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5255,7 +5966,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5430,7 +6142,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5465,7 +6177,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5674,7 +6386,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5725,7 +6437,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5900,7 +6613,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5935,7 +6648,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6144,7 +6857,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6210,7 +6923,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6399,7 +7113,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6420,6 +7134,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClassifyTextRequest(ClassifyTextRequest other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
+      classificationModelOptions_ = other.classificationModelOptions_ != null ? other.classificationModelOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6433,7 +7148,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6441,6 +7156,22 @@ namespace Google.Cloud.Language.V1 {
       get { return document_; }
       set {
         document_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "classification_model_options" field.</summary>
+    public const int ClassificationModelOptionsFieldNumber = 3;
+    private global::Google.Cloud.Language.V1.ClassificationModelOptions classificationModelOptions_;
+    /// <summary>
+    /// Model options to use for classification. Defaults to v1 options if not
+    /// specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Language.V1.ClassificationModelOptions ClassificationModelOptions {
+      get { return classificationModelOptions_; }
+      set {
+        classificationModelOptions_ = value;
       }
     }
 
@@ -6460,6 +7191,7 @@ namespace Google.Cloud.Language.V1 {
         return true;
       }
       if (!object.Equals(Document, other.Document)) return false;
+      if (!object.Equals(ClassificationModelOptions, other.ClassificationModelOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6468,6 +7200,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
+      if (classificationModelOptions_ != null) hash ^= ClassificationModelOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6490,6 +7223,10 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
+      if (classificationModelOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ClassificationModelOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6504,6 +7241,10 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
+      if (classificationModelOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ClassificationModelOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6516,6 +7257,9 @@ namespace Google.Cloud.Language.V1 {
       int size = 0;
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      if (classificationModelOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClassificationModelOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6534,6 +7278,12 @@ namespace Google.Cloud.Language.V1 {
           Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
+      }
+      if (other.classificationModelOptions_ != null) {
+        if (classificationModelOptions_ == null) {
+          ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+        }
+        ClassificationModelOptions.MergeFrom(other.ClassificationModelOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6557,6 +7307,13 @@ namespace Google.Cloud.Language.V1 {
             input.ReadMessage(Document);
             break;
           }
+          case 26: {
+            if (classificationModelOptions_ == null) {
+              ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+            }
+            input.ReadMessage(ClassificationModelOptions);
+            break;
+          }
         }
       }
     #endif
@@ -6577,6 +7334,13 @@ namespace Google.Cloud.Language.V1 {
               Document = new global::Google.Cloud.Language.V1.Document();
             }
             input.ReadMessage(Document);
+            break;
+          }
+          case 26: {
+            if (classificationModelOptions_ == null) {
+              ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+            }
+            input.ReadMessage(ClassificationModelOptions);
             break;
           }
         }
@@ -6603,7 +7367,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6788,7 +7552,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6824,7 +7588,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document.
+    /// Required. Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6839,7 +7603,7 @@ namespace Google.Cloud.Language.V1 {
     public const int FeaturesFieldNumber = 2;
     private global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features features_;
     /// <summary>
-    /// The enabled features.
+    /// Required. The enabled features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7110,6 +7874,7 @@ namespace Google.Cloud.Language.V1 {
           extractDocumentSentiment_ = other.extractDocumentSentiment_;
           extractEntitySentiment_ = other.extractEntitySentiment_;
           classifyText_ = other.classifyText_;
+          classificationModelOptions_ = other.classificationModelOptions_ != null ? other.classificationModelOptions_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7194,6 +7959,22 @@ namespace Google.Cloud.Language.V1 {
           }
         }
 
+        /// <summary>Field number for the "classification_model_options" field.</summary>
+        public const int ClassificationModelOptionsFieldNumber = 10;
+        private global::Google.Cloud.Language.V1.ClassificationModelOptions classificationModelOptions_;
+        /// <summary>
+        /// The model options to use for classification. Defaults to v1 options
+        /// if not specified. Only used if `classify_text` is set to true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Language.V1.ClassificationModelOptions ClassificationModelOptions {
+          get { return classificationModelOptions_; }
+          set {
+            classificationModelOptions_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -7214,6 +7995,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractDocumentSentiment != other.ExtractDocumentSentiment) return false;
           if (ExtractEntitySentiment != other.ExtractEntitySentiment) return false;
           if (ClassifyText != other.ClassifyText) return false;
+          if (!object.Equals(ClassificationModelOptions, other.ClassificationModelOptions)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7226,6 +8008,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractDocumentSentiment != false) hash ^= ExtractDocumentSentiment.GetHashCode();
           if (ExtractEntitySentiment != false) hash ^= ExtractEntitySentiment.GetHashCode();
           if (ClassifyText != false) hash ^= ClassifyText.GetHashCode();
+          if (classificationModelOptions_ != null) hash ^= ClassificationModelOptions.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7264,6 +8047,10 @@ namespace Google.Cloud.Language.V1 {
             output.WriteRawTag(48);
             output.WriteBool(ClassifyText);
           }
+          if (classificationModelOptions_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(ClassificationModelOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7294,6 +8081,10 @@ namespace Google.Cloud.Language.V1 {
             output.WriteRawTag(48);
             output.WriteBool(ClassifyText);
           }
+          if (classificationModelOptions_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(ClassificationModelOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7318,6 +8109,9 @@ namespace Google.Cloud.Language.V1 {
           }
           if (ClassifyText != false) {
             size += 1 + 1;
+          }
+          if (classificationModelOptions_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClassificationModelOptions);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7345,6 +8139,12 @@ namespace Google.Cloud.Language.V1 {
           }
           if (other.ClassifyText != false) {
             ClassifyText = other.ClassifyText;
+          }
+          if (other.classificationModelOptions_ != null) {
+            if (classificationModelOptions_ == null) {
+              ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+            }
+            ClassificationModelOptions.MergeFrom(other.ClassificationModelOptions);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -7379,6 +8179,13 @@ namespace Google.Cloud.Language.V1 {
               }
               case 48: {
                 ClassifyText = input.ReadBool();
+                break;
+              }
+              case 82: {
+                if (classificationModelOptions_ == null) {
+                  ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+                }
+                input.ReadMessage(ClassificationModelOptions);
                 break;
               }
             }
@@ -7416,6 +8223,13 @@ namespace Google.Cloud.Language.V1 {
                 ClassifyText = input.ReadBool();
                 break;
               }
+              case 82: {
+                if (classificationModelOptions_ == null) {
+                  ClassificationModelOptions = new global::Google.Cloud.Language.V1.ClassificationModelOptions();
+                }
+                input.ReadMessage(ClassificationModelOptions);
+                break;
+              }
             }
           }
         }
@@ -7445,7 +8259,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7549,7 +8363,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
