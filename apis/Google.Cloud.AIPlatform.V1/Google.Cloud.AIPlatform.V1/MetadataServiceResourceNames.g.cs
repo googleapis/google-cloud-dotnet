@@ -259,6 +259,26 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class RemoveContextChildrenRequest
+    {
+        /// <summary>
+        /// <see cref="ContextName"/>-typed view over the <see cref="Context"/> resource name property.
+        /// </summary>
+        public ContextName ContextAsContextName
+        {
+            get => string.IsNullOrEmpty(Context) ? null : ContextName.Parse(Context, allowUnparsed: true);
+            set => Context = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ContextName"/>-typed view over the <see cref="ChildContexts"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ContextName> ChildContextsAsContextNames
+        {
+            get => new gax::ResourceNameList<ContextName>(ChildContexts, s => string.IsNullOrEmpty(s) ? null : ContextName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class QueryContextLineageSubgraphRequest
     {
         /// <summary>

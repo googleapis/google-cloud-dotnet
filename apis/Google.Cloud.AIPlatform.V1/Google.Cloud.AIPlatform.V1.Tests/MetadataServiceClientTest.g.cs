@@ -1860,6 +1860,150 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void RemoveContextChildrenRequestObject()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildren(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse response = client.RemoveContextChildren(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveContextChildrenRequestObjectAsync()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildrenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RemoveContextChildrenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse responseCallSettings = await client.RemoveContextChildrenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RemoveContextChildrenResponse responseCancellationToken = await client.RemoveContextChildrenAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveContextChildren()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildren(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse response = client.RemoveContextChildren(request.Context, request.ChildContexts);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveContextChildrenAsync()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildrenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RemoveContextChildrenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse responseCallSettings = await client.RemoveContextChildrenAsync(request.Context, request.ChildContexts, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RemoveContextChildrenResponse responseCancellationToken = await client.RemoveContextChildrenAsync(request.Context, request.ChildContexts, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveContextChildrenResourceNames()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildren(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse response = client.RemoveContextChildren(request.ContextAsContextName, request.ChildContextsAsContextNames);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveContextChildrenResourceNamesAsync()
+        {
+            moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            RemoveContextChildrenResponse expectedResponse = new RemoveContextChildrenResponse { };
+            mockGrpcClient.Setup(x => x.RemoveContextChildrenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RemoveContextChildrenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
+            RemoveContextChildrenResponse responseCallSettings = await client.RemoveContextChildrenAsync(request.ContextAsContextName, request.ChildContextsAsContextNames, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RemoveContextChildrenResponse responseCancellationToken = await client.RemoveContextChildrenAsync(request.ContextAsContextName, request.ChildContextsAsContextNames, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void QueryContextLineageSubgraphRequestObject()
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
