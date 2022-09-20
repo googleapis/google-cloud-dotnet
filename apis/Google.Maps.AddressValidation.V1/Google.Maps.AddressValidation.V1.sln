@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.AddressValidation.V1", "Google.Maps.AddressValidation.V1\Google.Maps.AddressValidation.V1.csproj", "{5BFF2614-8FC5-49B3-B568-AEE10EB5113B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.AddressValidation.V1.GeneratedSnippets", "Google.Maps.AddressValidation.V1.GeneratedSnippets\Google.Maps.AddressValidation.V1.GeneratedSnippets.csproj", "{8B0148F8-A9E1-4A67-9C46-E3DDB0A4F2AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{F8F7A178-29B9-45CC-98EE-0B2C6C71690B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.AddressValidation.V1.Snippets", "Google.Maps.AddressValidation.V1.Snippets\Google.Maps.AddressValidation.V1.Snippets.csproj", "{C8AE7E88-B340-4FC2-BD1B-F13A37CA047E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.AddressValidation.V1.Tests", "Google.Maps.AddressValidation.V1.Tests\Google.Maps.AddressValidation.V1.Tests.csproj", "{EB1C7250-E955-4154-A4FC-6A3C3775B038}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BFF2614-8FC5-49B3-B568-AEE10EB5113B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BFF2614-8FC5-49B3-B568-AEE10EB5113B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BFF2614-8FC5-49B3-B568-AEE10EB5113B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BFF2614-8FC5-49B3-B568-AEE10EB5113B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0148F8-A9E1-4A67-9C46-E3DDB0A4F2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0148F8-A9E1-4A67-9C46-E3DDB0A4F2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0148F8-A9E1-4A67-9C46-E3DDB0A4F2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0148F8-A9E1-4A67-9C46-E3DDB0A4F2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F7A178-29B9-45CC-98EE-0B2C6C71690B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F7A178-29B9-45CC-98EE-0B2C6C71690B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F7A178-29B9-45CC-98EE-0B2C6C71690B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F7A178-29B9-45CC-98EE-0B2C6C71690B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8AE7E88-B340-4FC2-BD1B-F13A37CA047E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8AE7E88-B340-4FC2-BD1B-F13A37CA047E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8AE7E88-B340-4FC2-BD1B-F13A37CA047E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8AE7E88-B340-4FC2-BD1B-F13A37CA047E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1C7250-E955-4154-A4FC-6A3C3775B038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1C7250-E955-4154-A4FC-6A3C3775B038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1C7250-E955-4154-A4FC-6A3C3775B038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1C7250-E955-4154-A4FC-6A3C3775B038}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
