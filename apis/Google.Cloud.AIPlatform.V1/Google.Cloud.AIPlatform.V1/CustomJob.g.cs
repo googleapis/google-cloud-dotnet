@@ -805,7 +805,6 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Represents the spec of a CustomJob.
-  /// Next Id: 15
   /// </summary>
   public sealed partial class CustomJobSpec : pb::IMessage<CustomJobSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

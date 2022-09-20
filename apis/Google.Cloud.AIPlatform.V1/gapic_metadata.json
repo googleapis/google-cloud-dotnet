@@ -739,6 +739,12 @@
                 "QueryExecutionInputsAndOutputsAsync"
               ]
             },
+            "RemoveContextChildren": {
+              "methods": [
+                "RemoveContextChildren",
+                "RemoveContextChildrenAsync"
+              ]
+            },
             "UpdateArtifact": {
               "methods": [
                 "UpdateArtifact",
