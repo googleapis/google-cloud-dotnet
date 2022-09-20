@@ -75,6 +75,7 @@ namespace Google.Cloud.AIPlatform.V1
             PurgeContextsOperationsSettings = existing.PurgeContextsOperationsSettings.Clone();
             AddContextArtifactsAndExecutionsSettings = existing.AddContextArtifactsAndExecutionsSettings;
             AddContextChildrenSettings = existing.AddContextChildrenSettings;
+            RemoveContextChildrenSettings = existing.RemoveContextChildrenSettings;
             QueryContextLineageSubgraphSettings = existing.QueryContextLineageSubgraphSettings;
             CreateExecutionSettings = existing.CreateExecutionSettings;
             GetExecutionSettings = existing.GetExecutionSettings;
@@ -421,6 +422,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AddContextChildrenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.RemoveContextChildren</c> and <c>MetadataServiceClient.RemoveContextChildrenAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveContextChildrenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3482,6 +3496,181 @@ namespace Google.Cloud.AIPlatform.V1
             AddContextChildrenAsync(context, childContexts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveContextChildrenResponse RemoveContextChildren(RemoveContextChildrenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(RemoveContextChildrenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(RemoveContextChildrenRequest request, st::CancellationToken cancellationToken) =>
+            RemoveContextChildrenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveContextChildrenResponse RemoveContextChildren(string context, scg::IEnumerable<string> childContexts, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveContextChildren(new RemoveContextChildrenRequest
+            {
+                Context = gax::GaxPreconditions.CheckNotNullOrEmpty(context, nameof(context)),
+                ChildContexts =
+                {
+                    childContexts ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(string context, scg::IEnumerable<string> childContexts, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveContextChildrenAsync(new RemoveContextChildrenRequest
+            {
+                Context = gax::GaxPreconditions.CheckNotNullOrEmpty(context, nameof(context)),
+                ChildContexts =
+                {
+                    childContexts ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(string context, scg::IEnumerable<string> childContexts, st::CancellationToken cancellationToken) =>
+            RemoveContextChildrenAsync(context, childContexts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveContextChildrenResponse RemoveContextChildren(ContextName context, scg::IEnumerable<ContextName> childContexts, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveContextChildren(new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = gax::GaxPreconditions.CheckNotNull(context, nameof(context)),
+                ChildContextsAsContextNames =
+                {
+                    childContexts ?? linq::Enumerable.Empty<ContextName>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(ContextName context, scg::IEnumerable<ContextName> childContexts, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveContextChildrenAsync(new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = gax::GaxPreconditions.CheckNotNull(context, nameof(context)),
+                ChildContextsAsContextNames =
+                {
+                    childContexts ?? linq::Enumerable.Empty<ContextName>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="context">
+        /// Required. The resource name of the parent Context.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
+        /// </param>
+        /// <param name="childContexts">
+        /// The resource names of the child Contexts.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(ContextName context, scg::IEnumerable<ContextName> childContexts, st::CancellationToken cancellationToken) =>
+            RemoveContextChildrenAsync(context, childContexts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Retrieves Artifacts and Executions within the specified Context, connected
         /// by Event edges and returned as a LineageSubgraph.
         /// </summary>
@@ -5435,6 +5624,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<AddContextChildrenRequest, AddContextChildrenResponse> _callAddContextChildren;
 
+        private readonly gaxgrpc::ApiCall<RemoveContextChildrenRequest, RemoveContextChildrenResponse> _callRemoveContextChildren;
+
         private readonly gaxgrpc::ApiCall<QueryContextLineageSubgraphRequest, LineageSubgraph> _callQueryContextLineageSubgraph;
 
         private readonly gaxgrpc::ApiCall<CreateExecutionRequest, Execution> _callCreateExecution;
@@ -5536,6 +5727,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callAddContextChildren = clientHelper.BuildApiCall<AddContextChildrenRequest, AddContextChildrenResponse>("AddContextChildren", grpcClient.AddContextChildrenAsync, grpcClient.AddContextChildren, effectiveSettings.AddContextChildrenSettings).WithGoogleRequestParam("context", request => request.Context);
             Modify_ApiCall(ref _callAddContextChildren);
             Modify_AddContextChildrenApiCall(ref _callAddContextChildren);
+            _callRemoveContextChildren = clientHelper.BuildApiCall<RemoveContextChildrenRequest, RemoveContextChildrenResponse>("RemoveContextChildren", grpcClient.RemoveContextChildrenAsync, grpcClient.RemoveContextChildren, effectiveSettings.RemoveContextChildrenSettings).WithGoogleRequestParam("context", request => request.Context);
+            Modify_ApiCall(ref _callRemoveContextChildren);
+            Modify_RemoveContextChildrenApiCall(ref _callRemoveContextChildren);
             _callQueryContextLineageSubgraph = clientHelper.BuildApiCall<QueryContextLineageSubgraphRequest, LineageSubgraph>("QueryContextLineageSubgraph", grpcClient.QueryContextLineageSubgraphAsync, grpcClient.QueryContextLineageSubgraph, effectiveSettings.QueryContextLineageSubgraphSettings).WithGoogleRequestParam("context", request => request.Context);
             Modify_ApiCall(ref _callQueryContextLineageSubgraph);
             Modify_QueryContextLineageSubgraphApiCall(ref _callQueryContextLineageSubgraph);
@@ -5616,6 +5810,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_AddContextChildrenApiCall(ref gaxgrpc::ApiCall<AddContextChildrenRequest, AddContextChildrenResponse> call);
 
+        partial void Modify_RemoveContextChildrenApiCall(ref gaxgrpc::ApiCall<RemoveContextChildrenRequest, RemoveContextChildrenResponse> call);
+
         partial void Modify_QueryContextLineageSubgraphApiCall(ref gaxgrpc::ApiCall<QueryContextLineageSubgraphRequest, LineageSubgraph> call);
 
         partial void Modify_CreateExecutionApiCall(ref gaxgrpc::ApiCall<CreateExecutionRequest, Execution> call);
@@ -5688,6 +5884,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_AddContextArtifactsAndExecutionsRequest(ref AddContextArtifactsAndExecutionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AddContextChildrenRequest(ref AddContextChildrenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveContextChildrenRequest(ref RemoveContextChildrenRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryContextLineageSubgraphRequest(ref QueryContextLineageSubgraphRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6177,6 +6375,34 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_AddContextChildrenRequest(ref request, ref callSettings);
             return _callAddContextChildren.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveContextChildrenResponse RemoveContextChildren(RemoveContextChildrenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveContextChildrenRequest(ref request, ref callSettings);
+            return _callRemoveContextChildren.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Remove a set of children contexts from a parent Context. If any of the
+        /// child Contexts were NOT added to the parent Context, they are
+        /// simply skipped.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveContextChildrenResponse> RemoveContextChildrenAsync(RemoveContextChildrenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveContextChildrenRequest(ref request, ref callSettings);
+            return _callRemoveContextChildren.Async(request, callSettings);
         }
 
         /// <summary>

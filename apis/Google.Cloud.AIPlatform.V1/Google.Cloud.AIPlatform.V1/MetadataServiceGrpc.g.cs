@@ -118,6 +118,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.AddContextChildrenResponse> __Marshaller_google_cloud_aiplatform_v1_AddContextChildrenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.AddContextChildrenResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest> __Marshaller_google_cloud_aiplatform_v1_RemoveContextChildrenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse> __Marshaller_google_cloud_aiplatform_v1_RemoveContextChildrenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.QueryContextLineageSubgraphRequest> __Marshaller_google_cloud_aiplatform_v1_QueryContextLineageSubgraphRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.QueryContextLineageSubgraphRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.LineageSubgraph> __Marshaller_google_cloud_aiplatform_v1_LineageSubgraph = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.LineageSubgraph.Parser));
@@ -299,6 +303,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "AddContextChildren",
         __Marshaller_google_cloud_aiplatform_v1_AddContextChildrenRequest,
         __Marshaller_google_cloud_aiplatform_v1_AddContextChildrenResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest, global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse> __Method_RemoveContextChildren = new grpc::Method<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest, global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveContextChildren",
+        __Marshaller_google_cloud_aiplatform_v1_RemoveContextChildrenRequest,
+        __Marshaller_google_cloud_aiplatform_v1_RemoveContextChildrenResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.QueryContextLineageSubgraphRequest, global::Google.Cloud.AIPlatform.V1.LineageSubgraph> __Method_QueryContextLineageSubgraph = new grpc::Method<global::Google.Cloud.AIPlatform.V1.QueryContextLineageSubgraphRequest, global::Google.Cloud.AIPlatform.V1.LineageSubgraph>(
@@ -633,6 +645,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.AddContextChildrenResponse> AddContextChildren(global::Google.Cloud.AIPlatform.V1.AddContextChildrenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Remove a set of children contexts from a parent Context. If any of the
+      /// child Contexts were NOT added to the parent Context, they are
+      /// simply skipped.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse> RemoveContextChildren(global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1722,6 +1748,62 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AddContextChildren, null, options, request);
       }
       /// <summary>
+      /// Remove a set of children contexts from a parent Context. If any of the
+      /// child Contexts were NOT added to the parent Context, they are
+      /// simply skipped.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse RemoveContextChildren(global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveContextChildren(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove a set of children contexts from a parent Context. If any of the
+      /// child Contexts were NOT added to the parent Context, they are
+      /// simply skipped.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse RemoveContextChildren(global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveContextChildren, null, options, request);
+      }
+      /// <summary>
+      /// Remove a set of children contexts from a parent Context. If any of the
+      /// child Contexts were NOT added to the parent Context, they are
+      /// simply skipped.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse> RemoveContextChildrenAsync(global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveContextChildrenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove a set of children contexts from a parent Context. If any of the
+      /// child Contexts were NOT added to the parent Context, they are
+      /// simply skipped.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse> RemoveContextChildrenAsync(global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveContextChildren, null, options, request);
+      }
+      /// <summary>
       /// Retrieves Artifacts and Executions within the specified Context, connected
       /// by Event edges and returned as a LineageSubgraph.
       /// </summary>
@@ -2405,6 +2487,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_PurgeContexts, serviceImpl.PurgeContexts)
           .AddMethod(__Method_AddContextArtifactsAndExecutions, serviceImpl.AddContextArtifactsAndExecutions)
           .AddMethod(__Method_AddContextChildren, serviceImpl.AddContextChildren)
+          .AddMethod(__Method_RemoveContextChildren, serviceImpl.RemoveContextChildren)
           .AddMethod(__Method_QueryContextLineageSubgraph, serviceImpl.QueryContextLineageSubgraph)
           .AddMethod(__Method_CreateExecution, serviceImpl.CreateExecution)
           .AddMethod(__Method_GetExecution, serviceImpl.GetExecution)
@@ -2445,6 +2528,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_PurgeContexts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.PurgeContextsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeContexts));
       serviceBinder.AddMethod(__Method_AddContextArtifactsAndExecutions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.AddContextArtifactsAndExecutionsRequest, global::Google.Cloud.AIPlatform.V1.AddContextArtifactsAndExecutionsResponse>(serviceImpl.AddContextArtifactsAndExecutions));
       serviceBinder.AddMethod(__Method_AddContextChildren, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.AddContextChildrenRequest, global::Google.Cloud.AIPlatform.V1.AddContextChildrenResponse>(serviceImpl.AddContextChildren));
+      serviceBinder.AddMethod(__Method_RemoveContextChildren, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenRequest, global::Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse>(serviceImpl.RemoveContextChildren));
       serviceBinder.AddMethod(__Method_QueryContextLineageSubgraph, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.QueryContextLineageSubgraphRequest, global::Google.Cloud.AIPlatform.V1.LineageSubgraph>(serviceImpl.QueryContextLineageSubgraph));
       serviceBinder.AddMethod(__Method_CreateExecution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateExecutionRequest, global::Google.Cloud.AIPlatform.V1.Execution>(serviceImpl.CreateExecution));
       serviceBinder.AddMethod(__Method_GetExecution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetExecutionRequest, global::Google.Cloud.AIPlatform.V1.Execution>(serviceImpl.GetExecution));

@@ -15569,6 +15569,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_sync",
+      "title": "RemoveContextChildrenRequestObject",
+      "description": "Snippet for RemoveContextChildren",
+      "file": "MetadataServiceClient.RemoveContextChildrenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildren",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildren",
+        "resultType": "Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_async",
+      "title": "RemoveContextChildrenRequestObjectAsync",
+      "description": "Snippet for RemoveContextChildrenAsync",
+      "file": "MetadataServiceClient.RemoveContextChildrenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildrenAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildrenAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_sync_flattened",
+      "title": "RemoveContextChildren",
+      "description": "Snippet for RemoveContextChildren",
+      "file": "MetadataServiceClient.RemoveContextChildrenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildren",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildren",
+        "resultType": "Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_async_flattened",
+      "title": "RemoveContextChildrenAsync",
+      "description": "Snippet for RemoveContextChildrenAsync",
+      "file": "MetadataServiceClient.RemoveContextChildrenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildrenAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildrenAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_sync_flattened_resourceNames",
+      "title": "RemoveContextChildrenResourceNames",
+      "description": "Snippet for RemoveContextChildren",
+      "file": "MetadataServiceClient.RemoveContextChildrenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildren",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildren",
+        "resultType": "Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MetadataService_RemoveContextChildren_async_flattened_resourceNames",
+      "title": "RemoveContextChildrenResourceNamesAsync",
+      "description": "Snippet for RemoveContextChildrenAsync",
+      "file": "MetadataServiceClient.RemoveContextChildrenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveContextChildrenAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient.RemoveContextChildrenAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RemoveContextChildrenResponse>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveContextChildren",
+          "fullName": "google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.aiplatform.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "aiplatform_v1_generated_MetadataService_QueryContextLineageSubgraph_sync",
       "title": "QueryContextLineageSubgraphRequestObject",
       "description": "Snippet for QueryContextLineageSubgraph",

@@ -966,6 +966,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListArtifactsResponse, Artifact> response = metadataServiceClient.ListArtifacts(request);
@@ -1015,6 +1016,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = metadataServiceClient.ListArtifactsAsync(request);
@@ -1868,6 +1870,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListContextsResponse, Context> response = metadataServiceClient.ListContexts(request);
@@ -1917,6 +1920,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListContextsResponse, Context> response = metadataServiceClient.ListContextsAsync(request);
@@ -2821,6 +2825,117 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RemoveContextChildren</summary>
+        public void RemoveContextChildrenRequestObject()
+        {
+            // Snippet: RemoveContextChildren(RemoveContextChildrenRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = metadataServiceClient.RemoveContextChildren(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveContextChildrenAsync</summary>
+        public async Task RemoveContextChildrenRequestObjectAsync()
+        {
+            // Snippet: RemoveContextChildrenAsync(RemoveContextChildrenRequest, CallSettings)
+            // Additional: RemoveContextChildrenAsync(RemoveContextChildrenRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveContextChildrenRequest request = new RemoveContextChildrenRequest
+            {
+                ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                ChildContextsAsContextNames =
+                {
+                    ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+                },
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = await metadataServiceClient.RemoveContextChildrenAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveContextChildren</summary>
+        public void RemoveContextChildren()
+        {
+            // Snippet: RemoveContextChildren(string, IEnumerable<string>, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            string context = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]/contexts/[CONTEXT]";
+            IEnumerable<string> childContexts = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]/contexts/[CONTEXT]",
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = metadataServiceClient.RemoveContextChildren(context, childContexts);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveContextChildrenAsync</summary>
+        public async Task RemoveContextChildrenAsync()
+        {
+            // Snippet: RemoveContextChildrenAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: RemoveContextChildrenAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string context = "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]/contexts/[CONTEXT]";
+            IEnumerable<string> childContexts = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/metadataStores/[METADATA_STORE]/contexts/[CONTEXT]",
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = await metadataServiceClient.RemoveContextChildrenAsync(context, childContexts);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveContextChildren</summary>
+        public void RemoveContextChildrenResourceNames()
+        {
+            // Snippet: RemoveContextChildren(ContextName, IEnumerable<ContextName>, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            ContextName context = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]");
+            IEnumerable<ContextName> childContexts = new ContextName[]
+            {
+                ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = metadataServiceClient.RemoveContextChildren(context, childContexts);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveContextChildrenAsync</summary>
+        public async Task RemoveContextChildrenResourceNamesAsync()
+        {
+            // Snippet: RemoveContextChildrenAsync(ContextName, IEnumerable<ContextName>, CallSettings)
+            // Additional: RemoveContextChildrenAsync(ContextName, IEnumerable<ContextName>, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ContextName context = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]");
+            IEnumerable<ContextName> childContexts = new ContextName[]
+            {
+                ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
+            };
+            // Make the request
+            RemoveContextChildrenResponse response = await metadataServiceClient.RemoveContextChildrenAsync(context, childContexts);
+            // End snippet
+        }
+
         /// <summary>Snippet for QueryContextLineageSubgraph</summary>
         public void QueryContextLineageSubgraphRequestObject()
         {
@@ -3105,6 +3220,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListExecutionsResponse, Execution> response = metadataServiceClient.ListExecutions(request);
@@ -3154,6 +3270,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = metadataServiceClient.ListExecutionsAsync(request);
