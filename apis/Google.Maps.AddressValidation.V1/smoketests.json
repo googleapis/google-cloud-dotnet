@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ValidateAddress",
+    "client": "AddressValidationClient",
+    "arguments": {
+      "request": {
+        "address": {
+          "address_lines": [
+            "Google",
+            "1600 Amphitheatre Parkway",
+            "Mountain View",
+            "CA", 
+            "94043"
+          ]
+        }
+      }
+    }
+  }
+]
