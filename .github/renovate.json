@@ -212,6 +212,7 @@
     "apis/Google.Identity.AccessContextManager.Type/Google.Identity.AccessContextManager.Type/**",
     "apis/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1/**",
     "apis/Google.LongRunning/Google.LongRunning/**",
+    "apis/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1/**",
     "apis/Google.Maps.Routing.V2/Google.Maps.Routing.V2/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
