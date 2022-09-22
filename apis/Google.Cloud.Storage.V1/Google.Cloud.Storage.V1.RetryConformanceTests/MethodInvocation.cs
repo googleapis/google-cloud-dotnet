@@ -83,7 +83,7 @@ internal class MethodInvocation
                 {
                     arguments.Add(BucketName);
                 }
-                else if (item.Name is "object")
+                else if (item.Name is "objectName")
                 {
                     arguments.Add(ObjectName);
                 }
@@ -91,7 +91,7 @@ internal class MethodInvocation
                 {
                     arguments.Add(ProjectId);
                 }
-                else if (item.Name is "notification")
+                else if (item.Name is "notification" || item.Name is "notificationId")
                 {
                     arguments.Add(Notification);
                 }
@@ -140,7 +140,7 @@ internal class MethodInvocation
             }
             else if (item.ParameterType.Name is "HmacKeyMetadata")
             {
-                arguments.Add(new HmacKeyMetadata() { ProjectId = ProjectId, AccessId = AccessId });
+                arguments.Add(new HmacKeyMetadata() { ProjectId = ProjectId, AccessId = AccessId, State= HmacKeyStates.Inactive, ETag="MQ==" });
             }
             else if (preConditionsPresent == true && item.Name is "options")
             {
@@ -172,7 +172,7 @@ internal class MethodInvocation
                 var res = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
                 if (res != null)
                 {
-                    res.ReadPage(5);
+                    res.ReadPage(100);
                 }
             }
             else if (methodName.Contains("listobject"))
@@ -180,7 +180,7 @@ internal class MethodInvocation
                 var res = Result as PagedEnumerable<Objects, Object>;
                 if (res != null)
                 {
-                    res.ReadPage(5);
+                    res.ReadPage(100);
                 }
             }
             else if (methodName.Contains("listbuckets"))
@@ -188,7 +188,7 @@ internal class MethodInvocation
                 var res = Result as PagedEnumerable<Buckets, Bucket>;
                 if (res != null)
                 {
-                    res.ReadPage(5);
+                    res.ReadPage(100);
                 }
             }
             else if (methodName.Contains("listnotifications"))
@@ -196,7 +196,7 @@ internal class MethodInvocation
                 var res = Result as PagedEnumerable<Notifications, Notification>;
                 if (res != null)
                 {
-                    res.ReadPage(5);
+                    res.ReadPage(100);
                 }
             }
         }
