@@ -51,40 +51,30 @@ namespace Google.Cloud.Iam.V2 {
             "aWQYAyABKAkiQQoTVXBkYXRlUG9saWN5UmVxdWVzdBIqCgZwb2xpY3kYASAB",
             "KAsyFS5nb29nbGUuaWFtLnYyLlBvbGljeUID4EECIjsKE0RlbGV0ZVBvbGlj",
             "eVJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEhEKBGV0YWcYAiABKAlCA+BB",
-            "ASJ1Ch1MaXN0QXBwbGljYWJsZVBvbGljaWVzUmVxdWVzdBIdChBhdHRhY2ht",
-            "ZW50X3BvaW50GAEgASgJQgPgQQISDgoGZmlsdGVyGAIgASgJEhIKCnBhZ2Vf",
-            "dG9rZW4YAyABKAkSEQoJcGFnZV9zaXplGAQgASgFIngKHkxpc3RBcHBsaWNh",
-            "YmxlUG9saWNpZXNSZXNwb25zZRInCghwb2xpY2llcxgBIAMoCzIVLmdvb2ds",
-            "ZS5pYW0udjIuUG9saWN5EhQKDGluYWNjZXNzaWJsZRgCIAMoCRIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAyABKAkiSgoXUG9saWN5T3BlcmF0aW9uTWV0YWRhdGES",
-            "LwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wMpQICghQb2xpY2llcxKDAQoMTGlzdFBvbGljaWVzEiIuZ29vZ2xlLmlh",
-            "bS52Mi5MaXN0UG9saWNpZXNSZXF1ZXN0GiMuZ29vZ2xlLmlhbS52Mi5MaXN0",
-            "UG9saWNpZXNSZXNwb25zZSIqgtPkkwIbEhkvdjIve3BhcmVudD1wb2xpY2ll",
-            "cy8qLyp92kEGcGFyZW50Em0KCUdldFBvbGljeRIfLmdvb2dsZS5pYW0udjIu",
-            "R2V0UG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjIuUG9saWN5IiiC0+ST",
-            "AhsSGS92Mi97bmFtZT1wb2xpY2llcy8qLyovKn3aQQRuYW1lEroBCgxDcmVh",
-            "dGVQb2xpY3kSIi5nb29nbGUuaWFtLnYyLkNyZWF0ZVBvbGljeVJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImeC0+STAiMiGS92Mi97",
-            "cGFyZW50PXBvbGljaWVzLyovKn06BnBvbGljedpBF3BhcmVudCxwb2xpY3ks",
-            "cG9saWN5X2lkykEhCgZQb2xpY3kSF1BvbGljeU9wZXJhdGlvbk1ldGFkYXRh",
-            "EqcBCgxVcGRhdGVQb2xpY3kSIi5nb29nbGUuaWFtLnYyLlVwZGF0ZVBvbGlj",
-            "eVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlSC0+ST",
-            "AioaIC92Mi97cG9saWN5Lm5hbWU9cG9saWNpZXMvKi8qLyp9OgZwb2xpY3nK",
-            "QSEKBlBvbGljeRIXUG9saWN5T3BlcmF0aW9uTWV0YWRhdGESnwEKDERlbGV0",
-            "ZVBvbGljeRIiLmdvb2dsZS5pYW0udjIuRGVsZXRlUG9saWN5UmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iTILT5JMCGyoZL3YyL3tu",
-            "YW1lPXBvbGljaWVzLyovKi8qfdpBBG5hbWXKQSEKBlBvbGljeRIXUG9saWN5",
-            "T3BlcmF0aW9uTWV0YWRhdGESwQEKFkxpc3RBcHBsaWNhYmxlUG9saWNpZXMS",
-            "LC5nb29nbGUuaWFtLnYyLkxpc3RBcHBsaWNhYmxlUG9saWNpZXNSZXF1ZXN0",
-            "Gi0uZ29vZ2xlLmlhbS52Mi5MaXN0QXBwbGljYWJsZVBvbGljaWVzUmVzcG9u",
-            "c2UiSoLT5JMCMRIvL3YyL3thdHRhY2htZW50X3BvaW50PSp9Omxpc3RBcHBs",
-            "aWNhYmxlUG9saWNpZXPaQRBhdHRhY2htZW50X3BvaW50GkbKQRJpYW0uZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQoABChFjb20uZ29vZ2xlLmlhbS52MkILUG9saWN5",
-            "UHJvdG9QAVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9pYW0vdjI7aWFtqgITR29vZ2xlLkNsb3VkLklhbS5WMsoCE0dvb2dsZVxD",
-            "bG91ZFxJYW1cVjJiBnByb3RvMw=="));
+            "ASJKChdQb2xpY3lPcGVyYXRpb25NZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy0AYKCFBvbGljaWVz",
+            "EoMBCgxMaXN0UG9saWNpZXMSIi5nb29nbGUuaWFtLnYyLkxpc3RQb2xpY2ll",
+            "c1JlcXVlc3QaIy5nb29nbGUuaWFtLnYyLkxpc3RQb2xpY2llc1Jlc3BvbnNl",
+            "IiqC0+STAhsSGS92Mi97cGFyZW50PXBvbGljaWVzLyovKn3aQQZwYXJlbnQS",
+            "bQoJR2V0UG9saWN5Eh8uZ29vZ2xlLmlhbS52Mi5HZXRQb2xpY3lSZXF1ZXN0",
+            "GhUuZ29vZ2xlLmlhbS52Mi5Qb2xpY3kiKILT5JMCGxIZL3YyL3tuYW1lPXBv",
+            "bGljaWVzLyovKi8qfdpBBG5hbWUSugEKDENyZWF0ZVBvbGljeRIiLmdvb2ds",
+            "ZS5pYW0udjIuQ3JlYXRlUG9saWN5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24iZ4LT5JMCIyIZL3YyL3twYXJlbnQ9cG9saWNpZXMv",
+            "Ki8qfToGcG9saWN52kEXcGFyZW50LHBvbGljeSxwb2xpY3lfaWTKQSEKBlBv",
+            "bGljeRIXUG9saWN5T3BlcmF0aW9uTWV0YWRhdGESpwEKDFVwZGF0ZVBvbGlj",
+            "eRIiLmdvb2dsZS5pYW0udjIuVXBkYXRlUG9saWN5UmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iVILT5JMCKhogL3YyL3twb2xpY3ku",
+            "bmFtZT1wb2xpY2llcy8qLyovKn06BnBvbGljecpBIQoGUG9saWN5EhdQb2xp",
+            "Y3lPcGVyYXRpb25NZXRhZGF0YRKfAQoMRGVsZXRlUG9saWN5EiIuZ29vZ2xl",
+            "LmlhbS52Mi5EZWxldGVQb2xpY3lSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJMgtPkkwIbKhkvdjIve25hbWU9cG9saWNpZXMvKi8q",
+            "Lyp92kEEbmFtZcpBIQoGUG9saWN5EhdQb2xpY3lPcGVyYXRpb25NZXRhZGF0",
+            "YRpGykESaWFtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKAAQoRY29tLmdvb2dsZS5p",
+            "YW0udjJCC1BvbGljeVByb3RvUAFaMGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvaWFtL3YyO2lhbaoCE0dvb2dsZS5DbG91ZC5JYW0u",
+            "VjLKAhNHb29nbGVcQ2xvdWRcSWFtXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Iam.V2.DenyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,8 +86,6 @@ namespace Google.Cloud.Iam.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.CreatePolicyRequest), global::Google.Cloud.Iam.V2.CreatePolicyRequest.Parser, new[]{ "Parent", "Policy", "PolicyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.UpdatePolicyRequest), global::Google.Cloud.Iam.V2.UpdatePolicyRequest.Parser, new[]{ "Policy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.DeletePolicyRequest), global::Google.Cloud.Iam.V2.DeletePolicyRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest), global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest.Parser, new[]{ "AttachmentPoint", "Filter", "PageToken", "PageSize" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse), global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse.Parser, new[]{ "Policies", "Inaccessible", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V2.PolicyOperationMetadata), global::Google.Cloud.Iam.V2.PolicyOperationMetadata.Parser, new[]{ "CreateTime" }, null, null, null, null)
           }));
     }
@@ -191,8 +179,8 @@ namespace Google.Cloud.Iam.V2 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Immutable. The globally unique ID of the `Policy`. Assigned automatically
-    /// when the `Policy` is created.
+    /// Immutable. The globally unique ID of the `Policy`. Assigned automatically when the
+    /// `Policy` is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -207,8 +195,7 @@ namespace Google.Cloud.Iam.V2 {
     public const int KindFieldNumber = 3;
     private string kind_ = "";
     /// <summary>
-    /// Output only. The kind of the `Policy`. Always contains the value
-    /// `DenyPolicy`.
+    /// Output only. The kind of the `Policy`. Always contains the value `DenyPolicy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -304,8 +291,7 @@ namespace Google.Cloud.Iam.V2 {
     public const int DeleteTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. The time when the `Policy` was deleted. Empty if the policy is
-    /// not deleted.
+    /// Output only. The time when the `Policy` was deleted. Empty if the policy is not deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -335,8 +321,8 @@ namespace Google.Cloud.Iam.V2 {
     public const int ManagingAuthorityFieldNumber = 11;
     private string managingAuthority_ = "";
     /// <summary>
-    /// Immutable. Specifies that this policy is managed by an authority and can
-    /// only be modified by that authority. Usage is restricted.
+    /// Immutable. Specifies that this policy is managed by an authority and can only be
+    /// modified by that authority. Usage is restricted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1059,8 +1045,9 @@ namespace Google.Cloud.Iam.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource that the policy is attached to, along with the kind
-    /// of policy to list. Format: `policies/{attachment_point}/denypolicies`
+    /// Required. The resource that the policy is attached to, along with the kind of policy
+    /// to list. Format:
+    /// `policies/{attachment_point}/denypolicies`
     ///
     /// The attachment point is identified by its URL-encoded full resource name,
     /// which means that the forward-slash character, `/`, must be written as
@@ -1099,9 +1086,8 @@ namespace Google.Cloud.Iam.V2 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token received in a
-    /// [ListPoliciesResponse][google.iam.v2.ListPoliciesResponse]. Provide this
-    /// token to retrieve the next page.
+    /// A page token received in a [ListPoliciesResponse][google.iam.v2.ListPoliciesResponse]. Provide this token to
+    /// retrieve the next page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1359,8 +1345,7 @@ namespace Google.Cloud.Iam.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A page token that you can use in a
-    /// [ListPoliciesRequest][google.iam.v2.ListPoliciesRequest] to retrieve the
+    /// A page token that you can use in a [ListPoliciesRequest][google.iam.v2.ListPoliciesRequest] to retrieve the
     /// next page. If this field is omitted, there are no additional pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1775,8 +1760,8 @@ namespace Google.Cloud.Iam.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource that the policy is attached to, along with the kind
-    /// of policy to create. Format: `policies/{attachment_point}/denypolicies`
+    /// Required. The resource that the policy is attached to, along with the kind of policy
+    /// to create. Format: `policies/{attachment_point}/denypolicies`
     ///
     /// The attachment point is identified by its URL-encoded full resource name,
     /// which means that the forward-slash character, `/`, must be written as
@@ -2301,9 +2286,9 @@ namespace Google.Cloud.Iam.V2 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The expected `etag` of the policy to delete. If the value does
-    /// not match the value that is stored in IAM, the request fails with a `409`
-    /// error code and `ABORTED` status.
+    /// Optional. The expected `etag` of the policy to delete. If the value does not match
+    /// the value that is stored in IAM, the request fails with a `409` error code
+    /// and `ABORTED` status.
     ///
     /// If you omit this field, the policy is deleted regardless of its current
     /// `etag`.
@@ -2475,610 +2460,6 @@ namespace Google.Cloud.Iam.V2 {
   }
 
   /// <summary>
-  /// `ListApplicablePoliciesRequest` represents the Request message for the
-  /// `ListApplicablePolicies` method. It provides the input for a filterable query
-  /// of Policies that apply to a certain GCP Resource, specified by the field
-  /// `attachment_point`, found on this message.
-  /// Example:
-  /// ```
-  /// {
-  ///    attachment_point:
-  ///    'cloudresourcemanager.googleapis.com%2Forganizations%2F212345678901'
-  ///    filter: 'kind:denyPolicies'
-  /// }
-  /// ```
-  /// </summary>
-  public sealed partial class ListApplicablePoliciesRequest : pb::IMessage<ListApplicablePoliciesRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ListApplicablePoliciesRequest> _parser = new pb::MessageParser<ListApplicablePoliciesRequest>(() => new ListApplicablePoliciesRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ListApplicablePoliciesRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V2.PolicyReflection.Descriptor.MessageTypes[8]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesRequest(ListApplicablePoliciesRequest other) : this() {
-      attachmentPoint_ = other.attachmentPoint_;
-      filter_ = other.filter_;
-      pageToken_ = other.pageToken_;
-      pageSize_ = other.pageSize_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesRequest Clone() {
-      return new ListApplicablePoliciesRequest(this);
-    }
-
-    /// <summary>Field number for the "attachment_point" field.</summary>
-    public const int AttachmentPointFieldNumber = 1;
-    private string attachmentPoint_ = "";
-    /// <summary>
-    /// Required. The Cloud resource at which the applicable policies are to be
-    /// retrieved. Format: `{attachment-point}` Use the URL-encoded full resource
-    /// name, which means that the forward-slash character, `/`, must be written as
-    /// `%2F`. For example,
-    /// `cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AttachmentPoint {
-      get { return attachmentPoint_; }
-      set {
-        attachmentPoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "filter" field.</summary>
-    public const int FilterFieldNumber = 2;
-    private string filter_ = "";
-    /// <summary>
-    /// Filtering currently only supports the kind of policies to return, and
-    /// must be in the format “kind:[policyKind1] OR kind:[policyKind2]”.  New
-    /// policy kinds may be added in the future without notice.
-    ///
-    /// Example value: “kind:denyPolicies”
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Filter {
-      get { return filter_; }
-      set {
-        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "page_token" field.</summary>
-    public const int PageTokenFieldNumber = 3;
-    private string pageToken_ = "";
-    /// <summary>
-    /// If present, then retrieve the batch of results following the results from
-    /// the preceding call to this method.  `page_token` must be the value of
-    /// `next_page_token`
-    /// [ListApplicablePoliciesResponse.next_page_token][google.iam.v2.ListApplicablePoliciesResponse.next_page_token]
-    /// from the previous response.  The values of other method parameters should
-    /// be identical to those in the previous call.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PageToken {
-      get { return pageToken_; }
-      set {
-        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "page_size" field.</summary>
-    public const int PageSizeFieldNumber = 4;
-    private int pageSize_;
-    /// <summary>
-    /// Limit on the number of policies to include in the response.
-    /// Further policies can subsequently be obtained by including the
-    /// [ListApplicablePoliciesResponse.next_page_token][google.iam.admin.v1.ListApplicablePoliciesResponse.next_page_token]
-    /// in a subsequent request.
-    /// The minimum is 25, and the maximum is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PageSize {
-      get { return pageSize_; }
-      set {
-        pageSize_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ListApplicablePoliciesRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ListApplicablePoliciesRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (AttachmentPoint != other.AttachmentPoint) return false;
-      if (Filter != other.Filter) return false;
-      if (PageToken != other.PageToken) return false;
-      if (PageSize != other.PageSize) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (AttachmentPoint.Length != 0) hash ^= AttachmentPoint.GetHashCode();
-      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (AttachmentPoint.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AttachmentPoint);
-      }
-      if (Filter.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Filter);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(PageToken);
-      }
-      if (PageSize != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(PageSize);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AttachmentPoint.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AttachmentPoint);
-      }
-      if (Filter.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Filter);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(PageToken);
-      }
-      if (PageSize != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(PageSize);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (AttachmentPoint.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttachmentPoint);
-      }
-      if (Filter.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
-      }
-      if (PageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
-      }
-      if (PageSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ListApplicablePoliciesRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.AttachmentPoint.Length != 0) {
-        AttachmentPoint = other.AttachmentPoint;
-      }
-      if (other.Filter.Length != 0) {
-        Filter = other.Filter;
-      }
-      if (other.PageToken.Length != 0) {
-        PageToken = other.PageToken;
-      }
-      if (other.PageSize != 0) {
-        PageSize = other.PageSize;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            AttachmentPoint = input.ReadString();
-            break;
-          }
-          case 18: {
-            Filter = input.ReadString();
-            break;
-          }
-          case 26: {
-            PageToken = input.ReadString();
-            break;
-          }
-          case 32: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            AttachmentPoint = input.ReadString();
-            break;
-          }
-          case 18: {
-            Filter = input.ReadString();
-            break;
-          }
-          case 26: {
-            PageToken = input.ReadString();
-            break;
-          }
-          case 32: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Response message for [ListApplicablePolicies][] method.
-  /// </summary>
-  public sealed partial class ListApplicablePoliciesResponse : pb::IMessage<ListApplicablePoliciesResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ListApplicablePoliciesResponse> _parser = new pb::MessageParser<ListApplicablePoliciesResponse>(() => new ListApplicablePoliciesResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ListApplicablePoliciesResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V2.PolicyReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesResponse(ListApplicablePoliciesResponse other) : this() {
-      policies_ = other.policies_.Clone();
-      inaccessible_ = other.inaccessible_.Clone();
-      nextPageToken_ = other.nextPageToken_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListApplicablePoliciesResponse Clone() {
-      return new ListApplicablePoliciesResponse(this);
-    }
-
-    /// <summary>Field number for the "policies" field.</summary>
-    public const int PoliciesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Iam.V2.Policy> _repeated_policies_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Iam.V2.Policy.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V2.Policy> policies_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V2.Policy>();
-    /// <summary>
-    /// Ordered list starting from the resource on which this API was called
-    /// then proceeding up the hierarchy. Policies for the same attachment point
-    /// will be grouped, but no further ordering is guaranteed.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.Iam.V2.Policy> Policies {
-      get { return policies_; }
-    }
-
-    /// <summary>Field number for the "inaccessible" field.</summary>
-    public const int InaccessibleFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_inaccessible_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> inaccessible_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// A list of resources that the caller does not have permission to retrieve.
-    /// List or Get can be used to get detailed error messages.
-    /// Get: `policies/{attachment-point}/denypolicies/{policy-id}`
-    /// List: `policies/{attachment-point}/denypolicies`
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Inaccessible {
-      get { return inaccessible_; }
-    }
-
-    /// <summary>Field number for the "next_page_token" field.</summary>
-    public const int NextPageTokenFieldNumber = 3;
-    private string nextPageToken_ = "";
-    /// <summary>
-    /// A page token that can be used in a
-    /// [ListApplicablePoliciesRequest][google.iam.v2.ListApplicablePoliciesRequest]
-    /// to retrieve the next page. If this field is blank, there are no additional
-    /// pages.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NextPageToken {
-      get { return nextPageToken_; }
-      set {
-        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ListApplicablePoliciesResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ListApplicablePoliciesResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!policies_.Equals(other.policies_)) return false;
-      if(!inaccessible_.Equals(other.inaccessible_)) return false;
-      if (NextPageToken != other.NextPageToken) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= policies_.GetHashCode();
-      hash ^= inaccessible_.GetHashCode();
-      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      policies_.WriteTo(output, _repeated_policies_codec);
-      inaccessible_.WriteTo(output, _repeated_inaccessible_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      policies_.WriteTo(ref output, _repeated_policies_codec);
-      inaccessible_.WriteTo(ref output, _repeated_inaccessible_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += policies_.CalculateSize(_repeated_policies_codec);
-      size += inaccessible_.CalculateSize(_repeated_inaccessible_codec);
-      if (NextPageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ListApplicablePoliciesResponse other) {
-      if (other == null) {
-        return;
-      }
-      policies_.Add(other.policies_);
-      inaccessible_.Add(other.inaccessible_);
-      if (other.NextPageToken.Length != 0) {
-        NextPageToken = other.NextPageToken;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            policies_.AddEntriesFrom(input, _repeated_policies_codec);
-            break;
-          }
-          case 18: {
-            inaccessible_.AddEntriesFrom(input, _repeated_inaccessible_codec);
-            break;
-          }
-          case 26: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            policies_.AddEntriesFrom(ref input, _repeated_policies_codec);
-            break;
-          }
-          case 18: {
-            inaccessible_.AddEntriesFrom(ref input, _repeated_inaccessible_codec);
-            break;
-          }
-          case 26: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// Metadata for long-running `Policy` operations.
   /// </summary>
   public sealed partial class PolicyOperationMetadata : pb::IMessage<PolicyOperationMetadata>
@@ -3095,7 +2476,7 @@ namespace Google.Cloud.Iam.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V2.PolicyReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Iam.V2.PolicyReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
