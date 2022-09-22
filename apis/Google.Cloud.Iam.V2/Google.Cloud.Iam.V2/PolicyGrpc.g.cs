@@ -79,10 +79,6 @@ namespace Google.Cloud.Iam.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V2.UpdatePolicyRequest> __Marshaller_google_iam_v2_UpdatePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V2.UpdatePolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V2.DeletePolicyRequest> __Marshaller_google_iam_v2_DeletePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V2.DeletePolicyRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest> __Marshaller_google_iam_v2_ListApplicablePoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse> __Marshaller_google_iam_v2_ListApplicablePoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V2.ListPoliciesRequest, global::Google.Cloud.Iam.V2.ListPoliciesResponse> __Method_ListPolicies = new grpc::Method<global::Google.Cloud.Iam.V2.ListPoliciesRequest, global::Google.Cloud.Iam.V2.ListPoliciesResponse>(
@@ -123,14 +119,6 @@ namespace Google.Cloud.Iam.V2 {
         "DeletePolicy",
         __Marshaller_google_iam_v2_DeletePolicyRequest,
         __Marshaller_google_longrunning_Operation);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest, global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse> __Method_ListApplicablePolicies = new grpc::Method<global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest, global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListApplicablePolicies",
-        __Marshaller_google_iam_v2_ListApplicablePoliciesRequest,
-        __Marshaller_google_iam_v2_ListApplicablePoliciesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -189,8 +177,7 @@ namespace Google.Cloud.Iam.V2 {
       ///
       /// To update a policy, you should use a read-modify-write loop:
       ///
-      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-      /// version of the policy.
+      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
       /// 2. Modify the policy as needed.
       /// 3. Use `UpdatePolicy` to write the updated policy.
       ///
@@ -213,27 +200,6 @@ namespace Google.Cloud.Iam.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePolicy(global::Google.Cloud.Iam.V2.DeletePolicyRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Retrieves all the policies that are attached to the specified resource,
-      /// or anywhere in the ancestry of the resource. For example, for a project
-      /// this endpoint would return all the `denyPolicy` kind policies attached to
-      /// the project, its parent folder (if any), and its parent organization (if
-      /// any).
-      /// The endpoint requires the same permissions that it would take to call
-      /// `ListPolicies` or `GetPolicy`.
-      ///
-      /// The main reason to use this endpoint is as a policy admin to debug access
-      /// issues for a resource.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse> ListApplicablePolicies(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -434,8 +400,7 @@ namespace Google.Cloud.Iam.V2 {
       ///
       /// To update a policy, you should use a read-modify-write loop:
       ///
-      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-      /// version of the policy.
+      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
       /// 2. Modify the policy as needed.
       /// 3. Use `UpdatePolicy` to write the updated policy.
       ///
@@ -458,8 +423,7 @@ namespace Google.Cloud.Iam.V2 {
       ///
       /// To update a policy, you should use a read-modify-write loop:
       ///
-      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-      /// version of the policy.
+      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
       /// 2. Modify the policy as needed.
       /// 3. Use `UpdatePolicy` to write the updated policy.
       ///
@@ -480,8 +444,7 @@ namespace Google.Cloud.Iam.V2 {
       ///
       /// To update a policy, you should use a read-modify-write loop:
       ///
-      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-      /// version of the policy.
+      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
       /// 2. Modify the policy as needed.
       /// 3. Use `UpdatePolicy` to write the updated policy.
       ///
@@ -504,8 +467,7 @@ namespace Google.Cloud.Iam.V2 {
       ///
       /// To update a policy, you should use a read-modify-write loop:
       ///
-      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-      /// version of the policy.
+      /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
       /// 2. Modify the policy as needed.
       /// 3. Use `UpdatePolicy` to write the updated policy.
       ///
@@ -567,90 +529,6 @@ namespace Google.Cloud.Iam.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePolicy, null, options, request);
       }
-      /// <summary>
-      /// Retrieves all the policies that are attached to the specified resource,
-      /// or anywhere in the ancestry of the resource. For example, for a project
-      /// this endpoint would return all the `denyPolicy` kind policies attached to
-      /// the project, its parent folder (if any), and its parent organization (if
-      /// any).
-      /// The endpoint requires the same permissions that it would take to call
-      /// `ListPolicies` or `GetPolicy`.
-      ///
-      /// The main reason to use this endpoint is as a policy admin to debug access
-      /// issues for a resource.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse ListApplicablePolicies(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListApplicablePolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves all the policies that are attached to the specified resource,
-      /// or anywhere in the ancestry of the resource. For example, for a project
-      /// this endpoint would return all the `denyPolicy` kind policies attached to
-      /// the project, its parent folder (if any), and its parent organization (if
-      /// any).
-      /// The endpoint requires the same permissions that it would take to call
-      /// `ListPolicies` or `GetPolicy`.
-      ///
-      /// The main reason to use this endpoint is as a policy admin to debug access
-      /// issues for a resource.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse ListApplicablePolicies(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListApplicablePolicies, null, options, request);
-      }
-      /// <summary>
-      /// Retrieves all the policies that are attached to the specified resource,
-      /// or anywhere in the ancestry of the resource. For example, for a project
-      /// this endpoint would return all the `denyPolicy` kind policies attached to
-      /// the project, its parent folder (if any), and its parent organization (if
-      /// any).
-      /// The endpoint requires the same permissions that it would take to call
-      /// `ListPolicies` or `GetPolicy`.
-      ///
-      /// The main reason to use this endpoint is as a policy admin to debug access
-      /// issues for a resource.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse> ListApplicablePoliciesAsync(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListApplicablePoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves all the policies that are attached to the specified resource,
-      /// or anywhere in the ancestry of the resource. For example, for a project
-      /// this endpoint would return all the `denyPolicy` kind policies attached to
-      /// the project, its parent folder (if any), and its parent organization (if
-      /// any).
-      /// The endpoint requires the same permissions that it would take to call
-      /// `ListPolicies` or `GetPolicy`.
-      ///
-      /// The main reason to use this endpoint is as a policy admin to debug access
-      /// issues for a resource.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse> ListApplicablePoliciesAsync(global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListApplicablePolicies, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PoliciesClient NewInstance(ClientBaseConfiguration configuration)
@@ -669,8 +547,7 @@ namespace Google.Cloud.Iam.V2 {
           .AddMethod(__Method_GetPolicy, serviceImpl.GetPolicy)
           .AddMethod(__Method_CreatePolicy, serviceImpl.CreatePolicy)
           .AddMethod(__Method_UpdatePolicy, serviceImpl.UpdatePolicy)
-          .AddMethod(__Method_DeletePolicy, serviceImpl.DeletePolicy)
-          .AddMethod(__Method_ListApplicablePolicies, serviceImpl.ListApplicablePolicies).Build();
+          .AddMethod(__Method_DeletePolicy, serviceImpl.DeletePolicy).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -685,7 +562,6 @@ namespace Google.Cloud.Iam.V2 {
       serviceBinder.AddMethod(__Method_CreatePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V2.CreatePolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePolicy));
       serviceBinder.AddMethod(__Method_UpdatePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V2.UpdatePolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePolicy));
       serviceBinder.AddMethod(__Method_DeletePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V2.DeletePolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePolicy));
-      serviceBinder.AddMethod(__Method_ListApplicablePolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V2.ListApplicablePoliciesRequest, global::Google.Cloud.Iam.V2.ListApplicablePoliciesResponse>(serviceImpl.ListApplicablePolicies));
     }
 
   }

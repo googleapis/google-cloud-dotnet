@@ -28,12 +28,6 @@
                 "GetPolicyAsync"
               ]
             },
-            "ListApplicablePolicies": {
-              "methods": [
-                "ListApplicablePolicies",
-                "ListApplicablePoliciesAsync"
-              ]
-            },
             "ListPolicies": {
               "methods": [
                 "ListPolicies",

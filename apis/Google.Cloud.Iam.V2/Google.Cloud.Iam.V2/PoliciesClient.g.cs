@@ -54,7 +54,6 @@ namespace Google.Cloud.Iam.V2
             UpdatePolicyOperationsSettings = existing.UpdatePolicyOperationsSettings.Clone();
             DeletePolicySettings = existing.DeletePolicySettings;
             DeletePolicyOperationsSettings = existing.DeletePolicyOperationsSettings.Clone();
-            ListApplicablePoliciesSettings = existing.ListApplicablePoliciesSettings;
             OnCopy(existing);
         }
 
@@ -203,18 +202,6 @@ namespace Google.Cloud.Iam.V2
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PoliciesClient.ListApplicablePolicies</c> and <c>PoliciesClient.ListApplicablePoliciesAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListApplicablePoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PoliciesSettings"/> object.</returns>
@@ -389,8 +376,9 @@ namespace Google.Cloud.Iam.V2
         /// omitted.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource that the policy is attached to, along with the kind
-        /// of policy to list. Format: `policies/{attachment_point}/denypolicies`
+        /// Required. The resource that the policy is attached to, along with the kind of policy
+        /// to list. Format:
+        /// `policies/{attachment_point}/denypolicies`
         /// 
         /// 
         /// The attachment point is identified by its URL-encoded full resource name,
@@ -427,8 +415,9 @@ namespace Google.Cloud.Iam.V2
         /// omitted.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource that the policy is attached to, along with the kind
-        /// of policy to list. Format: `policies/{attachment_point}/denypolicies`
+        /// Required. The resource that the policy is attached to, along with the kind of policy
+        /// to list. Format:
+        /// `policies/{attachment_point}/denypolicies`
         /// 
         /// 
         /// The attachment point is identified by its URL-encoded full resource name,
@@ -607,8 +596,8 @@ namespace Google.Cloud.Iam.V2
         /// Creates a policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource that the policy is attached to, along with the kind
-        /// of policy to create. Format: `policies/{attachment_point}/denypolicies`
+        /// Required. The resource that the policy is attached to, along with the kind of policy
+        /// to create. Format: `policies/{attachment_point}/denypolicies`
         /// 
         /// 
         /// The attachment point is identified by its URL-encoded full resource name,
@@ -642,8 +631,8 @@ namespace Google.Cloud.Iam.V2
         /// Creates a policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource that the policy is attached to, along with the kind
-        /// of policy to create. Format: `policies/{attachment_point}/denypolicies`
+        /// Required. The resource that the policy is attached to, along with the kind of policy
+        /// to create. Format: `policies/{attachment_point}/denypolicies`
         /// 
         /// 
         /// The attachment point is identified by its URL-encoded full resource name,
@@ -677,8 +666,8 @@ namespace Google.Cloud.Iam.V2
         /// Creates a policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource that the policy is attached to, along with the kind
-        /// of policy to create. Format: `policies/{attachment_point}/denypolicies`
+        /// Required. The resource that the policy is attached to, along with the kind of policy
+        /// to create. Format: `policies/{attachment_point}/denypolicies`
         /// 
         /// 
         /// The attachment point is identified by its URL-encoded full resource name,
@@ -710,8 +699,7 @@ namespace Google.Cloud.Iam.V2
         /// 
         /// To update a policy, you should use a read-modify-write loop:
         /// 
-        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-        /// version of the policy.
+        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
         /// 2. Modify the policy as needed.
         /// 3. Use `UpdatePolicy` to write the updated policy.
         /// 
@@ -730,8 +718,7 @@ namespace Google.Cloud.Iam.V2
         /// 
         /// To update a policy, you should use a read-modify-write loop:
         /// 
-        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-        /// version of the policy.
+        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
         /// 2. Modify the policy as needed.
         /// 3. Use `UpdatePolicy` to write the updated policy.
         /// 
@@ -750,8 +737,7 @@ namespace Google.Cloud.Iam.V2
         /// 
         /// To update a policy, you should use a read-modify-write loop:
         /// 
-        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-        /// version of the policy.
+        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
         /// 2. Modify the policy as needed.
         /// 3. Use `UpdatePolicy` to write the updated policy.
         /// 
@@ -907,116 +893,6 @@ namespace Google.Cloud.Iam.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Policy, PolicyOperationMetadata>> DeletePolicyAsync(string name, st::CancellationToken cancellationToken) =>
             DeletePolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePolicies(ListApplicablePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePoliciesAsync(ListApplicablePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="attachmentPoint">
-        /// Required. The Cloud resource at which the applicable policies are to be
-        /// retrieved. Format: `{attachment-point}` Use the URL-encoded full resource
-        /// name, which means that the forward-slash character, `/`, must be written as
-        /// `%2F`. For example,
-        /// `cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePolicies(string attachmentPoint, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplicablePolicies(new ListApplicablePoliciesRequest
-            {
-                AttachmentPoint = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentPoint, nameof(attachmentPoint)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="attachmentPoint">
-        /// Required. The Cloud resource at which the applicable policies are to be
-        /// retrieved. Format: `{attachment-point}` Use the URL-encoded full resource
-        /// name, which means that the forward-slash character, `/`, must be written as
-        /// `%2F`. For example,
-        /// `cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePoliciesAsync(string attachmentPoint, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApplicablePoliciesAsync(new ListApplicablePoliciesRequest
-            {
-                AttachmentPoint = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentPoint, nameof(attachmentPoint)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
     }
 
     /// <summary>Policies client wrapper implementation, for convenient use.</summary>
@@ -1034,8 +910,6 @@ namespace Google.Cloud.Iam.V2
         private readonly gaxgrpc::ApiCall<UpdatePolicyRequest, lro::Operation> _callUpdatePolicy;
 
         private readonly gaxgrpc::ApiCall<DeletePolicyRequest, lro::Operation> _callDeletePolicy;
-
-        private readonly gaxgrpc::ApiCall<ListApplicablePoliciesRequest, ListApplicablePoliciesResponse> _callListApplicablePolicies;
 
         /// <summary>
         /// Constructs a client wrapper for the Policies service, with the specified gRPC client and settings.
@@ -1066,9 +940,6 @@ namespace Google.Cloud.Iam.V2
             _callDeletePolicy = clientHelper.BuildApiCall<DeletePolicyRequest, lro::Operation>("DeletePolicy", grpcClient.DeletePolicyAsync, grpcClient.DeletePolicy, effectiveSettings.DeletePolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePolicy);
             Modify_DeletePolicyApiCall(ref _callDeletePolicy);
-            _callListApplicablePolicies = clientHelper.BuildApiCall<ListApplicablePoliciesRequest, ListApplicablePoliciesResponse>("ListApplicablePolicies", grpcClient.ListApplicablePoliciesAsync, grpcClient.ListApplicablePolicies, effectiveSettings.ListApplicablePoliciesSettings).WithGoogleRequestParam("attachment_point", request => request.AttachmentPoint);
-            Modify_ApiCall(ref _callListApplicablePolicies);
-            Modify_ListApplicablePoliciesApiCall(ref _callListApplicablePolicies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1084,8 +955,6 @@ namespace Google.Cloud.Iam.V2
 
         partial void Modify_DeletePolicyApiCall(ref gaxgrpc::ApiCall<DeletePolicyRequest, lro::Operation> call);
 
-        partial void Modify_ListApplicablePoliciesApiCall(ref gaxgrpc::ApiCall<ListApplicablePoliciesRequest, ListApplicablePoliciesResponse> call);
-
         partial void OnConstruction(Policies.PoliciesClient grpcClient, PoliciesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Policies client</summary>
@@ -1100,8 +969,6 @@ namespace Google.Cloud.Iam.V2
         partial void Modify_UpdatePolicyRequest(ref UpdatePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePolicyRequest(ref DeletePolicyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListApplicablePoliciesRequest(ref ListApplicablePoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves the policies of the specified kind that are attached to a
@@ -1196,8 +1063,7 @@ namespace Google.Cloud.Iam.V2
         /// 
         /// To update a policy, you should use a read-modify-write loop:
         /// 
-        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-        /// version of the policy.
+        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
         /// 2. Modify the policy as needed.
         /// 3. Use `UpdatePolicy` to write the updated policy.
         /// 
@@ -1219,8 +1085,7 @@ namespace Google.Cloud.Iam.V2
         /// 
         /// To update a policy, you should use a read-modify-write loop:
         /// 
-        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current
-        /// version of the policy.
+        /// 1. Use [GetPolicy][google.iam.v2.Policies.GetPolicy] to read the current version of the policy.
         /// 2. Modify the policy as needed.
         /// 3. Use `UpdatePolicy` to write the updated policy.
         /// 
@@ -1261,67 +1126,13 @@ namespace Google.Cloud.Iam.V2
             Modify_DeletePolicyRequest(ref request, ref callSettings);
             return new lro::Operation<Policy, PolicyOperationMetadata>(await _callDeletePolicy.Async(request, callSettings).ConfigureAwait(false), DeletePolicyOperationsClient);
         }
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Policy"/> resources.</returns>
-        public override gax::PagedEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePolicies(ListApplicablePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListApplicablePoliciesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListApplicablePoliciesRequest, ListApplicablePoliciesResponse, Policy>(_callListApplicablePolicies, request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves all the policies that are attached to the specified resource,
-        /// or anywhere in the ancestry of the resource. For example, for a project
-        /// this endpoint would return all the `denyPolicy` kind policies attached to
-        /// the project, its parent folder (if any), and its parent organization (if
-        /// any).
-        /// The endpoint requires the same permissions that it would take to call
-        /// `ListPolicies` or `GetPolicy`.
-        /// 
-        /// The main reason to use this endpoint is as a policy admin to debug access
-        /// issues for a resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Policy"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListApplicablePoliciesResponse, Policy> ListApplicablePoliciesAsync(ListApplicablePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListApplicablePoliciesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListApplicablePoliciesRequest, ListApplicablePoliciesResponse, Policy>(_callListApplicablePolicies, request, callSettings);
-        }
     }
 
     public partial class ListPoliciesRequest : gaxgrpc::IPageRequest
     {
     }
 
-    public partial class ListApplicablePoliciesRequest : gaxgrpc::IPageRequest
-    {
-    }
-
     public partial class ListPoliciesResponse : gaxgrpc::IPageResponse<Policy>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Policy> GetEnumerator() => Policies.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListApplicablePoliciesResponse : gaxgrpc::IPageResponse<Policy>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Policy> GetEnumerator() => Policies.GetEnumerator();
