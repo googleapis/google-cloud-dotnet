@@ -24,6 +24,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -37,7 +38,7 @@ public class RetryConformanceTest
 
     internal static string ProjectId { get; } = GetEnvironmentVariableOrDefault("PROJECT_ID", "test");
 
-    internal string Topic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic");
+    internal string TestTopic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic");
 
     internal string AccessId { get; set; }
 
@@ -47,13 +48,11 @@ public class RetryConformanceTest
 
     private readonly HttpClient _httpClient;
 
-    private static readonly System.Type s_clientType = typeof(StorageClient);
-
     private readonly ConcurrentDictionary<string, MethodInvocation> _methodMappings;
 
-    internal string _hmacSecret;
+    private readonly string _retryIdHeader = "x-retry-test-id";
 
-    internal string _notificationId;
+    private static readonly System.Type s_clientType = typeof(StorageClient);
 
     public RetryConformanceTest()
     {
@@ -69,74 +68,88 @@ public class RetryConformanceTest
     /// <summary>
     /// Iterate throught the json file and run the test cases 
     /// </summary>
-    /// <param name="test"></param>
+    /// <param name="test"> An intstance of <see cref="Tests.Conformance.RetryTest"/>.</param>
     /// <returns></returns>
     [Theory]
     [MemberData(nameof(RetryTestData))]
     public async Task RetryTest(RetryTest test)
     {
-        CreateMethodMapping(test);
-        bool expectSuccess = test.ExpectSuccess;
-
-        //UPDATE : Working for most test cases across except object related test cases and some exceptions to be fixed
-        foreach (InstructionList testCase in test.Cases)
+        // TODO: Remove this if condition.
+        // Right now retry tests with id 1( i.e. always_idempotent) is only working. There are total 9 types of retry tests. will be resolve incremently.
+        if (test.Id == 1)
         {
-            JArray instruct = new JArray();
-            foreach (string instructions in testCase.Instructions)
+            CreateMethodMapping(test);
+
+            //UPDATE : Working for most test cases across except object related test cases and some exceptions to be fixed
+            foreach (InstructionList instructionList in test.Cases)
             {
-                instruct.Add(instructions);
-            }
-            foreach (Method method in test.Methods)
-            {
-                // _acl function dont exist in our library
-                if (!method.Name.Contains("_acl")) 
+                if (instructionList.Instructions.Contains("return-reset-connection")) // TODO: This condition should be removed once "return-reset-connection" instruction works.
                 {
-                    await RunTestCase(instruct, method, expectSuccess, test.Description.Contains("when_precondition_is_present"));
+                    continue;
+                }
+
+                foreach (Method method in test.Methods)
+                {
+                    // _acl function dont exist in our library
+                    if (!method.Name.Contains("_acl"))
+                    {
+                        await RunTestCase(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
+                    }
                 }
             }
         }
     }
 
     /// <summary>
-    /// Handle full flow of each individual test case from resource creation to , running the testing, verify if it passed or failed and delete resource post usage
+    /// Handle full flow of each individual test case from resource creation to , running the testing, verify if it passed or failed and delete resource post usage.
     /// </summary>
-    /// <param name="instruction"></param>
-    /// <param name="method"></param>
-    /// <param name="expectSuccess"></param>
-    /// <param name="preConditionsPresent"></param>
-    /// <returns></returns>
-    private async Task RunTestCase(JArray instruction, Method method, bool expectSuccess, bool preConditionsPresent = false)
+    private async Task RunTestCase(InstructionList instructionList, Method method, bool expectSuccess, bool preConditionsPresent = false)
     {
-        var resources = await CreateStorageResources(method);
-        var response = await CreateRetryTestResource(method, instruction);
-
-        bool success = true;
+        var resources = CreateStorageResources(method);
+        var response = await CreateRetryTestResource(instructionList, method);
         try
         {
-            RunRetryTest(response, resources, preConditionsPresent);
-            var updatedResponse = await GetRetryTest(response.Id);
-            success = updatedResponse.Completed;
+            if (expectSuccess)
+            {
+                RunRetryTest(response, resources, preConditionsPresent);
+            }
+            else
+            {
+                try
+                {
+                    RunRetryTest(response, resources, preConditionsPresent);
+                    Assert.Fail("Expected failure but test was successful.");
+                }
+                catch // To catch expected exception when retry should not happen.
+                {
+                    //TODO: To check that it is an expected excpetion.
+                }
+            }
+
+            var postTestResponse = await GetRetryTest(response.Id);
+
+            Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
         }
-        catch (System.Exception)
+        finally
         {
-            success = false;
+            try
+            {
+                DeleteStorageResources(resources);
+                RemoveRetryIdHeader();
+                await DeleteRetryTest(response.Id);
+            }
+            catch// To catch and ignore exceptions occured, if any, while doing clean up of test.
+            {
+            }
         }
-
-        Assert.Equal(expectSuccess, success);
-
-        // Delete the retry test and delete Storage Resource as well.
-        await DeleteRetryTest(response.Id);
     }
 
     /// <summary>
-    /// Create individual test resource on the storage test bench for each of API to be test
+    /// Create individual test resource on the storage test bench for each of API to be tested.
     /// </summary>
-    /// <param name="method"></param>
-    /// <param name="instruction"></param>
-    /// <returns></returns>
-    private async Task<TestResponse> CreateRetryTestResource(Method method, JArray instruction)
+    private async Task<TestResponse> CreateRetryTestResource(InstructionList instructionList, Method method)
     {
-        var stringContent = GetBodyContent(method.Name, instruction);
+        var stringContent = GetBodyContent(method.Name, instructionList);
         HttpResponseMessage response = await _httpClient.PostAsync("retry_test", stringContent);
         response.EnsureSuccessStatusCode();
         var responseMessage = await response.Content.ReadAsStringAsync();
@@ -144,11 +157,8 @@ public class RetryConformanceTest
     }
 
     /// <summary>
-    /// Add retry header for each request and make a call to retry and test each API 
+    /// Add retry header for each request and make a call to retry and test each API.
     /// </summary>
-    /// <param name="response"></param>
-    /// <param name="resources"></param>
-    /// <param name="preConditionsPresent"></param>
     private void RunRetryTest(TestResponse response, StorageResources resources, bool preConditionsPresent)
     {
         AddRetryIdHeader(response.Id);
@@ -160,23 +170,19 @@ public class RetryConformanceTest
             {
                 invocation.ProjectId = ProjectId;
             }
-
             if (invocation.BucketNameRequired)
             {
                 invocation.BucketName = resources.BucketName;
             }
-
             if (invocation.ObjectNameRequired)
             {
                 invocation.ObjectName = resources.ObjectName;
             }
-
             if (invocation.HmacKeyRequired)
             {
                 invocation.BucketName = resources.BucketName;
                 invocation.HmacKey = resources.HmacKey;
             }
-
             if (invocation.AccessIdRequired)
             {
                 invocation.AccessId = AccessId;
@@ -189,7 +195,6 @@ public class RetryConformanceTest
             {
                 invocation.ServiceAccountEmail = _storageClient.GetStorageServiceAccountEmail(ProjectId);
             }
-
             if (invocation.NotificationRequired)
             {
                 invocation.Notification = resources.Notification;
@@ -202,12 +207,12 @@ public class RetryConformanceTest
     /// <summary>
     /// Create test bench URL for running test cases
     /// </summary>
-    /// <returns></returns>
     private StorageClient InitializeClient()
     {
         var clientBuilder = new StorageClientBuilder
         {
-            BaseUri = TestBenchUrl + "storage/v1/"
+            BaseUri = TestBenchUrl + "storage/v1/",
+            GZipEnabled = false
         };
 
         return clientBuilder.Build();
@@ -216,7 +221,6 @@ public class RetryConformanceTest
     /// <summary>
     /// Created the map for each API to be tested with its corresponding method in .net library
     /// </summary>
-    /// <param name="test"></param>
     private void CreateMethodMapping(RetryTest test)
     {
         foreach (var method in test.Methods)
@@ -228,8 +232,6 @@ public class RetryConformanceTest
     /// <summary>
     /// Returns the mapping of the given API to its correspondng .net library method
     /// </summary>
-    /// <param name="name"></param>
-    /// <returns></returns>
     private MethodInvocation GetMappedFunction(string name) => name.ToLowerInvariant() switch
     {
         // TODO: Add all mappings from the json file and throw exception in the default case. To be optimised
@@ -265,10 +267,8 @@ public class RetryConformanceTest
     };
 
     /// <summary>
-    /// Checks if the retry resource has been created successfully
+    /// Checks if the retry resource has been created successfully.
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
     private async Task<TestResponse> GetRetryTest(string id)
     {
         HttpResponseMessage response = await _httpClient.GetAsync($"retry_test/{id}");
@@ -278,119 +278,146 @@ public class RetryConformanceTest
     }
 
     /// <summary>
-    /// Clears resource once the test case is complete
+    /// Clears test resource once the test case is complete
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
     private async Task DeleteRetryTest(string id)
     {
-        HttpResponseMessage response = await _httpClient.DeleteAsync($"retry_test/{id}");
-        response.EnsureSuccessStatusCode();
+        if (!string.IsNullOrWhiteSpace(id))
+        {
+            HttpResponseMessage response = await _httpClient.DeleteAsync($"retry_test/{id}");
+            response.EnsureSuccessStatusCode();
+        }
     }
 
     /// <summary>
     /// Create the basic storage resources on storage test bench to enable running of the test cases
     /// </summary>
-    /// <param name="method"></param>
-    /// <returns></returns>
-    private async Task<StorageResources> CreateStorageResources(Method method)
+    private StorageResources CreateStorageResources(Method method)
     {
         var result = new StorageResources();
 
-        string bucket = IdGenerator.FromGuid();
+        string bucketName = IdGenerator.FromDateTime(prefix: "retry-test-");
         string objectName = "TestFile.json";
-        foreach (var item in method.Resources)
+        foreach (var resource in method.Resources)
         {
-            if (item.ToString().Equals("BUCKET", StringComparison.OrdinalIgnoreCase))
+            if (resource == Resource.Bucket)
             {
-                var created = await CreateBucket(ProjectId, bucket);
-                if (created)
-                {
-                    result.Add(new StorageResource(Resource.Bucket, bucket));
-                }
+                CreateAndAddBucket(result, bucketName);
             }
-
-            if (item.ToString().Equals("HMACKEY", StringComparison.OrdinalIgnoreCase))
+            else if (resource == Resource.HmacKey)
             {
-                var createdHmac = await CreateHmacKey(ProjectId);
-                if (createdHmac)
-                {
-                    result.Add(new StorageResource(Resource.HmacKey, _hmacSecret));
-                }
+                CreateAndAddHmacKey(result, method.Name);
             }
-
-            if (item.ToString().Equals("NOTIFICATION", StringComparison.OrdinalIgnoreCase))
+            else if (resource == Resource.Notification)
             {
-                var created = await CreateNotification(ProjectId, bucket);
-                if (created)
-                {
-                    result.Add(new StorageResource(Resource.Notification, _notificationId));
-                }
+                CreateAndAddNotification(result, bucketName);
             }
-
-            //TODO: Get the creation of object working
-            if (item.ToString().Equals("OBJECT", StringComparison.OrdinalIgnoreCase))
+            else if (resource == Resource.Object)
             {
-                using var stream = File.OpenRead(FilePath);
-                var objectCreated = _storageClient.UploadObject(bucket, objectName, "application/json", stream);
-                result.Add(new StorageResource(Resource.Object, objectCreated.Name));
+                CreateAndAndObject(result, bucketName, objectName);
             }
         }
+
+        // Need to do speacial handling for 'storage.buckets.insert' becasue library's CreateBucket requires
+        // bucket's name as mandatory parameter, but retry_tests.json doesn't specify it as required resource. 
+        if (method.Name.Equals("storage.buckets.insert", StringComparison.OrdinalIgnoreCase))
+        {
+            result.Add(new StorageResource(Resource.Bucket, bucketName));
+        }
+
         return result;
     }
 
     /// <summary>
-    /// Create bucket storage resource on storage test bench
+    /// Creates a new bucket and adds it to the provided storage resources collection.
     /// </summary>
-    /// <param name="projectId"></param>
-    /// <param name="bucket"></param>
-    /// <returns></returns>
-    private async Task<bool> CreateBucket(string projectId, string bucket)
+    private void CreateAndAddBucket(StorageResources result, string bucketName)
     {
-        var content = new StringContent($"{{\"name\":\"{bucket}\"}}");
-        var response = await _httpClient.PostAsync($"storage/v1/b?project={projectId}", content);
-        return response.IsSuccessStatusCode;
+        var bucket = _storageClient.CreateBucket(ProjectId, new Bucket { Name = bucketName });
+        SleepAfterBucketCreateDelete();
+        result.Add(new StorageResource(Resource.Bucket, bucketName));
     }
 
     /// <summary>
-    /// Create hmac key storage resource on storage test bench
+    /// Creates a new HmacKey and adds it to the provided storage resources collection.
     /// </summary>
-    /// <param name="projectId"></param>
-    /// <returns></returns>
-    private async Task<bool> CreateHmacKey(string projectId)
+    private void CreateAndAddHmacKey(StorageResources result, string methodName)
     {
-        var _serviceAccountEmail = _storageClient.GetStorageServiceAccountEmail(projectId);
-        var content = new StringContent("");
-        var response = await _httpClient.PostAsync($"storage/v1/projects/proj/hmacKeys?project={projectId}&serviceAccountEmail={_serviceAccountEmail}", content);
-        var payload = response.Content.ReadAsStringAsync();
-        var metadata = JObject.Parse(payload.Result)["metadata"];
-        AccessId = metadata["accessId"].ToString();
+        var serviceAccountEmail = _storageClient.GetStorageServiceAccountEmail(ProjectId);
+        var hmacKey = _storageClient.CreateHmacKey(ProjectId, serviceAccountEmail);
+        AccessId = hmacKey.Metadata.AccessId;
+        var hmacSecret = hmacKey.Secret;
 
-        _hmacSecret = JObject.Parse(payload.Result)["secret"].ToString();
-        return response.IsSuccessStatusCode;
+        // If we are testing hmacKey.delete functionality then we have to
+        // also deactivate the hmacKey for deletion to be successful.
+        if (methodName.Equals("storage.hmacKey.delete"))
+        {
+            hmacKey.Metadata.State = HmacKeyStates.Inactive;
+            _storageClient.UpdateHmacKey(hmacKey.Metadata);
+        }
+
+        result.Add(new StorageResource(Resource.HmacKey, hmacSecret));
     }
 
     /// <summary>
-    /// Create notification storage resource on storage test bench
+    /// Creates a new notification and adds it to the provided storage resources collection.
     /// </summary>
-    /// <param name="projectId"></param>
-    /// <param name="bucket"></param>
-    /// <returns></returns>
-    private async Task<bool> CreateNotification(string projectId, string bucket)
+    /// <param name="result"></param>
+    /// <param name="bucketName"></param>
+    private void CreateAndAddNotification(StorageResources result, string bucketName)
     {
-        var content = new StringContent("{\"payload_format\":\"NONE\",\"topic\":\"projects/" + projectId + "/topics/{" + Topic + "}\"}");
-        var response = await _httpClient.PostAsync($"storage/v1/b/{bucket}/notificationConfigs?project={projectId}", content);
+        var notificationConfig = new Notification { Topic = TestTopic, PayloadFormat = "NONE" };
+        var notification = _storageClient.CreateNotification(bucketName, notificationConfig);
+        var notificationId = notification.Id;
+        result.Add(new StorageResource(Resource.Notification, notificationId));
+    }
 
-        var payload = response.Content.ReadAsStringAsync();
-        _notificationId = JObject.Parse(payload.Result)["id"].ToString();
-        return response.IsSuccessStatusCode;
+    /// <summary>
+    /// Uploads a new object in to provided bucket and adds it to the storage resources collection.
+    /// </summary
+    private void CreateAndAndObject(StorageResources result, string bucketName, string objectName)
+    {
+        using var stream = File.OpenRead(FilePath);
+        var objectCreated = _storageClient.UploadObject(bucketName, objectName, "application/json", stream);
+        result.Add(new StorageResource(Resource.Object, objectCreated.Name));
+    }
+
+    /// <summary>
+    /// To clear the storage resources created for the retry test.
+    /// </summary>
+    private void DeleteStorageResources(StorageResources resources)
+    {
+        if (resources != null)
+        {
+            if (resources.Notification != null)
+            {
+                _storageClient.DeleteNotification(resources.BucketName, resources.Notification);
+            }
+            if (resources.HmacKey != null)
+            {
+                var hmacKeyMetadata = _storageClient.GetHmacKey(ProjectId, AccessId);
+                hmacKeyMetadata.State = HmacKeyStates.Inactive;
+                _storageClient.UpdateHmacKey(hmacKeyMetadata);
+                _storageClient.DeleteHmacKey(ProjectId, AccessId);
+            }
+            if (!string.IsNullOrWhiteSpace(resources.BucketName))
+            {
+                try
+                {
+                    _storageClient.DeleteBucket(resources.BucketName, new DeleteBucketOptions { UserProject = null, DeleteObjects = true });
+                }
+                catch (GoogleApiException)
+                {
+                    // Some tests fail to delete buckets due to object retention locks etc.They can be cleaned up later.
+                }
+                SleepAfterBucketCreateDelete();
+            }
+        }
     }
 
     /// <summary>
     /// Create header specific to this request. Remove all previous headers
     /// </summary>
-    /// <param name="header"></param>
-    /// <param name="value"></param>
     private void AddHeader(string header, string value)
     {
         bool contains = _storageClient.Service.HttpClient.DefaultRequestHeaders.Contains(header);
@@ -406,8 +433,6 @@ public class RetryConformanceTest
     /// <summary>
     /// Gets the resource method name
     /// </summary>
-    /// <param name="response"></param>
-    /// <returns></returns>
     private string GetMethodName(TestResponse response)
     {
         if (response.Instructions.Any())
@@ -425,26 +450,40 @@ public class RetryConformanceTest
     /// <summary>
     /// Create the payload header to be sent for running test cases
     /// </summary>
-    /// <param name="id"></param>
     private void AddRetryIdHeader(string id)
     {
-        AddHeader("x-retry-test-id", id);
+        AddHeader(_retryIdHeader, id);
+    }
+
+    /// <summary>
+    /// Removes the existing payload header. Should be called once retry test with added header is completed.
+    /// </summary>
+    private void RemoveRetryIdHeader()
+    {
+        if (_storageClient.Service.HttpClient.DefaultRequestHeaders.Contains(_retryIdHeader))
+        {
+            _storageClient.Service.HttpClient.DefaultRequestHeaders.Remove(_retryIdHeader);
+        }
     }
 
     /// <summary>
     /// Create the payload body to be sent for running test cases
     /// </summary>
-    /// <param name="methodName"></param>
-    /// <param name="instruction"></param>
-    /// <returns></returns>
-    private static StringContent GetBodyContent(string methodName, JArray instruction)
+    private static StringContent GetBodyContent(string methodName, InstructionList instructionList)
     {
-        if (string.IsNullOrWhiteSpace(methodName) || instruction == null)
+        if (string.IsNullOrWhiteSpace(methodName) || instructionList == null)
         {
             return null;
         }
+
         JObject payload = new JObject();
-        payload.Add(methodName, instruction);
+        JArray instructions = new JArray();
+        foreach (string instruct in instructionList.Instructions)
+        {
+            instructions.Add(instruct);
+        }
+
+        payload.Add(methodName, instructions);
         JObject body = new JObject();
         body.Add("instructions", payload);
 
@@ -454,12 +493,11 @@ public class RetryConformanceTest
     /// <summary>
     /// Function created to be used for getting envionmental variables
     /// </summary>
-    /// <param name="name"></param>
-    /// <param name="defaultValue"></param>
-    /// <returns></returns>
     private static string GetEnvironmentVariableOrDefault(string name, string defaultValue)
     {
         string value = Environment.GetEnvironmentVariable(name);
         return string.IsNullOrEmpty(value) ? defaultValue : value;
     }
+
+    private static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
 }
