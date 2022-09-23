@@ -27,6 +27,24 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public class GenerateProjectsCommand : CommandBase
     {
+        private const string ProductDocumentationStub = @"{{title}}
+
+{{description}}
+
+{{version}}
+
+{{installation}}
+
+{{auth}}
+
+## Getting started
+
+{{client-classes}}
+
+{{client-construction}}
+";
+        private const string NonProductDocumentationStub = "{{non-product-stub}}";
+
         /// <summary>
         /// In "new major version mode", *all* references between different APIs become project references
         /// in the csproj file, and all GAX/gRPC references are treated as being for the default versions,
@@ -444,31 +462,32 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static void GenerateDocumentationStub(string apiRoot, ApiMetadata api)
         {
             string file = Path.Combine(apiRoot, "docs", "index.md");
-            if (File.Exists(file))
+            bool isProduct = api.ProductName != null && api.ProductUrl != null;
+
+            // Situations to handle:
+            // - File doesn't exist: create the right stub
+            // - File exists, and is the correct stub: do nothing
+            // - File exists, and isn't a stub at all: do nothing
+            // - File exists, but is the wrong stub: fix it
+
+            if (!File.Exists(file))
             {
+                Directory.CreateDirectory(Path.GetDirectoryName(file));
+                File.WriteAllText(file, isProduct ? ProductDocumentationStub : NonProductDocumentationStub);
+                Console.WriteLine($"Generated documentation stub for {api.Id}");
                 return;
             }
-            Directory.CreateDirectory(Path.GetDirectoryName(file));
-            string stub = api.ProductName != null && api.ProductUrl != null ?
-@"{{title}}
 
-{{description}}
+            string currentTextNormalized = File.ReadAllText(file).Replace("\r\n", "\n");
+            bool currentTextIsProductStub = currentTextNormalized == ProductDocumentationStub.Replace("\r\n", "\n");
+            bool currentTextIsNonProductStub = currentTextNormalized == NonProductDocumentationStub.Replace("\r\n", "\n");
 
-{{version}}
-
-{{installation}}
-
-{{auth}}
-
-## Getting started
-
-{{client-classes}}
-
-{{client-construction}}
-"
-: "{{non-product-stub}}";
-            File.WriteAllText(file, stub);
-            Console.WriteLine($"Generated documentation stub for {api.Id}");
+            if ((currentTextIsProductStub && !isProduct) ||
+                (currentTextIsNonProductStub && isProduct))
+            {
+                File.WriteAllText(file, isProduct ? ProductDocumentationStub : NonProductDocumentationStub);
+                Console.WriteLine($"Fixed documentation stub for {api.Id}");
+            }
         }
 
         private static void GenerateOwlBotConfiguration(string apiRoot, ApiMetadata api)
