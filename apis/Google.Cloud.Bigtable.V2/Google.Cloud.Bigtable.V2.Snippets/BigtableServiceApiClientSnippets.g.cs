@@ -39,6 +39,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 Filter = new RowFilter(),
                 RowsLimit = 0L,
                 AppProfileId = "",
+                RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
             };
             // Make the request, returning a streaming response
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
