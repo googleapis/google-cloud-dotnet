@@ -292,8 +292,6 @@ namespace Google.Cloud.Language.V1 {
 
   #region Messages
   /// <summary>
-  /// ################################################################ #
-  ///
   /// Represents the input to API methods.
   /// </summary>
   public sealed partial class Document : pb::IMessage<Document>
@@ -747,8 +745,8 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeSentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
-    /// is set to true, this field will contain the sentiment for the sentence.
+    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
+    /// true, this field will contain the sentiment for the sentence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1076,9 +1074,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
-    /// is set to true, this field will contain the aggregate sentiment expressed
-    /// for this entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
+    /// true, this field will contain the aggregate sentiment expressed for this
+    /// entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3739,9 +3737,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
-    /// is set to true, this field will contain the sentiment expressed for this
-    /// mention of the entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
+    /// true, this field will contain the sentiment expressed for this mention of
+    /// the entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4045,9 +4043,7 @@ namespace Google.Cloud.Language.V1 {
     private int beginOffset_;
     /// <summary>
     /// The API calculates the beginning offset of the content in the original
-    /// document according to the
-    /// [EncodingType][google.cloud.language.v1.EncodingType] specified in the API
-    /// request.
+    /// document according to the [EncodingType][google.cloud.language.v1.EncodingType] specified in the API request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5448,8 +5444,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field
-    /// for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5966,8 +5961,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field
-    /// for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6437,8 +6431,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field
-    /// for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6923,8 +6916,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field
-    /// for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8363,8 +8355,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field
-    /// for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
