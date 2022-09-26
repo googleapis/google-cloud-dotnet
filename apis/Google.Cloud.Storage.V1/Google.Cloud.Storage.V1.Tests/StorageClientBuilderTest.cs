@@ -55,6 +55,22 @@ public class StorageClientBuilderTest
         Assert.Equal(enableGZip, client.Service.GZipEnabled);
     }
 
+    [Fact]
+    public void StorageClientBuilder_ExponentialBackOffPolicy_DefaultIsNone()
+    {
+        var clientBuilder = new StorageClientBuilder { Credential = new FakeCredential() };
+        Assert.Equal(ExponentialBackOffPolicy.None, clientBuilder.DefaultExpBackOffPolicy);
+    }
+
+    [Theory]
+    [InlineData(ExponentialBackOffPolicy.None)]
+    [InlineData(ExponentialBackOffPolicy.UnsuccessfulResponse503)]
+    [InlineData(ExponentialBackOffPolicy.Exception)]
+    public void StorageClientBuilder_ExponentialBackOffPolicy_Explicit(ExponentialBackOffPolicy backOffPolicy)
+    {
+        var clientBuilder = new StorageClientBuilder { Credential = new FakeCredential(), DefaultExpBackOffPolicy= backOffPolicy };
+        Assert.Equal(backOffPolicy, clientBuilder.DefaultExpBackOffPolicy);
+    }
 
     // Fake credential used just to ensure that we don't fetch the application default credentials
     // (which may not be available for unit tests).

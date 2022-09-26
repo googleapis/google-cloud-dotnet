@@ -38,18 +38,25 @@ namespace Google.Cloud.Storage.V1
         public EncryptionKey EncryptionKey { get; set; }
 
         /// <summary>
+        /// The <see cref="ExponentialBackOffPolicy"/> of HttpClient. It's default value is None,
+        /// that is, it is desabled by default.
+        /// </summary>
+        public ExponentialBackOffPolicy DefaultExpBackOffPolicy { get; set; } = ExponentialBackOffPolicy.None;
+
+
+        /// <summary>
         /// Whether GZip should be enabled for the underlying client. This is currently internal
         /// so that we are able to modify it for retry conformance testing, but if we want to expose
         /// it publicly we should probably do so in ClientBuilderBase.
         /// </summary>
         internal bool GZipEnabled { get; set; } = true;
 
-        /// <inheritdoc />
+       /// <inheritdoc />
         public override StorageClient Build()
         {
             Validate();
             var initializer = CreateServiceInitializer();
-            var service = new StorageService(initializer);            
+            var service = new StorageService(initializer);
             return new StorageClientImpl(service, EncryptionKey);
         }
 
@@ -67,6 +74,7 @@ namespace Google.Cloud.Storage.V1
         {
             var initializer = base.CreateServiceInitializer();
             initializer.GZipEnabled = GZipEnabled;
+            initializer.DefaultExponentialBackOffPolicy = DefaultExpBackOffPolicy;
             return initializer;
         }
 
@@ -75,6 +83,7 @@ namespace Google.Cloud.Storage.V1
         {
             var initializer = await base.CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
             initializer.GZipEnabled = GZipEnabled;
+            initializer.DefaultExponentialBackOffPolicy = DefaultExpBackOffPolicy;
             return initializer;
         }
 
