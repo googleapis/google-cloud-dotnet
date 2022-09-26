@@ -18,6 +18,9 @@ using System.Linq;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
+/// <summary>
+/// Created to allow multiple resources to be created and sent together for single test cases as well
+/// </summary>
 internal class StorageResources : List<StorageResource>
 {
     internal string BucketName => this.FirstOrDefault(j => j.Resource == Resource.Bucket).Value;
