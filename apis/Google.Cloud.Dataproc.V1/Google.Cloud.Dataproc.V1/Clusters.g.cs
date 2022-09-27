@@ -66,7 +66,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "ZW5kcG9pbnRfY29uZmlnGBMgASgLMiguZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
             "LnYxLkVuZHBvaW50Q29uZmlnQgPgQQESSAoQbWV0YXN0b3JlX2NvbmZpZxgU",
             "IAEoCzIpLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5NZXRhc3RvcmVDb25m",
-            "aWdCA+BBARJTChZkYXRhcHJvY19tZXRyaWNfY29uZmlnGBUgASgLMi4uZ29v",
+            "aWdCA+BBARJTChZkYXRhcHJvY19tZXRyaWNfY29uZmlnGBcgASgLMi4uZ29v",
             "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRhdGFwcm9jTWV0cmljQ29uZmlnQgPg",
             "QQEihAIKFFZpcnR1YWxDbHVzdGVyQ29uZmlnEhsKDnN0YWdpbmdfYnVja2V0",
             "GAEgASgJQgPgQQESWwoZa3ViZXJuZXRlc19jbHVzdGVyX2NvbmZpZxgGIAEo",
@@ -177,114 +177,115 @@ namespace Google.Cloud.Dataproc.V1 {
             "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDQgUK",
             "A3R0bCJfCg9NZXRhc3RvcmVDb25maWcSTAoaZGF0YXByb2NfbWV0YXN0b3Jl",
             "X3NlcnZpY2UYASABKAlCKOBBAvpBIgogbWV0YXN0b3JlLmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZpY2UiiwIKBk1ldHJpYxJJCg1tZXRyaWNfc291cmNlGAEgASgO",
-            "Mi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk1ldHJpYy5NZXRyaWNTb3Vy",
-            "Y2VCA+BBAhIdChBtZXRyaWNfb3ZlcnJpZGVzGAIgAygJQgPgQQEilgEKDE1l",
-            "dHJpY1NvdXJjZRIdChlNRVRSSUNfU09VUkNFX1VOU1BFQ0lGSUVEEAASHQoZ",
-            "TU9OSVRPUklOR19BR0VOVF9ERUZBVUxUUxABEggKBEhERlMQAhIJCgVTUEFS",
-            "SxADEggKBFlBUk4QBBIYChRTUEFSS19ISVNUT1JZX1NFUlZFUhAFEg8KC0hJ",
-            "VkVTRVJWRVIyEAYiTgoURGF0YXByb2NNZXRyaWNDb25maWcSNgoHbWV0cmlj",
-            "cxgBIAMoCzIgLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5NZXRyaWNCA+BB",
-            "AiKaAgoOQ2x1c3Rlck1ldHJpY3MSTwoMaGRmc19tZXRyaWNzGAEgAygLMjku",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJNZXRyaWNzLkhkZnNN",
-            "ZXRyaWNzRW50cnkSTwoMeWFybl9tZXRyaWNzGAIgAygLMjkuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJNZXRyaWNzLllhcm5NZXRyaWNzRW50",
-            "cnkaMgoQSGRmc01ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAM6AjgBGjIKEFlhcm5NZXRyaWNzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgDOgI4ASLuAQoUQ3JlYXRlQ2x1c3RlclJlcXVlc3QSFwoK",
-            "cHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEjcK",
-            "B2NsdXN0ZXIYAiABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1",
-            "c3RlckID4EECEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBARJWCiBhY3Rpb25f",
-            "b25fZmFpbGVkX3ByaW1hcnlfd29ya2VycxgFIAEoDjInLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5GYWlsdXJlQWN0aW9uQgPgQQEirgIKFFVwZGF0ZUNs",
-            "dXN0ZXJSZXF1ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdp",
-            "b24YBSABKAlCA+BBAhIZCgxjbHVzdGVyX25hbWUYAiABKAlCA+BBAhI3Cgdj",
-            "bHVzdGVyGAMgASgLMiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0",
-            "ZXJCA+BBAhJFCh1ncmFjZWZ1bF9kZWNvbW1pc3Npb25fdGltZW91dBgGIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjQKC3VwZGF0ZV9t",
-            "YXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhcK",
-            "CnJlcXVlc3RfaWQYByABKAlCA+BBASKRAQoSU3RvcENsdXN0ZXJSZXF1ZXN0",
-            "EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAiABKAlCA+BB",
-            "AhIZCgxjbHVzdGVyX25hbWUYAyABKAlCA+BBAhIZCgxjbHVzdGVyX3V1aWQY",
-            "BCABKAlCA+BBARIXCgpyZXF1ZXN0X2lkGAUgASgJQgPgQQEikgEKE1N0YXJ0",
-            "Q2x1c3RlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJl",
-            "Z2lvbhgCIAEoCUID4EECEhkKDGNsdXN0ZXJfbmFtZRgDIAEoCUID4EECEhkK",
-            "DGNsdXN0ZXJfdXVpZBgEIAEoCUID4EEBEhcKCnJlcXVlc3RfaWQYBSABKAlC",
-            "A+BBASKTAQoURGVsZXRlQ2x1c3RlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgB",
-            "IAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEhkKDGNsdXN0ZXJfbmFt",
-            "ZRgCIAEoCUID4EECEhkKDGNsdXN0ZXJfdXVpZBgEIAEoCUID4EEBEhcKCnJl",
-            "cXVlc3RfaWQYBSABKAlCA+BBASJcChFHZXRDbHVzdGVyUmVxdWVzdBIXCgpw",
-            "cm9qZWN0X2lkGAEgASgJQgPgQQISEwoGcmVnaW9uGAMgASgJQgPgQQISGQoM",
-            "Y2x1c3Rlcl9uYW1lGAIgASgJQgPgQQIiiQEKE0xpc3RDbHVzdGVyc1JlcXVl",
-            "c3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgEIAEoCUID",
-            "4EECEhMKBmZpbHRlchgFIAEoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
-            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJuChRMaXN0Q2x1c3RlcnNS",
-            "ZXNwb25zZRI4CghjbHVzdGVycxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5DbHVzdGVyQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "QgPgQQMiYQoWRGlhZ25vc2VDbHVzdGVyUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
+            "Y29tL1NlcnZpY2Ui/wIKFERhdGFwcm9jTWV0cmljQ29uZmlnEksKB21ldHJp",
+            "Y3MYASADKAsyNS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRGF0YXByb2NN",
+            "ZXRyaWNDb25maWcuTWV0cmljQgPgQQIagAEKBk1ldHJpYxJXCg1tZXRyaWNf",
+            "c291cmNlGAEgASgOMjsuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRhdGFw",
+            "cm9jTWV0cmljQ29uZmlnLk1ldHJpY1NvdXJjZUID4EECEh0KEG1ldHJpY19v",
+            "dmVycmlkZXMYAiADKAlCA+BBASKWAQoMTWV0cmljU291cmNlEh0KGU1FVFJJ",
+            "Q19TT1VSQ0VfVU5TUEVDSUZJRUQQABIdChlNT05JVE9SSU5HX0FHRU5UX0RF",
+            "RkFVTFRTEAESCAoESERGUxACEgkKBVNQQVJLEAMSCAoEWUFSThAEEhgKFFNQ",
+            "QVJLX0hJU1RPUllfU0VSVkVSEAUSDwoLSElWRVNFUlZFUjIQBiKaAgoOQ2x1",
+            "c3Rlck1ldHJpY3MSTwoMaGRmc19tZXRyaWNzGAEgAygLMjkuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJNZXRyaWNzLkhkZnNNZXRyaWNzRW50",
+            "cnkSTwoMeWFybl9tZXRyaWNzGAIgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "cm9jLnYxLkNsdXN0ZXJNZXRyaWNzLllhcm5NZXRyaWNzRW50cnkaMgoQSGRm",
+            "c01ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgB",
+            "GjIKEFlhcm5NZXRyaWNzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgDOgI4ASLuAQoUQ3JlYXRlQ2x1c3RlclJlcXVlc3QSFwoKcHJvamVjdF9p",
+            "ZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEjcKB2NsdXN0ZXIY",
+            "AiABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlckID4EEC",
+            "EhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBARJWCiBhY3Rpb25fb25fZmFpbGVk",
+            "X3ByaW1hcnlfd29ya2VycxgFIAEoDjInLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5GYWlsdXJlQWN0aW9uQgPgQQEirgIKFFVwZGF0ZUNsdXN0ZXJSZXF1",
+            "ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YBSABKAlC",
+            "A+BBAhIZCgxjbHVzdGVyX25hbWUYAiABKAlCA+BBAhI3CgdjbHVzdGVyGAMg",
+            "ASgLMiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJCA+BBAhJF",
+            "Ch1ncmFjZWZ1bF9kZWNvbW1pc3Npb25fdGltZW91dBgGIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjQKC3VwZGF0ZV9tYXNrGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhcKCnJlcXVlc3Rf",
+            "aWQYByABKAlCA+BBASKRAQoSU3RvcENsdXN0ZXJSZXF1ZXN0EhcKCnByb2pl",
+            "Y3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAiABKAlCA+BBAhIZCgxjbHVz",
+            "dGVyX25hbWUYAyABKAlCA+BBAhIZCgxjbHVzdGVyX3V1aWQYBCABKAlCA+BB",
+            "ARIXCgpyZXF1ZXN0X2lkGAUgASgJQgPgQQEikgEKE1N0YXJ0Q2x1c3RlclJl",
+            "cXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgCIAEo",
+            "CUID4EECEhkKDGNsdXN0ZXJfbmFtZRgDIAEoCUID4EECEhkKDGNsdXN0ZXJf",
+            "dXVpZBgEIAEoCUID4EEBEhcKCnJlcXVlc3RfaWQYBSABKAlCA+BBASKTAQoU",
+            "RGVsZXRlQ2x1c3RlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EEC",
+            "EhMKBnJlZ2lvbhgDIAEoCUID4EECEhkKDGNsdXN0ZXJfbmFtZRgCIAEoCUID",
+            "4EECEhkKDGNsdXN0ZXJfdXVpZBgEIAEoCUID4EEBEhcKCnJlcXVlc3RfaWQY",
+            "BSABKAlCA+BBASJcChFHZXRDbHVzdGVyUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
             "GAEgASgJQgPgQQISEwoGcmVnaW9uGAMgASgJQgPgQQISGQoMY2x1c3Rlcl9u",
-            "YW1lGAIgASgJQgPgQQIiMQoWRGlhZ25vc2VDbHVzdGVyUmVzdWx0cxIXCgpv",
-            "dXRwdXRfdXJpGAEgASgJQgPgQQMi+AEKE1Jlc2VydmF0aW9uQWZmaW5pdHkS",
-            "WQoYY29uc3VtZV9yZXNlcnZhdGlvbl90eXBlGAEgASgOMjIuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLlJlc2VydmF0aW9uQWZmaW5pdHkuVHlwZUID4EEB",
-            "EhAKA2tleRgCIAEoCUID4EEBEhMKBnZhbHVlcxgDIAMoCUID4EEBIl8KBFR5",
-            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhIKDk5PX1JFU0VSVkFUSU9OEAES",
-            "EwoPQU5ZX1JFU0VSVkFUSU9OEAISGAoUU1BFQ0lGSUNfUkVTRVJWQVRJT04Q",
-            "AzLkEAoRQ2x1c3RlckNvbnRyb2xsZXISgAIKDUNyZWF0ZUNsdXN0ZXISLi5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ3JlYXRlQ2x1c3RlclJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIp8BgtPkkwI+IjMvdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3Rl",
-            "cnM6B2NsdXN0ZXLaQRlwcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyykE8CgdD",
-            "bHVzdGVyEjFnb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJh",
-            "dGlvbk1ldGFkYXRhEqgCCg1VcGRhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLlVwZGF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiLHAYLT5JMCTTJCL3YxL3Byb2plY3RzL3tw",
-            "cm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVy",
-            "X25hbWV9OgdjbHVzdGVy2kEycHJvamVjdF9pZCxyZWdpb24sY2x1c3Rlcl9u",
-            "YW1lLGNsdXN0ZXIsdXBkYXRlX21hc2vKQTwKB0NsdXN0ZXISMWdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0YWRhdGES7gEK",
-            "C1N0b3BDbHVzdGVyEiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlN0b3BD",
-            "bHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "kQGC0+STAkwiRy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97",
-            "cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfTpzdG9wOgEqykE8CgdD",
-            "bHVzdGVyEjFnb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJh",
-            "dGlvbk1ldGFkYXRhEvEBCgxTdGFydENsdXN0ZXISLS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXByb2MudjEuU3RhcnRDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ikgGC0+STAk0iSC92MS9wcm9qZWN0cy97cHJv",
-            "amVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9u",
-            "YW1lfTpzdGFydDoBKspBPAoHQ2x1c3RlchIxZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25NZXRhZGF0YRKZAgoNRGVsZXRlQ2x1",
-            "c3RlchIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVDbHVzdGVy",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuAGC0+ST",
-            "AkQqQi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9u",
-            "fS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfdpBHnByb2plY3RfaWQscmVnaW9u",
-            "LGNsdXN0ZXJfbmFtZcpBSgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EjFnb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRh",
-            "EskBCgpHZXRDbHVzdGVyEisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdl",
-            "dENsdXN0ZXJSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNs",
-            "dXN0ZXIia4LT5JMCRBJCL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdp",
-            "b25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV92kEecHJvamVj",
-            "dF9pZCxyZWdpb24sY2x1c3Rlcl9uYW1lEtkBCgxMaXN0Q2x1c3RlcnMSLS5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlzdENsdXN0ZXJzUmVxdWVzdBou",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Q2x1c3RlcnNSZXNwb25z",
-            "ZSJqgtPkkwI1EjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMv",
-            "e3JlZ2lvbn0vY2x1c3RlcnPaQRFwcm9qZWN0X2lkLHJlZ2lvbtpBGHByb2pl",
-            "Y3RfaWQscmVnaW9uLGZpbHRlchKqAgoPRGlhZ25vc2VDbHVzdGVyEjAuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRpYWdub3NlQ2x1c3RlclJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIsUBgtPkkwJQIksvdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3Rl",
-            "cnMve2NsdXN0ZXJfbmFtZX06ZGlhZ25vc2U6ASraQR5wcm9qZWN0X2lkLHJl",
-            "Z2lvbixjbHVzdGVyX25hbWXKQUsKFkRpYWdub3NlQ2x1c3RlclJlc3VsdHMS",
-            "MWdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0",
-            "YWRhdGEaS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKzAgocY29t",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUINQ2x1c3RlcnNQcm90b1ABWkBn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rh",
-            "dGFwcm9jL3YxO2RhdGFwcm9j6kFeCiBjb250YWluZXIuZ29vZ2xlYXBpcy5j",
-            "b20vQ2x1c3RlchI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2NsdXN0ZXJzL3tjbHVzdGVyfepBXgogbWV0YXN0b3JlLmdvb2ds",
-            "ZWFwaXMuY29tL1NlcnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
+            "YW1lGAIgASgJQgPgQQIiiQEKE0xpc3RDbHVzdGVyc1JlcXVlc3QSFwoKcHJv",
+            "amVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgEIAEoCUID4EECEhMKBmZp",
+            "bHRlchgFIAEoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBh",
+            "Z2VfdG9rZW4YAyABKAlCA+BBASJuChRMaXN0Q2x1c3RlcnNSZXNwb25zZRI4",
+            "CghjbHVzdGVycxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5D",
+            "bHVzdGVyQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMiYQoW",
+            "RGlhZ25vc2VDbHVzdGVyUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPg",
+            "QQISEwoGcmVnaW9uGAMgASgJQgPgQQISGQoMY2x1c3Rlcl9uYW1lGAIgASgJ",
+            "QgPgQQIiMQoWRGlhZ25vc2VDbHVzdGVyUmVzdWx0cxIXCgpvdXRwdXRfdXJp",
+            "GAEgASgJQgPgQQMi+AEKE1Jlc2VydmF0aW9uQWZmaW5pdHkSWQoYY29uc3Vt",
+            "ZV9yZXNlcnZhdGlvbl90eXBlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "cm9jLnYxLlJlc2VydmF0aW9uQWZmaW5pdHkuVHlwZUID4EEBEhAKA2tleRgC",
+            "IAEoCUID4EEBEhMKBnZhbHVlcxgDIAMoCUID4EEBIl8KBFR5cGUSFAoQVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEhIKDk5PX1JFU0VSVkFUSU9OEAESEwoPQU5ZX1JF",
+            "U0VSVkFUSU9OEAISGAoUU1BFQ0lGSUNfUkVTRVJWQVRJT04QAzLkEAoRQ2x1",
+            "c3RlckNvbnRyb2xsZXISgAIKDUNyZWF0ZUNsdXN0ZXISLi5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuQ3JlYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIp8BgtPkkwI+IjMvdjEvcHJvamVjdHMv",
+            "e3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnM6B2NsdXN0",
+            "ZXLaQRlwcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyykE8CgdDbHVzdGVyEjFn",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFk",
+            "YXRhEqgCCg1VcGRhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLlVwZGF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiLHAYLT5JMCTTJCL3YxL3Byb2plY3RzL3twcm9qZWN0X2lk",
+            "fS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV9Ogdj",
+            "bHVzdGVy2kEycHJvamVjdF9pZCxyZWdpb24sY2x1c3Rlcl9uYW1lLGNsdXN0",
+            "ZXIsdXBkYXRlX21hc2vKQTwKB0NsdXN0ZXISMWdvb2dsZS5jbG91ZC5kYXRh",
+            "cHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0YWRhdGES7gEKC1N0b3BDbHVz",
+            "dGVyEiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlN0b3BDbHVzdGVyUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ikQGC0+STAkwi",
+            "Ry92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9j",
+            "bHVzdGVycy97Y2x1c3Rlcl9uYW1lfTpzdG9wOgEqykE8CgdDbHVzdGVyEjFn",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFk",
+            "YXRhEvEBCgxTdGFydENsdXN0ZXISLS5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuU3RhcnRDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
+            "cGVyYXRpb24ikgGC0+STAk0iSC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0v",
+            "cmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfTpzdGFy",
+            "dDoBKspBPAoHQ2x1c3RlchIxZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNs",
+            "dXN0ZXJPcGVyYXRpb25NZXRhZGF0YRKZAgoNRGVsZXRlQ2x1c3RlchIuLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVDbHVzdGVyUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuAGC0+STAkQqQi92MS9w",
+            "cm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVy",
+            "cy97Y2x1c3Rlcl9uYW1lfdpBHnByb2plY3RfaWQscmVnaW9uLGNsdXN0ZXJf",
+            "bmFtZcpBSgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EjFnb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhEskBCgpHZXRD",
+            "bHVzdGVyEisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldENsdXN0ZXJS",
+            "ZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXIia4LT",
+            "5JMCRBJCL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdp",
+            "b259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV92kEecHJvamVjdF9pZCxyZWdp",
+            "b24sY2x1c3Rlcl9uYW1lEtkBCgxMaXN0Q2x1c3RlcnMSLS5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuTGlzdENsdXN0ZXJzUmVxdWVzdBouLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5MaXN0Q2x1c3RlcnNSZXNwb25zZSJqgtPkkwI1",
+            "EjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0v",
+            "Y2x1c3RlcnPaQRFwcm9qZWN0X2lkLHJlZ2lvbtpBGHByb2plY3RfaWQscmVn",
+            "aW9uLGZpbHRlchKqAgoPRGlhZ25vc2VDbHVzdGVyEjAuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkRpYWdub3NlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIsUBgtPkkwJQIksvdjEvcHJvamVjdHMv",
+            "e3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0",
+            "ZXJfbmFtZX06ZGlhZ25vc2U6ASraQR5wcm9qZWN0X2lkLHJlZ2lvbixjbHVz",
+            "dGVyX25hbWXKQUsKFkRpYWdub3NlQ2x1c3RlclJlc3VsdHMSMWdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0YWRhdGEaS8pB",
+            "F2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKzAgocY29tLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MUINQ2x1c3RlcnNQcm90b1ABWkBnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwcm9jL3Yx",
+            "O2RhdGFwcm9j6kFeCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3Rl",
+            "chI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Ns",
+            "dXN0ZXJzL3tjbHVzdGVyfepBXgogbWV0YXN0b3JlLmdvb2dsZWFwaXMuY29t",
+            "L1NlcnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -311,8 +312,7 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SoftwareConfig), global::Google.Cloud.Dataproc.V1.SoftwareConfig.Parser, new[]{ "ImageVersion", "Properties", "OptionalComponents" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.LifecycleConfig), global::Google.Cloud.Dataproc.V1.LifecycleConfig.Parser, new[]{ "IdleDeleteTtl", "AutoDeleteTime", "AutoDeleteTtl", "IdleStartTime" }, new[]{ "Ttl" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.MetastoreConfig), global::Google.Cloud.Dataproc.V1.MetastoreConfig.Parser, new[]{ "DataprocMetastoreService" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Metric), global::Google.Cloud.Dataproc.V1.Metric.Parser, new[]{ "MetricSource", "MetricOverrides" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DataprocMetricConfig), global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Parser, new[]{ "Metrics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DataprocMetricConfig), global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Parser, new[]{ "Metrics" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric), global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric.Parser, new[]{ "MetricSource", "MetricOverrides" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterMetrics), global::Google.Cloud.Dataproc.V1.ClusterMetrics.Parser, new[]{ "HdfsMetrics", "YarnMetrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateClusterRequest), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Region", "Cluster", "RequestId", "ActionOnFailedPrimaryWorkers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest), global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "Cluster", "GracefulDecommissionTimeout", "UpdateMask", "RequestId" }, null, null, null, null),
@@ -1190,10 +1190,10 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     /// <summary>Field number for the "dataproc_metric_config" field.</summary>
-    public const int DataprocMetricConfigFieldNumber = 21;
+    public const int DataprocMetricConfigFieldNumber = 23;
     private global::Google.Cloud.Dataproc.V1.DataprocMetricConfig dataprocMetricConfig_;
     /// <summary>
-    /// Optional. Dataproc metrics configuration.
+    /// Optional. The config for Dataproc metrics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1328,7 +1328,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteMessage(MetastoreConfig);
       }
       if (dataprocMetricConfig_ != null) {
-        output.WriteRawTag(170, 1);
+        output.WriteRawTag(186, 1);
         output.WriteMessage(DataprocMetricConfig);
       }
       if (_unknownFields != null) {
@@ -1395,7 +1395,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteMessage(MetastoreConfig);
       }
       if (dataprocMetricConfig_ != null) {
-        output.WriteRawTag(170, 1);
+        output.WriteRawTag(186, 1);
         output.WriteMessage(DataprocMetricConfig);
       }
       if (_unknownFields != null) {
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(MetastoreConfig);
             break;
           }
-          case 170: {
+          case 186: {
             if (dataprocMetricConfig_ == null) {
               DataprocMetricConfig = new global::Google.Cloud.Dataproc.V1.DataprocMetricConfig();
             }
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(MetastoreConfig);
             break;
           }
-          case 170: {
+          case 186: {
             if (dataprocMetricConfig_ == null) {
               DataprocMetricConfig = new global::Google.Cloud.Dataproc.V1.DataprocMetricConfig();
             }
@@ -8651,274 +8651,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Specifies Dataproc OSS Metric.
-  /// </summary>
-  public sealed partial class Metric : pb::IMessage<Metric>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Metric> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[23]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric(Metric other) : this() {
-      metricSource_ = other.metricSource_;
-      metricOverrides_ = other.metricOverrides_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric Clone() {
-      return new Metric(this);
-    }
-
-    /// <summary>Field number for the "metric_source" field.</summary>
-    public const int MetricSourceFieldNumber = 1;
-    private global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource metricSource_ = global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified;
-    /// <summary>
-    /// Required. Specified source of metric collection
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource MetricSource {
-      get { return metricSource_; }
-      set {
-        metricSource_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "metric_overrides" field.</summary>
-    public const int MetricOverridesFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_metricOverrides_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> metricOverrides_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Optional. The set of available OSS metrics to collect from the metric
-    /// source.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> MetricOverrides {
-      get { return metricOverrides_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Metric);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Metric other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (MetricSource != other.MetricSource) return false;
-      if(!metricOverrides_.Equals(other.metricOverrides_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (MetricSource != global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified) hash ^= MetricSource.GetHashCode();
-      hash ^= metricOverrides_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (MetricSource != global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) MetricSource);
-      }
-      metricOverrides_.WriteTo(output, _repeated_metricOverrides_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MetricSource != global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) MetricSource);
-      }
-      metricOverrides_.WriteTo(ref output, _repeated_metricOverrides_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (MetricSource != global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricSource);
-      }
-      size += metricOverrides_.CalculateSize(_repeated_metricOverrides_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Metric other) {
-      if (other == null) {
-        return;
-      }
-      if (other.MetricSource != global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource.Unspecified) {
-        MetricSource = other.MetricSource;
-      }
-      metricOverrides_.Add(other.metricOverrides_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            MetricSource = (global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            metricOverrides_.AddEntriesFrom(input, _repeated_metricOverrides_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            MetricSource = (global::Google.Cloud.Dataproc.V1.Metric.Types.MetricSource) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            metricOverrides_.AddEntriesFrom(ref input, _repeated_metricOverrides_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Metric message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      public enum MetricSource {
-        /// <summary>
-        /// Unspecified metric source
-        /// </summary>
-        [pbr::OriginalName("METRIC_SOURCE_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// Default monitoring agent metrics. If this source is enabled,
-        /// Dataproc enables the monitoring agent in Compute Engine, and collects
-        /// default monitoring agent metrics, which are published with an
-        /// agent.googleapis.com prefix.
-        /// </summary>
-        [pbr::OriginalName("MONITORING_AGENT_DEFAULTS")] MonitoringAgentDefaults = 1,
-        /// <summary>
-        /// HDFS metric source
-        /// </summary>
-        [pbr::OriginalName("HDFS")] Hdfs = 2,
-        /// <summary>
-        /// SPARK metric source
-        /// </summary>
-        [pbr::OriginalName("SPARK")] Spark = 3,
-        /// <summary>
-        /// YARN metric source
-        /// </summary>
-        [pbr::OriginalName("YARN")] Yarn = 4,
-        /// <summary>
-        /// Spark History Server metric source
-        /// </summary>
-        [pbr::OriginalName("SPARK_HISTORY_SERVER")] SparkHistoryServer = 5,
-        /// <summary>
-        /// Hiveserver2 metric source
-        /// </summary>
-        [pbr::OriginalName("HIVESERVER2")] Hiveserver2 = 6,
-      }
-
-    }
-    #endregion
-
-  }
-
-  /// <summary>
-  /// Specifies a Dataproc metric config
+  /// Dataproc metric config.
   /// </summary>
   public sealed partial class DataprocMetricConfig : pb::IMessage<DataprocMetricConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8934,7 +8667,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8966,15 +8699,15 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "metrics" field.</summary>
     public const int MetricsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.Metric> _repeated_metrics_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataproc.V1.Metric.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Metric> metrics_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Metric>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric> metrics_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric>();
     /// <summary>
-    /// Configuration set of metrics to collect from the cluster
+    /// Required. Metrics sources to enable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Metric> Metrics {
+    public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.Metric> Metrics {
       get { return metrics_; }
     }
 
@@ -9099,6 +8832,308 @@ namespace Google.Cloud.Dataproc.V1 {
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the DataprocMetricConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A source for the collection of Dataproc OSS metrics (see [available OSS
+      /// metrics]
+      /// (https://cloud.google.com//dataproc/docs/guides/monitoring#available_oss_metrics)).
+      /// </summary>
+      public enum MetricSource {
+        /// <summary>
+        /// Required unspecified metric source.
+        /// </summary>
+        [pbr::OriginalName("METRIC_SOURCE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Default monitoring agent metrics. If this source is enabled,
+        /// Dataproc enables the monitoring agent in Compute Engine,
+        /// and collects default monitoring agent metrics, which are published
+        /// with an `agent.googleapis.com` prefix.
+        /// </summary>
+        [pbr::OriginalName("MONITORING_AGENT_DEFAULTS")] MonitoringAgentDefaults = 1,
+        /// <summary>
+        /// HDFS metric source.
+        /// </summary>
+        [pbr::OriginalName("HDFS")] Hdfs = 2,
+        /// <summary>
+        /// Spark metric source.
+        /// </summary>
+        [pbr::OriginalName("SPARK")] Spark = 3,
+        /// <summary>
+        /// YARN metric source.
+        /// </summary>
+        [pbr::OriginalName("YARN")] Yarn = 4,
+        /// <summary>
+        /// Spark History Server metric source.
+        /// </summary>
+        [pbr::OriginalName("SPARK_HISTORY_SERVER")] SparkHistoryServer = 5,
+        /// <summary>
+        /// Hiveserver2 metric source.
+        /// </summary>
+        [pbr::OriginalName("HIVESERVER2")] Hiveserver2 = 6,
+      }
+
+      /// <summary>
+      /// A Dataproc OSS metric.
+      /// </summary>
+      public sealed partial class Metric : pb::IMessage<Metric>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Metric> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Metric() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Metric(Metric other) : this() {
+          metricSource_ = other.metricSource_;
+          metricOverrides_ = other.metricOverrides_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Metric Clone() {
+          return new Metric(this);
+        }
+
+        /// <summary>Field number for the "metric_source" field.</summary>
+        public const int MetricSourceFieldNumber = 1;
+        private global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource metricSource_ = global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified;
+        /// <summary>
+        /// Required. Default metrics are collected unless `metricOverrides` are
+        /// specified for the metric source (see [Available OSS metrics]
+        /// (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics)
+        /// for more information).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource MetricSource {
+          get { return metricSource_; }
+          set {
+            metricSource_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "metric_overrides" field.</summary>
+        public const int MetricOverridesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_metricOverrides_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> metricOverrides_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Specify one or more [available OSS metrics]
+        /// (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics)
+        /// to collect for the metric course (for the `SPARK` metric source, any
+        /// [Spark metric]
+        /// (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be
+        /// specified).
+        ///
+        /// Provide metrics in the following format:
+        /// &lt;code>&lt;var>METRIC_SOURCE&lt;/var>:&lt;var>INSTANCE&lt;/var>:&lt;var>GROUP&lt;/var>:&lt;var>METRIC&lt;/var>&lt;/code>
+        /// Use camelcase as appropriate.
+        ///
+        /// Examples:
+        ///
+        /// ```
+        /// yarn:ResourceManager:QueueMetrics:AppsCompleted
+        /// spark:driver:DAGScheduler:job.allJobs
+        /// sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
+        /// hiveserver2:JVM:Memory:NonHeapMemoryUsage.used
+        /// ```
+        ///
+        /// Notes:
+        ///
+        /// * Only the specified overridden metrics will be collected for the
+        ///   metric source. For example, if one or more `spark:executive` metrics
+        ///   are listed as metric overrides, other `SPARK` metrics will not be
+        ///   collected. The collection of the default metrics for other OSS metric
+        ///   sources is unaffected. For example, if both `SPARK` andd `YARN` metric
+        ///   sources are enabled, and overrides are provided for Spark metrics only,
+        ///   all default YARN metrics will be collected.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> MetricOverrides {
+          get { return metricOverrides_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Metric);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Metric other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MetricSource != other.MetricSource) return false;
+          if(!metricOverrides_.Equals(other.metricOverrides_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MetricSource != global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified) hash ^= MetricSource.GetHashCode();
+          hash ^= metricOverrides_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MetricSource != global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) MetricSource);
+          }
+          metricOverrides_.WriteTo(output, _repeated_metricOverrides_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MetricSource != global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) MetricSource);
+          }
+          metricOverrides_.WriteTo(ref output, _repeated_metricOverrides_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MetricSource != global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricSource);
+          }
+          size += metricOverrides_.CalculateSize(_repeated_metricOverrides_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Metric other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MetricSource != global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource.Unspecified) {
+            MetricSource = other.MetricSource;
+          }
+          metricOverrides_.Add(other.metricOverrides_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MetricSource = (global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                metricOverrides_.AddEntriesFrom(input, _repeated_metricOverrides_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MetricSource = (global::Google.Cloud.Dataproc.V1.DataprocMetricConfig.Types.MetricSource) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                metricOverrides_.AddEntriesFrom(ref input, _repeated_metricOverrides_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
@@ -9121,7 +9156,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9334,7 +9369,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9709,7 +9744,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10241,7 +10276,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10609,7 +10644,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10977,7 +11012,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11345,7 +11380,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11621,7 +11656,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11995,7 +12030,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12221,7 +12256,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12497,7 +12532,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12694,7 +12729,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
