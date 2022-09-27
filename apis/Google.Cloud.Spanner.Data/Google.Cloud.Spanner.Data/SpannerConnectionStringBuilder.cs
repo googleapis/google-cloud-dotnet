@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -447,6 +447,19 @@ namespace Google.Cloud.Spanner.Data
             SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
 
         /// <summary>
+        /// Copy constructor, used for cloning. (This allows for the use of object initializers, unlike
+        /// the <see cref="Clone"/> method.)
+        /// </summary>
+        private SpannerConnectionStringBuilder(SpannerConnectionStringBuilder other) : this()
+        {
+            ConnectionString = other.ConnectionString;
+            CredentialOverride = other.CredentialOverride;
+            SessionPoolManager = other.SessionPoolManager;
+            EnvironmentVariableProvider = other.EnvironmentVariableProvider;
+            ConversionOptions = other.ConversionOptions;
+        }
+
+        /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
         /// connection string and optional credential.
         /// </summary>
@@ -485,18 +498,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public SpannerConnectionStringBuilder() => ConversionOptions = SpannerConversionOptions.Default;
 
-        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager)
-        {
-            EnvironmentVariableProvider = EnvironmentVariableProvider,
-            ConversionOptions = ConversionOptions
-        };
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(this);
 
-        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
-        {
-            var clone = Clone();
-            clone.DataSource = dataSource;
-            return clone;
-        }
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) =>
+            new SpannerConnectionStringBuilder(this) { DataSource = dataSource };
 
         /// <summary>
         /// Returns a new instance of a <see cref="SpannerConnectionStringBuilder"/> with the database
@@ -505,9 +510,9 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="database">The new database name. Can be null to open a connection for Ddl commands.</param>
         /// <returns>A new instance of <see cref="SpannerConnectionStringBuilder"/></returns>
         public SpannerConnectionStringBuilder WithDatabase(string database) =>
-            string.IsNullOrEmpty(database)
-                ? CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}")
-                : CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
+            CloneWithNewDataSource(string.IsNullOrEmpty(database)
+                ? $"projects/{Project}/instances/{SpannerInstance}"
+                : $"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
 
         private int GetInt32OrDefault(string key, int minValue, int maxValue, int defaultValue)
         {
