@@ -31,6 +31,7 @@ namespace Google.Cloud.Deploy.V1
         {
             yield return CloudDeployReflection.Descriptor;
             yield return DeliverypipelineNotificationPayloadReflection.Descriptor;
+            yield return JobrunNotificationPayloadReflection.Descriptor;
             yield return LogEnumsReflection.Descriptor;
             yield return ReleaseNotificationPayloadReflection.Descriptor;
             yield return ReleaseRenderPayloadReflection.Descriptor;
