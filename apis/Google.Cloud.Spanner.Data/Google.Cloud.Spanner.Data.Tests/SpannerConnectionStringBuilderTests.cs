@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using System;
@@ -294,6 +295,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             builder.ConnectionString = "SpannerToClrTypeDefaultMappings=DateToSpannerDate";
             builder.ConnectionString = "";
             Assert.Equal(SpannerConversionOptions.Default.DateToConfiguredClrType, builder.ConversionOptions.DateToConfiguredClrType);
+        }
+
+        [Fact]
+        public void Clone_MaintainsGoogleCredential()
+        {
+            var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
+            var builder = new SpannerConnectionStringBuilder("", credential);
+            var clone = builder.Clone();
+            Assert.Same(credential, clone.GoogleCredential);
         }
     }
 }

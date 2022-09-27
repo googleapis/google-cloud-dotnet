@@ -67,6 +67,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Same(sessionPoolManager, connection.Builder.SessionPoolManager);
         }
 
+        [Fact]
+        public void Constructor_GoogleCredential()
+        {
+            var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
+            var connection = new SpannerConnection("Data Source=projects/project_id/instances/instance_id", credential);
+            Assert.Same(credential, connection.Builder.GoogleCredential);
+        }
+
         private class FakeCredential : ITokenAccess
         {
             public Task<string> GetAccessTokenForRequestAsync(string authUri = null, CancellationToken cancellationToken = default) =>

@@ -19,7 +19,18 @@ However Cloud Spanner does not support DML (eg. "INSERT INTO ..."). Therefore yo
 use the corresponding API on SpannerConnection to create ADO command objects instead
 of setting CommandText manually.
 
-See examples below:
+## Credentials
+
+Without any other configuration, `Google.Cloud.Spanner.Data` uses
+[Application Default Credentials](https://cloud.google.com/docs/authentication#adc).
+If you need to provide other credentials, there are three alternatives:
+
+- Specify `CredentialFile` in the [connection string](connection_string.md)
+- Pass a `GoogleCredential` into the constructor of `SpannerConnection`
+  or `SpannerConnectionStringBuilder`. Scopes will be applied automatically,
+  and self-signed JWTs will be used where possible.
+- Pass a `ChannelCredentials` into the constructor of `SpannerConnection`
+  or `SpannerConnectionStringBuilder`.
 
 ## Sample code
 
@@ -160,6 +171,7 @@ documentation](https://cloud.google.com/spanner/docs/commit-timestamp)
 for more information about commit timestamps.
 
 ## Transactions and Fault Handling
+
 Cloud Spanner is fully ACID compliant.
 
 Retries should be implemented at the transaction level (as opposed to individual call level)

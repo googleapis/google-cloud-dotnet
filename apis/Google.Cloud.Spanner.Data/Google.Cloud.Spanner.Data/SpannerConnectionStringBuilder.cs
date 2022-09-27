@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Core;
@@ -425,7 +426,9 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        // Credential overrides: at most one will be non-null.
         internal ChannelCredentials CredentialOverride { get; }
+        internal GoogleCredential GoogleCredential { get; }
 
         private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
 
@@ -454,6 +457,7 @@ namespace Google.Cloud.Spanner.Data
         {
             ConnectionString = other.ConnectionString;
             CredentialOverride = other.CredentialOverride;
+            GoogleCredential = other.GoogleCredential;
             SessionPoolManager = other.SessionPoolManager;
             EnvironmentVariableProvider = other.EnvironmentVariableProvider;
             // Note: ConversionOptions is populated by the connection string.
@@ -468,13 +472,32 @@ namespace Google.Cloud.Spanner.Data
         /// Must not be null.
         /// </param>
         /// <param name="credentials">Optionally supplied credential to use for the connection.
-        /// If not set, then default application credentials will be used.
+        /// If this is null (the default parameter value), then default application credentials will be used.
+        /// Credentials can be retrieved from a file or obtained interactively.
+        /// See Google Cloud documentation for more information.
+        /// </param>
+        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null) : this()
+        {
+            ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
+            CredentialOverride = credentials;
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
+        /// connection string and optional credential.
+        /// </summary>
+        /// <param name="connectionString">A connection string of the form
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
+        /// </param>
+        /// <param name="googleCredential">The credential to use for the connection.
+        /// If this is null, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
         /// See Google Cloud documentation for more information. May be null.
         /// </param>
-        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)
-            : this(connectionString, credentials, SessionPoolManager.Default)
+        public SpannerConnectionStringBuilder(string connectionString, GoogleCredential googleCredential) : this()
         {
+            ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
+            GoogleCredential = googleCredential;
         }
 
         /// <summary>
@@ -486,6 +509,7 @@ namespace Google.Cloud.Spanner.Data
         /// Must not be null.</param>
         /// <param name="credentials">The credential to use for the connection. May be null.</param>
         /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
+        [Obsolete("Use overloads accepting credentials, then set the SessionPoolManager property", error: false)]
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager) : this()
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
