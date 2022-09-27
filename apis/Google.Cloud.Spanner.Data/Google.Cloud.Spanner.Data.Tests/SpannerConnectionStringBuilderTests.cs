@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -274,6 +274,26 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"SpannerToClrTypeDefaultMappings={spannerToClrTypeMappings}"));
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { SpannerToClrTypeDefaultMappings = spannerToClrTypeMappings });
+        }
+
+        [Fact]
+        public void CloneWithConversionOptions()
+        {
+            var builder = new SpannerConnectionStringBuilder("SpannerToClrTypeDefaultMappings=DateToSpannerDate;ClrToSpannerTypeDefaultMappings=DecimalToNumeric");
+            var clone = builder.Clone();
+            // We effectively want to assert that builder.ConversionOptions is equal to clone.ConversionOptions, but
+            // we don't have an equality comparison available... just test a couple of properties.
+            Assert.Equal(builder.ConversionOptions.DecimalToConfiguredSpannerType, clone.ConversionOptions.DecimalToConfiguredSpannerType);
+            Assert.Equal(builder.ConversionOptions.DateToConfiguredClrType, clone.ConversionOptions.DateToConfiguredClrType);
+        }
+
+        [Fact]
+        public void SettingConnectionStringResetsConversionOptions()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            builder.ConnectionString = "SpannerToClrTypeDefaultMappings=DateToSpannerDate";
+            builder.ConnectionString = "";
+            Assert.Equal(SpannerConversionOptions.Default.DateToConfiguredClrType, builder.ConversionOptions.DateToConfiguredClrType);
         }
     }
 }

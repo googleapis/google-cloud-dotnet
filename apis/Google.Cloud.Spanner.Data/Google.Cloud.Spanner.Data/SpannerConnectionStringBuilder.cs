@@ -456,7 +456,7 @@ namespace Google.Cloud.Spanner.Data
             CredentialOverride = other.CredentialOverride;
             SessionPoolManager = other.SessionPoolManager;
             EnvironmentVariableProvider = other.EnvironmentVariableProvider;
-            ConversionOptions = other.ConversionOptions;
+            // Note: ConversionOptions is populated by the connection string.
         }
 
         /// <summary>
@@ -497,6 +497,13 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
         public SpannerConnectionStringBuilder() => ConversionOptions = SpannerConversionOptions.Default;
+
+        /// <inheritdoc />
+        public override void Clear()
+        {
+            base.Clear();
+            ConversionOptions = SpannerConversionOptions.Default;
+        }
 
         internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(this);
 
