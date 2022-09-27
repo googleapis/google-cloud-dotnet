@@ -115,10 +115,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_sync_flattened_resourceNames",
-      "title": "ListDeliveryPipelinesResourceNames",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_sync_flattened_resourceNames1",
+      "title": "ListDeliveryPipelinesResourceNames1",
       "description": "Snippet for ListDeliveryPipelines",
-      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNamesSnippet.g.cs",
+      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListDeliveryPipelines",
@@ -140,10 +140,61 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_async_flattened_resourceNames",
-      "title": "ListDeliveryPipelinesResourceNamesAsync",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_async_flattened_resourceNames1",
+      "title": "ListDeliveryPipelinesResourceNames1Async",
       "description": "Snippet for ListDeliveryPipelinesAsync",
-      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNamesAsyncSnippet.g.cs",
+      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeliveryPipelinesAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelinesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListDeliveryPipelines",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListDeliveryPipelines",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_sync_flattened_resourceNames2",
+      "title": "ListDeliveryPipelinesResourceNames2",
+      "description": "Snippet for ListDeliveryPipelines",
+      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeliveryPipelines",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelines",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListDeliveryPipelines",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListDeliveryPipelines",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_async_flattened_resourceNames2",
+      "title": "ListDeliveryPipelinesResourceNames2Async",
+      "description": "Snippet for ListDeliveryPipelinesAsync",
+      "file": "CloudDeployClient.ListDeliveryPipelinesResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListDeliveryPipelinesAsync",
@@ -425,10 +476,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_sync_flattened_resourceNames",
-      "title": "CreateDeliveryPipelineResourceNames",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_sync_flattened_resourceNames1",
+      "title": "CreateDeliveryPipelineResourceNames1",
       "description": "Snippet for CreateDeliveryPipeline",
-      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNamesSnippet.g.cs",
+      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateDeliveryPipeline",
@@ -450,10 +501,61 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_async_flattened_resourceNames",
-      "title": "CreateDeliveryPipelineResourceNamesAsync",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_async_flattened_resourceNames1",
+      "title": "CreateDeliveryPipelineResourceNames1Async",
       "description": "Snippet for CreateDeliveryPipelineAsync",
-      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNamesAsyncSnippet.g.cs",
+      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeliveryPipelineAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipelineAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateDeliveryPipeline",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateDeliveryPipeline",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_sync_flattened_resourceNames2",
+      "title": "CreateDeliveryPipelineResourceNames2",
+      "description": "Snippet for CreateDeliveryPipeline",
+      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeliveryPipeline",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipeline",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateDeliveryPipeline",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateDeliveryPipeline",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_async_flattened_resourceNames2",
+      "title": "CreateDeliveryPipelineResourceNames2Async",
+      "description": "Snippet for CreateDeliveryPipelineAsync",
+      "file": "CloudDeployClient.CreateDeliveryPipelineResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateDeliveryPipelineAsync",
@@ -839,10 +941,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_sync_flattened_resourceNames",
-      "title": "ListTargetsResourceNames",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_sync_flattened_resourceNames1",
+      "title": "ListTargetsResourceNames1",
       "description": "Snippet for ListTargets",
-      "file": "CloudDeployClient.ListTargetsResourceNamesSnippet.g.cs",
+      "file": "CloudDeployClient.ListTargetsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTargets",
@@ -864,10 +966,61 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames",
-      "title": "ListTargetsResourceNamesAsync",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames1",
+      "title": "ListTargetsResourceNames1Async",
       "description": "Snippet for ListTargetsAsync",
-      "file": "CloudDeployClient.ListTargetsResourceNamesAsyncSnippet.g.cs",
+      "file": "CloudDeployClient.ListTargetsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListTargets",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListTargets",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_sync_flattened_resourceNames2",
+      "title": "ListTargetsResourceNames2",
+      "description": "Snippet for ListTargets",
+      "file": "CloudDeployClient.ListTargetsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargets",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListTargets",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListTargets",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames2",
+      "title": "ListTargetsResourceNames2Async",
+      "description": "Snippet for ListTargetsAsync",
+      "file": "CloudDeployClient.ListTargetsResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTargetsAsync",
@@ -1149,10 +1302,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_sync_flattened_resourceNames",
-      "title": "CreateTargetResourceNames",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_sync_flattened_resourceNames1",
+      "title": "CreateTargetResourceNames1",
       "description": "Snippet for CreateTarget",
-      "file": "CloudDeployClient.CreateTargetResourceNamesSnippet.g.cs",
+      "file": "CloudDeployClient.CreateTargetResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTarget",
@@ -1174,10 +1327,61 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_async_flattened_resourceNames",
-      "title": "CreateTargetResourceNamesAsync",
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_async_flattened_resourceNames1",
+      "title": "CreateTargetResourceNames1Async",
       "description": "Snippet for CreateTargetAsync",
-      "file": "CloudDeployClient.CreateTargetResourceNamesAsyncSnippet.g.cs",
+      "file": "CloudDeployClient.CreateTargetResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTargetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_sync_flattened_resourceNames2",
+      "title": "CreateTargetResourceNames2",
+      "description": "Snippet for CreateTarget",
+      "file": "CloudDeployClient.CreateTargetResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTarget",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTarget",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateTarget_async_flattened_resourceNames2",
+      "title": "CreateTargetResourceNames2Async",
+      "description": "Snippet for CreateTargetAsync",
+      "file": "CloudDeployClient.CreateTargetResourceNames2AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTargetAsync",
@@ -1924,6 +2128,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_sync",
+      "title": "AbandonReleaseRequestObject",
+      "description": "Snippet for AbandonRelease",
+      "file": "CloudDeployClient.AbandonReleaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonRelease",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_async",
+      "title": "AbandonReleaseRequestObjectAsync",
+      "description": "Snippet for AbandonReleaseAsync",
+      "file": "CloudDeployClient.AbandonReleaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonReleaseAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_sync_flattened",
+      "title": "AbandonRelease",
+      "description": "Snippet for AbandonRelease",
+      "file": "CloudDeployClient.AbandonReleaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonRelease",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_async_flattened",
+      "title": "AbandonReleaseAsync",
+      "description": "Snippet for AbandonReleaseAsync",
+      "file": "CloudDeployClient.AbandonReleaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonReleaseAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_sync_flattened_resourceNames",
+      "title": "AbandonReleaseResourceNames",
+      "description": "Snippet for AbandonRelease",
+      "file": "CloudDeployClient.AbandonReleaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonRelease",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AbandonRelease_async_flattened_resourceNames",
+      "title": "AbandonReleaseResourceNamesAsync",
+      "description": "Snippet for AbandonReleaseAsync",
+      "file": "CloudDeployClient.AbandonReleaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AbandonReleaseAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AbandonRelease",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AbandonRelease",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "clouddeploy_v1_generated_CloudDeploy_ApproveRollout_sync",
       "title": "ApproveRolloutRequestObject",
       "description": "Snippet for ApproveRollout",
@@ -2535,6 +2894,471 @@
         "method": {
           "shortName": "CreateRollout",
           "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_sync",
+      "title": "RetryJobRequestObject",
+      "description": "Snippet for RetryJob",
+      "file": "CloudDeployClient.RetryJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_async",
+      "title": "RetryJobRequestObjectAsync",
+      "description": "Snippet for RetryJobAsync",
+      "file": "CloudDeployClient.RetryJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_sync_flattened",
+      "title": "RetryJob",
+      "description": "Snippet for RetryJob",
+      "file": "CloudDeployClient.RetryJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_async_flattened",
+      "title": "RetryJobAsync",
+      "description": "Snippet for RetryJobAsync",
+      "file": "CloudDeployClient.RetryJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_sync_flattened_resourceNames",
+      "title": "RetryJobResourceNames",
+      "description": "Snippet for RetryJob",
+      "file": "CloudDeployClient.RetryJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RetryJob_async_flattened_resourceNames",
+      "title": "RetryJobResourceNamesAsync",
+      "description": "Snippet for RetryJobAsync",
+      "file": "CloudDeployClient.RetryJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetryJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RetryJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RetryJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_sync",
+      "title": "ListJobRunsRequestObject",
+      "description": "Snippet for ListJobRuns",
+      "file": "CloudDeployClient.ListJobRunsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_async",
+      "title": "ListJobRunsRequestObjectAsync",
+      "description": "Snippet for ListJobRunsAsync",
+      "file": "CloudDeployClient.ListJobRunsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_sync_flattened",
+      "title": "ListJobRuns",
+      "description": "Snippet for ListJobRuns",
+      "file": "CloudDeployClient.ListJobRunsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_async_flattened",
+      "title": "ListJobRunsAsync",
+      "description": "Snippet for ListJobRunsAsync",
+      "file": "CloudDeployClient.ListJobRunsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_sync_flattened_resourceNames",
+      "title": "ListJobRunsResourceNames",
+      "description": "Snippet for ListJobRuns",
+      "file": "CloudDeployClient.ListJobRunsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListJobRuns_async_flattened_resourceNames",
+      "title": "ListJobRunsResourceNamesAsync",
+      "description": "Snippet for ListJobRunsAsync",
+      "file": "CloudDeployClient.ListJobRunsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListJobRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListJobRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_sync",
+      "title": "GetJobRunRequestObject",
+      "description": "Snippet for GetJobRun",
+      "file": "CloudDeployClient.GetJobRunRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "resultType": "Google.Cloud.Deploy.V1.JobRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_async",
+      "title": "GetJobRunRequestObjectAsync",
+      "description": "Snippet for GetJobRunAsync",
+      "file": "CloudDeployClient.GetJobRunRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_sync_flattened",
+      "title": "GetJobRun",
+      "description": "Snippet for GetJobRun",
+      "file": "CloudDeployClient.GetJobRunSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "resultType": "Google.Cloud.Deploy.V1.JobRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_async_flattened",
+      "title": "GetJobRunAsync",
+      "description": "Snippet for GetJobRunAsync",
+      "file": "CloudDeployClient.GetJobRunAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_sync_flattened_resourceNames",
+      "title": "GetJobRunResourceNames",
+      "description": "Snippet for GetJobRun",
+      "file": "CloudDeployClient.GetJobRunResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "resultType": "Google.Cloud.Deploy.V1.JobRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetJobRun_async_flattened_resourceNames",
+      "title": "GetJobRunResourceNamesAsync",
+      "description": "Snippet for GetJobRunAsync",
+      "file": "CloudDeployClient.GetJobRunResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
           "service": {
             "shortName": "CloudDeploy",
             "fullName": "google.cloud.deploy.v1.CloudDeploy"

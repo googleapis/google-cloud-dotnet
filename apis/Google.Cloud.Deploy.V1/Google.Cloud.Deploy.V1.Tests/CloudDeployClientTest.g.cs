@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -62,6 +66,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -75,6 +80,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -103,6 +110,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -118,6 +126,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -146,6 +156,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -159,6 +170,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -187,6 +200,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -202,6 +216,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -230,6 +246,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -243,6 +260,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDeliveryPipelineRequest request = new GetDeliveryPipelineRequest
             {
                 DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
@@ -271,6 +290,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 SerialPipeline = new SerialPipeline(),
                 Etag = "etage8ad7218",
                 Condition = new PipelineCondition(),
+                Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -286,6 +306,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -320,6 +342,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -333,6 +356,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -367,6 +392,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -382,6 +408,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -416,6 +444,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -429,6 +458,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -463,6 +494,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -478,6 +510,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -512,6 +546,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -525,6 +560,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTargetRequest request = new GetTargetRequest
             {
                 TargetName = TargetName.FromProjectLocationTarget("[PROJECT]", "[LOCATION]", "[TARGET]"),
@@ -559,6 +596,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                     new ExecutionConfig(),
                 },
                 AnthosCluster = new AnthosCluster(),
+                Run = new CloudRunLocation(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -574,6 +612,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -625,6 +665,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -638,6 +679,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -689,6 +732,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -704,6 +748,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -755,6 +801,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -768,6 +815,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -819,6 +868,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -834,6 +884,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -885,6 +937,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -898,6 +951,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetReleaseRequest request = new GetReleaseRequest
             {
                 ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
@@ -949,6 +1004,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                         new Release.Types.TargetRender()
                     },
                 },
+                Abandoned = false,
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -960,10 +1016,132 @@ namespace Google.Cloud.Deploy.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void AbandonReleaseRequestObject()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse response = client.AbandonRelease(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AbandonReleaseRequestObjectAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AbandonReleaseResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse responseCallSettings = await client.AbandonReleaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AbandonReleaseResponse responseCancellationToken = await client.AbandonReleaseAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AbandonRelease()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse response = client.AbandonRelease(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AbandonReleaseAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AbandonReleaseResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse responseCallSettings = await client.AbandonReleaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AbandonReleaseResponse responseCancellationToken = await client.AbandonReleaseAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AbandonReleaseResourceNames()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse response = client.AbandonRelease(request.ReleaseName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AbandonReleaseResourceNamesAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            AbandonReleaseResponse expectedResponse = new AbandonReleaseResponse { };
+            mockGrpcClient.Setup(x => x.AbandonReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AbandonReleaseResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            AbandonReleaseResponse responseCallSettings = await client.AbandonReleaseAsync(request.ReleaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AbandonReleaseResponse responseCancellationToken = await client.AbandonReleaseAsync(request.ReleaseName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ApproveRolloutRequestObject()
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -982,6 +1160,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1002,6 +1182,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1019,6 +1201,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1038,6 +1222,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1055,6 +1241,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ApproveRolloutRequest request = new ApproveRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1074,6 +1262,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1109,6 +1299,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1122,6 +1314,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1157,6 +1351,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1172,6 +1368,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1207,6 +1405,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1220,6 +1420,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1255,6 +1457,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1270,6 +1474,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1305,6 +1511,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1318,6 +1526,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetRolloutRequest request = new GetRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
@@ -1353,6 +1563,8 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
+                Phases = { new Phase(), },
+                Metadata = new Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
@@ -1364,10 +1576,342 @@ namespace Google.Cloud.Deploy.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void RetryJobRequestObject()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse response = client.RetryJob(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetryJobRequestObjectAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetryJobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse responseCallSettings = await client.RetryJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetryJobResponse responseCancellationToken = await client.RetryJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetryJob()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse response = client.RetryJob(request.Rollout, request.PhaseId, request.JobId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetryJobAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetryJobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse responseCallSettings = await client.RetryJobAsync(request.Rollout, request.PhaseId, request.JobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetryJobResponse responseCancellationToken = await client.RetryJobAsync(request.Rollout, request.PhaseId, request.JobId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetryJobResourceNames()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse response = client.RetryJob(request.RolloutAsRolloutName, request.PhaseId, request.JobId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetryJobResourceNamesAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+            };
+            RetryJobResponse expectedResponse = new RetryJobResponse { };
+            mockGrpcClient.Setup(x => x.RetryJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetryJobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            RetryJobResponse responseCallSettings = await client.RetryJobAsync(request.RolloutAsRolloutName, request.PhaseId, request.JobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetryJobResponse responseCancellationToken = await client.RetryJobAsync(request.RolloutAsRolloutName, request.PhaseId, request.JobId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetJobRunRequestObject()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun response = client.GetJobRun(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetJobRunRequestObjectAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun responseCallSettings = await client.GetJobRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            JobRun responseCancellationToken = await client.GetJobRunAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetJobRun()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun response = client.GetJobRun(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetJobRunAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun responseCallSettings = await client.GetJobRunAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            JobRun responseCancellationToken = await client.GetJobRunAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetJobRunResourceNames()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun response = client.GetJobRun(request.JobRunName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetJobRunResourceNamesAsync()
+        {
+            moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            JobRun expectedResponse = new JobRun
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                Uid = "uida2d37198",
+                PhaseId = "phase_ided7ed5ec",
+                JobId = "job_id38ea97d6",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = JobRun.Types.State.Succeeded,
+                DeployJobRun = new DeployJobRun(),
+                VerifyJobRun = new VerifyJobRun(),
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetJobRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
+            JobRun responseCallSettings = await client.GetJobRunAsync(request.JobRunName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            JobRun responseCancellationToken = await client.GetJobRunAsync(request.JobRunName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetConfigRequestObject()
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1393,6 +1937,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1420,6 +1966,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1445,6 +1993,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1472,6 +2022,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1497,6 +2049,8 @@ namespace Google.Cloud.Deploy.V1.Tests
         {
             moq::Mock<CloudDeploy.CloudDeployClient> mockGrpcClient = new moq::Mock<CloudDeploy.CloudDeployClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetConfigRequest request = new GetConfigRequest
             {
                 ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),

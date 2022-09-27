@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -68,12 +70,18 @@ namespace Google.Cloud.Deploy.V1
             GetReleaseSettings = existing.GetReleaseSettings;
             CreateReleaseSettings = existing.CreateReleaseSettings;
             CreateReleaseOperationsSettings = existing.CreateReleaseOperationsSettings.Clone();
+            AbandonReleaseSettings = existing.AbandonReleaseSettings;
             ApproveRolloutSettings = existing.ApproveRolloutSettings;
             ListRolloutsSettings = existing.ListRolloutsSettings;
             GetRolloutSettings = existing.GetRolloutSettings;
             CreateRolloutSettings = existing.CreateRolloutSettings;
             CreateRolloutOperationsSettings = existing.CreateRolloutOperationsSettings.Clone();
+            RetryJobSettings = existing.RetryJobSettings;
+            ListJobRunsSettings = existing.ListJobRunsSettings;
+            GetJobRunSettings = existing.GetJobRunSettings;
             GetConfigSettings = existing.GetConfigSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -399,6 +407,18 @@ namespace Google.Cloud.Deploy.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.AbandonRelease</c> and <c>CloudDeployClient.AbandonReleaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AbandonReleaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudDeployClient.ApproveRollout</c> and <c>CloudDeployClient.ApproveRolloutAsync</c>.
         /// </summary>
         /// <remarks>
@@ -476,6 +496,54 @@ namespace Google.Cloud.Deploy.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.RetryJob</c>
+        ///  and <c>CloudDeployClient.RetryJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RetryJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.ListJobRuns</c> and <c>CloudDeployClient.ListJobRunsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListJobRunsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.GetJobRun</c>
+        ///  and <c>CloudDeployClient.GetJobRunAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetJobRunSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.GetConfig</c>
         ///  and <c>CloudDeployClient.GetConfigAsync</c>.
         /// </summary>
@@ -492,6 +560,16 @@ namespace Google.Cloud.Deploy.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudDeploySettings"/> object.</returns>
@@ -634,6 +712,12 @@ namespace Google.Cloud.Deploy.V1
         /// <summary>The underlying gRPC CloudDeploy client</summary>
         public virtual CloudDeploy.CloudDeployClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Lists DeliveryPipelines in a given project and location.
         /// </summary>
@@ -745,6 +829,56 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DeliveryPipeline"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> ListDeliveryPipelinesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDeliveryPipelinesAsync(new ListDeliveryPipelinesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DeliveryPipelines in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of pipelines. Format must be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeliveryPipeline"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> ListDeliveryPipelines(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDeliveryPipelines(new ListDeliveryPipelinesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DeliveryPipelines in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of pipelines. Format must be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeliveryPipeline"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> ListDeliveryPipelinesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListDeliveryPipelinesAsync(new ListDeliveryPipelinesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1043,6 +1177,70 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(gagr::LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, st::CancellationToken cancellationToken) =>
+            CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new DeliveryPipeline in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
+        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="deliveryPipeline">
+        /// Required. The `DeliveryPipeline` to create.
+        /// </param>
+        /// <param name="deliveryPipelineId">
+        /// Required. ID of the `DeliveryPipeline`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeliveryPipeline, OperationMetadata> CreateDeliveryPipeline(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeliveryPipeline(new CreateDeliveryPipelineRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DeliveryPipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(deliveryPipelineId, nameof(deliveryPipelineId)),
+                DeliveryPipeline = gax::GaxPreconditions.CheckNotNull(deliveryPipeline, nameof(deliveryPipeline)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DeliveryPipeline in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
+        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="deliveryPipeline">
+        /// Required. The `DeliveryPipeline` to create.
+        /// </param>
+        /// <param name="deliveryPipelineId">
+        /// Required. ID of the `DeliveryPipeline`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeliveryPipelineAsync(new CreateDeliveryPipelineRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DeliveryPipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(deliveryPipelineId, nameof(deliveryPipelineId)),
+                DeliveryPipeline = gax::GaxPreconditions.CheckNotNull(deliveryPipeline, nameof(deliveryPipeline)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DeliveryPipeline in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
+        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="deliveryPipeline">
+        /// Required. The `DeliveryPipeline` to create.
+        /// </param>
+        /// <param name="deliveryPipelineId">
+        /// Required. ID of the `DeliveryPipeline`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, st::CancellationToken cancellationToken) =>
             CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1418,6 +1616,56 @@ namespace Google.Cloud.Deploy.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists Targets in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets. Format must be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Target"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTargetsResponse, Target> ListTargets(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTargets(new ListTargetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Targets in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets. Format must be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Target"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTargetsResponse, Target> ListTargetsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTargetsAsync(new ListTargetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Gets details of a single Target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1713,6 +1961,73 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(gagr::LocationName parent, Target target, string targetId, st::CancellationToken cancellationToken) =>
+            CreateTargetAsync(parent, target, targetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Target in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Target` should be created.
+        /// Format should be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="target">
+        /// Required. The `Target` to create.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Target, OperationMetadata> CreateTarget(LocationName parent, Target target, string targetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTarget(new CreateTargetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                Target = gax::GaxPreconditions.CheckNotNull(target, nameof(target)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Target in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Target` should be created.
+        /// Format should be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="target">
+        /// Required. The `Target` to create.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(LocationName parent, Target target, string targetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTargetAsync(new CreateTargetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                Target = gax::GaxPreconditions.CheckNotNull(target, nameof(target)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Target in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Target` should be created.
+        /// Format should be
+        /// projects/{project_id}/locations/{location_name}.
+        /// </param>
+        /// <param name="target">
+        /// Required. The `Target` to create.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(LocationName parent, Target target, string targetId, st::CancellationToken cancellationToken) =>
             CreateTargetAsync(parent, target, targetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2380,6 +2695,123 @@ namespace Google.Cloud.Deploy.V1
             CreateReleaseAsync(parent, release, releaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AbandonReleaseResponse AbandonRelease(AbandonReleaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(AbandonReleaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(AbandonReleaseRequest request, st::CancellationToken cancellationToken) =>
+            AbandonReleaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AbandonReleaseResponse AbandonRelease(string name, gaxgrpc::CallSettings callSettings = null) =>
+            AbandonRelease(new AbandonReleaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            AbandonReleaseAsync(new AbandonReleaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(string name, st::CancellationToken cancellationToken) =>
+            AbandonReleaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AbandonReleaseResponse AbandonRelease(ReleaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            AbandonRelease(new AbandonReleaseRequest
+            {
+                ReleaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(ReleaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            AbandonReleaseAsync(new AbandonReleaseRequest
+            {
+                ReleaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Release. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(ReleaseName name, st::CancellationToken cancellationToken) =>
+            AbandonReleaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Approves a Rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2909,6 +3341,392 @@ namespace Google.Cloud.Deploy.V1
             CreateRolloutAsync(parent, rollout, rolloutId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetryJobResponse RetryJob(RetryJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(RetryJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(RetryJobRequest request, st::CancellationToken cancellationToken) =>
+            RetryJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetryJobResponse RetryJob(string rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            RetryJob(new RetryJobRequest
+            {
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(string rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            RetryJobAsync(new RetryJobRequest
+            {
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(string rollout, string phaseId, string jobId, st::CancellationToken cancellationToken) =>
+            RetryJobAsync(rollout, phaseId, jobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetryJobResponse RetryJob(RolloutName rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            RetryJob(new RetryJobRequest
+            {
+                RolloutAsRolloutName = gax::GaxPreconditions.CheckNotNull(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(RolloutName rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            RetryJobAsync(new RetryJobRequest
+            {
+                RolloutAsRolloutName = gax::GaxPreconditions.CheckNotNull(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to retry belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to retry.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetryJobResponse> RetryJobAsync(RolloutName rollout, string phaseId, string jobId, st::CancellationToken cancellationToken) =>
+            RetryJobAsync(rollout, phaseId, jobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListJobRunsResponse, JobRun> ListJobRuns(ListJobRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobRunsResponse, JobRun> ListJobRunsAsync(ListJobRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `Rollout` which owns this collection of `JobRun` objects.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListJobRunsResponse, JobRun> ListJobRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobRuns(new ListJobRunsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `Rollout` which owns this collection of `JobRun` objects.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobRunsResponse, JobRun> ListJobRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobRunsAsync(new ListJobRunsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `Rollout` which owns this collection of `JobRun` objects.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListJobRunsResponse, JobRun> ListJobRuns(RolloutName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobRuns(new ListJobRunsRequest
+            {
+                ParentAsRolloutName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `Rollout` which owns this collection of `JobRun` objects.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="JobRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobRunsResponse, JobRun> ListJobRunsAsync(RolloutName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobRunsAsync(new ListJobRunsRequest
+            {
+                ParentAsRolloutName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual JobRun GetJobRun(GetJobRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(GetJobRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(GetJobRunRequest request, st::CancellationToken cancellationToken) =>
+            GetJobRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual JobRun GetJobRun(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetJobRun(new GetJobRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetJobRunAsync(new GetJobRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(string name, st::CancellationToken cancellationToken) =>
+            GetJobRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual JobRun GetJobRun(JobRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetJobRun(new GetJobRunRequest
+            {
+                JobRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(JobRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetJobRunAsync(new GetJobRunRequest
+            {
+                JobRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<JobRun> GetJobRunAsync(JobRunName name, st::CancellationToken cancellationToken) =>
+            GetJobRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the configuration for a location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3047,6 +3865,8 @@ namespace Google.Cloud.Deploy.V1
 
         private readonly gaxgrpc::ApiCall<CreateReleaseRequest, lro::Operation> _callCreateRelease;
 
+        private readonly gaxgrpc::ApiCall<AbandonReleaseRequest, AbandonReleaseResponse> _callAbandonRelease;
+
         private readonly gaxgrpc::ApiCall<ApproveRolloutRequest, ApproveRolloutResponse> _callApproveRollout;
 
         private readonly gaxgrpc::ApiCall<ListRolloutsRequest, ListRolloutsResponse> _callListRollouts;
@@ -3054,6 +3874,12 @@ namespace Google.Cloud.Deploy.V1
         private readonly gaxgrpc::ApiCall<GetRolloutRequest, Rollout> _callGetRollout;
 
         private readonly gaxgrpc::ApiCall<CreateRolloutRequest, lro::Operation> _callCreateRollout;
+
+        private readonly gaxgrpc::ApiCall<RetryJobRequest, RetryJobResponse> _callRetryJob;
+
+        private readonly gaxgrpc::ApiCall<ListJobRunsRequest, ListJobRunsResponse> _callListJobRuns;
+
+        private readonly gaxgrpc::ApiCall<GetJobRunRequest, JobRun> _callGetJobRun;
 
         private readonly gaxgrpc::ApiCall<GetConfigRequest, Config> _callGetConfig;
 
@@ -3076,6 +3902,8 @@ namespace Google.Cloud.Deploy.V1
             DeleteTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetOperationsSettings, logger);
             CreateReleaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReleaseOperationsSettings, logger);
             CreateRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRolloutOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListDeliveryPipelines = clientHelper.BuildApiCall<ListDeliveryPipelinesRequest, ListDeliveryPipelinesResponse>("ListDeliveryPipelines", grpcClient.ListDeliveryPipelinesAsync, grpcClient.ListDeliveryPipelines, effectiveSettings.ListDeliveryPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDeliveryPipelines);
             Modify_ListDeliveryPipelinesApiCall(ref _callListDeliveryPipelines);
@@ -3115,6 +3943,9 @@ namespace Google.Cloud.Deploy.V1
             _callCreateRelease = clientHelper.BuildApiCall<CreateReleaseRequest, lro::Operation>("CreateRelease", grpcClient.CreateReleaseAsync, grpcClient.CreateRelease, effectiveSettings.CreateReleaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRelease);
             Modify_CreateReleaseApiCall(ref _callCreateRelease);
+            _callAbandonRelease = clientHelper.BuildApiCall<AbandonReleaseRequest, AbandonReleaseResponse>("AbandonRelease", grpcClient.AbandonReleaseAsync, grpcClient.AbandonRelease, effectiveSettings.AbandonReleaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAbandonRelease);
+            Modify_AbandonReleaseApiCall(ref _callAbandonRelease);
             _callApproveRollout = clientHelper.BuildApiCall<ApproveRolloutRequest, ApproveRolloutResponse>("ApproveRollout", grpcClient.ApproveRolloutAsync, grpcClient.ApproveRollout, effectiveSettings.ApproveRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApproveRollout);
             Modify_ApproveRolloutApiCall(ref _callApproveRollout);
@@ -3127,6 +3958,15 @@ namespace Google.Cloud.Deploy.V1
             _callCreateRollout = clientHelper.BuildApiCall<CreateRolloutRequest, lro::Operation>("CreateRollout", grpcClient.CreateRolloutAsync, grpcClient.CreateRollout, effectiveSettings.CreateRolloutSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRollout);
             Modify_CreateRolloutApiCall(ref _callCreateRollout);
+            _callRetryJob = clientHelper.BuildApiCall<RetryJobRequest, RetryJobResponse>("RetryJob", grpcClient.RetryJobAsync, grpcClient.RetryJob, effectiveSettings.RetryJobSettings).WithGoogleRequestParam("rollout", request => request.Rollout);
+            Modify_ApiCall(ref _callRetryJob);
+            Modify_RetryJobApiCall(ref _callRetryJob);
+            _callListJobRuns = clientHelper.BuildApiCall<ListJobRunsRequest, ListJobRunsResponse>("ListJobRuns", grpcClient.ListJobRunsAsync, grpcClient.ListJobRuns, effectiveSettings.ListJobRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListJobRuns);
+            Modify_ListJobRunsApiCall(ref _callListJobRuns);
+            _callGetJobRun = clientHelper.BuildApiCall<GetJobRunRequest, JobRun>("GetJobRun", grpcClient.GetJobRunAsync, grpcClient.GetJobRun, effectiveSettings.GetJobRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetJobRun);
+            Modify_GetJobRunApiCall(ref _callGetJobRun);
             _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>("GetConfig", grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConfig);
             Modify_GetConfigApiCall(ref _callGetConfig);
@@ -3161,6 +4001,8 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_CreateReleaseApiCall(ref gaxgrpc::ApiCall<CreateReleaseRequest, lro::Operation> call);
 
+        partial void Modify_AbandonReleaseApiCall(ref gaxgrpc::ApiCall<AbandonReleaseRequest, AbandonReleaseResponse> call);
+
         partial void Modify_ApproveRolloutApiCall(ref gaxgrpc::ApiCall<ApproveRolloutRequest, ApproveRolloutResponse> call);
 
         partial void Modify_ListRolloutsApiCall(ref gaxgrpc::ApiCall<ListRolloutsRequest, ListRolloutsResponse> call);
@@ -3169,12 +4011,24 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_CreateRolloutApiCall(ref gaxgrpc::ApiCall<CreateRolloutRequest, lro::Operation> call);
 
+        partial void Modify_RetryJobApiCall(ref gaxgrpc::ApiCall<RetryJobRequest, RetryJobResponse> call);
+
+        partial void Modify_ListJobRunsApiCall(ref gaxgrpc::ApiCall<ListJobRunsRequest, ListJobRunsResponse> call);
+
+        partial void Modify_GetJobRunApiCall(ref gaxgrpc::ApiCall<GetJobRunRequest, JobRun> call);
+
         partial void Modify_GetConfigApiCall(ref gaxgrpc::ApiCall<GetConfigRequest, Config> call);
 
         partial void OnConstruction(CloudDeploy.CloudDeployClient grpcClient, CloudDeploySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudDeploy client</summary>
         public override CloudDeploy.CloudDeployClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListDeliveryPipelinesRequest(ref ListDeliveryPipelinesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3202,6 +4056,8 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_CreateReleaseRequest(ref CreateReleaseRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_AbandonReleaseRequest(ref AbandonReleaseRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ApproveRolloutRequest(ref ApproveRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRolloutsRequest(ref ListRolloutsRequest request, ref gaxgrpc::CallSettings settings);
@@ -3209,6 +4065,12 @@ namespace Google.Cloud.Deploy.V1
         partial void Modify_GetRolloutRequest(ref GetRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateRolloutRequest(ref CreateRolloutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RetryJobRequest(ref RetryJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListJobRunsRequest(ref ListJobRunsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetJobRunRequest(ref GetJobRunRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetConfigRequest(ref GetConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3546,6 +4408,30 @@ namespace Google.Cloud.Deploy.V1
         }
 
         /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AbandonReleaseResponse AbandonRelease(AbandonReleaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AbandonReleaseRequest(ref request, ref callSettings);
+            return _callAbandonRelease.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Abandons a Release in the Delivery Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AbandonReleaseResponse> AbandonReleaseAsync(AbandonReleaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AbandonReleaseRequest(ref request, ref callSettings);
+            return _callAbandonRelease.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Approves a Rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3645,6 +4531,78 @@ namespace Google.Cloud.Deploy.V1
         }
 
         /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RetryJobResponse RetryJob(RetryJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetryJobRequest(ref request, ref callSettings);
+            return _callRetryJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retries the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RetryJobResponse> RetryJobAsync(RetryJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetryJobRequest(ref request, ref callSettings);
+            return _callRetryJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="JobRun"/> resources.</returns>
+        public override gax::PagedEnumerable<ListJobRunsResponse, JobRun> ListJobRuns(ListJobRunsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListJobRunsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListJobRunsRequest, ListJobRunsResponse, JobRun>(_callListJobRuns, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists JobRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="JobRun"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListJobRunsResponse, JobRun> ListJobRunsAsync(ListJobRunsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListJobRunsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListJobRunsRequest, ListJobRunsResponse, JobRun>(_callListJobRuns, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override JobRun GetJobRun(GetJobRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetJobRunRequest(ref request, ref callSettings);
+            return _callGetJobRun.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single JobRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<JobRun> GetJobRunAsync(GetJobRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetJobRunRequest(ref request, ref callSettings);
+            return _callGetJobRun.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the configuration for a location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3685,6 +4643,10 @@ namespace Google.Cloud.Deploy.V1
     {
     }
 
+    public partial class ListJobRunsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDeliveryPipelinesResponse : gaxgrpc::IPageResponse<DeliveryPipeline>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -3717,6 +4679,14 @@ namespace Google.Cloud.Deploy.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListJobRunsResponse : gaxgrpc::IPageResponse<JobRun>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<JobRun> GetEnumerator() => JobRuns.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public static partial class CloudDeploy
     {
         public partial class CloudDeployClient
@@ -3728,6 +4698,32 @@ namespace Google.Cloud.Deploy.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CloudDeploy
+    {
+        public partial class CloudDeployClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

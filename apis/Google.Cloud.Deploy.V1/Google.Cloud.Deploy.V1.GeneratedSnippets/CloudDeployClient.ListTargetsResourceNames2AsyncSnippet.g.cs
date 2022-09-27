@@ -16,9 +16,8 @@
 
 namespace Google.Cloud.Deploy.V1.Snippets
 {
-    // [START clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames]
+    // [START clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames2]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Deploy.V1;
     using System;
     using System.Linq;
@@ -31,7 +30,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task ListTargetsResourceNamesAsync()
+        public async Task ListTargetsResourceNames2Async()
         {
             // Create client
             CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
@@ -73,5 +72,5 @@ namespace Google.Cloud.Deploy.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames]
+    // [END clouddeploy_v1_generated_CloudDeploy_ListTargets_async_flattened_resourceNames2]
 }
