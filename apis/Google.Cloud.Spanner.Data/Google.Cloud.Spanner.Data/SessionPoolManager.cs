@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -184,14 +184,14 @@ namespace Google.Cloud.Spanner.Data
             private int _activeConnections;
             internal Task<SessionPool> SessionPoolTask { get; }
 
-            internal TargetedPool(SessionPoolManager parent, SpannerClientCreationOptions channelOptions)
+            internal TargetedPool(SessionPoolManager parent, SpannerClientCreationOptions clientCreationOptions)
             {
-                _diagnosticName = channelOptions.ToString();
+                _diagnosticName = clientCreationOptions.ToString();
                 SessionPoolTask = CreateSessionPoolAsync();
 
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
-                    var client = await parent._clientFactory.Invoke(channelOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
+                    var client = await parent._clientFactory.Invoke(clientCreationOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
                     var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
