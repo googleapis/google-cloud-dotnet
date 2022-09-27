@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,6 +71,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
+        [Fact]
+        public void Equality_GoogleCredential()
+        {
+            var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
+            string dataSource = "projects/p1/instances/i1/databases/d1";
+            var builder = new SpannerConnectionStringBuilder("", credential) { DataSource = dataSource };
+            var equalBuilder = new SpannerConnectionStringBuilder($"Data Source = {dataSource}", credential);
+
+            var unequalBuilders = new[]
+            {
+                new SpannerConnectionStringBuilder { DataSource = dataSource, CredentialFile = "creds.json" },
+                new SpannerConnectionStringBuilder { DataSource = dataSource },
+                new SpannerConnectionStringBuilder($"Data Source={dataSource}", GoogleCredential.FromComputeCredential(new ComputeCredential()))
+            };
+
+            var options = new SpannerClientCreationOptions(builder);
+            var equalOptions = new SpannerClientCreationOptions(equalBuilder);
+            var unequalOptions = unequalBuilders.Select(b => new SpannerClientCreationOptions(b)).ToArray();
+
+            EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
+        }
+
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests
         [Fact]
         public async Task CredentialFile()
@@ -105,6 +127,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
             var options = new SpannerClientCreationOptions(builder);
             await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
+        }
+
+        [Fact]
+        public async Task GetCredentialsAsync_GoogleCredential()
+        {
+            var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
+            var builder = new SpannerConnectionStringBuilder("", credential);
+            var options = new SpannerClientCreationOptions(builder);
+            Assert.NotNull(await options.GetCredentialsAsync());
         }
     }
 }

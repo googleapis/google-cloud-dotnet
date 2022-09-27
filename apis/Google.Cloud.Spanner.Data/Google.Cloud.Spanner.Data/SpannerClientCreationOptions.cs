@@ -68,6 +68,9 @@ namespace Google.Cloud.Spanner.Data
         private readonly string _credentialsFile;
         // May be null 
         private readonly ChannelCredentials _credentialsOverride;
+        // May be null; _credentialsOverride takes precedence if both this and _credentialsOverride
+        // are non-null (which should only happen when connecting to the emulator)
+        private readonly GoogleCredential _googleCredential;
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
@@ -83,6 +86,7 @@ namespace Google.Cloud.Spanner.Data
 
             // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
             _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
+            _googleCredential = builder.GoogleCredential;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
 
@@ -97,6 +101,7 @@ namespace Google.Cloud.Spanner.Data
             Endpoint.Equals(other.Endpoint) &&
             Equals(_credentialsFile, other._credentialsFile) &&
             Equals(_credentialsOverride, other._credentialsOverride) &&
+            Equals(_googleCredential, other._googleCredential) &&
             UsesEmulator == other.UsesEmulator &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
@@ -110,6 +115,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + Endpoint.GetHashCode();
                 hash = hash * 23 + (_credentialsFile?.GetHashCode() ?? 0);
                 hash = hash * 23 + (_credentialsOverride?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_googleCredential?.GetHashCode() ?? 0);
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
@@ -129,9 +135,13 @@ namespace Google.Cloud.Spanner.Data
             {
                 builder.Append($"; CredentialsFile: {_credentialsFile}");
             }
-            if (_credentialsOverride != null)
+            if (_credentialsOverride is not null)
             {
                 builder.Append($"; CredentialsOverride: True");
+            }
+            if (_googleCredential is not null)
+            {
+                builder.Append($"; GoogleCredential: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
             builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
@@ -144,9 +154,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal async Task<ChannelCredentials> GetCredentialsAsync()
         {
-            if (_credentialsOverride != null)
+            if (_credentialsOverride is not null)
             {
                 return _credentialsOverride;
+            }
+            if (_googleCredential is not null)
+            {
+                return ConvertGoogleCredential(_googleCredential);
             }
             if (string.IsNullOrEmpty(_credentialsFile))
             {
