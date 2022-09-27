@@ -16,39 +16,38 @@
 
 namespace Google.Cloud.Deploy.V1.Snippets
 {
-    // [START clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_async_flattened_resourceNames1]
+    // [START clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Deploy.V1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudDeployClientSnippets
     {
-        /// <summary>Snippet for CreateDeliveryPipelineAsync</summary>
+        /// <summary>Snippet for CreateDeliveryPipeline</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task CreateDeliveryPipelineResourceNames1Async()
+        public void CreateDeliveryPipelineResourceNames()
         {
             // Create client
-            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             DeliveryPipeline deliveryPipeline = new DeliveryPipeline();
             string deliveryPipelineId = "";
             // Make the request
-            Operation<DeliveryPipeline, OperationMetadata> response = await cloudDeployClient.CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId);
+            Operation<DeliveryPipeline, OperationMetadata> response = cloudDeployClient.CreateDeliveryPipeline(parent, deliveryPipeline, deliveryPipelineId);
 
             // Poll until the returned long-running operation is complete
-            Operation<DeliveryPipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<DeliveryPipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             DeliveryPipeline result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DeliveryPipeline, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateDeliveryPipelineAsync(operationName);
+            Operation<DeliveryPipeline, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateDeliveryPipeline(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -57,5 +56,5 @@ namespace Google.Cloud.Deploy.V1.Snippets
             }
         }
     }
-    // [END clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_async_flattened_resourceNames1]
+    // [END clouddeploy_v1_generated_CloudDeploy_CreateDeliveryPipeline_sync_flattened_resourceNames]
 }

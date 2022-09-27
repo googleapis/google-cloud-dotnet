@@ -837,56 +837,6 @@ namespace Google.Cloud.Deploy.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists DeliveryPipelines in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="DeliveryPipeline"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> ListDeliveryPipelines(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryPipelines(new ListDeliveryPipelinesRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists DeliveryPipelines in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="DeliveryPipeline"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> ListDeliveryPipelinesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeliveryPipelinesAsync(new ListDeliveryPipelinesRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
         /// Gets details of a single DeliveryPipeline.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1177,70 +1127,6 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(gagr::LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, st::CancellationToken cancellationToken) =>
-            CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new DeliveryPipeline in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="deliveryPipeline">
-        /// Required. The `DeliveryPipeline` to create.
-        /// </param>
-        /// <param name="deliveryPipelineId">
-        /// Required. ID of the `DeliveryPipeline`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<DeliveryPipeline, OperationMetadata> CreateDeliveryPipeline(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeliveryPipeline(new CreateDeliveryPipelineRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeliveryPipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(deliveryPipelineId, nameof(deliveryPipelineId)),
-                DeliveryPipeline = gax::GaxPreconditions.CheckNotNull(deliveryPipeline, nameof(deliveryPipeline)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new DeliveryPipeline in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="deliveryPipeline">
-        /// Required. The `DeliveryPipeline` to create.
-        /// </param>
-        /// <param name="deliveryPipelineId">
-        /// Required. ID of the `DeliveryPipeline`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeliveryPipelineAsync(new CreateDeliveryPipelineRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeliveryPipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(deliveryPipelineId, nameof(deliveryPipelineId)),
-                DeliveryPipeline = gax::GaxPreconditions.CheckNotNull(deliveryPipeline, nameof(deliveryPipeline)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new DeliveryPipeline in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="deliveryPipeline">
-        /// Required. The `DeliveryPipeline` to create.
-        /// </param>
-        /// <param name="deliveryPipelineId">
-        /// Required. ID of the `DeliveryPipeline`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<DeliveryPipeline, OperationMetadata>> CreateDeliveryPipelineAsync(LocationName parent, DeliveryPipeline deliveryPipeline, string deliveryPipelineId, st::CancellationToken cancellationToken) =>
             CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1616,56 +1502,6 @@ namespace Google.Cloud.Deploy.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists Targets in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Target"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTargetsResponse, Target> ListTargets(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargets(new ListTargetsRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists Targets in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Target"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTargetsResponse, Target> ListTargetsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTargetsAsync(new ListTargetsRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
         /// Gets details of a single Target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1961,73 +1797,6 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(gagr::LocationName parent, Target target, string targetId, st::CancellationToken cancellationToken) =>
-            CreateTargetAsync(parent, target, targetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new Target in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="target">
-        /// Required. The `Target` to create.
-        /// </param>
-        /// <param name="targetId">
-        /// Required. ID of the `Target`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Target, OperationMetadata> CreateTarget(LocationName parent, Target target, string targetId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateTarget(new CreateTargetRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
-                Target = gax::GaxPreconditions.CheckNotNull(target, nameof(target)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new Target in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="target">
-        /// Required. The `Target` to create.
-        /// </param>
-        /// <param name="targetId">
-        /// Required. ID of the `Target`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(LocationName parent, Target target, string targetId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateTargetAsync(new CreateTargetRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
-                Target = gax::GaxPreconditions.CheckNotNull(target, nameof(target)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new Target in a given project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent collection in which the `Target` should be created.
-        /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
-        /// </param>
-        /// <param name="target">
-        /// Required. The `Target` to create.
-        /// </param>
-        /// <param name="targetId">
-        /// Required. ID of the `Target`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Target, OperationMetadata>> CreateTargetAsync(LocationName parent, Target target, string targetId, st::CancellationToken cancellationToken) =>
             CreateTargetAsync(parent, target, targetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
