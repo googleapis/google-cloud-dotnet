@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
+using Grpc.Auth;
+using System;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -31,6 +40,37 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.Throws<FileNotFoundException>(() => connection.Open());
             }
+        }
+
+        [Fact]
+        public void ConnectionString_SetterMaintainsChannelCredentialsAndSessionPoolManager()
+        {
+            var channelCredentials = new FakeCredential().ToChannelCredentials();
+            var sessionPoolManager = new SessionPoolManager(new SessionPoolOptions(), SpannerSettings.GetDefault(), Logger.DefaultLogger, (o, s, l) => throw new InvalidOperationException());
+
+            var builder = new SpannerConnectionStringBuilder("Data Source=projects/project_id/instances/instance_id; ClrToSpannerTypeDefaultMappings=DecimalToNumeric", channelCredentials)
+            {
+                SessionPoolManager = sessionPoolManager
+            };
+            using var connection = new SpannerConnection(builder);
+            connection.ConnectionString = "Data Source=projects/project_id2/instances/instance_id2; ClrToSpannerTypeDefaultMappings=DecimalToPgNumeric";
+
+            // Original builder hasn't changed
+            Assert.Equal("projects/project_id/instances/instance_id", builder.DataSource);
+            Assert.Equal(SpannerDbType.Numeric, builder.ConversionOptions.DecimalToConfiguredSpannerType);
+
+            // Connection observes new values
+            Assert.Equal("projects/project_id2/instances/instance_id2", connection.DataSource);
+            Assert.Equal(SpannerDbType.PgNumeric, connection.Builder.ConversionOptions.DecimalToConfiguredSpannerType);
+
+            Assert.Same(channelCredentials, connection.Builder.CredentialOverride);
+            Assert.Same(sessionPoolManager, connection.Builder.SessionPoolManager);
+        }
+
+        private class FakeCredential : ITokenAccess
+        {
+            public Task<string> GetAccessTokenForRequestAsync(string authUri = null, CancellationToken cancellationToken = default) =>
+                throw new NotImplementedException();
         }
     }
 }
