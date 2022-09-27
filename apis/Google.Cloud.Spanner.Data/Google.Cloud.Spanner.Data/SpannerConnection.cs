@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -66,7 +67,12 @@ namespace Google.Cloud.Spanner.Data
         public override string ConnectionString
         {
             get => Builder.ToString();
-            set => TrySetNewConnectionInfo(new SpannerConnectionStringBuilder(value, Builder.CredentialOverride, Builder.SessionPoolManager));
+            set
+            {
+                var newBuilder = Builder.Clone();
+                newBuilder.ConnectionString = value;
+                TrySetNewConnectionInfo(newBuilder);
+            }
         }
 
         /// <inheritdoc />
@@ -140,17 +146,30 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Creates a SpannerConnection with a datasource contained in connectionString
-        /// and optional credential information supplied in connectionString or the credential
+        /// Creates a SpannerConnection with a datasource contained in <paramref name="connectionString"/>
+        /// and optional credential information supplied in <paramref name="connectionString"/> or the <paramref name="credentials"/>
         /// argument.
         /// </summary>
         /// <param name="connectionString">
         /// A Spanner formatted connection string. This is usually of the form
         /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`
         /// </param>
-        /// <param name="credentials">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
+        /// <param name="credentials">An optional credential for operations to be performed on the Spanner database. May be null.</param>
         public SpannerConnection(string connectionString, ChannelCredentials credentials = null)
             : this(new SpannerConnectionStringBuilder(connectionString, credentials)) { }
+
+        /// <summary>
+        /// Creates a SpannerConnection with a datasource contained in <paramref name="connectionString"/>
+        /// and optional credential information supplied in <paramref name="connectionString"/> or the <paramref name="googleCredential"/>
+        /// argument.
+        /// </summary>
+        /// <param name="connectionString">
+        /// A Spanner formatted connection string. This is usually of the form
+        /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`
+        /// </param>
+        /// <param name="googleCredential">An optional credential for operations to be performed on the Spanner database. May be null.</param>
+        public SpannerConnection(string connectionString, GoogleCredential googleCredential)
+            : this(new SpannerConnectionStringBuilder(connectionString, googleCredential)) { }
 
         /// <summary>
         /// Creates a SpannerConnection with a datasource contained in connectionString.
