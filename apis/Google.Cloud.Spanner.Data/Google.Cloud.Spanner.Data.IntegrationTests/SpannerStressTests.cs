@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -55,10 +55,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public Task RunParallelTransactionStress()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Stress tests are flaky when running against the emulator");
+            // Stress tests are flaky when running against the emulator.
 
             return RunStress(connectionStringBuilder => RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
@@ -93,10 +94,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }));
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task RunReadStress()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Stress tests are flaky when running against the emulator");
+            // Stress tests are flaky when running against the emulator.
 
             // Insert a single row first, but remember the ID so we can read it.
             int localCounter = Interlocked.Increment(ref s_rowCounter);

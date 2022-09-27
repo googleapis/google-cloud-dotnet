@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -120,10 +120,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task AbortedThrownCorrectly()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
+            // Requires multiple read/write transactions which is not supported on the emulator.
             // connection 1 starts a transaction and reads
             // connection 2 starts a transaction and reads the same row
             // connection 1 writes and commits
@@ -558,10 +559,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task ReturnCommitStats_ExplicitTransaction()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator does not yet support CommitStats");
+            // Emulator does not yet support CommitStats.
             CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
             string key = IdGenerator.FromGuid();
             await RetryHelpers.ExecuteWithRetryAsync(async () =>
@@ -595,10 +597,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task ReturnCommitStats_EphemeralTransaction()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator does not yet support CommitStats");
+            // Emulator does not yet support CommitStats.
             CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
             string key = IdGenerator.FromGuid();
             await RetryHelpers.ExecuteWithRetryAsync(async () =>

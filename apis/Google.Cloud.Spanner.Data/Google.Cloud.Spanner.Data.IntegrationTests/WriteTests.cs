@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -381,10 +381,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task CommandTimeout()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
+            // The emulator returns too quickly to trigger timeout.
             var values = new SpannerParameterCollection
             {
                 {"StringValue", SpannerDbType.String, "abc"},
