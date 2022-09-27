@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1
         {
             Validate();
             var initializer = CreateServiceInitializer();
-            var service = new StorageService(initializer);            
+            var service = new StorageService(initializer);
             return new StorageClientImpl(service, EncryptionKey);
         }
 
@@ -67,6 +67,7 @@ namespace Google.Cloud.Storage.V1
         {
             var initializer = base.CreateServiceInitializer();
             initializer.GZipEnabled = GZipEnabled;
+            initializer.DefaultExponentialBackOffPolicy = ExponentialBackOffPolicy.None;
             return initializer;
         }
 
@@ -75,6 +76,7 @@ namespace Google.Cloud.Storage.V1
         {
             var initializer = await base.CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
             initializer.GZipEnabled = GZipEnabled;
+            initializer.DefaultExponentialBackOffPolicy = ExponentialBackOffPolicy.None;
             return initializer;
         }
 
