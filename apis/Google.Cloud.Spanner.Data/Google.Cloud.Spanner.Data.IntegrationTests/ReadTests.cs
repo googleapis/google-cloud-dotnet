@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -93,10 +93,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task CancelRead()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator can return before query is cancelled");
+            // The emulator can return before query is cancelled.
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
@@ -382,10 +383,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task CommandTimeout()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
+            // The emulator returns too quickly to trigger timeout.
             using (var connection =
                 new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerConnectionStringBuilder.AllowImmediateTimeouts)}=true"))
             {
@@ -396,10 +398,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [SkippableFact]
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task TimeoutFromOptions()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
+            // The emulator returns too quickly to trigger timeout.
             var connectionStringBuilder = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
             {
                 Timeout = 0,
