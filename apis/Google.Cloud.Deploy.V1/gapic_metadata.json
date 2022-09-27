@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "CloudDeployClient",
           "rpcs": {
+            "AbandonRelease": {
+              "methods": [
+                "AbandonRelease",
+                "AbandonReleaseAsync"
+              ]
+            },
             "ApproveRollout": {
               "methods": [
                 "ApproveRollout",
@@ -64,6 +70,12 @@
                 "GetDeliveryPipelineAsync"
               ]
             },
+            "GetJobRun": {
+              "methods": [
+                "GetJobRun",
+                "GetJobRunAsync"
+              ]
+            },
             "GetRelease": {
               "methods": [
                 "GetRelease",
@@ -88,6 +100,12 @@
                 "ListDeliveryPipelinesAsync"
               ]
             },
+            "ListJobRuns": {
+              "methods": [
+                "ListJobRuns",
+                "ListJobRunsAsync"
+              ]
+            },
             "ListReleases": {
               "methods": [
                 "ListReleases",
@@ -104,6 +122,12 @@
               "methods": [
                 "ListTargets",
                 "ListTargetsAsync"
+              ]
+            },
+            "RetryJob": {
+              "methods": [
+                "RetryJob",
+                "RetryJobAsync"
               ]
             },
             "UpdateDeliveryPipeline": {

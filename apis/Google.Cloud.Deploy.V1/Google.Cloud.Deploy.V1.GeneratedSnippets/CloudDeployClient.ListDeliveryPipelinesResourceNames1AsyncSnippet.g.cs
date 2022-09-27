@@ -16,53 +16,55 @@
 
 namespace Google.Cloud.Deploy.V1.Snippets
 {
-    // [START clouddeploy_v1_generated_CloudDeploy_ListTargets_sync_flattened_resourceNames]
+    // [START clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Deploy.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudDeployClientSnippets
     {
-        /// <summary>Snippet for ListTargets</summary>
+        /// <summary>Snippet for ListDeliveryPipelinesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void ListTargetsResourceNames()
+        public async Task ListDeliveryPipelinesResourceNames1Async()
         {
             // Create client
-            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListTargetsResponse, Target> response = cloudDeployClient.ListTargets(parent);
+            PagedAsyncEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> response = cloudDeployClient.ListDeliveryPipelinesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Target item in response)
+            await response.ForEachAsync((DeliveryPipeline item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTargetsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListDeliveryPipelinesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Target item in page)
+                foreach (DeliveryPipeline item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Target> singlePage = response.ReadPage(pageSize);
+            Page<DeliveryPipeline> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Target item in singlePage)
+            foreach (DeliveryPipeline item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -71,5 +73,5 @@ namespace Google.Cloud.Deploy.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END clouddeploy_v1_generated_CloudDeploy_ListTargets_sync_flattened_resourceNames]
+    // [END clouddeploy_v1_generated_CloudDeploy_ListDeliveryPipelines_async_flattened_resourceNames1]
 }

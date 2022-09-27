@@ -14,15 +14,17 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Deploy.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gagr = Google.Api.Gax.ResourceNames;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedCloudDeployClientSnippets
@@ -36,7 +38,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             ListDeliveryPipelinesRequest request = new ListDeliveryPipelinesRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -86,7 +88,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             ListDeliveryPipelinesRequest request = new ListDeliveryPipelinesRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -218,7 +220,97 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for ListDeliveryPipelines</summary>
-        public void ListDeliveryPipelinesResourceNames()
+        public void ListDeliveryPipelinesResourceNames1()
+        {
+            // Snippet: ListDeliveryPipelines(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> response = cloudDeployClient.ListDeliveryPipelines(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeliveryPipeline item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeliveryPipelinesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeliveryPipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeliveryPipeline> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeliveryPipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeliveryPipelinesAsync</summary>
+        public async Task ListDeliveryPipelinesResourceNames1Async()
+        {
+            // Snippet: ListDeliveryPipelinesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeliveryPipelinesResponse, DeliveryPipeline> response = cloudDeployClient.ListDeliveryPipelinesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeliveryPipeline item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeliveryPipelinesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeliveryPipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeliveryPipeline> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeliveryPipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeliveryPipelines</summary>
+        public void ListDeliveryPipelinesResourceNames2()
         {
             // Snippet: ListDeliveryPipelines(LocationName, string, int?, CallSettings)
             // Create client
@@ -263,7 +355,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for ListDeliveryPipelinesAsync</summary>
-        public async Task ListDeliveryPipelinesResourceNamesAsync()
+        public async Task ListDeliveryPipelinesResourceNames2Async()
         {
             // Snippet: ListDeliveryPipelinesAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -403,7 +495,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             CreateDeliveryPipelineRequest request = new CreateDeliveryPipelineRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DeliveryPipelineId = "",
                 DeliveryPipeline = new DeliveryPipeline(),
                 RequestId = "",
@@ -440,7 +532,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             CreateDeliveryPipelineRequest request = new CreateDeliveryPipelineRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DeliveryPipelineId = "",
                 DeliveryPipeline = new DeliveryPipeline(),
                 RequestId = "",
@@ -531,7 +623,70 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDeliveryPipeline</summary>
-        public void CreateDeliveryPipelineResourceNames()
+        public void CreateDeliveryPipelineResourceNames1()
+        {
+            // Snippet: CreateDeliveryPipeline(LocationName, DeliveryPipeline, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeliveryPipeline deliveryPipeline = new DeliveryPipeline();
+            string deliveryPipelineId = "";
+            // Make the request
+            Operation<DeliveryPipeline, OperationMetadata> response = cloudDeployClient.CreateDeliveryPipeline(parent, deliveryPipeline, deliveryPipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeliveryPipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeliveryPipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeliveryPipeline, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateDeliveryPipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeliveryPipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeliveryPipelineAsync</summary>
+        public async Task CreateDeliveryPipelineResourceNames1Async()
+        {
+            // Snippet: CreateDeliveryPipelineAsync(LocationName, DeliveryPipeline, string, CallSettings)
+            // Additional: CreateDeliveryPipelineAsync(LocationName, DeliveryPipeline, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeliveryPipeline deliveryPipeline = new DeliveryPipeline();
+            string deliveryPipelineId = "";
+            // Make the request
+            Operation<DeliveryPipeline, OperationMetadata> response = await cloudDeployClient.CreateDeliveryPipelineAsync(parent, deliveryPipeline, deliveryPipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeliveryPipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeliveryPipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeliveryPipeline, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateDeliveryPipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeliveryPipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeliveryPipeline</summary>
+        public void CreateDeliveryPipelineResourceNames2()
         {
             // Snippet: CreateDeliveryPipeline(LocationName, DeliveryPipeline, string, CallSettings)
             // Create client
@@ -562,7 +717,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDeliveryPipelineAsync</summary>
-        public async Task CreateDeliveryPipelineResourceNamesAsync()
+        public async Task CreateDeliveryPipelineResourceNames2Async()
         {
             // Snippet: CreateDeliveryPipelineAsync(LocationName, DeliveryPipeline, string, CallSettings)
             // Additional: CreateDeliveryPipelineAsync(LocationName, DeliveryPipeline, string, CancellationToken)
@@ -929,7 +1084,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             ListTargetsRequest request = new ListTargetsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -979,7 +1134,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             ListTargetsRequest request = new ListTargetsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -1111,7 +1266,97 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for ListTargets</summary>
-        public void ListTargetsResourceNames()
+        public void ListTargetsResourceNames1()
+        {
+            // Snippet: ListTargets(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTargetsResponse, Target> response = cloudDeployClient.ListTargets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Target item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTargetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Target item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Target> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Target item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTargetsAsync</summary>
+        public async Task ListTargetsResourceNames1Async()
+        {
+            // Snippet: ListTargetsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListTargetsResponse, Target> response = cloudDeployClient.ListTargetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Target item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTargetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Target item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Target> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Target item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTargets</summary>
+        public void ListTargetsResourceNames2()
         {
             // Snippet: ListTargets(LocationName, string, int?, CallSettings)
             // Create client
@@ -1156,7 +1401,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for ListTargetsAsync</summary>
-        public async Task ListTargetsResourceNamesAsync()
+        public async Task ListTargetsResourceNames2Async()
         {
             // Snippet: ListTargetsAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -1296,7 +1541,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             CreateTargetRequest request = new CreateTargetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 TargetId = "",
                 Target = new Target(),
                 RequestId = "",
@@ -1333,7 +1578,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // Initialize request argument(s)
             CreateTargetRequest request = new CreateTargetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 TargetId = "",
                 Target = new Target(),
                 RequestId = "",
@@ -1424,7 +1669,70 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTarget</summary>
-        public void CreateTargetResourceNames()
+        public void CreateTargetResourceNames1()
+        {
+            // Snippet: CreateTarget(LocationName, Target, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Target target = new Target();
+            string targetId = "";
+            // Make the request
+            Operation<Target, OperationMetadata> response = cloudDeployClient.CreateTarget(parent, target, targetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Target, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Target result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Target, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateTarget(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Target retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTargetAsync</summary>
+        public async Task CreateTargetResourceNames1Async()
+        {
+            // Snippet: CreateTargetAsync(LocationName, Target, string, CallSettings)
+            // Additional: CreateTargetAsync(LocationName, Target, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            gagr::LocationName parent = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Target target = new Target();
+            string targetId = "";
+            // Make the request
+            Operation<Target, OperationMetadata> response = await cloudDeployClient.CreateTargetAsync(parent, target, targetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Target, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Target result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Target, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateTargetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Target retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTarget</summary>
+        public void CreateTargetResourceNames2()
         {
             // Snippet: CreateTarget(LocationName, Target, string, CallSettings)
             // Create client
@@ -1455,7 +1763,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTargetAsync</summary>
-        public async Task CreateTargetResourceNamesAsync()
+        public async Task CreateTargetResourceNames2Async()
         {
             // Snippet: CreateTargetAsync(LocationName, Target, string, CallSettings)
             // Additional: CreateTargetAsync(LocationName, Target, string, CancellationToken)
@@ -2377,6 +2685,93 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AbandonRelease</summary>
+        public void AbandonReleaseRequestObject()
+        {
+            // Snippet: AbandonRelease(AbandonReleaseRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            // Make the request
+            AbandonReleaseResponse response = cloudDeployClient.AbandonRelease(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AbandonReleaseAsync</summary>
+        public async Task AbandonReleaseRequestObjectAsync()
+        {
+            // Snippet: AbandonReleaseAsync(AbandonReleaseRequest, CallSettings)
+            // Additional: AbandonReleaseAsync(AbandonReleaseRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AbandonReleaseRequest request = new AbandonReleaseRequest
+            {
+                ReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
+            };
+            // Make the request
+            AbandonReleaseResponse response = await cloudDeployClient.AbandonReleaseAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AbandonRelease</summary>
+        public void AbandonRelease()
+        {
+            // Snippet: AbandonRelease(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]";
+            // Make the request
+            AbandonReleaseResponse response = cloudDeployClient.AbandonRelease(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AbandonReleaseAsync</summary>
+        public async Task AbandonReleaseAsync()
+        {
+            // Snippet: AbandonReleaseAsync(string, CallSettings)
+            // Additional: AbandonReleaseAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]";
+            // Make the request
+            AbandonReleaseResponse response = await cloudDeployClient.AbandonReleaseAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AbandonRelease</summary>
+        public void AbandonReleaseResourceNames()
+        {
+            // Snippet: AbandonRelease(ReleaseName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ReleaseName name = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]");
+            // Make the request
+            AbandonReleaseResponse response = cloudDeployClient.AbandonRelease(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AbandonReleaseAsync</summary>
+        public async Task AbandonReleaseResourceNamesAsync()
+        {
+            // Snippet: AbandonReleaseAsync(ReleaseName, CallSettings)
+            // Additional: AbandonReleaseAsync(ReleaseName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ReleaseName name = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]");
+            // Make the request
+            AbandonReleaseResponse response = await cloudDeployClient.AbandonReleaseAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ApproveRollout</summary>
         public void ApproveRolloutRequestObject()
         {
@@ -3029,6 +3424,472 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 // If it has completed, then access the result
                 Rollout retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJob</summary>
+        public void RetryJobRequestObject()
+        {
+            // Snippet: RetryJob(RetryJobRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+                JobId = "",
+            };
+            // Make the request
+            RetryJobResponse response = cloudDeployClient.RetryJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJobAsync</summary>
+        public async Task RetryJobRequestObjectAsync()
+        {
+            // Snippet: RetryJobAsync(RetryJobRequest, CallSettings)
+            // Additional: RetryJobAsync(RetryJobRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RetryJobRequest request = new RetryJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+                JobId = "",
+            };
+            // Make the request
+            RetryJobResponse response = await cloudDeployClient.RetryJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJob</summary>
+        public void RetryJob()
+        {
+            // Snippet: RetryJob(string, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string rollout = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            RetryJobResponse response = cloudDeployClient.RetryJob(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJobAsync</summary>
+        public async Task RetryJobAsync()
+        {
+            // Snippet: RetryJobAsync(string, string, string, CallSettings)
+            // Additional: RetryJobAsync(string, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string rollout = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            RetryJobResponse response = await cloudDeployClient.RetryJobAsync(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJob</summary>
+        public void RetryJobResourceNames()
+        {
+            // Snippet: RetryJob(RolloutName, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RolloutName rollout = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            RetryJobResponse response = cloudDeployClient.RetryJob(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryJobAsync</summary>
+        public async Task RetryJobResourceNamesAsync()
+        {
+            // Snippet: RetryJobAsync(RolloutName, string, string, CallSettings)
+            // Additional: RetryJobAsync(RolloutName, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RolloutName rollout = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            RetryJobResponse response = await cloudDeployClient.RetryJobAsync(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRuns</summary>
+        public void ListJobRunsRequestObject()
+        {
+            // Snippet: ListJobRuns(ListJobRunsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListJobRunsRequest request = new ListJobRunsRequest
+            {
+                ParentAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRuns(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (JobRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRunsAsync</summary>
+        public async Task ListJobRunsRequestObjectAsync()
+        {
+            // Snippet: ListJobRunsAsync(ListJobRunsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListJobRunsRequest request = new ListJobRunsRequest
+            {
+                ParentAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRunsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((JobRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRuns</summary>
+        public void ListJobRuns()
+        {
+            // Snippet: ListJobRuns(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            // Make the request
+            PagedEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRuns(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (JobRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRunsAsync</summary>
+        public async Task ListJobRunsAsync()
+        {
+            // Snippet: ListJobRunsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            // Make the request
+            PagedAsyncEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRunsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((JobRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRuns</summary>
+        public void ListJobRunsResourceNames()
+        {
+            // Snippet: ListJobRuns(RolloutName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RolloutName parent = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            // Make the request
+            PagedEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRuns(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (JobRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobRunsAsync</summary>
+        public async Task ListJobRunsResourceNamesAsync()
+        {
+            // Snippet: ListJobRunsAsync(RolloutName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RolloutName parent = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            // Make the request
+            PagedAsyncEnumerable<ListJobRunsResponse, JobRun> response = cloudDeployClient.ListJobRunsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((JobRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRun</summary>
+        public void GetJobRunRequestObject()
+        {
+            // Snippet: GetJobRun(GetJobRunRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            // Make the request
+            JobRun response = cloudDeployClient.GetJobRun(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRunAsync</summary>
+        public async Task GetJobRunRequestObjectAsync()
+        {
+            // Snippet: GetJobRunAsync(GetJobRunRequest, CallSettings)
+            // Additional: GetJobRunAsync(GetJobRunRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetJobRunRequest request = new GetJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            // Make the request
+            JobRun response = await cloudDeployClient.GetJobRunAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRun</summary>
+        public void GetJobRun()
+        {
+            // Snippet: GetJobRun(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]/jobRuns/[JOB_RUN]";
+            // Make the request
+            JobRun response = cloudDeployClient.GetJobRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRunAsync</summary>
+        public async Task GetJobRunAsync()
+        {
+            // Snippet: GetJobRunAsync(string, CallSettings)
+            // Additional: GetJobRunAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]/jobRuns/[JOB_RUN]";
+            // Make the request
+            JobRun response = await cloudDeployClient.GetJobRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRun</summary>
+        public void GetJobRunResourceNames()
+        {
+            // Snippet: GetJobRun(JobRunName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            JobRunName name = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]");
+            // Make the request
+            JobRun response = cloudDeployClient.GetJobRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobRunAsync</summary>
+        public async Task GetJobRunResourceNamesAsync()
+        {
+            // Snippet: GetJobRunAsync(JobRunName, CallSettings)
+            // Additional: GetJobRunAsync(JobRunName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            JobRunName name = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]");
+            // Make the request
+            JobRun response = await cloudDeployClient.GetJobRunAsync(name);
             // End snippet
         }
 
