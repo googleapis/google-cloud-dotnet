@@ -713,5 +713,147 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void SuggestConversationSummaryRequestObject()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse response = client.SuggestConversationSummary(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestConversationSummaryRequestObjectAsync()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestConversationSummaryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse responseCallSettings = await client.SuggestConversationSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestConversationSummaryResponse responseCancellationToken = await client.SuggestConversationSummaryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SuggestConversationSummary()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse response = client.SuggestConversationSummary(request.Conversation);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestConversationSummaryAsync()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestConversationSummaryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse responseCallSettings = await client.SuggestConversationSummaryAsync(request.Conversation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestConversationSummaryResponse responseCancellationToken = await client.SuggestConversationSummaryAsync(request.Conversation, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SuggestConversationSummaryResourceNames()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse response = client.SuggestConversationSummary(request.ConversationAsConversationName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestConversationSummaryResourceNamesAsync()
+        {
+            moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+            };
+            SuggestConversationSummaryResponse expectedResponse = new SuggestConversationSummaryResponse
+            {
+                Summary = new SuggestConversationSummaryResponse.Types.Summary(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestConversationSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestConversationSummaryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConversationsClient client = new ConversationsClientImpl(mockGrpcClient.Object, null, null);
+            SuggestConversationSummaryResponse responseCallSettings = await client.SuggestConversationSummaryAsync(request.ConversationAsConversationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestConversationSummaryResponse responseCancellationToken = await client.SuggestConversationSummaryAsync(request.ConversationAsConversationName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
