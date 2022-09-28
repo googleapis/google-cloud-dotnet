@@ -1063,5 +1063,96 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for SuggestConversationSummary</summary>
+        public void SuggestConversationSummaryRequestObject()
+        {
+            // Snippet: SuggestConversationSummary(SuggestConversationSummaryRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+            };
+            // Make the request
+            SuggestConversationSummaryResponse response = conversationsClient.SuggestConversationSummary(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestConversationSummaryAsync</summary>
+        public async Task SuggestConversationSummaryRequestObjectAsync()
+        {
+            // Snippet: SuggestConversationSummaryAsync(SuggestConversationSummaryRequest, CallSettings)
+            // Additional: SuggestConversationSummaryAsync(SuggestConversationSummaryRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            SuggestConversationSummaryRequest request = new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+            };
+            // Make the request
+            SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestConversationSummary</summary>
+        public void SuggestConversationSummary()
+        {
+            // Snippet: SuggestConversationSummary(string, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            // Make the request
+            SuggestConversationSummaryResponse response = conversationsClient.SuggestConversationSummary(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestConversationSummaryAsync</summary>
+        public async Task SuggestConversationSummaryAsync()
+        {
+            // Snippet: SuggestConversationSummaryAsync(string, CallSettings)
+            // Additional: SuggestConversationSummaryAsync(string, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            // Make the request
+            SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestConversationSummary</summary>
+        public void SuggestConversationSummaryResourceNames()
+        {
+            // Snippet: SuggestConversationSummary(ConversationName, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            // Make the request
+            SuggestConversationSummaryResponse response = conversationsClient.SuggestConversationSummary(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestConversationSummaryAsync</summary>
+        public async Task SuggestConversationSummaryResourceNamesAsync()
+        {
+            // Snippet: SuggestConversationSummaryAsync(ConversationName, CallSettings)
+            // Additional: SuggestConversationSummaryAsync(ConversationName, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            // Make the request
+            SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(conversation);
+            // End snippet
+        }
     }
 }
