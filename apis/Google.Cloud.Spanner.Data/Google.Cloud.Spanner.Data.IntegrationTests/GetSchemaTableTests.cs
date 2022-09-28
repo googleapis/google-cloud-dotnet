@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly AllTypesTableFixture _fixture;
 
+        // On emulator, the types defined in SchemaTestUnsupportedData are skipped from tests. 
+        // The table also contains the `K` column that is the primary key.
+        internal int ExpectedRowCountOnEmulator => SchemaTestData.Count() + 1;
+
+        // On production, the types defined in both SchemaTestUnsupportedData and SchemaTestData are executed. 
+        // The table also contains the `K` column that is the primary key.
+        internal int ExpectedRowCountOnProduction => SchemaTestUnsupportedData.Count() + SchemaTestData.Count() + 1;
+
         public GetSchemaTableTests(AllTypesTableFixture fixture) => _fixture = fixture;
 
         [Fact]
@@ -42,33 +50,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [MemberData(nameof(SchemaTestData))]
+        // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
         [SkippableTheory]
+        [MemberData(nameof(SchemaTestData))]
+        [MemberData(nameof(SchemaTestUnsupportedData))]
         public async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema(string columnName, System.Type type, SpannerDbType spannerDbType)
         {
             Skip.If(_fixture.RunningOnEmulator && (SpannerDbType.Json.Equals(spannerDbType) || SpannerDbType.ArrayOf(SpannerDbType.Json).Equals(spannerDbType)), "The emulator does not support the JSON type");
-            using (var connection = new SpannerConnection($"{_fixture.ConnectionString};EnableGetSchemaTable=true"))
-            {
-                var command = connection.CreateSelectCommand($"SELECT {columnName} FROM {_fixture.TableName}");
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    var table = reader.GetSchemaTable();
-                    Assert.Equal(1, table.Rows.Count);
-
-                    var row = table.Rows[0];
-                    Assert.Equal(columnName, (string)row["ColumnName"]);
-                    Assert.Equal(0, (int)row["ColumnOrdinal"]);
-                    Assert.Equal(type, row["DataType"]);
-                    Assert.Equal(spannerDbType, (SpannerDbType)row["ProviderType"]);
-                    // These fields are (currently) not filled as Spanner does not provided enough
-                    // information to fill them.
-                    Assert.True(row.IsNull("ColumnSize"));
-                    Assert.True(row.IsNull("NumericPrecision"));
-                    Assert.True(row.IsNull("NumericScale"));
-                }
-            }
+            string selectQuery = $"SELECT {columnName} FROM {_fixture.TableName}";
+            await GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(columnName, type, spannerDbType, _fixture.ConnectionString, selectQuery);
         }
 
+        // These SpannerDbTypes are not supported on emulator.
+        public static TheoryData<string, System.Type, SpannerDbType> SchemaTestUnsupportedData { get; } =
+            new TheoryData<string, System.Type, SpannerDbType>
+            {
+                { "JsonValue", typeof(string), SpannerDbType.Json },
+                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) }
+            };
+
+        // These SpannerDbTypes are supported on emulator.
         public static TheoryData<string, System.Type, SpannerDbType> SchemaTestData { get; } =
             new TheoryData<string, System.Type, SpannerDbType>
             {
@@ -81,7 +82,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },
-                { "JsonValue", typeof(string), SpannerDbType.Json },
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
@@ -91,9 +91,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Base64ArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
-                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
-                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
+                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) }
             };
+
+        internal static async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(string columnName, System.Type type, SpannerDbType spannerDbType, string connectionString, string selectQuery)
+        {
+            using var connection = new SpannerConnection($"{connectionString};EnableGetSchemaTable=true");
+            var command = connection.CreateSelectCommand(selectQuery);
+            using var reader = await command.ExecuteReaderAsync();
+            var table = reader.GetSchemaTable();
+            Assert.Equal(1, table.Rows.Count);
+
+            var row = table.Rows[0];
+            Assert.Equal(columnName, (string) row["ColumnName"]);
+            Assert.Equal(0, (int) row["ColumnOrdinal"]);
+            Assert.Equal(type, row["DataType"]);
+            Assert.Equal(spannerDbType, (SpannerDbType) row["ProviderType"]);
+            // These fields are (currently) not filled as Spanner does not provided enough
+            // information to fill them.
+            Assert.True(row.IsNull("ColumnSize"));
+            Assert.True(row.IsNull("NumericPrecision"));
+            Assert.True(row.IsNull("NumericScale"));
+        }
 
         [Fact]
         public async Task GetSchemaTable_WithFlagEnabled_ReturnsColumnOrdinals()
@@ -104,13 +123,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var reader = await command.ExecuteReaderAsync())
                 {
                     var table = reader.GetSchemaTable();
-                    // The table also contains the `K` column that is the primary key.
-                    var expectedRowCount = _fixture.RunningOnEmulator ? SchemaTestData.Count() - 1 : SchemaTestData.Count() + 1;
+                    var expectedRowCount = _fixture.RunningOnEmulator ? ExpectedRowCountOnEmulator : ExpectedRowCountOnProduction;
                     Assert.Equal(expectedRowCount, table.Rows.Count);
                     for (var ordinal = 1; ordinal < expectedRowCount; ordinal++)
                     {
                         var row = table.Rows[ordinal];
-                        Assert.Equal(ordinal, (int)row["ColumnOrdinal"]);
+                        Assert.Equal(ordinal, (int) row["ColumnOrdinal"]);
                     }
                 }
             }

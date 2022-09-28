@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,6 +30,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public BindingTests(SpannerDatabaseFixture fixture) =>
             _fixture = fixture;
 
+        // These SpannerDbTypes are supported on emulator.
         public static TheoryData<SpannerDbType> BindNullData { get; } = new TheoryData<SpannerDbType>
         {
             SpannerDbType.Bool,
@@ -40,7 +41,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
-            SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -48,61 +48,50 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes)
+        };
+
+        // These SpannerDbTypes are unsupported on emulator.
+        public static TheoryData<SpannerDbType> BindUnsupportedNullData { get; } = new TheoryData<SpannerDbType>
+        {
+            SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
         };
 
+        // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate. 
         [SkippableTheory]
         [MemberData(nameof(BindNullData))]
+        [MemberData(nameof(BindUnsupportedNullData))]
         public async Task BindNull(SpannerDbType parameterType)
         {
             Skip.If(_fixture.RunningOnEmulator && (SpannerDbType.Json.Equals(parameterType) || SpannerDbType.ArrayOf(SpannerDbType.Json).Equals(parameterType)), "The emulator does not support the JSON type");
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand("SELECT @v");
-                cmd.Parameters.Add("v", parameterType, null);
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-
-                    Assert.True(reader.IsDBNull(0));
-                    Assert.Equal(DBNull.Value, reader.GetValue(0));
-
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateSelectCommand("SELECT @v");
+            cmd.Parameters.Add("v", parameterType, null);
+            using var reader = await cmd.ExecuteReaderAsync();
+            await AssertNull(reader);
         }
 
-        private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
+        internal static async Task AssertNull(SpannerDataReader reader)
         {
-            int rowsRead;
-            var valueRead = default(T);
+            Assert.True(await reader.ReadAsync());
+            Assert.True(reader.IsDBNull(0));
+            Assert.Equal(DBNull.Value, reader.GetValue(0));
+            Assert.False(await reader.ReadAsync());
+        }
 
-            using (var connection = _fixture.GetConnection())
+        internal static async Task AssertNotNull<T>(SpannerDataReader reader, T value, Func<SpannerDataReader, T> typeSpecificReader)
+        {
+            Assert.True(await reader.ReadAsync());
+            var valueRead = reader.GetFieldValue<T>(0);
+            // Optional extra test for certain built in types
+            if (typeSpecificReader != null)
             {
-                var cmd = connection.CreateSelectCommand("SELECT @v");
-                cmd.Parameters.Add("v", parameterType, value);
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    rowsRead = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        valueRead = reader.GetFieldValue<T>(0);
-
-                        // Optional extra test for certain built in types
-                        if (typeSpecificReader != null)
-                        {
-                            Assert.Equal(typeSpecificReader(reader), valueRead);
-                            Assert.False(reader.IsDBNull(0));
-                        }
-
-                        rowsRead++;
-                    }
-                }
+                Assert.Equal(typeSpecificReader(reader), valueRead);
+                Assert.False(reader.IsDBNull(0));
             }
-            Assert.Equal(1, rowsRead);
-            var valueAsArray = value as Array;
-            if (valueAsArray != null)
+
+            if (value is Array valueAsArray)
             {
                 var valueReadAsArray = valueRead as Array;
                 Assert.NotNull(valueReadAsArray);
@@ -116,6 +105,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.Equal(value, valueRead);
             }
+
+            Assert.False(await reader.ReadAsync());
+        }
+
+        private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateSelectCommand("SELECT @v");
+            cmd.Parameters.Add("v", parameterType, value);
+            using var reader = await cmd.ExecuteReaderAsync();
+            await AssertNotNull<T>(reader, value, typeSpecificReader);
         }
 
         [Fact]
@@ -124,7 +124,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindBooleanArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
-            new bool?[] {true, null, false});
+            new bool?[] { true, null, false });
 
         [Fact]
         public Task BindBooleanEmptyArray() => TestBindNonNull(
@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindByteArray() => TestBindNonNull(
             SpannerDbType.Bytes,
-            new byte[] {1, 2, 3});
+            new byte[] { 1, 2, 3 });
 
         [Fact]
         public Task BindByteArrayList() => TestBindNonNull(
@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindDateArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9)});
+            new DateTime?[] { new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9) });
 
         [Fact]
         public Task BindDateEmptyArray() => TestBindNonNull(
@@ -171,7 +171,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindFloat64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
-            new double?[] {0.0, null, 1.0});
+            new double?[] { 0.0, null, 1.0 });
 
         [Fact]
         public Task BindFloat64EmptyArray() => TestBindNonNull(
@@ -184,7 +184,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindInt64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
-            new long?[] {1, null, 0});
+            new long?[] { 1, null, 0 });
 
         [Fact]
         public Task BindInt64EmptyArray() => TestBindNonNull(
@@ -192,32 +192,31 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new long[] { });
 
         [Fact]
-        public async Task BindNumeric()
-        {
-            await TestBindNonNull(SpannerDbType.Numeric, SpannerNumeric.Parse("1.0"), r => r.GetNumeric(0));
-        }
+        public async Task BindNumeric() => await TestBindNonNull(
+            SpannerDbType.Numeric,
+            SpannerNumeric.Parse("1.0"),
+            r => r.GetNumeric(0));
 
         [Fact]
-        public async Task BindNumericArray()
-        {
-            await TestBindNonNull(
+        public async Task BindNumericArray() => await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.Numeric),
-                new SpannerNumeric?[] {SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0")});
-        }
+                new SpannerNumeric?[] { SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0") });
 
         [Fact]
-        public async Task BindNumericEmptyArray()
-        {
-            await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[] { });
-        }
+        public async Task BindNumericEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
+            new SpannerNumeric[] { });
 
         [Fact]
-        public Task BindString() => TestBindNonNull(SpannerDbType.String, "abc", r => r.GetString(0));
+        public Task BindString() => TestBindNonNull(
+            SpannerDbType.String,
+            "abc",
+            r => r.GetString(0));
 
         [Fact]
         public Task BindStringArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.String),
-            new[] {"abc", null, "123"});
+            new[] { "abc", null, "123" });
 
         [Fact]
         public Task BindStringEmptyArray() => TestBindNonNull(
@@ -242,28 +241,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         [Fact]
         [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task BindJson()
-        {
-            // The emulator doesn't yet support the JSON type.
-            await TestBindNonNull(SpannerDbType.Json, "{\"key\":\"value\"}", r => r.GetString(0));
-        }
+        public async Task BindJson() => await TestBindNonNull(
+            SpannerDbType.Json,
+            "{\"key\":\"value\"}",
+            r => r.GetString(0));
 
         [Fact]
         [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task BindJsonArray()
-        {
-            // The emulator doesn't yet support the JSON type.
-            await TestBindNonNull(
+        public async Task BindJsonArray() => await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.Json),
                 new string[] { "{\"key\":\"value\"}", null, "{\"other-key\":\"other-value\"}" });
-        }
 
         [Fact]
         [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task BindJsonEmptyArray()
-        {
-            // The emulator doesn't yet support the JSON type.
-            await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Json), new string[] { });
-        }
+        public async Task BindJsonEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Json),
+            new string[] { });
     }
 }
