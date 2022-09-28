@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,29 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+namespace Google.Cloud.Spanner.Data.CommonTesting;
 
-namespace Google.Cloud.Spanner.Data.CommonTesting
+/// <summary>
+/// Base classes for test fixtures for Spanner Google dialect.
+/// </summary>
+public abstract class SpannerFixtureBase : CloudSpannerFixtureBase<SpannerTestDatabase>
 {
-    /// <summary>
-    /// Base classes for test fixtures for Spanner.
-    /// </summary>
-    public abstract class SpannerFixtureBase : CloudProjectFixtureBase
-    {
-        public SpannerTestDatabase Database { get; }
-
-        public SpannerFixtureBase()
-        {
-            Database = SpannerTestDatabase.GetInstance(ProjectId);
-        }
-
-        public DatabaseName DatabaseName => Database.DatabaseName;
-        public SpannerConnection GetConnection() => Database.GetConnection();
-        public string ConnectionString => Database.ConnectionString;
-        public SpannerConnection GetConnection(Logger logger, bool logCommitStats = false) => Database.GetConnection(logger, logCommitStats);
-        public bool RunningOnEmulator => SpannerClientCreationOptions.UsesEmulator;
-        internal SpannerClientCreationOptions SpannerClientCreationOptions => Database.SpannerClientCreationOptions;
-    }
+    protected SpannerFixtureBase() : base(SpannerTestDatabase.Create) { }
 }

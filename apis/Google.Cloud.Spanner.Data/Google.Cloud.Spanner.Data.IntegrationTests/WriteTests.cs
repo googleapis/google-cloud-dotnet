@@ -39,13 +39,22 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task<int> InsertAsync(SpannerParameterCollection values)
         {
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 values.Add("K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid());
                 var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
 
                 return await cmd.ExecuteNonQueryAsyncWithRetry();
             }
+        }
+
+        private SpannerConnection GetConnection() => _fixture.GetConnection();
+
+        private async Task<SpannerDataReader> GetWriteTestReader(SpannerConnection connection)
+        {
+            var command = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE K=@k");
+            command.Parameters.Add("K", SpannerDbType.String, _lastKey);
+            return await command.ExecuteReaderAsync();
         }
 
         private async Task InsertAndRecordBytesAsync(
@@ -56,18 +65,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             record[_lastKey] = bytes;
         }
 
-        private async Task WithLastRowAsync(Action<SpannerDataReader> readerAction)
+        internal static async Task WithLastRowAsync(Action<SpannerDataReader> lastRowAction, SpannerConnection connection, Func<SpannerConnection, Task<SpannerDataReader>> getReader)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE K=@k");
-                cmd.Parameters.Add("K", SpannerDbType.String, _lastKey);
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                    readerAction(reader);
-                }
-            }
+            using var reader = await getReader(connection);
+            Assert.True(await reader.ReadAsync());
+            lastRowAction(reader);
         }
 
         private async Task ExecuteWriteNullsTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
@@ -125,7 +127,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
                 }
-            });
+            }, GetConnection(), GetWriteTestReader);
         }
 
         private async Task ExecuteWriteValuesTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
@@ -192,7 +194,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
                 Assert.Equal(3L, length);
                 var buffer = new byte[length];
-                Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int)length));
+                Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int) length));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
@@ -210,7 +212,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal("{\"f1\":\"v1\"}", reader.GetFieldValue<string>(reader.GetOrdinal("JsonValue")));
                     Assert.Equal(jsonArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
-            });
+            }, GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
@@ -221,7 +223,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task<int> InsertDmlAsync(SpannerParameterCollection values)
         {
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 values.Add("K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid());
                 SpannerCommand cmd = connection.CreateDmlCommand(_fixture.CreateInsertCommand(), values);
@@ -232,7 +234,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadColumnName()
         {
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 var cmd = connection.CreateInsertCommand(_fixture.TableName);
                 cmd.Parameters.Add("badjuju", SpannerDbType.String, IdGenerator.FromGuid());
@@ -246,7 +248,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadColumnType()
         {
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 var cmd = connection.CreateInsertCommand(_fixture.TableName);
                 cmd.Parameters.Add("K", SpannerDbType.Float64, 0.1);
@@ -260,7 +262,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadTableName()
         {
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 var cmd = connection.CreateInsertCommand("badjuju");
                 cmd.Parameters.Add("K", SpannerDbType.String, IdGenerator.FromGuid());
@@ -309,28 +311,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                     Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
-            });
+            }, GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
         public async Task WriteInfinity()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.PositiveInfinity));
-            await WithLastRowAsync(reader => Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value"))));
+            await WithLastRowAsync(reader => Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
         public async Task WriteNanValue()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NaN));
-            await WithLastRowAsync(reader => Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value"))));
+            await WithLastRowAsync(reader => Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
         public async Task WriteNegativeInfinity()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
-            await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))));
+            await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
@@ -350,7 +352,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // The seed itself is written as the first row in an array of size=1.
             var recordedValues = new Dictionary<string, byte[]>();
 
-            await InsertAndRecordBytesAsync(new[] {seedByte}, recordedValues);
+            await InsertAndRecordBytesAsync(new[] { seedByte }, recordedValues);
 
             var numRows = rnd.Next(50);
             for (var i = 0; i < numRows; i++)
@@ -360,7 +362,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await InsertAndRecordBytesAsync(byteArray, recordedValues);
             }
 
-            using (var connection = _fixture.GetConnection())
+            using (var connection = GetConnection())
             {
                 string sqlQuery = $@"SELECT K,BytesValue
                                 FROM {_fixture.TableName}

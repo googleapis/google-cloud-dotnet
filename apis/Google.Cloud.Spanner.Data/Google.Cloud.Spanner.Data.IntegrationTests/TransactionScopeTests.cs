@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -371,7 +371,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string[] keys = new string[] { IdGenerator.FromGuid(), IdGenerator.FromGuid(), IdGenerator.FromGuid() };
             await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
-                using var scope = new TransactionScope();
+                using var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
                 using var connection = _fixture.GetConnection();
                 await connection.OpenAsync();
 
