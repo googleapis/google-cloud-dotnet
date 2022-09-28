@@ -4650,6 +4650,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_sync",
+      "title": "SuggestConversationSummaryRequestObject",
+      "description": "Snippet for SuggestConversationSummary",
+      "file": "ConversationsClient.SuggestConversationSummaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummary",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummary",
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_async",
+      "title": "SuggestConversationSummaryRequestObjectAsync",
+      "description": "Snippet for SuggestConversationSummaryAsync",
+      "file": "ConversationsClient.SuggestConversationSummaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummaryAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummaryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_sync_flattened",
+      "title": "SuggestConversationSummary",
+      "description": "Snippet for SuggestConversationSummary",
+      "file": "ConversationsClient.SuggestConversationSummarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummary",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummary",
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_async_flattened",
+      "title": "SuggestConversationSummaryAsync",
+      "description": "Snippet for SuggestConversationSummaryAsync",
+      "file": "ConversationsClient.SuggestConversationSummaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummaryAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummaryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_sync_flattened_resourceNames",
+      "title": "SuggestConversationSummaryResourceNames",
+      "description": "Snippet for SuggestConversationSummary",
+      "file": "ConversationsClient.SuggestConversationSummaryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummary",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummary",
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SuggestConversationSummary_async_flattened_resourceNames",
+      "title": "SuggestConversationSummaryResourceNamesAsync",
+      "description": "Snippet for SuggestConversationSummaryAsync",
+      "file": "ConversationsClient.SuggestConversationSummaryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestConversationSummaryAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SuggestConversationSummaryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SuggestConversationSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SuggestConversationSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "dialogflow_v2beta1_generated_Documents_ListDocuments_sync",
       "title": "ListDocumentsRequestObject",
       "description": "Snippet for ListDocuments",
