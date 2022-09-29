@@ -15,6 +15,7 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -479,6 +480,15 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 }
                 // End sample
             });
+        }
+
+        [Fact]
+        public void DependencyInjection()
+        {
+            IServiceCollection services = new ServiceCollection();
+            // Sample: DependencyInjection
+            services.AddSpannerConnection("SpannerDb");
+            // End sample
         }
     }
 }
