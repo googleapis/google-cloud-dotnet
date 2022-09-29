@@ -82,13 +82,15 @@ namespace Grafeas.V1 {
             "X0lOVEVSQUNUSU9OX1JFUVVJUkVEEAIiRgoFU2NvcGUSFQoRU0NPUEVfVU5T",
             "UEVDSUZJRUQQABITCg9TQ09QRV9VTkNIQU5HRUQQARIRCg1TQ09QRV9DSEFO",
             "R0VEEAIiUgoGSW1wYWN0EhYKEklNUEFDVF9VTlNQRUNJRklFRBAAEg8KC0lN",
-            "UEFDVF9ISUdIEAESDgoKSU1QQUNUX0xPVxACEg8KC0lNUEFDVF9OT05FEANC",
-            "XAoNaW8uZ3JhZmVhcy52MUIJQ1ZTU1Byb3RvUAFaOGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogID",
-            "R1JBYgZwcm90bzM="));
+            "UEFDVF9ISUdIEAESDgoKSU1QQUNUX0xPVxACEg8KC0lNUEFDVF9OT05FEAMq",
+            "UwoLQ1ZTU1ZlcnNpb24SHAoYQ1ZTU19WRVJTSU9OX1VOU1BFQ0lGSUVEEAAS",
+            "EgoOQ1ZTU19WRVJTSU9OXzIQARISCg5DVlNTX1ZFUlNJT05fMxACQlwKDWlv",
+            "LmdyYWZlYXMudjFCCUNWU1NQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.CVSSVersion), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CVSSv3), global::Grafeas.V1.CVSSv3.Parser, new[]{ "BaseScore", "ExploitabilityScore", "ImpactScore", "AttackVector", "AttackComplexity", "PrivilegesRequired", "UserInteraction", "Scope", "ConfidentialityImpact", "IntegrityImpact", "AvailabilityImpact" }, null, new[]{ typeof(global::Grafeas.V1.CVSSv3.Types.AttackVector), typeof(global::Grafeas.V1.CVSSv3.Types.AttackComplexity), typeof(global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired), typeof(global::Grafeas.V1.CVSSv3.Types.UserInteraction), typeof(global::Grafeas.V1.CVSSv3.Types.Scope), typeof(global::Grafeas.V1.CVSSv3.Types.Impact) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CVSS), global::Grafeas.V1.CVSS.Parser, new[]{ "BaseScore", "ExploitabilityScore", "ImpactScore", "AttackVector", "AttackComplexity", "Authentication", "PrivilegesRequired", "UserInteraction", "Scope", "ConfidentialityImpact", "IntegrityImpact", "AvailabilityImpact" }, null, new[]{ typeof(global::Grafeas.V1.CVSS.Types.AttackVector), typeof(global::Grafeas.V1.CVSS.Types.AttackComplexity), typeof(global::Grafeas.V1.CVSS.Types.Authentication), typeof(global::Grafeas.V1.CVSS.Types.PrivilegesRequired), typeof(global::Grafeas.V1.CVSS.Types.UserInteraction), typeof(global::Grafeas.V1.CVSS.Types.Scope), typeof(global::Grafeas.V1.CVSS.Types.Impact) }, null, null)
           }));
@@ -96,6 +98,18 @@ namespace Grafeas.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// CVSS Version.
+  /// </summary>
+  public enum CVSSVersion {
+    [pbr::OriginalName("CVSS_VERSION_UNSPECIFIED")] Unspecified = 0,
+    [pbr::OriginalName("CVSS_VERSION_2")] _2 = 1,
+    [pbr::OriginalName("CVSS_VERSION_3")] _3 = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Common Vulnerability Scoring System version 3.
