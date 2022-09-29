@@ -32,6 +32,39 @@ If you need to provide other credentials, there are three alternatives:
 - Pass a `ChannelCredentials` into the constructor of `SpannerConnection`
   or `SpannerConnectionStringBuilder`.
 
+## SpannerConnection and Dependency Injection
+
+A `SpannerConnection` can be provided via dependency injection based
+on the ConnectionStrings section of the application configuration,
+via the `AddSpannerConnection` extension method. For example, 
+consider an application configured with `appsettings.json` file like this:
+
+```json
+{
+  "ConnectionStrings": {
+    "SpannerDb": "Data Source=projects/my-project/instances/my-instance"
+  }
+}
+```
+
+The `SpannerConnection` can be configured on the service collection
+as shown below:
+
+{{sample:SpannerConnection.DependencyInjection}}
+
+The dependency is registered as a transient dependency (as a new
+`SpannerConnection` should be created for each request), and is
+automatically disposed by the dependency injection infrastructure.
+
+If the dependency injection container has been configured with
+`ChannelCredentials` or `GoogleCredential` values, those are used
+automatically by `AddSpannerConnection`. (If both are specified,
+`ChannelCredentials` takes priority.) Note that this means any
+`CredentialsFile` specified in the connection string is ignored when
+the connection is obtained via dependency injection and a
+`ChannelCredentials` or `GoogleCredential` is available from the
+same container.
+
 ## Sample code
 
 Once you have created your Google Cloud Project and Spanner Instance using the web console,
