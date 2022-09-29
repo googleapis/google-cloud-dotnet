@@ -1,0 +1,26 @@
+[
+  {
+    "endpoint": "global-speech.googleapis.com",
+    "method": "ListCustomClasses",
+    "client": "SpeechClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "endpoint": "global-speech.googleapis.com",
+    "method": "ListRecognizers",
+    "client": "SpeechClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "endpoint": "global-speech.googleapis.com",
+    "method": "ListPhraseSets",
+    "client": "SpeechClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
