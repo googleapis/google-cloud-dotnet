@@ -3598,7 +3598,7 @@
       "version": "3.0.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
-      "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
+      "description": "Recommended Google client library to access the Google Cloud Speech API (v1), which performs speech recognition.",
       "tags": [
         "Speech"
       ],
@@ -3629,6 +3629,24 @@
       },
       "shortName": "speech",
       "serviceConfigFile": "speech_v1p1beta1.yaml"
+    },
+    {
+      "id": "Google.Cloud.Speech.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Speech-to-Text",
+      "productUrl": "https://cloud.google.com/speech",
+      "description": "Recommended Google client library to access the Google Cloud Speech-to-Text API (v2) which converts audio to text by applying powerful neural network models.",
+      "tags": [
+        "speech"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/speech/v2",
+      "shortName": "speech",
+      "serviceConfigFile": "speech_v2.yaml"
     },
     {
       "id": "Google.Cloud.Storage.V1",
