@@ -281,6 +281,41 @@ namespace Google.Cloud.AssuredWorkloads.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RestrictAllowedResources</summary>
+        public void RestrictAllowedResourcesRequestObject()
+        {
+            // Snippet: RestrictAllowedResources(RestrictAllowedResourcesRequest, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            RestrictAllowedResourcesRequest request = new RestrictAllowedResourcesRequest
+            {
+                Name = "",
+                RestrictionType = RestrictAllowedResourcesRequest.Types.RestrictionType.Unspecified,
+            };
+            // Make the request
+            RestrictAllowedResourcesResponse response = assuredWorkloadsServiceClient.RestrictAllowedResources(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestrictAllowedResourcesAsync</summary>
+        public async Task RestrictAllowedResourcesRequestObjectAsync()
+        {
+            // Snippet: RestrictAllowedResourcesAsync(RestrictAllowedResourcesRequest, CallSettings)
+            // Additional: RestrictAllowedResourcesAsync(RestrictAllowedResourcesRequest, CancellationToken)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RestrictAllowedResourcesRequest request = new RestrictAllowedResourcesRequest
+            {
+                Name = "",
+                RestrictionType = RestrictAllowedResourcesRequest.Types.RestrictionType.Unspecified,
+            };
+            // Make the request
+            RestrictAllowedResourcesResponse response = await assuredWorkloadsServiceClient.RestrictAllowedResourcesAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteWorkload</summary>
         public void DeleteWorkloadRequestObject()
         {
@@ -732,6 +767,410 @@ namespace Google.Cloud.AssuredWorkloads.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolations</summary>
+        public void ListViolationsRequestObject()
+        {
+            // Snippet: ListViolations(ListViolationsRequest, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            ListViolationsRequest request = new ListViolationsRequest
+            {
+                ParentAsWorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                Interval = new TimeWindow(),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Violation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViolationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolationsAsync</summary>
+        public async Task ListViolationsRequestObjectAsync()
+        {
+            // Snippet: ListViolationsAsync(ListViolationsRequest, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListViolationsRequest request = new ListViolationsRequest
+            {
+                ParentAsWorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                Interval = new TimeWindow(),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Violation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViolationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolations</summary>
+        public void ListViolations()
+        {
+            // Snippet: ListViolations(string, string, int?, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/workloads/[WORKLOAD]";
+            // Make the request
+            PagedEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Violation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViolationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolationsAsync</summary>
+        public async Task ListViolationsAsync()
+        {
+            // Snippet: ListViolationsAsync(string, string, int?, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]/workloads/[WORKLOAD]";
+            // Make the request
+            PagedAsyncEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Violation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViolationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolations</summary>
+        public void ListViolationsResourceNames()
+        {
+            // Snippet: ListViolations(WorkloadName, string, int?, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            WorkloadName parent = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]");
+            // Make the request
+            PagedEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Violation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViolationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViolationsAsync</summary>
+        public async Task ListViolationsResourceNamesAsync()
+        {
+            // Snippet: ListViolationsAsync(WorkloadName, string, int?, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkloadName parent = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]");
+            // Make the request
+            PagedAsyncEnumerable<ListViolationsResponse, Violation> response = assuredWorkloadsServiceClient.ListViolationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Violation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViolationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Violation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Violation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Violation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolation</summary>
+        public void GetViolationRequestObject()
+        {
+            // Snippet: GetViolation(GetViolationRequest, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            GetViolationRequest request = new GetViolationRequest
+            {
+                ViolationName = ViolationName.FromOrganizationLocationWorkloadViolation("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]", "[VIOLATION]"),
+            };
+            // Make the request
+            Violation response = assuredWorkloadsServiceClient.GetViolation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolationAsync</summary>
+        public async Task GetViolationRequestObjectAsync()
+        {
+            // Snippet: GetViolationAsync(GetViolationRequest, CallSettings)
+            // Additional: GetViolationAsync(GetViolationRequest, CancellationToken)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetViolationRequest request = new GetViolationRequest
+            {
+                ViolationName = ViolationName.FromOrganizationLocationWorkloadViolation("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]", "[VIOLATION]"),
+            };
+            // Make the request
+            Violation response = await assuredWorkloadsServiceClient.GetViolationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolation</summary>
+        public void GetViolation()
+        {
+            // Snippet: GetViolation(string, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/workloads/[WORKLOAD]/violations/[VIOLATION]";
+            // Make the request
+            Violation response = assuredWorkloadsServiceClient.GetViolation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolationAsync</summary>
+        public async Task GetViolationAsync()
+        {
+            // Snippet: GetViolationAsync(string, CallSettings)
+            // Additional: GetViolationAsync(string, CancellationToken)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/workloads/[WORKLOAD]/violations/[VIOLATION]";
+            // Make the request
+            Violation response = await assuredWorkloadsServiceClient.GetViolationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolation</summary>
+        public void GetViolationResourceNames()
+        {
+            // Snippet: GetViolation(ViolationName, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            ViolationName name = ViolationName.FromOrganizationLocationWorkloadViolation("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]", "[VIOLATION]");
+            // Make the request
+            Violation response = assuredWorkloadsServiceClient.GetViolation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViolationAsync</summary>
+        public async Task GetViolationResourceNamesAsync()
+        {
+            // Snippet: GetViolationAsync(ViolationName, CallSettings)
+            // Additional: GetViolationAsync(ViolationName, CancellationToken)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ViolationName name = ViolationName.FromOrganizationLocationWorkloadViolation("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]", "[VIOLATION]");
+            // Make the request
+            Violation response = await assuredWorkloadsServiceClient.GetViolationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcknowledgeViolation</summary>
+        public void AcknowledgeViolationRequestObject()
+        {
+            // Snippet: AcknowledgeViolation(AcknowledgeViolationRequest, CallSettings)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = AssuredWorkloadsServiceClient.Create();
+            // Initialize request argument(s)
+            AcknowledgeViolationRequest request = new AcknowledgeViolationRequest
+            {
+                Name = "",
+                Comment = "",
+                NonCompliantOrgPolicy = "",
+            };
+            // Make the request
+            AcknowledgeViolationResponse response = assuredWorkloadsServiceClient.AcknowledgeViolation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcknowledgeViolationAsync</summary>
+        public async Task AcknowledgeViolationRequestObjectAsync()
+        {
+            // Snippet: AcknowledgeViolationAsync(AcknowledgeViolationRequest, CallSettings)
+            // Additional: AcknowledgeViolationAsync(AcknowledgeViolationRequest, CancellationToken)
+            // Create client
+            AssuredWorkloadsServiceClient assuredWorkloadsServiceClient = await AssuredWorkloadsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AcknowledgeViolationRequest request = new AcknowledgeViolationRequest
+            {
+                Name = "",
+                Comment = "",
+                NonCompliantOrgPolicy = "",
+            };
+            // Make the request
+            AcknowledgeViolationResponse response = await assuredWorkloadsServiceClient.AcknowledgeViolationAsync(request);
             // End snippet
         }
     }

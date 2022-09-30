@@ -270,6 +270,59 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_RestrictAllowedResources_sync",
+      "title": "RestrictAllowedResourcesRequestObject",
+      "description": "Snippet for RestrictAllowedResources",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResources",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.RestrictAllowedResources",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_RestrictAllowedResources_async",
+      "title": "RestrictAllowedResourcesRequestObjectAsync",
+      "description": "Snippet for RestrictAllowedResourcesAsync",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResourcesAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.RestrictAllowedResourcesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_DeleteWorkload_sync",
       "title": "DeleteWorkloadRequestObject",
       "description": "Snippet for DeleteWorkload",
@@ -729,6 +782,369 @@
           }
         }
       },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_sync",
+      "title": "ListViolationsRequestObject",
+      "description": "Snippet for ListViolations",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolations",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_async",
+      "title": "ListViolationsRequestObjectAsync",
+      "description": "Snippet for ListViolationsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolationsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_sync_flattened",
+      "title": "ListViolations",
+      "description": "Snippet for ListViolations",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolations",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_async_flattened",
+      "title": "ListViolationsAsync",
+      "description": "Snippet for ListViolationsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolationsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_sync_flattened_resourceNames",
+      "title": "ListViolationsResourceNames",
+      "description": "Snippet for ListViolations",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolations",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_ListViolations_async_flattened_resourceNames",
+      "title": "ListViolationsResourceNamesAsync",
+      "description": "Snippet for ListViolationsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListViolationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListViolationsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListViolations",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.ListViolations",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_sync",
+      "title": "GetViolationRequestObject",
+      "description": "Snippet for GetViolation",
+      "file": "AssuredWorkloadsServiceClient.GetViolationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolation",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_async",
+      "title": "GetViolationRequestObjectAsync",
+      "description": "Snippet for GetViolationAsync",
+      "file": "AssuredWorkloadsServiceClient.GetViolationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolationAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_sync_flattened",
+      "title": "GetViolation",
+      "description": "Snippet for GetViolation",
+      "file": "AssuredWorkloadsServiceClient.GetViolationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolation",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_async_flattened",
+      "title": "GetViolationAsync",
+      "description": "Snippet for GetViolationAsync",
+      "file": "AssuredWorkloadsServiceClient.GetViolationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolationAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_sync_flattened_resourceNames",
+      "title": "GetViolationResourceNames",
+      "description": "Snippet for GetViolation",
+      "file": "AssuredWorkloadsServiceClient.GetViolationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolation",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_async_flattened_resourceNames",
+      "title": "GetViolationResourceNamesAsync",
+      "description": "Snippet for GetViolationAsync",
+      "file": "AssuredWorkloadsServiceClient.GetViolationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetViolationAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.GetViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_AcknowledgeViolation_sync",
+      "title": "AcknowledgeViolationRequestObject",
+      "description": "Snippet for AcknowledgeViolation",
+      "file": "AssuredWorkloadsServiceClient.AcknowledgeViolationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcknowledgeViolation",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.AcknowledgeViolation",
+        "resultType": "Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AcknowledgeViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.AcknowledgeViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "assuredworkloads_v1_generated_AssuredWorkloadsService_AcknowledgeViolation_async",
+      "title": "AcknowledgeViolationRequestObjectAsync",
+      "description": "Snippet for AcknowledgeViolationAsync",
+      "file": "AssuredWorkloadsServiceClient.AcknowledgeViolationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcknowledgeViolationAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.AcknowledgeViolationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AcknowledgeViolation",
+          "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService.AcknowledgeViolation",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
       "origin": "API_DEFINITION"
     }
   ]
