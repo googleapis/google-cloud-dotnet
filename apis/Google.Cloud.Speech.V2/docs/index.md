@@ -16,4 +16,10 @@ General Availability.
 
 {{client-classes}}
 
-{{client-construction}}
+Note that currently the end-point must be specified explicitly when
+constructing the client. The endpoint is of the form
+`{location}-speech.googleapis.com`, e.g.
+`global-documentai.googleapis.com`. The simplest way to specify the
+endpoint is to use `SpeechClientBuilder`:
+
+{{sample:SpeechClient.CustomEndpoint}}
