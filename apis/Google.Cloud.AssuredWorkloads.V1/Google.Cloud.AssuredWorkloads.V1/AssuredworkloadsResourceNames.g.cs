@@ -261,6 +261,264 @@ namespace Google.Cloud.AssuredWorkloads.V1
         public static bool operator !=(WorkloadName a, WorkloadName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Violation</c> resource.</summary>
+    public sealed partial class ViolationName : gax::IResourceName, sys::IEquatable<ViolationName>
+    {
+        /// <summary>The possible contents of <see cref="ViolationName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+            /// </summary>
+            OrganizationLocationWorkloadViolation = 1,
+        }
+
+        private static gax::PathTemplate s_organizationLocationWorkloadViolation = new gax::PathTemplate("organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}");
+
+        /// <summary>Creates a <see cref="ViolationName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ViolationName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ViolationName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ViolationName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ViolationName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workloadId">The <c>Workload</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="violationId">The <c>Violation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ViolationName"/> constructed from the provided ids.</returns>
+        public static ViolationName FromOrganizationLocationWorkloadViolation(string organizationId, string locationId, string workloadId, string violationId) =>
+            new ViolationName(ResourceNameType.OrganizationLocationWorkloadViolation, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workloadId: gax::GaxPreconditions.CheckNotNullOrEmpty(workloadId, nameof(workloadId)), violationId: gax::GaxPreconditions.CheckNotNullOrEmpty(violationId, nameof(violationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ViolationName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workloadId">The <c>Workload</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="violationId">The <c>Violation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ViolationName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string locationId, string workloadId, string violationId) =>
+            FormatOrganizationLocationWorkloadViolation(organizationId, locationId, workloadId, violationId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ViolationName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workloadId">The <c>Workload</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="violationId">The <c>Violation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ViolationName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationWorkloadViolation(string organizationId, string locationId, string workloadId, string violationId) =>
+            s_organizationLocationWorkloadViolation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(workloadId, nameof(workloadId)), gax::GaxPreconditions.CheckNotNullOrEmpty(violationId, nameof(violationId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="ViolationName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="violationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ViolationName"/> if successful.</returns>
+        public static ViolationName Parse(string violationName) => Parse(violationName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ViolationName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="violationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ViolationName"/> if successful.</returns>
+        public static ViolationName Parse(string violationName, bool allowUnparsed) =>
+            TryParse(violationName, allowUnparsed, out ViolationName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ViolationName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="violationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ViolationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string violationName, out ViolationName result) => TryParse(violationName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ViolationName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="violationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ViolationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string violationName, bool allowUnparsed, out ViolationName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(violationName, nameof(violationName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationLocationWorkloadViolation.TryParseName(violationName, out resourceName))
+            {
+                result = FromOrganizationLocationWorkloadViolation(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(violationName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ViolationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null, string violationId = null, string workloadId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            ViolationId = violationId;
+            WorkloadId = workloadId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ViolationName"/> class from the component parts of pattern
+        /// <c>organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workloadId">The <c>Workload</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="violationId">The <c>Violation</c> ID. Must not be <c>null</c> or empty.</param>
+        public ViolationName(string organizationId, string locationId, string workloadId, string violationId) : this(ResourceNameType.OrganizationLocationWorkloadViolation, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workloadId: gax::GaxPreconditions.CheckNotNullOrEmpty(workloadId, nameof(workloadId)), violationId: gax::GaxPreconditions.CheckNotNullOrEmpty(violationId, nameof(violationId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Violation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ViolationId { get; }
+
+        /// <summary>
+        /// The <c>Workload</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string WorkloadId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationLocationWorkloadViolation: return s_organizationLocationWorkloadViolation.Expand(OrganizationId, LocationId, WorkloadId, ViolationId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ViolationName);
+
+        /// <inheritdoc/>
+        public bool Equals(ViolationName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ViolationName a, ViolationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ViolationName a, ViolationName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Location</c> resource.</summary>
     public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
     {
@@ -538,6 +796,42 @@ namespace Google.Cloud.AssuredWorkloads.V1
         public gcav::WorkloadName WorkloadName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::WorkloadName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListViolationsRequest
+    {
+        /// <summary>
+        /// <see cref="WorkloadName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public WorkloadName ParentAsWorkloadName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : WorkloadName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetViolationRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ViolationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ViolationName ViolationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ViolationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Violation
+    {
+        /// <summary>
+        /// <see cref="gcav::ViolationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ViolationName ViolationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ViolationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
