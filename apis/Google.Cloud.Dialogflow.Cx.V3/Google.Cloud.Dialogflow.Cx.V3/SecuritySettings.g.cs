@@ -2298,10 +2298,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int GcsBucketFieldNumber = 1;
         private string gcsBucket_ = "";
         /// <summary>
-        /// Cloud Storage bucket to export audio record to. You need to grant
-        /// `service-&lt;Conversation Project
-        /// Number>@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Storage Object
-        /// Admin` role in this bucket.
+        /// Cloud Storage bucket to export audio record to.
+        /// Setting this field would grant the Storage Object Creator role to
+        /// the Dialogflow Service Agent.
+        /// API caller that tries to modify this field should have the permission of
+        /// storage.buckets.setIamPolicy.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
