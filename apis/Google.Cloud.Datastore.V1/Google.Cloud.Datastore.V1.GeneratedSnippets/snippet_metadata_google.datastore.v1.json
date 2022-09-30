@@ -168,6 +168,59 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "datastore_v1_generated_Datastore_RunAggregationQuery_sync",
+      "title": "RunAggregationQueryRequestObject",
+      "description": "Snippet for RunAggregationQuery",
+      "file": "DatastoreClient.RunAggregationQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAggregationQuery",
+        "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunAggregationQuery",
+        "resultType": "Google.Cloud.Datastore.V1.RunAggregationQueryResponse",
+        "client": {
+          "shortName": "DatastoreClient",
+          "fullName": "Google.Cloud.Datastore.V1.DatastoreClient"
+        },
+        "method": {
+          "shortName": "RunAggregationQuery",
+          "fullName": "google.datastore.v1.Datastore.RunAggregationQuery",
+          "service": {
+            "shortName": "Datastore",
+            "fullName": "google.datastore.v1.Datastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "datastore_v1_generated_Datastore_RunAggregationQuery_async",
+      "title": "RunAggregationQueryRequestObjectAsync",
+      "description": "Snippet for RunAggregationQueryAsync",
+      "file": "DatastoreClient.RunAggregationQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAggregationQueryAsync",
+        "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunAggregationQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.RunAggregationQueryResponse>",
+        "client": {
+          "shortName": "DatastoreClient",
+          "fullName": "Google.Cloud.Datastore.V1.DatastoreClient"
+        },
+        "method": {
+          "shortName": "RunAggregationQuery",
+          "fullName": "google.datastore.v1.Datastore.RunAggregationQuery",
+          "service": {
+            "shortName": "Datastore",
+            "fullName": "google.datastore.v1.Datastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "datastore_v1_generated_Datastore_BeginTransaction_sync",
       "title": "BeginTransactionRequestObject",
       "description": "Snippet for BeginTransaction",

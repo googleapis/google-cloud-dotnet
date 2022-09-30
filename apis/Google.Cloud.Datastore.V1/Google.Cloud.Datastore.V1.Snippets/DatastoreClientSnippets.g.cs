@@ -134,6 +134,47 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunAggregationQuery</summary>
+        public void RunAggregationQueryRequestObject()
+        {
+            // Snippet: RunAggregationQuery(RunAggregationQueryRequest, CallSettings)
+            // Create client
+            DatastoreClient datastoreClient = DatastoreClient.Create();
+            // Initialize request argument(s)
+            RunAggregationQueryRequest request = new RunAggregationQueryRequest
+            {
+                ReadOptions = new ReadOptions(),
+                PartitionId = new PartitionId(),
+                AggregationQuery = new AggregationQuery(),
+                ProjectId = "",
+                DatabaseId = "",
+            };
+            // Make the request
+            RunAggregationQueryResponse response = datastoreClient.RunAggregationQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunAggregationQueryAsync</summary>
+        public async Task RunAggregationQueryRequestObjectAsync()
+        {
+            // Snippet: RunAggregationQueryAsync(RunAggregationQueryRequest, CallSettings)
+            // Additional: RunAggregationQueryAsync(RunAggregationQueryRequest, CancellationToken)
+            // Create client
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            RunAggregationQueryRequest request = new RunAggregationQueryRequest
+            {
+                ReadOptions = new ReadOptions(),
+                PartitionId = new PartitionId(),
+                AggregationQuery = new AggregationQuery(),
+                ProjectId = "",
+                DatabaseId = "",
+            };
+            // Make the request
+            RunAggregationQueryResponse response = await datastoreClient.RunAggregationQueryAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for BeginTransaction</summary>
         public void BeginTransactionRequestObject()
         {
