@@ -3,7 +3,7 @@
 //     source: google/cloud/assuredworkloads/v1/assuredworkloads.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -72,6 +72,10 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.Workload> __Marshaller_google_cloud_assuredworkloads_v1_Workload = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.Workload.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest> __Marshaller_google_cloud_assuredworkloads_v1_RestrictAllowedResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse> __Marshaller_google_cloud_assuredworkloads_v1_RestrictAllowedResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest> __Marshaller_google_cloud_assuredworkloads_v1_DeleteWorkloadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -81,6 +85,18 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest> __Marshaller_google_cloud_assuredworkloads_v1_ListWorkloadsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse> __Marshaller_google_cloud_assuredworkloads_v1_ListWorkloadsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest> __Marshaller_google_cloud_assuredworkloads_v1_ListViolationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse> __Marshaller_google_cloud_assuredworkloads_v1_ListViolationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest> __Marshaller_google_cloud_assuredworkloads_v1_GetViolationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.Violation> __Marshaller_google_cloud_assuredworkloads_v1_Violation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.Violation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest> __Marshaller_google_cloud_assuredworkloads_v1_AcknowledgeViolationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse> __Marshaller_google_cloud_assuredworkloads_v1_AcknowledgeViolationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.CreateWorkloadRequest, global::Google.LongRunning.Operation> __Method_CreateWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.CreateWorkloadRequest, global::Google.LongRunning.Operation>(
@@ -97,6 +113,14 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
         "UpdateWorkload",
         __Marshaller_google_cloud_assuredworkloads_v1_UpdateWorkloadRequest,
         __Marshaller_google_cloud_assuredworkloads_v1_Workload);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse> __Method_RestrictAllowedResources = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestrictAllowedResources",
+        __Marshaller_google_cloud_assuredworkloads_v1_RestrictAllowedResourcesRequest,
+        __Marshaller_google_cloud_assuredworkloads_v1_RestrictAllowedResourcesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -121,6 +145,30 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
         "ListWorkloads",
         __Marshaller_google_cloud_assuredworkloads_v1_ListWorkloadsRequest,
         __Marshaller_google_cloud_assuredworkloads_v1_ListWorkloadsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest, global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse> __Method_ListViolations = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest, global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListViolations",
+        __Marshaller_google_cloud_assuredworkloads_v1_ListViolationsRequest,
+        __Marshaller_google_cloud_assuredworkloads_v1_ListViolationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.Violation> __Method_GetViolation = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.Violation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetViolation",
+        __Marshaller_google_cloud_assuredworkloads_v1_GetViolationRequest,
+        __Marshaller_google_cloud_assuredworkloads_v1_Violation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse> __Method_AcknowledgeViolation = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AcknowledgeViolation",
+        __Marshaller_google_cloud_assuredworkloads_v1_AcknowledgeViolationRequest,
+        __Marshaller_google_cloud_assuredworkloads_v1_AcknowledgeViolationResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -160,6 +208,23 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       }
 
       /// <summary>
+      /// Restrict the list of resources allowed in the Workload environment.
+      /// The current list of allowed products can be found at
+      /// https://cloud.google.com/assured-workloads/docs/supported-products
+      /// In addition to assuredworkloads.workload.update permission, the user should
+      /// also have orgpolicy.policy.set permission on the folder resource
+      /// to use this functionality.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse> RestrictAllowedResources(global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes the workload. Make sure that workload's direct children are already
       /// in a deleted state, otherwise the request will fail with a
       /// FAILED_PRECONDITION error.
@@ -193,6 +258,49 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse> ListWorkloads(global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the Violations in the AssuredWorkload Environment.
+      /// Callers may also choose to read across multiple Workloads as per
+      /// [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash
+      /// character) as a wildcard character instead of workload-id in the parent.
+      /// Format `organizations/{org_id}/locations/{location}/workloads/-`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse> ListViolations(global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves Assured Workload Violation based on ID.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1.Violation> GetViolation(global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Acknowledges an existing violation. By acknowledging a violation, users
+      /// acknowledge the existence of a compliance violation in their workload and
+      /// decide to ignore it due to a valid business justification. Acknowledgement
+      /// is a permanent operation and it cannot be reverted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse> AcknowledgeViolation(global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -333,6 +441,74 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.Workload> UpdateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1.UpdateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkload, null, options, request);
+      }
+      /// <summary>
+      /// Restrict the list of resources allowed in the Workload environment.
+      /// The current list of allowed products can be found at
+      /// https://cloud.google.com/assured-workloads/docs/supported-products
+      /// In addition to assuredworkloads.workload.update permission, the user should
+      /// also have orgpolicy.policy.set permission on the folder resource
+      /// to use this functionality.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse RestrictAllowedResources(global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestrictAllowedResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restrict the list of resources allowed in the Workload environment.
+      /// The current list of allowed products can be found at
+      /// https://cloud.google.com/assured-workloads/docs/supported-products
+      /// In addition to assuredworkloads.workload.update permission, the user should
+      /// also have orgpolicy.policy.set permission on the folder resource
+      /// to use this functionality.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse RestrictAllowedResources(global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestrictAllowedResources, null, options, request);
+      }
+      /// <summary>
+      /// Restrict the list of resources allowed in the Workload environment.
+      /// The current list of allowed products can be found at
+      /// https://cloud.google.com/assured-workloads/docs/supported-products
+      /// In addition to assuredworkloads.workload.update permission, the user should
+      /// also have orgpolicy.policy.set permission on the folder resource
+      /// to use this functionality.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse> RestrictAllowedResourcesAsync(global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestrictAllowedResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restrict the list of resources allowed in the Workload environment.
+      /// The current list of allowed products can be found at
+      /// https://cloud.google.com/assured-workloads/docs/supported-products
+      /// In addition to assuredworkloads.workload.update permission, the user should
+      /// also have orgpolicy.policy.set permission on the folder resource
+      /// to use this functionality.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse> RestrictAllowedResourcesAsync(global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestrictAllowedResources, null, options, request);
       }
       /// <summary>
       /// Deletes the workload. Make sure that workload's direct children are already
@@ -486,6 +662,178 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkloads, null, options, request);
       }
+      /// <summary>
+      /// Lists the Violations in the AssuredWorkload Environment.
+      /// Callers may also choose to read across multiple Workloads as per
+      /// [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash
+      /// character) as a wildcard character instead of workload-id in the parent.
+      /// Format `organizations/{org_id}/locations/{location}/workloads/-`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse ListViolations(global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListViolations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Violations in the AssuredWorkload Environment.
+      /// Callers may also choose to read across multiple Workloads as per
+      /// [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash
+      /// character) as a wildcard character instead of workload-id in the parent.
+      /// Format `organizations/{org_id}/locations/{location}/workloads/-`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse ListViolations(global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListViolations, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Violations in the AssuredWorkload Environment.
+      /// Callers may also choose to read across multiple Workloads as per
+      /// [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash
+      /// character) as a wildcard character instead of workload-id in the parent.
+      /// Format `organizations/{org_id}/locations/{location}/workloads/-`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse> ListViolationsAsync(global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListViolationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Violations in the AssuredWorkload Environment.
+      /// Callers may also choose to read across multiple Workloads as per
+      /// [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash
+      /// character) as a wildcard character instead of workload-id in the parent.
+      /// Format `organizations/{org_id}/locations/{location}/workloads/-`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse> ListViolationsAsync(global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListViolations, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves Assured Workload Violation based on ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.Violation GetViolation(global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetViolation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves Assured Workload Violation based on ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.Violation GetViolation(global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetViolation, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves Assured Workload Violation based on ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.Violation> GetViolationAsync(global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetViolationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves Assured Workload Violation based on ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.Violation> GetViolationAsync(global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetViolation, null, options, request);
+      }
+      /// <summary>
+      /// Acknowledges an existing violation. By acknowledging a violation, users
+      /// acknowledge the existence of a compliance violation in their workload and
+      /// decide to ignore it due to a valid business justification. Acknowledgement
+      /// is a permanent operation and it cannot be reverted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse AcknowledgeViolation(global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcknowledgeViolation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Acknowledges an existing violation. By acknowledging a violation, users
+      /// acknowledge the existence of a compliance violation in their workload and
+      /// decide to ignore it due to a valid business justification. Acknowledgement
+      /// is a permanent operation and it cannot be reverted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse AcknowledgeViolation(global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AcknowledgeViolation, null, options, request);
+      }
+      /// <summary>
+      /// Acknowledges an existing violation. By acknowledging a violation, users
+      /// acknowledge the existence of a compliance violation in their workload and
+      /// decide to ignore it due to a valid business justification. Acknowledgement
+      /// is a permanent operation and it cannot be reverted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse> AcknowledgeViolationAsync(global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcknowledgeViolationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Acknowledges an existing violation. By acknowledging a violation, users
+      /// acknowledge the existence of a compliance violation in their workload and
+      /// decide to ignore it due to a valid business justification. Acknowledgement
+      /// is a permanent operation and it cannot be reverted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse> AcknowledgeViolationAsync(global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AcknowledgeViolation, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssuredWorkloadsServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -502,9 +850,13 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateWorkload, serviceImpl.CreateWorkload)
           .AddMethod(__Method_UpdateWorkload, serviceImpl.UpdateWorkload)
+          .AddMethod(__Method_RestrictAllowedResources, serviceImpl.RestrictAllowedResources)
           .AddMethod(__Method_DeleteWorkload, serviceImpl.DeleteWorkload)
           .AddMethod(__Method_GetWorkload, serviceImpl.GetWorkload)
-          .AddMethod(__Method_ListWorkloads, serviceImpl.ListWorkloads).Build();
+          .AddMethod(__Method_ListWorkloads, serviceImpl.ListWorkloads)
+          .AddMethod(__Method_ListViolations, serviceImpl.ListViolations)
+          .AddMethod(__Method_GetViolation, serviceImpl.GetViolation)
+          .AddMethod(__Method_AcknowledgeViolation, serviceImpl.AcknowledgeViolation).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -516,9 +868,13 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.CreateWorkloadRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkload));
       serviceBinder.AddMethod(__Method_UpdateWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.UpdateWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1.Workload>(serviceImpl.UpdateWorkload));
+      serviceBinder.AddMethod(__Method_RestrictAllowedResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest, global::Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse>(serviceImpl.RestrictAllowedResources));
       serviceBinder.AddMethod(__Method_DeleteWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkload));
       serviceBinder.AddMethod(__Method_GetWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.GetWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1.Workload>(serviceImpl.GetWorkload));
       serviceBinder.AddMethod(__Method_ListWorkloads, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest, global::Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse>(serviceImpl.ListWorkloads));
+      serviceBinder.AddMethod(__Method_ListViolations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest, global::Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse>(serviceImpl.ListViolations));
+      serviceBinder.AddMethod(__Method_GetViolation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.GetViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.Violation>(serviceImpl.GetViolation));
+      serviceBinder.AddMethod(__Method_AcknowledgeViolation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest, global::Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse>(serviceImpl.AcknowledgeViolation));
     }
 
   }

@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AssuredWorkloadsServiceClient",
           "rpcs": {
+            "AcknowledgeViolation": {
+              "methods": [
+                "AcknowledgeViolation",
+                "AcknowledgeViolationAsync"
+              ]
+            },
             "CreateWorkload": {
               "methods": [
                 "CreateWorkload",
@@ -22,16 +28,34 @@
                 "DeleteWorkloadAsync"
               ]
             },
+            "GetViolation": {
+              "methods": [
+                "GetViolation",
+                "GetViolationAsync"
+              ]
+            },
             "GetWorkload": {
               "methods": [
                 "GetWorkload",
                 "GetWorkloadAsync"
               ]
             },
+            "ListViolations": {
+              "methods": [
+                "ListViolations",
+                "ListViolationsAsync"
+              ]
+            },
             "ListWorkloads": {
               "methods": [
                 "ListWorkloads",
                 "ListWorkloadsAsync"
+              ]
+            },
+            "RestrictAllowedResources": {
+              "methods": [
+                "RestrictAllowedResources",
+                "RestrictAllowedResourcesAsync"
               ]
             },
             "UpdateWorkload": {
