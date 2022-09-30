@@ -77,6 +77,10 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryResponse> __Marshaller_google_datastore_v1_RunQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest> __Marshaller_google_datastore_v1_RunAggregationQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse> __Marshaller_google_datastore_v1_RunAggregationQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionRequest> __Marshaller_google_datastore_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Marshaller_google_datastore_v1_BeginTransactionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser));
@@ -112,6 +116,14 @@ namespace Google.Cloud.Datastore.V1 {
         "RunQuery",
         __Marshaller_google_datastore_v1_RunQueryRequest,
         __Marshaller_google_datastore_v1_RunQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest, global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse> __Method_RunAggregationQuery = new grpc::Method<global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest, global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunAggregationQuery",
+        __Marshaller_google_datastore_v1_RunAggregationQueryRequest,
+        __Marshaller_google_datastore_v1_RunAggregationQueryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.BeginTransactionRequest, global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Method_BeginTransaction = new grpc::Method<global::Google.Cloud.Datastore.V1.BeginTransactionRequest, global::Google.Cloud.Datastore.V1.BeginTransactionResponse>(
@@ -183,6 +195,18 @@ namespace Google.Cloud.Datastore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Runs an aggregation query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse> RunAggregationQuery(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -374,6 +398,54 @@ namespace Google.Cloud.Datastore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunQuery, null, options, request);
+      }
+      /// <summary>
+      /// Runs an aggregation query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse RunAggregationQuery(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunAggregationQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs an aggregation query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse RunAggregationQuery(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunAggregationQuery, null, options, request);
+      }
+      /// <summary>
+      /// Runs an aggregation query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse> RunAggregationQueryAsync(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunAggregationQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs an aggregation query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse> RunAggregationQueryAsync(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunAggregationQuery, null, options, request);
       }
       /// <summary>
       /// Begins a new transaction.
@@ -643,6 +715,7 @@ namespace Google.Cloud.Datastore.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_Lookup, serviceImpl.Lookup)
           .AddMethod(__Method_RunQuery, serviceImpl.RunQuery)
+          .AddMethod(__Method_RunAggregationQuery, serviceImpl.RunAggregationQuery)
           .AddMethod(__Method_BeginTransaction, serviceImpl.BeginTransaction)
           .AddMethod(__Method_Commit, serviceImpl.Commit)
           .AddMethod(__Method_Rollback, serviceImpl.Rollback)
@@ -659,6 +732,7 @@ namespace Google.Cloud.Datastore.V1 {
     {
       serviceBinder.AddMethod(__Method_Lookup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse>(serviceImpl.Lookup));
       serviceBinder.AddMethod(__Method_RunQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.RunQueryRequest, global::Google.Cloud.Datastore.V1.RunQueryResponse>(serviceImpl.RunQuery));
+      serviceBinder.AddMethod(__Method_RunAggregationQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest, global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse>(serviceImpl.RunAggregationQuery));
       serviceBinder.AddMethod(__Method_BeginTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.BeginTransactionRequest, global::Google.Cloud.Datastore.V1.BeginTransactionResponse>(serviceImpl.BeginTransaction));
       serviceBinder.AddMethod(__Method_Commit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.CommitRequest, global::Google.Cloud.Datastore.V1.CommitResponse>(serviceImpl.Commit));
       serviceBinder.AddMethod(__Method_Rollback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.RollbackRequest, global::Google.Cloud.Datastore.V1.RollbackResponse>(serviceImpl.Rollback));

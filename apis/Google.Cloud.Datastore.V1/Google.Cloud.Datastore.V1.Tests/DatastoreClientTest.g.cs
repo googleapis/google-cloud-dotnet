@@ -184,6 +184,58 @@ namespace Google.Cloud.Datastore.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void RunAggregationQueryRequestObject()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            RunAggregationQueryRequest request = new RunAggregationQueryRequest
+            {
+                ReadOptions = new ReadOptions(),
+                PartitionId = new PartitionId(),
+                AggregationQuery = new AggregationQuery(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
+            };
+            RunAggregationQueryResponse expectedResponse = new RunAggregationQueryResponse
+            {
+                Batch = new AggregationResultBatch(),
+                Query = new AggregationQuery(),
+            };
+            mockGrpcClient.Setup(x => x.RunAggregationQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
+            RunAggregationQueryResponse response = client.RunAggregationQuery(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunAggregationQueryRequestObjectAsync()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            RunAggregationQueryRequest request = new RunAggregationQueryRequest
+            {
+                ReadOptions = new ReadOptions(),
+                PartitionId = new PartitionId(),
+                AggregationQuery = new AggregationQuery(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
+            };
+            RunAggregationQueryResponse expectedResponse = new RunAggregationQueryResponse
+            {
+                Batch = new AggregationResultBatch(),
+                Query = new AggregationQuery(),
+            };
+            mockGrpcClient.Setup(x => x.RunAggregationQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunAggregationQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
+            RunAggregationQueryResponse responseCallSettings = await client.RunAggregationQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RunAggregationQueryResponse responseCancellationToken = await client.RunAggregationQueryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void BeginTransactionRequestObject()
         {
             moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);

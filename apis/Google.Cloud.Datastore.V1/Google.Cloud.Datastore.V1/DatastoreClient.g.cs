@@ -47,6 +47,7 @@ namespace Google.Cloud.Datastore.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             LookupSettings = existing.LookupSettings;
             RunQuerySettings = existing.RunQuerySettings;
+            RunAggregationQuerySettings = existing.RunAggregationQuerySettings;
             BeginTransactionSettings = existing.BeginTransactionSettings;
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
@@ -98,6 +99,27 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatastoreClient.RunAggregationQuery</c> and <c>DatastoreClient.RunAggregationQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunAggregationQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -435,6 +457,33 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RunQueryResponse> RunQueryAsync(RunQueryRequest request, st::CancellationToken cancellationToken) =>
             RunQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunAggregationQueryResponse RunAggregationQuery(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunAggregationQueryResponse> RunAggregationQueryAsync(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunAggregationQueryResponse> RunAggregationQueryAsync(RunAggregationQueryRequest request, st::CancellationToken cancellationToken) =>
+            RunAggregationQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction.
@@ -1041,6 +1090,8 @@ namespace Google.Cloud.Datastore.V1
 
         private readonly gaxgrpc::ApiCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
 
+        private readonly gaxgrpc::ApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse> _callRunAggregationQuery;
+
         private readonly gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
 
         private readonly gaxgrpc::ApiCall<CommitRequest, CommitResponse> _callCommit;
@@ -1068,6 +1119,9 @@ namespace Google.Cloud.Datastore.V1
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQueryAsync, grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
+            _callRunAggregationQuery = clientHelper.BuildApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse>("RunAggregationQuery", grpcClient.RunAggregationQueryAsync, grpcClient.RunAggregationQuery, effectiveSettings.RunAggregationQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            Modify_ApiCall(ref _callRunAggregationQuery);
+            Modify_RunAggregationQueryApiCall(ref _callRunAggregationQuery);
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>("BeginTransaction", grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callBeginTransaction);
             Modify_BeginTransactionApiCall(ref _callBeginTransaction);
@@ -1092,6 +1146,8 @@ namespace Google.Cloud.Datastore.V1
 
         partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiCall<RunQueryRequest, RunQueryResponse> call);
 
+        partial void Modify_RunAggregationQueryApiCall(ref gaxgrpc::ApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse> call);
+
         partial void Modify_BeginTransactionApiCall(ref gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
 
         partial void Modify_CommitApiCall(ref gaxgrpc::ApiCall<CommitRequest, CommitResponse> call);
@@ -1110,6 +1166,8 @@ namespace Google.Cloud.Datastore.V1
         partial void Modify_LookupRequest(ref LookupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1167,6 +1225,30 @@ namespace Google.Cloud.Datastore.V1
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return _callRunQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunAggregationQueryResponse RunAggregationQuery(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunAggregationQueryRequest(ref request, ref callSettings);
+            return _callRunAggregationQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Runs an aggregation query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RunAggregationQueryResponse> RunAggregationQueryAsync(RunAggregationQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunAggregationQueryRequest(ref request, ref callSettings);
+            return _callRunAggregationQuery.Async(request, callSettings);
         }
 
         /// <summary>
