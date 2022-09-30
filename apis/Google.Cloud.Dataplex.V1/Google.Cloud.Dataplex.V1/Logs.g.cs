@@ -65,22 +65,25 @@ namespace Google.Cloud.Dataplex.V1 {
             "CE5PVEVCT09LEAIiVQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIN",
             "CglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhINCglDQU5DRUxMRUQQAxILCgdB",
             "Qk9SVEVEEAQiMAoHU2VydmljZRIXChNTRVJWSUNFX1VOU1BFQ0lGSUVEEAAS",
-            "DAoIREFUQVBST0MQASLCBAoMU2Vzc2lvbkV2ZW50Eg8KB21lc3NhZ2UYASAB",
+            "DAoIREFUQVBST0MQASK6BQoMU2Vzc2lvbkV2ZW50Eg8KB21lc3NhZ2UYASAB",
             "KAkSDwoHdXNlcl9pZBgCIAEoCRISCgpzZXNzaW9uX2lkGAMgASgJEj4KBHR5",
             "cGUYBCABKA4yMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Vzc2lvbkV2",
             "ZW50LkV2ZW50VHlwZRJDCgVxdWVyeRgFIAEoCzIyLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5TZXNzaW9uRXZlbnQuUXVlcnlEZXRhaWxIABqjAgoLUXVl",
-            "cnlEZXRhaWwSEAoIcXVlcnlfaWQYASABKAkSEgoKcXVlcnlfdGV4dBgCIAEo",
-            "CRJJCgZlbmdpbmUYAyABKA4yOS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "U2Vzc2lvbkV2ZW50LlF1ZXJ5RGV0YWlsLkVuZ2luZRIrCghkdXJhdGlvbhgE",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIZChFyZXN1bHRfc2l6",
-            "ZV9ieXRlcxgFIAEoAxIcChRkYXRhX3Byb2Nlc3NlZF9ieXRlcxgGIAEoAyI9",
-            "CgZFbmdpbmUSFgoSRU5HSU5FX1VOU1BFQ0lGSUVEEAASDQoJU1BBUktfU1FM",
-            "EAESDAoIQklHUVVFUlkQAiJHCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgkKBVNUQVJUEAESCAoEU1RPUBACEgkKBVFVRVJZEANC",
-            "CAoGZGV0YWlsQm0KHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCCUxv",
-            "Z3NQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2RhdGFwbGV4L3YxO2RhdGFwbGV4YgZwcm90bzM="));
+            "YXRhcGxleC52MS5TZXNzaW9uRXZlbnQuUXVlcnlEZXRhaWxIABIXCg9ldmVu",
+            "dF9zdWNjZWVkZWQYBiABKAgSGQoRd2FybV9wb29sX2VuYWJsZWQYByABKAgS",
+            "NgoTdW5hc3NpZ25lZF9kdXJhdGlvbhgIIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhqjAgoLUXVlcnlEZXRhaWwSEAoIcXVlcnlfaWQYASABKAkS",
+            "EgoKcXVlcnlfdGV4dBgCIAEoCRJJCgZlbmdpbmUYAyABKA4yOS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuU2Vzc2lvbkV2ZW50LlF1ZXJ5RGV0YWlsLkVu",
+            "Z2luZRIrCghkdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhIZChFyZXN1bHRfc2l6ZV9ieXRlcxgFIAEoAxIcChRkYXRhX3Byb2Nl",
+            "c3NlZF9ieXRlcxgGIAEoAyI9CgZFbmdpbmUSFgoSRU5HSU5FX1VOU1BFQ0lG",
+            "SUVEEAASDQoJU1BBUktfU1FMEAESDAoIQklHUVVFUlkQAiJTCglFdmVudFR5",
+            "cGUSGgoWRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNUQVJUEAESCAoE",
+            "U1RPUBACEgkKBVFVRVJZEAMSCgoGQ1JFQVRFEARCCAoGZGV0YWlsQm0KHGNv",
+            "bS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCCUxvZ3NQcm90b1ABWkBnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFw",
+            "bGV4L3YxO2RhdGFwbGV4YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +92,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.PartitionDetails.Parser, new[]{ "Partition", "Entity", "Type", "SampledDataLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.JobEvent), global::Google.Cloud.Dataplex.V1.JobEvent.Parser, new[]{ "Message", "JobId", "StartTime", "EndTime", "State", "Retries", "Type", "Service", "ServiceJob" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Type), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.State), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Service) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent), global::Google.Cloud.Dataplex.V1.SessionEvent.Parser, new[]{ "Message", "UserId", "SessionId", "Type", "Query" }, new[]{ "Detail" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail), global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Parser, new[]{ "QueryId", "QueryText", "Engine", "Duration", "ResultSizeBytes", "DataProcessedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Types.Engine) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent), global::Google.Cloud.Dataplex.V1.SessionEvent.Parser, new[]{ "Message", "UserId", "SessionId", "Type", "Query", "EventSucceeded", "WarmPoolEnabled", "UnassignedDuration" }, new[]{ "Detail" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail), global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Parser, new[]{ "QueryId", "QueryText", "Engine", "Duration", "ResultSizeBytes", "DataProcessedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Types.Engine) }, null, null)})
           }));
     }
     #endregion
@@ -2374,6 +2377,9 @@ namespace Google.Cloud.Dataplex.V1 {
       userId_ = other.userId_;
       sessionId_ = other.sessionId_;
       type_ = other.type_;
+      eventSucceeded_ = other.eventSucceeded_;
+      warmPoolEnabled_ = other.warmPoolEnabled_;
+      unassignedDuration_ = other.unassignedDuration_ != null ? other.unassignedDuration_.Clone() : null;
       switch (other.DetailCase) {
         case DetailOneofCase.Query:
           Query = other.Query.Clone();
@@ -2408,7 +2414,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UserIdFieldNumber = 2;
     private string userId_ = "";
     /// <summary>
-    /// The information about the user that created the session.
+    /// The information about the user that created the session. It will be the
+    /// email address of the user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2464,6 +2471,51 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "event_succeeded" field.</summary>
+    public const int EventSucceededFieldNumber = 6;
+    private bool eventSucceeded_;
+    /// <summary>
+    /// The status of the event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EventSucceeded {
+      get { return eventSucceeded_; }
+      set {
+        eventSucceeded_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warm_pool_enabled" field.</summary>
+    public const int WarmPoolEnabledFieldNumber = 7;
+    private bool warmPoolEnabled_;
+    /// <summary>
+    /// If the session is a warm pooled session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool WarmPoolEnabled {
+      get { return warmPoolEnabled_; }
+      set {
+        warmPoolEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unassigned_duration" field.</summary>
+    public const int UnassignedDurationFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Duration unassignedDuration_;
+    /// <summary>
+    /// The idle duration of a warm pooled session before it is assigned to user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration UnassignedDuration {
+      get { return unassignedDuration_; }
+      set {
+        unassignedDuration_ = value;
+      }
+    }
+
     private object detail_;
     /// <summary>Enum of possible cases for the "detail" oneof.</summary>
     public enum DetailOneofCase {
@@ -2504,6 +2556,9 @@ namespace Google.Cloud.Dataplex.V1 {
       if (SessionId != other.SessionId) return false;
       if (Type != other.Type) return false;
       if (!object.Equals(Query, other.Query)) return false;
+      if (EventSucceeded != other.EventSucceeded) return false;
+      if (WarmPoolEnabled != other.WarmPoolEnabled) return false;
+      if (!object.Equals(UnassignedDuration, other.UnassignedDuration)) return false;
       if (DetailCase != other.DetailCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2517,6 +2572,9 @@ namespace Google.Cloud.Dataplex.V1 {
       if (SessionId.Length != 0) hash ^= SessionId.GetHashCode();
       if (Type != global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType.Unspecified) hash ^= Type.GetHashCode();
       if (detailCase_ == DetailOneofCase.Query) hash ^= Query.GetHashCode();
+      if (EventSucceeded != false) hash ^= EventSucceeded.GetHashCode();
+      if (WarmPoolEnabled != false) hash ^= WarmPoolEnabled.GetHashCode();
+      if (unassignedDuration_ != null) hash ^= UnassignedDuration.GetHashCode();
       hash ^= (int) detailCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2556,6 +2614,18 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Query);
       }
+      if (EventSucceeded != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EventSucceeded);
+      }
+      if (WarmPoolEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(WarmPoolEnabled);
+      }
+      if (unassignedDuration_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UnassignedDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2586,6 +2656,18 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Query);
       }
+      if (EventSucceeded != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EventSucceeded);
+      }
+      if (WarmPoolEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(WarmPoolEnabled);
+      }
+      if (unassignedDuration_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UnassignedDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2611,6 +2693,15 @@ namespace Google.Cloud.Dataplex.V1 {
       if (detailCase_ == DetailOneofCase.Query) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
       }
+      if (EventSucceeded != false) {
+        size += 1 + 1;
+      }
+      if (WarmPoolEnabled != false) {
+        size += 1 + 1;
+      }
+      if (unassignedDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnassignedDuration);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2634,6 +2725,18 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.Type != global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType.Unspecified) {
         Type = other.Type;
+      }
+      if (other.EventSucceeded != false) {
+        EventSucceeded = other.EventSucceeded;
+      }
+      if (other.WarmPoolEnabled != false) {
+        WarmPoolEnabled = other.WarmPoolEnabled;
+      }
+      if (other.unassignedDuration_ != null) {
+        if (unassignedDuration_ == null) {
+          UnassignedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        UnassignedDuration.MergeFrom(other.UnassignedDuration);
       }
       switch (other.DetailCase) {
         case DetailOneofCase.Query:
@@ -2684,6 +2787,21 @@ namespace Google.Cloud.Dataplex.V1 {
             Query = subBuilder;
             break;
           }
+          case 48: {
+            EventSucceeded = input.ReadBool();
+            break;
+          }
+          case 56: {
+            WarmPoolEnabled = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (unassignedDuration_ == null) {
+              UnassignedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(UnassignedDuration);
+            break;
+          }
         }
       }
     #endif
@@ -2724,6 +2842,21 @@ namespace Google.Cloud.Dataplex.V1 {
             Query = subBuilder;
             break;
           }
+          case 48: {
+            EventSucceeded = input.ReadBool();
+            break;
+          }
+          case 56: {
+            WarmPoolEnabled = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (unassignedDuration_ == null) {
+              UnassignedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(UnassignedDuration);
+            break;
+          }
         }
       }
     }
@@ -2743,7 +2876,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("EVENT_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Event for start of a session.
+        /// Event when the session is assigned to a user.
         /// </summary>
         [pbr::OriginalName("START")] Start = 1,
         /// <summary>
@@ -2754,6 +2887,11 @@ namespace Google.Cloud.Dataplex.V1 {
         /// Query events in the session.
         /// </summary>
         [pbr::OriginalName("QUERY")] Query = 3,
+        /// <summary>
+        /// Event for creation of a cluster. It is not yet assigned to a user.
+        /// This comes before START in the sequence
+        /// </summary>
+        [pbr::OriginalName("CREATE")] Create = 4,
       }
 
       /// <summary>

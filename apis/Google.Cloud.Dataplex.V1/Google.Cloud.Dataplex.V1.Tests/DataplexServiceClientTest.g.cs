@@ -788,6 +788,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -827,6 +828,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -868,6 +870,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -907,6 +910,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -948,6 +952,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -987,6 +992,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 ExecutionSpec = new Task.Types.ExecutionSpec(),
                 ExecutionStatus = new Task.Types.ExecutionStatus(),
                 Spark = new Task.Types.SparkTaskConfig(),
+                Notebook = new Task.Types.NotebookTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
