@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-10-03
+
+### New features
+
+- Publish new JobRun resource and associated methods for Google Cloud Deploy ([commit a8b0725](https://github.com/googleapis/google-cloud-dotnet/commit/a8b0725c866b5e0942c78646cb6eb690b81fb5c0))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
