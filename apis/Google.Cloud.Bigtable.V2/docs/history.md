@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-10-03
+
+### New features
+
+- Publish the RequestStats proto ([commit a344d8f](https://github.com/googleapis/google-cloud-dotnet/commit/a344d8fd5e8fd743cefc809769675388caf8fc13))
+
 ## Version 3.1.0, released 2022-07-11
 
 ### New features
