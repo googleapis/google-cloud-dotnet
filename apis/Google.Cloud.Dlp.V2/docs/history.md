@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.3.0, released 2022-10-03
+
+### Bug fixes
+
+- Deprecate extra field to avoid confusion ([commit 2947b46](https://github.com/googleapis/google-cloud-dotnet/commit/2947b46a8e23cbbc7187d1573e567373cc8d6968))
+
 ## Version 4.2.0, released 2022-09-05
 
 ### New features
