@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-10-03
+
+### New features
+
+- Add DisableServiceAccountKey and EnableServiceAccountKey, and update comments ([commit b0321c8](https://github.com/googleapis/google-cloud-dotnet/commit/b0321c8af7fb3d6818b7e83c1d9417825082596c))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

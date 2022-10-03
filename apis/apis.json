@@ -2046,7 +2046,7 @@
     },
     {
       "id": "Google.Cloud.Iam.Admin.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/docs",
@@ -2059,7 +2059,7 @@
         "admin"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
