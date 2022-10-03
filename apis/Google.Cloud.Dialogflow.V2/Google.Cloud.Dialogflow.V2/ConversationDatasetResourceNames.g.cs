@@ -370,4 +370,17 @@ namespace Google.Cloud.Dialogflow.V2
             set => ConversationDataset = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateConversationDatasetOperationMetadata
+    {
+        /// <summary>
+        /// <see cref="ConversationDatasetName"/>-typed view over the <see cref="ConversationDataset"/> resource name
+        /// property.
+        /// </summary>
+        public ConversationDatasetName ConversationDatasetAsConversationDatasetName
+        {
+            get => string.IsNullOrEmpty(ConversationDataset) ? null : ConversationDatasetName.Parse(ConversationDataset, allowUnparsed: true);
+            set => ConversationDataset = value?.ToString() ?? "";
+        }
+    }
 }
