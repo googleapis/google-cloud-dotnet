@@ -16,6 +16,9 @@ using Google.Cloud.Storage.V1.Tests.Conformance;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
+/// <summary>
+/// A wrapper class around the Resource class to attach values to the different types of resources created for running the test cases
+/// </summary>
 internal readonly struct StorageResource
 {
     internal Resource Resource { get; }
