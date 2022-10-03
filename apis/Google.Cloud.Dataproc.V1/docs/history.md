@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.1.0, released 2022-10-03
+
+### New features
+
+- Add support for Dataproc metric configuration ([commit 3267b4f](https://github.com/googleapis/google-cloud-dotnet/commit/3267b4f1faa7c15ff21ef0708f3636e48283ca3d))
+
 ## Version 5.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
