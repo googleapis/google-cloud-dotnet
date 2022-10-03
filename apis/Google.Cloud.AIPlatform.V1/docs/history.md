@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.4.0, released 2022-10-03
+
+### New features
+
+- Add model_source_info to Model in aiplatform v1 model.proto ([commit 52a99e7](https://github.com/googleapis/google-cloud-dotnet/commit/52a99e7720eb6eb1328746a500c1354ce48948fc))
+- Add timestamp_outside_retention_rows_count to ImportFeatureValuesResponse and ImportFeatureValuesOperationMetadata in aiplatform v1 featurestore_service.proto ([commit 093a3f1](https://github.com/googleapis/google-cloud-dotnet/commit/093a3f1a3ea1e44cdb2dc558113cee303208f2ff))
+- Add RemoveContextChildren rpc to aiplatform v1 metadata_service.proto ([commit 093a3f1](https://github.com/googleapis/google-cloud-dotnet/commit/093a3f1a3ea1e44cdb2dc558113cee303208f2ff))
+- Add order_by to ListArtifactsRequest, ListContextsRequest, and ListExecutionsRequest in aiplatform v1 metadata_service.proto ([commit 093a3f1](https://github.com/googleapis/google-cloud-dotnet/commit/093a3f1a3ea1e44cdb2dc558113cee303208f2ff))
+
 ## Version 2.3.0, released 2022-08-26
 
 ### New features
