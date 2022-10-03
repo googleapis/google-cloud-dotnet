@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.1.0, released 2022-10-03
+
+### New features
+
+- Add support for V1 and V2 classification models for the V1 API ([commit 634b207](https://github.com/googleapis/google-cloud-dotnet/commit/634b2072cc348f300932f94bf59a4ef9c0304c70))
+
+### Documentation improvements
+
+- Fix docstring formatting ([commit 191e5de](https://github.com/googleapis/google-cloud-dotnet/commit/191e5de258816094a26dc2ae42c1b2a846039912))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
