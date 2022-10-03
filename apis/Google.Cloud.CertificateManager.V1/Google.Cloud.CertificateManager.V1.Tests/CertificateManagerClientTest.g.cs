@@ -929,5 +929,221 @@ namespace Google.Cloud.CertificateManager.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetCertificateIssuanceConfigRequestObject()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig response = client.GetCertificateIssuanceConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCertificateIssuanceConfigRequestObjectAsync()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateIssuanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig responseCallSettings = await client.GetCertificateIssuanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CertificateIssuanceConfig responseCancellationToken = await client.GetCertificateIssuanceConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCertificateIssuanceConfig()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig response = client.GetCertificateIssuanceConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCertificateIssuanceConfigAsync()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateIssuanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig responseCallSettings = await client.GetCertificateIssuanceConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CertificateIssuanceConfig responseCancellationToken = await client.GetCertificateIssuanceConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCertificateIssuanceConfigResourceNames()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig response = client.GetCertificateIssuanceConfig(request.CertificateIssuanceConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCertificateIssuanceConfigResourceNamesAsync()
+        {
+            moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            CertificateIssuanceConfig expectedResponse = new CertificateIssuanceConfig
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                CertificateAuthorityConfig = new CertificateIssuanceConfig.Types.CertificateAuthorityConfig(),
+                Lifetime = new wkt::Duration(),
+                RotationWindowPercentage = 1868544779,
+                KeyAlgorithm = CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetCertificateIssuanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateIssuanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
+            CertificateIssuanceConfig responseCallSettings = await client.GetCertificateIssuanceConfigAsync(request.CertificateIssuanceConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CertificateIssuanceConfig responseCancellationToken = await client.GetCertificateIssuanceConfigAsync(request.CertificateIssuanceConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

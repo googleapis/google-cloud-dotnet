@@ -3518,5 +3518,750 @@ namespace Google.Cloud.CertificateManager.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigs</summary>
+        public void ListCertificateIssuanceConfigsRequestObject()
+        {
+            // Snippet: ListCertificateIssuanceConfigs(ListCertificateIssuanceConfigsRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CertificateIssuanceConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigsAsync</summary>
+        public async Task ListCertificateIssuanceConfigsRequestObjectAsync()
+        {
+            // Snippet: ListCertificateIssuanceConfigsAsync(ListCertificateIssuanceConfigsRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCertificateIssuanceConfigsRequest request = new ListCertificateIssuanceConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigs</summary>
+        public void ListCertificateIssuanceConfigs()
+        {
+            // Snippet: ListCertificateIssuanceConfigs(string, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CertificateIssuanceConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigsAsync</summary>
+        public async Task ListCertificateIssuanceConfigsAsync()
+        {
+            // Snippet: ListCertificateIssuanceConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigs</summary>
+        public void ListCertificateIssuanceConfigsResourceNames()
+        {
+            // Snippet: ListCertificateIssuanceConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CertificateIssuanceConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCertificateIssuanceConfigsAsync</summary>
+        public async Task ListCertificateIssuanceConfigsResourceNamesAsync()
+        {
+            // Snippet: ListCertificateIssuanceConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CertificateIssuanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CertificateIssuanceConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CertificateIssuanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfig</summary>
+        public void GetCertificateIssuanceConfigRequestObject()
+        {
+            // Snippet: GetCertificateIssuanceConfig(GetCertificateIssuanceConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            // Make the request
+            CertificateIssuanceConfig response = certificateManagerClient.GetCertificateIssuanceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfigAsync</summary>
+        public async Task GetCertificateIssuanceConfigRequestObjectAsync()
+        {
+            // Snippet: GetCertificateIssuanceConfigAsync(GetCertificateIssuanceConfigRequest, CallSettings)
+            // Additional: GetCertificateIssuanceConfigAsync(GetCertificateIssuanceConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCertificateIssuanceConfigRequest request = new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            // Make the request
+            CertificateIssuanceConfig response = await certificateManagerClient.GetCertificateIssuanceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfig</summary>
+        public void GetCertificateIssuanceConfig()
+        {
+            // Snippet: GetCertificateIssuanceConfig(string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/certificateIssuanceConfigs/[CERTIFICATE_ISSUANCE_CONFIG]";
+            // Make the request
+            CertificateIssuanceConfig response = certificateManagerClient.GetCertificateIssuanceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfigAsync</summary>
+        public async Task GetCertificateIssuanceConfigAsync()
+        {
+            // Snippet: GetCertificateIssuanceConfigAsync(string, CallSettings)
+            // Additional: GetCertificateIssuanceConfigAsync(string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/certificateIssuanceConfigs/[CERTIFICATE_ISSUANCE_CONFIG]";
+            // Make the request
+            CertificateIssuanceConfig response = await certificateManagerClient.GetCertificateIssuanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfig</summary>
+        public void GetCertificateIssuanceConfigResourceNames()
+        {
+            // Snippet: GetCertificateIssuanceConfig(CertificateIssuanceConfigName, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            CertificateIssuanceConfigName name = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]");
+            // Make the request
+            CertificateIssuanceConfig response = certificateManagerClient.GetCertificateIssuanceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCertificateIssuanceConfigAsync</summary>
+        public async Task GetCertificateIssuanceConfigResourceNamesAsync()
+        {
+            // Snippet: GetCertificateIssuanceConfigAsync(CertificateIssuanceConfigName, CallSettings)
+            // Additional: GetCertificateIssuanceConfigAsync(CertificateIssuanceConfigName, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CertificateIssuanceConfigName name = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]");
+            // Make the request
+            CertificateIssuanceConfig response = await certificateManagerClient.GetCertificateIssuanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfig</summary>
+        public void CreateCertificateIssuanceConfigRequestObject()
+        {
+            // Snippet: CreateCertificateIssuanceConfig(CreateCertificateIssuanceConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            CreateCertificateIssuanceConfigRequest request = new CreateCertificateIssuanceConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CertificateIssuanceConfigId = "",
+                CertificateIssuanceConfig = new CertificateIssuanceConfig(),
+            };
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = certificateManagerClient.CreateCertificateIssuanceConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfigAsync</summary>
+        public async Task CreateCertificateIssuanceConfigRequestObjectAsync()
+        {
+            // Snippet: CreateCertificateIssuanceConfigAsync(CreateCertificateIssuanceConfigRequest, CallSettings)
+            // Additional: CreateCertificateIssuanceConfigAsync(CreateCertificateIssuanceConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCertificateIssuanceConfigRequest request = new CreateCertificateIssuanceConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CertificateIssuanceConfigId = "",
+                CertificateIssuanceConfig = new CertificateIssuanceConfig(),
+            };
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = await certificateManagerClient.CreateCertificateIssuanceConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfig</summary>
+        public void CreateCertificateIssuanceConfig()
+        {
+            // Snippet: CreateCertificateIssuanceConfig(string, CertificateIssuanceConfig, string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            string certificateIssuanceConfigId = "";
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = certificateManagerClient.CreateCertificateIssuanceConfig(parent, certificateIssuanceConfig, certificateIssuanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfigAsync</summary>
+        public async Task CreateCertificateIssuanceConfigAsync()
+        {
+            // Snippet: CreateCertificateIssuanceConfigAsync(string, CertificateIssuanceConfig, string, CallSettings)
+            // Additional: CreateCertificateIssuanceConfigAsync(string, CertificateIssuanceConfig, string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            string certificateIssuanceConfigId = "";
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = await certificateManagerClient.CreateCertificateIssuanceConfigAsync(parent, certificateIssuanceConfig, certificateIssuanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfig</summary>
+        public void CreateCertificateIssuanceConfigResourceNames()
+        {
+            // Snippet: CreateCertificateIssuanceConfig(LocationName, CertificateIssuanceConfig, string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            string certificateIssuanceConfigId = "";
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = certificateManagerClient.CreateCertificateIssuanceConfig(parent, certificateIssuanceConfig, certificateIssuanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCertificateIssuanceConfigAsync</summary>
+        public async Task CreateCertificateIssuanceConfigResourceNamesAsync()
+        {
+            // Snippet: CreateCertificateIssuanceConfigAsync(LocationName, CertificateIssuanceConfig, string, CallSettings)
+            // Additional: CreateCertificateIssuanceConfigAsync(LocationName, CertificateIssuanceConfig, string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            string certificateIssuanceConfigId = "";
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = await certificateManagerClient.CreateCertificateIssuanceConfigAsync(parent, certificateIssuanceConfig, certificateIssuanceConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfig</summary>
+        public void DeleteCertificateIssuanceConfigRequestObject()
+        {
+            // Snippet: DeleteCertificateIssuanceConfig(DeleteCertificateIssuanceConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            DeleteCertificateIssuanceConfigRequest request = new DeleteCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteCertificateIssuanceConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfigAsync</summary>
+        public async Task DeleteCertificateIssuanceConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteCertificateIssuanceConfigAsync(DeleteCertificateIssuanceConfigRequest, CallSettings)
+            // Additional: DeleteCertificateIssuanceConfigAsync(DeleteCertificateIssuanceConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCertificateIssuanceConfigRequest request = new DeleteCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteCertificateIssuanceConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfig</summary>
+        public void DeleteCertificateIssuanceConfig()
+        {
+            // Snippet: DeleteCertificateIssuanceConfig(string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/certificateIssuanceConfigs/[CERTIFICATE_ISSUANCE_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteCertificateIssuanceConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfigAsync</summary>
+        public async Task DeleteCertificateIssuanceConfigAsync()
+        {
+            // Snippet: DeleteCertificateIssuanceConfigAsync(string, CallSettings)
+            // Additional: DeleteCertificateIssuanceConfigAsync(string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/certificateIssuanceConfigs/[CERTIFICATE_ISSUANCE_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteCertificateIssuanceConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfig</summary>
+        public void DeleteCertificateIssuanceConfigResourceNames()
+        {
+            // Snippet: DeleteCertificateIssuanceConfig(CertificateIssuanceConfigName, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            CertificateIssuanceConfigName name = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteCertificateIssuanceConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCertificateIssuanceConfigAsync</summary>
+        public async Task DeleteCertificateIssuanceConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteCertificateIssuanceConfigAsync(CertificateIssuanceConfigName, CallSettings)
+            // Additional: DeleteCertificateIssuanceConfigAsync(CertificateIssuanceConfigName, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CertificateIssuanceConfigName name = CertificateIssuanceConfigName.FromProjectLocationCertificateIssuanceConfig("[PROJECT]", "[LOCATION]", "[CERTIFICATE_ISSUANCE_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteCertificateIssuanceConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

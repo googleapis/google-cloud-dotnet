@@ -146,6 +146,18 @@ namespace Google.Cloud.CertificateManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.UpdateDnsAuthorizationRequest> __Marshaller_google_cloud_certificatemanager_v1_UpdateDnsAuthorizationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.UpdateDnsAuthorizationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest> __Marshaller_google_cloud_certificatemanager_v1_DeleteDnsAuthorizationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest> __Marshaller_google_cloud_certificatemanager_v1_ListCertificateIssuanceConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse> __Marshaller_google_cloud_certificatemanager_v1_ListCertificateIssuanceConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_GetCertificateIssuanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig> __Marshaller_google_cloud_certificatemanager_v1_CertificateIssuanceConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_CreateCertificateIssuanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_DeleteCertificateIssuanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificatesRequest, global::Google.Cloud.CertificateManager.V1.ListCertificatesResponse> __Method_ListCertificates = new grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificatesRequest, global::Google.Cloud.CertificateManager.V1.ListCertificatesResponse>(
@@ -305,6 +317,38 @@ namespace Google.Cloud.CertificateManager.V1 {
         __ServiceName,
         "DeleteDnsAuthorization",
         __Marshaller_google_cloud_certificatemanager_v1_DeleteDnsAuthorizationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse> __Method_ListCertificateIssuanceConfigs = new grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCertificateIssuanceConfigs",
+        __Marshaller_google_cloud_certificatemanager_v1_ListCertificateIssuanceConfigsRequest,
+        __Marshaller_google_cloud_certificatemanager_v1_ListCertificateIssuanceConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest, global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig> __Method_GetCertificateIssuanceConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest, global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCertificateIssuanceConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_GetCertificateIssuanceConfigRequest,
+        __Marshaller_google_cloud_certificatemanager_v1_CertificateIssuanceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation> __Method_CreateCertificateIssuanceConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCertificateIssuanceConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_CreateCertificateIssuanceConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteCertificateIssuanceConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCertificateIssuanceConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_DeleteCertificateIssuanceConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -555,6 +599,54 @@ namespace Google.Cloud.CertificateManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDnsAuthorization(global::Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists CertificateIssuanceConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse> ListCertificateIssuanceConfigs(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig> GetCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new CertificateIssuanceConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1556,6 +1648,198 @@ namespace Google.Cloud.CertificateManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDnsAuthorization, null, options, request);
       }
+      /// <summary>
+      /// Lists CertificateIssuanceConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse ListCertificateIssuanceConfigs(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCertificateIssuanceConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CertificateIssuanceConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse ListCertificateIssuanceConfigs(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCertificateIssuanceConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists CertificateIssuanceConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse> ListCertificateIssuanceConfigsAsync(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCertificateIssuanceConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CertificateIssuanceConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse> ListCertificateIssuanceConfigsAsync(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCertificateIssuanceConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig GetCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCertificateIssuanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig GetCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCertificateIssuanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCertificateIssuanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCertificateIssuanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new CertificateIssuanceConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCertificateIssuanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new CertificateIssuanceConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCertificateIssuanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new CertificateIssuanceConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCertificateIssuanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new CertificateIssuanceConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCertificateIssuanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCertificateIssuanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCertificateIssuanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCertificateIssuanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single CertificateIssuanceConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCertificateIssuanceConfigAsync(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCertificateIssuanceConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CertificateManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1589,7 +1873,11 @@ namespace Google.Cloud.CertificateManager.V1 {
           .AddMethod(__Method_GetDnsAuthorization, serviceImpl.GetDnsAuthorization)
           .AddMethod(__Method_CreateDnsAuthorization, serviceImpl.CreateDnsAuthorization)
           .AddMethod(__Method_UpdateDnsAuthorization, serviceImpl.UpdateDnsAuthorization)
-          .AddMethod(__Method_DeleteDnsAuthorization, serviceImpl.DeleteDnsAuthorization).Build();
+          .AddMethod(__Method_DeleteDnsAuthorization, serviceImpl.DeleteDnsAuthorization)
+          .AddMethod(__Method_ListCertificateIssuanceConfigs, serviceImpl.ListCertificateIssuanceConfigs)
+          .AddMethod(__Method_GetCertificateIssuanceConfig, serviceImpl.GetCertificateIssuanceConfig)
+          .AddMethod(__Method_CreateCertificateIssuanceConfig, serviceImpl.CreateCertificateIssuanceConfig)
+          .AddMethod(__Method_DeleteCertificateIssuanceConfig, serviceImpl.DeleteCertificateIssuanceConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1619,6 +1907,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       serviceBinder.AddMethod(__Method_CreateDnsAuthorization, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.CreateDnsAuthorizationRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDnsAuthorization));
       serviceBinder.AddMethod(__Method_UpdateDnsAuthorization, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.UpdateDnsAuthorizationRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDnsAuthorization));
       serviceBinder.AddMethod(__Method_DeleteDnsAuthorization, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDnsAuthorization));
+      serviceBinder.AddMethod(__Method_ListCertificateIssuanceConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse>(serviceImpl.ListCertificateIssuanceConfigs));
+      serviceBinder.AddMethod(__Method_GetCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest, global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>(serviceImpl.GetCertificateIssuanceConfig));
+      serviceBinder.AddMethod(__Method_CreateCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCertificateIssuanceConfig));
+      serviceBinder.AddMethod(__Method_DeleteCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCertificateIssuanceConfig));
     }
 
   }
