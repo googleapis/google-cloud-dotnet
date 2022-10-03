@@ -81,6 +81,12 @@ namespace Google.Cloud.CertificateManager.V1
             UpdateDnsAuthorizationOperationsSettings = existing.UpdateDnsAuthorizationOperationsSettings.Clone();
             DeleteDnsAuthorizationSettings = existing.DeleteDnsAuthorizationSettings;
             DeleteDnsAuthorizationOperationsSettings = existing.DeleteDnsAuthorizationOperationsSettings.Clone();
+            ListCertificateIssuanceConfigsSettings = existing.ListCertificateIssuanceConfigsSettings;
+            GetCertificateIssuanceConfigSettings = existing.GetCertificateIssuanceConfigSettings;
+            CreateCertificateIssuanceConfigSettings = existing.CreateCertificateIssuanceConfigSettings;
+            CreateCertificateIssuanceConfigOperationsSettings = existing.CreateCertificateIssuanceConfigOperationsSettings.Clone();
+            DeleteCertificateIssuanceConfigSettings = existing.DeleteCertificateIssuanceConfigSettings;
+            DeleteCertificateIssuanceConfigOperationsSettings = existing.DeleteCertificateIssuanceConfigOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -682,6 +688,118 @@ namespace Google.Cloud.CertificateManager.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.ListCertificateIssuanceConfigs</c> and
+        /// <c>CertificateManagerClient.ListCertificateIssuanceConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCertificateIssuanceConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.GetCertificateIssuanceConfig</c> and
+        /// <c>CertificateManagerClient.GetCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCertificateIssuanceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.CreateCertificateIssuanceConfig</c> and
+        /// <c>CertificateManagerClient.CreateCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCertificateIssuanceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.CreateCertificateIssuanceConfig</c>
+        /// and <c>CertificateManagerClient.CreateCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateCertificateIssuanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.DeleteCertificateIssuanceConfig</c> and
+        /// <c>CertificateManagerClient.DeleteCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCertificateIssuanceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.DeleteCertificateIssuanceConfig</c>
+        /// and <c>CertificateManagerClient.DeleteCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteCertificateIssuanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -880,8 +998,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists Certificates in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -905,8 +1023,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists Certificates in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -930,8 +1048,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists Certificates in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -955,8 +1073,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists Certificates in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1330,8 +1448,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1350,8 +1468,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1370,8 +1488,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1539,8 +1657,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMaps in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate maps should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate maps should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1564,8 +1682,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMaps in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate maps should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate maps should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1589,8 +1707,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMaps in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate maps should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate maps should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1614,8 +1732,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMaps in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the certificate maps should be listed,
-        /// specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the certificate maps should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1989,8 +2107,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2009,8 +2127,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2029,8 +2147,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2216,8 +2334,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMapEntries in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project, location and certificate map from which the certificate map
-        /// entries should be listed, specified in the format
+        /// Required. The project, location and certificate map from which the
+        /// certificate map entries should be listed, specified in the format
         /// `projects/*/locations/*/certificateMaps/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2242,8 +2360,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMapEntries in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project, location and certificate map from which the certificate map
-        /// entries should be listed, specified in the format
+        /// Required. The project, location and certificate map from which the
+        /// certificate map entries should be listed, specified in the format
         /// `projects/*/locations/*/certificateMaps/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2268,8 +2386,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMapEntries in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project, location and certificate map from which the certificate map
-        /// entries should be listed, specified in the format
+        /// Required. The project, location and certificate map from which the
+        /// certificate map entries should be listed, specified in the format
         /// `projects/*/locations/*/certificateMaps/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2294,8 +2412,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists CertificateMapEntries in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project, location and certificate map from which the certificate map
-        /// entries should be listed, specified in the format
+        /// Required. The project, location and certificate map from which the
+        /// certificate map entries should be listed, specified in the format
         /// `projects/*/locations/*/certificateMaps/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2670,8 +2788,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map entry to create map entry.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2690,8 +2808,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map entry to create map entry.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2710,8 +2828,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the certificate map entry to create map entry.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2777,8 +2895,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2792,8 +2910,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2807,8 +2925,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2819,8 +2937,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2834,8 +2952,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2849,8 +2967,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Deletes a single CertificateMapEntry.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the certificate map entry to delete. Must be in the format
-        /// `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
+        /// Required. A name of the certificate map entry to delete. Must be in the
+        /// format `projects/*/locations/*/certificateMaps/*/certificateMapEntries/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2879,8 +2997,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists DnsAuthorizations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the dns authorizations should be
-        /// listed, specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the dns authorizations should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2904,8 +3022,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists DnsAuthorizations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the dns authorizations should be
-        /// listed, specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the dns authorizations should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2929,8 +3047,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists DnsAuthorizations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the dns authorizations should be
-        /// listed, specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the dns authorizations should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2954,8 +3072,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Lists DnsAuthorizations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the dns authorizations should be
-        /// listed, specified in the format `projects/*/locations/*`.
+        /// Required. The project and location from which the dns authorizations should
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3006,8 +3124,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3021,8 +3139,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3036,8 +3154,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3048,8 +3166,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3063,8 +3181,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3078,8 +3196,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Gets details of a single DnsAuthorization.
         /// </summary>
         /// <param name="name">
-        /// Required. A name of the dns authorization to describe. Must be in the format
-        /// `projects/*/locations/*/dnsAuthorizations/*`.
+        /// Required. A name of the dns authorization to describe. Must be in the
+        /// format `projects/*/locations/*/dnsAuthorizations/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3144,8 +3262,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3167,8 +3285,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3190,8 +3308,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3208,8 +3326,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3231,8 +3349,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3254,8 +3372,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Creates a new DnsAuthorization in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the dns authorization. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The parent resource of the dns authorization. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="dnsAuthorization">
         /// Required. A definition of the dns authorization to create.
@@ -3329,8 +3447,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the dns authorization to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3349,8 +3467,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the dns authorization to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3369,8 +3487,8 @@ namespace Google.Cloud.CertificateManager.V1
         /// Required. A definition of the dns authorization to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. For the `FieldMask` definition,
-        /// see
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3515,6 +3633,555 @@ namespace Google.Cloud.CertificateManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDnsAuthorizationAsync(DnsAuthorizationName name, st::CancellationToken cancellationToken) =>
             DeleteDnsAuthorizationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(ListCertificateIssuanceConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(ListCertificateIssuanceConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCertificateIssuanceConfigs(new ListCertificateIssuanceConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCertificateIssuanceConfigsAsync(new ListCertificateIssuanceConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCertificateIssuanceConfigs(new ListCertificateIssuanceConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the certificate should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCertificateIssuanceConfigsAsync(new ListCertificateIssuanceConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CertificateIssuanceConfig GetCertificateIssuanceConfig(GetCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(GetCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(GetCertificateIssuanceConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetCertificateIssuanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CertificateIssuanceConfig GetCertificateIssuanceConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCertificateIssuanceConfig(new GetCertificateIssuanceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCertificateIssuanceConfigAsync(new GetCertificateIssuanceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCertificateIssuanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CertificateIssuanceConfig GetCertificateIssuanceConfig(CertificateIssuanceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCertificateIssuanceConfig(new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(CertificateIssuanceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCertificateIssuanceConfigAsync(new GetCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to describe. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(CertificateIssuanceConfigName name, st::CancellationToken cancellationToken) =>
+            GetCertificateIssuanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> CreateCertificateIssuanceConfig(CreateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(CreateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(CreateCertificateIssuanceConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateCertificateIssuanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateCertificateIssuanceConfig</c>.</summary>
+        public virtual lro::OperationsClient CreateCertificateIssuanceConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> PollOnceCreateCertificateIssuanceConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CertificateIssuanceConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> PollOnceCreateCertificateIssuanceConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CertificateIssuanceConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> CreateCertificateIssuanceConfig(string parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCertificateIssuanceConfig(new CreateCertificateIssuanceConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CertificateIssuanceConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateIssuanceConfigId, nameof(certificateIssuanceConfigId)),
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(string parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCertificateIssuanceConfigAsync(new CreateCertificateIssuanceConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CertificateIssuanceConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateIssuanceConfigId, nameof(certificateIssuanceConfigId)),
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(string parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, st::CancellationToken cancellationToken) =>
+            CreateCertificateIssuanceConfigAsync(parent, certificateIssuanceConfig, certificateIssuanceConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> CreateCertificateIssuanceConfig(gagr::LocationName parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCertificateIssuanceConfig(new CreateCertificateIssuanceConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CertificateIssuanceConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateIssuanceConfigId, nameof(certificateIssuanceConfigId)),
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(gagr::LocationName parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCertificateIssuanceConfigAsync(new CreateCertificateIssuanceConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CertificateIssuanceConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateIssuanceConfigId, nameof(certificateIssuanceConfigId)),
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the certificate issuance config. Must be
+        /// in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to create.
+        /// </param>
+        /// <param name="certificateIssuanceConfigId">
+        /// Required. A user-provided name of the certificate config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(gagr::LocationName parent, CertificateIssuanceConfig certificateIssuanceConfig, string certificateIssuanceConfigId, st::CancellationToken cancellationToken) =>
+            CreateCertificateIssuanceConfigAsync(parent, certificateIssuanceConfig, certificateIssuanceConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCertificateIssuanceConfig(DeleteCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(DeleteCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(DeleteCertificateIssuanceConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCertificateIssuanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteCertificateIssuanceConfig</c>.</summary>
+        public virtual lro::OperationsClient DeleteCertificateIssuanceConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteCertificateIssuanceConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteCertificateIssuanceConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCertificateIssuanceConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCertificateIssuanceConfig(new DeleteCertificateIssuanceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCertificateIssuanceConfigAsync(new DeleteCertificateIssuanceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCertificateIssuanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCertificateIssuanceConfig(CertificateIssuanceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCertificateIssuanceConfig(new DeleteCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(CertificateIssuanceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCertificateIssuanceConfigAsync(new DeleteCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the certificate issuance config to delete. Must be in
+        /// the format `projects/*/locations/*/certificateIssuanceConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(CertificateIssuanceConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteCertificateIssuanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CertificateManager client wrapper implementation, for convenient use.</summary>
@@ -3588,6 +4255,14 @@ namespace Google.Cloud.CertificateManager.V1
 
         private readonly gaxgrpc::ApiCall<DeleteDnsAuthorizationRequest, lro::Operation> _callDeleteDnsAuthorization;
 
+        private readonly gaxgrpc::ApiCall<ListCertificateIssuanceConfigsRequest, ListCertificateIssuanceConfigsResponse> _callListCertificateIssuanceConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetCertificateIssuanceConfigRequest, CertificateIssuanceConfig> _callGetCertificateIssuanceConfig;
+
+        private readonly gaxgrpc::ApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation> _callCreateCertificateIssuanceConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> _callDeleteCertificateIssuanceConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the CertificateManager service, with the specified gRPC client and settings.
         /// </summary>
@@ -3611,6 +4286,8 @@ namespace Google.Cloud.CertificateManager.V1
             CreateDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDnsAuthorizationOperationsSettings, logger);
             UpdateDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDnsAuthorizationOperationsSettings, logger);
             DeleteDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDnsAuthorizationOperationsSettings, logger);
+            CreateCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateIssuanceConfigOperationsSettings, logger);
+            DeleteCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateIssuanceConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCertificates = clientHelper.BuildApiCall<ListCertificatesRequest, ListCertificatesResponse>("ListCertificates", grpcClient.ListCertificatesAsync, grpcClient.ListCertificates, effectiveSettings.ListCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificates);
@@ -3672,6 +4349,18 @@ namespace Google.Cloud.CertificateManager.V1
             _callDeleteDnsAuthorization = clientHelper.BuildApiCall<DeleteDnsAuthorizationRequest, lro::Operation>("DeleteDnsAuthorization", grpcClient.DeleteDnsAuthorizationAsync, grpcClient.DeleteDnsAuthorization, effectiveSettings.DeleteDnsAuthorizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDnsAuthorization);
             Modify_DeleteDnsAuthorizationApiCall(ref _callDeleteDnsAuthorization);
+            _callListCertificateIssuanceConfigs = clientHelper.BuildApiCall<ListCertificateIssuanceConfigsRequest, ListCertificateIssuanceConfigsResponse>("ListCertificateIssuanceConfigs", grpcClient.ListCertificateIssuanceConfigsAsync, grpcClient.ListCertificateIssuanceConfigs, effectiveSettings.ListCertificateIssuanceConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListCertificateIssuanceConfigs);
+            Modify_ListCertificateIssuanceConfigsApiCall(ref _callListCertificateIssuanceConfigs);
+            _callGetCertificateIssuanceConfig = clientHelper.BuildApiCall<GetCertificateIssuanceConfigRequest, CertificateIssuanceConfig>("GetCertificateIssuanceConfig", grpcClient.GetCertificateIssuanceConfigAsync, grpcClient.GetCertificateIssuanceConfig, effectiveSettings.GetCertificateIssuanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCertificateIssuanceConfig);
+            Modify_GetCertificateIssuanceConfigApiCall(ref _callGetCertificateIssuanceConfig);
+            _callCreateCertificateIssuanceConfig = clientHelper.BuildApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation>("CreateCertificateIssuanceConfig", grpcClient.CreateCertificateIssuanceConfigAsync, grpcClient.CreateCertificateIssuanceConfig, effectiveSettings.CreateCertificateIssuanceConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCertificateIssuanceConfig);
+            Modify_CreateCertificateIssuanceConfigApiCall(ref _callCreateCertificateIssuanceConfig);
+            _callDeleteCertificateIssuanceConfig = clientHelper.BuildApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation>("DeleteCertificateIssuanceConfig", grpcClient.DeleteCertificateIssuanceConfigAsync, grpcClient.DeleteCertificateIssuanceConfig, effectiveSettings.DeleteCertificateIssuanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCertificateIssuanceConfig);
+            Modify_DeleteCertificateIssuanceConfigApiCall(ref _callDeleteCertificateIssuanceConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3716,6 +4405,14 @@ namespace Google.Cloud.CertificateManager.V1
         partial void Modify_UpdateDnsAuthorizationApiCall(ref gaxgrpc::ApiCall<UpdateDnsAuthorizationRequest, lro::Operation> call);
 
         partial void Modify_DeleteDnsAuthorizationApiCall(ref gaxgrpc::ApiCall<DeleteDnsAuthorizationRequest, lro::Operation> call);
+
+        partial void Modify_ListCertificateIssuanceConfigsApiCall(ref gaxgrpc::ApiCall<ListCertificateIssuanceConfigsRequest, ListCertificateIssuanceConfigsResponse> call);
+
+        partial void Modify_GetCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<GetCertificateIssuanceConfigRequest, CertificateIssuanceConfig> call);
+
+        partial void Modify_CreateCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation> call);
+
+        partial void Modify_DeleteCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> call);
 
         partial void OnConstruction(CertificateManager.CertificateManagerClient grpcClient, CertificateManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3764,6 +4461,14 @@ namespace Google.Cloud.CertificateManager.V1
         partial void Modify_UpdateDnsAuthorizationRequest(ref UpdateDnsAuthorizationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDnsAuthorizationRequest(ref DeleteDnsAuthorizationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCertificateIssuanceConfigsRequest(ref ListCertificateIssuanceConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCertificateIssuanceConfigRequest(ref GetCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCertificateIssuanceConfigRequest(ref CreateCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCertificateIssuanceConfigRequest(ref DeleteCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -4284,6 +4989,108 @@ namespace Google.Cloud.CertificateManager.V1
             Modify_DeleteDnsAuthorizationRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDnsAuthorization.Async(request, callSettings).ConfigureAwait(false), DeleteDnsAuthorizationOperationsClient);
         }
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigs(ListCertificateIssuanceConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCertificateIssuanceConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCertificateIssuanceConfigsRequest, ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig>(_callListCertificateIssuanceConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists CertificateIssuanceConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CertificateIssuanceConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> ListCertificateIssuanceConfigsAsync(ListCertificateIssuanceConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCertificateIssuanceConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCertificateIssuanceConfigsRequest, ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig>(_callListCertificateIssuanceConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CertificateIssuanceConfig GetCertificateIssuanceConfig(GetCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return _callGetCertificateIssuanceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CertificateIssuanceConfig> GetCertificateIssuanceConfigAsync(GetCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return _callGetCertificateIssuanceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateCertificateIssuanceConfig</c>.</summary>
+        public override lro::OperationsClient CreateCertificateIssuanceConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CertificateIssuanceConfig, OperationMetadata> CreateCertificateIssuanceConfig(CreateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<CertificateIssuanceConfig, OperationMetadata>(_callCreateCertificateIssuanceConfig.Sync(request, callSettings), CreateCertificateIssuanceConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new CertificateIssuanceConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> CreateCertificateIssuanceConfigAsync(CreateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<CertificateIssuanceConfig, OperationMetadata>(await _callCreateCertificateIssuanceConfig.Async(request, callSettings).ConfigureAwait(false), CreateCertificateIssuanceConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteCertificateIssuanceConfig</c>.</summary>
+        public override lro::OperationsClient DeleteCertificateIssuanceConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteCertificateIssuanceConfig(DeleteCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteCertificateIssuanceConfig.Sync(request, callSettings), DeleteCertificateIssuanceConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(DeleteCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCertificateIssuanceConfig.Async(request, callSettings).ConfigureAwait(false), DeleteCertificateIssuanceConfigOperationsClient);
+        }
     }
 
     public partial class ListCertificatesRequest : gaxgrpc::IPageRequest
@@ -4299,6 +5106,10 @@ namespace Google.Cloud.CertificateManager.V1
     }
 
     public partial class ListDnsAuthorizationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListCertificateIssuanceConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4330,6 +5141,14 @@ namespace Google.Cloud.CertificateManager.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DnsAuthorization> GetEnumerator() => DnsAuthorizations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCertificateIssuanceConfigsResponse : gaxgrpc::IPageResponse<CertificateIssuanceConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CertificateIssuanceConfig> GetEnumerator() => CertificateIssuanceConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -29,6 +29,7 @@ namespace Google.Cloud.CertificateManager.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return CertificateIssuanceConfigReflection.Descriptor;
             yield return CertificateManagerReflection.Descriptor;
         }
     }

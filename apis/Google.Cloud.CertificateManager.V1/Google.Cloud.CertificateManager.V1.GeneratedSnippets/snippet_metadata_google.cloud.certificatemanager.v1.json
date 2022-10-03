@@ -2905,6 +2905,626 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_sync",
+      "title": "ListCertificateIssuanceConfigsRequestObject",
+      "description": "Snippet for ListCertificateIssuanceConfigs",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_async",
+      "title": "ListCertificateIssuanceConfigsRequestObjectAsync",
+      "description": "Snippet for ListCertificateIssuanceConfigsAsync",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_sync_flattened",
+      "title": "ListCertificateIssuanceConfigs",
+      "description": "Snippet for ListCertificateIssuanceConfigs",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_async_flattened",
+      "title": "ListCertificateIssuanceConfigsAsync",
+      "description": "Snippet for ListCertificateIssuanceConfigsAsync",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_sync_flattened_resourceNames",
+      "title": "ListCertificateIssuanceConfigsResourceNames",
+      "description": "Snippet for ListCertificateIssuanceConfigs",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListCertificateIssuanceConfigs_async_flattened_resourceNames",
+      "title": "ListCertificateIssuanceConfigsResourceNamesAsync",
+      "description": "Snippet for ListCertificateIssuanceConfigsAsync",
+      "file": "CertificateManagerClient.ListCertificateIssuanceConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCertificateIssuanceConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListCertificateIssuanceConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListCertificateIssuanceConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_sync",
+      "title": "GetCertificateIssuanceConfigRequestObject",
+      "description": "Snippet for GetCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_async",
+      "title": "GetCertificateIssuanceConfigRequestObjectAsync",
+      "description": "Snippet for GetCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_sync_flattened",
+      "title": "GetCertificateIssuanceConfig",
+      "description": "Snippet for GetCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_async_flattened",
+      "title": "GetCertificateIssuanceConfigAsync",
+      "description": "Snippet for GetCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_sync_flattened_resourceNames",
+      "title": "GetCertificateIssuanceConfigResourceNames",
+      "description": "Snippet for GetCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetCertificateIssuanceConfig_async_flattened_resourceNames",
+      "title": "GetCertificateIssuanceConfigResourceNamesAsync",
+      "description": "Snippet for GetCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.GetCertificateIssuanceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_sync",
+      "title": "CreateCertificateIssuanceConfigRequestObject",
+      "description": "Snippet for CreateCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_async",
+      "title": "CreateCertificateIssuanceConfigRequestObjectAsync",
+      "description": "Snippet for CreateCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_sync_flattened",
+      "title": "CreateCertificateIssuanceConfig",
+      "description": "Snippet for CreateCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_async_flattened",
+      "title": "CreateCertificateIssuanceConfigAsync",
+      "description": "Snippet for CreateCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_sync_flattened_resourceNames",
+      "title": "CreateCertificateIssuanceConfigResourceNames",
+      "description": "Snippet for CreateCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateCertificateIssuanceConfig_async_flattened_resourceNames",
+      "title": "CreateCertificateIssuanceConfigResourceNamesAsync",
+      "description": "Snippet for CreateCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.CreateCertificateIssuanceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_sync",
+      "title": "DeleteCertificateIssuanceConfigRequestObject",
+      "description": "Snippet for DeleteCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_async",
+      "title": "DeleteCertificateIssuanceConfigRequestObjectAsync",
+      "description": "Snippet for DeleteCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_sync_flattened",
+      "title": "DeleteCertificateIssuanceConfig",
+      "description": "Snippet for DeleteCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_async_flattened",
+      "title": "DeleteCertificateIssuanceConfigAsync",
+      "description": "Snippet for DeleteCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_sync_flattened_resourceNames",
+      "title": "DeleteCertificateIssuanceConfigResourceNames",
+      "description": "Snippet for DeleteCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_async_flattened_resourceNames",
+      "title": "DeleteCertificateIssuanceConfigResourceNamesAsync",
+      "description": "Snippet for DeleteCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.DeleteCertificateIssuanceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }
