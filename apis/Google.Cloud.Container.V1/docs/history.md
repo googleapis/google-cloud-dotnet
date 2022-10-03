@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.3.0, released 2022-10-03
+
+### New features
+
+- Added High Throughput Logging API for Google Kubernetes Engine ([commit 98e2c03](https://github.com/googleapis/google-cloud-dotnet/commit/98e2c03e81607475e0988e6cdb2e8a15dc67fc53))
+
+### Documentation improvements
+
+- ReservationAffinity key field docs incorrect ([commit 98e2c03](https://github.com/googleapis/google-cloud-dotnet/commit/98e2c03e81607475e0988e6cdb2e8a15dc67fc53))
+- Missing period in description for min CPU platform ([commit 98e2c03](https://github.com/googleapis/google-cloud-dotnet/commit/98e2c03e81607475e0988e6cdb2e8a15dc67fc53))
+
 ## Version 3.2.0, released 2022-09-05
 
 ### Documentation improvements
