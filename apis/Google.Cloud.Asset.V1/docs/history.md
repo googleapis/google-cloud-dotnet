@@ -1,5 +1,10 @@
 # Version history
 
+## Version 3.2.0, released 2022-10-03
+
+### New features
+
+- Add support for AssetService v1 SavedQuery APIs ([commit c747312](https://github.com/googleapis/google-cloud-dotnet/commit/c7473122b2db4f2b8499efb0a375c2fb2ed5025c))
 ## Version 3.1.0, released 2022-08-26
 
 ### New features
