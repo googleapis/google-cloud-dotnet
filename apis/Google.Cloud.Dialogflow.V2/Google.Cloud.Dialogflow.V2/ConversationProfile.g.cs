@@ -7487,15 +7487,15 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Run article suggestion model.
+        /// Run article suggestion model for chat.
         /// </summary>
         [pbr::OriginalName("ARTICLE_SUGGESTION")] ArticleSuggestion = 1,
         /// <summary>
-        /// Run FAQ model.
+        /// Run FAQ model for chat.
         /// </summary>
         [pbr::OriginalName("FAQ")] Faq = 2,
         /// <summary>
-        /// Run smart reply model.
+        /// Run smart reply model for chat.
         /// </summary>
         [pbr::OriginalName("SMART_REPLY")] SmartReply = 3,
       }
