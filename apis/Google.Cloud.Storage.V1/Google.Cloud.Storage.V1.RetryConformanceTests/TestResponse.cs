@@ -18,6 +18,9 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
+/// <summary>
+/// Stores the test response recieved from the storage test bench
+/// </summary>
 internal class TestResponse
 {
     [JsonProperty("id")]
