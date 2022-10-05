@@ -793,8 +793,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int OutputConfigFieldNumber = 5;
     private global::Google.Cloud.Asset.V1.OutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results will be output
-    /// to.
+    /// Required. Output configuration indicating where the results will be output to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1086,10 +1085,8 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// The export asset response. This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
-  /// method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
-  /// field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
   /// </summary>
   public sealed partial class ExportAssetsResponse : pb::IMessage<ExportAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1451,11 +1448,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization, folder, or project the assets belong
-    /// to. Format: "organizations/[organization-number]" (such as
-    /// "organizations/123"), "projects/[project-id]" (such as
-    /// "projects/my-project-id"), "projects/[project-number]" (such as
-    /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+    /// Required. Name of the organization, folder, or project the assets belong to. Format:
+    /// "organizations/[organization-number]" (such as "organizations/123"),
+    /// "projects/[project-id]" (such as "projects/my-project-id"),
+    /// "projects/[project-number]" (such as "projects/12345"), or
+    /// "folders/[folder-number]" (such as "folders/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2777,8 +2774,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The feed details. The field `name` must be empty and it will be
-    /// generated in the format of: projects/project_number/feeds/feed_id
+    /// Required. The feed details. The field `name` must be empty and it will be generated
+    /// in the format of:
+    /// projects/project_number/feeds/feed_id
     /// folders/folder_number/feeds/feed_id
     /// organizations/organization_number/feeds/feed_id
     /// </summary>
@@ -3609,8 +3607,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 1;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The new values of feed details. It must match an existing feed
-    /// and the field `name` must be in the format of:
+    /// Required. The new values of feed details. It must match an existing feed and the
+    /// field `name` must be in the format of:
     /// projects/project_number/feeds/feed_id or
     /// folders/folder_number/feeds/feed_id or
     /// organizations/organization_number/feeds/feed_id.
@@ -6624,9 +6622,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder, or an organization. The
-    /// search is limited to the resources within the `scope`. The caller must be
-    /// granted the
+    /// Required. A scope can be a project, a folder, or an organization. The search is
+    /// limited to the resources within the `scope`. The caller must be granted the
     /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
     /// permission on the desired scope.
     ///
@@ -6671,7 +6668,11 @@ namespace Google.Cloud.Asset.V1 {
     ///   and its value is "prod".
     /// * `labels.env:*` to find Cloud resources that have a label "env".
     /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
-    ///   encryption key whose name contains the word "key".
+    ///   encryption key whose name contains "key" as a word. This field is
+    ///   deprecated. Please use the `kmsKeys` field to retrieve KMS key
+    ///   information.
+    /// * `kmsKeys:key` to find Cloud resources encrypted with customer-managed
+    ///   encryption keys whose name contains the word "key".
     /// * `relationships:instance-group-1` to find Cloud resources that have
     ///   relationships with "instance-group-1" in the related resource name.
     /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
@@ -6714,8 +6715,8 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of asset types that this request searches for. If empty,
-    /// it will search all the [searchable asset
+    /// Optional. A list of asset types that this request searches for. If empty, it will
+    /// search all the [searchable asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
     ///
     /// Regular expressions are also supported. For example:
@@ -6739,11 +6740,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// Optional. The page size for search result pagination. Page size is capped at 500 even
+    /// if a larger value is given. If set to zero, server will pick an appropriate
+    /// default. Returned results may be fewer than requested. When this happens,
+    /// there could be more results as long as `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6758,10 +6758,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, then retrieve the next batch of results from the
-    /// preceding call to this method. `page_token` must be the value of
-    /// `next_page_token` from the previous response. The values of all other
-    /// method parameters, must be identical to those in the previous call.
+    /// Optional. If present, then retrieve the next batch of results from the preceding call
+    /// to this method. `page_token` must be the value of `next_page_token` from
+    /// the previous response. The values of all other method parameters, must be
+    /// identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6776,9 +6776,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrderByFieldNumber = 6;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying the sorting order of
-    /// the results. The default order is ascending. Add " DESC" after the field
-    /// name to indicate descending order. Redundant space characters are ignored.
+    /// Optional. A comma-separated list of fields specifying the sorting order of the
+    /// results. The default order is ascending. Add " DESC" after the field name
+    /// to indicate descending order. Redundant space characters are ignored.
     /// Example: "location DESC, name".
     /// Only singular primitive fields in the response are sortable:
     ///
@@ -6788,16 +6788,15 @@ namespace Google.Cloud.Asset.V1 {
     ///   * displayName
     ///   * description
     ///   * location
-    ///   * kmsKey
     ///   * createTime
     ///   * updateTime
     ///   * state
     ///   * parentFullResourceName
     ///   * parentAssetType
     ///
-    /// All the other fields such as repeated fields (e.g., `networkTags`), map
-    /// fields (e.g., `labels`) and struct fields (e.g., `additionalAttributes`)
-    /// are not supported.
+    /// All the other fields such as repeated fields (e.g., `networkTags`,
+    /// `kmsKeys`), map fields (e.g., `labels`) and struct fields (e.g.,
+    /// `additionalAttributes`) are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6812,10 +6811,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int ReadMaskFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying which fields to be
-    /// returned in ResourceSearchResult. Only '*' or combination of top level
-    /// fields can be specified. Field names of both snake_case and camelCase are
-    /// supported. Examples: `"*"`, `"name,location"`, `"name,versionedResources"`.
+    /// Optional. A comma-separated list of fields specifying which fields to be returned in
+    /// ResourceSearchResult. Only '*' or combination of top level fields can be
+    /// specified. Field names of both snake_case and camelCase are supported.
+    /// Examples: `"*"`, `"name,location"`, `"name,versionedResources"`.
     ///
     /// The read_mask paths must be valid field paths listed but not limited to
     /// (both snake_case and camelCase are supported):
@@ -6831,7 +6830,9 @@ namespace Google.Cloud.Asset.V1 {
     ///   * tagValueIds
     ///   * labels
     ///   * networkTags
-    ///   * kmsKey
+    ///   * kmsKey (This field is deprecated. Please use the `kmsKeys` field to
+    ///     retrieve KMS key information.)
+    ///   * kmsKeys
     ///   * createTime
     ///   * updateTime
     ///   * state
@@ -7412,9 +7413,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder, or an organization. The
-    /// search is limited to the IAM policies within the `scope`. The caller must
-    /// be granted the
+    /// Required. A scope can be a project, a folder, or an organization. The search is
+    /// limited to the IAM policies within the `scope`. The caller must be granted
+    /// the
     /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
     /// permission on the desired scope.
     ///
@@ -7494,11 +7495,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// Optional. The page size for search result pagination. Page size is capped at 500 even
+    /// if a larger value is given. If set to zero, server will pick an appropriate
+    /// default. Returned results may be fewer than requested. When this happens,
+    /// there could be more results as long as `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7513,10 +7513,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, retrieve the next batch of results from the preceding
-    /// call to this method. `page_token` must be the value of `next_page_token`
-    /// from the previous response. The values of all other method parameters must
-    /// be identical to those in the previous call.
+    /// Optional. If present, retrieve the next batch of results from the preceding call to
+    /// this method. `page_token` must be the value of `next_page_token` from the
+    /// previous response. The values of all other method parameters must be
+    /// identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7533,9 +7533,8 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of asset types that the IAM policies are attached to. If
-    /// empty, it will search the IAM policies that are attached to all the
-    /// [searchable asset
+    /// Optional. A list of asset types that the IAM policies are attached to. If empty, it
+    /// will search the IAM policies that are attached to all the [searchable asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
     ///
     /// Regular expressions are also supported. For example:
@@ -7561,9 +7560,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrderByFieldNumber = 7;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying the sorting order of
-    /// the results. The default order is ascending. Add " DESC" after the field
-    /// name to indicate descending order. Redundant space characters are ignored.
+    /// Optional. A comma-separated list of fields specifying the sorting order of the
+    /// results. The default order is ascending. Add " DESC" after the field name
+    /// to indicate descending order. Redundant space characters are ignored.
     /// Example: "assetType DESC, resource".
     /// Only singular primitive fields in the response are sortable:
     ///   * resource
@@ -8107,8 +8106,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. The relative name of the root asset. Only resources and IAM
-    /// policies within the scope will be analyzed.
+    /// Required. The relative name of the root asset. Only resources and IAM policies within
+    /// the scope will be analyzed.
     ///
     /// This can only be an organization number (such as "organizations/123"), a
     /// folder number (such as "folders/123"), a project ID (such as
@@ -9189,10 +9188,9 @@ namespace Google.Cloud.Asset.V1 {
         /// Optional. If true, the identities section of the result will expand any
         /// Google groups appearing in an IAM policy binding.
         ///
-        /// If
-        /// [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
-        /// is specified, the identity in the result will be determined by the
-        /// selector, and this flag is not allowed to set.
+        /// If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
+        /// identity in the result will be determined by the selector, and this flag
+        /// is not allowed to set.
         ///
         /// If true, the default max expansion per group is 1000 for
         /// AssetService.AnalyzeIamPolicy][].
@@ -9215,10 +9213,9 @@ namespace Google.Cloud.Asset.V1 {
         /// Optional. If true, the access section of result will expand any roles
         /// appearing in IAM policy bindings to include their permissions.
         ///
-        /// If
-        /// [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
-        /// is specified, the access section of the result will be determined by the
-        /// selector, and this flag is not allowed to set.
+        /// If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
+        /// section of the result will be determined by the selector, and this flag
+        /// is not allowed to set.
         ///
         /// Default is false.
         /// </summary>
@@ -9235,23 +9232,21 @@ namespace Google.Cloud.Asset.V1 {
         public const int ExpandResourcesFieldNumber = 3;
         private bool expandResources_;
         /// <summary>
-        /// Optional. If true and
-        /// [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
-        /// is not specified, the resource section of the result will expand any
-        /// resource attached to an IAM policy to include resources lower in the
-        /// resource hierarchy.
+        /// Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
+        /// specified, the resource section of the result will expand any resource
+        /// attached to an IAM policy to include resources lower in the resource
+        /// hierarchy.
         ///
         /// For example, if the request analyzes for which resources user A has
         /// permission P, and the results include an IAM policy with P on a GCP
         /// folder, the results will also include resources in that folder with
         /// permission P.
         ///
-        /// If true and
-        /// [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
-        /// is specified, the resource section of the result will expand the
-        /// specified resource to include resources lower in the resource hierarchy.
-        /// Only project or lower resources are supported. Folder and organization
-        /// resource cannot be used together with this option.
+        /// If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
+        /// the resource section of the result will expand the specified resource to
+        /// include resources lower in the resource hierarchy. Only project or
+        /// lower resources are supported. Folder and organization resource cannot be
+        /// used together with this option.
         ///
         /// For example, if the request analyzes for which users have permission P on
         /// a GCP project with this option enabled, the results will include all
@@ -9276,8 +9271,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int OutputResourceEdgesFieldNumber = 4;
         private bool outputResourceEdges_;
         /// <summary>
-        /// Optional. If true, the result will output the relevant parent/child
-        /// relationships between resources. Default is false.
+        /// Optional. If true, the result will output the relevant parent/child relationships
+        /// between resources.
+        /// Default is false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9292,9 +9288,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int OutputGroupEdgesFieldNumber = 5;
         private bool outputGroupEdges_;
         /// <summary>
-        /// Optional. If true, the result will output the relevant membership
-        /// relationships between groups and other groups, and between groups and
-        /// principals. Default is false.
+        /// Optional. If true, the result will output the relevant membership relationships
+        /// between groups and other groups, and between groups and principals.
+        /// Default is false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9309,12 +9305,11 @@ namespace Google.Cloud.Asset.V1 {
         public const int AnalyzeServiceAccountImpersonationFieldNumber = 6;
         private bool analyzeServiceAccountImpersonation_;
         /// <summary>
-        /// Optional. If true, the response will include access analysis from
-        /// identities to resources via service account impersonation. This is a very
-        /// expensive operation, because many derived queries will be executed. We
-        /// highly recommend you use
-        /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
-        /// rpc instead.
+        /// Optional. If true, the response will include access analysis from identities to
+        /// resources via service account impersonation. This is a very expensive
+        /// operation, because many derived queries will be executed. We highly
+        /// recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
+        /// instead.
         ///
         /// For example, if the request analyzes for which resources user A has
         /// permission P, and there's an IAM policy states user A has
@@ -9851,8 +9846,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for
-  /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// A request message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyRequest : pb::IMessage<AnalyzeIamPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9949,8 +9943,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int ExecutionTimeoutFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration executionTimeout_;
     /// <summary>
-    /// Optional. Amount of time executable has to complete.  See JSON
-    /// representation of
+    /// Optional. Amount of time executable has to complete.  See JSON representation of
     /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
     ///
     /// If this field is set with a value less than the RPC deadline, and the
@@ -10170,8 +10163,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for
-  /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// A response message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyResponse : pb::IMessage<AnalyzeIamPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10254,11 +10246,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int FullyExploredFieldNumber = 3;
     private bool fullyExplored_;
     /// <summary>
-    /// Represents whether all entries in the
-    /// [main_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.main_analysis]
-    /// and
-    /// [service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis]
-    /// have been fully explored to answer the query in the request.
+    /// Represents whether all entries in the [main_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.main_analysis] and
+    /// [service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis] have been fully explored to
+    /// answer the query in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10523,9 +10513,8 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult> analysisResults_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult>();
         /// <summary>
-        /// A list of
-        /// [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult]
-        /// that matches the analysis query, or empty if no result is found.
+        /// A list of [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult] that matches the analysis query, or
+        /// empty if no result is found.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10537,9 +10526,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int FullyExploredFieldNumber = 3;
         private bool fullyExplored_;
         /// <summary>
-        /// Represents whether all entries in the
-        /// [analysis_results][google.cloud.asset.v1.AnalyzeIamPolicyResponse.IamPolicyAnalysis.analysis_results]
-        /// have been fully explored to answer the query.
+        /// Represents whether all entries in the [analysis_results][google.cloud.asset.v1.AnalyzeIamPolicyResponse.IamPolicyAnalysis.analysis_results] have been
+        /// fully explored to answer the query.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11111,8 +11099,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int UriFieldNumber = 1;
         private string uri_ = "";
         /// <summary>
-        /// Required. The uri of the Cloud Storage object. It's the same uri that is
-        /// used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+        /// Required. The uri of the Cloud Storage object. It's the same uri that is used by
+        /// gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
         /// Editing Object
         /// Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
         /// for more information.
@@ -11317,10 +11305,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Required. The BigQuery dataset in format
-        /// "projects/projectId/datasets/datasetId", to which the analysis results
-        /// should be exported. If this dataset does not exist, the export call will
-        /// return an INVALID_ARGUMENT error.
+        /// Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+        /// to which the analysis results should be exported. If this dataset does
+        /// not exist, the export call will return an INVALID_ARGUMENT error.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11335,9 +11322,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int TablePrefixFieldNumber = 2;
         private string tablePrefix_ = "";
         /// <summary>
-        /// Required. The prefix of the BigQuery tables to which the analysis results
-        /// will be written. Tables will be created based on this table_prefix if not
-        /// exist:
+        /// Required. The prefix of the BigQuery tables to which the analysis results will be
+        /// written. Tables will be created based on this table_prefix if not exist:
         /// * &lt;table_prefix>_analysis table will contain export operation's metadata.
         /// * &lt;table_prefix>_analysis_result will contain all the
         ///   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -11372,8 +11358,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int WriteDispositionFieldNumber = 4;
         private string writeDisposition_ = "";
         /// <summary>
-        /// Optional. Specifies the action that occurs if the destination table or
-        /// partition already exists. The following values are supported:
+        /// Optional. Specifies the action that occurs if the destination table or partition
+        /// already exists. The following values are supported:
         ///
         /// * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
         /// overwrites the entire table or all the partitions data.
@@ -11634,8 +11620,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for
-  /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// A request message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyLongrunningRequest : pb::IMessage<AnalyzeIamPolicyLongrunningRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11732,8 +11717,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int OutputConfigFieldNumber = 2;
     private global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results will be output
-    /// to.
+    /// Required. Output configuration indicating where the results will be output to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11944,8 +11928,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for
-  /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// A response message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyLongrunningResponse : pb::IMessage<AnalyzeIamPolicyLongrunningResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12237,8 +12220,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int LastUpdaterFieldNumber = 6;
     private string lastUpdater_ = "";
     /// <summary>
-    /// Output only. The account's email address who has updated this saved query
-    /// most recently.
+    /// Output only. The account's email address who has updated this saved query most recently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12657,11 +12639,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int IamPolicyAnalysisQueryFieldNumber = 1;
         /// <summary>
         /// An IAM Policy Analysis query, which could be used in
-        /// the
-        /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy]
-        /// rpc or the
-        /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
-        /// rpc.
+        /// the [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy] rpc or
+        /// the [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12902,11 +12881,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project/folder/organization where this
-    /// saved_query should be created in. It can only be an organization number
-    /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-    /// project ID (such as "projects/my-project-id")", or a project number (such
-    /// as "projects/12345").
+    /// Required. The name of the project/folder/organization where this saved_query
+    /// should be created in. It can only be an organization number (such as
+    /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+    /// (such as "projects/my-project-id")", or a project number (such as
+    /// "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12921,8 +12900,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int SavedQueryFieldNumber = 2;
     private global::Google.Cloud.Asset.V1.SavedQuery savedQuery_;
     /// <summary>
-    /// Required. The saved_query details. The `name` field must be empty as it
-    /// will be generated based on the parent and saved_query_id.
+    /// Required. The saved_query details. The `name` field must be empty as it will be
+    /// generated based on the parent and saved_query_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12937,9 +12916,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int SavedQueryIdFieldNumber = 3;
     private string savedQueryId_ = "";
     /// <summary>
-    /// Required. The ID to use for the saved query, which must be unique in the
-    /// specified parent. It will become the final component of the saved query's
-    /// resource name.
+    /// Required. The ID to use for the saved query, which must be unique in the specified
+    /// parent. It will become the final component of the saved query's resource
+    /// name.
     ///
     /// This value should be 4-63 characters, and valid characters
     /// are /[a-z][0-9]-/.
@@ -13399,8 +13378,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent project/folder/organization whose savedQueries are to
-    /// be listed. It can only be using project/folder/organization number (such as
+    /// Required. The parent project/folder/organization whose savedQueries are to be
+    /// listed. It can only be using project/folder/organization number (such as
     /// "folders/12345")", or a project ID (such as "projects/my-project-id").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13437,9 +13416,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of saved queries to return per page. The
-    /// service may return fewer than this value. If unspecified, at most 50 will
-    /// be returned.
+    /// Optional. The maximum number of saved queries to return per page. The service may
+    /// return fewer than this value. If unspecified, at most 50 will be returned.
     ///  The maximum value is 1000; values above 1000 will be coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14211,8 +14189,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the saved query to delete. It must be in the format
-    /// of:
+    /// Required. The name of the saved query to delete. It must be in the format of:
     ///
     /// * projects/project_number/savedQueries/saved_query_id
     /// * folders/folder_number/savedQueries/saved_query_id
@@ -15863,8 +15840,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Required. The BigQuery dataset where the query results will be saved. It
-        /// has the format of "projects/{projectId}/datasets/{datasetId}".
+        /// Required. The BigQuery dataset where the query results will be saved. It has the
+        /// format of "projects/{projectId}/datasets/{datasetId}".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15879,9 +15856,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int TableFieldNumber = 2;
         private string table_ = "";
         /// <summary>
-        /// Required. The BigQuery table where the query results will be saved. If
-        /// this table does not exist, a new table with the given name will be
-        /// created.
+        /// Required. The BigQuery table where the query results will be saved. If this table
+        /// does not exist, a new table with the given name will be created.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15903,8 +15879,10 @@ namespace Google.Cloud.Asset.V1 {
         /// overwrites the entire table or all the partitions data.
         /// * WRITE_APPEND: If the table or partition already exists, BigQuery
         /// appends the data to the table or the latest partition.
-        /// * WRITE_EMPTY: If the table already exists and contains data, an error is
-        /// returned.
+        /// * WRITE_EMPTY: If the table already exists and contains data, a
+        /// 'duplicate' error is returned in the job result.
+        ///
+        /// The default value is WRITE_EMPTY.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16209,8 +16187,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "job_reference" field.</summary>
     public const int JobReferenceFieldNumber = 3;
     /// <summary>
-    /// Optional. Reference to the query job, which is from the
-    /// `QueryAssetsResponse` of previous `QueryAssets` call.
+    /// Optional. Reference to the query job, which is from the `QueryAssetsResponse` of
+    /// previous `QueryAssets` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16226,8 +16204,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of rows to return in the results. Responses
-    /// are limited to 10 MB and 1000 rows.
+    /// Optional. The maximum number of rows to return in the results. Responses are limited
+    /// to 10 MB and 1000 rows.
     ///
     /// By default, the maximum row count is 1000. When the byte or row count limit
     /// is reached, the rest of the query results will be paginated.
@@ -16264,11 +16242,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int TimeoutFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// Optional. Specifies the maximum amount of time that the client is willing
-    /// to wait for the query to complete. By default, this limit is 5 min for the
-    /// first query, and 1 minute for the following queries. If the query is
-    /// complete, the `done` field in the `QueryAssetsResponse` is true, otherwise
-    /// false.
+    /// Optional. Specifies the maximum amount of time that the client is willing to wait
+    /// for the query to complete. By default, this limit is 5 min for the first
+    /// query, and 1 minute for the following queries. If the query is complete,
+    /// the `done` field in the `QueryAssetsResponse` is true, otherwise false.
     ///
     /// Like BigQuery [jobs.query
     /// API](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query#queryrequest)
@@ -16290,9 +16267,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "read_time_window" field.</summary>
     public const int ReadTimeWindowFieldNumber = 7;
     /// <summary>
-    /// Optional. [start_time] is required. [start_time] must be less than
-    /// [end_time] Defaults [end_time] to now if [start_time] is set and
-    /// [end_time] isn't. Maximum permitted time range is 7 days.
+    /// Optional. [start_time] is required. [start_time] must be less than [end_time]
+    /// Defaults [end_time] to now if [start_time] is set and [end_time] isn't.
+    /// Maximum permitted time range is 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16307,8 +16284,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "read_time" field.</summary>
     public const int ReadTimeFieldNumber = 8;
     /// <summary>
-    /// Optional. Queries cloud assets as they appeared at the specified point in
-    /// time.
+    /// Optional. Queries cloud assets as they appeared at the specified point in time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18024,8 +18000,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for
-  /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+  /// A request message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
   public sealed partial class BatchGetEffectiveIamPoliciesRequest : pb::IMessage<BatchGetEffectiveIamPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -18263,8 +18238,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for
-  /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+  /// A response message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
   public sealed partial class BatchGetEffectiveIamPoliciesResponse : pb::IMessage<BatchGetEffectiveIamPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -18318,10 +18292,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The effective policies for a batch of resources. Note that the results
     /// order is the same as the order of
-    /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names].
-    /// When a resource does not have any effective IAM policies, its corresponding
-    /// policy_result will contain empty
-    /// [EffectiveIamPolicy.policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies].
+    /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names]. When a resource does not
+    /// have any effective IAM policies, its corresponding policy_result will
+    /// contain empty [EffectiveIamPolicy.policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18509,11 +18482,9 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>
         /// The [full_resource_name]
         /// (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-        /// for which the
-        /// [policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies]
-        /// are computed. This is one of the
-        /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names]
-        /// the caller provides in the request.
+        /// for which the [policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies] are computed. This is one of the
+        /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names] the caller provides in the
+        /// request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18530,26 +18501,19 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo> policies_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo>();
         /// <summary>
-        /// The effective policies for the
-        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
+        /// The effective policies for the [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
         ///
-        /// These policies include the policy set on the
-        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
-        /// and those set on its parents and ancestors up to the
-        /// [BatchGetEffectiveIamPoliciesRequest.scope][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.scope].
-        /// Note that these policies are not filtered according to the resource type
-        /// of the
+        /// These policies include the policy set on the [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name] and
+        /// those set on its parents and ancestors up to the
+        /// [BatchGetEffectiveIamPoliciesRequest.scope][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.scope]. Note that these policies
+        /// are not filtered according to the resource type of the
         /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
         ///
         /// These policies are hierarchically ordered by
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource]
-        /// starting from
-        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource] starting from [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
         /// itself to its parents and ancestors, such that policies[i]'s
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource]
-        /// is the child of policies[i+1]'s
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource],
-        /// if policies[i+1] exists.
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource] is the child of policies[i+1]'s
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource], if policies[i+1] exists.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18759,9 +18723,7 @@ namespace Google.Cloud.Asset.V1 {
             public const int AttachedResourceFieldNumber = 1;
             private string attachedResource_ = "";
             /// <summary>
-            /// The full resource name the
-            /// [policy][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.policy]
-            /// is directly attached to.
+            /// The full resource name the [policy][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.policy] is directly attached to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18776,8 +18738,7 @@ namespace Google.Cloud.Asset.V1 {
             public const int PolicyFieldNumber = 2;
             private global::Google.Cloud.Iam.V1.Policy policy_;
             /// <summary>
-            /// The IAM policy that's directly attached to the
-            /// [attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource].
+            /// The IAM policy that's directly attached to the [attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

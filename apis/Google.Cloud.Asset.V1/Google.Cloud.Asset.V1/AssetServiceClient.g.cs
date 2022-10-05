@@ -600,14 +600,13 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-        /// format; for BigQuery table destinations, the output table stores the fields
-        /// in asset Protobuf as columns. This API implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-        /// allows you to keep track of the export. We recommend intervals of at least
-        /// 2 seconds with exponential retry to poll the export operation result. For
-        /// regular-size resource parent, the export operation usually finishes within
-        /// 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+        /// destinations, the output table stores the fields in asset Protobuf as
+        /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+        /// which allows you to keep track of the export. We recommend intervals of at
+        /// least 2 seconds with exponential retry to poll the export operation result.
+        /// For regular-size resource parent, the export operation usually finishes
+        /// within 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -619,14 +618,13 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-        /// format; for BigQuery table destinations, the output table stores the fields
-        /// in asset Protobuf as columns. This API implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-        /// allows you to keep track of the export. We recommend intervals of at least
-        /// 2 seconds with exponential retry to poll the export operation result. For
-        /// regular-size resource parent, the export operation usually finishes within
-        /// 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+        /// destinations, the output table stores the fields in asset Protobuf as
+        /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+        /// which allows you to keep track of the export. We recommend intervals of at
+        /// least 2 seconds with exponential retry to poll the export operation result.
+        /// For regular-size resource parent, the export operation usually finishes
+        /// within 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -638,14 +636,13 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-        /// format; for BigQuery table destinations, the output table stores the fields
-        /// in asset Protobuf as columns. This API implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-        /// allows you to keep track of the export. We recommend intervals of at least
-        /// 2 seconds with exponential retry to poll the export operation result. For
-        /// regular-size resource parent, the export operation usually finishes within
-        /// 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+        /// destinations, the output table stores the fields in asset Protobuf as
+        /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+        /// which allows you to keep track of the export. We recommend intervals of at
+        /// least 2 seconds with exponential retry to poll the export operation result.
+        /// For regular-size resource parent, the export operation usually finishes
+        /// within 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -704,11 +701,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization, folder, or project the assets belong
-        /// to. Format: "organizations/[organization-number]" (such as
-        /// "organizations/123"), "projects/[project-id]" (such as
-        /// "projects/my-project-id"), "projects/[project-number]" (such as
-        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+        /// Required. Name of the organization, folder, or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"),
+        /// "projects/[project-number]" (such as "projects/12345"), or
+        /// "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -733,11 +730,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization, folder, or project the assets belong
-        /// to. Format: "organizations/[organization-number]" (such as
-        /// "organizations/123"), "projects/[project-id]" (such as
-        /// "projects/my-project-id"), "projects/[project-number]" (such as
-        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+        /// Required. Name of the organization, folder, or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"),
+        /// "projects/[project-number]" (such as "projects/12345"), or
+        /// "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -762,11 +759,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization, folder, or project the assets belong
-        /// to. Format: "organizations/[organization-number]" (such as
-        /// "organizations/123"), "projects/[project-id]" (such as
-        /// "projects/my-project-id"), "projects/[project-number]" (such as
-        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+        /// Required. Name of the organization, folder, or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"),
+        /// "projects/[project-number]" (such as "projects/12345"), or
+        /// "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -791,11 +788,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization, folder, or project the assets belong
-        /// to. Format: "organizations/[organization-number]" (such as
-        /// "organizations/123"), "projects/[project-id]" (such as
-        /// "projects/my-project-id"), "projects/[project-number]" (such as
-        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+        /// Required. Name of the organization, folder, or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"),
+        /// "projects/[project-number]" (such as "projects/12345"), or
+        /// "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1170,8 +1167,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed
-        /// and the field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1188,8 +1185,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed
-        /// and the field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1206,8 +1203,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed
-        /// and the field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1371,9 +1368,8 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The
-        /// search is limited to the resources within the `scope`. The caller must be
-        /// granted the
+        /// Required. A scope can be a project, a folder, or an organization. The search is
+        /// limited to the resources within the `scope`. The caller must be granted the
         /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1406,7 +1402,11 @@ namespace Google.Cloud.Asset.V1
         /// and its value is "prod".
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
-        /// encryption key whose name contains the word "key".
+        /// encryption key whose name contains "key" as a word. This field is
+        /// deprecated. Please use the `kmsKeys` field to retrieve KMS key
+        /// information.
+        /// * `kmsKeys:key` to find Cloud resources encrypted with customer-managed
+        /// encryption keys whose name contains the word "key".
         /// * `relationships:instance-group-1` to find Cloud resources that have
         /// relationships with "instance-group-1" in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
@@ -1435,8 +1435,8 @@ namespace Google.Cloud.Asset.V1
         /// location.
         /// </param>
         /// <param name="assetTypes">
-        /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
+        /// Optional. A list of asset types that this request searches for. If empty, it will
+        /// search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
         /// 
         /// Regular expressions are also supported. For example:
@@ -1480,9 +1480,8 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The
-        /// search is limited to the resources within the `scope`. The caller must be
-        /// granted the
+        /// Required. A scope can be a project, a folder, or an organization. The search is
+        /// limited to the resources within the `scope`. The caller must be granted the
         /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1515,7 +1514,11 @@ namespace Google.Cloud.Asset.V1
         /// and its value is "prod".
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
-        /// encryption key whose name contains the word "key".
+        /// encryption key whose name contains "key" as a word. This field is
+        /// deprecated. Please use the `kmsKeys` field to retrieve KMS key
+        /// information.
+        /// * `kmsKeys:key` to find Cloud resources encrypted with customer-managed
+        /// encryption keys whose name contains the word "key".
         /// * `relationships:instance-group-1` to find Cloud resources that have
         /// relationships with "instance-group-1" in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
@@ -1544,8 +1547,8 @@ namespace Google.Cloud.Asset.V1
         /// location.
         /// </param>
         /// <param name="assetTypes">
-        /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
+        /// Optional. A list of asset types that this request searches for. If empty, it will
+        /// search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
         /// 
         /// Regular expressions are also supported. For example:
@@ -1613,9 +1616,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The
-        /// search is limited to the IAM policies within the `scope`. The caller must
-        /// be granted the
+        /// Required. A scope can be a project, a folder, or an organization. The search is
+        /// limited to the IAM policies within the `scope`. The caller must be granted
+        /// the
         /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1696,9 +1699,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The
-        /// search is limited to the IAM policies within the `scope`. The caller must
-        /// be granted the
+        /// Required. A scope can be a project, a folder, or an organization. The search is
+        /// limited to the IAM policies within the `scope`. The caller must be granted
+        /// the
         /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1807,12 +1810,11 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-        /// This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-        /// you to track the operation status. We recommend intervals of at least 2
-        /// seconds with exponential backoff retry to poll the operation result. The
-        /// metadata contains the metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1825,12 +1827,11 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-        /// This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-        /// you to track the operation status. We recommend intervals of at least 2
-        /// seconds with exponential backoff retry to poll the operation result. The
-        /// metadata contains the metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1843,12 +1844,11 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-        /// This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-        /// you to track the operation status. We recommend intervals of at least 2
-        /// seconds with exponential backoff retry to poll the operation result. The
-        /// metadata contains the metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2019,20 +2019,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2054,20 +2054,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2089,20 +2089,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2119,20 +2119,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2154,20 +2154,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2189,20 +2189,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2219,20 +2219,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2254,20 +2254,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2289,20 +2289,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2319,20 +2319,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2354,20 +2354,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2389,20 +2389,20 @@ namespace Google.Cloud.Asset.V1
         /// Creates a saved query in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project/folder/organization where this
-        /// saved_query should be created in. It can only be an organization number
-        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// Required. The name of the project/folder/organization where this saved_query
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
-        /// Required. The saved_query details. The `name` field must be empty as it
-        /// will be generated based on the parent and saved_query_id.
+        /// Required. The saved_query details. The `name` field must be empty as it will be
+        /// generated based on the parent and saved_query_id.
         /// </param>
         /// <param name="savedQueryId">
-        /// Required. The ID to use for the saved query, which must be unique in the
-        /// specified parent. It will become the final component of the saved query's
-        /// resource name.
+        /// Required. The ID to use for the saved query, which must be unique in the specified
+        /// parent. It will become the final component of the saved query's resource
+        /// name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -2566,8 +2566,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2592,8 +2592,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2618,8 +2618,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2644,8 +2644,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2670,8 +2670,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2696,8 +2696,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2722,8 +2722,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2748,8 +2748,8 @@ namespace Google.Cloud.Asset.V1
         /// Lists all saved queries in a parent project/folder/organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent project/folder/organization whose savedQueries are to
-        /// be listed. It can only be using project/folder/organization number (such as
+        /// Required. The parent project/folder/organization whose savedQueries are to be
+        /// listed. It can only be using project/folder/organization number (such as
         /// "folders/12345")", or a project ID (such as "projects/my-project-id").
         /// </param>
         /// <param name="pageToken">
@@ -2899,8 +2899,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -2918,8 +2917,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -2937,8 +2935,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -2953,8 +2950,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -2972,8 +2968,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -2991,8 +2986,7 @@ namespace Google.Cloud.Asset.V1
         /// Deletes a saved query.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the saved query to delete. It must be in the format
-        /// of:
+        /// Required. The name of the saved query to delete. It must be in the format of:
         /// 
         /// * projects/project_number/savedQueries/saved_query_id
         /// * folders/folder_number/savedQueries/saved_query_id
@@ -3247,14 +3241,13 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-        /// format; for BigQuery table destinations, the output table stores the fields
-        /// in asset Protobuf as columns. This API implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-        /// allows you to keep track of the export. We recommend intervals of at least
-        /// 2 seconds with exponential retry to poll the export operation result. For
-        /// regular-size resource parent, the export operation usually finishes within
-        /// 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+        /// destinations, the output table stores the fields in asset Protobuf as
+        /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+        /// which allows you to keep track of the export. We recommend intervals of at
+        /// least 2 seconds with exponential retry to poll the export operation result.
+        /// For regular-size resource parent, the export operation usually finishes
+        /// within 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3269,14 +3262,13 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-        /// format; for BigQuery table destinations, the output table stores the fields
-        /// in asset Protobuf as columns. This API implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-        /// allows you to keep track of the export. We recommend intervals of at least
-        /// 2 seconds with exponential retry to poll the export operation result. For
-        /// regular-size resource parent, the export operation usually finishes within
-        /// 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+        /// destinations, the output table stores the fields in asset Protobuf as
+        /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+        /// which allows you to keep track of the export. We recommend intervals of at
+        /// least 2 seconds with exponential retry to poll the export operation result.
+        /// For regular-size resource parent, the export operation usually finishes
+        /// within 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3565,12 +3557,11 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-        /// This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-        /// you to track the operation status. We recommend intervals of at least 2
-        /// seconds with exponential backoff retry to poll the operation result. The
-        /// metadata contains the metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3586,12 +3577,11 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-        /// This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-        /// you to track the operation status. We recommend intervals of at least 2
-        /// seconds with exponential backoff retry to poll the operation result. The
-        /// metadata contains the metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

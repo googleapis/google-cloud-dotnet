@@ -306,14 +306,13 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-      /// format; for BigQuery table destinations, the output table stores the fields
-      /// in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -464,12 +463,11 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -626,14 +624,13 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-      /// format; for BigQuery table destinations, the output table stores the fields
-      /// in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -649,14 +646,13 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-      /// format; for BigQuery table destinations, the output table stores the fields
-      /// in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -670,14 +666,13 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-      /// format; for BigQuery table destinations, the output table stores the fields
-      /// in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -693,14 +688,13 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
-      /// format; for BigQuery table destinations, the output table stores the fields
-      /// in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1255,12 +1249,11 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1277,12 +1270,11 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1297,12 +1289,11 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1319,12 +1310,11 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
