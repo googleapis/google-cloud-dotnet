@@ -1217,8 +1217,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int MetricFilterFieldNumber = 6;
     private global::Google.Analytics.Data.V1Beta.FilterExpression metricFilter_;
     /// <summary>
-    /// The filter clause of metrics. Applied at post aggregation phase, similar to
-    /// SQL having-clause. Dimensions cannot be used in this filter.
+    /// The filter clause of metrics. Applied after aggregating the report's rows,
+    /// similar to SQL having-clause. Dimensions cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4628,8 +4628,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int DimensionFilterFieldNumber = 4;
     private global::Google.Analytics.Data.V1Beta.FilterExpression dimensionFilter_;
     /// <summary>
-    /// The filter clause of dimensions. Dimensions must be requested to be used in
-    /// this filter. Metrics cannot be used in this filter.
+    /// The filter clause of dimensions. Metrics cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4645,8 +4644,7 @@ namespace Google.Analytics.Data.V1Beta {
     private global::Google.Analytics.Data.V1Beta.FilterExpression metricFilter_;
     /// <summary>
     /// The filter clause of metrics. Applied at post aggregation phase, similar to
-    /// SQL having-clause. Metrics must be requested to be used in this filter.
-    /// Dimensions cannot be used in this filter.
+    /// SQL having-clause. Dimensions cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

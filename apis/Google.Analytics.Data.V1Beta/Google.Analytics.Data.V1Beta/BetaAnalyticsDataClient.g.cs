@@ -111,15 +111,11 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -140,15 +136,11 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CheckCompatibilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CheckCompatibilitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BetaAnalyticsDataSettings"/> object.</returns>
@@ -301,6 +293,10 @@ namespace Google.Analytics.Data.V1Beta
         /// measurements of user activity on your property, such as active users or
         /// event count. Dimensions break down metrics across some common criteria,
         /// such as country or event name.
+        /// 
+        /// For a guide to constructing requests &amp; understanding responses, see
+        /// [Creating a
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -316,6 +312,10 @@ namespace Google.Analytics.Data.V1Beta
         /// measurements of user activity on your property, such as active users or
         /// event count. Dimensions break down metrics across some common criteria,
         /// such as country or event name.
+        /// 
+        /// For a guide to constructing requests &amp; understanding responses, see
+        /// [Creating a
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -331,6 +331,10 @@ namespace Google.Analytics.Data.V1Beta
         /// measurements of user activity on your property, such as active users or
         /// event count. Dimensions break down metrics across some common criteria,
         /// such as country or event name.
+        /// 
+        /// For a guide to constructing requests &amp; understanding responses, see
+        /// [Creating a
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -684,9 +688,15 @@ namespace Google.Analytics.Data.V1Beta
             GetMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// The Google Analytics Realtime API returns a customized report of realtime
-        /// event data for your property. These reports show events and usage from the
-        /// last 30 minutes.
+        /// Returns a customized report of realtime event data for your property.
+        /// Events appear in realtime reports seconds after they have been sent to
+        /// the Google Analytics. Realtime reports show events and usage data for the
+        /// periods of time ranging from the present moment to 30 minutes ago (up to
+        /// 60 minutes for Google Analytics 360 properties).
+        /// 
+        /// For a guide to constructing realtime requests &amp; understanding responses,
+        /// see [Creating a Realtime
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -695,9 +705,15 @@ namespace Google.Analytics.Data.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// The Google Analytics Realtime API returns a customized report of realtime
-        /// event data for your property. These reports show events and usage from the
-        /// last 30 minutes.
+        /// Returns a customized report of realtime event data for your property.
+        /// Events appear in realtime reports seconds after they have been sent to
+        /// the Google Analytics. Realtime reports show events and usage data for the
+        /// periods of time ranging from the present moment to 30 minutes ago (up to
+        /// 60 minutes for Google Analytics 360 properties).
+        /// 
+        /// For a guide to constructing realtime requests &amp; understanding responses,
+        /// see [Creating a Realtime
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -706,9 +722,15 @@ namespace Google.Analytics.Data.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// The Google Analytics Realtime API returns a customized report of realtime
-        /// event data for your property. These reports show events and usage from the
-        /// last 30 minutes.
+        /// Returns a customized report of realtime event data for your property.
+        /// Events appear in realtime reports seconds after they have been sent to
+        /// the Google Analytics. Realtime reports show events and usage data for the
+        /// periods of time ranging from the present moment to 30 minutes ago (up to
+        /// 60 minutes for Google Analytics 360 properties).
+        /// 
+        /// For a guide to constructing realtime requests &amp; understanding responses,
+        /// see [Creating a Realtime
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -869,6 +891,10 @@ namespace Google.Analytics.Data.V1Beta
         /// measurements of user activity on your property, such as active users or
         /// event count. Dimensions break down metrics across some common criteria,
         /// such as country or event name.
+        /// 
+        /// For a guide to constructing requests &amp; understanding responses, see
+        /// [Creating a
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,6 +913,10 @@ namespace Google.Analytics.Data.V1Beta
         /// measurements of user activity on your property, such as active users or
         /// event count. Dimensions break down metrics across some common criteria,
         /// such as country or event name.
+        /// 
+        /// For a guide to constructing requests &amp; understanding responses, see
+        /// [Creating a
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1024,9 +1054,15 @@ namespace Google.Analytics.Data.V1Beta
         }
 
         /// <summary>
-        /// The Google Analytics Realtime API returns a customized report of realtime
-        /// event data for your property. These reports show events and usage from the
-        /// last 30 minutes.
+        /// Returns a customized report of realtime event data for your property.
+        /// Events appear in realtime reports seconds after they have been sent to
+        /// the Google Analytics. Realtime reports show events and usage data for the
+        /// periods of time ranging from the present moment to 30 minutes ago (up to
+        /// 60 minutes for Google Analytics 360 properties).
+        /// 
+        /// For a guide to constructing realtime requests &amp; understanding responses,
+        /// see [Creating a Realtime
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1038,9 +1074,15 @@ namespace Google.Analytics.Data.V1Beta
         }
 
         /// <summary>
-        /// The Google Analytics Realtime API returns a customized report of realtime
-        /// event data for your property. These reports show events and usage from the
-        /// last 30 minutes.
+        /// Returns a customized report of realtime event data for your property.
+        /// Events appear in realtime reports seconds after they have been sent to
+        /// the Google Analytics. Realtime reports show events and usage data for the
+        /// periods of time ranging from the present moment to 30 minutes ago (up to
+        /// 60 minutes for Google Analytics 360 properties).
+        /// 
+        /// For a guide to constructing realtime requests &amp; understanding responses,
+        /// see [Creating a Realtime
+        /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

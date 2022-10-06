@@ -3,7 +3,7 @@
 //     source: google/analytics/data/v1beta/analytics_data_api.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -166,6 +166,10 @@ namespace Google.Analytics.Data.V1Beta {
       /// measurements of user activity on your property, such as active users or
       /// event count. Dimensions break down metrics across some common criteria,
       /// such as country or event name.
+      ///
+      /// For a guide to constructing requests &amp; understanding responses, see
+      /// [Creating a
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -240,9 +244,15 @@ namespace Google.Analytics.Data.V1Beta {
       }
 
       /// <summary>
-      /// The Google Analytics Realtime API returns a customized report of realtime
-      /// event data for your property. These reports show events and usage from the
-      /// last 30 minutes.
+      /// Returns a customized report of realtime event data for your property.
+      /// Events appear in realtime reports seconds after they have been sent to
+      /// the Google Analytics. Realtime reports show events and usage data for the
+      /// periods of time ranging from the present moment to 30 minutes ago (up to
+      /// 60 minutes for Google Analytics 360 properties).
+      ///
+      /// For a guide to constructing realtime requests &amp; understanding responses,
+      /// see [Creating a Realtime
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -311,6 +321,10 @@ namespace Google.Analytics.Data.V1Beta {
       /// measurements of user activity on your property, such as active users or
       /// event count. Dimensions break down metrics across some common criteria,
       /// such as country or event name.
+      ///
+      /// For a guide to constructing requests &amp; understanding responses, see
+      /// [Creating a
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -330,6 +344,10 @@ namespace Google.Analytics.Data.V1Beta {
       /// measurements of user activity on your property, such as active users or
       /// event count. Dimensions break down metrics across some common criteria,
       /// such as country or event name.
+      ///
+      /// For a guide to constructing requests &amp; understanding responses, see
+      /// [Creating a
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -347,6 +365,10 @@ namespace Google.Analytics.Data.V1Beta {
       /// measurements of user activity on your property, such as active users or
       /// event count. Dimensions break down metrics across some common criteria,
       /// such as country or event name.
+      ///
+      /// For a guide to constructing requests &amp; understanding responses, see
+      /// [Creating a
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -366,6 +388,10 @@ namespace Google.Analytics.Data.V1Beta {
       /// measurements of user activity on your property, such as active users or
       /// event count. Dimensions break down metrics across some common criteria,
       /// such as country or event name.
+      ///
+      /// For a guide to constructing requests &amp; understanding responses, see
+      /// [Creating a
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -628,9 +654,15 @@ namespace Google.Analytics.Data.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetadata, null, options, request);
       }
       /// <summary>
-      /// The Google Analytics Realtime API returns a customized report of realtime
-      /// event data for your property. These reports show events and usage from the
-      /// last 30 minutes.
+      /// Returns a customized report of realtime event data for your property.
+      /// Events appear in realtime reports seconds after they have been sent to
+      /// the Google Analytics. Realtime reports show events and usage data for the
+      /// periods of time ranging from the present moment to 30 minutes ago (up to
+      /// 60 minutes for Google Analytics 360 properties).
+      ///
+      /// For a guide to constructing realtime requests &amp; understanding responses,
+      /// see [Creating a Realtime
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -643,9 +675,15 @@ namespace Google.Analytics.Data.V1Beta {
         return RunRealtimeReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// The Google Analytics Realtime API returns a customized report of realtime
-      /// event data for your property. These reports show events and usage from the
-      /// last 30 minutes.
+      /// Returns a customized report of realtime event data for your property.
+      /// Events appear in realtime reports seconds after they have been sent to
+      /// the Google Analytics. Realtime reports show events and usage data for the
+      /// periods of time ranging from the present moment to 30 minutes ago (up to
+      /// 60 minutes for Google Analytics 360 properties).
+      ///
+      /// For a guide to constructing realtime requests &amp; understanding responses,
+      /// see [Creating a Realtime
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -656,9 +694,15 @@ namespace Google.Analytics.Data.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_RunRealtimeReport, null, options, request);
       }
       /// <summary>
-      /// The Google Analytics Realtime API returns a customized report of realtime
-      /// event data for your property. These reports show events and usage from the
-      /// last 30 minutes.
+      /// Returns a customized report of realtime event data for your property.
+      /// Events appear in realtime reports seconds after they have been sent to
+      /// the Google Analytics. Realtime reports show events and usage data for the
+      /// periods of time ranging from the present moment to 30 minutes ago (up to
+      /// 60 minutes for Google Analytics 360 properties).
+      ///
+      /// For a guide to constructing realtime requests &amp; understanding responses,
+      /// see [Creating a Realtime
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -671,9 +715,15 @@ namespace Google.Analytics.Data.V1Beta {
         return RunRealtimeReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// The Google Analytics Realtime API returns a customized report of realtime
-      /// event data for your property. These reports show events and usage from the
-      /// last 30 minutes.
+      /// Returns a customized report of realtime event data for your property.
+      /// Events appear in realtime reports seconds after they have been sent to
+      /// the Google Analytics. Realtime reports show events and usage data for the
+      /// periods of time ranging from the present moment to 30 minutes ago (up to
+      /// 60 minutes for Google Analytics 360 properties).
+      ///
+      /// For a guide to constructing realtime requests &amp; understanding responses,
+      /// see [Creating a Realtime
+      /// Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
