@@ -110,83 +110,87 @@ namespace Google.Analytics.Data.V1Beta {
             "FAoMc3RhcnRfb2Zmc2V0GAIgASgFEhIKCmVuZF9vZmZzZXQYAyABKAUiTgoL",
             "R3JhbnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIJCgVE",
             "QUlMWRABEgoKBldFRUtMWRACEgsKB01PTlRITFkQAyIqChRDb2hvcnRSZXBv",
-            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIogFChBSZXNwb25zZU1l",
+            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIsoFChBSZXNwb25zZU1l",
             "dGFEYXRhEiAKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCBJyChtz",
             "Y2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9uc2UYBCABKAsySC5nb29nbGUuYW5h",
             "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
             "dHJpY3Rpb25SZXNwb25zZUgAiAEBEhoKDWN1cnJlbmN5X2NvZGUYBSABKAlI",
             "AYgBARIWCgl0aW1lX3pvbmUYBiABKAlIAogBARIZCgxlbXB0eV9yZWFzb24Y",
-            "ByABKAlIA4gBARq9AgoZU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZRKEAQoa",
-            "YWN0aXZlX21ldHJpY19yZXN0cmljdGlvbnMYASADKAsyYC5nb29nbGUuYW5h",
-            "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
-            "dHJpY3Rpb25SZXNwb25zZS5BY3RpdmVNZXRyaWNSZXN0cmljdGlvbhqYAQoX",
-            "QWN0aXZlTWV0cmljUmVzdHJpY3Rpb24SGAoLbWV0cmljX25hbWUYASABKAlI",
-            "AIgBARJTChdyZXN0cmljdGVkX21ldHJpY190eXBlcxgCIAMoDjIyLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzdHJpY3RlZE1ldHJpY1R5cGVC",
-            "DgoMX21ldHJpY19uYW1lQh4KHF9zY2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9u",
-            "c2VCEAoOX2N1cnJlbmN5X2NvZGVCDAoKX3RpbWVfem9uZUIPCg1fZW1wdHlf",
-            "cmVhc29uIh8KD0RpbWVuc2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlQKDE1l",
-            "dHJpY0hlYWRlchIMCgRuYW1lGAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5cGUidQoLUGl2b3RI",
-            "ZWFkZXISUwoXcGl2b3RfZGltZW5zaW9uX2hlYWRlcnMYASADKAsyMi5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlBpdm90RGltZW5zaW9uSGVhZGVy",
-            "EhEKCXJvd19jb3VudBgCIAEoBSJeChRQaXZvdERpbWVuc2lvbkhlYWRlchJG",
-            "ChBkaW1lbnNpb25fdmFsdWVzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYmV0YS5EaW1lbnNpb25WYWx1ZSKPAQoDUm93EkYKEGRpbWVuc2lv",
-            "bl92YWx1ZXMYASADKAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkRpbWVuc2lvblZhbHVlEkAKDW1ldHJpY192YWx1ZXMYAiADKAsyKS5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1ZhbHVlIi4KDkRpbWVu",
-            "c2lvblZhbHVlEg8KBXZhbHVlGAEgASgJSABCCwoJb25lX3ZhbHVlIisKC01l",
-            "dHJpY1ZhbHVlEg8KBXZhbHVlGAQgASgJSABCCwoJb25lX3ZhbHVlIkoKDE51",
-            "bWVyaWNWYWx1ZRIVCgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDGRvdWJsZV92",
-            "YWx1ZRgCIAEoAUgAQgsKCW9uZV92YWx1ZSKTAwoNUHJvcGVydHlRdW90YRJB",
-            "Cg50b2tlbnNfcGVyX2RheRgBIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0",
-            "YS52MWJldGEuUXVvdGFTdGF0dXMSQgoPdG9rZW5zX3Blcl9ob3VyGAIgASgL",
-            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJG",
-            "ChNjb25jdXJyZW50X3JlcXVlc3RzGAMgASgLMikuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJVCiJzZXJ2ZXJfZXJyb3JzX3Bl",
-            "cl9wcm9qZWN0X3Blcl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYmV0YS5RdW90YVN0YXR1cxJcCilwb3RlbnRpYWxseV90aHJlc2hv",
-            "bGRlZF9yZXF1ZXN0c19wZXJfaG91chgFIAEoCzIpLmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMiMgoLUXVvdGFTdGF0dXMSEAoI",
-            "Y29uc3VtZWQYASABKAUSEQoJcmVtYWluaW5nGAIgASgFIpYBChFEaW1lbnNp",
-            "b25NZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJ",
-            "EhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVz",
-            "GAQgAygJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAUgASgIEhAKCGNhdGVnb3J5",
-            "GAcgASgJIpIDCg5NZXRyaWNNZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIP",
-            "Cgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJl",
-            "Y2F0ZWRfYXBpX25hbWVzGAQgAygJEjYKBHR5cGUYBSABKA4yKC5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5cGUSEgoKZXhwcmVzc2lv",
-            "bhgGIAEoCRIZChFjdXN0b21fZGVmaW5pdGlvbhgHIAEoCBJTCg9ibG9ja2Vk",
-            "X3JlYXNvbnMYCCADKA4yOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk1ldHJpY01ldGFkYXRhLkJsb2NrZWRSZWFzb24SEAoIY2F0ZWdvcnkYCiAB",
-            "KAkiXAoNQmxvY2tlZFJlYXNvbhIeChpCTE9DS0VEX1JFQVNPTl9VTlNQRUNJ",
-            "RklFRBAAEhYKEk5PX1JFVkVOVUVfTUVUUklDUxABEhMKD05PX0NPU1RfTUVU",
-            "UklDUxACItwBChZEaW1lbnNpb25Db21wYXRpYmlsaXR5ElAKEmRpbWVuc2lv",
-            "bl9tZXRhZGF0YRgBIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
-            "dGEuRGltZW5zaW9uTWV0YWRhdGFIAIgBARJHCg1jb21wYXRpYmlsaXR5GAIg",
+            "ByABKAlIA4gBARIkChdzdWJqZWN0X3RvX3RocmVzaG9sZGluZxgIIAEoCEgE",
+            "iAEBGr0CChlTY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlEoQBChphY3RpdmVf",
+            "bWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMoCzJgLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlv",
+            "blJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9uGpgBChdBY3RpdmVN",
+            "ZXRyaWNSZXN0cmljdGlvbhIYCgttZXRyaWNfbmFtZRgBIAEoCUgAiAEBElMK",
+            "F3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlwZUIOCgxfbWV0",
+            "cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZUIQCg5f",
+            "Y3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0eV9yZWFzb25C",
+            "GgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5nIh8KD0RpbWVuc2lvbkhlYWRl",
+            "chIMCgRuYW1lGAEgASgJIlQKDE1ldHJpY0hlYWRlchIMCgRuYW1lGAEgASgJ",
+            "EjYKBHR5cGUYAiABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "Lk1ldHJpY1R5cGUidQoLUGl2b3RIZWFkZXISUwoXcGl2b3RfZGltZW5zaW9u",
+            "X2hlYWRlcnMYASADKAsyMi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LlBpdm90RGltZW5zaW9uSGVhZGVyEhEKCXJvd19jb3VudBgCIAEoBSJeChRQ",
+            "aXZvdERpbWVuc2lvbkhlYWRlchJGChBkaW1lbnNpb25fdmFsdWVzGAEgAygL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25WYWx1",
+            "ZSKPAQoDUm93EkYKEGRpbWVuc2lvbl92YWx1ZXMYASADKAsyLC5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZhbHVlEkAKDW1ldHJp",
+            "Y192YWx1ZXMYAiADKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "Lk1ldHJpY1ZhbHVlIi4KDkRpbWVuc2lvblZhbHVlEg8KBXZhbHVlGAEgASgJ",
+            "SABCCwoJb25lX3ZhbHVlIisKC01ldHJpY1ZhbHVlEg8KBXZhbHVlGAQgASgJ",
+            "SABCCwoJb25lX3ZhbHVlIkoKDE51bWVyaWNWYWx1ZRIVCgtpbnQ2NF92YWx1",
+            "ZRgBIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgCIAEoAUgAQgsKCW9uZV92YWx1",
+            "ZSLjAwoNUHJvcGVydHlRdW90YRJBCg50b2tlbnNfcGVyX2RheRgBIAEoCzIp",
+            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMSQgoP",
+            "dG9rZW5zX3Blcl9ob3VyGAIgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5RdW90YVN0YXR1cxJGChNjb25jdXJyZW50X3JlcXVlc3RzGAMg",
+            "ASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1",
+            "cxJVCiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgL",
+            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJc",
+            "Cilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9yZXF1ZXN0c19wZXJfaG91chgF",
+            "IAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0",
+            "dXMSTgobdG9rZW5zX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAYgASgLMikuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cyIyCgtRdW90",
+            "YVN0YXR1cxIQCghjb25zdW1lZBgBIAEoBRIRCglyZW1haW5pbmcYAiABKAUi",
+            "lgEKEURpbWVuc2lvbk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8KB3Vp",
+            "X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVjYXRl",
+            "ZF9hcGlfbmFtZXMYBCADKAkSGQoRY3VzdG9tX2RlZmluaXRpb24YBSABKAgS",
+            "EAoIY2F0ZWdvcnkYByABKAkikgMKDk1ldHJpY01ldGFkYXRhEhAKCGFwaV9u",
+            "YW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
+            "KAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMYBCADKAkSNgoEdHlwZRgFIAEo",
+            "DjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZRIS",
+            "CgpleHByZXNzaW9uGAYgASgJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgI",
+            "ElMKD2Jsb2NrZWRfcmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvbhIQCghj",
+            "YXRlZ29yeRgKIAEoCSJcCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVB",
+            "U09OX1VOU1BFQ0lGSUVEEAASFgoSTk9fUkVWRU5VRV9NRVRSSUNTEAESEwoP",
+            "Tk9fQ09TVF9NRVRSSUNTEAIi3AEKFkRpbWVuc2lvbkNvbXBhdGliaWxpdHkS",
+            "UAoSZGltZW5zaW9uX21ldGFkYXRhGAEgASgLMi8uZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYmV0YS5EaW1lbnNpb25NZXRhZGF0YUgAiAEBEkcKDWNvbXBh",
+            "dGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkNvbXBhdGliaWxpdHlIAYgBAUIVChNfZGltZW5zaW9uX21ldGFkYXRhQhAK",
+            "Dl9jb21wYXRpYmlsaXR5ItABChNNZXRyaWNDb21wYXRpYmlsaXR5EkoKD21l",
+            "dHJpY19tZXRhZGF0YRgBIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuTWV0cmljTWV0YWRhdGFIAIgBARJHCg1jb21wYXRpYmlsaXR5GAIg",
             "ASgOMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db21wYXRpYmls",
-            "aXR5SAGIAQFCFQoTX2RpbWVuc2lvbl9tZXRhZGF0YUIQCg5fY29tcGF0aWJp",
-            "bGl0eSLQAQoTTWV0cmljQ29tcGF0aWJpbGl0eRJKCg9tZXRyaWNfbWV0YWRh",
-            "dGEYASABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJp",
-            "Y01ldGFkYXRhSACIAQESRwoNY29tcGF0aWJpbGl0eRgCIAEoDjIrLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQ29tcGF0aWJpbGl0eUgBiAEBQhIK",
-            "EF9tZXRyaWNfbWV0YWRhdGFCEAoOX2NvbXBhdGliaWxpdHkqZwoRTWV0cmlj",
-            "QWdncmVnYXRpb24SIgoeTUVUUklDX0FHR1JFR0FUSU9OX1VOU1BFQ0lGSUVE",
-            "EAASCQoFVE9UQUwQARILCgdNSU5JTVVNEAUSCwoHTUFYSU1VTRAGEgkKBUNP",
-            "VU5UEAQqgQIKCk1ldHJpY1R5cGUSGwoXTUVUUklDX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIQCgxUWVBFX0lOVEVHRVIQARIOCgpUWVBFX0ZMT0FUEAISEAoMVFlQ",
-            "RV9TRUNPTkRTEAQSFQoRVFlQRV9NSUxMSVNFQ09ORFMQBRIQCgxUWVBFX01J",
-            "TlVURVMQBhIOCgpUWVBFX0hPVVJTEAcSEQoNVFlQRV9TVEFOREFSRBAIEhEK",
-            "DVRZUEVfQ1VSUkVOQ1kQCRINCglUWVBFX0ZFRVQQChIOCgpUWVBFX01JTEVT",
-            "EAsSDwoLVFlQRV9NRVRFUlMQDBITCg9UWVBFX0tJTE9NRVRFUlMQDSpfChRS",
-            "ZXN0cmljdGVkTWV0cmljVHlwZRImCiJSRVNUUklDVEVEX01FVFJJQ19UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASDQoJQ09TVF9EQVRBEAESEAoMUkVWRU5VRV9EQVRB",
-            "EAIqUAoNQ29tcGF0aWJpbGl0eRIdChlDT01QQVRJQklMSVRZX1VOU1BFQ0lG",
-            "SUVEEAASDgoKQ09NUEFUSUJMRRABEhAKDElOQ09NUEFUSUJMRRACQnkKIGNv",
-            "bS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhQhFSZXBvcnRpbmdBcGlQ",
-            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2FuYWx5dGljcy9kYXRhL3YxYmV0YTtkYXRhYgZwcm90bzM="));
+            "aXR5SAGIAQFCEgoQX21ldHJpY19tZXRhZGF0YUIQCg5fY29tcGF0aWJpbGl0",
+            "eSpnChFNZXRyaWNBZ2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVHQVRJT05f",
+            "VU5TUEVDSUZJRUQQABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRILCgdNQVhJ",
+            "TVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0cmljVHlwZRIbChdNRVRSSUNfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEhAKDFRZUEVfSU5URUdFUhABEg4KClRZUEVfRkxP",
+            "QVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIVChFUWVBFX01JTExJU0VDT05EUxAF",
+            "EhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZUEVfSE9VUlMQBxIRCg1UWVBFX1NU",
+            "QU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5DWRAJEg0KCVRZUEVfRkVFVBAKEg4K",
+            "ClRZUEVfTUlMRVMQCxIPCgtUWVBFX01FVEVSUxAMEhMKD1RZUEVfS0lMT01F",
+            "VEVSUxANKl8KFFJlc3RyaWN0ZWRNZXRyaWNUeXBlEiYKIlJFU1RSSUNURURf",
+            "TUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQABINCglDT1NUX0RBVEEQARIQCgxS",
+            "RVZFTlVFX0RBVEEQAipQCg1Db21wYXRpYmlsaXR5Eh0KGUNPTVBBVElCSUxJ",
+            "VFlfVU5TUEVDSUZJRUQQABIOCgpDT01QQVRJQkxFEAESEAoMSU5DT01QQVRJ",
+            "QkxFEAJCeQogY29tLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGFCEVJl",
+            "cG9ydGluZ0FwaVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvYW5hbHl0aWNzL2RhdGEvdjFiZXRhO2RhdGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.RestrictedMetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -210,7 +214,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Cohort), global::Google.Analytics.Data.V1Beta.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortsRange), global::Google.Analytics.Data.V1Beta.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortReportSettings), global::Google.Analytics.Data.V1Beta.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionHeader), global::Google.Analytics.Data.V1Beta.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricHeader), global::Google.Analytics.Data.V1Beta.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PivotHeader), global::Google.Analytics.Data.V1Beta.PivotHeader.Parser, new[]{ "PivotDimensionHeaders", "RowCount" }, null, null, null, null),
@@ -219,7 +223,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionValue), global::Google.Analytics.Data.V1Beta.DimensionValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricValue), global::Google.Analytics.Data.V1Beta.MetricValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.NumericValue), global::Google.Analytics.Data.V1Beta.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour", "TokensPerProjectPerHour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition", "Category" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "BlockedReasons", "Category" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason) }, null, null),
@@ -704,8 +708,8 @@ namespace Google.Analytics.Data.V1Beta {
     ///
     /// If unspecified, `startMinutesAgo` is defaulted to 29. Standard Analytics
     /// properties can request up to the last 30 minutes of event data
-    /// (`startMinutesAgo &lt;= 29`), and Google Analytics 360 properties can request
-    /// up to the last 60 minutes of event data (`startMinutesAgo &lt;= 59`).
+    /// (`startMinutesAgo &lt;= 29`), and 360 Analytics properties can request up to
+    /// the last 60 minutes of event data (`startMinutesAgo &lt;= 59`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -740,8 +744,8 @@ namespace Google.Analytics.Data.V1Beta {
     ///
     /// If unspecified, `endMinutesAgo` is defaulted to 0. Standard Analytics
     /// properties can request any minute in the last 30 minutes of event data
-    /// (`endMinutesAgo &lt;= 29`), and Google Analytics 360 properties can request
-    /// any minute in the last 60 minutes of event data (`endMinutesAgo &lt;= 59`).
+    /// (`endMinutesAgo &lt;= 29`), and 360 Analytics properties can request any
+    /// minute in the last 60 minutes of event data (`endMinutesAgo &lt;= 59`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -967,7 +971,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Dimensions are attributes of your data. For example, the dimension city
   /// indicates the city from which an event originates. Dimension values in report
-  /// responses are strings; for example, city could be "Paris" or "New York".
+  /// responses are strings; for example, the city could be "Paris" or "New York".
   /// Requests are allowed up to 9 dimensions.
   /// </summary>
   public sealed partial class Dimension : pb::IMessage<Dimension>
@@ -2304,9 +2308,8 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
-  /// To express dimension or metric filters.
-  /// The fields in the same FilterExpression need to be either all dimensions or
-  /// all metrics.
+  /// To express dimension or metric filters. The fields in the same
+  /// FilterExpression need to be either all dimensions or all metrics.
   /// </summary>
   public sealed partial class FilterExpression : pb::IMessage<FilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2414,9 +2417,8 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>Field number for the "filter" field.</summary>
     public const int FilterFieldNumber = 4;
     /// <summary>
-    /// A primitive filter.
-    /// All fields in filter in same FilterExpression needs to be either all
-    /// dimensions or metrics.
+    /// A primitive filter. In the same FilterExpression, all of the filter's
+    /// field names need to be either all dimensions or all metrics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2963,8 +2965,12 @@ namespace Google.Analytics.Data.V1Beta {
     public const int FieldNameFieldNumber = 1;
     private string fieldName_ = "";
     /// <summary>
-    /// The dimension name or metric name. Must be a name defined in dimensions
-    /// or metrics.
+    /// The dimension name or metric name.
+    ///
+    /// In most methods, dimensions &amp; metrics can be used for the first time in
+    /// this field. However in a RunPivotReportRequest, this field must be
+    /// additionally specified by name in the RunPivotReportRequest's dimensions or
+    /// metrics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3650,11 +3656,11 @@ namespace Google.Analytics.Data.V1Beta {
             /// </summary>
             [pbr::OriginalName("CONTAINS")] Contains = 4,
             /// <summary>
-            /// Full regular expression match with the string value.
+            /// Full match for the regular expression with the string value.
             /// </summary>
             [pbr::OriginalName("FULL_REGEXP")] FullRegexp = 5,
             /// <summary>
-            /// Partial regular expression match with the string value.
+            /// Partial match for the regular expression with the string value.
             /// </summary>
             [pbr::OriginalName("PARTIAL_REGEXP")] PartialRegexp = 6,
           }
@@ -4430,7 +4436,9 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
-  /// The sort options.
+  /// Order bys define how rows will be sorted in the response. For example,
+  /// ordering rows by descending event count is one ordering, and ordering rows by
+  /// the event name string is a different ordering.
   /// </summary>
   public sealed partial class OrderBy : pb::IMessage<OrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7263,6 +7271,7 @@ namespace Google.Analytics.Data.V1Beta {
   {
     private static readonly pb::MessageParser<ResponseMetaData> _parser = new pb::MessageParser<ResponseMetaData>(() => new ResponseMetaData());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ResponseMetaData> Parser { get { return _parser; } }
@@ -7290,11 +7299,13 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseMetaData(ResponseMetaData other) : this() {
+      _hasBits0 = other._hasBits0;
       dataLossFromOtherRow_ = other.dataLossFromOtherRow_;
       schemaRestrictionResponse_ = other.schemaRestrictionResponse_ != null ? other.schemaRestrictionResponse_.Clone() : null;
       currencyCode_ = other.currencyCode_;
       timeZone_ = other.timeZone_;
       emptyReason_ = other.emptyReason_;
+      subjectToThresholding_ = other.subjectToThresholding_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7430,6 +7441,41 @@ namespace Google.Analytics.Data.V1Beta {
       emptyReason_ = null;
     }
 
+    /// <summary>Field number for the "subject_to_thresholding" field.</summary>
+    public const int SubjectToThresholdingFieldNumber = 8;
+    private bool subjectToThresholding_;
+    /// <summary>
+    /// If `subjectToThresholding` is true, this report is subject to thresholding
+    /// and only returns data that meets the minimum aggregation thresholds. It is
+    /// possible for a request to be subject to thresholding thresholding and no
+    /// data is absent from the report, and this happens when all data is above the
+    /// thresholds. To learn more, see [Data
+    /// thresholds](https://support.google.com/analytics/answer/9383630) and [About
+    /// Demographics and
+    /// Interests](https://support.google.com/analytics/answer/2799357).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SubjectToThresholding {
+      get { if ((_hasBits0 & 1) != 0) { return subjectToThresholding_; } else { return false; } }
+      set {
+        _hasBits0 |= 1;
+        subjectToThresholding_ = value;
+      }
+    }
+    /// <summary>Gets whether the "subject_to_thresholding" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSubjectToThresholding {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "subject_to_thresholding" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSubjectToThresholding() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7450,6 +7496,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (CurrencyCode != other.CurrencyCode) return false;
       if (TimeZone != other.TimeZone) return false;
       if (EmptyReason != other.EmptyReason) return false;
+      if (SubjectToThresholding != other.SubjectToThresholding) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7462,6 +7509,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
       if (HasTimeZone) hash ^= TimeZone.GetHashCode();
       if (HasEmptyReason) hash ^= EmptyReason.GetHashCode();
+      if (HasSubjectToThresholding) hash ^= SubjectToThresholding.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7500,6 +7548,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(EmptyReason);
       }
+      if (HasSubjectToThresholding) {
+        output.WriteRawTag(64);
+        output.WriteBool(SubjectToThresholding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7530,6 +7582,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(EmptyReason);
       }
+      if (HasSubjectToThresholding) {
+        output.WriteRawTag(64);
+        output.WriteBool(SubjectToThresholding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7554,6 +7610,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (HasEmptyReason) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EmptyReason);
+      }
+      if (HasSubjectToThresholding) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7584,6 +7643,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (other.HasEmptyReason) {
         EmptyReason = other.EmptyReason;
+      }
+      if (other.HasSubjectToThresholding) {
+        SubjectToThresholding = other.SubjectToThresholding;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7623,6 +7685,10 @@ namespace Google.Analytics.Data.V1Beta {
             EmptyReason = input.ReadString();
             break;
           }
+          case 64: {
+            SubjectToThresholding = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -7659,6 +7725,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 58: {
             EmptyReason = input.ReadString();
+            break;
+          }
+          case 64: {
+            SubjectToThresholding = input.ReadBool();
             break;
           }
         }
@@ -9970,6 +10040,7 @@ namespace Google.Analytics.Data.V1Beta {
       concurrentRequests_ = other.concurrentRequests_ != null ? other.concurrentRequests_.Clone() : null;
       serverErrorsPerProjectPerHour_ = other.serverErrorsPerProjectPerHour_ != null ? other.serverErrorsPerProjectPerHour_.Clone() : null;
       potentiallyThresholdedRequestsPerHour_ = other.potentiallyThresholdedRequestsPerHour_ != null ? other.potentiallyThresholdedRequestsPerHour_.Clone() : null;
+      tokensPerProjectPerHour_ = other.tokensPerProjectPerHour_ != null ? other.tokensPerProjectPerHour_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10002,8 +10073,8 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// Standard Analytics Properties can use up to 5,000 tokens per hour;
     /// Analytics 360 Properties can use 50,000 tokens per hour. An API request
-    /// consumes a single number of tokens, and that number is deducted from both
-    /// the hourly and daily quotas.
+    /// consumes a single number of tokens, and that number is deducted from all of
+    /// the hourly, daily, and per project hourly quotas.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10065,6 +10136,26 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "tokens_per_project_per_hour" field.</summary>
+    public const int TokensPerProjectPerHourFieldNumber = 6;
+    private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerProjectPerHour_;
+    /// <summary>
+    /// Analytics Properties can use up to 25% of their tokens per project per
+    /// hour. This amounts to standard Analytics Properties can use up to 1,250
+    /// tokens per project per hour, and Analytics 360 Properties can use 12,500
+    /// tokens per project per hour. An API request consumes a single number of
+    /// tokens, and that number is deducted from all of the hourly, daily, and per
+    /// project hourly quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Data.V1Beta.QuotaStatus TokensPerProjectPerHour {
+      get { return tokensPerProjectPerHour_; }
+      set {
+        tokensPerProjectPerHour_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10085,6 +10176,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (!object.Equals(ConcurrentRequests, other.ConcurrentRequests)) return false;
       if (!object.Equals(ServerErrorsPerProjectPerHour, other.ServerErrorsPerProjectPerHour)) return false;
       if (!object.Equals(PotentiallyThresholdedRequestsPerHour, other.PotentiallyThresholdedRequestsPerHour)) return false;
+      if (!object.Equals(TokensPerProjectPerHour, other.TokensPerProjectPerHour)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10097,6 +10189,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (concurrentRequests_ != null) hash ^= ConcurrentRequests.GetHashCode();
       if (serverErrorsPerProjectPerHour_ != null) hash ^= ServerErrorsPerProjectPerHour.GetHashCode();
       if (potentiallyThresholdedRequestsPerHour_ != null) hash ^= PotentiallyThresholdedRequestsPerHour.GetHashCode();
+      if (tokensPerProjectPerHour_ != null) hash ^= TokensPerProjectPerHour.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10135,6 +10228,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(42);
         output.WriteMessage(PotentiallyThresholdedRequestsPerHour);
       }
+      if (tokensPerProjectPerHour_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TokensPerProjectPerHour);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10165,6 +10262,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(42);
         output.WriteMessage(PotentiallyThresholdedRequestsPerHour);
       }
+      if (tokensPerProjectPerHour_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TokensPerProjectPerHour);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10189,6 +10290,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (potentiallyThresholdedRequestsPerHour_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PotentiallyThresholdedRequestsPerHour);
+      }
+      if (tokensPerProjectPerHour_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokensPerProjectPerHour);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10231,6 +10335,12 @@ namespace Google.Analytics.Data.V1Beta {
           PotentiallyThresholdedRequestsPerHour = new global::Google.Analytics.Data.V1Beta.QuotaStatus();
         }
         PotentiallyThresholdedRequestsPerHour.MergeFrom(other.PotentiallyThresholdedRequestsPerHour);
+      }
+      if (other.tokensPerProjectPerHour_ != null) {
+        if (tokensPerProjectPerHour_ == null) {
+          TokensPerProjectPerHour = new global::Google.Analytics.Data.V1Beta.QuotaStatus();
+        }
+        TokensPerProjectPerHour.MergeFrom(other.TokensPerProjectPerHour);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10282,6 +10392,13 @@ namespace Google.Analytics.Data.V1Beta {
             input.ReadMessage(PotentiallyThresholdedRequestsPerHour);
             break;
           }
+          case 50: {
+            if (tokensPerProjectPerHour_ == null) {
+              TokensPerProjectPerHour = new global::Google.Analytics.Data.V1Beta.QuotaStatus();
+            }
+            input.ReadMessage(TokensPerProjectPerHour);
+            break;
+          }
         }
       }
     #endif
@@ -10330,6 +10447,13 @@ namespace Google.Analytics.Data.V1Beta {
               PotentiallyThresholdedRequestsPerHour = new global::Google.Analytics.Data.V1Beta.QuotaStatus();
             }
             input.ReadMessage(PotentiallyThresholdedRequestsPerHour);
+            break;
+          }
+          case 50: {
+            if (tokensPerProjectPerHour_ == null) {
+              TokensPerProjectPerHour = new global::Google.Analytics.Data.V1Beta.QuotaStatus();
+            }
+            input.ReadMessage(TokensPerProjectPerHour);
             break;
           }
         }
