@@ -26,35 +26,29 @@ namespace Google.Cloud.Bigtable.V2 {
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvcmVxdWVzdF9zdGF0cy5wcm90bxISZ29v",
             "Z2xlLmJpZ3RhYmxlLnYyGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
-            "dG8inQEKEVJlYWRJdGVyYXRvclN0YXRzEhcKD3Jvd3Nfc2Vlbl9jb3VudBgB",
-            "IAEoAxIbChNyb3dzX3JldHVybmVkX2NvdW50GAIgASgDEhgKEGNlbGxzX3Nl",
-            "ZW5fY291bnQYAyABKAMSHAoUY2VsbHNfcmV0dXJuZWRfY291bnQYBCABKAMS",
-            "GgoSZGVsZXRlc19zZWVuX2NvdW50GAUgASgDIlEKE1JlcXVlc3RMYXRlbmN5",
-            "U3RhdHMSOgoXZnJvbnRlbmRfc2VydmVyX2xhdGVuY3kYASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24ioQEKE1JlYWRFZmZpY2llbmN5U3RhdHMS",
-            "QgoTcmVhZF9pdGVyYXRvcl9zdGF0cxgBIAEoCzIlLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5SZWFkSXRlcmF0b3JTdGF0cxJGChVyZXF1ZXN0X2xhdGVuY3lfc3Rh",
-            "dHMYAiABKAsyJy5nb29nbGUuYmlndGFibGUudjIuUmVxdWVzdExhdGVuY3lT",
-            "dGF0cyKaAQoMQWxsUmVhZFN0YXRzEkIKE3JlYWRfaXRlcmF0b3Jfc3RhdHMY",
-            "ASABKAsyJS5nb29nbGUuYmlndGFibGUudjIuUmVhZEl0ZXJhdG9yU3RhdHMS",
-            "RgoVcmVxdWVzdF9sYXRlbmN5X3N0YXRzGAIgASgLMicuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLlJlcXVlc3RMYXRlbmN5U3RhdHMinQEKDFJlcXVlc3RTdGF0cxJI",
-            "ChVyZWFkX2VmZmljaWVuY3lfc3RhdHMYASABKAsyJy5nb29nbGUuYmlndGFi",
-            "bGUudjIuUmVhZEVmZmljaWVuY3lTdGF0c0gAEjoKDmFsbF9yZWFkX3N0YXRz",
-            "GAIgASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLnYyLkFsbFJlYWRTdGF0c0gAQgcK",
-            "BXN0YXRzQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQhFSZXF1ZXN0U3Rh",
-            "dHNQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29vZ2xlLkNsb3VkLkJpZ3Rh",
-            "YmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpD",
-            "bG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "dG8iggEKElJlYWRJdGVyYXRpb25TdGF0cxIXCg9yb3dzX3NlZW5fY291bnQY",
+            "ASABKAMSGwoTcm93c19yZXR1cm5lZF9jb3VudBgCIAEoAxIYChBjZWxsc19z",
+            "ZWVuX2NvdW50GAMgASgDEhwKFGNlbGxzX3JldHVybmVkX2NvdW50GAQgASgD",
+            "IlEKE1JlcXVlc3RMYXRlbmN5U3RhdHMSOgoXZnJvbnRlbmRfc2VydmVyX2xh",
+            "dGVuY3kYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24ioQEKEUZ1",
+            "bGxSZWFkU3RhdHNWaWV3EkQKFHJlYWRfaXRlcmF0aW9uX3N0YXRzGAEgASgL",
+            "MiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRJdGVyYXRpb25TdGF0cxJGChVy",
+            "ZXF1ZXN0X2xhdGVuY3lfc3RhdHMYAiABKAsyJy5nb29nbGUuYmlndGFibGUu",
+            "djIuUmVxdWVzdExhdGVuY3lTdGF0cyJjCgxSZXF1ZXN0U3RhdHMSRQoUZnVs",
+            "bF9yZWFkX3N0YXRzX3ZpZXcYASABKAsyJS5nb29nbGUuYmlndGFibGUudjIu",
+            "RnVsbFJlYWRTdGF0c1ZpZXdIAEIMCgpzdGF0c192aWV3Qr0BChZjb20uZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyQhFSZXF1ZXN0U3RhdHNQcm90b1ABWjpnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2Jp",
+            "Z3RhYmxlqgIYR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENs",
+            "b3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadIteratorStats), global::Google.Cloud.Bigtable.V2.ReadIteratorStats.Parser, new[]{ "RowsSeenCount", "RowsReturnedCount", "CellsSeenCount", "CellsReturnedCount", "DeletesSeenCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadIterationStats), global::Google.Cloud.Bigtable.V2.ReadIterationStats.Parser, new[]{ "RowsSeenCount", "RowsReturnedCount", "CellsSeenCount", "CellsReturnedCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RequestLatencyStats), global::Google.Cloud.Bigtable.V2.RequestLatencyStats.Parser, new[]{ "FrontendServerLatency" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats), global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats.Parser, new[]{ "ReadIteratorStats", "RequestLatencyStats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.AllReadStats), global::Google.Cloud.Bigtable.V2.AllReadStats.Parser, new[]{ "ReadIteratorStats", "RequestLatencyStats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RequestStats), global::Google.Cloud.Bigtable.V2.RequestStats.Parser, new[]{ "ReadEfficiencyStats", "AllReadStats" }, new[]{ "Stats" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FullReadStatsView), global::Google.Cloud.Bigtable.V2.FullReadStatsView.Parser, new[]{ "ReadIterationStats", "RequestLatencyStats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RequestStats), global::Google.Cloud.Bigtable.V2.RequestStats.Parser, new[]{ "FullReadStatsView" }, new[]{ "StatsView" }, null, null, null)
           }));
     }
     #endregion
@@ -62,20 +56,20 @@ namespace Google.Cloud.Bigtable.V2 {
   }
   #region Messages
   /// <summary>
-  /// ReadIteratorStats captures information about the iteration of rows or cells
+  /// ReadIterationStats captures information about the iteration of rows or cells
   /// over the course of a read, e.g. how many results were scanned in a read
   /// operation versus the results returned.
   /// </summary>
-  public sealed partial class ReadIteratorStats : pb::IMessage<ReadIteratorStats>
+  public sealed partial class ReadIterationStats : pb::IMessage<ReadIterationStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ReadIteratorStats> _parser = new pb::MessageParser<ReadIteratorStats>(() => new ReadIteratorStats());
+    private static readonly pb::MessageParser<ReadIterationStats> _parser = new pb::MessageParser<ReadIterationStats>(() => new ReadIterationStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReadIteratorStats> Parser { get { return _parser; } }
+    public static pb::MessageParser<ReadIterationStats> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -91,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadIteratorStats() {
+    public ReadIterationStats() {
       OnConstruction();
     }
 
@@ -99,19 +93,18 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadIteratorStats(ReadIteratorStats other) : this() {
+    public ReadIterationStats(ReadIterationStats other) : this() {
       rowsSeenCount_ = other.rowsSeenCount_;
       rowsReturnedCount_ = other.rowsReturnedCount_;
       cellsSeenCount_ = other.cellsSeenCount_;
       cellsReturnedCount_ = other.cellsReturnedCount_;
-      deletesSeenCount_ = other.deletesSeenCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadIteratorStats Clone() {
-      return new ReadIteratorStats(this);
+    public ReadIterationStats Clone() {
+      return new ReadIterationStats(this);
     }
 
     /// <summary>Field number for the "rows_seen_count" field.</summary>
@@ -176,30 +169,15 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
-    /// <summary>Field number for the "deletes_seen_count" field.</summary>
-    public const int DeletesSeenCountFieldNumber = 5;
-    private long deletesSeenCount_;
-    /// <summary>
-    /// The deletes seen as part of the request.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long DeletesSeenCount {
-      get { return deletesSeenCount_; }
-      set {
-        deletesSeenCount_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as ReadIteratorStats);
+      return Equals(other as ReadIterationStats);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReadIteratorStats other) {
+    public bool Equals(ReadIterationStats other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -210,7 +188,6 @@ namespace Google.Cloud.Bigtable.V2 {
       if (RowsReturnedCount != other.RowsReturnedCount) return false;
       if (CellsSeenCount != other.CellsSeenCount) return false;
       if (CellsReturnedCount != other.CellsReturnedCount) return false;
-      if (DeletesSeenCount != other.DeletesSeenCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -222,7 +199,6 @@ namespace Google.Cloud.Bigtable.V2 {
       if (RowsReturnedCount != 0L) hash ^= RowsReturnedCount.GetHashCode();
       if (CellsSeenCount != 0L) hash ^= CellsSeenCount.GetHashCode();
       if (CellsReturnedCount != 0L) hash ^= CellsReturnedCount.GetHashCode();
-      if (DeletesSeenCount != 0L) hash ^= DeletesSeenCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -257,10 +233,6 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(CellsReturnedCount);
       }
-      if (DeletesSeenCount != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(DeletesSeenCount);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -287,10 +259,6 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(CellsReturnedCount);
       }
-      if (DeletesSeenCount != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(DeletesSeenCount);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -313,9 +281,6 @@ namespace Google.Cloud.Bigtable.V2 {
       if (CellsReturnedCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CellsReturnedCount);
       }
-      if (DeletesSeenCount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DeletesSeenCount);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -324,7 +289,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReadIteratorStats other) {
+    public void MergeFrom(ReadIterationStats other) {
       if (other == null) {
         return;
       }
@@ -339,9 +304,6 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.CellsReturnedCount != 0L) {
         CellsReturnedCount = other.CellsReturnedCount;
-      }
-      if (other.DeletesSeenCount != 0L) {
-        DeletesSeenCount = other.DeletesSeenCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -374,10 +336,6 @@ namespace Google.Cloud.Bigtable.V2 {
             CellsReturnedCount = input.ReadInt64();
             break;
           }
-          case 40: {
-            DeletesSeenCount = input.ReadInt64();
-            break;
-          }
         }
       }
     #endif
@@ -407,10 +365,6 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 32: {
             CellsReturnedCount = input.ReadInt64();
-            break;
-          }
-          case 40: {
-            DeletesSeenCount = input.ReadInt64();
             break;
           }
         }
@@ -483,6 +437,13 @@ namespace Google.Cloud.Bigtable.V2 {
     /// (https://cloud.google.com/bigtable/docs/monitoring-instance) as this value
     /// needs to be sent in the response before the latency measurement including
     /// that transmission is finalized.
+    ///
+    /// Note: This value includes the end-to-end latency of contacting nodes in
+    /// the targeted cluster, e.g. measuring from when the first byte arrives at
+    /// the frontend server, to when this value is sent back as the last value in
+    /// the response, including any latency incurred by contacting nodes, waiting
+    /// for results from nodes, and finally sending results from nodes back to the
+    /// caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -636,18 +597,18 @@ namespace Google.Cloud.Bigtable.V2 {
   }
 
   /// <summary>
-  /// ReadEfficiencyStats captures information about the efficiency of a read.
+  /// FullReadStatsView captures all known information about a read.
   /// </summary>
-  public sealed partial class ReadEfficiencyStats : pb::IMessage<ReadEfficiencyStats>
+  public sealed partial class FullReadStatsView : pb::IMessage<FullReadStatsView>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ReadEfficiencyStats> _parser = new pb::MessageParser<ReadEfficiencyStats>(() => new ReadEfficiencyStats());
+    private static readonly pb::MessageParser<FullReadStatsView> _parser = new pb::MessageParser<FullReadStatsView>(() => new FullReadStatsView());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReadEfficiencyStats> Parser { get { return _parser; } }
+    public static pb::MessageParser<FullReadStatsView> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -663,7 +624,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadEfficiencyStats() {
+    public FullReadStatsView() {
       OnConstruction();
     }
 
@@ -671,21 +632,21 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadEfficiencyStats(ReadEfficiencyStats other) : this() {
-      readIteratorStats_ = other.readIteratorStats_ != null ? other.readIteratorStats_.Clone() : null;
+    public FullReadStatsView(FullReadStatsView other) : this() {
+      readIterationStats_ = other.readIterationStats_ != null ? other.readIterationStats_.Clone() : null;
       requestLatencyStats_ = other.requestLatencyStats_ != null ? other.requestLatencyStats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReadEfficiencyStats Clone() {
-      return new ReadEfficiencyStats(this);
+    public FullReadStatsView Clone() {
+      return new FullReadStatsView(this);
     }
 
-    /// <summary>Field number for the "read_iterator_stats" field.</summary>
-    public const int ReadIteratorStatsFieldNumber = 1;
-    private global::Google.Cloud.Bigtable.V2.ReadIteratorStats readIteratorStats_;
+    /// <summary>Field number for the "read_iteration_stats" field.</summary>
+    public const int ReadIterationStatsFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.V2.ReadIterationStats readIterationStats_;
     /// <summary>
     /// Iteration stats describe how efficient the read is, e.g. comparing
     /// rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -694,10 +655,10 @@ namespace Google.Cloud.Bigtable.V2 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Bigtable.V2.ReadIteratorStats ReadIteratorStats {
-      get { return readIteratorStats_; }
+    public global::Google.Cloud.Bigtable.V2.ReadIterationStats ReadIterationStats {
+      get { return readIterationStats_; }
       set {
-        readIteratorStats_ = value;
+        readIterationStats_ = value;
       }
     }
 
@@ -720,19 +681,19 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as ReadEfficiencyStats);
+      return Equals(other as FullReadStatsView);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReadEfficiencyStats other) {
+    public bool Equals(FullReadStatsView other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ReadIteratorStats, other.ReadIteratorStats)) return false;
+      if (!object.Equals(ReadIterationStats, other.ReadIterationStats)) return false;
       if (!object.Equals(RequestLatencyStats, other.RequestLatencyStats)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -741,7 +702,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (readIteratorStats_ != null) hash ^= ReadIteratorStats.GetHashCode();
+      if (readIterationStats_ != null) hash ^= ReadIterationStats.GetHashCode();
       if (requestLatencyStats_ != null) hash ^= RequestLatencyStats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -761,9 +722,9 @@ namespace Google.Cloud.Bigtable.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (readIteratorStats_ != null) {
+      if (readIterationStats_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ReadIteratorStats);
+        output.WriteMessage(ReadIterationStats);
       }
       if (requestLatencyStats_ != null) {
         output.WriteRawTag(18);
@@ -779,9 +740,9 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (readIteratorStats_ != null) {
+      if (readIterationStats_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ReadIteratorStats);
+        output.WriteMessage(ReadIterationStats);
       }
       if (requestLatencyStats_ != null) {
         output.WriteRawTag(18);
@@ -797,8 +758,8 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (readIteratorStats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadIteratorStats);
+      if (readIterationStats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadIterationStats);
       }
       if (requestLatencyStats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestLatencyStats);
@@ -811,15 +772,15 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReadEfficiencyStats other) {
+    public void MergeFrom(FullReadStatsView other) {
       if (other == null) {
         return;
       }
-      if (other.readIteratorStats_ != null) {
-        if (readIteratorStats_ == null) {
-          ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
+      if (other.readIterationStats_ != null) {
+        if (readIterationStats_ == null) {
+          ReadIterationStats = new global::Google.Cloud.Bigtable.V2.ReadIterationStats();
         }
-        ReadIteratorStats.MergeFrom(other.ReadIteratorStats);
+        ReadIterationStats.MergeFrom(other.ReadIterationStats);
       }
       if (other.requestLatencyStats_ != null) {
         if (requestLatencyStats_ == null) {
@@ -843,10 +804,10 @@ namespace Google.Cloud.Bigtable.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (readIteratorStats_ == null) {
-              ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
+            if (readIterationStats_ == null) {
+              ReadIterationStats = new global::Google.Cloud.Bigtable.V2.ReadIterationStats();
             }
-            input.ReadMessage(ReadIteratorStats);
+            input.ReadMessage(ReadIterationStats);
             break;
           }
           case 18: {
@@ -872,267 +833,10 @@ namespace Google.Cloud.Bigtable.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (readIteratorStats_ == null) {
-              ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
+            if (readIterationStats_ == null) {
+              ReadIterationStats = new global::Google.Cloud.Bigtable.V2.ReadIterationStats();
             }
-            input.ReadMessage(ReadIteratorStats);
-            break;
-          }
-          case 18: {
-            if (requestLatencyStats_ == null) {
-              RequestLatencyStats = new global::Google.Cloud.Bigtable.V2.RequestLatencyStats();
-            }
-            input.ReadMessage(RequestLatencyStats);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// AllReadStats captures all known information about a read.
-  /// </summary>
-  public sealed partial class AllReadStats : pb::IMessage<AllReadStats>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AllReadStats> _parser = new pb::MessageParser<AllReadStats>(() => new AllReadStats());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AllReadStats> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AllReadStats() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AllReadStats(AllReadStats other) : this() {
-      readIteratorStats_ = other.readIteratorStats_ != null ? other.readIteratorStats_.Clone() : null;
-      requestLatencyStats_ = other.requestLatencyStats_ != null ? other.requestLatencyStats_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AllReadStats Clone() {
-      return new AllReadStats(this);
-    }
-
-    /// <summary>Field number for the "read_iterator_stats" field.</summary>
-    public const int ReadIteratorStatsFieldNumber = 1;
-    private global::Google.Cloud.Bigtable.V2.ReadIteratorStats readIteratorStats_;
-    /// <summary>
-    /// Iteration stats describe how efficient the read is, e.g. comparing
-    /// rows seen vs. rows returned or cells seen vs cells returned can provide an
-    /// indication of read efficiency (the higher the ratio of seen to retuned the
-    /// better).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Bigtable.V2.ReadIteratorStats ReadIteratorStats {
-      get { return readIteratorStats_; }
-      set {
-        readIteratorStats_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "request_latency_stats" field.</summary>
-    public const int RequestLatencyStatsFieldNumber = 2;
-    private global::Google.Cloud.Bigtable.V2.RequestLatencyStats requestLatencyStats_;
-    /// <summary>
-    /// Request latency stats describe the time taken to complete a request, from
-    /// the server side.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Bigtable.V2.RequestLatencyStats RequestLatencyStats {
-      get { return requestLatencyStats_; }
-      set {
-        requestLatencyStats_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AllReadStats);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AllReadStats other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(ReadIteratorStats, other.ReadIteratorStats)) return false;
-      if (!object.Equals(RequestLatencyStats, other.RequestLatencyStats)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (readIteratorStats_ != null) hash ^= ReadIteratorStats.GetHashCode();
-      if (requestLatencyStats_ != null) hash ^= RequestLatencyStats.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (readIteratorStats_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ReadIteratorStats);
-      }
-      if (requestLatencyStats_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RequestLatencyStats);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (readIteratorStats_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ReadIteratorStats);
-      }
-      if (requestLatencyStats_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RequestLatencyStats);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (readIteratorStats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadIteratorStats);
-      }
-      if (requestLatencyStats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestLatencyStats);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AllReadStats other) {
-      if (other == null) {
-        return;
-      }
-      if (other.readIteratorStats_ != null) {
-        if (readIteratorStats_ == null) {
-          ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
-        }
-        ReadIteratorStats.MergeFrom(other.ReadIteratorStats);
-      }
-      if (other.requestLatencyStats_ != null) {
-        if (requestLatencyStats_ == null) {
-          RequestLatencyStats = new global::Google.Cloud.Bigtable.V2.RequestLatencyStats();
-        }
-        RequestLatencyStats.MergeFrom(other.RequestLatencyStats);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (readIteratorStats_ == null) {
-              ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
-            }
-            input.ReadMessage(ReadIteratorStats);
-            break;
-          }
-          case 18: {
-            if (requestLatencyStats_ == null) {
-              RequestLatencyStats = new global::Google.Cloud.Bigtable.V2.RequestLatencyStats();
-            }
-            input.ReadMessage(RequestLatencyStats);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (readIteratorStats_ == null) {
-              ReadIteratorStats = new global::Google.Cloud.Bigtable.V2.ReadIteratorStats();
-            }
-            input.ReadMessage(ReadIteratorStats);
+            input.ReadMessage(ReadIterationStats);
             break;
           }
           case 18: {
@@ -1169,7 +873,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1189,12 +893,9 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestStats(RequestStats other) : this() {
-      switch (other.StatsCase) {
-        case StatsOneofCase.ReadEfficiencyStats:
-          ReadEfficiencyStats = other.ReadEfficiencyStats.Clone();
-          break;
-        case StatsOneofCase.AllReadStats:
-          AllReadStats = other.AllReadStats.Clone();
+      switch (other.StatsViewCase) {
+        case StatsViewOneofCase.FullReadStatsView:
+          FullReadStatsView = other.FullReadStatsView.Clone();
           break;
       }
 
@@ -1207,58 +908,40 @@ namespace Google.Cloud.Bigtable.V2 {
       return new RequestStats(this);
     }
 
-    /// <summary>Field number for the "read_efficiency_stats" field.</summary>
-    public const int ReadEfficiencyStatsFieldNumber = 1;
-    /// <summary>
-    /// Available with the
-    /// ReadRowsRequest.RequestStatsView.REQUEST_STATS_EFFICIENCY view, see
-    /// package google.bigtable.v2.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats ReadEfficiencyStats {
-      get { return statsCase_ == StatsOneofCase.ReadEfficiencyStats ? (global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats) stats_ : null; }
-      set {
-        stats_ = value;
-        statsCase_ = value == null ? StatsOneofCase.None : StatsOneofCase.ReadEfficiencyStats;
-      }
-    }
-
-    /// <summary>Field number for the "all_read_stats" field.</summary>
-    public const int AllReadStatsFieldNumber = 2;
+    /// <summary>Field number for the "full_read_stats_view" field.</summary>
+    public const int FullReadStatsViewFieldNumber = 1;
     /// <summary>
     /// Available with the ReadRowsRequest.RequestStatsView.REQUEST_STATS_FULL
     /// view, see package google.bigtable.v2.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Bigtable.V2.AllReadStats AllReadStats {
-      get { return statsCase_ == StatsOneofCase.AllReadStats ? (global::Google.Cloud.Bigtable.V2.AllReadStats) stats_ : null; }
+    public global::Google.Cloud.Bigtable.V2.FullReadStatsView FullReadStatsView {
+      get { return statsViewCase_ == StatsViewOneofCase.FullReadStatsView ? (global::Google.Cloud.Bigtable.V2.FullReadStatsView) statsView_ : null; }
       set {
-        stats_ = value;
-        statsCase_ = value == null ? StatsOneofCase.None : StatsOneofCase.AllReadStats;
+        statsView_ = value;
+        statsViewCase_ = value == null ? StatsViewOneofCase.None : StatsViewOneofCase.FullReadStatsView;
       }
     }
 
-    private object stats_;
-    /// <summary>Enum of possible cases for the "stats" oneof.</summary>
-    public enum StatsOneofCase {
+    private object statsView_;
+    /// <summary>Enum of possible cases for the "stats_view" oneof.</summary>
+    public enum StatsViewOneofCase {
       None = 0,
-      ReadEfficiencyStats = 1,
-      AllReadStats = 2,
+      FullReadStatsView = 1,
     }
-    private StatsOneofCase statsCase_ = StatsOneofCase.None;
+    private StatsViewOneofCase statsViewCase_ = StatsViewOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StatsOneofCase StatsCase {
-      get { return statsCase_; }
+    public StatsViewOneofCase StatsViewCase {
+      get { return statsViewCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearStats() {
-      statsCase_ = StatsOneofCase.None;
-      stats_ = null;
+    public void ClearStatsView() {
+      statsViewCase_ = StatsViewOneofCase.None;
+      statsView_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1276,9 +959,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ReadEfficiencyStats, other.ReadEfficiencyStats)) return false;
-      if (!object.Equals(AllReadStats, other.AllReadStats)) return false;
-      if (StatsCase != other.StatsCase) return false;
+      if (!object.Equals(FullReadStatsView, other.FullReadStatsView)) return false;
+      if (StatsViewCase != other.StatsViewCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1286,9 +968,8 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) hash ^= ReadEfficiencyStats.GetHashCode();
-      if (statsCase_ == StatsOneofCase.AllReadStats) hash ^= AllReadStats.GetHashCode();
-      hash ^= (int) statsCase_;
+      if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) hash ^= FullReadStatsView.GetHashCode();
+      hash ^= (int) statsViewCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1307,13 +988,9 @@ namespace Google.Cloud.Bigtable.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) {
+      if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) {
         output.WriteRawTag(10);
-        output.WriteMessage(ReadEfficiencyStats);
-      }
-      if (statsCase_ == StatsOneofCase.AllReadStats) {
-        output.WriteRawTag(18);
-        output.WriteMessage(AllReadStats);
+        output.WriteMessage(FullReadStatsView);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1325,13 +1002,9 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) {
+      if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) {
         output.WriteRawTag(10);
-        output.WriteMessage(ReadEfficiencyStats);
-      }
-      if (statsCase_ == StatsOneofCase.AllReadStats) {
-        output.WriteRawTag(18);
-        output.WriteMessage(AllReadStats);
+        output.WriteMessage(FullReadStatsView);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1343,11 +1016,8 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadEfficiencyStats);
-      }
-      if (statsCase_ == StatsOneofCase.AllReadStats) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllReadStats);
+      if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FullReadStatsView);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1361,18 +1031,12 @@ namespace Google.Cloud.Bigtable.V2 {
       if (other == null) {
         return;
       }
-      switch (other.StatsCase) {
-        case StatsOneofCase.ReadEfficiencyStats:
-          if (ReadEfficiencyStats == null) {
-            ReadEfficiencyStats = new global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats();
+      switch (other.StatsViewCase) {
+        case StatsViewOneofCase.FullReadStatsView:
+          if (FullReadStatsView == null) {
+            FullReadStatsView = new global::Google.Cloud.Bigtable.V2.FullReadStatsView();
           }
-          ReadEfficiencyStats.MergeFrom(other.ReadEfficiencyStats);
-          break;
-        case StatsOneofCase.AllReadStats:
-          if (AllReadStats == null) {
-            AllReadStats = new global::Google.Cloud.Bigtable.V2.AllReadStats();
-          }
-          AllReadStats.MergeFrom(other.AllReadStats);
+          FullReadStatsView.MergeFrom(other.FullReadStatsView);
           break;
       }
 
@@ -1392,21 +1056,12 @@ namespace Google.Cloud.Bigtable.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats subBuilder = new global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats();
-            if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) {
-              subBuilder.MergeFrom(ReadEfficiencyStats);
+            global::Google.Cloud.Bigtable.V2.FullReadStatsView subBuilder = new global::Google.Cloud.Bigtable.V2.FullReadStatsView();
+            if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) {
+              subBuilder.MergeFrom(FullReadStatsView);
             }
             input.ReadMessage(subBuilder);
-            ReadEfficiencyStats = subBuilder;
-            break;
-          }
-          case 18: {
-            global::Google.Cloud.Bigtable.V2.AllReadStats subBuilder = new global::Google.Cloud.Bigtable.V2.AllReadStats();
-            if (statsCase_ == StatsOneofCase.AllReadStats) {
-              subBuilder.MergeFrom(AllReadStats);
-            }
-            input.ReadMessage(subBuilder);
-            AllReadStats = subBuilder;
+            FullReadStatsView = subBuilder;
             break;
           }
         }
@@ -1425,21 +1080,12 @@ namespace Google.Cloud.Bigtable.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats subBuilder = new global::Google.Cloud.Bigtable.V2.ReadEfficiencyStats();
-            if (statsCase_ == StatsOneofCase.ReadEfficiencyStats) {
-              subBuilder.MergeFrom(ReadEfficiencyStats);
+            global::Google.Cloud.Bigtable.V2.FullReadStatsView subBuilder = new global::Google.Cloud.Bigtable.V2.FullReadStatsView();
+            if (statsViewCase_ == StatsViewOneofCase.FullReadStatsView) {
+              subBuilder.MergeFrom(FullReadStatsView);
             }
             input.ReadMessage(subBuilder);
-            ReadEfficiencyStats = subBuilder;
-            break;
-          }
-          case 18: {
-            global::Google.Cloud.Bigtable.V2.AllReadStats subBuilder = new global::Google.Cloud.Bigtable.V2.AllReadStats();
-            if (statsCase_ == StatsOneofCase.AllReadStats) {
-              subBuilder.MergeFrom(AllReadStats);
-            }
-            input.ReadMessage(subBuilder);
-            AllReadStats = subBuilder;
+            FullReadStatsView = subBuilder;
             break;
           }
         }
