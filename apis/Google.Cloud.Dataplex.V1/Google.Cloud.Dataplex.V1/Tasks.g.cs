@@ -3518,9 +3518,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NotebookFieldNumber = 4;
         private string notebook_ = "";
         /// <summary>
-        /// Required. Path to input notebook. This can be the GCS URI of the notebook file
-        /// or the path to a Notebook Content.
-        /// The execution args are accessible as environment variables
+        /// Required. Path to input notebook. This can be the Cloud Storage URI of the notebook
+        /// file or the path to a Notebook Content. The execution args are accessible
+        /// as environment variables
         /// (`TASK_key=value`).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3553,7 +3553,7 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(42);
         private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. GCS URIs of files to be placed in the working directory of each
+        /// Optional. Cloud Storage URIs of files to be placed in the working directory of each
         /// executor.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3568,8 +3568,8 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(50);
         private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. GCS URIs of archives to be extracted into the working directory of
-        /// each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+        /// Optional. Cloud Storage URIs of archives to be extracted into the working directory
+        /// of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
         /// .zip.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
