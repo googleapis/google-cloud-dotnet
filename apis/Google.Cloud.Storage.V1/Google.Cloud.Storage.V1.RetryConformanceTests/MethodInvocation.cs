@@ -28,6 +28,10 @@ internal class MethodInvocation
 
     internal string ObjectName { get; set; }
 
+    internal string Destination_BucketName { get; set; }
+
+    internal string Destination_ObjectName { get; set; }
+
     internal string Notification { get; set; }
 
     internal string HmacKey { get; set; }
@@ -38,6 +42,8 @@ internal class MethodInvocation
 
     internal long Metageneration { get; set; }
 
+    internal long Generation { get; set; }
+
     internal MethodInfo MethodInformation { get; set; }
 
     internal bool ProjectIdRequired { get; set; }
@@ -45,6 +51,10 @@ internal class MethodInvocation
     internal bool BucketNameRequired { get; set; }
 
     internal bool ObjectNameRequired { get; set; }
+
+    internal bool Destination_BucketNameRequired { get; set; }
+
+    internal bool Destination_ObjectNameRequired { get; set; }
 
     internal bool NotificationRequired { get; set; }
 
@@ -63,7 +73,6 @@ internal class MethodInvocation
         MethodInformation = methodInfo;
     }
 
-    //TODO: Optimize the method
     /// <summary>
     /// Add parameters and invoke the API mapped 
     /// </summary>
@@ -79,11 +88,11 @@ internal class MethodInvocation
         {
             if (item.ParameterType == typeof(string) && !item.IsOptional)
             {
-                if (item.Name is "bucket")
+                if (item.Name is "bucket" || item.Name is "sourceBucket")
                 {
                     arguments.Add(BucketName);
                 }
-                else if (item.Name is "objectName")
+                else if (item.Name is "objectName" || item.Name is "sourceObjectName")
                 {
                     arguments.Add(ObjectName);
                 }
@@ -106,6 +115,14 @@ internal class MethodInvocation
                 else if (item.Name is "accessId")
                 {
                     arguments.Add(AccessId);
+                }
+                else if (item.Name is "destinationBucket")
+                {
+                    arguments.Add(Destination_BucketName);
+                }
+                else if (item.Name is "destinationObjectName")
+                {
+                    arguments.Add(Destination_ObjectName);
                 }
                 else
                 {
@@ -134,23 +151,54 @@ internal class MethodInvocation
                 policy.Bindings.Add(AllUsersViewer);
                 arguments.Add(policy);
             }
-            else if (item.Name is "bucket")
+            else if (item.ParameterType.Name is "Bucket")
             {
-                arguments.Add(new Bucket() { Name = BucketName });
+                arguments.Add(new Bucket { Name = BucketName });
+            }
+            else if (item.ParameterType.Name is "Object")
+            {
+                arguments.Add(new Object { Name = ObjectName, Bucket = BucketName });
+            }
+            else if (item.ParameterType.Name is "Notification")
+            {
+                arguments.Add(new Notification { Topic = "Test-topic", PayloadFormat = "NONE" });
             }
             else if (item.ParameterType.Name is "HmacKeyMetadata")
             {
-                arguments.Add(new HmacKeyMetadata() { ProjectId = ProjectId, AccessId = AccessId, State= HmacKeyStates.Inactive, ETag="MQ==" });
+                if (preConditionsPresent == true)
+                {
+                    arguments.Add(new HmacKeyMetadata { ProjectId = ProjectId, AccessId = AccessId, State = HmacKeyStates.Inactive, ETag = "MQ==" });
+                }
+                else
+                {
+                    arguments.Add(new HmacKeyMetadata { ProjectId = ProjectId, AccessId = AccessId, State = HmacKeyStates.Inactive });
+                }
             }
             else if (preConditionsPresent == true && item.Name is "options")
             {
                 if (item.ParameterType.Name is "UpdateBucketOptions")
                 {
-                    arguments.Add(new UpdateBucketOptions() { IfMetagenerationMatch = 1 });
+                    arguments.Add(new UpdateBucketOptions { IfMetagenerationMatch = 1 });
                 }
                 else if (item.ParameterType.Name is "PatchBucketOptions")
                 {
-                    arguments.Add(new PatchBucketOptions() { IfMetagenerationMatch = 1 });
+                    arguments.Add(new PatchBucketOptions { IfMetagenerationMatch = 1 });
+                }
+                else if (item.ParameterType.Name is "CopyObjectOptions")
+                {
+                    arguments.Add(new CopyObjectOptions { IfGenerationMatch = Generation });
+                }
+                else if (item.ParameterType.Name is "UpdateObjectOptions")
+                {
+                    arguments.Add(new UpdateObjectOptions { IfMetagenerationMatch = 1 });
+                }
+                else if (item.ParameterType.Name is "DeleteObjectOptions")
+                {
+                    arguments.Add(new DeleteObjectOptions { IfGenerationMatch = Generation });
+                }
+                else if (item.ParameterType.Name is "PatchObjectOptions")
+                {
+                    arguments.Add(new PatchObjectOptions { IfMetagenerationMatch = 1 });
                 }
                 else
                 {
