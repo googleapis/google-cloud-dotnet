@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.1.0, released 2022-10-06
+
+### New features
+
+- Added support for Private Trust to Certificate Manager API ([commit 9722cb7](https://github.com/googleapis/google-cloud-dotnet/commit/9722cb7981d69eda8f759a01b0fd72dbd9c28819))
+
+### Documentation improvements
+
+- See https://cloud.google.com/certificate-manager/docs/deploy-google-managed-cas ([commit 9722cb7](https://github.com/googleapis/google-cloud-dotnet/commit/9722cb7981d69eda8f759a01b0fd72dbd9c28819))
+
 ## Version 2.0.0, released 2022-09-15
 
 No API surface changes; just dependency updates and promotion to GA.
