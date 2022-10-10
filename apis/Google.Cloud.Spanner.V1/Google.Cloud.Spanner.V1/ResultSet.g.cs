@@ -36,24 +36,26 @@ namespace Google.Cloud.Spanner.V1 {
             "ci52MS5SZXN1bHRTZXRNZXRhZGF0YRImCgZ2YWx1ZXMYAiADKAsyFi5nb29n",
             "bGUucHJvdG9idWYuVmFsdWUSFQoNY2h1bmtlZF92YWx1ZRgDIAEoCBIUCgxy",
             "ZXN1bWVfdG9rZW4YBCABKAwSMAoFc3RhdHMYBSABKAsyIS5nb29nbGUuc3Bh",
-            "bm5lci52MS5SZXN1bHRTZXRTdGF0cyJ5ChFSZXN1bHRTZXRNZXRhZGF0YRIv",
-            "Cghyb3dfdHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5",
-            "cGUSMwoLdHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5U",
-            "cmFuc2FjdGlvbiK5AQoOUmVzdWx0U2V0U3RhdHMSMAoKcXVlcnlfcGxhbhgB",
-            "IAEoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlF1ZXJ5UGxhbhIsCgtxdWVyeV9z",
-            "dGF0cxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSGQoPcm93X2Nv",
-            "dW50X2V4YWN0GAMgASgDSAASHwoVcm93X2NvdW50X2xvd2VyX2JvdW5kGAQg",
-            "ASgDSABCCwoJcm93X2NvdW50QrcBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFC",
-            "DlJlc3VsdFNldFByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvc3Bhbm5lci92MTtzcGFubmVy+AEBqgIXR29vZ2xlLkNs",
-            "b3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdv",
-            "b2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
+            "bm5lci52MS5SZXN1bHRTZXRTdGF0cyK3AQoRUmVzdWx0U2V0TWV0YWRhdGES",
+            "LwoIcm93X3R5cGUYASABKAsyHS5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RU",
+            "eXBlEjMKC3RyYW5zYWN0aW9uGAIgASgLMh4uZ29vZ2xlLnNwYW5uZXIudjEu",
+            "VHJhbnNhY3Rpb24SPAoVdW5kZWNsYXJlZF9wYXJhbWV0ZXJzGAMgASgLMh0u",
+            "Z29vZ2xlLnNwYW5uZXIudjEuU3RydWN0VHlwZSK5AQoOUmVzdWx0U2V0U3Rh",
+            "dHMSMAoKcXVlcnlfcGxhbhgBIAEoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlF1",
+            "ZXJ5UGxhbhIsCgtxdWVyeV9zdGF0cxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJ1Y3QSGQoPcm93X2NvdW50X2V4YWN0GAMgASgDSAASHwoVcm93X2Nv",
+            "dW50X2xvd2VyX2JvdW5kGAQgASgDSABCCwoJcm93X2NvdW50QrcBChVjb20u",
+            "Z29vZ2xlLnNwYW5uZXIudjFCDlJlc3VsdFNldFByb3RvUAFaOGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci92MTtzcGFu",
+            "bmVy+AEBqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xv",
+            "dWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction", "UndeclaredParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null, null)
           }));
     }
@@ -843,6 +845,7 @@ namespace Google.Cloud.Spanner.V1 {
     public ResultSetMetadata(ResultSetMetadata other) : this() {
       rowType_ = other.rowType_ != null ? other.rowType_.Clone() : null;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
+      undeclaredParameters_ = other.undeclaredParameters_ != null ? other.undeclaredParameters_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -890,6 +893,30 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "undeclared_parameters" field.</summary>
+    public const int UndeclaredParametersFieldNumber = 3;
+    private global::Google.Cloud.Spanner.V1.StructType undeclaredParameters_;
+    /// <summary>
+    /// A SQL query can be parameterized. In PLAN mode, these parameters can be
+    /// undeclared. This indicates the field names and types for those undeclared
+    /// parameters in the SQL query. For example, a SQL query like `"SELECT * FROM
+    /// Users where UserId = @userId and UserName = @userName "` could return a
+    /// `undeclared_parameters` value like:
+    ///
+    ///     "fields": [
+    ///       { "name": "UserId", "type": { "code": "INT64" } },
+    ///       { "name": "UserName", "type": { "code": "STRING" } },
+    ///     ]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.StructType UndeclaredParameters {
+      get { return undeclaredParameters_; }
+      set {
+        undeclaredParameters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -907,6 +934,7 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (!object.Equals(RowType, other.RowType)) return false;
       if (!object.Equals(Transaction, other.Transaction)) return false;
+      if (!object.Equals(UndeclaredParameters, other.UndeclaredParameters)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -916,6 +944,7 @@ namespace Google.Cloud.Spanner.V1 {
       int hash = 1;
       if (rowType_ != null) hash ^= RowType.GetHashCode();
       if (transaction_ != null) hash ^= Transaction.GetHashCode();
+      if (undeclaredParameters_ != null) hash ^= UndeclaredParameters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -942,6 +971,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Transaction);
       }
+      if (undeclaredParameters_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UndeclaredParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -960,6 +993,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Transaction);
       }
+      if (undeclaredParameters_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UndeclaredParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -975,6 +1012,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (transaction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transaction);
+      }
+      if (undeclaredParameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UndeclaredParameters);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -999,6 +1039,12 @@ namespace Google.Cloud.Spanner.V1 {
           Transaction = new global::Google.Cloud.Spanner.V1.Transaction();
         }
         Transaction.MergeFrom(other.Transaction);
+      }
+      if (other.undeclaredParameters_ != null) {
+        if (undeclaredParameters_ == null) {
+          UndeclaredParameters = new global::Google.Cloud.Spanner.V1.StructType();
+        }
+        UndeclaredParameters.MergeFrom(other.UndeclaredParameters);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1029,6 +1075,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(Transaction);
             break;
           }
+          case 26: {
+            if (undeclaredParameters_ == null) {
+              UndeclaredParameters = new global::Google.Cloud.Spanner.V1.StructType();
+            }
+            input.ReadMessage(UndeclaredParameters);
+            break;
+          }
         }
       }
     #endif
@@ -1056,6 +1109,13 @@ namespace Google.Cloud.Spanner.V1 {
               Transaction = new global::Google.Cloud.Spanner.V1.Transaction();
             }
             input.ReadMessage(Transaction);
+            break;
+          }
+          case 26: {
+            if (undeclaredParameters_ == null) {
+              UndeclaredParameters = new global::Google.Cloud.Spanner.V1.StructType();
+            }
+            input.ReadMessage(UndeclaredParameters);
             break;
           }
         }
