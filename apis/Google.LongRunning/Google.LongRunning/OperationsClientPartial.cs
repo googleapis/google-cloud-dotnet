@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,9 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using mel = Microsoft.Extensions.Logging;
+using wkt = Google.Protobuf.WellKnownTypes;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
+using System.Collections.Generic;
+using Google.Protobuf;
 
 namespace Google.LongRunning
 {
@@ -102,6 +107,143 @@ namespace Google.LongRunning
             _clock = clientHelper.Clock;
             _scheduler = clientHelper.Scheduler;
             _defaultPollSettings = effectiveSettings?.DefaultPollSettings;
+        }
+
+        /// <summary>
+        /// Constructs a client wrapper for the Operations service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="OperationsSettings"/> used within this client.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        /// <param name="modifiers"></param>
+        public OperationsClientImpl(OperationsClientCallModifierCollection modifiers, Operations.OperationsClient grpcClient, OperationsSettings settings, mel::ILogger logger)
+        {
+            GrpcClient = grpcClient;
+            OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
+            GaxPreconditions.CheckNotNull(modifiers, nameof(modifiers));
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListOperations = modifiers.ListOperationsModifier(clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>("ListOperations", grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings));
+            Modify_ApiCall(ref _callListOperations);
+            Modify_ListOperationsApiCall(ref _callListOperations);
+            _callGetOperation = modifiers.GetOperationModifier(clientHelper.BuildApiCall<GetOperationRequest, Operation>("GetOperation", grpcClient.GetOperationAsync, grpcClient.GetOperation, effectiveSettings.GetOperationSettings));
+            Modify_ApiCall(ref _callGetOperation);
+            Modify_GetOperationApiCall(ref _callGetOperation);
+            _callDeleteOperation = modifiers.DeleteOperationModifier(clientHelper.BuildApiCall<DeleteOperationRequest, wkt::Empty>("DeleteOperation", grpcClient.DeleteOperationAsync, grpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings));
+            Modify_ApiCall(ref _callDeleteOperation);
+            Modify_DeleteOperationApiCall(ref _callDeleteOperation);
+            _callCancelOperation = modifiers.CancelOperationModifier(clientHelper.BuildApiCall<CancelOperationRequest, wkt::Empty>("CancelOperation", grpcClient.CancelOperationAsync, grpcClient.CancelOperation, effectiveSettings.CancelOperationSettings));
+            Modify_ApiCall(ref _callCancelOperation);
+            Modify_CancelOperationApiCall(ref _callCancelOperation);
+            _callWaitOperation = modifiers.WaitOperationModifier(clientHelper.BuildApiCall<WaitOperationRequest, Operation>("WaitOperation", grpcClient.WaitOperationAsync, grpcClient.WaitOperation, effectiveSettings.WaitOperationSettings));
+            Modify_ApiCall(ref _callWaitOperation);
+            Modify_WaitOperationApiCall(ref _callWaitOperation);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public class OperationsClientCallModifierCollection
+        {
+            // Note: the delegate declared below could be put into GAX.
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <typeparam name="TRequest"></typeparam>
+            /// <typeparam name="TResponse"></typeparam>
+            /// <param name="call"></param>
+            /// <returns></returns>
+            public delegate ApiCall<TRequest, TResponse> Modifier<TRequest, TResponse>(ApiCall<TRequest, TResponse> call)
+                where TRequest : class, IMessage<TRequest>
+                where TResponse : class, IMessage<TResponse>;
+
+            /// <summary>
+            /// 
+            /// </summary>
+            public static OperationsClientCallModifierCollection Default { get; } = new OperationsClientCallModifierCollection(
+                call => call.WithGoogleRequestParam("name", request => request.Name),
+                call => call.WithGoogleRequestParam("name", request => request.Name),
+                call => call.WithGoogleRequestParam("name", request => request.Name),
+                call => call.WithGoogleRequestParam("name", request => request.Name),
+                call => call);
+
+            private OperationsClientCallModifierCollection(
+                Modifier<ListOperationsRequest, ListOperationsResponse> listOperationsModifier,
+                Modifier<GetOperationRequest, Operation> getOperationModifier,
+                Modifier<DeleteOperationRequest, wkt::Empty> deleteOperationModifier,
+                Modifier<CancelOperationRequest, wkt::Empty> cancelOperationModifier,
+                Modifier<WaitOperationRequest, Operation> waitOperationModifier)
+            {
+                ListOperationsModifier = listOperationsModifier;
+                GetOperationModifier = getOperationModifier;
+                DeleteOperationModifier = deleteOperationModifier;
+                CancelOperationModifier = cancelOperationModifier;
+                WaitOperationModifier = waitOperationModifier;
+            }
+
+            internal Modifier<ListOperationsRequest, ListOperationsResponse> ListOperationsModifier { get; }
+            internal Modifier<GetOperationRequest, Operation> GetOperationModifier { get; }
+            internal Modifier<DeleteOperationRequest, wkt::Empty> DeleteOperationModifier { get; }
+            internal Modifier<CancelOperationRequest, wkt::Empty> CancelOperationModifier { get; }
+            internal Modifier<WaitOperationRequest, Operation> WaitOperationModifier { get; }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="modifier"></param>
+            /// <returns></returns>
+            public OperationsClientCallModifierCollection WithListOperationsModifier(
+                Modifier<ListOperationsRequest, ListOperationsResponse> modifier) =>
+                new OperationsClientCallModifierCollection(GaxPreconditions.CheckNotNull(modifier, nameof(modifier)),
+                    GetOperationModifier, DeleteOperationModifier, CancelOperationModifier, WaitOperationModifier);
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="modifier"></param>
+            /// <returns></returns>
+            public OperationsClientCallModifierCollection WithGetOperationModifier(
+                Modifier<GetOperationRequest, Operation> modifier) =>
+                new OperationsClientCallModifierCollection(
+                    ListOperationsModifier,
+                    GaxPreconditions.CheckNotNull(modifier, nameof(modifier)),
+                    DeleteOperationModifier, CancelOperationModifier, WaitOperationModifier);
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="modifier"></param>
+            /// <returns></returns>
+            public OperationsClientCallModifierCollection WithDeleteOperationModifier(
+                Modifier<DeleteOperationRequest, wkt::Empty> modifier) =>
+                new OperationsClientCallModifierCollection(
+                    ListOperationsModifier, GetOperationModifier,
+                    GaxPreconditions.CheckNotNull(modifier, nameof(modifier)),
+                    CancelOperationModifier, WaitOperationModifier);
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="modifier"></param>
+            /// <returns></returns>
+            public OperationsClientCallModifierCollection WithCancelOperationModifier(
+                Modifier<CancelOperationRequest, wkt::Empty> modifier) =>
+                new OperationsClientCallModifierCollection(
+                    ListOperationsModifier, GetOperationModifier, DeleteOperationModifier,
+                    GaxPreconditions.CheckNotNull(modifier, nameof(modifier)),
+                    WaitOperationModifier);
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="modifier"></param>
+            /// <returns></returns>
+            public OperationsClientCallModifierCollection WithCancelOperationModifier(
+                Modifier<WaitOperationRequest, Operation> modifier) =>
+                new OperationsClientCallModifierCollection(
+                    ListOperationsModifier, GetOperationModifier, DeleteOperationModifier, CancelOperationModifier,
+                    GaxPreconditions.CheckNotNull(modifier, nameof(modifier)));
         }
     }
 }
