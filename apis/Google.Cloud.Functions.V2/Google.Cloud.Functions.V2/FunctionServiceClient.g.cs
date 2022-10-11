@@ -32,6 +32,7 @@ using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using Google.LongRunning;
 
 namespace Google.Cloud.Functions.V2
 {
@@ -1355,6 +1356,11 @@ namespace Google.Cloud.Functions.V2
     /// </remarks>
     public sealed partial class FunctionServiceClientImpl : FunctionServiceClient
     {
+        private static readonly OperationsClientImpl.OperationsClientCallModifierCollection s_operationsClientCallModifiers =
+            OperationsClientImpl.OperationsClientCallModifierCollection.Default
+                .WithGetOperationModifier(call => call.WithGoogleRequestParam("name", req => req.Name.Substring(0, 3)))
+                .WithListOperationsModifier(call => call);
+
         private readonly gaxgrpc::ApiCall<GetFunctionRequest, Function> _callGetFunction;
 
         private readonly gaxgrpc::ApiCall<ListFunctionsRequest, ListFunctionsResponse> _callListFunctions;
@@ -1382,9 +1388,9 @@ namespace Google.Cloud.Functions.V2
             GrpcClient = grpcClient;
             FunctionServiceSettings effectiveSettings = settings ?? FunctionServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            CreateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings, logger);
-            UpdateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings, logger);
-            DeleteFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings, logger);
+            CreateFunctionOperationsClient = new lro::OperationsClientImpl(s_operationsClientCallModifiers, grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings, logger);
+            UpdateFunctionOperationsClient = new lro::OperationsClientImpl(s_operationsClientCallModifiers, grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings, logger);
+            DeleteFunctionOperationsClient = new lro::OperationsClientImpl(s_operationsClientCallModifiers, grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetFunction = clientHelper.BuildApiCall<GetFunctionRequest, Function>("GetFunction", grpcClient.GetFunctionAsync, grpcClient.GetFunction, effectiveSettings.GetFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
