@@ -1234,6 +1234,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
     }
 
+    public partial class RetrieveLegacySecretKeyRequest
+    {
+        /// <summary><see cref="KeyName"/>-typed view over the <see cref="Key"/> resource name property.</summary>
+        public KeyName KeyAsKeyName
+        {
+            get => string.IsNullOrEmpty(Key) ? null : KeyName.Parse(Key, allowUnparsed: true);
+            set => Key = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetKeyRequest
     {
         /// <summary>

@@ -70,6 +70,12 @@
                 "MigrateKeyAsync"
               ]
             },
+            "RetrieveLegacySecretKey": {
+              "methods": [
+                "RetrieveLegacySecretKey",
+                "RetrieveLegacySecretKeyAsync"
+              ]
+            },
             "SearchRelatedAccountGroupMemberships": {
               "methods": [
                 "SearchRelatedAccountGroupMemberships",

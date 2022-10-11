@@ -196,7 +196,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.PasswordCorrect,
                 Reasons =
                 {
-                    AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
+                    AnnotateAssessmentRequest.Types.Reason.RefundFraud,
                 },
                 HashedAccountId = proto::ByteString.CopyFromUtf8("hashed_account_id016ad986"),
             };
@@ -218,7 +218,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.PasswordCorrect,
                 Reasons =
                 {
-                    AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
+                    AnnotateAssessmentRequest.Types.Reason.RefundFraud,
                 },
                 HashedAccountId = proto::ByteString.CopyFromUtf8("hashed_account_id016ad986"),
             };
@@ -370,6 +370,126 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             Key responseCallSettings = await client.CreateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Key responseCancellationToken = await client.CreateKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetrieveLegacySecretKeyRequestObject()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse response = client.RetrieveLegacySecretKey(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveLegacySecretKeyRequestObjectAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveLegacySecretKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse responseCallSettings = await client.RetrieveLegacySecretKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveLegacySecretKeyResponse responseCancellationToken = await client.RetrieveLegacySecretKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetrieveLegacySecretKey()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse response = client.RetrieveLegacySecretKey(request.Key);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveLegacySecretKeyAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveLegacySecretKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse responseCallSettings = await client.RetrieveLegacySecretKeyAsync(request.Key, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveLegacySecretKeyResponse responseCancellationToken = await client.RetrieveLegacySecretKeyAsync(request.Key, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetrieveLegacySecretKeyResourceNames()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse response = client.RetrieveLegacySecretKey(request.KeyAsKeyName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveLegacySecretKeyResourceNamesAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            RetrieveLegacySecretKeyResponse expectedResponse = new RetrieveLegacySecretKeyResponse
+            {
+                LegacySecretKey = "legacy_secret_key4e75b822",
+            };
+            mockGrpcClient.Setup(x => x.RetrieveLegacySecretKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveLegacySecretKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
+            RetrieveLegacySecretKeyResponse responseCallSettings = await client.RetrieveLegacySecretKeyAsync(request.KeyAsKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveLegacySecretKeyResponse responseCancellationToken = await client.RetrieveLegacySecretKeyAsync(request.KeyAsKeyName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
