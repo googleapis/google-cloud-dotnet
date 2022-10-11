@@ -80,6 +80,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_RetrieveLegacySecretKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_RetrieveLegacySecretKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_UpdateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest.Parser));
@@ -137,6 +141,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         "ListKeys",
         __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse> __Method_RetrieveLegacySecretKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveLegacySecretKey",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_RetrieveLegacySecretKeyRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_RetrieveLegacySecretKeyResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key> __Method_GetKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(
@@ -262,6 +274,20 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
 
       /// <summary>
+      /// Returns the secret key related to the specified public key.
+      /// You must use the legacy secret key only in a 3rd party integration with
+      /// legacy reCAPTCHA.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKey(global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Returns the specified key.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -340,7 +366,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
 
       /// <summary>
-      /// Get the memberships in a group of related accounts.
+      /// Get memberships in a group of related accounts.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -587,6 +613,62 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse> ListKeysAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListKeys, null, options, request);
+      }
+      /// <summary>
+      /// Returns the secret key related to the specified public key.
+      /// You must use the legacy secret key only in a 3rd party integration with
+      /// legacy reCAPTCHA.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveLegacySecretKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the secret key related to the specified public key.
+      /// You must use the legacy secret key only in a 3rd party integration with
+      /// legacy reCAPTCHA.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveLegacySecretKey, null, options, request);
+      }
+      /// <summary>
+      /// Returns the secret key related to the specified public key.
+      /// You must use the legacy secret key only in a 3rd party integration with
+      /// legacy reCAPTCHA.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveLegacySecretKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the secret key related to the specified public key.
+      /// You must use the legacy secret key only in a 3rd party integration with
+      /// legacy reCAPTCHA.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveLegacySecretKey, null, options, request);
       }
       /// <summary>
       /// Returns the specified key.
@@ -901,7 +983,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListRelatedAccountGroups, null, options, request);
       }
       /// <summary>
-      /// Get the memberships in a group of related accounts.
+      /// Get memberships in a group of related accounts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -914,7 +996,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return ListRelatedAccountGroupMemberships(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the memberships in a group of related accounts.
+      /// Get memberships in a group of related accounts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -925,7 +1007,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListRelatedAccountGroupMemberships, null, options, request);
       }
       /// <summary>
-      /// Get the memberships in a group of related accounts.
+      /// Get memberships in a group of related accounts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -938,7 +1020,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return ListRelatedAccountGroupMembershipsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the memberships in a group of related accounts.
+      /// Get memberships in a group of related accounts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1014,6 +1096,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_AnnotateAssessment, serviceImpl.AnnotateAssessment)
           .AddMethod(__Method_CreateKey, serviceImpl.CreateKey)
           .AddMethod(__Method_ListKeys, serviceImpl.ListKeys)
+          .AddMethod(__Method_RetrieveLegacySecretKey, serviceImpl.RetrieveLegacySecretKey)
           .AddMethod(__Method_GetKey, serviceImpl.GetKey)
           .AddMethod(__Method_UpdateKey, serviceImpl.UpdateKey)
           .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey)
@@ -1035,6 +1118,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_AnnotateAssessment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse>(serviceImpl.AnnotateAssessment));
       serviceBinder.AddMethod(__Method_CreateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.CreateKey));
       serviceBinder.AddMethod(__Method_ListKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse>(serviceImpl.ListKeys));
+      serviceBinder.AddMethod(__Method_RetrieveLegacySecretKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse>(serviceImpl.RetrieveLegacySecretKey));
       serviceBinder.AddMethod(__Method_GetKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.GetKey));
       serviceBinder.AddMethod(__Method_UpdateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.UpdateKey));
       serviceBinder.AddMethod(__Method_DeleteKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKey));

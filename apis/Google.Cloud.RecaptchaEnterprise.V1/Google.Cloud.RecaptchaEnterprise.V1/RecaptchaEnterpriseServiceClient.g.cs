@@ -53,6 +53,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             AnnotateAssessmentSettings = existing.AnnotateAssessmentSettings;
             CreateKeySettings = existing.CreateKeySettings;
             ListKeysSettings = existing.ListKeysSettings;
+            RetrieveLegacySecretKeySettings = existing.RetrieveLegacySecretKeySettings;
             GetKeySettings = existing.GetKeySettings;
             UpdateKeySettings = existing.UpdateKeySettings;
             DeleteKeySettings = existing.DeleteKeySettings;
@@ -116,6 +117,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKey</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RetrieveLegacySecretKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -536,9 +550,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -558,9 +572,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -580,9 +594,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -598,9 +612,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -620,9 +634,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -642,9 +656,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
-        /// whether the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -695,6 +709,135 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(RetrieveLegacySecretKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(RetrieveLegacySecretKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(RetrieveLegacySecretKeyRequest request, st::CancellationToken cancellationToken) =>
+            RetrieveLegacySecretKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(string key, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveLegacySecretKey(new RetrieveLegacySecretKeyRequest
+            {
+                Key = gax::GaxPreconditions.CheckNotNullOrEmpty(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(string key, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveLegacySecretKeyAsync(new RetrieveLegacySecretKeyRequest
+            {
+                Key = gax::GaxPreconditions.CheckNotNullOrEmpty(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(string key, st::CancellationToken cancellationToken) =>
+            RetrieveLegacySecretKeyAsync(key, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(KeyName key, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveLegacySecretKey(new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(KeyName key, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveLegacySecretKeyAsync(new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The public key name linked to the requested secret key in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(KeyName key, st::CancellationToken cancellationToken) =>
+            RetrieveLegacySecretKeyAsync(key, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the specified key.
@@ -961,8 +1104,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -986,8 +1129,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1011,8 +1154,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1036,8 +1179,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1058,7 +1201,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1067,7 +1210,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1078,7 +1221,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name for the related account group in the format
@@ -1103,7 +1246,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name for the related account group in the format
@@ -1130,7 +1273,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name for the related account group in the format
@@ -1155,7 +1298,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name for the related account group in the format
@@ -1205,13 +1348,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group
-        /// memberships from, in the format "projects/{project}".
+        /// Required. The name of the project to search related account group memberships from.
+        /// Specify the project name in the following format: "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous CreateAssessment or AnnotateAssessment call.
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1236,13 +1379,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group
-        /// memberships from, in the format "projects/{project}".
+        /// Required. The name of the project to search related account group memberships from.
+        /// Specify the project name in the following format: "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous CreateAssessment or AnnotateAssessment call.
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1269,13 +1412,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group
-        /// memberships from, in the format "projects/{project}".
+        /// Required. The name of the project to search related account group memberships from.
+        /// Specify the project name in the following format: "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous CreateAssessment or AnnotateAssessment call.
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1300,13 +1443,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group
-        /// memberships from, in the format "projects/{project}".
+        /// Required. The name of the project to search related account group memberships from.
+        /// Specify the project name in the following format: "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous CreateAssessment or AnnotateAssessment call.
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1343,6 +1486,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         private readonly gaxgrpc::ApiCall<CreateKeyRequest, Key> _callCreateKey;
 
         private readonly gaxgrpc::ApiCall<ListKeysRequest, ListKeysResponse> _callListKeys;
+
+        private readonly gaxgrpc::ApiCall<RetrieveLegacySecretKeyRequest, RetrieveLegacySecretKeyResponse> _callRetrieveLegacySecretKey;
 
         private readonly gaxgrpc::ApiCall<GetKeyRequest, Key> _callGetKey;
 
@@ -1386,6 +1531,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callListKeys = clientHelper.BuildApiCall<ListKeysRequest, ListKeysResponse>("ListKeys", grpcClient.ListKeysAsync, grpcClient.ListKeys, effectiveSettings.ListKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListKeys);
             Modify_ListKeysApiCall(ref _callListKeys);
+            _callRetrieveLegacySecretKey = clientHelper.BuildApiCall<RetrieveLegacySecretKeyRequest, RetrieveLegacySecretKeyResponse>("RetrieveLegacySecretKey", grpcClient.RetrieveLegacySecretKeyAsync, grpcClient.RetrieveLegacySecretKey, effectiveSettings.RetrieveLegacySecretKeySettings).WithGoogleRequestParam("key", request => request.Key);
+            Modify_ApiCall(ref _callRetrieveLegacySecretKey);
+            Modify_RetrieveLegacySecretKeyApiCall(ref _callRetrieveLegacySecretKey);
             _callGetKey = clientHelper.BuildApiCall<GetKeyRequest, Key>("GetKey", grpcClient.GetKeyAsync, grpcClient.GetKey, effectiveSettings.GetKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetKey);
             Modify_GetKeyApiCall(ref _callGetKey);
@@ -1423,6 +1571,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_ListKeysApiCall(ref gaxgrpc::ApiCall<ListKeysRequest, ListKeysResponse> call);
 
+        partial void Modify_RetrieveLegacySecretKeyApiCall(ref gaxgrpc::ApiCall<RetrieveLegacySecretKeyRequest, RetrieveLegacySecretKeyResponse> call);
+
         partial void Modify_GetKeyApiCall(ref gaxgrpc::ApiCall<GetKeyRequest, Key> call);
 
         partial void Modify_UpdateKeyApiCall(ref gaxgrpc::ApiCall<UpdateKeyRequest, Key> call);
@@ -1451,6 +1601,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_CreateKeyRequest(ref CreateKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListKeysRequest(ref ListKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RetrieveLegacySecretKeyRequest(ref RetrieveLegacySecretKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetKeyRequest(ref GetKeyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1564,6 +1716,34 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_ListKeysRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListKeysRequest, ListKeysResponse, Key>(_callListKeys, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RetrieveLegacySecretKeyResponse RetrieveLegacySecretKey(RetrieveLegacySecretKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveLegacySecretKeyRequest(ref request, ref callSettings);
+            return _callRetrieveLegacySecretKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the secret key related to the specified public key.
+        /// You must use the legacy secret key only in a 3rd party integration with
+        /// legacy reCAPTCHA.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RetrieveLegacySecretKeyResponse> RetrieveLegacySecretKeyAsync(RetrieveLegacySecretKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveLegacySecretKeyRequest(ref request, ref callSettings);
+            return _callRetrieveLegacySecretKey.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1723,7 +1903,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1735,7 +1915,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
 
         /// <summary>
-        /// Get the memberships in a group of related accounts.
+        /// Get memberships in a group of related accounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

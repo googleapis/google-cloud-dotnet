@@ -354,6 +354,93 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RetrieveLegacySecretKey</summary>
+        public void RetrieveLegacySecretKeyRequestObject()
+        {
+            // Snippet: RetrieveLegacySecretKey(RetrieveLegacySecretKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = recaptchaEnterpriseServiceClient.RetrieveLegacySecretKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveLegacySecretKeyAsync</summary>
+        public async Task RetrieveLegacySecretKeyRequestObjectAsync()
+        {
+            // Snippet: RetrieveLegacySecretKeyAsync(RetrieveLegacySecretKeyRequest, CallSettings)
+            // Additional: RetrieveLegacySecretKeyAsync(RetrieveLegacySecretKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveLegacySecretKeyRequest request = new RetrieveLegacySecretKeyRequest
+            {
+                KeyAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = await recaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveLegacySecretKey</summary>
+        public void RetrieveLegacySecretKey()
+        {
+            // Snippet: RetrieveLegacySecretKey(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string key = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = recaptchaEnterpriseServiceClient.RetrieveLegacySecretKey(key);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveLegacySecretKeyAsync</summary>
+        public async Task RetrieveLegacySecretKeyAsync()
+        {
+            // Snippet: RetrieveLegacySecretKeyAsync(string, CallSettings)
+            // Additional: RetrieveLegacySecretKeyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string key = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = await recaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync(key);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveLegacySecretKey</summary>
+        public void RetrieveLegacySecretKeyResourceNames()
+        {
+            // Snippet: RetrieveLegacySecretKey(KeyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName key = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = recaptchaEnterpriseServiceClient.RetrieveLegacySecretKey(key);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveLegacySecretKeyAsync</summary>
+        public async Task RetrieveLegacySecretKeyResourceNamesAsync()
+        {
+            // Snippet: RetrieveLegacySecretKeyAsync(KeyName, CallSettings)
+            // Additional: RetrieveLegacySecretKeyAsync(KeyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName key = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            RetrieveLegacySecretKeyResponse response = await recaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync(key);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetKey</summary>
         public void GetKeyRequestObject()
         {
