@@ -160,10 +160,10 @@ namespace Google.Maps.AddressValidation.V1 {
     /// Supported regions can be found in the
     /// [FAQ](https://developers.google.com/maps/documentation/address-validation/faq#which_regions_are_currently_supported).
     ///
-    /// The [language_code][google.type.PostalAddress.language_code] value for the
-    /// given address is not yet used. The validated address result will be
-    /// populated based on the preferred language for the given address, as
-    /// identified by the system.
+    /// The [language_code][google.type.PostalAddress.language_code] value in the
+    /// input address is reserved for future uses and is ignored today. The
+    /// validated address result will be populated based on the preferred language
+    /// for the given address, as identified by the system.
     ///
     /// The Address Validation API ignores the values in
     /// [recipients][google.type.PostalAddress.recipients] and
@@ -216,9 +216,6 @@ namespace Google.Maps.AddressValidation.V1 {
     /// at least two [google.type.PostalAddress.address_lines] where the first line
     /// contains the street number and name and the second line contains the city,
     /// state, and zip code.
-    ///
-    /// Warning: though this option will enable the USPS CASS compatible mode, the
-    /// Address Validation API is not yet officially CASS certified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1217,8 +1214,8 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int UspsDataFieldNumber = 5;
     private global::Google.Maps.AddressValidation.V1.UspsData uspsData_;
     /// <summary>
-    /// Extra deliverability flags provided by USPS. Only provided for US
-    /// addresses.
+    /// Extra deliverability flags provided by USPS. Only provided in region `US`
+    /// and `PR`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

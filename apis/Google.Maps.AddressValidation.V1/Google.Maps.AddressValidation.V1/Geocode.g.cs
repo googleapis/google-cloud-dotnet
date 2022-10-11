@@ -199,9 +199,7 @@ namespace Google.Maps.AddressValidation.V1 {
     private readonly pbc::RepeatedField<string> placeTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The type(s) of place that the input geocoded to. For example,
-    /// `['locality', 'political']`. The full list of types
-    /// can be
-    /// found
+    /// `['locality', 'political']`. The full list of types can be found
     /// [here](https://developers.google.com/maps/documentation/geocoding/overview#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
