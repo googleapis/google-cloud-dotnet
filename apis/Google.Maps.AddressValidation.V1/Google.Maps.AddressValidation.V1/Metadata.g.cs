@@ -25,18 +25,18 @@ namespace Google.Maps.AddressValidation.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvbWFwcy9hZGRyZXNzdmFsaWRhdGlvbi92MS9tZXRhZGF0YS5w",
-            "cm90bxIgZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEizwEKD0Fk",
-            "ZHJlc3NNZXRhZGF0YRIVCghoaWdocmlzZRgBIAEoCEgAiAEBEhUKCGJ1c2lu",
-            "ZXNzGAIgASgISAGIAQESEwoGcG9fYm94GAMgASgISAKIAQESGQoMbXVsdGlf",
-            "ZmFtaWx5GAQgASgISAOIAQESGAoLcmVzaWRlbnRpYWwYBiABKAhIBIgBAUIL",
-            "CglfaGlnaHJpc2VCCwoJX2J1c2luZXNzQgkKB19wb19ib3hCDwoNX211bHRp",
-            "X2ZhbWlseUIOCgxfcmVzaWRlbnRpYWxCgwIKJGNvbS5nb29nbGUubWFwcy5h",
-            "ZGRyZXNzdmFsaWRhdGlvbi52MUINTWV0YWRhdGFQcm90b1ABWlFnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMvYWRkcmVzc3Zh",
-            "bGlkYXRpb24vdjE7YWRkcmVzc3ZhbGlkYXRpb274AQGiAgdHTVBBVlYxqgIg",
-            "R29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlkYXRpb24uVjHKAiBHb29nbGVcTWFw",
-            "c1xBZGRyZXNzVmFsaWRhdGlvblxWMeoCI0dvb2dsZTo6TWFwczo6QWRkcmVz",
-            "c1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
+            "cm90bxIgZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEi1wEKD0Fk",
+            "ZHJlc3NNZXRhZGF0YRIZCghoaWdocmlzZRgBIAEoCEICGAFIAIgBARIVCghi",
+            "dXNpbmVzcxgCIAEoCEgBiAEBEhMKBnBvX2JveBgDIAEoCEgCiAEBEh0KDG11",
+            "bHRpX2ZhbWlseRgEIAEoCEICGAFIA4gBARIYCgtyZXNpZGVudGlhbBgGIAEo",
+            "CEgEiAEBQgsKCV9oaWdocmlzZUILCglfYnVzaW5lc3NCCQoHX3BvX2JveEIP",
+            "Cg1fbXVsdGlfZmFtaWx5Qg4KDF9yZXNpZGVudGlhbEKDAgokY29tLmdvb2ds",
+            "ZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQg1NZXRhZGF0YVByb3RvUAFa",
+            "UWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFwcy9h",
+            "ZGRyZXNzdmFsaWRhdGlvbi92MTthZGRyZXNzdmFsaWRhdGlvbvgBAaICB0dN",
+            "UEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRhdGlvbi5WMcoCIEdv",
+            "b2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIjR29vZ2xlOjpNYXBz",
+            "OjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +48,7 @@ namespace Google.Maps.AddressValidation.V1 {
   }
   #region Messages
   /// <summary>
-  /// The metadata for the address
+  /// The metadata for the address.
   /// </summary>
   public sealed partial class AddressMetadata : pb::IMessage<AddressMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -106,7 +106,12 @@ namespace Google.Maps.AddressValidation.V1 {
     /// <summary>
     /// Indicates that this address is a high-rise building.
     /// If unset, indicates that the value is unknown.
+    ///
+    /// DEPRECATED: Please use
+    /// [`address_record_type`](google.maps.addressvalidation.v1.ValidationResult.usps_data.address_record_type)
+    /// instead. This field will be removed with the GA release.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Highrise {
@@ -117,12 +122,14 @@ namespace Google.Maps.AddressValidation.V1 {
       }
     }
     /// <summary>Gets whether the "highrise" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasHighrise {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "highrise" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearHighrise() {
@@ -191,9 +198,12 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int MultiFamilyFieldNumber = 4;
     private bool multiFamily_;
     /// <summary>
-    /// Indicates that the address is of a multi_family building.
+    /// Indicates that the address is of a multi-family building.
     /// If unset, indicates that the value is unknown.
+    ///
+    /// DEPRECATED: this field will be removed with the GA release.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MultiFamily {
@@ -204,12 +214,14 @@ namespace Google.Maps.AddressValidation.V1 {
       }
     }
     /// <summary>Gets whether the "multi_family" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMultiFamily {
       get { return (_hasBits0 & 8) != 0; }
     }
     /// <summary>Clears the value of the "multi_family" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMultiFamily() {

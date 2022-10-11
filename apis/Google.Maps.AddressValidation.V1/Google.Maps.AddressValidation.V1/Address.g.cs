@@ -25,33 +25,34 @@ namespace Google.Maps.AddressValidation.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvbWFwcy9hZGRyZXNzdmFsaWRhdGlvbi92MS9hZGRyZXNzLnBy",
-            "b3RvEiBnb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MRogZ29vZ2xl",
-            "L3R5cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8iiQIKB0FkZHJlc3MSGQoRZm9y",
-            "bWF0dGVkX2FkZHJlc3MYAiABKAkSMgoOcG9zdGFsX2FkZHJlc3MYAyABKAsy",
-            "Gi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzEk4KEmFkZHJlc3NfY29tcG9u",
-            "ZW50cxgEIAMoCzIyLmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYx",
-            "LkFkZHJlc3NDb21wb25lbnQSHwoXbWlzc2luZ19jb21wb25lbnRfdHlwZXMY",
-            "BSADKAkSIwobdW5jb25maXJtZWRfY29tcG9uZW50X3R5cGVzGAYgAygJEhkK",
-            "EXVucmVzb2x2ZWRfdG9rZW5zGAcgAygJIq4DChBBZGRyZXNzQ29tcG9uZW50",
-            "EkcKDmNvbXBvbmVudF9uYW1lGAEgASgLMi8uZ29vZ2xlLm1hcHMuYWRkcmVz",
-            "c3ZhbGlkYXRpb24udjEuQ29tcG9uZW50TmFtZRIWCg5jb21wb25lbnRfdHlw",
-            "ZRgCIAEoCRJgChJjb25maXJtYXRpb25fbGV2ZWwYAyABKA4yRC5nb29nbGUu",
-            "bWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5BZGRyZXNzQ29tcG9uZW50LkNv",
-            "bmZpcm1hdGlvbkxldmVsEhAKCGluZmVycmVkGAQgASgIEhcKD3NwZWxsX2Nv",
-            "cnJlY3RlZBgFIAEoCBIQCghyZXBsYWNlZBgGIAEoCBISCgp1bmV4cGVjdGVk",
-            "GAcgASgIIoUBChFDb25maXJtYXRpb25MZXZlbBIiCh5DT05GSVJNQVRJT05f",
-            "TEVWRUxfVU5TUEVDSUZJRUQQABINCglDT05GSVJNRUQQARIdChlVTkNPTkZJ",
-            "Uk1FRF9CVVRfUExBVVNJQkxFEAISHgoaVU5DT05GSVJNRURfQU5EX1NVU1BJ",
-            "Q0lPVVMQAyI0Cg1Db21wb25lbnROYW1lEgwKBHRleHQYASABKAkSFQoNbGFu",
-            "Z3VhZ2VfY29kZRgCIAEoCUKCAgokY29tLmdvb2dsZS5tYXBzLmFkZHJlc3N2",
-            "YWxpZGF0aW9uLnYxQgxBZGRyZXNzUHJvdG9QAVpRZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tYXBzL2FkZHJlc3N2YWxpZGF0aW9u",
-            "L3YxO2FkZHJlc3N2YWxpZGF0aW9u+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
-            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
-            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
-            "aW9uOjpWMWIGcHJvdG8z"));
+            "b3RvEiBnb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MRofZ29vZ2xl",
+            "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxogZ29vZ2xlL3R5cGUvcG9zdGFs",
+            "X2FkZHJlc3MucHJvdG8ijgIKB0FkZHJlc3MSGQoRZm9ybWF0dGVkX2FkZHJl",
+            "c3MYAiABKAkSMgoOcG9zdGFsX2FkZHJlc3MYAyABKAsyGi5nb29nbGUudHlw",
+            "ZS5Qb3N0YWxBZGRyZXNzElMKEmFkZHJlc3NfY29tcG9uZW50cxgEIAMoCzIy",
+            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLkFkZHJlc3NDb21w",
+            "b25lbnRCA+BBBhIfChdtaXNzaW5nX2NvbXBvbmVudF90eXBlcxgFIAMoCRIj",
+            "Cht1bmNvbmZpcm1lZF9jb21wb25lbnRfdHlwZXMYBiADKAkSGQoRdW5yZXNv",
+            "bHZlZF90b2tlbnMYByADKAkirgMKEEFkZHJlc3NDb21wb25lbnQSRwoOY29t",
+            "cG9uZW50X25hbWUYASABKAsyLy5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRh",
+            "dGlvbi52MS5Db21wb25lbnROYW1lEhYKDmNvbXBvbmVudF90eXBlGAIgASgJ",
+            "EmAKEmNvbmZpcm1hdGlvbl9sZXZlbBgDIAEoDjJELmdvb2dsZS5tYXBzLmFk",
+            "ZHJlc3N2YWxpZGF0aW9uLnYxLkFkZHJlc3NDb21wb25lbnQuQ29uZmlybWF0",
+            "aW9uTGV2ZWwSEAoIaW5mZXJyZWQYBCABKAgSFwoPc3BlbGxfY29ycmVjdGVk",
+            "GAUgASgIEhAKCHJlcGxhY2VkGAYgASgIEhIKCnVuZXhwZWN0ZWQYByABKAgi",
+            "hQEKEUNvbmZpcm1hdGlvbkxldmVsEiIKHkNPTkZJUk1BVElPTl9MRVZFTF9V",
+            "TlNQRUNJRklFRBAAEg0KCUNPTkZJUk1FRBABEh0KGVVOQ09ORklSTUVEX0JV",
+            "VF9QTEFVU0lCTEUQAhIeChpVTkNPTkZJUk1FRF9BTkRfU1VTUElDSU9VUxAD",
+            "IjQKDUNvbXBvbmVudE5hbWUSDAoEdGV4dBgBIAEoCRIVCg1sYW5ndWFnZV9j",
+            "b2RlGAIgASgJQoICCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
+            "b24udjFCDEFkZHJlc3NQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRk",
+            "cmVzc3ZhbGlkYXRpb274AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRk",
+            "cmVzc1ZhbGlkYXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRh",
+            "dGlvblxWMeoCI0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Type.PostalAddressReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.Address), global::Google.Maps.AddressValidation.V1.Address.Parser, new[]{ "FormattedAddress", "PostalAddress", "AddressComponents", "MissingComponentTypes", "UnconfirmedComponentTypes", "UnresolvedTokens" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.AddressComponent), global::Google.Maps.AddressValidation.V1.AddressComponent.Parser, new[]{ "ComponentName", "ComponentType", "ConfirmationLevel", "Inferred", "SpellCorrected", "Replaced", "Unexpected" }, null, new[]{ typeof(global::Google.Maps.AddressValidation.V1.AddressComponent.Types.ConfirmationLevel) }, null, null),
@@ -154,6 +155,9 @@ namespace Google.Maps.AddressValidation.V1 {
     /// The individual address components of the formatted and corrected address,
     /// along with validation information. This provides information on the
     /// validation status of the individual components.
+    ///
+    /// Address components are not ordered in a particular way. DO NOT make any
+    /// assumptions on the ordering of the address components in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -171,8 +175,8 @@ namespace Google.Maps.AddressValidation.V1 {
     /// formatted mailing address but were not found in the input AND could
     /// not be inferred. Components of this type are not present in
     /// `formatted_address`, `postal_address`, or `address_components`. An
-    /// example might be `[‘street_number’, ‘route’]` for an input like
-    /// “Boulder, Colorado, 80301, USA.” The list of possible types can be found
+    /// example might be `['street_number', 'route']` for an input like
+    /// "Boulder, Colorado, 80301, USA." The list of possible types can be found
     /// [here](https://developers.google.com/maps/documentation/geocoding/overview#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

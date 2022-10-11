@@ -30,34 +30,35 @@ namespace Google.Maps.AddressValidation.V1 {
             "bRgCIAEoCRIbChNzZWNvbmRfYWRkcmVzc19saW5lGAMgASgJEhQKDHVyYmFu",
             "aXphdGlvbhgEIAEoCRIjChtjaXR5X3N0YXRlX3ppcF9hZGRyZXNzX2xpbmUY",
             "BSABKAkSDAoEY2l0eRgGIAEoCRINCgVzdGF0ZRgHIAEoCRIQCgh6aXBfY29k",
-            "ZRgIIAEoCRIaChJ6aXBfY29kZV9leHRlbnNpb24YCSABKAkizQUKCFVzcHNE",
+            "ZRgIIAEoCRIaChJ6aXBfY29kZV9leHRlbnNpb24YCSABKAki/AUKCFVzcHNE",
             "YXRhEksKFHN0YW5kYXJkaXplZF9hZGRyZXNzGAEgASgLMi0uZ29vZ2xlLm1h",
             "cHMuYWRkcmVzc3ZhbGlkYXRpb24udjEuVXNwc0FkZHJlc3MSGwoTZGVsaXZl",
             "cnlfcG9pbnRfY29kZRgCIAEoCRIiChpkZWxpdmVyeV9wb2ludF9jaGVja19k",
             "aWdpdBgDIAEoCRIYChBkcHZfY29uZmlybWF0aW9uGAQgASgJEhQKDGRwdl9m",
             "b290bm90ZRgFIAEoCRIQCghkcHZfY21yYRgGIAEoCRISCgpkcHZfdmFjYW50",
-            "GAcgASgJEhMKC2Rwdl9ub19zdGF0GAggASgJEh8KF2NhcnJpZXJfcm91dGVf",
-            "aW5kaWNhdG9yGAogASgJEhQKDGV3c19ub19tYXRjaBgLIAEoCBIYChBwb3N0",
-            "X29mZmljZV9jaXR5GAwgASgJEhkKEXBvc3Rfb2ZmaWNlX3N0YXRlGA0gASgJ",
-            "EhgKEGFiYnJldmlhdGVkX2NpdHkYDiABKAkSGAoQZmlwc19jb3VudHlfY29k",
-            "ZRgPIAEoCRIOCgZjb3VudHkYECABKAkSEwoLZWxvdF9udW1iZXIYESABKAkS",
-            "EQoJZWxvdF9mbGFnGBIgASgJEh0KFWxhY3NfbGlua19yZXR1cm5fY29kZRgT",
-            "IAEoCRIbChNsYWNzX2xpbmtfaW5kaWNhdG9yGBQgASgJEh8KF3BvX2JveF9v",
-            "bmx5X3Bvc3RhbF9jb2RlGBUgASgIEhoKEnN1aXRlbGlua19mb290bm90ZRgW",
-            "IAEoCRIWCg5wbWJfZGVzaWduYXRvchgXIAEoCRISCgpwbWJfbnVtYmVyGBgg",
-            "ASgJEhsKE2FkZHJlc3NfcmVjb3JkX3R5cGUYGSABKAkSFwoPZGVmYXVsdF9h",
-            "ZGRyZXNzGBogASgIEhUKDWVycm9yX21lc3NhZ2UYGyABKAlCgwIKJGNvbS5n",
-            "b29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MUINVXNwc0RhdGFQcm90",
-            "b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21h",
-            "cHMvYWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRkcmVzc3ZhbGlkYXRpb274AQGi",
-            "AgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlkYXRpb24uVjHK",
-            "AiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRhdGlvblxWMeoCI0dvb2dsZTo6",
-            "TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
+            "GAcgASgJEhMKC2Rwdl9ub19zdGF0GAggASgJEhUKDWNhcnJpZXJfcm91dGUY",
+            "CSABKAkSHwoXY2Fycmllcl9yb3V0ZV9pbmRpY2F0b3IYCiABKAkSFAoMZXdz",
+            "X25vX21hdGNoGAsgASgIEhgKEHBvc3Rfb2ZmaWNlX2NpdHkYDCABKAkSGQoR",
+            "cG9zdF9vZmZpY2Vfc3RhdGUYDSABKAkSGAoQYWJicmV2aWF0ZWRfY2l0eRgO",
+            "IAEoCRIYChBmaXBzX2NvdW50eV9jb2RlGA8gASgJEg4KBmNvdW50eRgQIAEo",
+            "CRITCgtlbG90X251bWJlchgRIAEoCRIRCgllbG90X2ZsYWcYEiABKAkSHQoV",
+            "bGFjc19saW5rX3JldHVybl9jb2RlGBMgASgJEhsKE2xhY3NfbGlua19pbmRp",
+            "Y2F0b3IYFCABKAkSHwoXcG9fYm94X29ubHlfcG9zdGFsX2NvZGUYFSABKAgS",
+            "GgoSc3VpdGVsaW5rX2Zvb3Rub3RlGBYgASgJEhYKDnBtYl9kZXNpZ25hdG9y",
+            "GBcgASgJEhIKCnBtYl9udW1iZXIYGCABKAkSGwoTYWRkcmVzc19yZWNvcmRf",
+            "dHlwZRgZIAEoCRIXCg9kZWZhdWx0X2FkZHJlc3MYGiABKAgSFQoNZXJyb3Jf",
+            "bWVzc2FnZRgbIAEoCRIWCg5jYXNzX3Byb2Nlc3NlZBgcIAEoCEKDAgokY29t",
+            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQg1Vc3BzRGF0YVBy",
+            "b3RvUAFaUWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "bWFwcy9hZGRyZXNzdmFsaWRhdGlvbi92MTthZGRyZXNzdmFsaWRhdGlvbvgB",
+            "AaICB0dNUEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRhdGlvbi5W",
+            "McoCIEdvb2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIjR29vZ2xl",
+            "OjpNYXBzOjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsAddress), global::Google.Maps.AddressValidation.V1.UspsAddress.Parser, new[]{ "FirstAddressLine", "Firm", "SecondAddressLine", "Urbanization", "CityStateZipAddressLine", "City", "State", "ZipCode", "ZipCodeExtension" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsData), global::Google.Maps.AddressValidation.V1.UspsData.Parser, new[]{ "StandardizedAddress", "DeliveryPointCode", "DeliveryPointCheckDigit", "DpvConfirmation", "DpvFootnote", "DpvCmra", "DpvVacant", "DpvNoStat", "CarrierRouteIndicator", "EwsNoMatch", "PostOfficeCity", "PostOfficeState", "AbbreviatedCity", "FipsCountyCode", "County", "ElotNumber", "ElotFlag", "LacsLinkReturnCode", "LacsLinkIndicator", "PoBoxOnlyPostalCode", "SuitelinkFootnote", "PmbDesignator", "PmbNumber", "AddressRecordType", "DefaultAddress", "ErrorMessage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsData), global::Google.Maps.AddressValidation.V1.UspsData.Parser, new[]{ "StandardizedAddress", "DeliveryPointCode", "DeliveryPointCheckDigit", "DpvConfirmation", "DpvFootnote", "DpvCmra", "DpvVacant", "DpvNoStat", "CarrierRoute", "CarrierRouteIndicator", "EwsNoMatch", "PostOfficeCity", "PostOfficeState", "AbbreviatedCity", "FipsCountyCode", "County", "ElotNumber", "ElotFlag", "LacsLinkReturnCode", "LacsLinkIndicator", "PoBoxOnlyPostalCode", "SuitelinkFootnote", "PmbDesignator", "PmbNumber", "AddressRecordType", "DefaultAddress", "ErrorMessage", "CassProcessed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -624,6 +625,7 @@ namespace Google.Maps.AddressValidation.V1 {
       dpvCmra_ = other.dpvCmra_;
       dpvVacant_ = other.dpvVacant_;
       dpvNoStat_ = other.dpvNoStat_;
+      carrierRoute_ = other.carrierRoute_;
       carrierRouteIndicator_ = other.carrierRouteIndicator_;
       ewsNoMatch_ = other.ewsNoMatch_;
       postOfficeCity_ = other.postOfficeCity_;
@@ -642,6 +644,7 @@ namespace Google.Maps.AddressValidation.V1 {
       addressRecordType_ = other.addressRecordType_;
       defaultAddress_ = other.defaultAddress_;
       errorMessage_ = other.errorMessage_;
+      cassProcessed_ = other.cassProcessed_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -810,6 +813,31 @@ namespace Google.Maps.AddressValidation.V1 {
       get { return dpvNoStat_; }
       set {
         dpvNoStat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "carrier_route" field.</summary>
+    public const int CarrierRouteFieldNumber = 9;
+    private string carrierRoute_ = "";
+    /// <summary>
+    /// The carrier route code.
+    /// A four character code--a one letter prefix and a three digit route
+    /// designator.
+    ///
+    /// Prefixes:
+    ///
+    /// * `C`: Carrier route (or city route)
+    /// * `R`: Rural route
+    /// * `H`: Highway Contract Route
+    /// * `B`: Post Office Box Section
+    /// * `G`: General delivery unit
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CarrierRoute {
+      get { return carrierRoute_; }
+      set {
+        carrierRoute_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1090,10 +1118,11 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int ErrorMessageFieldNumber = 27;
     private string errorMessage_ = "";
     /// <summary>
-    /// Error message for USPS data retrieval. If this field is populated, other
-    /// USPS data response fields - with the possible exception of
-    /// carrier_route - are not populated. Otherwise, fields with data are
-    /// populated.
+    /// Error message for USPS data retrieval. This is populated when USPS
+    /// processing is suspended because of the detection of artificially created
+    /// addresses.
+    ///
+    /// The USPS data fields may not be populated when this error is present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1101,6 +1130,21 @@ namespace Google.Maps.AddressValidation.V1 {
       get { return errorMessage_; }
       set {
         errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cass_processed" field.</summary>
+    public const int CassProcessedFieldNumber = 28;
+    private bool cassProcessed_;
+    /// <summary>
+    /// Indicator that the request has been CASS processed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CassProcessed {
+      get { return cassProcessed_; }
+      set {
+        cassProcessed_ = value;
       }
     }
 
@@ -1127,6 +1171,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (DpvCmra != other.DpvCmra) return false;
       if (DpvVacant != other.DpvVacant) return false;
       if (DpvNoStat != other.DpvNoStat) return false;
+      if (CarrierRoute != other.CarrierRoute) return false;
       if (CarrierRouteIndicator != other.CarrierRouteIndicator) return false;
       if (EwsNoMatch != other.EwsNoMatch) return false;
       if (PostOfficeCity != other.PostOfficeCity) return false;
@@ -1145,6 +1190,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (AddressRecordType != other.AddressRecordType) return false;
       if (DefaultAddress != other.DefaultAddress) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (CassProcessed != other.CassProcessed) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1160,6 +1206,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (DpvCmra.Length != 0) hash ^= DpvCmra.GetHashCode();
       if (DpvVacant.Length != 0) hash ^= DpvVacant.GetHashCode();
       if (DpvNoStat.Length != 0) hash ^= DpvNoStat.GetHashCode();
+      if (CarrierRoute.Length != 0) hash ^= CarrierRoute.GetHashCode();
       if (CarrierRouteIndicator.Length != 0) hash ^= CarrierRouteIndicator.GetHashCode();
       if (EwsNoMatch != false) hash ^= EwsNoMatch.GetHashCode();
       if (PostOfficeCity.Length != 0) hash ^= PostOfficeCity.GetHashCode();
@@ -1178,6 +1225,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (AddressRecordType.Length != 0) hash ^= AddressRecordType.GetHashCode();
       if (DefaultAddress != false) hash ^= DefaultAddress.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (CassProcessed != false) hash ^= CassProcessed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1228,6 +1276,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(66);
         output.WriteString(DpvNoStat);
       }
+      if (CarrierRoute.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CarrierRoute);
+      }
       if (CarrierRouteIndicator.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(CarrierRouteIndicator);
@@ -1299,6 +1351,10 @@ namespace Google.Maps.AddressValidation.V1 {
       if (ErrorMessage.Length != 0) {
         output.WriteRawTag(218, 1);
         output.WriteString(ErrorMessage);
+      }
+      if (CassProcessed != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(CassProcessed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1342,6 +1398,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(66);
         output.WriteString(DpvNoStat);
       }
+      if (CarrierRoute.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CarrierRoute);
+      }
       if (CarrierRouteIndicator.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(CarrierRouteIndicator);
@@ -1414,6 +1474,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(218, 1);
         output.WriteString(ErrorMessage);
       }
+      if (CassProcessed != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(CassProcessed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1447,6 +1511,9 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (DpvNoStat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DpvNoStat);
+      }
+      if (CarrierRoute.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CarrierRoute);
       }
       if (CarrierRouteIndicator.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CarrierRouteIndicator);
@@ -1502,6 +1569,9 @@ namespace Google.Maps.AddressValidation.V1 {
       if (ErrorMessage.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
+      if (CassProcessed != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1540,6 +1610,9 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (other.DpvNoStat.Length != 0) {
         DpvNoStat = other.DpvNoStat;
+      }
+      if (other.CarrierRoute.Length != 0) {
+        CarrierRoute = other.CarrierRoute;
       }
       if (other.CarrierRouteIndicator.Length != 0) {
         CarrierRouteIndicator = other.CarrierRouteIndicator;
@@ -1595,6 +1668,9 @@ namespace Google.Maps.AddressValidation.V1 {
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
       }
+      if (other.CassProcessed != false) {
+        CassProcessed = other.CassProcessed;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1643,6 +1719,10 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 66: {
             DpvNoStat = input.ReadString();
+            break;
+          }
+          case 74: {
+            CarrierRoute = input.ReadString();
             break;
           }
           case 82: {
@@ -1715,6 +1795,10 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 218: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 224: {
+            CassProcessed = input.ReadBool();
             break;
           }
         }
@@ -1767,6 +1851,10 @@ namespace Google.Maps.AddressValidation.V1 {
             DpvNoStat = input.ReadString();
             break;
           }
+          case 74: {
+            CarrierRoute = input.ReadString();
+            break;
+          }
           case 82: {
             CarrierRouteIndicator = input.ReadString();
             break;
@@ -1837,6 +1925,10 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 218: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 224: {
+            CassProcessed = input.ReadBool();
             break;
           }
         }
