@@ -77,8 +77,8 @@ public class RetryConformanceTest
     [MemberData(nameof(RetryTestData))]
     public async Task RetryTest(RetryTest test)
     {
-        // Ids 7 & 8 are to test resumable uploads and downloads which will be implemented in the next phase
-        if (test.Id < 7)
+        // Ids with description "handle_complex_retries" are to test resumable uploads and downloads which will be implemented in the next phase
+        if (!test.Description.Contains("handle_complex_retries"))
         {
             CreateMethodMapping(test);
 
@@ -96,7 +96,7 @@ public class RetryConformanceTest
                         {
                             await RunTestCase(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
                             var msg = ex.Message;
                         }
@@ -129,7 +129,7 @@ public class RetryConformanceTest
                     RunRetryTest(response, resources, preConditionsPresent);
                     Assert.Fail("Expected failure but test was successful.");
                 }
-                catch(Exception ex) // To catch expected exception when retry should not happen.
+                catch (Exception ex) // To catch expected exception when retry should not happen.
                 {
                     if (ex.InnerException != null && ex.InnerException is GoogleApiException)
                     {
@@ -202,13 +202,13 @@ public class RetryConformanceTest
                 invocation.ObjectName = resources.ObjectName;
                 invocation.Generation = Generation;
             }
-            if (invocation.Destination_BucketNameRequired)
+            if (invocation.DestinationBucketNameRequired)
             {
-                invocation.Destination_BucketName = resources.Last(x => x.Resource == Resource.Bucket).Value;
+                invocation.DestinationBucketName = resources.Last(x => x.Resource == Resource.Bucket).Value;
             }
-            if (invocation.Destination_ObjectNameRequired)
+            if (invocation.DestinationObjectNameRequired)
             {
-                invocation.Destination_ObjectName = resources.Last(x => x.Resource == Resource.Object).Value;
+                invocation.DestinationObjectName = resources.Last(x => x.Resource == Resource.Object).Value;
                 invocation.Generation = Generation;
             }
             if (invocation.HmacKeyRequired)
@@ -287,17 +287,17 @@ public class RetryConformanceTest
 
         "storage.objects.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetObject), new System.Type[] { typeof(string), typeof(string), typeof(GetObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true },
         "storage.objects.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListObjects), new System.Type[] { typeof(string), typeof(string), typeof(ListObjectsOptions) })) { BucketNameRequired = true },
-        
+
         "storage.objects.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteObject), new System.Type[] { typeof(string), typeof(string), typeof(DeleteObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true },
         "storage.objects.patch" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.PatchObject), new System.Type[] { typeof(Apis.Storage.v1.Data.Object), typeof(PatchObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true },
-        "storage.objects.rewrite" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CopyObject), new System.Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(CopyObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true, Destination_BucketNameRequired = true, Destination_ObjectNameRequired = true },
+        "storage.objects.rewrite" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CopyObject), new System.Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(CopyObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true, DestinationBucketNameRequired = true, DestinationObjectNameRequired = true },
         "storage.objects.update" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.UpdateObject), new System.Type[] { typeof(Apis.Storage.v1.Data.Object), typeof(UpdateObjectOptions) })) { BucketNameRequired = true, ObjectNameRequired = true },
 
         "storage.hmackey.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(GetHmacKeyOptions) })) { ProjectIdRequired = true, AccessIdRequired = true },
         "storage.hmackey.delete" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.DeleteHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(DeleteHmacKeyOptions) })) { ProjectIdRequired = true, AccessIdRequired = true },
         "storage.hmackey.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListHmacKeys), new System.Type[] { typeof(string), typeof(string), typeof(ListHmacKeysOptions) })) { ProjectIdRequired = true },
         "storage.hmackey.update" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.UpdateHmacKey), new System.Type[] { typeof(HmacKeyMetadata), typeof(UpdateHmacKeyOptions) })) { ProjectIdRequired = true, AccessIdRequired = true },
-        "storage.hmackey.create" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(CreateHmacKeyOptions) })) { ProjectIdRequired = true, ServiceAccountEmailRequired= true, AccessIdRequired = true },
+        "storage.hmackey.create" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(CreateHmacKeyOptions) })) { ProjectIdRequired = true, ServiceAccountEmailRequired = true, AccessIdRequired = true },
 
         "storage.notifications.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListNotifications), new System.Type[] { typeof(string), typeof(ListNotificationsOptions) })) { ProjectIdRequired = true, BucketNameRequired = true, NotificationRequired = true },
         "storage.notifications.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetNotification), new System.Type[] { typeof(string), typeof(string), typeof(GetNotificationOptions) })) { BucketNameRequired = true, NotificationRequired = true },
@@ -434,7 +434,7 @@ public class RetryConformanceTest
         using var stream = File.OpenRead(FilePath);
         var objectCreated = _storageClient.UploadObject(bucketName, objectName, "application/json", stream);
         result.Add(new StorageResource(Resource.Object, objectCreated.Name));
-        Generation = (long)objectCreated.Generation;
+        Generation = (long) objectCreated.Generation;
     }
 
     /// <summary>
