@@ -15,6 +15,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
@@ -31,4 +32,9 @@ internal class TestResponse
 
     [JsonProperty("completed")]
     public bool Completed { get; set; }
+
+    internal string GetMethodName() =>
+        Instructions.FirstOrDefault().Value?.First is JProperty first
+            ? first.Name
+            : null;
 }

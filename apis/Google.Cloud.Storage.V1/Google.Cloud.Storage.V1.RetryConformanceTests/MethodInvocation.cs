@@ -14,63 +14,21 @@
 
 using Google.Api.Gax;
 using Google.Apis.Storage.v1.Data;
+using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Linq;
+using System.Reflection;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
 internal class MethodInvocation
 {
-    internal string ProjectId { get; set; }
+    internal MethodInfo Method { get; set; }
 
-    internal string BucketName { get; set; }
-
-    internal string ObjectName { get; set; }
-
-    internal string DestinationBucketName { get; set; }
-
-    internal string DestinationObjectName { get; set; }
-
-    internal string Notification { get; set; }
-
-    internal string HmacKey { get; set; }
-
-    internal string AccessId { get; set; }
-
-    internal string ServiceAccountEmail { get; set; }
-
-    internal long Metageneration { get; set; }
-
-    internal long Generation { get; set; }
-
-    internal MethodInfo MethodInformation { get; set; }
-
-    internal bool ProjectIdRequired { get; set; }
-
-    internal bool BucketNameRequired { get; set; }
-
-    internal bool ObjectNameRequired { get; set; }
-
-    internal bool DestinationBucketNameRequired { get; set; }
-
-    internal bool DestinationObjectNameRequired { get; set; }
-
-    internal bool NotificationRequired { get; set; }
-
-    internal bool HmacKeyRequired { get; set; }
-
-    internal bool AccessIdRequired { get; set; }
-
-    internal bool ServiceAccountEmailRequired { get; set; }
-
-    internal bool MetagenerationRequired { get; set; }
-
-    internal object Result { get; private set; }
-
-    public MethodInvocation(MethodInfo methodInfo)
+    public MethodInvocation(Delegate d)
     {
-        MethodInformation = methodInfo;
+        Method = d.Method;
     }
 
     /// <summary>
@@ -78,60 +36,19 @@ internal class MethodInvocation
     /// </summary>
     /// <param name="storageClient"></param>
     /// <param name="preConditionsPresent"></param>
-    public void Invoke(StorageClient storageClient, bool preConditionsPresent)
+    public void Invoke(StorageClient storageClient, TestContext context, bool preConditionsPresent)
     {
-        var arguments = AssignParamaterValues(storageClient, preConditionsPresent);
-
-        if (MethodInformation.ReturnType != typeof(void))
+        var arguments = CreateArgumentList(storageClient, context, preConditionsPresent);
+        var result = Method.Invoke(storageClient, arguments);
+        if (Method.ReturnType != typeof(void) && Method.Name.StartsWith("List"))
         {
-            Result = MethodInformation.Invoke(storageClient, arguments.ToArray());
-            var methodName = MethodInformation.Name.ToLowerInvariant();
-            if (methodName.Contains("list"))
-            {
-                ConsumeListOutput(methodName);
-            }
-        }
-        else
-        {
-            MethodInformation.Invoke(storageClient, arguments.ToArray());
+            // TODO: maybe do this more elegantly...
+            ConsumeListOutput((dynamic) result);
         }
     }
 
-    private void ConsumeListOutput(string methodName)
-    {
-        if (methodName.Contains("listhmackeys"))
-        {
-            var res = Result as PagedEnumerable<HmacKeysMetadata, HmacKeyMetadata>;
-            if (res != null)
-            {
-                res.ReadPage(100);
-            }
-        }
-        else if (methodName.Contains("listobject"))
-        {
-            var res = Result as PagedEnumerable<Objects, Object>;
-            if (res != null)
-            {
-                res.ReadPage(100);
-            }
-        }
-        else if (methodName.Contains("listbuckets"))
-        {
-            var res = Result as PagedEnumerable<Buckets, Bucket>;
-            if (res != null)
-            {
-                res.ReadPage(100);
-            }
-        }
-        else if (methodName.Contains("listnotifications"))
-        {
-            var res = Result as PagedEnumerable<Notifications, Notification>;
-            if (res != null)
-            {
-                res.ReadPage(100);
-            }
-        }
-    }
+    private static void ConsumeListOutput<TRequest, TResource>(PagedEnumerable<TRequest, TResource> pagedEnumerable) =>
+        pagedEnumerable.ReadPage(100);
 
     /// <summary>
     /// Configures all the parameters required and adds them in the arguments for method invocations
@@ -139,173 +56,68 @@ internal class MethodInvocation
     /// <param name="storageClient"></param>
     /// <param name="preConditionsPresent"></param>
     /// <returns></returns>
-    private List<object> AssignParamaterValues(StorageClient storageClient, bool preConditionsPresent)
+    private object[] CreateArgumentList(StorageClient storageClient, TestContext context, bool preConditionsPresent)
     {
-        List<object> arguments = new List<object>();
-        var parameters = MethodInformation.GetParameters();
+        return Method.GetParameters().Select(GetArgument).ToArray();
 
-        foreach (var item in parameters)
-        {
-            if (item.ParameterType == typeof(string))
-            {
-                AssignStringParameters(arguments, item);
-            }
-            else if (preConditionsPresent == true && item.Name is "options")
-            {
-                AssignOptionalParameters(arguments, item);
-            }
-            else
-            {
-                AssignResourceParameters(storageClient, preConditionsPresent, arguments, item);
-            }
-        }
+        object GetArgument(ParameterInfo parameter) =>
+            parameter.ParameterType == typeof(string) ? GetStringArgument(parameter)
+            : preConditionsPresent && parameter.Name == "options" ? CreateOptionsArgument(parameter)
+            : CreateResourceArgument(parameter);
 
-        return arguments;
-    }
+        string GetStringArgument(ParameterInfo p) => p.Name switch
+        {
+            "bucket" or "sourceBucket" => context.BucketName,
+            "objectName" or "sourceObjectName" => context.ObjectName,
+            "project" or "projectId" => context.ProjectId,
+            "notification" or "notificationId" => context.NotificationId,
+            "hmacKey" => context.HmacSecret,
+            "accessId" => context.HmacAccessId,
+            "serviceAccountEmail" => context.ServiceAccountEmail,
+            "destinationBucket" => context.DestinationBucketName,
+            "destinationObject" => context.DestinationObjectName,
+            _ => throw new InvalidOperationException($"Unhandled string parameter: {p.Name}")
+        };
 
-    /// <summary>
-    /// Configures miscellaneous resource parameters and adds them in the arguments for method invocations
-    /// </summary>
-    /// <param name="storageClient"></param>
-    /// <param name="preConditionsPresent"></param>
-    /// <param name="arguments"></param>
-    /// <param name="item"></param>
-    private void AssignResourceParameters(StorageClient storageClient, bool preConditionsPresent, List<object> arguments, ParameterInfo item)
-    {
-        if (item.Name is "metageneration")
+        object CreateOptionsArgument(ParameterInfo p) => p.ParameterType.Name switch
         {
-            long metageneration = 1;
-            arguments.Add(metageneration);
-        }
-        else if (item.Name is "permissions")
+            nameof(UpdateBucketOptions) => new UpdateBucketOptions { IfMetagenerationMatch = 1 },
+            nameof(PatchBucketOptions) => new PatchBucketOptions { IfMetagenerationMatch = 1 },
+            nameof(CopyObjectOptions) => new CopyObjectOptions { IfGenerationMatch = context.ObjectGeneration },
+            nameof(UpdateObjectOptions) => new UpdateObjectOptions { IfMetagenerationMatch = 1 },
+            nameof(DeleteObjectOptions) => new DeleteObjectOptions { IfGenerationMatch = context.ObjectGeneration },
+            nameof(PatchObjectOptions) => new PatchObjectOptions { IfMetagenerationMatch = 1 },
+            _ => throw new InvalidOperationException($"Unhandled options parameter: {p.ParameterType.Name}")
+        };
+
+        object CreateResourceArgument(ParameterInfo p) => (p.Name, p.ParameterType.Name) switch
         {
-            IList<string> permission = new List<string>();
-            permission.Add("bucket.get");
-            arguments.Add(permission);
-        }
-        else if (item.Name is "policy")
+            ("metageneration", _) => 1L,
+            ("permissions", _) => new List<string> { "bucket.get" },
+            ("policy", _) => GetIamPolicyAndAddPublicViewer(),
+            (_, nameof(Bucket)) => new Bucket { Name = context.BucketName },
+            (_, nameof(Object)) => new Object { Name = context.ObjectName, Bucket = context.BucketName },
+            (_, nameof(Notification)) => new Notification { Topic = "Test-topic", PayloadFormat = "NONE" },
+            (_, nameof(HmacKeyMetadata)) => new HmacKeyMetadata
+            {
+                ProjectId = context.ProjectId,
+                AccessId = context.HmacAccessId,
+                State = HmacKeyStates.Inactive,
+                ETag = preConditionsPresent ? "MQ==" : null
+            },
+            _ => throw new InvalidOperationException($"Unhandled resource parameter: name={p.Name}, type={p.ParameterType.FullName}")
+        };
+
+        Policy GetIamPolicyAndAddPublicViewer()
         {
-            var policy = storageClient.GetBucketIamPolicy(BucketName);
+            var policy = storageClient.GetBucketIamPolicy(context.BucketName);
             Policy.BindingsData AllUsersViewer = new Policy.BindingsData
             {
                 Members = new[] { "allUsers" },
                 Role = "roles/storage.objectViewer"
             };
             policy.Bindings.Add(AllUsersViewer);
-            arguments.Add(policy);
-        }
-        else if (item.ParameterType.Name is "Bucket")
-        {
-            arguments.Add(new Bucket { Name = BucketName });
-        }
-        else if (item.ParameterType.Name is "Object")
-        {
-            arguments.Add(new Object { Name = ObjectName, Bucket = BucketName });
-        }
-        else if (item.ParameterType.Name is "Notification")
-        {
-            arguments.Add(new Notification { Topic = "Test-topic", PayloadFormat = "NONE" });
-        }
-        else if (item.ParameterType.Name is "HmacKeyMetadata")
-        {
-            if (preConditionsPresent == true)
-            {
-                arguments.Add(new HmacKeyMetadata { ProjectId = ProjectId, AccessId = AccessId, State = HmacKeyStates.Inactive, ETag = "MQ==" });
-            }
-            else
-            {
-                arguments.Add(new HmacKeyMetadata { ProjectId = ProjectId, AccessId = AccessId, State = HmacKeyStates.Inactive });
-            }
-        }
-        else
-        {
-            arguments.Add(System.Type.Missing);
-        }
-    }
-
-    /// <summary>
-    /// Configures all the options parameters in case preConditions are present and adds them in the arguments for method invocations
-    /// </summary>
-    /// <param name="arguments"></param>
-    /// <param name="item"></param>
-    private void AssignOptionalParameters(List<object> arguments, ParameterInfo item)
-    {
-        if (item.ParameterType.Name is "UpdateBucketOptions")
-        {
-            arguments.Add(new UpdateBucketOptions { IfMetagenerationMatch = 1 });
-        }
-        else if (item.ParameterType.Name is "PatchBucketOptions")
-        {
-            arguments.Add(new PatchBucketOptions { IfMetagenerationMatch = 1 });
-        }
-        else if (item.ParameterType.Name is "CopyObjectOptions")
-        {
-            arguments.Add(new CopyObjectOptions { IfGenerationMatch = Generation });
-        }
-        else if (item.ParameterType.Name is "UpdateObjectOptions")
-        {
-            arguments.Add(new UpdateObjectOptions { IfMetagenerationMatch = 1 });
-        }
-        else if (item.ParameterType.Name is "DeleteObjectOptions")
-        {
-            arguments.Add(new DeleteObjectOptions { IfGenerationMatch = Generation });
-        }
-        else if (item.ParameterType.Name is "PatchObjectOptions")
-        {
-            arguments.Add(new PatchObjectOptions { IfMetagenerationMatch = 1 });
-        }
-        else
-        {
-            arguments.Add(System.Type.Missing);
-        }
-    }
-
-    /// <summary>
-    /// Configures all the string type parameters and adds them in the arguments for method invocations
-    /// </summary>
-    /// <param name="arguments"></param>
-    /// <param name="item"></param>
-    private void AssignStringParameters(List<object> arguments, ParameterInfo item)
-    {
-        if (item.Name is "bucket" or "sourceBucket")
-        {
-            arguments.Add(BucketName);
-        }
-        else if (item.Name is "objectName" or "sourceObjectName")
-        {
-            arguments.Add(ObjectName);
-        }
-        else if (item.Name is "project" or "projectId")
-        {
-            arguments.Add(ProjectId);
-        }
-        else if (item.Name is "notification" or "notificationId")
-        {
-            arguments.Add(Notification);
-        }
-        else if (item.Name is "hmacKey")
-        {
-            arguments.Add(HmacKey);
-        }
-        else if (item.Name is "serviceAccountEmail")
-        {
-            arguments.Add(ServiceAccountEmail);
-        }
-        else if (item.Name is "accessId")
-        {
-            arguments.Add(AccessId);
-        }
-        else if (item.Name is "destinationBucket")
-        {
-            arguments.Add(DestinationBucketName);
-        }
-        else if (item.Name is "destinationObjectName")
-        {
-            arguments.Add(DestinationObjectName);
-        }
-        else
-        {
-            arguments.Add(System.Type.Missing);
+            return policy;
         }
     }
 }
