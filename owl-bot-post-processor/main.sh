@@ -130,6 +130,10 @@ copy_one_api() {
   ./prepare-release.sh update-mixins $PACKAGE HEAD
 }
 
+# List the SDKs available, for diagnostic purposes
+echo ".NET SDKs:"
+dotnet --list-sdks
+
 # Avoid .NET complaining about submodules being missing
 git config --global --add safe.directory /repo
 git submodule update --init --recursive
