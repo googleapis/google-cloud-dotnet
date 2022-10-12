@@ -13,14 +13,18 @@
 # limitations under the License.
 
 # This Dockerfile image expects to be run in the root directory of the
-# google-cloud-dotnet repository.
+# google-cloud-dotnet repository. (It may also be run in other
+# repositories with similar requirements, if they have an
+# owl-bot-post-processor directory with a main.sh file.)
 
-# It's usually built automatically via google cloud build, but you can also
-# manually build with:
+# The container is usually built automatically via Google Cloud Build,
+# but you can also manually build with:
 #   docker build -t gcr.io/cloud-devrel-public-resources/owlbot-dotnet .
+# To launch a bash shell in the container, run:
+#   docker run --rm -it --entrypoint bash gcr.io/cloud-devrel-public-resources/owlbot-dotnet:latest
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal
 
-# Additional tooling required to regenerate.
+# Additional tooling required to regenerate libraries and project files.
 
 # Temporarily, install .NET Core 3.1 as well as .NET 6
 # This (and the apt-get install of dotnet-sdk-3.1) can
