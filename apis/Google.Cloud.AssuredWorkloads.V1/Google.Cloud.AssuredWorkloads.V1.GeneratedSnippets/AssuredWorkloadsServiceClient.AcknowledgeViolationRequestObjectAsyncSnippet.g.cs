@@ -36,7 +36,6 @@ namespace Google.Cloud.AssuredWorkloads.V1.Snippets
             {
                 Name = "",
                 Comment = "",
-                NonCompliantOrgPolicy = "",
             };
             // Make the request
             AcknowledgeViolationResponse response = await assuredWorkloadsServiceClient.AcknowledgeViolationAsync(request);

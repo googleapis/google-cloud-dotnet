@@ -47,7 +47,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -100,7 +100,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -155,7 +155,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -208,7 +208,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -401,7 +401,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -453,7 +453,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -507,7 +507,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -559,7 +559,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -613,7 +613,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -665,7 +665,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Unspecified,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -726,6 +726,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -758,6 +759,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Violation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -792,6 +794,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -824,6 +827,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Violation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -858,6 +862,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -890,6 +895,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 Remediation = new Violation.Types.Remediation(),
                 Acknowledged = true,
                 AcknowledgementTime = new wkt::Timestamp(),
+                ExceptionAuditLogLink = "exception_audit_log_link8f191ab6",
             };
             mockGrpcClient.Setup(x => x.GetViolationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Violation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -909,7 +915,9 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             {
                 Name = "name1c9368b0",
                 Comment = "comment63cdd406",
+#pragma warning disable CS0612
                 NonCompliantOrgPolicy = "non_compliant_org_policy7136e088",
+#pragma warning restore CS0612
             };
             AcknowledgeViolationResponse expectedResponse = new AcknowledgeViolationResponse { };
             mockGrpcClient.Setup(x => x.AcknowledgeViolation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -928,7 +936,9 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             {
                 Name = "name1c9368b0",
                 Comment = "comment63cdd406",
+#pragma warning disable CS0612
                 NonCompliantOrgPolicy = "non_compliant_org_policy7136e088",
+#pragma warning restore CS0612
             };
             AcknowledgeViolationResponse expectedResponse = new AcknowledgeViolationResponse { };
             mockGrpcClient.Setup(x => x.AcknowledgeViolationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcknowledgeViolationResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

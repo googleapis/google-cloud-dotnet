@@ -813,7 +813,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
@@ -831,7 +831,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
@@ -849,7 +849,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
@@ -864,7 +864,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
@@ -882,7 +882,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
@@ -900,7 +900,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// Gets Assured Workload associated with a CRM Node
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Workload to fetch. This is the workloads's
+        /// Required. The resource name of the Workload to fetch. This is the workload's
         /// relative path in the API, formatted as
         /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
         /// For example,
