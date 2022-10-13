@@ -12,18 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Download;
+using Google.Api.Gax;
 using Google.Apis.Storage.v1.Data;
-using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1.Tests.Conformance;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -38,7 +34,6 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 public class RetryConformanceTest
 {
     private const string RetryIdHeader = "x-retry-test-id";
-    private static readonly Dictionary<string, MethodInvocation> s_methodMappings = CreateMethodMappings();
     public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
     private StorageClient Client => _fixture.Client;
 
@@ -86,9 +81,9 @@ public class RetryConformanceTest
     }
 
     /// <summary>
-    /// Handle full flow of each individual test case from resource creation to , running the testing, verify if it passed or failed and delete resource post usage.
+    /// Handle full flow of each individual test case from resource creation to running the testing, verify if it passed or failed and delete resource post usage.
     /// </summary>
-    private async Task RunTestCase(InstructionList instructionList, Method method, bool expectSuccess, bool preConditionsPresent = false)
+    private async Task RunTestCase(InstructionList instructionList, Method method, bool expectSuccess, bool specifyPreconditions)
     {
         var context = CreateTestContext(method);
         var response = await CreateRetryTestResource(instructionList, method);
@@ -96,7 +91,7 @@ public class RetryConformanceTest
         {
             if (expectSuccess)
             {
-                RunRetryTest(response, context, preConditionsPresent);
+                RunRetryTest(response, context, specifyPreconditions);
                 var postTestResponse = await GetRetryTest(response.Id);
                 Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
             }
@@ -104,7 +99,7 @@ public class RetryConformanceTest
             {
                 try
                 {
-                    RunRetryTest(response, context, preConditionsPresent);
+                    RunRetryTest(response, context, specifyPreconditions);
                     Assert.Fail("Expected failure but test was successful.");
                 }
                 catch (Exception ex) // To catch expected exception when retry should not happen.
@@ -160,66 +155,91 @@ public class RetryConformanceTest
     /// <summary>
     /// Add retry header for each request and make a call to retry and test each API.
     /// </summary>
-    private void RunRetryTest(TestResponse response, TestContext context, bool preConditionsPresent)
+    private void RunRetryTest(TestResponse response, TestContext context, bool specifyPreconditions)
     {
         AddRetryIdHeader(response.Id);
 
-        Skip.IfNot(s_methodMappings.TryGetValue(response.GetMethodName(), out var invocation));
-        invocation.Invoke(Client, context, preConditionsPresent);
-    }
+        string rpc = response.GetMethodName();
+        var result = ExecuteRpc(rpc, context, specifyPreconditions);
 
-    private static Dictionary<string, MethodInvocation> CreateMethodMappings()
-    {
-        // Method group conversion for instance methods really needs an instance.
-        // TODO(jonskeet): I'd expect method group conversions to work using an extra parameter. Look into this further.
-        // TODO(jonskeet): Could we just use null? Unclear.
-        var client = StorageClient.Create();
-
-        return new Dictionary<string, MethodInvocation>
+        // For list methods, we need to fetch a page in order to actually perform requests.
+        if (rpc.StartsWith("list"))
         {
-            // TODO: Potentially just provide the method name and find the best overload, preferring strings over resources.
-            { "storage.buckets.delete", CreateInvocation<string, DeleteBucketOptions>(client.DeleteBucket) },
-            { "storage.buckets.get", CreateInvocation<string, GetBucketOptions>(client.GetBucket) },
-            { "storage.buckets.getIamPolicy", CreateInvocation<string, GetBucketIamPolicyOptions>(client.GetBucketIamPolicy) },
-            { "storage.buckets.insert", CreateInvocation<string, string, CreateBucketOptions>(client.CreateBucket) },
-            { "storage.buckets.update", CreateInvocation<Bucket, UpdateBucketOptions>(client.UpdateBucket) },
-            { "storage.buckets.list", CreateInvocation<string, ListBucketsOptions>(client.ListBuckets) },
-            { "storage.buckets.testIamPermissions", CreateInvocation<string, IEnumerable<string>, TestBucketIamPermissionsOptions>(client.TestBucketIamPermissions) },
-            { "storage.buckets.lockRetentionPolicy", CreateInvocation<string, long, LockBucketRetentionPolicyOptions>(client.LockBucketRetentionPolicy) },
-            { "storage.buckets.patch", CreateInvocation<Bucket, PatchBucketOptions>(client.PatchBucket) },
-            { "storage.buckets.setIamPolicy", CreateInvocation<string, Policy, SetBucketIamPolicyOptions>(client.SetBucketIamPolicy) },
-            { "storage.objects.get", CreateInvocation<string, string, GetObjectOptions>(client.GetObject) },
-            { "storage.objects.list", CreateInvocation<string, string, ListObjectsOptions>(client.ListObjects) },
-            { "storage.objects.delete", CreateInvocation<string, string, DeleteObjectOptions>(client.DeleteObject) },
-            { "storage.objects.patch", CreateInvocation<Object, PatchObjectOptions>(client.PatchObject) },
-            { "storage.objects.rewrite", CreateInvocation<string, string, string, string, CopyObjectOptions>(client.CopyObject) },
-            { "storage.objects.update", CreateInvocation<Object, UpdateObjectOptions>(client.UpdateObject) },
-            { "storage.hmackey.get", CreateInvocation<string, string, GetHmacKeyOptions>(client.GetHmacKey) },
-            { "storage.hmackey.delete", CreateInvocation<string, string, DeleteHmacKeyOptions>(client.DeleteHmacKey) },
-            { "storage.hmackey.list", CreateInvocation<string, string, ListHmacKeysOptions>(client.ListHmacKeys) },
-            { "storage.hmackey.update", CreateInvocation<HmacKeyMetadata, UpdateHmacKeyOptions>(client.UpdateHmacKey) },
-            { "storage.hmackey.create", CreateInvocation<string, string, CreateHmacKeyOptions>(client.CreateHmacKey) },
-
-            { "storage.notifications.list", CreateInvocation<string, ListNotificationsOptions>(client.ListNotifications) },
-            { "storage.notifications.get", CreateInvocation<string, string, GetNotificationOptions>(client.GetNotification) },
-            { "storage.notifications.delete", CreateInvocation<string, string, DeleteNotificationOptions>(client.DeleteNotification) },
-            { "storage.notifications.insert", CreateInvocation<string, Notification, CreateNotificationOptions>(client.CreateNotification) },
-
-            { "storage.serviceAccount.get", CreateInvocation<string, GetStorageServiceAccountEmailOptions>(client.GetStorageServiceAccountEmail) },
-
-            { "storage.resumable.upload", CreateInvocation<string, string, string, Stream, UploadObjectOptions, IProgress<IUploadProgress>>(client.UploadObject) },
-            { "storage.objects.download", CreateInvocation<Object, Stream, DownloadObjectOptions, IProgress<IDownloadProgress>>(client.DownloadObject) }
-        };
+            // TODO: maybe do this more elegantly...
+            ConsumeListOutput((dynamic) result);
+        }
     }
 
-    // Note: these can't be local methods as they're overloaded
-    private static MethodInvocation CreateInvocation<T1, T2>(Func<T1, T2, object> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2, T3>(Func<T1, T2, T3, object> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2, T3, T4>(Func<T1, T2, T3, T4, object> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2, T3, T4, T5>(Func<T1, T2, T3, T4, T5, object> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2, T3, T4, T5, T6>(Func<T1, T2, T3, T4, T5, T6, object> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2>(Action<T1, T2> method) => new MethodInvocation(method);
-    private static MethodInvocation CreateInvocation<T1, T2, T3>(Action<T1, T2, T3> method) => new MethodInvocation(method);
+    // Note: not a local function as that cannot handle dynamic binding with generics.
+    private static void ConsumeListOutput<TRequest, TResource>(PagedEnumerable<TRequest, TResource> pagedEnumerable) =>
+        pagedEnumerable.ReadPage(100);
+
+    private object ExecuteRpc(string rpc, TestContext ctx, bool specifyPreconditions)
+    {
+        // Note: we could potentially extract commonly accessed properties, e.g. ctx.BucketName and ctx.ObjectName to local variables
+        var client = _fixture.Client;
+        return rpc switch
+        {
+            "storage.buckets.delete" => InvokeVoid(() => client.DeleteBucket(ctx.BucketName)), // TODO: preconditions?
+            "storage.buckets.get" => client.GetBucket(ctx.BucketName),
+            "storage.buckets.getIamPolicy" => client.GetBucketIamPolicy(ctx.BucketName),
+            "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, ctx.BucketName),
+            "storage.buckets.update" => client.UpdateBucket(new Bucket { Name = ctx.BucketName }, IfPreconditions(new UpdateBucketOptions { IfMetagenerationMatch = 1 })),
+            "storage.buckets.list" => client.ListBuckets(ctx.ProjectId),
+            "storage.buckets.testIamPermissions" => client.TestBucketIamPermissions(ctx.BucketName, new[] { "bucket.get" }),
+            "storage.buckets.lockRetentionPolicy" => InvokeVoid(() => client.LockBucketRetentionPolicy(ctx.BucketName, 1L)),
+            "storage.buckets.patch" => client.PatchBucket(new Bucket { Name = ctx.BucketName }, IfPreconditions(new PatchBucketOptions { IfMetagenerationMatch = 1 })),
+            "storage.buckets.setIamPolicy" => client.SetBucketIamPolicy(ctx.BucketName, GetIamPolicyAndAddPublicViewer()),
+            "storage.objects.get" => client.GetObject(ctx.BucketName, ctx.ObjectName),
+            "storage.objects.list" => client.ListObjects(ctx.BucketName),
+            "storage.objects.delete" => InvokeVoid(() => client.DeleteObject(ctx.BucketName, ctx.ObjectName, IfPreconditions(new DeleteObjectOptions { IfGenerationMatch = ctx.ObjectGeneration }))),
+            "storage.objects.patch" => client.PatchObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, IfPreconditions(new PatchObjectOptions { IfMetagenerationMatch = 1 })),
+            "storage.objects.rewrite" => client.CopyObject(ctx.BucketName, ctx.ObjectName, ctx.DestinationBucketName, ctx.DestinationObjectName, IfPreconditions(new CopyObjectOptions { IfGenerationMatch = ctx.ObjectGeneration })),
+            "storage.objects.update" => client.UpdateObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, IfPreconditions(new UpdateObjectOptions { IfMetagenerationMatch = 1 })),
+            "storage.hmackey.get" => client.GetHmacKey(ctx.ProjectId, ctx.HmacAccessId),
+            "storage.hmackey.delete" => InvokeVoid(() => client.DeleteHmacKey(ctx.ProjectId, ctx.HmacAccessId)),
+            "storage.hmackey.list" => client.ListHmacKeys(ctx.ProjectId, ctx.ServiceAccountEmail),
+            "storage.hmackey.update" => client.UpdateHmacKey(new HmacKeyMetadata
+            {
+                ProjectId = ctx.ProjectId,
+                AccessId = ctx.HmacAccessId,
+                State = HmacKeyStates.Inactive,
+                ETag = specifyPreconditions ? "MQ==" : null
+            }),
+            "storage.hmackey.create" => client.CreateHmacKey(ctx.ProjectId, ctx.ServiceAccountEmail),
+            "storage.notifications.list" => client.ListNotifications(ctx.BucketName),
+            "storage.notifications.get" => client.GetNotification(ctx.BucketName, ctx.NotificationId),
+            "storage.notifications.delete" => InvokeVoid(() => client.DeleteNotification(ctx.BucketName, ctx.NotificationId)),
+            "storage.notifications.insert" => client.CreateNotification(ctx.BucketName, new Notification { Topic = "Test-topic", PayloadFormat = "NONE" }),
+            "storage.serviceAccount.get" => client.GetStorageServiceAccountEmail(ctx.ProjectId),
+            "storage.resumable.upload" => client.UploadObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, File.OpenRead(_fixture.SampleObjectContentPath)),
+            "storage.objects.download" => client.DownloadObject(ctx.BucketName, ctx.ObjectName, new MemoryStream()),
+            // TODO: Return null from any RPCs we don't support.
+            _ => throw new ArgumentException($"Unknown RPC: {rpc}")
+        };
+
+        // Workaround for the switch expression not being able to just call void methods - we need to return something.
+        object InvokeVoid(Action action)
+        {
+            action();
+            return null;
+        }
+
+        T IfPreconditions<T>(T value) where T : class =>
+            specifyPreconditions ? value : null;
+
+        Policy GetIamPolicyAndAddPublicViewer()
+        {
+            var policy = client.GetBucketIamPolicy(ctx.BucketName);
+            Policy.BindingsData AllUsersViewer = new Policy.BindingsData
+            {
+                Members = new[] { "allUsers" },
+                Role = "roles/storage.objectViewer"
+            };
+            policy.Bindings.Add(AllUsersViewer);
+            return policy;
+        }
+    }
 
     /// <summary>
     /// Checks if the retry resource has been created successfully.
