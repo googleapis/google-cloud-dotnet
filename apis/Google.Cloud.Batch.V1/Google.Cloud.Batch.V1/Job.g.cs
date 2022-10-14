@@ -74,53 +74,56 @@ namespace Google.Cloud.Batch.V1 {
             "dHVzLlN0YXRlEj8KDm5ld190YXNrX3N0YXRlGAMgASgOMicuZ29vZ2xlLmNs",
             "b3VkLmJhdGNoLnYxLlRhc2tTdGF0dXMuU3RhdGUiSwoEVHlwZRIUChBUWVBF",
             "X1VOU1BFQ0lGSUVEEAASFQoRSk9CX1NUQVRFX0NIQU5HRUQQARIWChJUQVNL",
-            "X1NUQVRFX0NIQU5HRUQQAiLKCwoQQWxsb2NhdGlvblBvbGljeRJICghsb2Nh",
+            "X1NUQVRFX0NIQU5HRUQQAiKnDAoQQWxsb2NhdGlvblBvbGljeRJICghsb2Nh",
             "dGlvbhgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9u",
             "UG9saWN5LkxvY2F0aW9uUG9saWN5ElMKCWluc3RhbmNlcxgIIAMoCzJALmdv",
             "b2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9saWN5Lkluc3RhbmNl",
-            "UG9saWN5T3JUZW1wbGF0ZRJDCgZsYWJlbHMYBiADKAsyMy5nb29nbGUuY2xv",
-            "dWQuYmF0Y2gudjEuQWxsb2NhdGlvblBvbGljeS5MYWJlbHNFbnRyeRJGCgdu",
-            "ZXR3b3JrGAcgASgLMjUuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRp",
-            "b25Qb2xpY3kuTmV0d29ya1BvbGljeRorCg5Mb2NhdGlvblBvbGljeRIZChFh",
-            "bGxvd2VkX2xvY2F0aW9ucxgBIAMoCRpxCgREaXNrEg8KBWltYWdlGAQgASgJ",
-            "SAASEgoIc25hcHNob3QYBSABKAlIABIMCgR0eXBlGAEgASgJEg8KB3NpemVf",
-            "Z2IYAiABKAMSFgoOZGlza19pbnRlcmZhY2UYBiABKAlCDQoLZGF0YV9zb3Vy",
-            "Y2UaigEKDEF0dGFjaGVkRGlzaxJACghuZXdfZGlzaxgBIAEoCzIsLmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9saWN5LkRpc2tIABIXCg1l",
-            "eGlzdGluZ19kaXNrGAIgASgJSAASEwoLZGV2aWNlX25hbWUYAyABKAlCCgoI",
-            "YXR0YWNoZWQaSwoLQWNjZWxlcmF0b3ISDAoEdHlwZRgBIAEoCRINCgVjb3Vu",
-            "dBgCIAEoAxIfChNpbnN0YWxsX2dwdV9kcml2ZXJzGAMgASgIQgIYARqnAgoO",
-            "SW5zdGFuY2VQb2xpY3kSFAoMbWFjaGluZV90eXBlGAIgASgJEhgKEG1pbl9j",
-            "cHVfcGxhdGZvcm0YAyABKAkSVQoScHJvdmlzaW9uaW5nX21vZGVsGAQgASgO",
-            "MjkuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuUHJv",
-            "dmlzaW9uaW5nTW9kZWwSSQoMYWNjZWxlcmF0b3JzGAUgAygLMjMuZ29vZ2xl",
-            "LmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuQWNjZWxlcmF0b3IS",
-            "QwoFZGlza3MYBiADKAsyNC5nb29nbGUuY2xvdWQuYmF0Y2gudjEuQWxsb2Nh",
-            "dGlvblBvbGljeS5BdHRhY2hlZERpc2salAEKGEluc3RhbmNlUG9saWN5T3JU",
-            "ZW1wbGF0ZRJICgZwb2xpY3kYASABKAsyNi5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djEuQWxsb2NhdGlvblBvbGljeS5JbnN0YW5jZVBvbGljeUgAEhsKEWluc3Rh",
-            "bmNlX3RlbXBsYXRlGAIgASgJSABCEQoPcG9saWN5X3RlbXBsYXRlGlcKEE5l",
-            "dHdvcmtJbnRlcmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3Jr",
-            "GAIgASgJEh4KFm5vX2V4dGVybmFsX2lwX2FkZHJlc3MYAyABKAgaZQoNTmV0",
-            "d29ya1BvbGljeRJUChJuZXR3b3JrX2ludGVyZmFjZXMYASADKAsyOC5nb29n",
-            "bGUuY2xvdWQuYmF0Y2gudjEuQWxsb2NhdGlvblBvbGljeS5OZXR3b3JrSW50",
-            "ZXJmYWNlGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEiYAoRUHJvdmlzaW9uaW5nTW9kZWwSIgoeUFJPVklTSU9OSU5H",
-            "X01PREVMX1VOU1BFQ0lGSUVEEAASDAoIU1RBTkRBUkQQARIICgRTUE9UEAIS",
-            "DwoLUFJFRU1QVElCTEUQAyKBAwoJVGFza0dyb3VwEhEKBG5hbWUYASABKAlC",
-            "A+BBAxI3Cgl0YXNrX3NwZWMYAyABKAsyHy5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djEuVGFza1NwZWNCA+BBAhISCgp0YXNrX2NvdW50GAQgASgDEhMKC3BhcmFs",
-            "bGVsaXNtGAUgASgDEj0KEXRhc2tfZW52aXJvbm1lbnRzGAkgAygLMiIuZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxLkVudmlyb25tZW50EhsKE3Rhc2tfY291bnRf",
-            "cGVyX25vZGUYCiABKAMSGgoScmVxdWlyZV9ob3N0c19maWxlGAsgASgIEhYK",
-            "DnBlcm1pc3NpdmVfc3NoGAwgASgIOm/qQWwKHmJhdGNoLmdvb2dsZWFwaXMu",
-            "Y29tL1Rhc2tHcm91cBJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2pvYnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91cH1C",
-            "tAEKGWNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFCCEpvYlByb3RvUAFaOmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmF0",
-            "Y2gvdjE7YmF0Y2iiAgNHQ0KqAhVHb29nbGUuQ2xvdWQuQmF0Y2guVjHKAhVH",
-            "b29nbGVcQ2xvdWRcQmF0Y2hcVjHqAhhHb29nbGU6OkNsb3VkOjpCYXRjaDo6",
-            "VjFiBnByb3RvMw=="));
+            "UG9saWN5T3JUZW1wbGF0ZRI+Cg9zZXJ2aWNlX2FjY291bnQYCSABKAsyJS5n",
+            "b29nbGUuY2xvdWQuYmF0Y2gudjEuU2VydmljZUFjY291bnQSQwoGbGFiZWxz",
+            "GAYgAygLMjMuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xp",
+            "Y3kuTGFiZWxzRW50cnkSRgoHbmV0d29yaxgHIAEoCzI1Lmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtQb2xpY3kaKwoO",
+            "TG9jYXRpb25Qb2xpY3kSGQoRYWxsb3dlZF9sb2NhdGlvbnMYASADKAkacQoE",
+            "RGlzaxIPCgVpbWFnZRgEIAEoCUgAEhIKCHNuYXBzaG90GAUgASgJSAASDAoE",
+            "dHlwZRgBIAEoCRIPCgdzaXplX2diGAIgASgDEhYKDmRpc2tfaW50ZXJmYWNl",
+            "GAYgASgJQg0KC2RhdGFfc291cmNlGooBCgxBdHRhY2hlZERpc2sSQAoIbmV3",
+            "X2Rpc2sYASABKAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjEuQWxsb2NhdGlv",
+            "blBvbGljeS5EaXNrSAASFwoNZXhpc3RpbmdfZGlzaxgCIAEoCUgAEhMKC2Rl",
+            "dmljZV9uYW1lGAMgASgJQgoKCGF0dGFjaGVkGksKC0FjY2VsZXJhdG9yEgwK",
+            "BHR5cGUYASABKAkSDQoFY291bnQYAiABKAMSHwoTaW5zdGFsbF9ncHVfZHJp",
+            "dmVycxgDIAEoCEICGAEapwIKDkluc3RhbmNlUG9saWN5EhQKDG1hY2hpbmVf",
+            "dHlwZRgCIAEoCRIYChBtaW5fY3B1X3BsYXRmb3JtGAMgASgJElUKEnByb3Zp",
+            "c2lvbmluZ19tb2RlbBgEIAEoDjI5Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5B",
+            "bGxvY2F0aW9uUG9saWN5LlByb3Zpc2lvbmluZ01vZGVsEkkKDGFjY2VsZXJh",
+            "dG9ycxgFIAMoCzIzLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9u",
+            "UG9saWN5LkFjY2VsZXJhdG9yEkMKBWRpc2tzGAYgAygLMjQuZ29vZ2xlLmNs",
+            "b3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuQXR0YWNoZWREaXNrGrEB",
+            "ChhJbnN0YW5jZVBvbGljeU9yVGVtcGxhdGUSSAoGcG9saWN5GAEgASgLMjYu",
+            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuSW5zdGFu",
+            "Y2VQb2xpY3lIABIbChFpbnN0YW5jZV90ZW1wbGF0ZRgCIAEoCUgAEhsKE2lu",
+            "c3RhbGxfZ3B1X2RyaXZlcnMYAyABKAhCEQoPcG9saWN5X3RlbXBsYXRlGlcK",
+            "EE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3",
+            "b3JrGAIgASgJEh4KFm5vX2V4dGVybmFsX2lwX2FkZHJlc3MYAyABKAgaZQoN",
+            "TmV0d29ya1BvbGljeRJUChJuZXR3b3JrX2ludGVyZmFjZXMYASADKAsyOC5n",
+            "b29nbGUuY2xvdWQuYmF0Y2gudjEuQWxsb2NhdGlvblBvbGljeS5OZXR3b3Jr",
+            "SW50ZXJmYWNlGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiYAoRUHJvdmlzaW9uaW5nTW9kZWwSIgoeUFJPVklTSU9O",
+            "SU5HX01PREVMX1VOU1BFQ0lGSUVEEAASDAoIU1RBTkRBUkQQARIICgRTUE9U",
+            "EAISDwoLUFJFRU1QVElCTEUQAyKBAwoJVGFza0dyb3VwEhEKBG5hbWUYASAB",
+            "KAlCA+BBAxI3Cgl0YXNrX3NwZWMYAyABKAsyHy5nb29nbGUuY2xvdWQuYmF0",
+            "Y2gudjEuVGFza1NwZWNCA+BBAhISCgp0YXNrX2NvdW50GAQgASgDEhMKC3Bh",
+            "cmFsbGVsaXNtGAUgASgDEj0KEXRhc2tfZW52aXJvbm1lbnRzGAkgAygLMiIu",
+            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxLkVudmlyb25tZW50EhsKE3Rhc2tfY291",
+            "bnRfcGVyX25vZGUYCiABKAMSGgoScmVxdWlyZV9ob3N0c19maWxlGAsgASgI",
+            "EhYKDnBlcm1pc3NpdmVfc3NoGAwgASgIOm/qQWwKHmJhdGNoLmdvb2dsZWFw",
+            "aXMuY29tL1Rhc2tHcm91cBJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2pvYnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91",
+            "cH0iHwoOU2VydmljZUFjY291bnQSDQoFZW1haWwYASABKAlCtAEKGWNvbS5n",
+            "b29nbGUuY2xvdWQuYmF0Y2gudjFCCEpvYlByb3RvUAFaOmdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmF0Y2gvdjE7YmF0",
+            "Y2iiAgNHQ0KqAhVHb29nbGUuQ2xvdWQuQmF0Y2guVjHKAhVHb29nbGVcQ2xv",
+            "dWRcQmF0Y2hcVjHqAhhHb29nbGU6OkNsb3VkOjpCYXRjaDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -130,16 +133,17 @@ namespace Google.Cloud.Batch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.JobStatus.Types.TaskGroupStatus), global::Google.Cloud.Batch.V1.JobStatus.Types.TaskGroupStatus.Parser, new[]{ "Counts", "Instances" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.JobNotification), global::Google.Cloud.Batch.V1.JobNotification.Parser, new[]{ "PubsubTopic", "Message" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.JobNotification.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.JobNotification.Types.Message), global::Google.Cloud.Batch.V1.JobNotification.Types.Message.Parser, new[]{ "Type", "NewJobState", "NewTaskState" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Parser, new[]{ "Location", "Instances", "Labels", "Network" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.ProvisioningModel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy.Parser, new[]{ "AllowedLocations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Parser, new[]{ "Location", "Instances", "ServiceAccount", "Labels", "Network" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.ProvisioningModel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy.Parser, new[]{ "AllowedLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Disk), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Disk.Parser, new[]{ "Image", "Snapshot", "Type", "SizeGb", "DiskInterface" }, new[]{ "DataSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk.Parser, new[]{ "NewDisk", "ExistingDisk", "DeviceName" }, new[]{ "Attached" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "Disks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate" }, new[]{ "PolicyTemplate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers" }, new[]{ "PolicyTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskGroup), global::Google.Cloud.Batch.V1.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskGroup), global::Google.Cloud.Batch.V1.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.ServiceAccount), global::Google.Cloud.Batch.V1.ServiceAccount.Parser, new[]{ "Email" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2457,6 +2461,7 @@ namespace Google.Cloud.Batch.V1 {
     public AllocationPolicy(AllocationPolicy other) : this() {
       location_ = other.location_ != null ? other.location_.Clone() : null;
       instances_ = other.instances_.Clone();
+      serviceAccount_ = other.serviceAccount_ != null ? other.serviceAccount_.Clone() : null;
       labels_ = other.labels_.Clone();
       network_ = other.network_ != null ? other.network_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2496,6 +2501,21 @@ namespace Google.Cloud.Batch.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate> Instances {
       get { return instances_; }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 9;
+    private global::Google.Cloud.Batch.V1.ServiceAccount serviceAccount_;
+    /// <summary>
+    /// Service account that VMs will run as.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1.ServiceAccount ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = value;
+      }
     }
 
     /// <summary>Field number for the "labels" field.</summary>
@@ -2550,6 +2570,7 @@ namespace Google.Cloud.Batch.V1 {
       }
       if (!object.Equals(Location, other.Location)) return false;
       if(!instances_.Equals(other.instances_)) return false;
+      if (!object.Equals(ServiceAccount, other.ServiceAccount)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(Network, other.Network)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2561,6 +2582,7 @@ namespace Google.Cloud.Batch.V1 {
       int hash = 1;
       if (location_ != null) hash ^= Location.GetHashCode();
       hash ^= instances_.GetHashCode();
+      if (serviceAccount_ != null) hash ^= ServiceAccount.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (network_ != null) hash ^= Network.GetHashCode();
       if (_unknownFields != null) {
@@ -2591,6 +2613,10 @@ namespace Google.Cloud.Batch.V1 {
         output.WriteMessage(Network);
       }
       instances_.WriteTo(output, _repeated_instances_codec);
+      if (serviceAccount_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2611,6 +2637,10 @@ namespace Google.Cloud.Batch.V1 {
         output.WriteMessage(Network);
       }
       instances_.WriteTo(ref output, _repeated_instances_codec);
+      if (serviceAccount_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2625,6 +2655,9 @@ namespace Google.Cloud.Batch.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
       size += instances_.CalculateSize(_repeated_instances_codec);
+      if (serviceAccount_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceAccount);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       if (network_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Network);
@@ -2648,6 +2681,12 @@ namespace Google.Cloud.Batch.V1 {
         Location.MergeFrom(other.Location);
       }
       instances_.Add(other.instances_);
+      if (other.serviceAccount_ != null) {
+        if (serviceAccount_ == null) {
+          ServiceAccount = new global::Google.Cloud.Batch.V1.ServiceAccount();
+        }
+        ServiceAccount.MergeFrom(other.ServiceAccount);
+      }
       labels_.Add(other.labels_);
       if (other.network_ != null) {
         if (network_ == null) {
@@ -2692,6 +2731,13 @@ namespace Google.Cloud.Batch.V1 {
             instances_.AddEntriesFrom(input, _repeated_instances_codec);
             break;
           }
+          case 74: {
+            if (serviceAccount_ == null) {
+              ServiceAccount = new global::Google.Cloud.Batch.V1.ServiceAccount();
+            }
+            input.ReadMessage(ServiceAccount);
+            break;
+          }
         }
       }
     #endif
@@ -2727,6 +2773,13 @@ namespace Google.Cloud.Batch.V1 {
           }
           case 66: {
             instances_.AddEntriesFrom(ref input, _repeated_instances_codec);
+            break;
+          }
+          case 74: {
+            if (serviceAccount_ == null) {
+              ServiceAccount = new global::Google.Cloud.Batch.V1.ServiceAccount();
+            }
+            input.ReadMessage(ServiceAccount);
             break;
           }
         }
@@ -3444,7 +3497,9 @@ namespace Google.Cloud.Batch.V1 {
         private string deviceName_ = "";
         /// <summary>
         /// Device name that the guest operating system will see.
-        /// If not specified, this is default to the disk name.
+        /// It is used by Runnable.volumes field to mount disks. So please specify
+        /// the device_name if you want Batch to help mount the disk, and it should
+        /// match the device_name field in volumes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3759,8 +3814,7 @@ namespace Google.Cloud.Batch.V1 {
         public const int InstallGpuDriversFieldNumber = 3;
         private bool installGpuDrivers_;
         /// <summary>
-        /// When true, Batch will install the GPU drivers.
-        /// This field will be ignored if specified.
+        /// Deprecated: please use instances[0].install_gpu_drivers instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4329,6 +4383,7 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InstancePolicyOrTemplate(InstancePolicyOrTemplate other) : this() {
+          installGpuDrivers_ = other.installGpuDrivers_;
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
               Policy = other.Policy.Clone();
@@ -4379,6 +4434,24 @@ namespace Google.Cloud.Batch.V1 {
           }
         }
 
+        /// <summary>Field number for the "install_gpu_drivers" field.</summary>
+        public const int InstallGpuDriversFieldNumber = 3;
+        private bool installGpuDrivers_;
+        /// <summary>
+        /// Set this field true if users want Batch to help fetch drivers from a
+        /// third party location and install them for GPUs specified in
+        /// policy.accelerators or instance_template on their behalf. Default is
+        /// false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool InstallGpuDrivers {
+          get { return installGpuDrivers_; }
+          set {
+            installGpuDrivers_ = value;
+          }
+        }
+
         private object policyTemplate_;
         /// <summary>Enum of possible cases for the "policy_template" oneof.</summary>
         public enum PolicyTemplateOneofCase {
@@ -4417,6 +4490,7 @@ namespace Google.Cloud.Batch.V1 {
           }
           if (!object.Equals(Policy, other.Policy)) return false;
           if (InstanceTemplate != other.InstanceTemplate) return false;
+          if (InstallGpuDrivers != other.InstallGpuDrivers) return false;
           if (PolicyTemplateCase != other.PolicyTemplateCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -4427,6 +4501,7 @@ namespace Google.Cloud.Batch.V1 {
           int hash = 1;
           if (policyTemplateCase_ == PolicyTemplateOneofCase.Policy) hash ^= Policy.GetHashCode();
           if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) hash ^= InstanceTemplate.GetHashCode();
+          if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
           hash ^= (int) policyTemplateCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4454,6 +4529,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4472,6 +4551,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(InstallGpuDrivers);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4488,6 +4571,9 @@ namespace Google.Cloud.Batch.V1 {
           if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceTemplate);
           }
+          if (InstallGpuDrivers != false) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4499,6 +4585,9 @@ namespace Google.Cloud.Batch.V1 {
         public void MergeFrom(InstancePolicyOrTemplate other) {
           if (other == null) {
             return;
+          }
+          if (other.InstallGpuDrivers != false) {
+            InstallGpuDrivers = other.InstallGpuDrivers;
           }
           switch (other.PolicyTemplateCase) {
             case PolicyTemplateOneofCase.Policy:
@@ -4540,6 +4629,10 @@ namespace Google.Cloud.Batch.V1 {
                 InstanceTemplate = input.ReadString();
                 break;
               }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -4566,6 +4659,10 @@ namespace Google.Cloud.Batch.V1 {
               }
               case 18: {
                 InstanceTemplate = input.ReadString();
+                break;
+              }
+              case 24: {
+                InstallGpuDrivers = input.ReadBool();
                 break;
               }
             }
@@ -5530,6 +5627,204 @@ namespace Google.Cloud.Batch.V1 {
           }
           case 96: {
             PermissiveSsh = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Carries information about a Google Cloud service account.
+  /// </summary>
+  public sealed partial class ServiceAccount : pb::IMessage<ServiceAccount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ServiceAccount> _parser = new pb::MessageParser<ServiceAccount>(() => new ServiceAccount());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ServiceAccount> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Batch.V1.JobReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccount() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccount(ServiceAccount other) : this() {
+      email_ = other.email_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceAccount Clone() {
+      return new ServiceAccount(this);
+    }
+
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 1;
+    private string email_ = "";
+    /// <summary>
+    /// Email address of the service account. If not specified, the default
+    /// Compute Engine service account for the project will be used. If instance
+    /// template is being used, the service account has to be specified in the
+    /// instance template and it has to match the email field here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ServiceAccount);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ServiceAccount other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Email != other.Email) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Email.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Email);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Email.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Email);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ServiceAccount other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Email = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Email = input.ReadString();
             break;
           }
         }
