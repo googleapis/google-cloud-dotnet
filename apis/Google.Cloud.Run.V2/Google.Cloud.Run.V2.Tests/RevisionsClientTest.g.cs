@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -35,6 +36,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
@@ -91,6 +93,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
@@ -149,6 +152,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
@@ -205,6 +209,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
@@ -263,6 +268,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
@@ -319,6 +325,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Revisions.RevisionsClient> mockGrpcClient = new moq::Mock<Revisions.RevisionsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRevisionRequest request = new GetRevisionRequest
             {
                 RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),

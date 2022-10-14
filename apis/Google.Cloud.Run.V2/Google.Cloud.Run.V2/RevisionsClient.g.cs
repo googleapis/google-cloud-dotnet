@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -50,6 +51,7 @@ namespace Google.Cloud.Run.V2
             ListRevisionsSettings = existing.ListRevisionsSettings;
             DeleteRevisionSettings = existing.DeleteRevisionSettings;
             DeleteRevisionOperationsSettings = existing.DeleteRevisionOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -108,6 +110,11 @@ namespace Google.Cloud.Run.V2
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RevisionsSettings"/> object.</returns>
@@ -247,6 +254,9 @@ namespace Google.Cloud.Run.V2
 
         /// <summary>The underlying gRPC Revisions client</summary>
         public virtual Revisions.RevisionsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Gets information about a Revision.
@@ -659,6 +669,7 @@ namespace Google.Cloud.Run.V2
             RevisionsSettings effectiveSettings = settings ?? RevisionsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             DeleteRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRevisionOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>("GetRevision", grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetRevisionRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetRevision);
             Modify_GetRevisionApiCall(ref _callGetRevision);
@@ -683,6 +694,9 @@ namespace Google.Cloud.Run.V2
 
         /// <summary>The underlying gRPC Revisions client</summary>
         public override Revisions.RevisionsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_GetRevisionRequest(ref GetRevisionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -789,6 +803,22 @@ namespace Google.Cloud.Run.V2
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Revisions
+    {
+        public partial class RevisionsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
