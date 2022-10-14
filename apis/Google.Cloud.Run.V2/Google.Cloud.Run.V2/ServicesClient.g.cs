@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -59,6 +60,7 @@ namespace Google.Cloud.Run.V2
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -226,6 +228,11 @@ namespace Google.Cloud.Run.V2
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ServicesSettings"/> object.</returns>
         public ServicesSettings Clone() => new ServicesSettings(this);
@@ -365,6 +372,9 @@ namespace Google.Cloud.Run.V2
         /// <summary>The underlying gRPC Services client</summary>
         public virtual Services.ServicesClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Creates a new Service in a given project and location.
         /// </summary>
@@ -422,15 +432,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -446,15 +458,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -470,15 +484,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -489,15 +505,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -513,15 +531,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -537,15 +557,17 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location and project in which this service should be created.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// The location and project in which this service should be created.
+        /// Format: projects/{project}/locations/{location}
+        /// Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. The name of the service becomes
-        /// {parent}/services/{service_id}.
+        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -584,7 +606,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -599,7 +621,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -614,7 +636,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -626,7 +648,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -641,7 +663,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -656,7 +678,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -687,7 +709,7 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The location and project to list resources on.
         /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// Format: projects/{project}/locations/{location}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -713,7 +735,7 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The location and project to list resources on.
         /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// Format: projects/{project}/locations/{location}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -739,7 +761,7 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The location and project to list resources on.
         /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// Format: projects/{project}/locations/{location}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -765,7 +787,7 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The location and project to list resources on.
         /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{projectnumber}/locations/{location}
+        /// Format: projects/{project}/locations/{location}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -943,7 +965,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -960,7 +982,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -977,7 +999,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -991,7 +1013,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1008,7 +1030,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1025,7 +1047,7 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1162,6 +1184,7 @@ namespace Google.Cloud.Run.V2
             CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings, logger);
             UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings, logger);
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, lro::Operation>("CreateService", grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateServiceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateService);
             Modify_CreateServiceApiCall(ref _callCreateService);
@@ -1211,6 +1234,9 @@ namespace Google.Cloud.Run.V2
 
         /// <summary>The underlying gRPC Services client</summary>
         public override Services.ServicesClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CreateServiceRequest(ref CreateServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1465,6 +1491,22 @@ namespace Google.Cloud.Run.V2
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Services
+    {
+        public partial class ServicesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

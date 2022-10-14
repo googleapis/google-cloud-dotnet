@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byLVCwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
+            "byLkCwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
             "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
             "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
@@ -56,12 +56,13 @@ namespace Google.Cloud.Run.V2 {
             "Uk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIh",
             "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
             "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
-            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsibwoPRXhlY3V0aW9uUmVhc29uEh4K",
+            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsifgoPRXhlY3V0aW9uUmVhc29uEh4K",
             "GkVYRUNVVElPTl9SRUFTT05fVU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19T",
             "RVJWSUNFX1BPTExJTkdfRVJST1IQARIWChJOT05fWkVST19FWElUX0NPREUQ",
-            "AkIJCgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25k",
-            "aXRpb25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "AhINCglDQU5DRUxMRUQQA0IJCgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xv",
+            "dWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -796,6 +797,10 @@ namespace Google.Cloud.Run.V2 {
         /// user container exiting with a non-zero exit code.
         /// </summary>
         [pbr::OriginalName("NON_ZERO_EXIT_CODE")] NonZeroExitCode = 2,
+        /// <summary>
+        /// The execution was cancelled by users.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 3,
       }
 
     }

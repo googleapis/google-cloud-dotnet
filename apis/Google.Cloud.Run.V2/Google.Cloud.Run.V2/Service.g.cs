@@ -195,8 +195,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The location and project in which this service should be created.
-    /// Format: projects/{projectnumber}/locations/{location}
+    /// The location and project in which this service should be created.
+    /// Format: projects/{project}/locations/{location}
+    /// Only lowercase characters, digits, and hyphens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -226,8 +227,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceIdFieldNumber = 3;
     private string serviceId_ = "";
     /// <summary>
-    /// Required. The unique identifier for the Service. The name of the service becomes
-    /// {parent}/services/{service_id}.
+    /// Required. The unique identifier for the Service. It must begin with letter,
+    /// and may not end with hyphen; must contain fewer than 50 characters.
+    /// The name of the service becomes {parent}/services/{service_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -811,7 +813,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. The location and project to list resources on.
     /// Location must be a valid GCP region, and may not be the "-" wildcard.
-    /// Format: projects/{projectnumber}/locations/{location}
+    /// Format: projects/{project}/locations/{location}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1350,7 +1352,7 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The full name of the Service.
-    /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+    /// Format: projects/{project}/locations/{location}/services/{service}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1548,7 +1550,7 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The full name of the Service.
-    /// Format: projects/{projectnumber}/locations/{location}/services/{service}
+    /// Format: projects/{project}/locations/{location}/services/{service}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -19,6 +19,7 @@ using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -38,6 +39,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -103,6 +105,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -170,6 +173,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -235,6 +239,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -302,6 +307,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -367,6 +373,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetServiceRequest request = new GetServiceRequest
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
@@ -434,6 +441,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -464,6 +472,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -496,6 +505,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -527,6 +537,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -560,6 +571,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -587,6 +599,7 @@ namespace Google.Cloud.Run.V2.Tests
         {
             moq::Mock<Services.ServicesClient> mockGrpcClient = new moq::Mock<Services.ServicesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
