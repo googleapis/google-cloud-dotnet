@@ -36,7 +36,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             moq::Mock<WebRiskService.WebRiskServiceClient> mockGrpcClient = new moq::Mock<WebRiskService.WebRiskServiceClient>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Malware,
+                ThreatType = ThreatType.SocialEngineering,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
@@ -62,7 +62,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             moq::Mock<WebRiskService.WebRiskServiceClient> mockGrpcClient = new moq::Mock<WebRiskService.WebRiskServiceClient>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Malware,
+                ThreatType = ThreatType.SocialEngineering,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
@@ -90,7 +90,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             moq::Mock<WebRiskService.WebRiskServiceClient> mockGrpcClient = new moq::Mock<WebRiskService.WebRiskServiceClient>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Malware,
+                ThreatType = ThreatType.SocialEngineering,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
@@ -116,7 +116,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             moq::Mock<WebRiskService.WebRiskServiceClient> mockGrpcClient = new moq::Mock<WebRiskService.WebRiskServiceClient>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Malware,
+                ThreatType = ThreatType.SocialEngineering,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
@@ -147,7 +147,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Uri = "uri3db70593",
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
@@ -170,7 +170,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Uri = "uri3db70593",
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
@@ -195,7 +195,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Uri = "uri3db70593",
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
@@ -218,7 +218,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Uri = "uri3db70593",
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
@@ -243,7 +243,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchHashesResponse expectedResponse = new SearchHashesResponse
@@ -270,7 +270,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchHashesResponse expectedResponse = new SearchHashesResponse
@@ -299,7 +299,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchHashesResponse expectedResponse = new SearchHashesResponse
@@ -326,7 +326,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
                 ThreatTypes =
                 {
-                    ThreatType.SocialEngineering,
+                    ThreatType.Unspecified,
                 },
             };
             SearchHashesResponse expectedResponse = new SearchHashesResponse
