@@ -1041,10 +1041,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames",
-      "title": "CreateNotificationConfig1ResourceNames",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames1",
+      "title": "CreateNotificationConfig1ResourceNames1",
       "description": "Snippet for CreateNotificationConfig",
-      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
@@ -1066,10 +1066,112 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames",
-      "title": "CreateNotificationConfig1ResourceNamesAsync",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames1",
+      "title": "CreateNotificationConfig1ResourceNames1Async",
       "description": "Snippet for CreateNotificationConfigAsync",
-      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfigAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames2",
+      "title": "CreateNotificationConfig1ResourceNames2",
+      "description": "Snippet for CreateNotificationConfig",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfig",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfig",
+        "resultType": "Google.Cloud.SecurityCenter.V1.NotificationConfig",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames2",
+      "title": "CreateNotificationConfig1ResourceNames2Async",
+      "description": "Snippet for CreateNotificationConfigAsync",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfigAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames3",
+      "title": "CreateNotificationConfig1ResourceNames3",
+      "description": "Snippet for CreateNotificationConfig",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfig",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfig",
+        "resultType": "Google.Cloud.SecurityCenter.V1.NotificationConfig",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames3",
+      "title": "CreateNotificationConfig1ResourceNames3Async",
+      "description": "Snippet for CreateNotificationConfigAsync",
+      "file": "SecurityCenterClient.CreateNotificationConfig1ResourceNames3AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateNotificationConfigAsync",
@@ -1143,10 +1245,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames",
-      "title": "CreateNotificationConfig2ResourceNames",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames1",
+      "title": "CreateNotificationConfig2ResourceNames1",
       "description": "Snippet for CreateNotificationConfig",
-      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
@@ -1168,10 +1270,112 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened2_resourceNames",
-      "title": "CreateNotificationConfig2ResourceNamesAsync",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened2_resourceNames1",
+      "title": "CreateNotificationConfig2ResourceNames1Async",
       "description": "Snippet for CreateNotificationConfigAsync",
-      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfigAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames2",
+      "title": "CreateNotificationConfig2ResourceNames2",
+      "description": "Snippet for CreateNotificationConfig",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfig",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfig",
+        "resultType": "Google.Cloud.SecurityCenter.V1.NotificationConfig",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened2_resourceNames2",
+      "title": "CreateNotificationConfig2ResourceNames2Async",
+      "description": "Snippet for CreateNotificationConfigAsync",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfigAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames3",
+      "title": "CreateNotificationConfig2ResourceNames3",
+      "description": "Snippet for CreateNotificationConfig",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotificationConfig",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateNotificationConfig",
+        "resultType": "Google.Cloud.SecurityCenter.V1.NotificationConfig",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateNotificationConfig",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateNotificationConfig",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened2_resourceNames3",
+      "title": "CreateNotificationConfig2ResourceNames3Async",
+      "description": "Snippet for CreateNotificationConfigAsync",
+      "file": "SecurityCenterClient.CreateNotificationConfig2ResourceNames3AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateNotificationConfigAsync",
@@ -3103,10 +3307,10 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames",
-      "title": "ListNotificationConfigsResourceNames",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames1",
+      "title": "ListNotificationConfigsResourceNames1",
       "description": "Snippet for ListNotificationConfigs",
-      "file": "SecurityCenterClient.ListNotificationConfigsResourceNamesSnippet.g.cs",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListNotificationConfigs",
@@ -3128,10 +3332,112 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames",
-      "title": "ListNotificationConfigsResourceNamesAsync",
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames1",
+      "title": "ListNotificationConfigsResourceNames1Async",
       "description": "Snippet for ListNotificationConfigsAsync",
-      "file": "SecurityCenterClient.ListNotificationConfigsResourceNamesAsyncSnippet.g.cs",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotificationConfigsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListNotificationConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListNotificationConfigs",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListNotificationConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames2",
+      "title": "ListNotificationConfigsResourceNames2",
+      "description": "Snippet for ListNotificationConfigs",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotificationConfigs",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListNotificationConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListNotificationConfigs",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListNotificationConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames2",
+      "title": "ListNotificationConfigsResourceNames2Async",
+      "description": "Snippet for ListNotificationConfigsAsync",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotificationConfigsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListNotificationConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListNotificationConfigs",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListNotificationConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames3",
+      "title": "ListNotificationConfigsResourceNames3",
+      "description": "Snippet for ListNotificationConfigs",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotificationConfigs",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListNotificationConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1.NotificationConfig>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListNotificationConfigs",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListNotificationConfigs",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames3",
+      "title": "ListNotificationConfigsResourceNames3Async",
+      "description": "Snippet for ListNotificationConfigsAsync",
+      "file": "SecurityCenterClient.ListNotificationConfigsResourceNames3AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListNotificationConfigsAsync",

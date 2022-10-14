@@ -35,9 +35,23 @@ namespace Google.Cloud.SecurityCenter.V1
             /// .
             /// </summary>
             OrganizationNotificationConfig = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/notificationConfigs/{notification_config}</c>.
+            /// </summary>
+            FolderNotificationConfig = 2,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/notificationConfigs/{notification_config}</c>.
+            /// </summary>
+            ProjectNotificationConfig = 3,
         }
 
         private static gax::PathTemplate s_organizationNotificationConfig = new gax::PathTemplate("organizations/{organization}/notificationConfigs/{notification_config}");
+
+        private static gax::PathTemplate s_folderNotificationConfig = new gax::PathTemplate("folders/{folder}/notificationConfigs/{notification_config}");
+
+        private static gax::PathTemplate s_projectNotificationConfig = new gax::PathTemplate("projects/{project}/notificationConfigs/{notification_config}");
 
         /// <summary>Creates a <see cref="NotificationConfigName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -59,6 +73,30 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A new instance of <see cref="NotificationConfigName"/> constructed from the provided ids.</returns>
         public static NotificationConfigName FromOrganizationNotificationConfig(string organizationId, string notificationConfigId) =>
             new NotificationConfigName(ResourceNameType.OrganizationNotificationConfig, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), notificationConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
+
+        /// <summary>
+        /// Creates a <see cref="NotificationConfigName"/> with the pattern
+        /// <c>folders/{folder}/notificationConfigs/{notification_config}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationConfigId">
+        /// The <c>NotificationConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>A new instance of <see cref="NotificationConfigName"/> constructed from the provided ids.</returns>
+        public static NotificationConfigName FromFolderNotificationConfig(string folderId, string notificationConfigId) =>
+            new NotificationConfigName(ResourceNameType.FolderNotificationConfig, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), notificationConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
+
+        /// <summary>
+        /// Creates a <see cref="NotificationConfigName"/> with the pattern
+        /// <c>projects/{project}/notificationConfigs/{notification_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationConfigId">
+        /// The <c>NotificationConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>A new instance of <see cref="NotificationConfigName"/> constructed from the provided ids.</returns>
+        public static NotificationConfigName FromProjectNotificationConfig(string projectId, string notificationConfigId) =>
+            new NotificationConfigName(ResourceNameType.ProjectNotificationConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), notificationConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="NotificationConfigName"/> with pattern
@@ -91,6 +129,36 @@ namespace Google.Cloud.SecurityCenter.V1
             s_organizationNotificationConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NotificationConfigName"/> with pattern
+        /// <c>folders/{folder}/notificationConfigs/{notification_config}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationConfigId">
+        /// The <c>NotificationConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="NotificationConfigName"/> with pattern
+        /// <c>folders/{folder}/notificationConfigs/{notification_config}</c>.
+        /// </returns>
+        public static string FormatFolderNotificationConfig(string folderId, string notificationConfigId) =>
+            s_folderNotificationConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NotificationConfigName"/> with pattern
+        /// <c>projects/{project}/notificationConfigs/{notification_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationConfigId">
+        /// The <c>NotificationConfig</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="NotificationConfigName"/> with pattern
+        /// <c>projects/{project}/notificationConfigs/{notification_config}</c>.
+        /// </returns>
+        public static string FormatProjectNotificationConfig(string projectId, string notificationConfigId) =>
+            s_projectNotificationConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(notificationConfigId, nameof(notificationConfigId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="NotificationConfigName"/> instance.
         /// </summary>
         /// <remarks>
@@ -99,6 +167,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <item>
         /// <description><c>organizations/{organization}/notificationConfigs/{notification_config}</c></description>
         /// </item>
+        /// <item><description><c>folders/{folder}/notificationConfigs/{notification_config}</c></description></item>
+        /// <item><description><c>projects/{project}/notificationConfigs/{notification_config}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="notificationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -115,6 +185,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <item>
         /// <description><c>organizations/{organization}/notificationConfigs/{notification_config}</c></description>
         /// </item>
+        /// <item><description><c>folders/{folder}/notificationConfigs/{notification_config}</c></description></item>
+        /// <item><description><c>projects/{project}/notificationConfigs/{notification_config}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -137,6 +209,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <item>
         /// <description><c>organizations/{organization}/notificationConfigs/{notification_config}</c></description>
         /// </item>
+        /// <item><description><c>folders/{folder}/notificationConfigs/{notification_config}</c></description></item>
+        /// <item><description><c>projects/{project}/notificationConfigs/{notification_config}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="notificationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -157,6 +231,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <item>
         /// <description><c>organizations/{organization}/notificationConfigs/{notification_config}</c></description>
         /// </item>
+        /// <item><description><c>folders/{folder}/notificationConfigs/{notification_config}</c></description></item>
+        /// <item><description><c>projects/{project}/notificationConfigs/{notification_config}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -179,6 +255,16 @@ namespace Google.Cloud.SecurityCenter.V1
                 result = FromOrganizationNotificationConfig(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_folderNotificationConfig.TryParseName(notificationConfigName, out resourceName))
+            {
+                result = FromFolderNotificationConfig(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_projectNotificationConfig.TryParseName(notificationConfigName, out resourceName))
+            {
+                result = FromProjectNotificationConfig(resourceName[0], resourceName[1]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(notificationConfigName, out gax::UnparsedResourceName unparsedResourceName))
@@ -191,12 +277,14 @@ namespace Google.Cloud.SecurityCenter.V1
             return false;
         }
 
-        private NotificationConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string notificationConfigId = null, string organizationId = null)
+        private NotificationConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string notificationConfigId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
             NotificationConfigId = notificationConfigId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -221,16 +309,26 @@ namespace Google.Cloud.SecurityCenter.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>NotificationConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>NotificationConfig</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string NotificationConfigId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -243,6 +341,8 @@ namespace Google.Cloud.SecurityCenter.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationNotificationConfig: return s_organizationNotificationConfig.Expand(OrganizationId, NotificationConfigId);
+                case ResourceNameType.FolderNotificationConfig: return s_folderNotificationConfig.Expand(FolderId, NotificationConfigId);
+                case ResourceNameType.ProjectNotificationConfig: return s_projectNotificationConfig.Expand(ProjectId, NotificationConfigId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

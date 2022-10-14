@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.SecurityCenter.V1.Snippets
 {
-    // [START securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames]
+    // [START securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V1;
@@ -29,7 +29,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void ListNotificationConfigsResourceNames()
+        public void ListNotificationConfigsResourceNames1()
         {
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
@@ -71,5 +71,5 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames]
+    // [END securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_sync_flattened_resourceNames1]
 }

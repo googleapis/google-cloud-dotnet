@@ -872,8 +872,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -890,8 +890,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -908,8 +908,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -923,8 +923,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -941,8 +941,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -959,8 +959,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1003,8 +1003,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1023,8 +1023,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1043,8 +1043,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1059,8 +1059,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1079,8 +1079,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1099,8 +1099,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1151,8 +1151,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1178,8 +1178,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1205,8 +1205,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1227,8 +1227,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1254,8 +1254,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1281,8 +1281,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1875,8 +1875,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1885,8 +1886,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1902,8 +1904,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1912,8 +1915,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1929,8 +1933,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1939,8 +1944,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1951,8 +1957,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1961,8 +1968,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1978,8 +1986,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1988,8 +1997,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2005,8 +2015,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -2015,8 +2026,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2027,12 +2039,178 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::FolderName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::FolderName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::FolderName parent, string configId, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, configId, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::ProjectName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::ProjectName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::ProjectName parent, string configId, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, configId, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2047,12 +2225,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2067,12 +2247,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2083,12 +2265,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2103,12 +2287,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2123,16 +2309,142 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::OrganizationName parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::FolderName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::FolderName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::FolderName parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::ProjectName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::ProjectName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::ProjectName parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
             CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2868,8 +3180,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2883,8 +3195,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2898,8 +3210,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2910,8 +3222,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2925,8 +3237,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2940,8 +3252,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3128,9 +3440,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3182,9 +3494,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3236,9 +3548,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3290,9 +3602,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3395,8 +3707,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3421,8 +3733,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3447,8 +3759,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3473,8 +3785,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3499,8 +3811,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3525,8 +3837,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3551,8 +3863,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3577,8 +3889,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3621,8 +3933,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs.
-        /// Its format is "organizations/[organization_id]".
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3646,8 +3959,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs.
-        /// Its format is "organizations/[organization_id]".
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3671,8 +3985,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs.
-        /// Its format is "organizations/[organization_id]".
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3696,8 +4011,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs.
-        /// Its format is "organizations/[organization_id]".
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3713,6 +4029,110 @@ namespace Google.Cloud.SecurityCenter.V1
             ListNotificationConfigsAsync(new ListNotificationConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigs(new ListNotificationConfigsRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigs(new ListNotificationConfigsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -3739,8 +4159,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3765,8 +4185,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3791,8 +4211,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3817,8 +4237,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3843,8 +4263,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3869,8 +4289,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3895,8 +4315,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3921,8 +4341,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -4021,8 +4441,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4041,8 +4461,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4061,8 +4481,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4078,8 +4498,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4098,8 +4518,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4118,8 +4538,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4882,8 +5302,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -4902,8 +5322,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -4922,8 +5342,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -5911,8 +6331,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -5941,8 +6361,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -5971,8 +6391,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -6001,8 +6421,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -6031,8 +6451,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -6061,8 +6481,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -6091,8 +6511,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -6121,8 +6541,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// within the folder are returned.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of BigQuery exports. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
