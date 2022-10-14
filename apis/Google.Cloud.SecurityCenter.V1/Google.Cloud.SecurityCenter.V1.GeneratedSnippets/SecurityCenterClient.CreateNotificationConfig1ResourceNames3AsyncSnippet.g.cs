@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.SecurityCenter.V1.Snippets
 {
-    // [START securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames]
+    // [START securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames3]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V1;
     using System.Threading.Tasks;
@@ -28,17 +28,17 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task CreateNotificationConfig1ResourceNamesAsync()
+        public async Task CreateNotificationConfig1ResourceNames3Async()
         {
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string configId = "";
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
             NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, configId, notificationConfig);
         }
     }
-    // [END securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames]
+    // [END securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_async_flattened1_resourceNames3]
 }

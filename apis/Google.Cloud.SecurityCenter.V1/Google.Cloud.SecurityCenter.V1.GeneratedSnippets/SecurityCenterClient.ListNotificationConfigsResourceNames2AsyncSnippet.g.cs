@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.SecurityCenter.V1.Snippets
 {
-    // [START securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames]
+    // [START securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V1;
@@ -31,12 +31,12 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task ListNotificationConfigsResourceNamesAsync()
+        public async Task ListNotificationConfigsResourceNames2Async()
         {
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
             // Make the request
             PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(parent);
 
@@ -73,5 +73,5 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames]
+    // [END securitycenter_v1_generated_SecurityCenter_ListNotificationConfigs_async_flattened_resourceNames2]
 }

@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.SecurityCenter.V1.Snippets
 {
-    // [START securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames]
+    // [START securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames3]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecurityCenter.V1;
 
@@ -27,17 +27,16 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void CreateNotificationConfig1ResourceNames()
+        public void CreateNotificationConfig2ResourceNames3()
         {
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            string configId = "";
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
-            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, configId, notificationConfig);
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, notificationConfig);
         }
     }
-    // [END securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened1_resourceNames]
+    // [END securitycenter_v1_generated_SecurityCenter_CreateNotificationConfig_sync_flattened2_resourceNames3]
 }
