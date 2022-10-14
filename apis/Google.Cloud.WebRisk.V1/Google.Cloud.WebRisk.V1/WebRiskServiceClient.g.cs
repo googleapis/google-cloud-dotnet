@@ -125,10 +125,10 @@ namespace Google.Cloud.WebRisk.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSubmissionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateSubmissionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="WebRiskServiceSettings"/> object.</returns>
@@ -323,7 +323,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified.
+        /// Required. The threat list to update. Only a single ThreatType should be specified
+        /// per request. If you want to handle multiple ThreatTypes, you must make one
+        /// request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -354,7 +356,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified.
+        /// Required. The threat list to update. Only a single ThreatType should be specified
+        /// per request. If you want to handle multiple ThreatTypes, you must make one
+        /// request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -385,7 +389,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified.
+        /// Required. The threat list to update. Only a single ThreatType should be specified
+        /// per request. If you want to handle multiple ThreatTypes, you must make one
+        /// request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -558,6 +564,8 @@ namespace Google.Cloud.WebRisk.V1
         /// <param name="hashPrefix">
         /// A hash prefix, consisting of the most significant 4-32 bytes of a SHA256
         /// hash. For JSON requests, this field is base64-encoded.
+        /// Note that if this parameter is provided by a URI, it must be encoded using
+        /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
@@ -584,6 +592,8 @@ namespace Google.Cloud.WebRisk.V1
         /// <param name="hashPrefix">
         /// A hash prefix, consisting of the most significant 4-32 bytes of a SHA256
         /// hash. For JSON requests, this field is base64-encoded.
+        /// Note that if this parameter is provided by a URI, it must be encoded using
+        /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
@@ -610,6 +620,8 @@ namespace Google.Cloud.WebRisk.V1
         /// <param name="hashPrefix">
         /// A hash prefix, consisting of the most significant 4-32 bytes of a SHA256
         /// hash. For JSON requests, this field is base64-encoded.
+        /// Note that if this parameter is provided by a URI, it must be encoded using
+        /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
@@ -625,7 +637,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -639,7 +652,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -653,7 +667,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -667,7 +682,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -691,7 +707,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -715,7 +732,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -735,7 +753,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -759,7 +778,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -783,7 +803,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that is making the submission. This string is in
@@ -966,7 +987,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -983,7 +1005,8 @@ namespace Google.Cloud.WebRisk.V1
         /// content, the site will be added to the [Google's Social Engineering
         /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
         /// protect users that could get exposed to this threat in the future. Only
-        /// projects with CREATE_SUBMISSION_USERS visibility can use this method.
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

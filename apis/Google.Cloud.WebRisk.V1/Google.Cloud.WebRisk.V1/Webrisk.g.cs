@@ -79,33 +79,34 @@ namespace Google.Cloud.WebRisk.V1 {
             "YXRlU3VibWlzc2lvblJlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0K",
             "K2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QS",
             "PAoKc3VibWlzc2lvbhgCIAEoCzIjLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYx",
-            "LlN1Ym1pc3Npb25CA+BBAiplCgpUaHJlYXRUeXBlEhsKF1RIUkVBVF9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHTUFMV0FSRRABEhYKElNPQ0lBTF9FTkdJTkVF",
-            "UklORxACEhUKEVVOV0FOVEVEX1NPRlRXQVJFEAMqRgoPQ29tcHJlc3Npb25U",
-            "eXBlEiAKHENPTVBSRVNTSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNSQVcQ",
-            "ARIICgRSSUNFEAIyowYKDldlYlJpc2tTZXJ2aWNlEtMBChVDb21wdXRlVGhy",
-            "ZWF0TGlzdERpZmYSNS5nb29nbGUuY2xvdWQud2Vicmlzay52MS5Db21wdXRl",
-            "VGhyZWF0TGlzdERpZmZSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLndlYnJpc2su",
-            "djEuQ29tcHV0ZVRocmVhdExpc3REaWZmUmVzcG9uc2UiS4LT5JMCHRIbL3Yx",
-            "L3RocmVhdExpc3RzOmNvbXB1dGVEaWZm2kEldGhyZWF0X3R5cGUsdmVyc2lv",
-            "bl90b2tlbixjb25zdHJhaW50cxKRAQoKU2VhcmNoVXJpcxIqLmdvb2dsZS5j",
-            "bG91ZC53ZWJyaXNrLnYxLlNlYXJjaFVyaXNSZXF1ZXN0GisuZ29vZ2xlLmNs",
-            "b3VkLndlYnJpc2sudjEuU2VhcmNoVXJpc1Jlc3BvbnNlIiqC0+STAhESDy92",
-            "MS91cmlzOnNlYXJjaNpBEHVyaSx0aHJlYXRfdHlwZXMSoQEKDFNlYXJjaEhh",
-            "c2hlcxIsLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlNlYXJjaEhhc2hlc1Jl",
-            "cXVlc3QaLS5nb29nbGUuY2xvdWQud2Vicmlzay52MS5TZWFyY2hIYXNoZXNS",
-            "ZXNwb25zZSI0gtPkkwITEhEvdjEvaGFzaGVzOnNlYXJjaNpBGGhhc2hfcHJl",
-            "Zml4LHRocmVhdF90eXBlcxK2AQoQQ3JlYXRlU3VibWlzc2lvbhIwLmdvb2ds",
-            "ZS5jbG91ZC53ZWJyaXNrLnYxLkNyZWF0ZVN1Ym1pc3Npb25SZXF1ZXN0GiMu",
-            "Z29vZ2xlLmNsb3VkLndlYnJpc2sudjEuU3VibWlzc2lvbiJLgtPkkwIxIiMv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qfS9zdWJtaXNzaW9uczoKc3VibWlzc2lv",
-            "btpBEXBhcmVudCxzdWJtaXNzaW9uGkrKQRZ3ZWJyaXNrLmdvb2dsZWFwaXMu",
-            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybUK/AQoVY29tLmdvb2dsZS53ZWJyaXNrLnYxQgxXZWJSaXNrUHJv",
-            "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC93ZWJyaXNrL3YxO3dlYnJpc2uiAgRHQ1dSqgIXR29vZ2xlLkNsb3Vk",
-            "LldlYlJpc2suVjHKAhdHb29nbGVcQ2xvdWRcV2ViUmlza1xWMeoCGkdvb2ds",
-            "ZTo6Q2xvdWQ6OldlYlJpc2s6OlYxYgZwcm90bzM="));
+            "LlN1Ym1pc3Npb25CA+BBAiqPAQoKVGhyZWF0VHlwZRIbChdUSFJFQVRfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgsKB01BTFdBUkUQARIWChJTT0NJQUxfRU5HSU5F",
+            "RVJJTkcQAhIVChFVTldBTlRFRF9TT0ZUV0FSRRADEigKJFNPQ0lBTF9FTkdJ",
+            "TkVFUklOR19FWFRFTkRFRF9DT1ZFUkFHRRAEKkYKD0NvbXByZXNzaW9uVHlw",
+            "ZRIgChxDT01QUkVTU0lPTl9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDUkFXEAES",
+            "CAoEUklDRRACMqMGCg5XZWJSaXNrU2VydmljZRLTAQoVQ29tcHV0ZVRocmVh",
+            "dExpc3REaWZmEjUuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuQ29tcHV0ZVRo",
+            "cmVhdExpc3REaWZmUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYx",
+            "LkNvbXB1dGVUaHJlYXRMaXN0RGlmZlJlc3BvbnNlIkuC0+STAh0SGy92MS90",
+            "aHJlYXRMaXN0czpjb21wdXRlRGlmZtpBJXRocmVhdF90eXBlLHZlcnNpb25f",
+            "dG9rZW4sY29uc3RyYWludHMSkQEKClNlYXJjaFVyaXMSKi5nb29nbGUuY2xv",
+            "dWQud2Vicmlzay52MS5TZWFyY2hVcmlzUmVxdWVzdBorLmdvb2dsZS5jbG91",
+            "ZC53ZWJyaXNrLnYxLlNlYXJjaFVyaXNSZXNwb25zZSIqgtPkkwIREg8vdjEv",
+            "dXJpczpzZWFyY2jaQRB1cmksdGhyZWF0X3R5cGVzEqEBCgxTZWFyY2hIYXNo",
+            "ZXMSLC5nb29nbGUuY2xvdWQud2Vicmlzay52MS5TZWFyY2hIYXNoZXNSZXF1",
+            "ZXN0Gi0uZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuU2VhcmNoSGFzaGVzUmVz",
+            "cG9uc2UiNILT5JMCExIRL3YxL2hhc2hlczpzZWFyY2jaQRhoYXNoX3ByZWZp",
+            "eCx0aHJlYXRfdHlwZXMStgEKEENyZWF0ZVN1Ym1pc3Npb24SMC5nb29nbGUu",
+            "Y2xvdWQud2Vicmlzay52MS5DcmVhdGVTdWJtaXNzaW9uUmVxdWVzdBojLmdv",
+            "b2dsZS5jbG91ZC53ZWJyaXNrLnYxLlN1Ym1pc3Npb24iS4LT5JMCMSIjL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc3VibWlzc2lvbnM6CnN1Ym1pc3Npb27a",
+            "QRFwYXJlbnQsc3VibWlzc2lvbhpKykEWd2Vicmlzay5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1CvwEKFWNvbS5nb29nbGUud2Vicmlzay52MUIMV2ViUmlza1Byb3Rv",
+            "UAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvd2Vicmlzay92MTt3ZWJyaXNrogIER0NXUqoCF0dvb2dsZS5DbG91ZC5X",
+            "ZWJSaXNrLlYxygIXR29vZ2xlXENsb3VkXFdlYlJpc2tcVjHqAhpHb29nbGU6",
+            "OkNsb3VkOjpXZWJSaXNrOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1.CompressionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -129,12 +130,12 @@ namespace Google.Cloud.WebRisk.V1 {
   }
   #region Enums
   /// <summary>
-  /// The type of threat. This maps dirrectly to the threat list a threat may
+  /// The type of threat. This maps directly to the threat list a threat may
   /// belong to.
   /// </summary>
   public enum ThreatType {
     /// <summary>
-    /// Unknown.
+    /// No entries should match this threat type. This threat type is unused.
     /// </summary>
     [pbr::OriginalName("THREAT_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -149,6 +150,11 @@ namespace Google.Cloud.WebRisk.V1 {
     /// Unwanted software targeting any platform.
     /// </summary>
     [pbr::OriginalName("UNWANTED_SOFTWARE")] UnwantedSoftware = 3,
+    /// <summary>
+    /// A list of extended coverage social engineering URIs targeting any
+    /// platform.
+    /// </summary>
+    [pbr::OriginalName("SOCIAL_ENGINEERING_EXTENDED_COVERAGE")] SocialEngineeringExtendedCoverage = 4,
   }
 
   /// <summary>
@@ -225,7 +231,9 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int ThreatTypeFieldNumber = 1;
     private global::Google.Cloud.WebRisk.V1.ThreatType threatType_ = global::Google.Cloud.WebRisk.V1.ThreatType.Unspecified;
     /// <summary>
-    /// Required. The threat list to update. Only a single ThreatType should be specified.
+    /// Required. The threat list to update. Only a single ThreatType should be specified
+    /// per request. If you want to handle multiple ThreatTypes, you must make one
+    /// request per ThreatType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1674,7 +1682,7 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int ThreatFieldNumber = 1;
     private global::Google.Cloud.WebRisk.V1.SearchUrisResponse.Types.ThreatUri threat_;
     /// <summary>
-    /// The threat list matches. This may be empty if the URI is on no list.
+    /// The threat list matches. This might be empty if the URI is on no list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2125,6 +2133,8 @@ namespace Google.Cloud.WebRisk.V1 {
     /// <summary>
     /// A hash prefix, consisting of the most significant 4-32 bytes of a SHA256
     /// hash. For JSON requests, this field is base64-encoded.
+    /// Note that if this parameter is provided by a URI, it must be encoded using
+    /// the web safe base64 variant (RFC 4648).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4063,7 +4073,7 @@ namespace Google.Cloud.WebRisk.V1 {
   }
 
   /// <summary>
-  /// Wraps a URI that might be displaying phishing content.
+  /// Wraps a URI that might be displaying malicious content.
   /// </summary>
   public sealed partial class Submission : pb::IMessage<Submission>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4113,7 +4123,7 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. The URI that is being reported for phishing content to be analyzed.
+    /// Required. The URI that is being reported for malicious content to be analyzed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
