@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.3.0, released 2022-10-14
+
+This release removes some changes accidentally released in 3.2.0. We
+don't *expect* this to break customers, even though it's obviously
+theoretically possible. Therefore we have decided to only use a minor
+version bump for this change. Please [file an issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if this release causes problems for you.
+
+### Breaking changes
+
+- Remove proto ReadEfficiencyStats ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Remove field RequestStats.read_efficiency_stats ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Rename proto AllReadStats to FullReadStatsView ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Rename field RequestStats.all_read_stats to full_read_stats_view ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Rename proto ReadIteratorStats to ReadIterationStats ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Remove enum value ReadRowsRequest.RequestStatsView.REQUEST_STATS_EFFICIENCY ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+- Remove field ReadIterationStats.deletes_seen ([commit d1e6323](https://github.com/googleapis/google-cloud-dotnet/commit/d1e632344103f7d869913cfac4d5a2c0fd623e4e))
+
 ## Version 3.2.0, released 2022-10-03
 
 ### New features
@@ -11,6 +29,7 @@
 ### New features
 
 - Added ResponseParams proto messages
+
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
