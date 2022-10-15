@@ -148,13 +148,13 @@ namespace Google.Cloud.Batch.V1Alpha {
             "R19QT0xJQ1lfVU5TUEVDSUZJRUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxF",
             "EAE6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFza0dyb3VwEkpwcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9i",
-            "fS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIvCg5TZXJ2aWNlQWNjb3VudBIN",
-            "CgVlbWFpbBgBIAEoCRIOCgZzY29wZXMYAiADKAlCzQEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYmF0Y2gudjFhbHBoYUIISm9iUHJvdG9QAVo/Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iYXRjaC92MWFscGhh",
-            "O2JhdGNoogIDR0NCqgIaR29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpH",
-            "b29nbGVcQ2xvdWRcQmF0Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJh",
-            "dGNoOjpWMWFscGhhYgZwcm90bzM="));
+            "fS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIzCg5TZXJ2aWNlQWNjb3VudBIN",
+            "CgVlbWFpbBgBIAEoCRISCgZzY29wZXMYAiADKAlCAhgBQs0BCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaP2dvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmF0Y2gvdjFh",
+            "bHBoYTtiYXRjaKICA0dDQqoCGkdvb2dsZS5DbG91ZC5CYXRjaC5WMUFscGhh",
+            "ygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -394,7 +394,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int NotificationFieldNumber = 10;
     private global::Google.Cloud.Batch.V1Alpha.JobNotification notification_;
     /// <summary>
-    /// Job notification.
+    /// Deprecated: please use notifications instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2894,7 +2894,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int InstanceFieldNumber = 2;
     private global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy instance_;
     /// <summary>
-    /// Create only instances allowed by this policy.
+    /// Deprecated: please use instances[0].policy instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2927,8 +2927,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> instanceTemplates_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Instance templates that are used to VMs.
-    /// If specified, only instance_templates[0] is used.
+    /// Deprecated: please use instances[0].template instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2943,11 +2942,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel> provisioningModels_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel>();
     /// <summary>
-    /// Create only instances in the listed provisiong models.
-    /// Default to allow all.
-    ///
-    /// Currently only the first model of the provisioning_models list will be
-    /// considered; specifying additional models (e.g., 2nd, 3rd, etc.) is a no-op.
+    /// Deprecated: please use instances[i].policy.provisioning_model instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2960,7 +2955,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int ServiceAccountEmailFieldNumber = 5;
     private string serviceAccountEmail_ = "";
     /// <summary>
-    /// Email of the service account that VMs will run as.
+    /// Deprecated: please use service_account instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2977,7 +2972,6 @@ namespace Google.Cloud.Batch.V1Alpha {
     private global::Google.Cloud.Batch.V1Alpha.ServiceAccount serviceAccount_;
     /// <summary>
     /// Service account that VMs will run as.
-    /// Not yet implemented.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4085,7 +4079,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         private string deviceName_ = "";
         /// <summary>
         /// Device name that the guest operating system will see.
-        /// If not specified, this is default to the disk name.
+        /// It is used by Runnable.volumes field to mount disks. So please specify
+        /// the device_name if you want Batch to help mount the disk, and it should
+        /// match the device_name field in volumes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4399,6 +4395,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "install_gpu_drivers" field.</summary>
         public const int InstallGpuDriversFieldNumber = 3;
         private bool installGpuDrivers_;
+        /// <summary>
+        /// Deprecated: please use instances[0].install_gpu_drivers instead.
+        /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4648,6 +4647,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         private static readonly pb::FieldCodec<string> _repeated_allowedMachineTypes_codec
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> allowedMachineTypes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Deprecated: please use machine_type instead.
+        /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5047,6 +5049,12 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "install_gpu_drivers" field.</summary>
         public const int InstallGpuDriversFieldNumber = 3;
         private bool installGpuDrivers_;
+        /// <summary>
+        /// Set this field true if users want Batch to help fetch drivers from a
+        /// third party location and install them for GPUs specified in
+        /// policy.accelerators or instance_template on their behalf. Default is
+        /// false.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool InstallGpuDrivers {
@@ -6439,7 +6447,9 @@ namespace Google.Cloud.Batch.V1Alpha {
     private string email_ = "";
     /// <summary>
     /// Email address of the service account. If not specified, the default
-    /// Compute Engine service account for the project will be used.
+    /// Compute Engine service account for the project will be used. If instance
+    /// template is being used, the service account has to be specified in the
+    /// instance template and it has to match the email field here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6459,6 +6469,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// List of scopes to be enabled for this service account on the VM, in
     /// addition to the cloud-platform API scope that will be added by default.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Scopes {
