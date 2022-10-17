@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -74,6 +75,7 @@ namespace Google.Cloud.Kms.V1
             MacSignSettings = existing.MacSignSettings;
             MacVerifySettings = existing.MacVerifySettings;
             GenerateRandomBytesSettings = existing.GenerateRandomBytesSettings;
+            LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
@@ -622,6 +624,11 @@ namespace Google.Cloud.Kms.V1
         public gaxgrpc::CallSettings GenerateRandomBytesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
         /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
         /// </summary>
         public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
@@ -782,6 +789,9 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>The underlying gRPC KeyManagementService client</summary>
         public virtual KeyManagementService.KeyManagementServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
@@ -4977,6 +4987,7 @@ namespace Google.Cloud.Kms.V1
             GrpcClient = grpcClient;
             KeyManagementServiceSettings effectiveSettings = settings ?? KeyManagementServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>("ListKeyRings", grpcClient.ListKeyRingsAsync, grpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListKeyRings);
@@ -5117,6 +5128,9 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>The underlying gRPC KeyManagementService client</summary>
         public override KeyManagementService.KeyManagementServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
@@ -6038,6 +6052,16 @@ namespace Google.Cloud.Kms.V1
     {
         public partial class KeyManagementServiceClient
         {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
             /// <summary>
             /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
             /// this client.

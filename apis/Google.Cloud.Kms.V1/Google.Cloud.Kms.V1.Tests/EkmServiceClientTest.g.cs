@@ -18,6 +18,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetEkmConnectionRequestObject()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -60,6 +62,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetEkmConnectionRequestObjectAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -88,6 +91,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetEkmConnection()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -114,6 +118,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetEkmConnectionAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -142,6 +147,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetEkmConnectionResourceNames()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -168,6 +174,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetEkmConnectionResourceNamesAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEkmConnectionRequest request = new GetEkmConnectionRequest
             {
@@ -196,6 +203,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateEkmConnectionRequestObject()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -224,6 +232,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateEkmConnectionRequestObjectAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -254,6 +263,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateEkmConnection()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -282,6 +292,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateEkmConnectionAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -312,6 +323,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateEkmConnectionResourceNames()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -340,6 +352,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateEkmConnectionResourceNamesAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEkmConnectionRequest request = new CreateEkmConnectionRequest
             {
@@ -370,6 +383,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateEkmConnectionRequestObject()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEkmConnectionRequest request = new UpdateEkmConnectionRequest
             {
@@ -397,6 +411,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateEkmConnectionRequestObjectAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEkmConnectionRequest request = new UpdateEkmConnectionRequest
             {
@@ -426,6 +441,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateEkmConnection()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEkmConnectionRequest request = new UpdateEkmConnectionRequest
             {
@@ -453,6 +469,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateEkmConnectionAsync()
         {
             moq::Mock<EkmService.EkmServiceClient> mockGrpcClient = new moq::Mock<EkmService.EkmServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEkmConnectionRequest request = new UpdateEkmConnectionRequest
             {
