@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.2.0, released 2022-10-17
+
+### New features
+
+- Add RetrieveLegacySecretKey method ([commit e6d4fea](https://github.com/googleapis/google-cloud-dotnet/commit/e6d4feaf59fde91f0270b42d0dad595a235d1f46))
+- Add annotation reasons REFUND, REFUND_FRAUD, TRANSACTION_ACCEPTED, TRANSACTION_DECLINED and SOCIAL_SPAM ([commit e6d4fea](https://github.com/googleapis/google-cloud-dotnet/commit/e6d4feaf59fde91f0270b42d0dad595a235d1f46))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### Bug fixes
