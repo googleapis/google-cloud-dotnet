@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-10-17
+
+### New features
+
+- Adds Startup and Liveness probes to Cloud Run v2 API client libraries ([commit 79832b5](https://github.com/googleapis/google-cloud-dotnet/commit/79832b51d30d70ae16f1108a145141be7fd06816))
+
 ## Version 2.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
