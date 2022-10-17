@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.1.0, released 2022-10-17
+
+### New features
+
+- Add PolicyViolation to the AuditLog proto, this will only be present when access is denied due to Organization Policy. It describes why access is denied ([commit 4123c0e](https://github.com/googleapis/google-cloud-dotnet/commit/4123c0e7cf10ff042930277cfd9fd8a5496f61e4))
+- Add FirstPartyAppMetadata to the BigQueryAuditMetadata proto, it contains metadata about requests originating from Google apps, such as Google Sheets ([commit 4123c0e](https://github.com/googleapis/google-cloud-dotnet/commit/4123c0e7cf10ff042930277cfd9fd8a5496f61e4))
+- Added new events to BigQueryAuditMetadata such as UnlinkDataset and RowAccessPolicyCreation ([commit 4123c0e](https://github.com/googleapis/google-cloud-dotnet/commit/4123c0e7cf10ff042930277cfd9fd8a5496f61e4))
+
+### Documentation improvements
+
+- Updated multiple comments ([commit 4123c0e](https://github.com/googleapis/google-cloud-dotnet/commit/4123c0e7cf10ff042930277cfd9fd8a5496f61e4))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
