@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.3.0, released 2022-10-17
+
+### New features
+
+- Include conversation dataset name to be created with dataset creation metadata ([commit 293e1ff](https://github.com/googleapis/google-cloud-dotnet/commit/293e1ff997ea8ccedf5812dda0392089cfbe8228))
+
+### Documentation improvements
+
+- Clarify SuggestionFeature enums which are specific to chat agents ([commit 293e1ff](https://github.com/googleapis/google-cloud-dotnet/commit/293e1ff997ea8ccedf5812dda0392089cfbe8228))
+
 ## Version 4.2.0, released 2022-09-15
 
 ### Documentation improvements
