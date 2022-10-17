@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2022-10-17
+
+### New features
+
+- Launch GKE Cost Allocations configuration to the v1 GKE API ([commit c359c4a](https://github.com/googleapis/google-cloud-dotnet/commit/c359c4a17e2697da4219ef9176bd3b3b84792105))
+
 ## Version 3.3.0, released 2022-10-03
 
 ### New features
