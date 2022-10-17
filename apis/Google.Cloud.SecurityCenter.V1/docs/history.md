@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2022-10-17
+
+### New features
+
+- Adding project/folder level parents to notification configs in SCC ([commit 270a8df](https://github.com/googleapis/google-cloud-dotnet/commit/270a8df177ad94392f0d4f53c3734ee44ca2415d))
+
 ## Version 3.4.0, released 2022-09-15
 
 ### New features
