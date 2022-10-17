@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-10-17
+
+### New features
+
+- Add SOCIAL_ENGINEERING_EXTENDED_COVERAGE threat type ([commit df88f32](https://github.com/googleapis/google-cloud-dotnet/commit/df88f324f85e9c127c22e943e9d12c5268aea08e))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
