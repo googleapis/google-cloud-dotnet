@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.3.0, released 2022-10-17
+
+### Bug fixes
+
+- Deprecate searchable field kmsKey ([commit 73d79e8](https://github.com/googleapis/google-cloud-dotnet/commit/73d79e81c1a3fb91bd07bec02b60bd105994e580))
+
+### New features
+
+- Add a new searchable field kmsKeys ([commit 73d79e8](https://github.com/googleapis/google-cloud-dotnet/commit/73d79e81c1a3fb91bd07bec02b60bd105994e580))
+
 ## Version 3.2.0, released 2022-10-03
 
 ### New features
