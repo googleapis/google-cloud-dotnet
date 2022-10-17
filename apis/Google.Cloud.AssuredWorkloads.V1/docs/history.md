@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.2.0, released 2022-10-17
+
+### New features
+
+- Add new field for exception audit log link ([commit f22a43e](https://github.com/googleapis/google-cloud-dotnet/commit/f22a43e19787024d703416e584dcbf53373f401c))
+- Add support of new compliance regime for regions and new partner T systems ([commit f22a43e](https://github.com/googleapis/google-cloud-dotnet/commit/f22a43e19787024d703416e584dcbf53373f401c))
+- Add apis for AssuredWorkload monitoring feature and to restrict allowed resources ([commit 982ac1c](https://github.com/googleapis/google-cloud-dotnet/commit/982ac1c2add600cf357e6feb5e5c94e33715fd30))
+
+### Documentation improvements
+
+- Fix some typos in documentation ([commit f22a43e](https://github.com/googleapis/google-cloud-dotnet/commit/f22a43e19787024d703416e584dcbf53373f401c))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### New features
