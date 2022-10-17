@@ -1188,6 +1188,28 @@
       "serviceConfigFile": "dataflow_v1beta3.yaml"
     },
     {
+      "id": "Google.Cloud.Dataform.V1Beta1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Dataform",
+      "productUrl": "https://cloud.google.com/dataform",
+      "description": "Recommended Google client library to access the Google Cloud Dataform API (v1beta1) which allows you to develop and operationalize scalable data transformations pipelines in BigQuery using SQL.",
+      "tags": [
+        "bigquery",
+        "sql",
+        "transformations",
+        "dataform"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/dataform/v1beta1",
+      "shortName": "dataform",
+      "serviceConfigFile": "dataform_v1beta1.yaml"
+    },
+    {
       "id": "Google.Cloud.Dataplex.V1",
       "version": "2.1.0",
       "type": "grpc",
