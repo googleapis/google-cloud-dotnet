@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-10-17
+
+### New features
+
+- Add `subject_to_thresholding` field to `ResponseMetadata` type ([commit 5be9430](https://github.com/googleapis/google-cloud-dotnet/commit/5be9430f582a6fadedcd2f3ccc3aa45dcf0a0253))
+- Add `tokens_per_project_per_hour` field to `PropertyQuota` type ([commit 5be9430](https://github.com/googleapis/google-cloud-dotnet/commit/5be9430f582a6fadedcd2f3ccc3aa45dcf0a0253))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
