@@ -1,6 +1,6 @@
 [
   {
-    "endpoint": "global-speech.googleapis.com",
+    "endpoint": "speech.googleapis.com",
     "method": "ListCustomClasses",
     "client": "SpeechClient",
     "arguments": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "endpoint": "global-speech.googleapis.com",
+    "endpoint": "speech.googleapis.com",
     "method": "ListRecognizers",
     "client": "SpeechClient",
     "arguments": {
@@ -16,7 +16,7 @@
     }
   },
   {
-    "endpoint": "global-speech.googleapis.com",
+    "endpoint": "speech.googleapis.com",
     "method": "ListPhraseSets",
     "client": "SpeechClient",
     "arguments": {
