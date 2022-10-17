@@ -11,6 +11,318 @@
   },
   "snippets": [
     {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_RunReportJob_sync",
+      "title": "RunReportJobRequestObject",
+      "description": "Snippet for RunReportJob",
+      "file": "CloudChannelReportsServiceClient.RunReportJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunReportJob",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.RunReportJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.RunReportJobResponse, Google.Cloud.Channel.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "RunReportJob",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.RunReportJob",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_RunReportJob_async",
+      "title": "RunReportJobRequestObjectAsync",
+      "description": "Snippet for RunReportJobAsync",
+      "file": "CloudChannelReportsServiceClient.RunReportJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunReportJobAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.RunReportJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.RunReportJobResponse, Google.Cloud.Channel.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "RunReportJob",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.RunReportJob",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_sync",
+      "title": "FetchReportResultsRequestObject",
+      "description": "Snippet for FetchReportResults",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResults",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_async",
+      "title": "FetchReportResultsRequestObjectAsync",
+      "description": "Snippet for FetchReportResultsAsync",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResultsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_sync_flattened",
+      "title": "FetchReportResults",
+      "description": "Snippet for FetchReportResults",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResults",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_async_flattened",
+      "title": "FetchReportResultsAsync",
+      "description": "Snippet for FetchReportResultsAsync",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResultsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_sync_flattened_resourceNames",
+      "title": "FetchReportResultsResourceNames",
+      "description": "Snippet for FetchReportResults",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResults",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_async_flattened_resourceNames",
+      "title": "FetchReportResultsResourceNamesAsync",
+      "description": "Snippet for FetchReportResultsAsync",
+      "file": "CloudChannelReportsServiceClient.FetchReportResultsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReportResultsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchReportResults",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_ListReports_sync",
+      "title": "ListReportsRequestObject",
+      "description": "Snippet for ListReports",
+      "file": "CloudChannelReportsServiceClient.ListReportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReports",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.ListReports",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_ListReports_async",
+      "title": "ListReportsRequestObjectAsync",
+      "description": "Snippet for ListReportsAsync",
+      "file": "CloudChannelReportsServiceClient.ListReportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.ListReports",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_ListReports_sync_flattened",
+      "title": "ListReports",
+      "description": "Snippet for ListReports",
+      "file": "CloudChannelReportsServiceClient.ListReportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReports",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.ListReports",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelReportsService_ListReports_async_flattened",
+      "title": "ListReportsAsync",
+      "description": "Snippet for ListReportsAsync",
+      "file": "CloudChannelReportsServiceClient.ListReportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
+        "client": {
+          "shortName": "CloudChannelReportsServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.channel.v1.CloudChannelReportsService.ListReports",
+          "service": {
+            "shortName": "CloudChannelReportsService",
+            "fullName": "google.cloud.channel.v1.CloudChannelReportsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomers_sync",
       "title": "ListCustomersRequestObject",
       "description": "Snippet for ListCustomers",

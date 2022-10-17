@@ -849,7 +849,8 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED:
       ///     * The customer doesn't belong to the reseller and has no auth token.
-      ///     * The supplied auth token is invalid.
+      ///     * The customer provided incorrect reseller information when generating
+      ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
@@ -2931,7 +2932,8 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED:
       ///     * The customer doesn't belong to the reseller and has no auth token.
-      ///     * The supplied auth token is invalid.
+      ///     * The customer provided incorrect reseller information when generating
+      ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
@@ -2961,7 +2963,8 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED:
       ///     * The customer doesn't belong to the reseller and has no auth token.
-      ///     * The supplied auth token is invalid.
+      ///     * The customer provided incorrect reseller information when generating
+      ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
@@ -2989,7 +2992,8 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED:
       ///     * The customer doesn't belong to the reseller and has no auth token.
-      ///     * The supplied auth token is invalid.
+      ///     * The customer provided incorrect reseller information when generating
+      ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
@@ -3019,7 +3023,8 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED:
       ///     * The customer doesn't belong to the reseller and has no auth token.
-      ///     * The supplied auth token is invalid.
+      ///     * The customer provided incorrect reseller information when generating
+      ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.

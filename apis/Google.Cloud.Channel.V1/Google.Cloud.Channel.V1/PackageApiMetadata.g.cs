@@ -36,6 +36,7 @@ namespace Google.Cloud.Channel.V1
             yield return OffersReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
             yield return ProductsReflection.Descriptor;
+            yield return ReportsServiceReflection.Descriptor;
             yield return RepricingReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return SubscriberEventReflection.Descriptor;
