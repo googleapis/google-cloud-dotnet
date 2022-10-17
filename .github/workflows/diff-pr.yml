@@ -12,7 +12,7 @@ jobs:
       DOTNET_NOLOGO: true
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: true
         fetch-depth: 100
@@ -27,13 +27,13 @@ jobs:
 
     # Install .NET Core 3.1 for testing
     - name: Setup .NET Core 3.1
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 3.1.x
 
     # Install .NET 6 for building
     - name: Setup .NET 6.0
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
 
