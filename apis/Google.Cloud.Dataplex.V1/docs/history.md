@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2022-10-17
+
+### New features
+
+- Add support for notebook tasks ([commit 747c3cc](https://github.com/googleapis/google-cloud-dotnet/commit/747c3cce51f655e638db69943faa9df0f3a49488))
+
 ## Version 2.1.0, released 2022-07-25
 
 ### New features
