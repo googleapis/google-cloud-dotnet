@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-alpha04, released 2022-10-17
+
+### Documentation improvements
+
+- Refine GPU drivers installation proto description ([commit 3fb17e8](https://github.com/googleapis/google-cloud-dotnet/commit/3fb17e810002de1d4def0e7baa6e4a45627e8825))
+- Refine comments for deprecated proto fields ([commit 3fb17e8](https://github.com/googleapis/google-cloud-dotnet/commit/3fb17e810002de1d4def0e7baa6e4a45627e8825))
+- Update the API comments about the device_name ([commit 3fb17e8](https://github.com/googleapis/google-cloud-dotnet/commit/3fb17e810002de1d4def0e7baa6e4a45627e8825))
+
 ## Version 1.0.0-alpha03, released 2022-09-05
 
 ### Bug fixes
