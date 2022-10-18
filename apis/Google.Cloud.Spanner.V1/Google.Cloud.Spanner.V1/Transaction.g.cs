@@ -26,34 +26,38 @@ namespace Google.Cloud.Spanner.V1 {
           string.Concat(
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
             "LnNwYW5uZXIudjEaHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLDBAoSVHJhbnNhY3Rp",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLrBQoSVHJhbnNhY3Rp",
             "b25PcHRpb25zEkUKCnJlYWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5l",
             "ci52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0",
             "aW9uZWRfZG1sGAMgASgLMjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rp",
             "b25PcHRpb25zLlBhcnRpdGlvbmVkRG1sSAASQwoJcmVhZF9vbmx5GAIgASgL",
             "Mi4uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRP",
-            "bmx5SAAaCwoJUmVhZFdyaXRlGhAKDlBhcnRpdGlvbmVkRG1sGqgCCghSZWFk",
-            "T25seRIQCgZzdHJvbmcYASABKAhIABI4ChJtaW5fcmVhZF90aW1lc3RhbXAY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAASMgoNbWF4X3N0",
-            "YWxlbmVzcxgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEjQK",
-            "DnJlYWRfdGltZXN0YW1wGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEgAEjQKD2V4YWN0X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbkgAEh0KFXJldHVybl9yZWFkX3RpbWVzdGFtcBgGIAEo",
-            "CEIRCg90aW1lc3RhbXBfYm91bmRCBgoEbW9kZSJNCgtUcmFuc2FjdGlvbhIK",
-            "CgJpZBgBIAEoDBIyCg5yZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXAipAEKE1RyYW5zYWN0aW9uU2VsZWN0b3ISOwoK",
-            "c2luZ2xlX3VzZRgBIAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0",
-            "aW9uT3B0aW9uc0gAEgwKAmlkGAIgASgMSAASNgoFYmVnaW4YAyABKAsyJS5n",
-            "b29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnNIAEIKCghzZWxl",
-            "Y3RvckK2AQoVY29tLmdvb2dsZS5zcGFubmVyLnYxQhBUcmFuc2FjdGlvblBy",
-            "b3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "c3Bhbm5lci92MTtzcGFubmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
-            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNw",
-            "YW5uZXI6OlYxYgZwcm90bzM="));
+            "bmx5SAAasgEKCVJlYWRXcml0ZRJUCg5yZWFkX2xvY2tfbW9kZRgBIAEoDjI8",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5SZWFkV3Jp",
+            "dGUuUmVhZExvY2tNb2RlIk8KDFJlYWRMb2NrTW9kZRIeChpSRUFEX0xPQ0tf",
+            "TU9ERV9VTlNQRUNJRklFRBAAEg8KC1BFU1NJTUlTVElDEAESDgoKT1BUSU1J",
+            "U1RJQxACGhAKDlBhcnRpdGlvbmVkRG1sGqgCCghSZWFkT25seRIQCgZzdHJv",
+            "bmcYASABKAhIABI4ChJtaW5fcmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wSAASMgoNbWF4X3N0YWxlbmVzcxgDIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEjQKDnJlYWRfdGltZXN0",
+            "YW1wGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEjQKD2V4",
+            "YWN0X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkgAEh0KFXJldHVybl9yZWFkX3RpbWVzdGFtcBgGIAEoCEIRCg90aW1lc3Rh",
+            "bXBfYm91bmRCBgoEbW9kZSJNCgtUcmFuc2FjdGlvbhIKCgJpZBgBIAEoDBIy",
+            "Cg5yZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXAipAEKE1RyYW5zYWN0aW9uU2VsZWN0b3ISOwoKc2luZ2xlX3VzZRgB",
+            "IAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gA",
+            "EgwKAmlkGAIgASgMSAASNgoFYmVnaW4YAyABKAsyJS5nb29nbGUuc3Bhbm5l",
+            "ci52MS5UcmFuc2FjdGlvbk9wdGlvbnNIAEIKCghzZWxlY3RvckK2AQoVY29t",
+            "Lmdvb2dsZS5zcGFubmVyLnYxQhBUcmFuc2FjdGlvblByb3RvUAFaOGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci92MTtz",
+            "cGFubmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xv",
+            "dWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp" }, null, null, null, null),
@@ -94,7 +98,8 @@ namespace Google.Cloud.Spanner.V1 {
   ///
   ///      Queries on change streams must be performed with the snapshot read-only
   ///      transaction mode, specifying a strong read. Please see
-  ///      [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong] for more details.
+  ///      [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong]
+  ///      for more details.
   ///
   ///   3. Partitioned DML. This type of transaction is used to execute
   ///      a single Partitioned DML statement. Partitioned DML partitions
@@ -230,7 +235,8 @@ namespace Google.Cloud.Spanner.V1 {
   /// Queries on change streams (see below for more details) must also specify
   /// the strong read timestamp bound.
   ///
-  /// See [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
+  /// See
+  /// [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
   ///
   /// Exact staleness:
   ///
@@ -251,7 +257,9 @@ namespace Google.Cloud.Spanner.V1 {
   /// equivalent boundedly stale concurrency modes. On the other hand,
   /// boundedly stale reads usually return fresher results.
   ///
-  /// See [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp] and
+  /// See
+  /// [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp]
+  /// and
   /// [TransactionOptions.ReadOnly.exact_staleness][google.spanner.v1.TransactionOptions.ReadOnly.exact_staleness].
   ///
   /// Bounded staleness:
@@ -281,7 +289,9 @@ namespace Google.Cloud.Spanner.V1 {
   /// which rows will be read, it can only be used with single-use
   /// read-only transactions.
   ///
-  /// See [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness] and
+  /// See
+  /// [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness]
+  /// and
   /// [TransactionOptions.ReadOnly.min_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.min_read_timestamp].
   ///
   /// Old read timestamps and garbage collection:
@@ -784,6 +794,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ReadWrite(ReadWrite other) : this() {
+          readLockMode_ = other.readLockMode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -791,6 +802,21 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ReadWrite Clone() {
           return new ReadWrite(this);
+        }
+
+        /// <summary>Field number for the "read_lock_mode" field.</summary>
+        public const int ReadLockModeFieldNumber = 1;
+        private global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode readLockMode_ = global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified;
+        /// <summary>
+        /// Read lock mode for the transaction.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode ReadLockMode {
+          get { return readLockMode_; }
+          set {
+            readLockMode_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -808,6 +834,7 @@ namespace Google.Cloud.Spanner.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (ReadLockMode != other.ReadLockMode) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -815,6 +842,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) hash ^= ReadLockMode.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -833,6 +861,10 @@ namespace Google.Cloud.Spanner.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReadLockMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -843,6 +875,10 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReadLockMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -853,6 +889,9 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadLockMode);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -864,6 +903,9 @@ namespace Google.Cloud.Spanner.V1 {
         public void MergeFrom(ReadWrite other) {
           if (other == null) {
             return;
+          }
+          if (other.ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+            ReadLockMode = other.ReadLockMode;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -880,6 +922,10 @@ namespace Google.Cloud.Spanner.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 8: {
+                ReadLockMode = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -895,10 +941,49 @@ namespace Google.Cloud.Spanner.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 8: {
+                ReadLockMode = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) input.ReadEnum();
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ReadWrite message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// `ReadLockMode` is used to set the read lock mode for read-write
+          /// transactions.
+          /// </summary>
+          public enum ReadLockMode {
+            /// <summary>
+            /// Default value.
+            ///
+            /// If the value is not specified, the pessimistic read lock is used.
+            /// </summary>
+            [pbr::OriginalName("READ_LOCK_MODE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Pessimistic lock mode.
+            ///
+            /// Read locks are acquired immediately on read.
+            /// </summary>
+            [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 1,
+            /// <summary>
+            /// Optimistic lock mode.
+            ///
+            /// Locks for reads within the transaction are not acquired on read.
+            /// Instead the locks are acquired on a commit to validate that
+            /// read/queried data has not changed since the transaction started.
+            /// </summary>
+            [pbr::OriginalName("OPTIMISTIC")] Optimistic = 2,
+          }
+
+        }
+        #endregion
 
       }
 
@@ -1245,7 +1330,8 @@ namespace Google.Cloud.Spanner.V1 {
         private bool returnReadTimestamp_;
         /// <summary>
         /// If true, the Cloud Spanner-selected read timestamp is included in
-        /// the [Transaction][google.spanner.v1.Transaction] message that describes the transaction.
+        /// the [Transaction][google.spanner.v1.Transaction] message that describes
+        /// the transaction.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1856,7 +1942,8 @@ namespace Google.Cloud.Spanner.V1 {
   /// [Read][google.spanner.v1.Spanner.Read] or
   /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] call runs.
   ///
-  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more information about transactions.
+  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more
+  /// information about transactions.
   /// </summary>
   public sealed partial class TransactionSelector : pb::IMessage<TransactionSelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1950,7 +2037,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Begin a new transaction and execute this read or SQL query in
     /// it. The transaction ID of the new transaction is returned in
-    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction], which is a [Transaction][google.spanner.v1.Transaction].
+    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction],
+    /// which is a [Transaction][google.spanner.v1.Transaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
