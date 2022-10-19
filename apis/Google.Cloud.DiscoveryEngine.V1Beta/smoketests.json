@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDocuments",
+    "client": "DocumentServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global/dataStores/default_data_store/branches/default_branch"
+    }
+  }
+]
