@@ -88,6 +88,19 @@ namespace Google.Cloud.Compute.V1
                 public const string UnspecifiedVersion = "UNSPECIFIED_VERSION";
             }
 
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Address.Types.Ipv6EndpointType"/> enum.</summary>
+            public static class Ipv6EndpointType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Address.Types.Ipv6EndpointType.UndefinedIpv6EndpointType"/>.</summary>
+                public const string UndefinedIpv6EndpointType = "UNDEFINED_IPV6_ENDPOINT_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Address.Types.Ipv6EndpointType.Netlb"/>.</summary>
+                public const string Netlb = "NETLB";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Address.Types.Ipv6EndpointType.Vm"/>.</summary>
+                public const string Vm = "VM";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Address.Types.NetworkTier"/> enum.</summary>
             public static class NetworkTier
             {
@@ -1841,6 +1854,23 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManager"/> message.</summary>
+        public static class InstanceGroupManager
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManager.Types.ListManagedInstancesResults"/> enum.</summary>
+            public static class ListManagedInstancesResults
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManager.Types.ListManagedInstancesResults.UndefinedListManagedInstancesResults"/>.</summary>
+                public const string UndefinedListManagedInstancesResults = "UNDEFINED_LIST_MANAGED_INSTANCES_RESULTS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManager.Types.ListManagedInstancesResults.Pageless"/>.</summary>
+                public const string Pageless = "PAGELESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManager.Types.ListManagedInstancesResults.Paginated"/>.</summary>
+                public const string Paginated = "PAGINATED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerUpdatePolicy"/> message.</summary>
         public static class InstanceGroupManagerUpdatePolicy
         {
@@ -2776,6 +2806,35 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Types.NetworkEndpointType.Serverless"/>.</summary>
                 public const string Serverless = "SERVERLESS";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData"/> message.</summary>
+        public static class NetworkEndpointGroupPscData
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus"/> enum.</summary>
+            public static class PscConnectionStatus
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.UndefinedPscConnectionStatus"/>.</summary>
+                public const string UndefinedPscConnectionStatus = "UNDEFINED_PSC_CONNECTION_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.Accepted"/>.</summary>
+                public const string Accepted = "ACCEPTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.Closed"/>.</summary>
+                public const string Closed = "CLOSED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.NeedsAttention"/>.</summary>
+                public const string NeedsAttention = "NEEDS_ATTENTION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.Pending"/>.</summary>
+                public const string Pending = "PENDING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.Rejected"/>.</summary>
+                public const string Rejected = "REJECTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkEndpointGroupPscData.Types.PscConnectionStatus.StatusUnspecified"/>.</summary>
+                public const string StatusUnspecified = "STATUS_UNSPECIFIED";
             }
         }
 
@@ -3730,6 +3789,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.StaticByoipAddresses"/>.</summary>
                 public const string StaticByoipAddresses = "STATIC_BYOIP_ADDRESSES";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.StaticExternalIpv6AddressRanges"/>.</summary>
+                public const string StaticExternalIpv6AddressRanges = "STATIC_EXTERNAL_IPV6_ADDRESS_RANGES";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.Subnetworks"/>.</summary>
                 public const string Subnetworks = "SUBNETWORKS";
 
@@ -4322,6 +4384,19 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.Status.Up"/>.</summary>
                 public const string Up = "UP";
             }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason"/> enum.</summary>
+            public static class StatusReason
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.UndefinedStatusReason"/>.</summary>
+                public const string UndefinedStatusReason = "UNDEFINED_STATUS_REASON";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.Md5AuthInternalProblem"/>.</summary>
+                public const string Md5AuthInternalProblem = "MD5_AUTH_INTERNAL_PROBLEM";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.Unspecified"/>.</summary>
+                public const string Unspecified = "STATUS_REASON_UNSPECIFIED";
+            }
         }
 
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Rule"/> message.</summary>
@@ -4680,8 +4755,17 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.HttpHeader"/>.</summary>
                 public const string HttpHeader = "HTTP_HEADER";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.HttpPath"/>.</summary>
+                public const string HttpPath = "HTTP_PATH";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.Ip"/>.</summary>
                 public const string Ip = "IP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.RegionCode"/>.</summary>
+                public const string RegionCode = "REGION_CODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.Sni"/>.</summary>
+                public const string Sni = "SNI";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.XffIp"/>.</summary>
                 public const string XffIp = "XFF_IP";

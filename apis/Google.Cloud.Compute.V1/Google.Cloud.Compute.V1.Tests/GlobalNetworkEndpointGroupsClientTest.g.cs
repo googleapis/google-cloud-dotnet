@@ -46,6 +46,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                PscData = new NetworkEndpointGroupPscData(),
                 CloudRun = new NetworkEndpointGroupCloudRun(),
                 Annotations =
                 {
@@ -90,6 +91,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                PscData = new NetworkEndpointGroupPscData(),
                 CloudRun = new NetworkEndpointGroupCloudRun(),
                 Annotations =
                 {
@@ -136,6 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                PscData = new NetworkEndpointGroupPscData(),
                 CloudRun = new NetworkEndpointGroupCloudRun(),
                 Annotations =
                 {
@@ -180,6 +183,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                PscData = new NetworkEndpointGroupPscData(),
                 CloudRun = new NetworkEndpointGroupCloudRun(),
                 Annotations =
                 {
