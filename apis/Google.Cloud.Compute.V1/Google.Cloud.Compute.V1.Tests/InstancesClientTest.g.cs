@@ -72,6 +72,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 KeyRevocationActionType = "key_revocation_action_type3004d41e",
                 Hostname = "hostnamef4ac9708",
                 MinCpuPlatform = "min_cpu_platformf71ffa67",
+                ResourceStatus = new ResourceStatus(),
                 DisplayDevice = new DisplayDevice(),
                 ServiceAccounts =
                 {
@@ -154,6 +155,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 KeyRevocationActionType = "key_revocation_action_type3004d41e",
                 Hostname = "hostnamef4ac9708",
                 MinCpuPlatform = "min_cpu_platformf71ffa67",
+                ResourceStatus = new ResourceStatus(),
                 DisplayDevice = new DisplayDevice(),
                 ServiceAccounts =
                 {
@@ -238,6 +240,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 KeyRevocationActionType = "key_revocation_action_type3004d41e",
                 Hostname = "hostnamef4ac9708",
                 MinCpuPlatform = "min_cpu_platformf71ffa67",
+                ResourceStatus = new ResourceStatus(),
                 DisplayDevice = new DisplayDevice(),
                 ServiceAccounts =
                 {
@@ -320,6 +323,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 KeyRevocationActionType = "key_revocation_action_type3004d41e",
                 Hostname = "hostnamef4ac9708",
                 MinCpuPlatform = "min_cpu_platformf71ffa67",
+                ResourceStatus = new ResourceStatus(),
                 DisplayDevice = new DisplayDevice(),
                 ServiceAccounts =
                 {

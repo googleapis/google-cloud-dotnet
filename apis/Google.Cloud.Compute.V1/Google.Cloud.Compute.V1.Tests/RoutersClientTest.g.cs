@@ -51,6 +51,10 @@ namespace Google.Cloud.Compute.V1.Tests
                     new RouterInterface(),
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
+                Md5AuthenticationKeys =
+                {
+                    new RouterMd5AuthenticationKey(),
+                },
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 EncryptedInterconnectRouter = false,
@@ -91,6 +95,10 @@ namespace Google.Cloud.Compute.V1.Tests
                     new RouterInterface(),
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
+                Md5AuthenticationKeys =
+                {
+                    new RouterMd5AuthenticationKey(),
+                },
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 EncryptedInterconnectRouter = false,
@@ -133,6 +141,10 @@ namespace Google.Cloud.Compute.V1.Tests
                     new RouterInterface(),
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
+                Md5AuthenticationKeys =
+                {
+                    new RouterMd5AuthenticationKey(),
+                },
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 EncryptedInterconnectRouter = false,
@@ -173,6 +185,10 @@ namespace Google.Cloud.Compute.V1.Tests
                     new RouterInterface(),
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
+                Md5AuthenticationKeys =
+                {
+                    new RouterMd5AuthenticationKey(),
+                },
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 EncryptedInterconnectRouter = false,

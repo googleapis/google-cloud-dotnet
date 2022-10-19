@@ -58,6 +58,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UpdatePolicy = new InstanceGroupManagerUpdatePolicy(),
                 Status = new InstanceGroupManagerStatus(),
                 Fingerprint = "fingerprint009e6052",
+                ListManagedInstancesResults = "list_managed_instances_results9643d230",
                 InstanceTemplate = "instance_template6cae3083",
                 TargetPools =
                 {
@@ -110,6 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UpdatePolicy = new InstanceGroupManagerUpdatePolicy(),
                 Status = new InstanceGroupManagerStatus(),
                 Fingerprint = "fingerprint009e6052",
+                ListManagedInstancesResults = "list_managed_instances_results9643d230",
                 InstanceTemplate = "instance_template6cae3083",
                 TargetPools =
                 {
@@ -164,6 +166,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UpdatePolicy = new InstanceGroupManagerUpdatePolicy(),
                 Status = new InstanceGroupManagerStatus(),
                 Fingerprint = "fingerprint009e6052",
+                ListManagedInstancesResults = "list_managed_instances_results9643d230",
                 InstanceTemplate = "instance_template6cae3083",
                 TargetPools =
                 {
@@ -216,6 +219,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UpdatePolicy = new InstanceGroupManagerUpdatePolicy(),
                 Status = new InstanceGroupManagerStatus(),
                 Fingerprint = "fingerprint009e6052",
+                ListManagedInstancesResults = "list_managed_instances_results9643d230",
                 InstanceTemplate = "instance_template6cae3083",
                 TargetPools =
                 {
