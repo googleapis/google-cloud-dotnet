@@ -38,6 +38,10 @@ jobs:
         git checkout -b main ${{ github.event.pull_request.base.sha }}
         git checkout pr-head
 
+    - name: Detect CRLF files
+      run: |
+        ! git ls-files --eol | grep crlf
+
     - name: Build and test
       run: |
         touch build_timing_log.txt
