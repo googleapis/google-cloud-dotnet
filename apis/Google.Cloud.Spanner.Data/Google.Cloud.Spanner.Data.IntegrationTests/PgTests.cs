@@ -48,6 +48,12 @@ public class PgTests
     [Fact]
     public async Task BindPgNumericEmptyArray() =>
         await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.PgNumeric), new PgNumeric[] { });
+    
+    [Fact]
+    public async Task BindPgJson() => await TestBindNonNull(
+            SpannerDbType.PgJsonb,
+            "{\"key\": \"value\"}",
+            r => r.GetString(0));
 
     private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
     {
@@ -61,6 +67,7 @@ public class PgTests
     public static TheoryData<SpannerDbType> BindNullData { get; } = new TheoryData<SpannerDbType>
     {
         SpannerDbType.PgNumeric,
+        SpannerDbType.PgJsonb,
         SpannerDbType.ArrayOf(SpannerDbType.PgNumeric)
     };
 
@@ -90,6 +97,7 @@ public class PgTests
         {
             // Base types.
             { "PgNumericValue", typeof(PgNumeric), SpannerDbType.PgNumeric },
+            { "PgJsonbValue", typeof(string), SpannerDbType.PgJsonb },
             // Array types.
             { "PgNumericArrayValue", typeof(List<PgNumeric>), SpannerDbType.ArrayOf(SpannerDbType.PgNumeric) }
         };
@@ -124,6 +132,7 @@ public class PgTests
         var parameters = new SpannerParameterCollection
             {
                 { "PgNumericValue", SpannerDbType.PgNumeric, null },
+                { "PgJsonbValue", SpannerDbType.PgJsonb, null },
                 { "PgNumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.PgNumeric), null }
             };
 
@@ -131,6 +140,7 @@ public class PgTests
         await WriteTests.WithLastRowAsync(reader =>
         {
             Assert.True(reader.IsDBNull(reader.GetOrdinal("PgNumericValue")));
+            Assert.True(reader.IsDBNull(reader.GetOrdinal("PgJsonbValue")));
             Assert.True(reader.IsDBNull(reader.GetOrdinal("PgNumericArrayValue")));
         }, GetConnection(), GetWriteTestReader);
     }
@@ -138,10 +148,12 @@ public class PgTests
     private async Task ExecuteWriteValuesTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
     {
         PgNumeric?[] numericArray = { PgNumeric.Parse("0.0"), null, PgNumeric.Parse("2.0") };
+        string jsonbValue = "{\"f1\": \"v1\"}";
 
         var parameters = new SpannerParameterCollection
         {
             { "PgNumericValue", SpannerDbType.PgNumeric, PgNumeric.Parse("2.0") },
+            { "PgJsonbValue", SpannerDbType.PgJsonb, jsonbValue },
             { "PgNumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.PgNumeric), numericArray }
         };
 
@@ -149,6 +161,7 @@ public class PgTests
         await WriteTests.WithLastRowAsync(reader =>
         {
             Assert.Equal(PgNumeric.Parse("2.0"), reader.GetFieldValue<PgNumeric>(reader.GetOrdinal("PgNumericValue")));
+            Assert.Equal(jsonbValue, reader.GetFieldValue<string>(reader.GetOrdinal("PgJsonbValue")));
             Assert.Equal(numericArray, reader.GetFieldValue<PgNumeric?[]>(reader.GetOrdinal("PgNumericArrayValue")));
         }, GetConnection(), GetWriteTestReader);
     }
