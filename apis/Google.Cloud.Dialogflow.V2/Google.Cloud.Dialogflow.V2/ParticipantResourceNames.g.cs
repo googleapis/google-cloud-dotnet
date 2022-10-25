@@ -715,6 +715,18 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class StreamingAnalyzeContentRequest
+    {
+        /// <summary>
+        /// <see cref="ParticipantName"/>-typed view over the <see cref="Participant"/> resource name property.
+        /// </summary>
+        public ParticipantName ParticipantAsParticipantName
+        {
+            get => string.IsNullOrEmpty(Participant) ? null : ParticipantName.Parse(Participant, allowUnparsed: true);
+            set => Participant = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SuggestArticlesRequest
     {
         /// <summary>

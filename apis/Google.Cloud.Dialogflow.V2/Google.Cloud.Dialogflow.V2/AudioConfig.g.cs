@@ -52,44 +52,53 @@ namespace Google.Cloud.Dialogflow.V2 {
             "ZC5kaWFsb2dmbG93LnYyLk91dHB1dEF1ZGlvRW5jb2RpbmdCA+BBAhIZChFz",
             "YW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJUChhzeW50aGVzaXplX3NwZWVjaF9j",
             "b25maWcYAyABKAsyMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TeW50",
-            "aGVzaXplU3BlZWNoQ29uZmlnImIKElNwZWVjaFRvVGV4dENvbmZpZxJMChRz",
-            "cGVlY2hfbW9kZWxfdmFyaWFudBgBIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFudCr7AQoNQXVkaW9FbmNvZGlu",
-            "ZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEhwKGEFVRElPX0VO",
-            "Q09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIY",
-            "ChRBVURJT19FTkNPRElOR19NVUxBVxADEhYKEkFVRElPX0VOQ09ESU5HX0FN",
-            "UhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FVRElPX0VOQ09E",
-            "SU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9I",
-            "RUFERVJfQllURRAHKnYKElNwZWVjaE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hf",
-            "TU9ERUxfVkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVTRV9CRVNUX0FWQUlM",
-            "QUJMRRABEhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9FTkhBTkNFRBADKo0B",
-            "Cg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVD",
-            "SUZJRUQQABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxFEAESHAoYU1NNTF9W",
-            "T0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVV",
-            "VFJBTBADKuwBChNPdXRwdXRBdWRpb0VuY29kaW5nEiUKIU9VVFBVVF9BVURJ",
-            "T19FTkNPRElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBVVF9BVURJT19FTkNP",
-            "RElOR19MSU5FQVJfMTYQARIdChlPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAz",
-            "EAISJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QM182NF9LQlBTEAQSIgoe",
-            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAMSHwobT1VUUFVUX0FV",
-            "RElPX0VOQ09ESU5HX01VTEFXEAVC3AIKHmNvbS5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7",
-            "ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
-            "VjLqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9kZWx9",
-            "6kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0Ej9wcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGhyYXNlU2V0cy97",
-            "cGhyYXNlX3NldH1iBnByb3RvMw=="));
+            "aGVzaXplU3BlZWNoQ29uZmlnIlUKE1RlbGVwaG9ueUR0bWZFdmVudHMSPgoL",
+            "ZHRtZl9ldmVudHMYASADKA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5UZWxlcGhvbnlEdG1mInEKElNwZWVjaFRvVGV4dENvbmZpZxJMChRzcGVl",
+            "Y2hfbW9kZWxfdmFyaWFudBgBIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLlNwZWVjaE1vZGVsVmFyaWFudBINCgVtb2RlbBgCIAEoCSr7AQoN",
+            "QXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAA",
+            "EhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09E",
+            "SU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxADEhYKEkFVRElP",
+            "X0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsK",
+            "F0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdf",
+            "U1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVjaE1vZGVsVmFyaWFu",
+            "dBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVT",
+            "RV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9F",
+            "TkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9H",
+            "RU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxF",
+            "EAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lD",
+            "RV9HRU5ERVJfTkVVVFJBTBADKuwBChNPdXRwdXRBdWRpb0VuY29kaW5nEiUK",
+            "IU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBV",
+            "VF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlPVVRQVVRfQVVESU9f",
+            "RU5DT0RJTkdfTVAzEAISJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QM182",
+            "NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAMS",
+            "HwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFXEAUqlAIKDVRlbGVwaG9u",
+            "eUR0bWYSHgoaVEVMRVBIT05ZX0RUTUZfVU5TUEVDSUZJRUQQABIMCghEVE1G",
+            "X09ORRABEgwKCERUTUZfVFdPEAISDgoKRFRNRl9USFJFRRADEg0KCURUTUZf",
+            "Rk9VUhAEEg0KCURUTUZfRklWRRAFEgwKCERUTUZfU0lYEAYSDgoKRFRNRl9T",
+            "RVZFThAHEg4KCkRUTUZfRUlHSFQQCBINCglEVE1GX05JTkUQCRINCglEVE1G",
+            "X1pFUk8QChIKCgZEVE1GX0EQCxIKCgZEVE1GX0IQDBIKCgZEVE1GX0MQDRIK",
+            "CgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBBC3AIK",
+            "HmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25maWdQ",
+            "cm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29v",
+            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlz",
+            "LmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5j",
+            "b20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "DisableNoSpeechRecognizedEvent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents), global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents.Parser, new[]{ "DtmfEvents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model" }, null, null, null, null)
           }));
     }
     #endregion
@@ -262,6 +271,81 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MULAW")] Mulaw = 5,
+  }
+
+  /// <summary>
+  /// [DTMF](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling)
+  /// digit in Telephony Gateway.
+  /// </summary>
+  public enum TelephonyDtmf {
+    /// <summary>
+    /// Not specified. This value may be used to indicate an absent digit.
+    /// </summary>
+    [pbr::OriginalName("TELEPHONY_DTMF_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Number: '1'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_ONE")] DtmfOne = 1,
+    /// <summary>
+    /// Number: '2'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_TWO")] DtmfTwo = 2,
+    /// <summary>
+    /// Number: '3'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_THREE")] DtmfThree = 3,
+    /// <summary>
+    /// Number: '4'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_FOUR")] DtmfFour = 4,
+    /// <summary>
+    /// Number: '5'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_FIVE")] DtmfFive = 5,
+    /// <summary>
+    /// Number: '6'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_SIX")] DtmfSix = 6,
+    /// <summary>
+    /// Number: '7'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_SEVEN")] DtmfSeven = 7,
+    /// <summary>
+    /// Number: '8'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_EIGHT")] DtmfEight = 8,
+    /// <summary>
+    /// Number: '9'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_NINE")] DtmfNine = 9,
+    /// <summary>
+    /// Number: '0'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_ZERO")] DtmfZero = 10,
+    /// <summary>
+    /// Letter: 'A'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_A")] DtmfA = 11,
+    /// <summary>
+    /// Letter: 'B'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_B")] DtmfB = 12,
+    /// <summary>
+    /// Letter: 'C'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_C")] DtmfC = 13,
+    /// <summary>
+    /// Letter: 'D'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_D")] DtmfD = 14,
+    /// <summary>
+    /// Asterisk/star: '*'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_STAR")] DtmfStar = 15,
+    /// <summary>
+    /// Pound/diamond/hash/square/gate/octothorpe: '#'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_POUND")] DtmfPound = 16,
   }
 
   #endregion
@@ -2334,6 +2418,192 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
+  /// A wrapper of repeated TelephonyDtmf digits.
+  /// </summary>
+  public sealed partial class TelephonyDtmfEvents : pb::IMessage<TelephonyDtmfEvents>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TelephonyDtmfEvents> _parser = new pb::MessageParser<TelephonyDtmfEvents>(() => new TelephonyDtmfEvents());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TelephonyDtmfEvents> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelephonyDtmfEvents() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelephonyDtmfEvents(TelephonyDtmfEvents other) : this() {
+      dtmfEvents_ = other.dtmfEvents_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelephonyDtmfEvents Clone() {
+      return new TelephonyDtmfEvents(this);
+    }
+
+    /// <summary>Field number for the "dtmf_events" field.</summary>
+    public const int DtmfEventsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.V2.TelephonyDtmf> _repeated_dtmfEvents_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.Dialogflow.V2.TelephonyDtmf) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.TelephonyDtmf> dtmfEvents_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.TelephonyDtmf>();
+    /// <summary>
+    /// A sequence of TelephonyDtmf digits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.TelephonyDtmf> DtmfEvents {
+      get { return dtmfEvents_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TelephonyDtmfEvents);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TelephonyDtmfEvents other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!dtmfEvents_.Equals(other.dtmfEvents_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= dtmfEvents_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      dtmfEvents_.WriteTo(output, _repeated_dtmfEvents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dtmfEvents_.WriteTo(ref output, _repeated_dtmfEvents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += dtmfEvents_.CalculateSize(_repeated_dtmfEvents_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TelephonyDtmfEvents other) {
+      if (other == null) {
+        return;
+      }
+      dtmfEvents_.Add(other.dtmfEvents_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            dtmfEvents_.AddEntriesFrom(input, _repeated_dtmfEvents_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            dtmfEvents_.AddEntriesFrom(ref input, _repeated_dtmfEvents_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Configures speech transcription for [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile].
   /// </summary>
   public sealed partial class SpeechToTextConfig : pb::IMessage<SpeechToTextConfig>
@@ -2350,7 +2620,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2371,6 +2641,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechToTextConfig(SpeechToTextConfig other) : this() {
       speechModelVariant_ = other.speechModelVariant_;
+      model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2401,6 +2672,27 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 2;
+    private string model_ = "";
+    /// <summary>
+    /// Which Speech model to select. Select the model best suited to your domain
+    /// to get best results. If a model is not explicitly specified, then a default
+    /// model is used.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2417,6 +2709,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return true;
       }
       if (SpeechModelVariant != other.SpeechModelVariant) return false;
+      if (Model != other.Model) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2425,6 +2718,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) hash ^= SpeechModelVariant.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2447,6 +2741,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SpeechModelVariant);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2461,6 +2759,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SpeechModelVariant);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2473,6 +2775,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       int size = 0;
       if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpeechModelVariant);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2488,6 +2793,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
         SpeechModelVariant = other.SpeechModelVariant;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2508,6 +2816,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
             break;
           }
+          case 18: {
+            Model = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2525,6 +2837,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 8: {
             SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Model = input.ReadString();
             break;
           }
         }

@@ -52,6 +52,8 @@ namespace Google.Cloud.Dialogflow.V2
             ListParticipantsSettings = existing.ListParticipantsSettings;
             UpdateParticipantSettings = existing.UpdateParticipantSettings;
             AnalyzeContentSettings = existing.AnalyzeContentSettings;
+            StreamingAnalyzeContentSettings = existing.StreamingAnalyzeContentSettings;
+            StreamingAnalyzeContentStreamingSettings = existing.StreamingAnalyzeContentStreamingSettings;
             SuggestArticlesSettings = existing.SuggestArticlesSettings;
             SuggestFaqAnswersSettings = existing.SuggestFaqAnswersSettings;
             SuggestSmartRepliesSettings = existing.SuggestSmartRepliesSettings;
@@ -150,6 +152,27 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AnalyzeContentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(220000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParticipantsClient.StreamingAnalyzeContent</c> and <c>ParticipantsClient.StreamingAnalyzeContentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 220 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamingAnalyzeContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(220000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>ParticipantsClient.StreamingAnalyzeContent</c> and <c>ParticipantsClient.StreamingAnalyzeContentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamingAnalyzeContentStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1137,6 +1160,37 @@ namespace Google.Cloud.Dialogflow.V2
             AnalyzeContentAsync(participant, eventInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamingAnalyzeContent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamingAnalyzeContentStream : gaxgrpc::BidirectionalStreamingBase<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse>
+        {
+        }
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// Note: This method is only available through the gRPC API (not REST).
+        /// 
+        /// The top-level message sent to the client by the server is
+        /// `StreamingAnalyzeContentResponse`. Multiple response messages can be
+        /// returned in order. The first one or more messages contain the
+        /// `recognition_result` field. Each result represents a more complete
+        /// transcript of what the user said. The next message contains the
+        /// `reply_text` field and potentially the `reply_audio` field. The message can
+        /// also contain the `automated_agent_reply` field.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamingAnalyzeContentStream StreamingAnalyzeContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Gets suggested articles for a participant based on specific historical
         /// messages.
         /// </summary>
@@ -1531,6 +1585,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         private readonly gaxgrpc::ApiCall<AnalyzeContentRequest, AnalyzeContentResponse> _callAnalyzeContent;
 
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> _callStreamingAnalyzeContent;
+
         private readonly gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> _callSuggestArticles;
 
         private readonly gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> _callSuggestFaqAnswers;
@@ -1564,6 +1620,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callAnalyzeContent = clientHelper.BuildApiCall<AnalyzeContentRequest, AnalyzeContentResponse>("AnalyzeContent", grpcClient.AnalyzeContentAsync, grpcClient.AnalyzeContent, effectiveSettings.AnalyzeContentSettings).WithGoogleRequestParam("participant", request => request.Participant);
             Modify_ApiCall(ref _callAnalyzeContent);
             Modify_AnalyzeContentApiCall(ref _callAnalyzeContent);
+            _callStreamingAnalyzeContent = clientHelper.BuildApiCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse>("StreamingAnalyzeContent", grpcClient.StreamingAnalyzeContent, effectiveSettings.StreamingAnalyzeContentSettings, effectiveSettings.StreamingAnalyzeContentStreamingSettings);
+            Modify_ApiCall(ref _callStreamingAnalyzeContent);
+            Modify_StreamingAnalyzeContentApiCall(ref _callStreamingAnalyzeContent);
             _callSuggestArticles = clientHelper.BuildApiCall<SuggestArticlesRequest, SuggestArticlesResponse>("SuggestArticles", grpcClient.SuggestArticlesAsync, grpcClient.SuggestArticles, effectiveSettings.SuggestArticlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestArticles);
             Modify_SuggestArticlesApiCall(ref _callSuggestArticles);
@@ -1578,6 +1637,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_CreateParticipantApiCall(ref gaxgrpc::ApiCall<CreateParticipantRequest, Participant> call);
 
         partial void Modify_GetParticipantApiCall(ref gaxgrpc::ApiCall<GetParticipantRequest, Participant> call);
@@ -1587,6 +1648,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_UpdateParticipantApiCall(ref gaxgrpc::ApiCall<UpdateParticipantRequest, Participant> call);
 
         partial void Modify_AnalyzeContentApiCall(ref gaxgrpc::ApiCall<AnalyzeContentRequest, AnalyzeContentResponse> call);
+
+        partial void Modify_StreamingAnalyzeContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call);
 
         partial void Modify_SuggestArticlesApiCall(ref gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> call);
 
@@ -1611,6 +1674,10 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_UpdateParticipantRequest(ref UpdateParticipantRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AnalyzeContentRequest(ref AnalyzeContentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingAnalyzeContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingAnalyzeContentRequestRequest(ref StreamingAnalyzeContentRequest request);
 
         partial void Modify_SuggestArticlesRequest(ref SuggestArticlesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1746,6 +1813,80 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_AnalyzeContentRequest(ref request, ref callSettings);
             return _callAnalyzeContent.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamingAnalyzeContentStreamImpl : StreamingAnalyzeContentStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamingAnalyzeContent</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamingAnalyzeContentRequest}"/> instance
+            /// associated with this streaming call.
+            /// </param>
+            public StreamingAnalyzeContentStreamImpl(ParticipantsClientImpl service, grpccore::AsyncDuplexStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call, gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private ParticipantsClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> GrpcCall { get; }
+
+            private StreamingAnalyzeContentRequest ModifyRequest(StreamingAnalyzeContentRequest request)
+            {
+                _service.Modify_StreamingAnalyzeContentRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(StreamingAnalyzeContentRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(StreamingAnalyzeContentRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(StreamingAnalyzeContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(StreamingAnalyzeContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// Note: This method is only available through the gRPC API (not REST).
+        /// 
+        /// The top-level message sent to the client by the server is
+        /// `StreamingAnalyzeContentResponse`. Multiple response messages can be
+        /// returned in order. The first one or more messages contain the
+        /// `recognition_result` field. Each result represents a more complete
+        /// transcript of what the user said. The next message contains the
+        /// `reply_text` field and potentially the `reply_audio` field. The message can
+        /// also contain the `automated_agent_reply` field.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override ParticipantsClient.StreamingAnalyzeContentStream StreamingAnalyzeContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamingAnalyzeContentRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamingAnalyzeContent.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call = _callStreamingAnalyzeContent.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamingAnalyzeContentStreamImpl(this, call, writeBuffer);
         }
 
         /// <summary>

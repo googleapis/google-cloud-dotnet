@@ -12757,6 +12757,32 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "dialogflow_v2_generated_Participants_StreamingAnalyzeContent_sync",
+      "title": "StreamingAnalyzeContent",
+      "description": "Snippet for StreamingAnalyzeContent",
+      "file": "ParticipantsClient.StreamingAnalyzeContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingAnalyzeContent",
+        "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient.StreamingAnalyzeContent",
+        "resultType": "Google.Cloud.Dialogflow.V2.ParticipantsClient+StreamingAnalyzeContentStream",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "StreamingAnalyzeContent",
+          "fullName": "google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "dialogflow_v2_generated_Participants_SuggestArticles_sync",
       "title": "SuggestArticlesRequestObject",
       "description": "Snippet for SuggestArticles",

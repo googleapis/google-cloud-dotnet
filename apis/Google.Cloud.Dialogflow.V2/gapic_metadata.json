@@ -637,6 +637,12 @@
                 "ListParticipantsAsync"
               ]
             },
+            "StreamingAnalyzeContent": {
+              "methods": [
+                "StreamingAnalyzeContent",
+                "StreamingAnalyzeContentAsync"
+              ]
+            },
             "SuggestArticles": {
               "methods": [
                 "SuggestArticles",
