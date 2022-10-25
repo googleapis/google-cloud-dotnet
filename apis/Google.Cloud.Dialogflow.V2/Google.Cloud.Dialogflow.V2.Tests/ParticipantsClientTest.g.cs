@@ -44,6 +44,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -74,6 +75,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -106,6 +108,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -136,6 +139,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -168,6 +172,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -198,6 +203,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -229,6 +235,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -258,6 +265,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -289,6 +297,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -318,6 +327,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -349,6 +359,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -378,6 +389,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -410,6 +422,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -440,6 +453,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -472,6 +486,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {
@@ -502,6 +517,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
                 Role = Participant.Types.Role.HumanAgent,
                 SipRecordingMediaLabel = "sip_recording_media_labela9ddfd5d",
+                ObfuscatedExternalUserId = "obfuscated_external_user_id5424dfb8",
                 DocumentsMetadataFilters =
                 {
                     {

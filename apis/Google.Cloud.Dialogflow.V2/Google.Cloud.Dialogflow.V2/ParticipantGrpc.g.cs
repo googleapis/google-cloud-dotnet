@@ -80,6 +80,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest> __Marshaller_google_cloud_dialogflow_v2_StreamingAnalyzeContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2_StreamingAnalyzeContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse.Parser));
@@ -131,6 +135,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         "AnalyzeContent",
         __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentRequest,
         __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse> __Method_StreamingAnalyzeContent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamingAnalyzeContent",
+        __Marshaller_google_cloud_dialogflow_v2_StreamingAnalyzeContentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_StreamingAnalyzeContentResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse> __Method_SuggestArticles = new grpc::Method<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse>(
@@ -227,6 +239,33 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse> AnalyzeContent(global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds a text (chat, for example), or audio (phone recording, for example)
+      /// message from a participant into the conversation.
+      /// Note: This method is only available through the gRPC API (not REST).
+      ///
+      /// The top-level message sent to the client by the server is
+      /// `StreamingAnalyzeContentResponse`. Multiple response messages can be
+      /// returned in order. The first one or more messages contain the
+      /// `recognition_result` field. Each result represents a more complete
+      /// transcript of what the user said. The next message contains the
+      /// `reply_text` field and potentially the `reply_audio` field. The message can
+      /// also contain the `automated_agent_reply` field.
+      ///
+      /// Note: Always use agent versions for production traffic
+      /// sent to virtual agents. See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamingAnalyzeContent(grpc::IAsyncStreamReader<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -560,6 +599,56 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeContent, null, options, request);
       }
       /// <summary>
+      /// Adds a text (chat, for example), or audio (phone recording, for example)
+      /// message from a participant into the conversation.
+      /// Note: This method is only available through the gRPC API (not REST).
+      ///
+      /// The top-level message sent to the client by the server is
+      /// `StreamingAnalyzeContentResponse`. Multiple response messages can be
+      /// returned in order. The first one or more messages contain the
+      /// `recognition_result` field. Each result represents a more complete
+      /// transcript of what the user said. The next message contains the
+      /// `reply_text` field and potentially the `reply_audio` field. The message can
+      /// also contain the `automated_agent_reply` field.
+      ///
+      /// Note: Always use agent versions for production traffic
+      /// sent to virtual agents. See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse> StreamingAnalyzeContent(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamingAnalyzeContent(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a text (chat, for example), or audio (phone recording, for example)
+      /// message from a participant into the conversation.
+      /// Note: This method is only available through the gRPC API (not REST).
+      ///
+      /// The top-level message sent to the client by the server is
+      /// `StreamingAnalyzeContentResponse`. Multiple response messages can be
+      /// returned in order. The first one or more messages contain the
+      /// `recognition_result` field. Each result represents a more complete
+      /// transcript of what the user said. The next message contains the
+      /// `reply_text` field and potentially the `reply_audio` field. The message can
+      /// also contain the `automated_agent_reply` field.
+      ///
+      /// Note: Always use agent versions for production traffic
+      /// sent to virtual agents. See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse> StreamingAnalyzeContent(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingAnalyzeContent, null, options);
+      }
+      /// <summary>
       /// Gets suggested articles for a participant based on specific historical
       /// messages.
       /// </summary>
@@ -734,6 +823,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_ListParticipants, serviceImpl.ListParticipants)
           .AddMethod(__Method_UpdateParticipant, serviceImpl.UpdateParticipant)
           .AddMethod(__Method_AnalyzeContent, serviceImpl.AnalyzeContent)
+          .AddMethod(__Method_StreamingAnalyzeContent, serviceImpl.StreamingAnalyzeContent)
           .AddMethod(__Method_SuggestArticles, serviceImpl.SuggestArticles)
           .AddMethod(__Method_SuggestFaqAnswers, serviceImpl.SuggestFaqAnswers)
           .AddMethod(__Method_SuggestSmartReplies, serviceImpl.SuggestSmartReplies).Build();
@@ -751,6 +841,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_ListParticipants, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListParticipantsRequest, global::Google.Cloud.Dialogflow.V2.ListParticipantsResponse>(serviceImpl.ListParticipants));
       serviceBinder.AddMethod(__Method_UpdateParticipant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateParticipantRequest, global::Google.Cloud.Dialogflow.V2.Participant>(serviceImpl.UpdateParticipant));
       serviceBinder.AddMethod(__Method_AnalyzeContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse>(serviceImpl.AnalyzeContent));
+      serviceBinder.AddMethod(__Method_StreamingAnalyzeContent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2.StreamingAnalyzeContentResponse>(serviceImpl.StreamingAnalyzeContent));
       serviceBinder.AddMethod(__Method_SuggestArticles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse>(serviceImpl.SuggestArticles));
       serviceBinder.AddMethod(__Method_SuggestFaqAnswers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersRequest, global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersResponse>(serviceImpl.SuggestFaqAnswers));
       serviceBinder.AddMethod(__Method_SuggestSmartReplies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SuggestSmartRepliesRequest, global::Google.Cloud.Dialogflow.V2.SuggestSmartRepliesResponse>(serviceImpl.SuggestSmartReplies));
