@@ -58,6 +58,16 @@ public class RetryConformanceTest
 
         foreach (InstructionList instructionList in test.Cases)
         {
+            /*
+             * Will remove this section in final PR
+             * This is to allow testing on cloud run without reseting connection
+             * 
+            if (!ShouldRunInstruction(instructionList))
+            {
+                continue;
+            }
+            */
+
             foreach (Method method in test.Methods)
             {
                 if (!ShouldRunMethod(method.Name))
@@ -74,10 +84,18 @@ public class RetryConformanceTest
         // object.insert is covered under resumable upload
         // objects.copy is not used directly but only as objects.rewrite which is a seperate test case
         bool ShouldRunMethod(string methodName) =>
-            !methodName.Contains("_acl") && methodName != "objects.compose" && methodName != "objects.insert" && methodName != "objects.copy";
+            !methodName.Contains("_acl") && methodName != "storage.objects.compose" && methodName != "storage.objects.insert" && methodName != "storage.objects.copy";
 
-        // Ids with description "handle_complex_retries" are to test resumable uploads and downloads which will be implemented in the next phase
+        // Ids with description "handle_complex_retries" are to test resumable uploads and downloads
+        // This section will be implemented in the next phase
         bool ShouldRunTest(RetryTest test) => !test.Description.Contains("handle_complex_retries");
+
+        /*
+         * Will remove this section in final PR
+         * This is to allow testing on cloud run without reseting connection
+         *
+        bool ShouldRunInstruction(InstructionList instructionList) => !instructionList.Instructions.Contains("return-reset-connection");
+        */
     }
 
     /// <summary>
@@ -100,13 +118,18 @@ public class RetryConformanceTest
                 try
                 {
                     RunRetryTest(response, context, specifyPreconditions);
-                    Assert.Fail("Expected failure but test was successful.");
+
+                    //storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
+                    if (!method.Name.Contains("buckets.setIamPolicy"))
+                    {
+                        Assert.False(response.Completed);
+                    }
                 }
                 catch (Exception ex) // To catch expected exception when retry should not happen.
                 {
-                    if (ex.InnerException != null && ex.InnerException is GoogleApiException)
+                    if (ex != null && ex is GoogleApiException)
                     {
-                        var statusCode = ((GoogleApiException) ex.InnerException).HttpStatusCode;
+                        var statusCode = ((GoogleApiException) ex).HttpStatusCode;
 
                         if ((instructionList.Instructions.Contains("return-503") && statusCode == System.Net.HttpStatusCode.ServiceUnavailable)
                             || (instructionList.Instructions.Contains("return-400") && statusCode == System.Net.HttpStatusCode.BadRequest)
@@ -163,7 +186,7 @@ public class RetryConformanceTest
         var result = ExecuteRpc(rpc, context, specifyPreconditions);
 
         // For list methods, we need to fetch a page in order to actually perform requests.
-        if (rpc.StartsWith("list"))
+        if (rpc.Contains("list") && !rpc.Contains("notification"))
         {
             // TODO: maybe do this more elegantly...
             ConsumeListOutput((dynamic) result);
@@ -183,7 +206,7 @@ public class RetryConformanceTest
             "storage.buckets.delete" => InvokeVoid(() => client.DeleteBucket(ctx.BucketName)), // TODO: preconditions?
             "storage.buckets.get" => client.GetBucket(ctx.BucketName),
             "storage.buckets.getIamPolicy" => client.GetBucketIamPolicy(ctx.BucketName),
-            "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, ctx.BucketName),
+            "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, IdGenerator.FromDateTime(prefix: "retry-test-insert-bucket-")),
             "storage.buckets.update" => client.UpdateBucket(new Bucket { Name = ctx.BucketName }, IfPreconditions(new UpdateBucketOptions { IfMetagenerationMatch = 1 })),
             "storage.buckets.list" => client.ListBuckets(ctx.ProjectId),
             "storage.buckets.testIamPermissions" => client.TestBucketIamPermissions(ctx.BucketName, new[] { "bucket.get" }),
@@ -196,22 +219,22 @@ public class RetryConformanceTest
             "storage.objects.patch" => client.PatchObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, IfPreconditions(new PatchObjectOptions { IfMetagenerationMatch = 1 })),
             "storage.objects.rewrite" => client.CopyObject(ctx.BucketName, ctx.ObjectName, ctx.DestinationBucketName, ctx.DestinationObjectName, IfPreconditions(new CopyObjectOptions { IfGenerationMatch = ctx.ObjectGeneration })),
             "storage.objects.update" => client.UpdateObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, IfPreconditions(new UpdateObjectOptions { IfMetagenerationMatch = 1 })),
-            "storage.hmackey.get" => client.GetHmacKey(ctx.ProjectId, ctx.HmacAccessId),
-            "storage.hmackey.delete" => InvokeVoid(() => client.DeleteHmacKey(ctx.ProjectId, ctx.HmacAccessId)),
-            "storage.hmackey.list" => client.ListHmacKeys(ctx.ProjectId, ctx.ServiceAccountEmail),
-            "storage.hmackey.update" => client.UpdateHmacKey(new HmacKeyMetadata
+            "storage.hmacKey.get" => client.GetHmacKey(ctx.ProjectId, ctx.HmacAccessId),
+            "storage.hmacKey.delete" => InvokeVoid(() => client.DeleteHmacKey(ctx.ProjectId, ctx.HmacAccessId)),
+            "storage.hmacKey.list" => client.ListHmacKeys(ctx.ProjectId, ctx.ServiceAccountEmail),
+            "storage.hmacKey.update" => client.UpdateHmacKey(new HmacKeyMetadata
             {
                 ProjectId = ctx.ProjectId,
                 AccessId = ctx.HmacAccessId,
                 State = HmacKeyStates.Inactive,
                 ETag = specifyPreconditions ? "MQ==" : null
             }),
-            "storage.hmackey.create" => client.CreateHmacKey(ctx.ProjectId, ctx.ServiceAccountEmail),
+            "storage.hmacKey.create" => client.CreateHmacKey(ctx.ProjectId, ctx.ServiceAccountEmail),
             "storage.notifications.list" => client.ListNotifications(ctx.BucketName),
             "storage.notifications.get" => client.GetNotification(ctx.BucketName, ctx.NotificationId),
             "storage.notifications.delete" => InvokeVoid(() => client.DeleteNotification(ctx.BucketName, ctx.NotificationId)),
             "storage.notifications.insert" => client.CreateNotification(ctx.BucketName, new Notification { Topic = "Test-topic", PayloadFormat = "NONE" }),
-            "storage.serviceAccount.get" => client.GetStorageServiceAccountEmail(ctx.ProjectId),
+            "storage.serviceaccount.get" => client.GetStorageServiceAccountEmail(ctx.ProjectId),
             "storage.resumable.upload" => client.UploadObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, File.OpenRead(_fixture.SampleObjectContentPath)),
             "storage.objects.download" => client.DownloadObject(ctx.BucketName, ctx.ObjectName, new MemoryStream()),
             // TODO: Return null from any RPCs we don't support.
@@ -290,9 +313,10 @@ public class RetryConformanceTest
                     break;
             }
         }
-        // Handling for 'storage.buckets.insert' because library's CreateBucket requires
-        // bucket's name as mandatory parameter, but retry_tests.json doesn't specify it as required resource. 
-        if (method.Name == "storage.buckets.insert")
+        // Handling for 'storage.buckets.insert' because library's CreateBucket requires bucket's name as mandatory parameter,
+        // but retry_tests.json doesn't specify it as required resource in test ID 1 & 6
+
+        if (method.Name == "storage.buckets.insert" && method.Resources.Count == 0)
         {
             context.BucketName = CreateBucket(bucketName);
         }
@@ -302,7 +326,7 @@ public class RetryConformanceTest
         {
             string destBucketName = IdGenerator.FromDateTime(prefix: "retry-test-dest-bucket-");
             context.DestinationBucketName = CreateBucket(destBucketName);
-            (context.DestinationObjectName, _) = CreateObject(destBucketName, "DestinationTestFile.json");
+            (context.DestinationObjectName, context.ObjectGeneration) = CreateObject(destBucketName, "DestinationTestFile.json");
         }
         return context;
 
@@ -367,6 +391,10 @@ public class RetryConformanceTest
         void MaybeDeleteBucket(string bucketName)
         {
             if (bucketName is null)
+            {
+                return;
+            }
+            if (Client.GetBucket(bucketName) is null)
             {
                 return;
             }
