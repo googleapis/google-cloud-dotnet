@@ -45,6 +45,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -69,6 +70,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -95,6 +97,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -119,6 +122,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -145,6 +149,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -169,6 +174,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -193,6 +199,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -215,6 +222,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -239,6 +247,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -261,6 +270,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -285,6 +295,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -307,6 +318,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -425,6 +437,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -448,6 +461,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -473,6 +487,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -496,6 +511,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Hostname = "hostnamef4ac9708",
                 GoogleCdnKey = new GoogleCdnKey(),
                 AkamaiCdnKey = new AkamaiCdnKey(),
+                MediaCdnKey = new MediaCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
