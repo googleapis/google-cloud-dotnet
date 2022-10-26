@@ -48,12 +48,10 @@ public class PgTests
     [Fact]
     public async Task BindPgNumericEmptyArray() =>
         await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.PgNumeric), new PgNumeric[] { });
-    
+
     [Fact]
-    public async Task BindPgJson() => await TestBindNonNull(
-            SpannerDbType.PgJsonb,
-            "{\"key\": \"value\"}",
-            r => r.GetString(0));
+    public async Task BindPgJson() =>
+        await TestBindNonNull(SpannerDbType.PgJsonb, "{\"key\": \"value\"}", r => r.GetString(0));
 
     private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
     {
@@ -103,6 +101,29 @@ public class PgTests
         };
 
     // Write Tests for PostgreSQL specific types. GSQL and common types are tested in WriteTests.cs
+
+    [Theory]
+    [InlineData("{\"key\": \"value\"}")]       // Whitespace between key and value.
+    [InlineData("{\"key\":\"value\"}")]        // No whitespace between key and value.
+    [InlineData("{\"key\":   \"value\"}")]     // Multiple whitespaces between key and value.
+    [InlineData("  {\"key\" :  \"value\"}  ")] // Whitespace before and after key and value.
+    public async Task WritePgJsonb_WithWhitespace(string input)
+    {
+        var parameters = new SpannerParameterCollection
+        {
+            { "PgJsonbValue", SpannerDbType.PgJsonb, input }
+        };
+
+        Assert.Equal(1, await InsertAsync(parameters));
+
+        // Whitespace is not persisted. Key and value is always formatted with just one whitespace between them.
+        // Rest of the whitespaces (if any or lack of it) is lost.
+        var expectedValue = "{\"key\": \"value\"}";
+        await WriteTests.WithLastRowAsync(reader =>
+        {
+            Assert.Equal(expectedValue, reader.GetFieldValue<string>(reader.GetOrdinal("PgJsonbValue")));
+        }, GetConnection(), GetWriteTestReader);
+    }
 
     [Fact]
     public async Task WriteNulls() =>
