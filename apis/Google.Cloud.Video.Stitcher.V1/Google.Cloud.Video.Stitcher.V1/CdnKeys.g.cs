@@ -27,25 +27,28 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "Ci1nb29nbGUvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvY2RuX2tleXMucHJv",
             "dG8SHmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90byKvAgoGQ2RuS2V5EkYKDmdvb2dsZV9jZG5fa2V5GAUgASgLMiwuZ29v",
+            "cm90byL1AgoGQ2RuS2V5EkYKDmdvb2dsZV9jZG5fa2V5GAUgASgLMiwuZ29v",
             "Z2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkdvb2dsZUNkbktleUgAEkYK",
             "DmFrYW1haV9jZG5fa2V5GAYgASgLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
-            "aXRjaGVyLnYxLkFrYW1haUNkbktleUgAEgwKBG5hbWUYASABKAkSEAoIaG9z",
-            "dG5hbWUYBCABKAk6Y+pBYAojdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNv",
-            "bS9DZG5LZXkSOXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9jZG5LZXlzL3tjZG5fa2V5fUIQCg5jZG5fa2V5X2NvbmZpZyI6CgxH",
-            "b29nbGVDZG5LZXkSGAoLcHJpdmF0ZV9rZXkYASABKAxCA+BBBBIQCghrZXlf",
-            "bmFtZRgCIAEoCSImCgxBa2FtYWlDZG5LZXkSFgoJdG9rZW5fa2V5GAEgASgM",
-            "QgPgQQRCfAoiY29tLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIM",
-            "Q2RuS2V5c1Byb3RvUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjE7c3RpdGNoZXJiBnBy",
-            "b3RvMw=="));
+            "aXRjaGVyLnYxLkFrYW1haUNkbktleUgAEkQKDW1lZGlhX2Nkbl9rZXkYCCAB",
+            "KAsyKy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTWVkaWFDZG5L",
+            "ZXlIABIMCgRuYW1lGAEgASgJEhAKCGhvc3RuYW1lGAQgASgJOmPqQWAKI3Zp",
+            "ZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vQ2RuS2V5Ejlwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2RuS2V5cy97Y2RuX2tl",
+            "eX1CEAoOY2RuX2tleV9jb25maWciOgoMR29vZ2xlQ2RuS2V5EhgKC3ByaXZh",
+            "dGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAkiJgoMQWthbWFp",
+            "Q2RuS2V5EhYKCXRva2VuX2tleRgBIAEoDEID4EEEIjkKC01lZGlhQ2RuS2V5",
+            "EhgKC3ByaXZhdGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAlC",
+            "fAoiY29tLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIMQ2RuS2V5",
+            "c1Byb3RvUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjE7c3RpdGNoZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CdnKey), global::Google.Cloud.Video.Stitcher.V1.CdnKey.Parser, new[]{ "GoogleCdnKey", "AkamaiCdnKey", "Name", "Hostname" }, new[]{ "CdnKeyConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CdnKey), global::Google.Cloud.Video.Stitcher.V1.CdnKey.Parser, new[]{ "GoogleCdnKey", "AkamaiCdnKey", "MediaCdnKey", "Name", "Hostname" }, new[]{ "CdnKeyConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GoogleCdnKey), global::Google.Cloud.Video.Stitcher.V1.GoogleCdnKey.Parser, new[]{ "PrivateKey", "KeyName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey), global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey.Parser, new[]{ "TokenKey" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey), global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey.Parser, new[]{ "TokenKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey), global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey.Parser, new[]{ "PrivateKey", "KeyName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -100,6 +103,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         case CdnKeyConfigOneofCase.AkamaiCdnKey:
           AkamaiCdnKey = other.AkamaiCdnKey.Clone();
           break;
+        case CdnKeyConfigOneofCase.MediaCdnKey:
+          MediaCdnKey = other.MediaCdnKey.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -141,6 +147,21 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "media_cdn_key" field.</summary>
+    public const int MediaCdnKeyFieldNumber = 8;
+    /// <summary>
+    /// The configuration for a Media CDN key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey MediaCdnKey {
+      get { return cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey ? (global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey) cdnKeyConfig_ : null; }
+      set {
+        cdnKeyConfig_ = value;
+        cdnKeyConfigCase_ = value == null ? CdnKeyConfigOneofCase.None : CdnKeyConfigOneofCase.MediaCdnKey;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
@@ -179,6 +200,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       None = 0,
       GoogleCdnKey = 5,
       AkamaiCdnKey = 6,
+      MediaCdnKey = 8,
     }
     private CdnKeyConfigOneofCase cdnKeyConfigCase_ = CdnKeyConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -211,6 +233,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (!object.Equals(GoogleCdnKey, other.GoogleCdnKey)) return false;
       if (!object.Equals(AkamaiCdnKey, other.AkamaiCdnKey)) return false;
+      if (!object.Equals(MediaCdnKey, other.MediaCdnKey)) return false;
       if (Name != other.Name) return false;
       if (Hostname != other.Hostname) return false;
       if (CdnKeyConfigCase != other.CdnKeyConfigCase) return false;
@@ -223,6 +246,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       int hash = 1;
       if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.GoogleCdnKey) hash ^= GoogleCdnKey.GetHashCode();
       if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.AkamaiCdnKey) hash ^= AkamaiCdnKey.GetHashCode();
+      if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) hash ^= MediaCdnKey.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       hash ^= (int) cdnKeyConfigCase_;
@@ -260,6 +284,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(AkamaiCdnKey);
       }
+      if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MediaCdnKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -286,6 +314,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(AkamaiCdnKey);
       }
+      if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MediaCdnKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -301,6 +333,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.AkamaiCdnKey) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AkamaiCdnKey);
+      }
+      if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MediaCdnKey);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -338,6 +373,12 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             AkamaiCdnKey = new global::Google.Cloud.Video.Stitcher.V1.AkamaiCdnKey();
           }
           AkamaiCdnKey.MergeFrom(other.AkamaiCdnKey);
+          break;
+        case CdnKeyConfigOneofCase.MediaCdnKey:
+          if (MediaCdnKey == null) {
+            MediaCdnKey = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey();
+          }
+          MediaCdnKey.MergeFrom(other.MediaCdnKey);
           break;
       }
 
@@ -382,6 +423,15 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             AkamaiCdnKey = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey subBuilder = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey();
+            if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) {
+              subBuilder.MergeFrom(MediaCdnKey);
+            }
+            input.ReadMessage(subBuilder);
+            MediaCdnKey = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -421,6 +471,15 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             }
             input.ReadMessage(subBuilder);
             AkamaiCdnKey = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey subBuilder = new global::Google.Cloud.Video.Stitcher.V1.MediaCdnKey();
+            if (cdnKeyConfigCase_ == CdnKeyConfigOneofCase.MediaCdnKey) {
+              subBuilder.MergeFrom(MediaCdnKey);
+            }
+            input.ReadMessage(subBuilder);
+            MediaCdnKey = subBuilder;
             break;
           }
         }
@@ -851,6 +910,241 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             break;
           case 10: {
             TokenKey = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for a Media CDN key.
+  /// </summary>
+  public sealed partial class MediaCdnKey : pb::IMessage<MediaCdnKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MediaCdnKey> _parser = new pb::MessageParser<MediaCdnKey>(() => new MediaCdnKey());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MediaCdnKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.CdnKeysReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaCdnKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaCdnKey(MediaCdnKey other) : this() {
+      privateKey_ = other.privateKey_;
+      keyName_ = other.keyName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaCdnKey Clone() {
+      return new MediaCdnKey(this);
+    }
+
+    /// <summary>Field number for the "private_key" field.</summary>
+    public const int PrivateKeyFieldNumber = 1;
+    private pb::ByteString privateKey_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Input only. 64-byte ed25519 private key for this Media CDN key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PrivateKey {
+      get { return privateKey_; }
+      set {
+        privateKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "key_name" field.</summary>
+    public const int KeyNameFieldNumber = 2;
+    private string keyName_ = "";
+    /// <summary>
+    /// The keyset name of the Media CDN key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KeyName {
+      get { return keyName_; }
+      set {
+        keyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MediaCdnKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MediaCdnKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PrivateKey != other.PrivateKey) return false;
+      if (KeyName != other.KeyName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
+      if (KeyName.Length != 0) hash ^= KeyName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PrivateKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PrivateKey);
+      }
+      if (KeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PrivateKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PrivateKey);
+      }
+      if (KeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PrivateKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PrivateKey);
+      }
+      if (KeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MediaCdnKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PrivateKey.Length != 0) {
+        PrivateKey = other.PrivateKey;
+      }
+      if (other.KeyName.Length != 0) {
+        KeyName = other.KeyName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PrivateKey = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            KeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PrivateKey = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            KeyName = input.ReadString();
             break;
           }
         }
