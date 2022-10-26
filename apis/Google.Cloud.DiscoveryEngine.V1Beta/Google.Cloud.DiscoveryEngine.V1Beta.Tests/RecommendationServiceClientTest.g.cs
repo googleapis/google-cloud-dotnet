@@ -46,6 +46,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Tests
                         new wkt::Value()
                     },
                 },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             RecommendResponse expectedResponse = new RecommendResponse
             {
@@ -83,6 +90,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Tests
                     {
                         "key8a0b6e3c",
                         new wkt::Value()
+                    },
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
                     },
                 },
             };
