@@ -37,6 +37,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 Filter = "",
                 ValidateOnly = false,
                 Params = { { "", new Value() }, },
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             RecommendResponse response = recommendationServiceClient.Recommend(request);
@@ -59,6 +60,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 Filter = "",
                 ValidateOnly = false,
                 Params = { { "", new Value() }, },
+                UserLabels = { { "", "" }, },
             };
             // Make the request
             RecommendResponse response = await recommendationServiceClient.RecommendAsync(request);
