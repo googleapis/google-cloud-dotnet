@@ -4,7 +4,7 @@
     <Version>1.0.0</Version>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the BeyondCorp Enterprise ClientConnectorServices API.</Description>
+    <Description>Recommended Google client library to access the BeyondCorp Enterprise Client Connector Services API.</Description>
     <PackageTags>beyondcorp;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
