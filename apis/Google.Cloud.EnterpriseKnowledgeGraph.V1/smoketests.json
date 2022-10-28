@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListEntityReconciliationJobs",
+    "client": "EnterpriseKnowledgeGraphServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
