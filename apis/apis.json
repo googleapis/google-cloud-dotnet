@@ -1675,6 +1675,22 @@
       "serviceConfigFile": "domains_v1beta1.yaml"
     },
     {
+      "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Enterprise Knowledge Graph",
+      "productUrl": "https://cloud.google.com/enterprise-knowledge-graph/docs/overview",
+      "description": "Recommended Google client library to access the Enterprise Knowledge Graph API. Enterprise Knowledge Graph organizes siloed information into organizational knowledge, which involves consolidating, standardizing, and reconciling data in an efficient and useful way.",
+      "tags": [],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/enterpriseknowledgegraph/v1",
+      "shortName": "enterpriseknowledgegraph",
+      "serviceConfigFile": "enterpriseknowledgegraph_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.ErrorReporting.V1Beta1",
       "generator": "micro",
       "protoPath": "google/devtools/clouderrorreporting/v1beta1",
