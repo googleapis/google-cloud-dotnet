@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,13 +27,16 @@ namespace Google.Cloud.Tools.ApiIndex.V1
 {
     public partial class Index
     {
+        private static readonly JsonParser s_jsonParserIgnoringUnknownFields =
+            new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
+
         /// <summary>
         /// Loads the API index from the JSON file in googleapis.
         /// </summary>
         public static Index LoadFromGoogleApis(string googleApisRoot)
         {
             var json = File.ReadAllText(Path.Combine(googleApisRoot, "api-index-v1.json"));
-            return Parser.ParseJson(json);
+            return s_jsonParserIgnoringUnknownFields.Parse<Index>(json);
         }
 
         /// <summary>
@@ -44,7 +48,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1
         {
             var client = new HttpClient();
             var json = client.GetStringAsync($"https://raw.githubusercontent.com/googleapis/googleapis/{committish}/api-index-v1.json").GetAwaiter().GetResult();
-            return Parser.ParseJson(json);
+            return s_jsonParserIgnoringUnknownFields.Parse<Index>(json);
         }
     }
 
