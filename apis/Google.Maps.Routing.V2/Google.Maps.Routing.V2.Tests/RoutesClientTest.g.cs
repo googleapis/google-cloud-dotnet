@@ -46,6 +46,10 @@ namespace Google.Maps.Routing.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 Units = Units.Metric,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                RequestedReferenceRoutes =
+                {
+                    ComputeRoutesRequest.Types.ReferenceRoute.FuelEfficient,
+                },
             };
             ComputeRoutesResponse expectedResponse = new ComputeRoutesResponse
             {
@@ -77,6 +81,10 @@ namespace Google.Maps.Routing.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 Units = Units.Metric,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                RequestedReferenceRoutes =
+                {
+                    ComputeRoutesRequest.Types.ReferenceRoute.FuelEfficient,
+                },
             };
             ComputeRoutesResponse expectedResponse = new ComputeRoutesResponse
             {

@@ -25,14 +25,15 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3ZlaGljbGVfZW1pc3Npb25fdHlw",
-            "ZS5wcm90bxIWZ29vZ2xlLm1hcHMucm91dGluZy52MipkChNWZWhpY2xlRW1p",
+            "ZS5wcm90bxIWZ29vZ2xlLm1hcHMucm91dGluZy52MipwChNWZWhpY2xlRW1p",
             "c3Npb25UeXBlEiUKIVZFSElDTEVfRU1JU1NJT05fVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgwKCEdBU09MSU5FEAESDAoIRUxFQ1RSSUMQAhIKCgZIWUJSSUQQA0LQ",
-            "AQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCGFZlaGljbGVFbWlzc2lv",
-            "blR5cGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL21hcHMvcm91dGluZy92Mjtyb3V0aW5n+AEBogIFR01SVjKqAhZH",
-            "b29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xW",
-            "MuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "RBAAEgwKCEdBU09MSU5FEAESDAoIRUxFQ1RSSUMQAhIKCgZIWUJSSUQQAxIK",
+            "CgZESUVTRUwQBELQAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCGFZl",
+            "aGljbGVFbWlzc2lvblR5cGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92Mjtyb3V0aW5n+AEB",
+            "ogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1h",
+            "cHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.VehicleEmissionType), }, null, null));
@@ -62,6 +63,10 @@ namespace Google.Maps.Routing.V2 {
     /// Hybrid fuel (such as gasoline + electric) vehicle.
     /// </summary>
     [pbr::OriginalName("HYBRID")] Hybrid = 3,
+    /// <summary>
+    /// Diesel fueled vehicle.
+    /// </summary>
+    [pbr::OriginalName("DIESEL")] Diesel = 4,
   }
 
   #endregion

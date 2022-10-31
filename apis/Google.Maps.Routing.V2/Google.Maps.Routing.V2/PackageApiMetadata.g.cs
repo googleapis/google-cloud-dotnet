@@ -35,6 +35,7 @@ namespace Google.Maps.Routing.V2
             yield return NavigationInstructionReflection.Descriptor;
             yield return PolylineReflection.Descriptor;
             yield return RouteReflection.Descriptor;
+            yield return RouteLabelReflection.Descriptor;
             yield return RouteModifiersReflection.Descriptor;
             yield return RouteTravelModeReflection.Descriptor;
             yield return RoutesServiceReflection.Descriptor;

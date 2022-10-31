@@ -46,6 +46,10 @@ namespace Google.Maps.Routing.V2.Snippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                RequestedReferenceRoutes =
+                {
+                    ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
+                },
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);

@@ -28,57 +28,60 @@ namespace Google.Maps.Routing.V2 {
             "bWFwcy5yb3V0aW5nLnYyGh5nb29nbGUvZ2VvL3R5cGUvdmlld3BvcnQucHJv",
             "dG8aJWdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvbG9jYXRpb24ucHJvdG8aM2dv",
             "b2dsZS9tYXBzL3JvdXRpbmcvdjIvbmF2aWdhdGlvbl9pbnN0cnVjdGlvbi5w",
-            "cm90bxolZ29vZ2xlL21hcHMvcm91dGluZy92Mi9wb2x5bGluZS5wcm90bxoz",
-            "Z29vZ2xlL21hcHMvcm91dGluZy92Mi9zcGVlZF9yZWFkaW5nX2ludGVydmFs",
-            "LnByb3RvGiZnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RvbGxfaW5mby5wcm90",
-            "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIv8CCgVSb3V0ZRIu",
-            "CgRsZWdzGAEgAygLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZUxl",
-            "ZxIXCg9kaXN0YW5jZV9tZXRlcnMYAiABKAUSKwoIZHVyYXRpb24YAyABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoPc3RhdGljX2R1cmF0aW9u",
-            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKCHBvbHlsaW5l",
-            "GAUgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZRITCgtk",
-            "ZXNjcmlwdGlvbhgGIAEoCRIQCgh3YXJuaW5ncxgHIAMoCRIrCgh2aWV3cG9y",
-            "dBgIIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydBJECg90cmF2ZWxf",
-            "YWR2aXNvcnkYCSABKAsyKy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRl",
-            "VHJhdmVsQWR2aXNvcnkimQEKE1JvdXRlVHJhdmVsQWR2aXNvcnkSMwoJdG9s",
-            "bF9pbmZvGAIgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Ub2xsSW5m",
-            "bxJNChdzcGVlZF9yZWFkaW5nX2ludGVydmFscxgDIAMoCzIsLmdvb2dsZS5t",
-            "YXBzLnJvdXRpbmcudjIuU3BlZWRSZWFkaW5nSW50ZXJ2YWwinAEKFlJvdXRl",
-            "TGVnVHJhdmVsQWR2aXNvcnkSMwoJdG9sbF9pbmZvGAEgASgLMiAuZ29vZ2xl",
-            "Lm1hcHMucm91dGluZy52Mi5Ub2xsSW5mbxJNChdzcGVlZF9yZWFkaW5nX2lu",
-            "dGVydmFscxgCIAMoCzIsLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuU3BlZWRS",
-            "ZWFkaW5nSW50ZXJ2YWwiawoaUm91dGVMZWdTdGVwVHJhdmVsQWR2aXNvcnkS",
-            "TQoXc3BlZWRfcmVhZGluZ19pbnRlcnZhbHMYASADKAsyLC5nb29nbGUubWFw",
-            "cy5yb3V0aW5nLnYyLlNwZWVkUmVhZGluZ0ludGVydmFsIqgDCghSb3V0ZUxl",
-            "ZxIXCg9kaXN0YW5jZV9tZXRlcnMYASABKAUSKwoIZHVyYXRpb24YAiABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoPc3RhdGljX2R1cmF0aW9u",
-            "GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKCHBvbHlsaW5l",
-            "GAQgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZRI4Cg5z",
-            "dGFydF9sb2NhdGlvbhgFIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIu",
-            "TG9jYXRpb24SNgoMZW5kX2xvY2F0aW9uGAYgASgLMiAuZ29vZ2xlLm1hcHMu",
-            "cm91dGluZy52Mi5Mb2NhdGlvbhIzCgVzdGVwcxgHIAMoCzIkLmdvb2dsZS5t",
-            "YXBzLnJvdXRpbmcudjIuUm91dGVMZWdTdGVwEkcKD3RyYXZlbF9hZHZpc29y",
-            "eRgIIAEoCzIuLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVMZWdUcmF2",
-            "ZWxBZHZpc29yeSKdAwoMUm91dGVMZWdTdGVwEhcKD2Rpc3RhbmNlX21ldGVy",
-            "cxgBIAEoBRIyCg9zdGF0aWNfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24SMgoIcG9seWxpbmUYAyABKAsyIC5nb29nbGUubWFw",
-            "cy5yb3V0aW5nLnYyLlBvbHlsaW5lEjgKDnN0YXJ0X2xvY2F0aW9uGAQgASgL",
-            "MiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Mb2NhdGlvbhI2CgxlbmRfbG9j",
-            "YXRpb24YBSABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkxvY2F0aW9u",
-            "Ek0KFm5hdmlnYXRpb25faW5zdHJ1Y3Rpb24YBiABKAsyLS5nb29nbGUubWFw",
-            "cy5yb3V0aW5nLnYyLk5hdmlnYXRpb25JbnN0cnVjdGlvbhJLCg90cmF2ZWxf",
-            "YWR2aXNvcnkYByABKAsyMi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRl",
-            "TGVnU3RlcFRyYXZlbEFkdmlzb3J5QsIBChpjb20uZ29vZ2xlLm1hcHMucm91",
-            "dGluZy52MkIKUm91dGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92Mjtyb3V0aW5n+AEBogIF",
-            "R01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNc",
-            "Um91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3Rv",
-            "Mw=="));
+            "cm90bxolZ29vZ2xlL21hcHMvcm91dGluZy92Mi9wb2x5bGluZS5wcm90bxoo",
+            "Z29vZ2xlL21hcHMvcm91dGluZy92Mi9yb3V0ZV9sYWJlbC5wcm90bxozZ29v",
+            "Z2xlL21hcHMvcm91dGluZy92Mi9zcGVlZF9yZWFkaW5nX2ludGVydmFsLnBy",
+            "b3RvGiZnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RvbGxfaW5mby5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIs4DCgVSb3V0ZRI4Cgxy",
+            "b3V0ZV9sYWJlbHMYDSADKA4yIi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJv",
+            "dXRlTGFiZWwSLgoEbGVncxgBIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
+            "djIuUm91dGVMZWcSFwoPZGlzdGFuY2VfbWV0ZXJzGAIgASgFEisKCGR1cmF0",
+            "aW9uGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD3N0YXRp",
+            "Y19kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIy",
+            "Cghwb2x5bGluZRgFIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9s",
+            "eWxpbmUSEwoLZGVzY3JpcHRpb24YBiABKAkSEAoId2FybmluZ3MYByADKAkS",
+            "KwoIdmlld3BvcnQYCCABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnQS",
+            "RAoPdHJhdmVsX2Fkdmlzb3J5GAkgASgLMisuZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5EhMKC3JvdXRlX3Rva2VuGAwgASgJ",
+            "Ir8BChNSb3V0ZVRyYXZlbEFkdmlzb3J5EjMKCXRvbGxfaW5mbxgCIAEoCzIg",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVG9sbEluZm8STQoXc3BlZWRfcmVh",
+            "ZGluZ19pbnRlcnZhbHMYAyADKAsyLC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlNwZWVkUmVhZGluZ0ludGVydmFsEiQKHGZ1ZWxfY29uc3VtcHRpb25fbWlj",
+            "cm9saXRlcnMYBSABKAMinAEKFlJvdXRlTGVnVHJhdmVsQWR2aXNvcnkSMwoJ",
+            "dG9sbF9pbmZvGAEgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Ub2xs",
+            "SW5mbxJNChdzcGVlZF9yZWFkaW5nX2ludGVydmFscxgCIAMoCzIsLmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjIuU3BlZWRSZWFkaW5nSW50ZXJ2YWwiawoaUm91",
+            "dGVMZWdTdGVwVHJhdmVsQWR2aXNvcnkSTQoXc3BlZWRfcmVhZGluZ19pbnRl",
+            "cnZhbHMYASADKAsyLC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNwZWVkUmVh",
+            "ZGluZ0ludGVydmFsIqgDCghSb3V0ZUxlZxIXCg9kaXN0YW5jZV9tZXRlcnMY",
+            "ASABKAUSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24SMgoPc3RhdGljX2R1cmF0aW9uGAMgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEjIKCHBvbHlsaW5lGAQgASgLMiAuZ29vZ2xlLm1hcHMu",
+            "cm91dGluZy52Mi5Qb2x5bGluZRI4Cg5zdGFydF9sb2NhdGlvbhgFIAEoCzIg",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb24SNgoMZW5kX2xvY2F0",
+            "aW9uGAYgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Mb2NhdGlvbhIz",
+            "CgVzdGVwcxgHIAMoCzIkLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVM",
+            "ZWdTdGVwEkcKD3RyYXZlbF9hZHZpc29yeRgIIAEoCzIuLmdvb2dsZS5tYXBz",
+            "LnJvdXRpbmcudjIuUm91dGVMZWdUcmF2ZWxBZHZpc29yeSKdAwoMUm91dGVM",
+            "ZWdTdGVwEhcKD2Rpc3RhbmNlX21ldGVycxgBIAEoBRIyCg9zdGF0aWNfZHVy",
+            "YXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoIcG9s",
+            "eWxpbmUYAyABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5l",
+            "EjgKDnN0YXJ0X2xvY2F0aW9uGAQgASgLMiAuZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52Mi5Mb2NhdGlvbhI2CgxlbmRfbG9jYXRpb24YBSABKAsyIC5nb29nbGUu",
+            "bWFwcy5yb3V0aW5nLnYyLkxvY2F0aW9uEk0KFm5hdmlnYXRpb25faW5zdHJ1",
+            "Y3Rpb24YBiABKAsyLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLk5hdmlnYXRp",
+            "b25JbnN0cnVjdGlvbhJLCg90cmF2ZWxfYWR2aXNvcnkYByABKAsyMi5nb29n",
+            "bGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTGVnU3RlcFRyYXZlbEFkdmlzb3J5",
+            "QsIBChpjb20uZ29vZ2xlLm1hcHMucm91dGluZy52MkIKUm91dGVQcm90b1AB",
+            "Wj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMv",
+            "cm91dGluZy92Mjtyb3V0aW5n+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5S",
+            "b3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6",
+            "TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Routing.V2.LocationReflection.Descriptor, global::Google.Maps.Routing.V2.NavigationInstructionReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.SpeedReadingIntervalReflection.Descriptor, global::Google.Maps.Routing.V2.TollInfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Routing.V2.LocationReflection.Descriptor, global::Google.Maps.Routing.V2.NavigationInstructionReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteLabelReflection.Descriptor, global::Google.Maps.Routing.V2.SpeedReadingIntervalReflection.Descriptor, global::Google.Maps.Routing.V2.TollInfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Route), global::Google.Maps.Routing.V2.Route.Parser, new[]{ "Legs", "DistanceMeters", "Duration", "StaticDuration", "Polyline", "Description", "Warnings", "Viewport", "TravelAdvisory" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteTravelAdvisory), global::Google.Maps.Routing.V2.RouteTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Route), global::Google.Maps.Routing.V2.Route.Parser, new[]{ "RouteLabels", "Legs", "DistanceMeters", "Duration", "StaticDuration", "Polyline", "Description", "Warnings", "Viewport", "TravelAdvisory", "RouteToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteTravelAdvisory), global::Google.Maps.Routing.V2.RouteTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals", "FuelConsumptionMicroliters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegTravelAdvisory), global::Google.Maps.Routing.V2.RouteLegTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory), global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory.Parser, new[]{ "SpeedReadingIntervals" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg), global::Google.Maps.Routing.V2.RouteLeg.Parser, new[]{ "DistanceMeters", "Duration", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "Steps", "TravelAdvisory" }, null, null, null, null),
@@ -127,6 +130,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Route(Route other) : this() {
+      routeLabels_ = other.routeLabels_.Clone();
       legs_ = other.legs_.Clone();
       distanceMeters_ = other.distanceMeters_;
       duration_ = other.duration_ != null ? other.duration_.Clone() : null;
@@ -136,6 +140,7 @@ namespace Google.Maps.Routing.V2 {
       warnings_ = other.warnings_.Clone();
       viewport_ = other.viewport_ != null ? other.viewport_.Clone() : null;
       travelAdvisory_ = other.travelAdvisory_ != null ? other.travelAdvisory_.Clone() : null;
+      routeToken_ = other.routeToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -143,6 +148,21 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Route Clone() {
       return new Route(this);
+    }
+
+    /// <summary>Field number for the "route_labels" field.</summary>
+    public const int RouteLabelsFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.RouteLabel> _repeated_routeLabels_codec
+        = pb::FieldCodec.ForEnum(106, x => (int) x, x => (global::Google.Maps.Routing.V2.RouteLabel) x);
+    private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLabel> routeLabels_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLabel>();
+    /// <summary>
+    /// Labels for the `Route` that are useful to identify specific properties
+    /// of the route to compare against others.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLabel> RouteLabels {
+      get { return routeLabels_; }
     }
 
     /// <summary>Field number for the "legs" field.</summary>
@@ -290,6 +310,25 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "route_token" field.</summary>
+    public const int RouteTokenFieldNumber = 12;
+    private string routeToken_ = "";
+    /// <summary>
+    /// Web-safe base64 encoded route token that can be passed to NavigationSDK,
+    /// which allows NavigationSDK to reconstruct the route during navigation, and
+    /// in the event of rerouting honor the original intention when Routes
+    /// ComputeRoutes is called. Customers should treat this token as an
+    /// opaque blob.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RouteToken {
+      get { return routeToken_; }
+      set {
+        routeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -305,6 +344,7 @@ namespace Google.Maps.Routing.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!routeLabels_.Equals(other.routeLabels_)) return false;
       if(!legs_.Equals(other.legs_)) return false;
       if (DistanceMeters != other.DistanceMeters) return false;
       if (!object.Equals(Duration, other.Duration)) return false;
@@ -314,6 +354,7 @@ namespace Google.Maps.Routing.V2 {
       if(!warnings_.Equals(other.warnings_)) return false;
       if (!object.Equals(Viewport, other.Viewport)) return false;
       if (!object.Equals(TravelAdvisory, other.TravelAdvisory)) return false;
+      if (RouteToken != other.RouteToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -321,6 +362,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= routeLabels_.GetHashCode();
       hash ^= legs_.GetHashCode();
       if (DistanceMeters != 0) hash ^= DistanceMeters.GetHashCode();
       if (duration_ != null) hash ^= Duration.GetHashCode();
@@ -330,6 +372,7 @@ namespace Google.Maps.Routing.V2 {
       hash ^= warnings_.GetHashCode();
       if (viewport_ != null) hash ^= Viewport.GetHashCode();
       if (travelAdvisory_ != null) hash ^= TravelAdvisory.GetHashCode();
+      if (RouteToken.Length != 0) hash ^= RouteToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -378,6 +421,11 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(TravelAdvisory);
       }
+      if (RouteToken.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(RouteToken);
+      }
+      routeLabels_.WriteTo(output, _repeated_routeLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -418,6 +466,11 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(TravelAdvisory);
       }
+      if (RouteToken.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(RouteToken);
+      }
+      routeLabels_.WriteTo(ref output, _repeated_routeLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -428,6 +481,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += routeLabels_.CalculateSize(_repeated_routeLabels_codec);
       size += legs_.CalculateSize(_repeated_legs_codec);
       if (DistanceMeters != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DistanceMeters);
@@ -451,6 +505,9 @@ namespace Google.Maps.Routing.V2 {
       if (travelAdvisory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TravelAdvisory);
       }
+      if (RouteToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RouteToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -463,6 +520,7 @@ namespace Google.Maps.Routing.V2 {
       if (other == null) {
         return;
       }
+      routeLabels_.Add(other.routeLabels_);
       legs_.Add(other.legs_);
       if (other.DistanceMeters != 0) {
         DistanceMeters = other.DistanceMeters;
@@ -500,6 +558,9 @@ namespace Google.Maps.Routing.V2 {
           TravelAdvisory = new global::Google.Maps.Routing.V2.RouteTravelAdvisory();
         }
         TravelAdvisory.MergeFrom(other.TravelAdvisory);
+      }
+      if (other.RouteToken.Length != 0) {
+        RouteToken = other.RouteToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -565,6 +626,15 @@ namespace Google.Maps.Routing.V2 {
               TravelAdvisory = new global::Google.Maps.Routing.V2.RouteTravelAdvisory();
             }
             input.ReadMessage(TravelAdvisory);
+            break;
+          }
+          case 98: {
+            RouteToken = input.ReadString();
+            break;
+          }
+          case 106:
+          case 104: {
+            routeLabels_.AddEntriesFrom(input, _repeated_routeLabels_codec);
             break;
           }
         }
@@ -633,6 +703,15 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(TravelAdvisory);
             break;
           }
+          case 98: {
+            RouteToken = input.ReadString();
+            break;
+          }
+          case 106:
+          case 104: {
+            routeLabels_.AddEntriesFrom(ref input, _repeated_routeLabels_codec);
+            break;
+          }
         }
       }
     }
@@ -680,6 +759,7 @@ namespace Google.Maps.Routing.V2 {
     public RouteTravelAdvisory(RouteTravelAdvisory other) : this() {
       tollInfo_ = other.tollInfo_ != null ? other.tollInfo_.Clone() : null;
       speedReadingIntervals_ = other.speedReadingIntervals_.Clone();
+      fuelConsumptionMicroliters_ = other.fuelConsumptionMicroliters_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -731,6 +811,21 @@ namespace Google.Maps.Routing.V2 {
       get { return speedReadingIntervals_; }
     }
 
+    /// <summary>Field number for the "fuel_consumption_microliters" field.</summary>
+    public const int FuelConsumptionMicrolitersFieldNumber = 5;
+    private long fuelConsumptionMicroliters_;
+    /// <summary>
+    /// The fuel consumption prediction in microliters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FuelConsumptionMicroliters {
+      get { return fuelConsumptionMicroliters_; }
+      set {
+        fuelConsumptionMicroliters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -748,6 +843,7 @@ namespace Google.Maps.Routing.V2 {
       }
       if (!object.Equals(TollInfo, other.TollInfo)) return false;
       if(!speedReadingIntervals_.Equals(other.speedReadingIntervals_)) return false;
+      if (FuelConsumptionMicroliters != other.FuelConsumptionMicroliters) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -757,6 +853,7 @@ namespace Google.Maps.Routing.V2 {
       int hash = 1;
       if (tollInfo_ != null) hash ^= TollInfo.GetHashCode();
       hash ^= speedReadingIntervals_.GetHashCode();
+      if (FuelConsumptionMicroliters != 0L) hash ^= FuelConsumptionMicroliters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -780,6 +877,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteMessage(TollInfo);
       }
       speedReadingIntervals_.WriteTo(output, _repeated_speedReadingIntervals_codec);
+      if (FuelConsumptionMicroliters != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(FuelConsumptionMicroliters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -795,6 +896,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteMessage(TollInfo);
       }
       speedReadingIntervals_.WriteTo(ref output, _repeated_speedReadingIntervals_codec);
+      if (FuelConsumptionMicroliters != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(FuelConsumptionMicroliters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -809,6 +914,9 @@ namespace Google.Maps.Routing.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TollInfo);
       }
       size += speedReadingIntervals_.CalculateSize(_repeated_speedReadingIntervals_codec);
+      if (FuelConsumptionMicroliters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FuelConsumptionMicroliters);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -828,6 +936,9 @@ namespace Google.Maps.Routing.V2 {
         TollInfo.MergeFrom(other.TollInfo);
       }
       speedReadingIntervals_.Add(other.speedReadingIntervals_);
+      if (other.FuelConsumptionMicroliters != 0L) {
+        FuelConsumptionMicroliters = other.FuelConsumptionMicroliters;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -854,6 +965,10 @@ namespace Google.Maps.Routing.V2 {
             speedReadingIntervals_.AddEntriesFrom(input, _repeated_speedReadingIntervals_codec);
             break;
           }
+          case 40: {
+            FuelConsumptionMicroliters = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -878,6 +993,10 @@ namespace Google.Maps.Routing.V2 {
           }
           case 26: {
             speedReadingIntervals_.AddEntriesFrom(ref input, _repeated_speedReadingIntervals_codec);
+            break;
+          }
+          case 40: {
+            FuelConsumptionMicroliters = input.ReadInt64();
             break;
           }
         }
