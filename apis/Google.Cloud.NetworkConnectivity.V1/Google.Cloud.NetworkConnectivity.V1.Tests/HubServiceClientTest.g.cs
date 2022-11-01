@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -52,7 +56,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -67,6 +71,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -85,7 +91,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -102,6 +108,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -120,7 +128,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -135,6 +143,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -153,7 +163,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -170,6 +180,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -188,7 +200,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -203,6 +215,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetHubRequest request = new GetHubRequest
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
@@ -221,7 +235,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 },
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -238,6 +252,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -257,7 +273,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),
@@ -274,6 +290,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -293,7 +311,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),
@@ -312,6 +330,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -331,7 +351,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),
@@ -348,6 +368,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -367,7 +389,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),
@@ -386,6 +408,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -405,7 +429,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),
@@ -422,6 +446,8 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
         {
             moq::Mock<HubService.HubServiceClient> mockGrpcClient = new moq::Mock<HubService.HubServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpokeRequest request = new GetSpokeRequest
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
@@ -441,7 +467,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 HubAsHubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
                 UniqueId = "unique_idee0c0869",
-                State = State.Active,
+                State = State.Deleting,
                 LinkedVpnTunnels = new LinkedVpnTunnels(),
                 LinkedInterconnectAttachments = new LinkedInterconnectAttachments(),
                 LinkedRouterApplianceInstances = new LinkedRouterApplianceInstances(),

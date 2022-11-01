@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -64,6 +66,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             UpdateSpokeOperationsSettings = existing.UpdateSpokeOperationsSettings.Clone();
             DeleteSpokeSettings = existing.DeleteSpokeSettings;
             DeleteSpokeOperationsSettings = existing.DeleteSpokeOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -321,6 +325,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="HubServiceSettings"/> object.</returns>
         public HubServiceSettings Clone() => new HubServiceSettings(this);
@@ -463,8 +477,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// <summary>The underlying gRPC HubService client</summary>
         public virtual HubService.HubServiceClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -473,7 +493,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -482,7 +502,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -506,7 +526,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -530,7 +550,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -554,7 +574,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -578,7 +598,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,7 +607,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -596,7 +616,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -605,7 +625,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetHubAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -619,7 +639,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -633,7 +653,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -644,7 +664,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetHubAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -658,7 +678,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -672,7 +692,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub resource to get.
@@ -683,7 +703,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetHubAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -692,7 +712,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -701,7 +721,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -736,7 +756,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<Hub, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateHubOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -758,7 +778,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -780,7 +800,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -797,7 +817,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHubAsync(parent, hub, hubId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -819,7 +839,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -841,7 +861,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -858,7 +878,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHubAsync(parent, hub, hubId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -867,7 +888,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -876,7 +898,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -911,17 +934,18 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<Hub, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateHubOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="hub">
         /// Required. The state that the hub should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing hub, field mask is used to specify
-        /// the fields to be overwritten. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field is overwritten if
-        /// it is in the mask. If the user does not provide a mask, then all fields are
-        /// overwritten.
+        /// Optional. In the case of an update to an existing hub, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -933,17 +957,18 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="hub">
         /// Required. The state that the hub should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing hub, field mask is used to specify
-        /// the fields to be overwritten. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field is overwritten if
-        /// it is in the mask. If the user does not provide a mask, then all fields are
-        /// overwritten.
+        /// Optional. In the case of an update to an existing hub, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -955,17 +980,18 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="hub">
         /// Required. The state that the hub should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing hub, field mask is used to specify
-        /// the fields to be overwritten. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field is overwritten if
-        /// it is in the mask. If the user does not provide a mask, then all fields are
-        /// overwritten.
+        /// Optional. In the case of an update to an existing hub, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -973,7 +999,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             UpdateHubAsync(hub, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,7 +1008,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -991,7 +1017,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1026,7 +1052,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteHubOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1040,7 +1066,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1054,7 +1080,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1065,7 +1091,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeleteHubAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1079,7 +1105,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1093,7 +1119,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the hub to delete.
@@ -1104,7 +1130,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeleteHubAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1113,7 +1140,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1122,7 +1150,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1146,7 +1175,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1170,7 +1200,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1194,7 +1225,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1218,7 +1250,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1227,7 +1259,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1236,7 +1268,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1245,7 +1277,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetSpokeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1259,7 +1291,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1273,7 +1305,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1284,7 +1316,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1298,7 +1330,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1312,7 +1344,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke resource.
@@ -1323,7 +1355,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1332,7 +1364,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1341,7 +1373,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1376,7 +1408,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<Spoke, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSpokeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1398,7 +1430,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1420,7 +1452,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1437,7 +1469,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeAsync(parent, spoke, spokeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1459,7 +1491,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1481,7 +1513,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource.
@@ -1498,7 +1530,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeAsync(parent, spoke, spokeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1507,7 +1539,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1516,7 +1548,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1551,14 +1583,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<Spoke, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSpokeOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="spoke">
         /// Required. The state that the spoke should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing spoke, field mask is used to
-        /// specify the fields to be overwritten. The fields specified in the
+        /// Optional. In the case of an update to an existing spoke, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
         /// update_mask are relative to the resource, not the full request. A field is
         /// overwritten if it is in the mask. If the user does not provide a mask, then
         /// all fields are overwritten.
@@ -1573,14 +1605,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="spoke">
         /// Required. The state that the spoke should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing spoke, field mask is used to
-        /// specify the fields to be overwritten. The fields specified in the
+        /// Optional. In the case of an update to an existing spoke, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
         /// update_mask are relative to the resource, not the full request. A field is
         /// overwritten if it is in the mask. If the user does not provide a mask, then
         /// all fields are overwritten.
@@ -1595,14 +1627,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="spoke">
         /// Required. The state that the spoke should be in after the update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. In the case of an update to an existing spoke, field mask is used to
-        /// specify the fields to be overwritten. The fields specified in the
+        /// Optional. In the case of an update to an existing spoke, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
         /// update_mask are relative to the resource, not the full request. A field is
         /// overwritten if it is in the mask. If the user does not provide a mask, then
         /// all fields are overwritten.
@@ -1613,7 +1645,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             UpdateSpokeAsync(spoke, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1622,7 +1654,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1631,7 +1663,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1666,7 +1698,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSpokeOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1680,7 +1712,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1694,7 +1726,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1705,7 +1737,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeleteSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1719,7 +1751,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1733,7 +1765,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spoke to delete.
@@ -1789,6 +1821,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpokeOperationsSettings, logger);
             UpdateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpokeOperationsSettings, logger);
             DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>("ListHubs", grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHubs);
             Modify_ListHubsApiCall(ref _callListHubs);
@@ -1849,6 +1883,12 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// <summary>The underlying gRPC HubService client</summary>
         public override HubService.HubServiceClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
+
         partial void Modify_ListHubsRequest(ref ListHubsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetHubRequest(ref GetHubRequest request, ref gaxgrpc::CallSettings settings);
@@ -1870,7 +1910,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_DeleteSpokeRequest(ref DeleteSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1882,7 +1922,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists hubs in a given project.
+        /// Lists the Network Connectivity Center hubs associated with a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1894,7 +1934,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1906,7 +1946,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details about the specified hub.
+        /// Gets details about a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1921,7 +1961,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient CreateHubOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1933,7 +1973,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Creates a new hub in the specified project.
+        /// Creates a new Network Connectivity Center hub in the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1948,7 +1988,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient UpdateHubOperationsClient { get; }
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1960,7 +2001,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Updates the description and/or labels of the specified hub.
+        /// Updates the description and/or labels of a Network Connectivity Center
+        /// hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1975,7 +2017,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient DeleteHubOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1987,7 +2029,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Deletes the specified hub.
+        /// Deletes a Network Connectivity Center hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1999,7 +2041,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2011,7 +2054,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists the spokes in the specified project and location.
+        /// Lists the Network Connectivity Center spokes in a specified project and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2023,7 +2067,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2035,7 +2079,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details about the specified spoke.
+        /// Gets details about a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2050,7 +2094,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient CreateSpokeOperationsClient { get; }
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2062,7 +2106,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Creates a spoke in the specified project and location.
+        /// Creates a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2077,7 +2121,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient UpdateSpokeOperationsClient { get; }
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2089,7 +2133,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Updates the parameters of the specified spoke.
+        /// Updates the parameters of a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2104,7 +2148,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient DeleteSpokeOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2116,7 +2160,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Deletes the specified spoke.
+        /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2163,6 +2207,32 @@ namespace Google.Cloud.NetworkConnectivity.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class HubService
+    {
+        public partial class HubServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
