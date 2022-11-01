@@ -187,7 +187,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public abstract partial class HubServiceBase
     {
       /// <summary>
-      /// Lists hubs in a given project.
+      /// Lists the Network Connectivity Center hubs associated with a given project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -199,7 +199,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Gets details about the specified hub.
+      /// Gets details about a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -211,7 +211,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Creates a new hub in the specified project.
+      /// Creates a new Network Connectivity Center hub in the specified project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -223,7 +223,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Updates the description and/or labels of the specified hub.
+      /// Updates the description and/or labels of a Network Connectivity Center
+      /// hub.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -235,7 +236,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Deletes the specified hub.
+      /// Deletes a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -247,7 +248,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Lists the spokes in the specified project and location.
+      /// Lists the Network Connectivity Center spokes in a specified project and
+      /// location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -259,7 +261,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Gets details about the specified spoke.
+      /// Gets details about a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -271,7 +273,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Creates a spoke in the specified project and location.
+      /// Creates a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -283,7 +285,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Updates the parameters of the specified spoke.
+      /// Updates the parameters of a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -295,7 +297,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Deletes the specified spoke.
+      /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -336,7 +338,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Lists hubs in a given project.
+      /// Lists the Network Connectivity Center hubs associated with a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -349,7 +351,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListHubs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists hubs in a given project.
+      /// Lists the Network Connectivity Center hubs associated with a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -360,7 +362,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListHubs, null, options, request);
       }
       /// <summary>
-      /// Lists hubs in a given project.
+      /// Lists the Network Connectivity Center hubs associated with a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -373,7 +375,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListHubsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists hubs in a given project.
+      /// Lists the Network Connectivity Center hubs associated with a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -384,7 +386,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListHubs, null, options, request);
       }
       /// <summary>
-      /// Gets details about the specified hub.
+      /// Gets details about a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -397,7 +399,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetHub(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details about the specified hub.
+      /// Gets details about a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -408,7 +410,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetHub, null, options, request);
       }
       /// <summary>
-      /// Gets details about the specified hub.
+      /// Gets details about a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -421,7 +423,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetHubAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details about the specified hub.
+      /// Gets details about a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -432,7 +434,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetHub, null, options, request);
       }
       /// <summary>
-      /// Creates a new hub in the specified project.
+      /// Creates a new Network Connectivity Center hub in the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -445,7 +447,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreateHub(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new hub in the specified project.
+      /// Creates a new Network Connectivity Center hub in the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -456,7 +458,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateHub, null, options, request);
       }
       /// <summary>
-      /// Creates a new hub in the specified project.
+      /// Creates a new Network Connectivity Center hub in the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -469,7 +471,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreateHubAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new hub in the specified project.
+      /// Creates a new Network Connectivity Center hub in the specified project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -480,7 +482,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateHub, null, options, request);
       }
       /// <summary>
-      /// Updates the description and/or labels of the specified hub.
+      /// Updates the description and/or labels of a Network Connectivity Center
+      /// hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -493,7 +496,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return UpdateHub(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the description and/or labels of the specified hub.
+      /// Updates the description and/or labels of a Network Connectivity Center
+      /// hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -504,7 +508,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateHub, null, options, request);
       }
       /// <summary>
-      /// Updates the description and/or labels of the specified hub.
+      /// Updates the description and/or labels of a Network Connectivity Center
+      /// hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -517,7 +522,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return UpdateHubAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the description and/or labels of the specified hub.
+      /// Updates the description and/or labels of a Network Connectivity Center
+      /// hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -528,7 +534,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateHub, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified hub.
+      /// Deletes a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -541,7 +547,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeleteHub(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified hub.
+      /// Deletes a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -552,7 +558,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteHub, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified hub.
+      /// Deletes a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -565,7 +571,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeleteHubAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified hub.
+      /// Deletes a Network Connectivity Center hub.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -576,7 +582,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteHub, null, options, request);
       }
       /// <summary>
-      /// Lists the spokes in the specified project and location.
+      /// Lists the Network Connectivity Center spokes in a specified project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -589,7 +596,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListSpokes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the spokes in the specified project and location.
+      /// Lists the Network Connectivity Center spokes in a specified project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -600,7 +608,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSpokes, null, options, request);
       }
       /// <summary>
-      /// Lists the spokes in the specified project and location.
+      /// Lists the Network Connectivity Center spokes in a specified project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -613,7 +622,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListSpokesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the spokes in the specified project and location.
+      /// Lists the Network Connectivity Center spokes in a specified project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -624,7 +634,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSpokes, null, options, request);
       }
       /// <summary>
-      /// Gets details about the specified spoke.
+      /// Gets details about a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -637,7 +647,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details about the specified spoke.
+      /// Gets details about a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -648,7 +658,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSpoke, null, options, request);
       }
       /// <summary>
-      /// Gets details about the specified spoke.
+      /// Gets details about a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -661,7 +671,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details about the specified spoke.
+      /// Gets details about a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -672,7 +682,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSpoke, null, options, request);
       }
       /// <summary>
-      /// Creates a spoke in the specified project and location.
+      /// Creates a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -685,7 +695,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreateSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a spoke in the specified project and location.
+      /// Creates a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -696,7 +706,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSpoke, null, options, request);
       }
       /// <summary>
-      /// Creates a spoke in the specified project and location.
+      /// Creates a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -709,7 +719,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreateSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a spoke in the specified project and location.
+      /// Creates a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -720,7 +730,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSpoke, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of the specified spoke.
+      /// Updates the parameters of a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -733,7 +743,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return UpdateSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of the specified spoke.
+      /// Updates the parameters of a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -744,7 +754,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSpoke, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of the specified spoke.
+      /// Updates the parameters of a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -757,7 +767,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return UpdateSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of the specified spoke.
+      /// Updates the parameters of a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -768,7 +778,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSpoke, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified spoke.
+      /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -781,7 +791,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeleteSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified spoke.
+      /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -792,7 +802,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSpoke, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified spoke.
+      /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -805,7 +815,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeleteSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified spoke.
+      /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

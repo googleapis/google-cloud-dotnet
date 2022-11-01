@@ -31,6 +31,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             yield return CommonReflection.Descriptor;
             yield return HubReflection.Descriptor;
+            yield return PolicyBasedRoutingReflection.Descriptor;
         }
     }
 }

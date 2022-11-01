@@ -1457,6 +1457,626 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_sync",
+      "title": "ListPolicyBasedRoutesRequestObject",
+      "description": "Snippet for ListPolicyBasedRoutes",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_async",
+      "title": "ListPolicyBasedRoutesRequestObjectAsync",
+      "description": "Snippet for ListPolicyBasedRoutesAsync",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_sync_flattened",
+      "title": "ListPolicyBasedRoutes",
+      "description": "Snippet for ListPolicyBasedRoutes",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_async_flattened",
+      "title": "ListPolicyBasedRoutesAsync",
+      "description": "Snippet for ListPolicyBasedRoutesAsync",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_sync_flattened_resourceNames",
+      "title": "ListPolicyBasedRoutesResourceNames",
+      "description": "Snippet for ListPolicyBasedRoutes",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_async_flattened_resourceNames",
+      "title": "ListPolicyBasedRoutesResourceNamesAsync",
+      "description": "Snippet for ListPolicyBasedRoutesAsync",
+      "file": "PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBasedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.ListPolicyBasedRoutesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListPolicyBasedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBasedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_sync",
+      "title": "GetPolicyBasedRouteRequestObject",
+      "description": "Snippet for GetPolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRoute",
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_async",
+      "title": "GetPolicyBasedRouteRequestObjectAsync",
+      "description": "Snippet for GetPolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_sync_flattened",
+      "title": "GetPolicyBasedRoute",
+      "description": "Snippet for GetPolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRoute",
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_async_flattened",
+      "title": "GetPolicyBasedRouteAsync",
+      "description": "Snippet for GetPolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_sync_flattened_resourceNames",
+      "title": "GetPolicyBasedRouteResourceNames",
+      "description": "Snippet for GetPolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRoute",
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_GetPolicyBasedRoute_async_flattened_resourceNames",
+      "title": "GetPolicyBasedRouteResourceNamesAsync",
+      "description": "Snippet for GetPolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.GetPolicyBasedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.GetPolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_sync",
+      "title": "CreatePolicyBasedRouteRequestObject",
+      "description": "Snippet for CreatePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_async",
+      "title": "CreatePolicyBasedRouteRequestObjectAsync",
+      "description": "Snippet for CreatePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_sync_flattened",
+      "title": "CreatePolicyBasedRoute",
+      "description": "Snippet for CreatePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_async_flattened",
+      "title": "CreatePolicyBasedRouteAsync",
+      "description": "Snippet for CreatePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_sync_flattened_resourceNames",
+      "title": "CreatePolicyBasedRouteResourceNames",
+      "description": "Snippet for CreatePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_CreatePolicyBasedRoute_async_flattened_resourceNames",
+      "title": "CreatePolicyBasedRouteResourceNamesAsync",
+      "description": "Snippet for CreatePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.CreatePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_sync",
+      "title": "DeletePolicyBasedRouteRequestObject",
+      "description": "Snippet for DeletePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_async",
+      "title": "DeletePolicyBasedRouteRequestObjectAsync",
+      "description": "Snippet for DeletePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_sync_flattened",
+      "title": "DeletePolicyBasedRoute",
+      "description": "Snippet for DeletePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_async_flattened",
+      "title": "DeletePolicyBasedRouteAsync",
+      "description": "Snippet for DeletePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_sync_flattened_resourceNames",
+      "title": "DeletePolicyBasedRouteResourceNames",
+      "description": "Snippet for DeletePolicyBasedRoute",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRoute",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_DeletePolicyBasedRoute_async_flattened_resourceNames",
+      "title": "DeletePolicyBasedRouteResourceNamesAsync",
+      "description": "Snippet for DeletePolicyBasedRouteAsync",
+      "file": "PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBasedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient.DeletePolicyBasedRouteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBasedRoutingServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoutingServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBasedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute",
+          "service": {
+            "shortName": "PolicyBasedRoutingService",
+            "fullName": "google.cloud.networkconnectivity.v1.PolicyBasedRoutingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }
