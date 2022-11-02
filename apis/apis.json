@@ -420,7 +420,7 @@
     },
     {
       "id": "Google.Cloud.Batch.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Batch",
       "productUrl": "https://cloud.google.com/batch/docs/",
@@ -429,9 +429,11 @@
         "batch"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/batch/v1",

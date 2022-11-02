@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.0.0, released 2022-11-02
+
+No API surface changes; just dependency updates and promotion to general availability.
+
 ## Version 1.0.0-beta03, released 2022-10-17
 
 ### New features
