@@ -2602,7 +2602,7 @@
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://cloud.google.com/network-connectivity/docs/",
@@ -2613,7 +2613,7 @@
         "vpc"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Api.Gax.Grpc": "4.1.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
