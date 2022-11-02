@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.1.0, released 2022-11-02
+
+### New features
+
+- Integration of Cloud Build with Artifact Registry ([commit 6fb3a24](https://github.com/googleapis/google-cloud-dotnet/commit/6fb3a24d473518376fd5b7c039a8539dfd7d1f9c))
+- Add allow_failure, exit_code, and allow_exit_code to BuildStep message ([commit 7612013](https://github.com/googleapis/google-cloud-dotnet/commit/7612013d377a10dc35baba930ce30fe61ba77ad0))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
