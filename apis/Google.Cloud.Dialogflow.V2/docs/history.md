@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.4.0, released 2022-11-02
+
+### New features
+
+- Added StreamingAnalyzeContent API ([commit bdfcd9e](https://github.com/googleapis/google-cloud-dotnet/commit/bdfcd9e76fbd1ff7e47bd590bdf073749a088568))
+- Added obfuscated_external_user_id to Participant ([commit bdfcd9e](https://github.com/googleapis/google-cloud-dotnet/commit/bdfcd9e76fbd1ff7e47bd590bdf073749a088568))
+- Can directly set Cloud Speech model on the SpeechToTextConfig ([commit bdfcd9e](https://github.com/googleapis/google-cloud-dotnet/commit/bdfcd9e76fbd1ff7e47bd590bdf073749a088568))
+
 ## Version 4.3.0, released 2022-10-17
 
 ### New features
