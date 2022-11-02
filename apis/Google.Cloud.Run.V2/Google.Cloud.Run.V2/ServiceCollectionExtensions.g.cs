@@ -26,6 +26,38 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
+        /// <summary>Adds a singleton <see cref="gcrv::ExecutionsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddExecutionsClient(this IServiceCollection services, sys::Action<gcrv::ExecutionsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::ExecutionsClientBuilder builder = new gcrv::ExecutionsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcrv::JobsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddJobsClient(this IServiceCollection services, sys::Action<gcrv::JobsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::JobsClientBuilder builder = new gcrv::JobsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcrv::RevisionsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -54,6 +86,22 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcrv::ServicesClientBuilder builder = new gcrv::ServicesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcrv::TasksClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTasksClient(this IServiceCollection services, sys::Action<gcrv::TasksClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::TasksClientBuilder builder = new gcrv::TasksClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

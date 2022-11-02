@@ -189,7 +189,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// List Services.
+      /// Lists Services.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given
+      /// Gets the IAM Access Control policy currently in effect for the given
       /// Cloud Run Service. This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -392,7 +392,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetService, null, options, request);
       }
       /// <summary>
-      /// List Services.
+      /// Lists Services.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,7 +405,7 @@ namespace Google.Cloud.Run.V2 {
         return ListServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List Services.
+      /// Lists Services.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -416,7 +416,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListServices, null, options, request);
       }
       /// <summary>
-      /// List Services.
+      /// Lists Services.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -429,7 +429,7 @@ namespace Google.Cloud.Run.V2 {
         return ListServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List Services.
+      /// Lists Services.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -544,7 +544,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteService, null, options, request);
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given
+      /// Gets the IAM Access Control policy currently in effect for the given
       /// Cloud Run Service. This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.Run.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given
+      /// Gets the IAM Access Control policy currently in effect for the given
       /// Cloud Run Service. This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -570,7 +570,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given
+      /// Gets the IAM Access Control policy currently in effect for the given
       /// Cloud Run Service. This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -584,7 +584,7 @@ namespace Google.Cloud.Run.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given
+      /// Gets the IAM Access Control policy currently in effect for the given
       /// Cloud Run Service. This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

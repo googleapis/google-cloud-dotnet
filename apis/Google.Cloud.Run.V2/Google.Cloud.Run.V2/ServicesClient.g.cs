@@ -432,7 +432,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -458,7 +458,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -484,7 +484,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -505,7 +505,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -531,7 +531,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -557,7 +557,7 @@ namespace Google.Cloud.Run.V2
         /// Creates a new Service in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The location and project in which this service should be created.
+        /// Required. The location and project in which this service should be created.
         /// Format: projects/{project}/locations/{location}
         /// Only lowercase characters, digits, and hyphens.
         /// </param>
@@ -686,7 +686,7 @@ namespace Google.Cloud.Run.V2
             GetServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -695,7 +695,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -704,7 +704,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -730,7 +730,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -756,7 +756,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -782,7 +782,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Run.V2
             DeleteServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given
+        /// Gets the IAM Access Control policy currently in effect for the given
         /// Cloud Run Service. This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1065,7 +1065,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given
+        /// Gets the IAM Access Control policy currently in effect for the given
         /// Cloud Run Service. This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1075,7 +1075,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given
+        /// Gets the IAM Access Control policy currently in effect for the given
         /// Cloud Run Service. This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1318,7 +1318,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// List Services.
+        /// Lists Services.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given
+        /// Gets the IAM Access Control policy currently in effect for the given
         /// Cloud Run Service. This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1401,7 +1401,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given
+        /// Gets the IAM Access Control policy currently in effect for the given
         /// Cloud Run Service. This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
