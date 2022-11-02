@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2022-11-02
+
+### New features
+
+- Add Eco Routes feature to ComputeRoutes ([commit 2b00043](https://github.com/googleapis/google-cloud-dotnet/commit/2b00043b1b8214eaeee9d299083579aac8c5c734))
+- Add Route Token feature to ComputeRoutes ([commit 2b00043](https://github.com/googleapis/google-cloud-dotnet/commit/2b00043b1b8214eaeee9d299083579aac8c5c734))
+- Add Fuel Consumption feature to ComputeRoutes ([commit 2b00043](https://github.com/googleapis/google-cloud-dotnet/commit/2b00043b1b8214eaeee9d299083579aac8c5c734))
+
+### Documentation improvements
+
+- Updated comment for Route.route_token ([commit 3b6108a](https://github.com/googleapis/google-cloud-dotnet/commit/3b6108a3e040c6c20c81734a0ecbc49ddab75b62))
+
 ## Version 1.0.0-beta04, released 2022-09-05
 
 ### Documentation improvements
