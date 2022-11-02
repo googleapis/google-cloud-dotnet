@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-11-02
+
+### New features
+
+- Add CloudChannelReportsService to CloudChannel API ([commit 8ddf7cc](https://github.com/googleapis/google-cloud-dotnet/commit/8ddf7cc80ad604df6d5bff81e3a863c92680d702))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
