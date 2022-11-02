@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.3.0, released 2022-11-02
+
+### New features
+
+- Add datastore aggregation query APIs ([commit 5e75d6c](https://github.com/googleapis/google-cloud-dotnet/commit/5e75d6cffa660cbdf66b4d78f17975adf62a313c))
+
 ## Version 4.2.0, released 2022-07-27
 
 ### New features
