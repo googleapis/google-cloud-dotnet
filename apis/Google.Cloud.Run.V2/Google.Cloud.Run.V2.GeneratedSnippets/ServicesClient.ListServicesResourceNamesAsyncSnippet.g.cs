@@ -14,15 +14,17 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Run.V2.Snippets
 {
     // [START run_v2_generated_Services_ListServices_async_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
-    using Google.Cloud.Run.V2;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     public sealed partial class GeneratedServicesClientSnippets
     {

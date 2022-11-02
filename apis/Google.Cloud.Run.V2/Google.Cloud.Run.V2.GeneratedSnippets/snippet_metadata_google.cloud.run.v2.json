@@ -11,6 +11,1509 @@
   },
   "snippets": [
     {
+      "regionTag": "run_v2_generated_Executions_GetExecution_sync",
+      "title": "GetExecutionRequestObject",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecution",
+        "resultType": "Google.Cloud.Run.V2.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_GetExecution_async",
+      "title": "GetExecutionRequestObjectAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_GetExecution_sync_flattened",
+      "title": "GetExecution",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecution",
+        "resultType": "Google.Cloud.Run.V2.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_GetExecution_async_flattened",
+      "title": "GetExecutionAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_GetExecution_sync_flattened_resourceNames",
+      "title": "GetExecutionResourceNames",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecution",
+        "resultType": "Google.Cloud.Run.V2.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_GetExecution_async_flattened_resourceNames",
+      "title": "GetExecutionResourceNamesAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.run.v2.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_sync",
+      "title": "ListExecutionsRequestObject",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_async",
+      "title": "ListExecutionsRequestObjectAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_sync_flattened",
+      "title": "ListExecutions",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_async_flattened",
+      "title": "ListExecutionsAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_sync_flattened_resourceNames",
+      "title": "ListExecutionsResourceNames",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_ListExecutions_async_flattened_resourceNames",
+      "title": "ListExecutionsResourceNamesAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListExecutionsResponse, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.run.v2.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_sync",
+      "title": "DeleteExecutionRequestObject",
+      "description": "Snippet for DeleteExecution",
+      "file": "ExecutionsClient.DeleteExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecution",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_async",
+      "title": "DeleteExecutionRequestObjectAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "ExecutionsClient.DeleteExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_sync_flattened",
+      "title": "DeleteExecution",
+      "description": "Snippet for DeleteExecution",
+      "file": "ExecutionsClient.DeleteExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecution",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_async_flattened",
+      "title": "DeleteExecutionAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "ExecutionsClient.DeleteExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_sync_flattened_resourceNames",
+      "title": "DeleteExecutionResourceNames",
+      "description": "Snippet for DeleteExecution",
+      "file": "ExecutionsClient.DeleteExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecution",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_DeleteExecution_async_flattened_resourceNames",
+      "title": "DeleteExecutionResourceNamesAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "ExecutionsClient.DeleteExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.DeleteExecutionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.run.v2.Executions.DeleteExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_sync",
+      "title": "CreateJobRequestObject",
+      "description": "Snippet for CreateJob",
+      "file": "JobsClient.CreateJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_async",
+      "title": "CreateJobRequestObjectAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "JobsClient.CreateJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_sync_flattened",
+      "title": "CreateJob",
+      "description": "Snippet for CreateJob",
+      "file": "JobsClient.CreateJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_async_flattened",
+      "title": "CreateJobAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "JobsClient.CreateJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_sync_flattened_resourceNames",
+      "title": "CreateJobResourceNames",
+      "description": "Snippet for CreateJob",
+      "file": "JobsClient.CreateJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_CreateJob_async_flattened_resourceNames",
+      "title": "CreateJobResourceNamesAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "JobsClient.CreateJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.CreateJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.run.v2.Jobs.CreateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_sync",
+      "title": "GetJobRequestObject",
+      "description": "Snippet for GetJob",
+      "file": "JobsClient.GetJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJob",
+        "resultType": "Google.Cloud.Run.V2.Job",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_async",
+      "title": "GetJobRequestObjectAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "JobsClient.GetJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_sync_flattened",
+      "title": "GetJob",
+      "description": "Snippet for GetJob",
+      "file": "JobsClient.GetJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJob",
+        "resultType": "Google.Cloud.Run.V2.Job",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_async_flattened",
+      "title": "GetJobAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "JobsClient.GetJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_sync_flattened_resourceNames",
+      "title": "GetJobResourceNames",
+      "description": "Snippet for GetJob",
+      "file": "JobsClient.GetJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJob",
+        "resultType": "Google.Cloud.Run.V2.Job",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetJob_async_flattened_resourceNames",
+      "title": "GetJobResourceNamesAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "JobsClient.GetJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.run.v2.Jobs.GetJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_sync",
+      "title": "ListJobsRequestObject",
+      "description": "Snippet for ListJobs",
+      "file": "JobsClient.ListJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_async",
+      "title": "ListJobsRequestObjectAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "JobsClient.ListJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_sync_flattened",
+      "title": "ListJobs",
+      "description": "Snippet for ListJobs",
+      "file": "JobsClient.ListJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_async_flattened",
+      "title": "ListJobsAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "JobsClient.ListJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_sync_flattened_resourceNames",
+      "title": "ListJobsResourceNames",
+      "description": "Snippet for ListJobs",
+      "file": "JobsClient.ListJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_ListJobs_async_flattened_resourceNames",
+      "title": "ListJobsResourceNamesAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "JobsClient.ListJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.ListJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListJobsResponse, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.run.v2.Jobs.ListJobs",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_UpdateJob_sync",
+      "title": "UpdateJobRequestObject",
+      "description": "Snippet for UpdateJob",
+      "file": "JobsClient.UpdateJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.UpdateJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.run.v2.Jobs.UpdateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_UpdateJob_async",
+      "title": "UpdateJobRequestObjectAsync",
+      "description": "Snippet for UpdateJobAsync",
+      "file": "JobsClient.UpdateJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.UpdateJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.run.v2.Jobs.UpdateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_UpdateJob_sync_flattened",
+      "title": "UpdateJob",
+      "description": "Snippet for UpdateJob",
+      "file": "JobsClient.UpdateJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.UpdateJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.run.v2.Jobs.UpdateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_UpdateJob_async_flattened",
+      "title": "UpdateJobAsync",
+      "description": "Snippet for UpdateJobAsync",
+      "file": "JobsClient.UpdateJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.UpdateJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.run.v2.Jobs.UpdateJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_sync",
+      "title": "DeleteJobRequestObject",
+      "description": "Snippet for DeleteJob",
+      "file": "JobsClient.DeleteJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_async",
+      "title": "DeleteJobRequestObjectAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "JobsClient.DeleteJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_sync_flattened",
+      "title": "DeleteJob",
+      "description": "Snippet for DeleteJob",
+      "file": "JobsClient.DeleteJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_async_flattened",
+      "title": "DeleteJobAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "JobsClient.DeleteJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_sync_flattened_resourceNames",
+      "title": "DeleteJobResourceNames",
+      "description": "Snippet for DeleteJob",
+      "file": "JobsClient.DeleteJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_DeleteJob_async_flattened_resourceNames",
+      "title": "DeleteJobResourceNamesAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "JobsClient.DeleteJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.DeleteJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Job, Google.Cloud.Run.V2.Job>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.run.v2.Jobs.DeleteJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_sync",
+      "title": "RunJobRequestObject",
+      "description": "Snippet for RunJob",
+      "file": "JobsClient.RunJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_async",
+      "title": "RunJobRequestObjectAsync",
+      "description": "Snippet for RunJobAsync",
+      "file": "JobsClient.RunJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_sync_flattened",
+      "title": "RunJob",
+      "description": "Snippet for RunJob",
+      "file": "JobsClient.RunJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_async_flattened",
+      "title": "RunJobAsync",
+      "description": "Snippet for RunJobAsync",
+      "file": "JobsClient.RunJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_sync_flattened_resourceNames",
+      "title": "RunJobResourceNames",
+      "description": "Snippet for RunJob",
+      "file": "JobsClient.RunJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJob",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJob",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_RunJob_async_flattened_resourceNames",
+      "title": "RunJobResourceNamesAsync",
+      "description": "Snippet for RunJobAsync",
+      "file": "JobsClient.RunJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunJobAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.RunJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "RunJob",
+          "fullName": "google.cloud.run.v2.Jobs.RunJob",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "JobsClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.Jobs.GetIamPolicy",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "JobsClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.Jobs.GetIamPolicy",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "JobsClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.Jobs.SetIamPolicy",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "JobsClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.Jobs.SetIamPolicy",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "JobsClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.TestIamPermissions",
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.Jobs.TestIamPermissions",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Jobs_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "JobsClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Run.V2.JobsClient.TestIamPermissionsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "JobsClient",
+          "fullName": "Google.Cloud.Run.V2.JobsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.Jobs.TestIamPermissions",
+          "service": {
+            "shortName": "Jobs",
+            "fullName": "google.cloud.run.v2.Jobs"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "run_v2_generated_Revisions_GetRevision_sync",
       "title": "GetRevisionRequestObject",
       "description": "Snippet for GetRevision",
@@ -1356,6 +2859,316 @@
         }
       },
       "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_sync",
+      "title": "GetTaskRequestObject",
+      "description": "Snippet for GetTask",
+      "file": "TasksClient.GetTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTask",
+        "resultType": "Google.Cloud.Run.V2.Task",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_async",
+      "title": "GetTaskRequestObjectAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "TasksClient.GetTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTaskAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_sync_flattened",
+      "title": "GetTask",
+      "description": "Snippet for GetTask",
+      "file": "TasksClient.GetTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTask",
+        "resultType": "Google.Cloud.Run.V2.Task",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_async_flattened",
+      "title": "GetTaskAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "TasksClient.GetTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTaskAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_sync_flattened_resourceNames",
+      "title": "GetTaskResourceNames",
+      "description": "Snippet for GetTask",
+      "file": "TasksClient.GetTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTask",
+        "resultType": "Google.Cloud.Run.V2.Task",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_GetTask_async_flattened_resourceNames",
+      "title": "GetTaskResourceNamesAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "TasksClient.GetTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.GetTaskAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.run.v2.Tasks.GetTask",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_sync",
+      "title": "ListTasksRequestObject",
+      "description": "Snippet for ListTasks",
+      "file": "TasksClient.ListTasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_async",
+      "title": "ListTasksRequestObjectAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "TasksClient.ListTasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_sync_flattened",
+      "title": "ListTasks",
+      "description": "Snippet for ListTasks",
+      "file": "TasksClient.ListTasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_async_flattened",
+      "title": "ListTasksAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "TasksClient.ListTasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_sync_flattened_resourceNames",
+      "title": "ListTasksResourceNames",
+      "description": "Snippet for ListTasks",
+      "file": "TasksClient.ListTasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Tasks_ListTasks_async_flattened_resourceNames",
+      "title": "ListTasksResourceNamesAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "TasksClient.ListTasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Run.V2.TasksClient.ListTasksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListTasksResponse, Google.Cloud.Run.V2.Task>",
+        "client": {
+          "shortName": "TasksClient",
+          "fullName": "Google.Cloud.Run.V2.TasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.run.v2.Tasks.ListTasks",
+          "service": {
+            "shortName": "Tasks",
+            "fullName": "google.cloud.run.v2.Tasks"
+          }
+        }
+      },
       "origin": "API_DEFINITION"
     }
   ]

@@ -123,7 +123,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// List Revisions from a given Service, or from a given location.
+      /// Lists Revisions from a given Service, or from a given location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -135,7 +135,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// Delete a Revision.
+      /// Deletes a Revision.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -224,7 +224,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetRevision, null, options, request);
       }
       /// <summary>
-      /// List Revisions from a given Service, or from a given location.
+      /// Lists Revisions from a given Service, or from a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +237,7 @@ namespace Google.Cloud.Run.V2 {
         return ListRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List Revisions from a given Service, or from a given location.
+      /// Lists Revisions from a given Service, or from a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -248,7 +248,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListRevisions, null, options, request);
       }
       /// <summary>
-      /// List Revisions from a given Service, or from a given location.
+      /// Lists Revisions from a given Service, or from a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -261,7 +261,7 @@ namespace Google.Cloud.Run.V2 {
         return ListRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List Revisions from a given Service, or from a given location.
+      /// Lists Revisions from a given Service, or from a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -272,7 +272,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListRevisions, null, options, request);
       }
       /// <summary>
-      /// Delete a Revision.
+      /// Deletes a Revision.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -285,7 +285,7 @@ namespace Google.Cloud.Run.V2 {
         return DeleteRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a Revision.
+      /// Deletes a Revision.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -296,7 +296,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRevision, null, options, request);
       }
       /// <summary>
-      /// Delete a Revision.
+      /// Deletes a Revision.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,7 +309,7 @@ namespace Google.Cloud.Run.V2 {
         return DeleteRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a Revision.
+      /// Deletes a Revision.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

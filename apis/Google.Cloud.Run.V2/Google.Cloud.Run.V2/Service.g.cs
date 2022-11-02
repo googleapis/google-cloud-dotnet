@@ -195,7 +195,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The location and project in which this service should be created.
+    /// Required. The location and project in which this service should be created.
     /// Format: projects/{project}/locations/{location}
     /// Only lowercase characters, digits, and hyphens.
     /// </summary>

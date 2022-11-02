@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Run.V2.Snippets
 {
     // [START run_v2_generated_Services_TestIamPermissions_async]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
-    using Google.Cloud.Run.V2;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     public sealed partial class GeneratedServicesClientSnippets
     {

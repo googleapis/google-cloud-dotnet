@@ -376,7 +376,7 @@ namespace Google.Cloud.Run.V2
             GetRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -385,7 +385,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -394,7 +394,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -421,7 +421,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -448,7 +448,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -475,7 +475,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -502,7 +502,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -511,7 +511,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -520,7 +520,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -555,7 +555,7 @@ namespace Google.Cloud.Run.V2
             lro::Operation<Revision, Revision>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRevisionOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -571,7 +571,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -587,7 +587,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -600,7 +600,7 @@ namespace Google.Cloud.Run.V2
             DeleteRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -616,7 +616,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -632,7 +632,7 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Revision to delete.
@@ -729,7 +729,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -741,7 +741,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// List Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -756,7 +756,7 @@ namespace Google.Cloud.Run.V2
         public override lro::OperationsClient DeleteRevisionOperationsClient { get; }
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -768,7 +768,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Delete a Revision.
+        /// Deletes a Revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -30,10 +30,15 @@ namespace Google.Cloud.Run.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ConditionReflection.Descriptor;
+            yield return ExecutionReflection.Descriptor;
+            yield return ExecutionTemplateReflection.Descriptor;
+            yield return JobReflection.Descriptor;
             yield return K8SMinReflection.Descriptor;
             yield return RevisionReflection.Descriptor;
             yield return RevisionTemplateReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return TaskReflection.Descriptor;
+            yield return TaskTemplateReflection.Descriptor;
             yield return TrafficTargetReflection.Descriptor;
             yield return VendorSettingsReflection.Descriptor;
         }
