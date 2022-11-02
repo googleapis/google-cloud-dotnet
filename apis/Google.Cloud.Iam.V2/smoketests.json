@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListPolicies",
+    "client": "PoliciesClient",
+    "arguments": {
+      "parent": "policies/cloudresourcemanager.googleapis.com%2Fprojects%2F${PROJECT_ID}/denypolicies"
+    }
+  }
+]
