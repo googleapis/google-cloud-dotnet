@@ -1996,7 +1996,7 @@
     },
     {
       "id": "Google.Cloud.GkeBackup.V1",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Backup for GKE",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke",
@@ -2007,7 +2007,9 @@
         "backup"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.1.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/gkebackup/v1",
