@@ -78,7 +78,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Representation of PostgreSQL JSONB type.
         /// </summary>
-        internal static SpannerDbType PgJsonb { get; } = new SpannerDbType(TypeCode.Json, TypeAnnotationCode.PgJsonb);
+        public static SpannerDbType PgJsonb { get; } = new SpannerDbType(TypeCode.Json, TypeAnnotationCode.PgJsonb);
 
         /// <summary>
         /// A fixed-point number with 29 decimal digits of precision in the whole component and 9 decimal digits of precision in the fractional component.
