@@ -112,7 +112,7 @@ install_microgenerator() {
     declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
   fi
   
-  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/netcoreapp3.1/$RUNTIME/publish/Google.Api.Generator$EXTENSION
+  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/net6.0/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   
   if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
   then

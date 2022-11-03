@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -44,18 +44,6 @@ namespace Google.Cloud.Language.V1.FixGeneratedCode
                 .RemoveMethod("LanguageServiceClient", "AnnotateTextAsync", "Document", "Features", "CallSettings")
                 .RemoveMethod("LanguageServiceClient", "AnnotateTextAsync", "Document", "Features", "CancellationToken")
                 .RemoveMethod("LanguageServiceClient", "AnnotateText", "Document", "Features", "CallSettings")
-                .Save();
-
-            // Remove the generated tests for these methods. This is somewhat brittle, but it's unlikely that any more flattenings will be added.
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Language.V1.Tests", "LanguageServiceClientTest.g.cs"))
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntities2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntities2Async")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitySentiment2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitySentiment2Async")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeSyntax2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeSyntax2Async")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnnotateText2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnnotateText2Async")
                 .Save();
         }
     }
