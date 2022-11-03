@@ -1,5 +1,20 @@
 # Version history
 
+## Version 4.2.0, released 2022-11-03
+
+### Bug fixes
+
+- Fix SpannerConnectionStringBuilder.ConnectionString handling of conversion options. Fixes [issue 9158](https://github.com/googleapis/google-cloud-dotnet/issues/9158) ([commit 92ba08b](https://github.com/googleapis/google-cloud-dotnet/commit/92ba08b9e7f28a7242609fd5c4d6db744ea7953a))
+
+### New features
+
+- Update transaction.proto to include different lock modes ([issue 9236](https://github.com/googleapis/google-cloud-dotnet/issues/9236)) ([commit 4fed510](https://github.com/googleapis/google-cloud-dotnet/commit/4fed510395e50548dc05d7198b5e09ac94860bb3))
+- Add support for FGAC  in Spanner ([commit 4e7eddb](https://github.com/googleapis/google-cloud-dotnet/commit/4e7eddbc06b14e84869fc8235a4831aa594d8783))
+- Update result_set.proto to return undeclared parameters in ExecuteSql API ([commit cb86746](https://github.com/googleapis/google-cloud-dotnet/commit/cb867464b49a6fcf88531667fec74409b426d8b7))
+- Support dependency injection of SpannerConnection ([commit f29a7f9](https://github.com/googleapis/google-cloud-dotnet/commit/f29a7f943ebcccedea7f573e39061dd7aad36101))
+- Support custom GoogleCredential in SpannerConnectionStringBuilder/SpannerConnection ([commit 898d3b3](https://github.com/googleapis/google-cloud-dotnet/commit/898d3b3937a20ac0b5c471db6044681933255283))
+- Added support for JSONB type in the PostgreSQL dialect. Note that JSONB arrays are not supported server-side yet.
+
 ## Version 4.1.0, released 2022-09-20
 
 ### New features
