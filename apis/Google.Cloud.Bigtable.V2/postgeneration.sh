@@ -12,10 +12,6 @@ git -C $GOOGLEAPIS checkout google/bigtable/v2/bigtable_v2.yaml
 sed -i s/BigtableServiceApi.BigtableServiceApiClient/Bigtable.BigtableClient/g Google.Cloud.Bigtable.V2/BigtableServiceApiClient.g.cs
 sed -i s/BigtableServiceApi.Descriptor/Bigtable.Descriptor/g Google.Cloud.Bigtable.V2/BigtableServiceApiClient.g.cs
 
-
-# Fix up the unit test class too
-sed -i s/BigtableServiceApi.BigtableServiceApiClient/Bigtable.BigtableClient/g Google.Cloud.Bigtable.V2.Tests/BigtableServiceApiClientTest.g.cs
-
 # Fix up the metadata
 sed -i 's/"BigtableServiceApi": {/"Bigtable": {/g' gapic_metadata.json
 

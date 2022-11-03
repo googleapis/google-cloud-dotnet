@@ -54,6 +54,8 @@ generate_microgenerator() {
   # Delete previously-generated files
   delete_generated apis/$1/$1
   delete_generated apis/$1/$1.Tests
+  rm -f apis/$1/$1.Tests/$1.Tests.csproj
+  rm -f apis/$1/$1.Tests/coverage.xml
   delete_generated apis/$1/$1.Snippets
   delete_generated apis/$1/$1.GeneratedSnippets
 
