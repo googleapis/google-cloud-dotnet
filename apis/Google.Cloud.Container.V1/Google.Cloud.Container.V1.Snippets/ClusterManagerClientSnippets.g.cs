@@ -426,6 +426,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
                 LoggingConfig = new NodePoolLoggingConfig(),
+                ResourceLabels = new ResourceLabels(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -458,6 +459,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
                 LoggingConfig = new NodePoolLoggingConfig(),
+                ResourceLabels = new ResourceLabels(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
