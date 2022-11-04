@@ -56,7 +56,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWUYAiABKAk6AjgBOn7qQXsKKmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
             "VHJhaW5pbmdQaXBlbGluZRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
             "cy97bG9jYXRpb259L3RyYWluaW5nUGlwZWxpbmVzL3t0cmFpbmluZ19waXBl",
-            "bGluZX0ijAUKD0lucHV0RGF0YUNvbmZpZxJDCg5mcmFjdGlvbl9zcGxpdBgC",
+            "bGluZX0irwUKD0lucHV0RGF0YUNvbmZpZxJDCg5mcmFjdGlvbl9zcGxpdBgC",
             "IAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZyYWN0aW9uU3Bs",
             "aXRIABI/CgxmaWx0ZXJfc3BsaXQYAyABKAsyJy5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MS5GaWx0ZXJTcGxpdEgAEkcKEHByZWRlZmluZWRfc3BsaXQY",
@@ -70,28 +70,28 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGxhdGZvcm0udjEuQmlnUXVlcnlEZXN0aW5hdGlvbkgBEhcKCmRhdGFzZXRf",
             "aWQYASABKAlCA+BBAhIaChJhbm5vdGF0aW9uc19maWx0ZXIYBiABKAkSHQoV",
             "YW5ub3RhdGlvbl9zY2hlbWFfdXJpGAkgASgJEhYKDnNhdmVkX3F1ZXJ5X2lk",
-            "GAcgASgJQgcKBXNwbGl0Qg0KC2Rlc3RpbmF0aW9uIl4KDUZyYWN0aW9uU3Bs",
-            "aXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoTdmFsaWRhdGlvbl9m",
-            "cmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMgASgBImUKC0ZpbHRl",
-            "clNwbGl0EhwKD3RyYWluaW5nX2ZpbHRlchgBIAEoCUID4EECEh4KEXZhbGlk",
-            "YXRpb25fZmlsdGVyGAIgASgJQgPgQQISGAoLdGVzdF9maWx0ZXIYAyABKAlC",
-            "A+BBAiIjCg9QcmVkZWZpbmVkU3BsaXQSEAoDa2V5GAEgASgJQgPgQQIicQoO",
-            "VGltZXN0YW1wU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoT",
-            "dmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMg",
-            "ASgBEhAKA2tleRgEIAEoCUID4EECInIKD1N0cmF0aWZpZWRTcGxpdBIZChF0",
-            "cmFpbmluZ19mcmFjdGlvbhgBIAEoARIbChN2YWxpZGF0aW9uX2ZyYWN0aW9u",
-            "GAIgASgBEhUKDXRlc3RfZnJhY3Rpb24YAyABKAESEAoDa2V5GAQgASgJQgPg",
-            "QQJC2QEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIVVHJhaW5p",
-            "bmdQaXBlbGluZVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
-            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
-            "cm90bzM="));
+            "GAcgASgJEiEKGXBlcnNpc3RfbWxfdXNlX2Fzc2lnbm1lbnQYCyABKAhCBwoF",
+            "c3BsaXRCDQoLZGVzdGluYXRpb24iXgoNRnJhY3Rpb25TcGxpdBIZChF0cmFp",
+            "bmluZ19mcmFjdGlvbhgBIAEoARIbChN2YWxpZGF0aW9uX2ZyYWN0aW9uGAIg",
+            "ASgBEhUKDXRlc3RfZnJhY3Rpb24YAyABKAEiZQoLRmlsdGVyU3BsaXQSHAoP",
+            "dHJhaW5pbmdfZmlsdGVyGAEgASgJQgPgQQISHgoRdmFsaWRhdGlvbl9maWx0",
+            "ZXIYAiABKAlCA+BBAhIYCgt0ZXN0X2ZpbHRlchgDIAEoCUID4EECIiMKD1By",
+            "ZWRlZmluZWRTcGxpdBIQCgNrZXkYASABKAlCA+BBAiJxCg5UaW1lc3RhbXBT",
+            "cGxpdBIZChF0cmFpbmluZ19mcmFjdGlvbhgBIAEoARIbChN2YWxpZGF0aW9u",
+            "X2ZyYWN0aW9uGAIgASgBEhUKDXRlc3RfZnJhY3Rpb24YAyABKAESEAoDa2V5",
+            "GAQgASgJQgPgQQIicgoPU3RyYXRpZmllZFNwbGl0EhkKEXRyYWluaW5nX2Zy",
+            "YWN0aW9uGAEgASgBEhsKE3ZhbGlkYXRpb25fZnJhY3Rpb24YAiABKAESFQoN",
+            "dGVzdF9mcmFjdGlvbhgDIAEoARIQCgNrZXkYBCABKAlCA+BBAkLZAQoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVUcmFpbmluZ1BpcGVsaW5l",
+            "UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TrainingPipeline), global::Google.Cloud.AIPlatform.V1.TrainingPipeline.Parser, new[]{ "Name", "DisplayName", "InputDataConfig", "TrainingTaskDefinition", "TrainingTaskInputs", "TrainingTaskMetadata", "ModelToUpload", "ModelId", "ParentModel", "State", "Error", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "StratifiedSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri", "SavedQueryId" }, new[]{ "Split", "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "StratifiedSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri", "SavedQueryId", "PersistMlUseAssignment" }, new[]{ "Split", "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FractionSplit), global::Google.Cloud.AIPlatform.V1.FractionSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FilterSplit), global::Google.Cloud.AIPlatform.V1.FilterSplit.Parser, new[]{ "TrainingFilter", "ValidationFilter", "TestFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredefinedSplit), global::Google.Cloud.AIPlatform.V1.PredefinedSplit.Parser, new[]{ "Key" }, null, null, null, null),
@@ -1112,6 +1112,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       annotationsFilter_ = other.annotationsFilter_;
       annotationSchemaUri_ = other.annotationSchemaUri_;
       savedQueryId_ = other.savedQueryId_;
+      persistMlUseAssignment_ = other.persistMlUseAssignment_;
       switch (other.SplitCase) {
         case SplitOneofCase.FractionSplit:
           FractionSplit = other.FractionSplit.Clone();
@@ -1400,6 +1401,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "persist_ml_use_assignment" field.</summary>
+    public const int PersistMlUseAssignmentFieldNumber = 11;
+    private bool persistMlUseAssignment_;
+    /// <summary>
+    /// Whether to persist the ML use assignment to data item system labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PersistMlUseAssignment {
+      get { return persistMlUseAssignment_; }
+      set {
+        persistMlUseAssignment_ = value;
+      }
+    }
+
     private object split_;
     /// <summary>Enum of possible cases for the "split" oneof.</summary>
     public enum SplitOneofCase {
@@ -1471,6 +1487,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationsFilter != other.AnnotationsFilter) return false;
       if (AnnotationSchemaUri != other.AnnotationSchemaUri) return false;
       if (SavedQueryId != other.SavedQueryId) return false;
+      if (PersistMlUseAssignment != other.PersistMlUseAssignment) return false;
       if (SplitCase != other.SplitCase) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1491,6 +1508,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationsFilter.Length != 0) hash ^= AnnotationsFilter.GetHashCode();
       if (AnnotationSchemaUri.Length != 0) hash ^= AnnotationSchemaUri.GetHashCode();
       if (SavedQueryId.Length != 0) hash ^= SavedQueryId.GetHashCode();
+      if (PersistMlUseAssignment != false) hash ^= PersistMlUseAssignment.GetHashCode();
       hash ^= (int) splitCase_;
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
@@ -1551,6 +1569,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(BigqueryDestination);
       }
+      if (PersistMlUseAssignment != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PersistMlUseAssignment);
+      }
       if (splitCase_ == SplitOneofCase.StratifiedSplit) {
         output.WriteRawTag(98);
         output.WriteMessage(StratifiedSplit);
@@ -1605,6 +1627,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(BigqueryDestination);
       }
+      if (PersistMlUseAssignment != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PersistMlUseAssignment);
+      }
       if (splitCase_ == SplitOneofCase.StratifiedSplit) {
         output.WriteRawTag(98);
         output.WriteMessage(StratifiedSplit);
@@ -1652,6 +1678,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (SavedQueryId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SavedQueryId);
       }
+      if (PersistMlUseAssignment != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1675,6 +1704,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.SavedQueryId.Length != 0) {
         SavedQueryId = other.SavedQueryId;
+      }
+      if (other.PersistMlUseAssignment != false) {
+        PersistMlUseAssignment = other.PersistMlUseAssignment;
       }
       switch (other.SplitCase) {
         case SplitOneofCase.FractionSplit:
@@ -1809,6 +1841,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             BigqueryDestination = subBuilder;
             break;
           }
+          case 88: {
+            PersistMlUseAssignment = input.ReadBool();
+            break;
+          }
           case 98: {
             global::Google.Cloud.AIPlatform.V1.StratifiedSplit subBuilder = new global::Google.Cloud.AIPlatform.V1.StratifiedSplit();
             if (splitCase_ == SplitOneofCase.StratifiedSplit) {
@@ -1901,6 +1937,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             BigqueryDestination = subBuilder;
+            break;
+          }
+          case 88: {
+            PersistMlUseAssignment = input.ReadBool();
             break;
           }
           case 98: {

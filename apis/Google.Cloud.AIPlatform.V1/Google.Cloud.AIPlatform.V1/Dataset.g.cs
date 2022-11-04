@@ -42,26 +42,30 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMaLQoLTGFiZWxzRW50cnkSCwoD",
             "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpi6kFfCiFhaXBsYXRmb3Jt",
             "Lmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSOnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0YXNldH0ijAIKEElt",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0YXNldH0ipAMKEElt",
             "cG9ydERhdGFDb25maWcSOwoKZ2NzX3NvdXJjZRgBIAEoCzIlLmdvb2dsZS5j",
             "bG91ZC5haXBsYXRmb3JtLnYxLkdjc1NvdXJjZUgAEloKEGRhdGFfaXRlbV9s",
             "YWJlbHMYAiADKAsyQC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBv",
-            "cnREYXRhQ29uZmlnLkRhdGFJdGVtTGFiZWxzRW50cnkSHgoRaW1wb3J0X3Nj",
-            "aGVtYV91cmkYBCABKAlCA+BBAho1ChNEYXRhSXRlbUxhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNlIoQBChBF",
-            "eHBvcnREYXRhQ29uZmlnEkUKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIqLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uSAASGgoS",
-            "YW5ub3RhdGlvbnNfZmlsdGVyGAIgASgJQg0KC2Rlc3RpbmF0aW9uQtABCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDERhdGFzZXRQcm90b1AB",
-            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBs",
-            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
-            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "cnREYXRhQ29uZmlnLkRhdGFJdGVtTGFiZWxzRW50cnkSXQoRYW5ub3RhdGlv",
+            "bl9sYWJlbHMYAyADKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
+            "bXBvcnREYXRhQ29uZmlnLkFubm90YXRpb25MYWJlbHNFbnRyeRIeChFpbXBv",
+            "cnRfc2NoZW1hX3VyaRgEIAEoCUID4EECGjUKE0RhdGFJdGVtTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo3ChVBbm5vdGF0",
+            "aW9uTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "AUIICgZzb3VyY2UihAEKEEV4cG9ydERhdGFDb25maWcSRQoPZ2NzX2Rlc3Rp",
+            "bmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Nz",
+            "RGVzdGluYXRpb25IABIaChJhbm5vdGF0aW9uc19maWx0ZXIYAiABKAlCDQoL",
+            "ZGVzdGluYXRpb25C0AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MUIMRGF0YXNldFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportDataConfig), global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser, new[]{ "GcsSource", "DataItemLabels", "ImportSchemaUri" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportDataConfig), global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser, new[]{ "GcsSource", "DataItemLabels", "AnnotationLabels", "ImportSchemaUri" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportDataConfig), global::Google.Cloud.AIPlatform.V1.ExportDataConfig.Parser, new[]{ "GcsDestination", "AnnotationsFilter" }, new[]{ "Destination" }, null, null, null)
           }));
     }
@@ -709,6 +713,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportDataConfig(ImportDataConfig other) : this() {
       dataItemLabels_ = other.dataItemLabels_.Clone();
+      annotationLabels_ = other.annotationLabels_.Clone();
       importSchemaUri_ = other.importSchemaUri_;
       switch (other.SourceCase) {
         case SourceOneofCase.GcsSource:
@@ -762,6 +767,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> DataItemLabels {
       get { return dataItemLabels_; }
+    }
+
+    /// <summary>Field number for the "annotation_labels" field.</summary>
+    public const int AnnotationLabelsFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotationLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> annotationLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels that will be applied to newly imported Annotations. If two
+    /// Annotations are identical, one of them will be deduped. Two Annotations are
+    /// considered identical if their [payload][google.cloud.aiplatform.v1.Annotation.payload],
+    /// [payload_schema_uri][google.cloud.aiplatform.v1.Annotation.payload_schema_uri] and all of their
+    /// [labels][google.cloud.aiplatform.v1.Annotation.labels] are the same.
+    /// These labels will be overridden by Annotation labels specified inside index
+    /// file referenced by [import_schema_uri][google.cloud.aiplatform.v1.ImportDataConfig.import_schema_uri], e.g. jsonl file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> AnnotationLabels {
+      get { return annotationLabels_; }
     }
 
     /// <summary>Field number for the "import_schema_uri" field.</summary>
@@ -819,6 +844,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(GcsSource, other.GcsSource)) return false;
       if (!DataItemLabels.Equals(other.DataItemLabels)) return false;
+      if (!AnnotationLabels.Equals(other.AnnotationLabels)) return false;
       if (ImportSchemaUri != other.ImportSchemaUri) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -830,6 +856,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
       hash ^= DataItemLabels.GetHashCode();
+      hash ^= AnnotationLabels.GetHashCode();
       if (ImportSchemaUri.Length != 0) hash ^= ImportSchemaUri.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -855,6 +882,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(GcsSource);
       }
       dataItemLabels_.WriteTo(output, _map_dataItemLabels_codec);
+      annotationLabels_.WriteTo(output, _map_annotationLabels_codec);
       if (ImportSchemaUri.Length != 0) {
         output.WriteRawTag(34);
         output.WriteString(ImportSchemaUri);
@@ -874,6 +902,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(GcsSource);
       }
       dataItemLabels_.WriteTo(ref output, _map_dataItemLabels_codec);
+      annotationLabels_.WriteTo(ref output, _map_annotationLabels_codec);
       if (ImportSchemaUri.Length != 0) {
         output.WriteRawTag(34);
         output.WriteString(ImportSchemaUri);
@@ -892,6 +921,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
       }
       size += dataItemLabels_.CalculateSize(_map_dataItemLabels_codec);
+      size += annotationLabels_.CalculateSize(_map_annotationLabels_codec);
       if (ImportSchemaUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ImportSchemaUri);
       }
@@ -908,6 +938,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return;
       }
       dataItemLabels_.Add(other.dataItemLabels_);
+      annotationLabels_.Add(other.annotationLabels_);
       if (other.ImportSchemaUri.Length != 0) {
         ImportSchemaUri = other.ImportSchemaUri;
       }
@@ -948,6 +979,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             dataItemLabels_.AddEntriesFrom(input, _map_dataItemLabels_codec);
             break;
           }
+          case 26: {
+            annotationLabels_.AddEntriesFrom(input, _map_annotationLabels_codec);
+            break;
+          }
           case 34: {
             ImportSchemaUri = input.ReadString();
             break;
@@ -978,6 +1013,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             dataItemLabels_.AddEntriesFrom(ref input, _map_dataItemLabels_codec);
+            break;
+          }
+          case 26: {
+            annotationLabels_.AddEntriesFrom(ref input, _map_annotationLabels_codec);
             break;
           }
           case 34: {

@@ -1815,7 +1815,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1841,7 +1841,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1867,7 +1867,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1893,7 +1893,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2650,7 +2650,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2676,7 +2676,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2702,7 +2702,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2728,7 +2728,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3460,7 +3460,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3486,7 +3486,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3512,7 +3512,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3538,7 +3538,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4049,7 +4049,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="timeSeries">
         /// Required. The resource name of the TensorboardTimeSeries to list Blobs.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -4068,7 +4068,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="timeSeries">
         /// Required. The resource name of the TensorboardTimeSeries to list Blobs.
         /// Format:
-        /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}'
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>

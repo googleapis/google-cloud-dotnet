@@ -94,6 +94,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -165,6 +166,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -238,6 +240,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -309,6 +312,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -382,6 +386,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -453,6 +458,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -527,6 +533,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -599,6 +606,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -673,6 +681,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -745,6 +754,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -822,6 +832,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -897,6 +908,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -974,6 +986,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1049,6 +1062,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1126,6 +1140,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1201,6 +1216,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 VersionCreateTime = new wkt::Timestamp(),
                 VersionUpdateTime = new wkt::Timestamp(),
                 ModelSourceInfo = new ModelSourceInfo(),
+                MetadataArtifact = "metadata_artifact349bf981",
             };
             mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);

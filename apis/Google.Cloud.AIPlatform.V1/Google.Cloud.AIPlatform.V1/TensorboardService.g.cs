@@ -2487,7 +2487,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
     /// Format:
-    /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}'
+    /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4481,7 +4481,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the TensorboardTimeSeries to list Blobs.
     /// Format:
-    /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}'
+    /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4895,7 +4895,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
     /// Format:
-    /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}'
+    /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6895,7 +6895,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
     /// Format:
-    /// 'projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}'
+    /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

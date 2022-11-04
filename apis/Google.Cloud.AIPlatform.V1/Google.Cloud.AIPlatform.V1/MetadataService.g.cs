@@ -2670,7 +2670,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///     `in_context("projects/&lt;project_number>/locations/&lt;location>/metadataStores/&lt;metadatastore_name>/contexts/&lt;context-id>")`
     ///
     /// Each of the above supported filter types can be combined together using
-    /// logical operators (`AND` &amp; `OR`).
+    /// logical operators (`AND` &amp; `OR`). Maximum nested expression depth allowed
+    /// is 5.
     ///
     /// For example: `display_name = "test" AND metadata.field1.bool_value = true`.
     /// </summary>
@@ -5033,7 +5034,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    ```
     ///
     /// Each of the above supported filters can be combined together using
-    /// logical operators (`AND` &amp; `OR`).
+    /// logical operators (`AND` &amp; `OR`). Maximum nested expression depth allowed
+    /// is 5.
     ///
     /// For example: `display_name = "test" AND metadata.field1.bool_value = true`.
     /// </summary>
@@ -8819,7 +8821,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    `in_context("projects/&lt;project_number>/locations/&lt;location>/metadataStores/&lt;metadatastore_name>/contexts/&lt;context-id>")`
     ///
     /// Each of the above supported filters can be combined together using
-    /// logical operators (`AND` &amp; `OR`).
+    /// logical operators (`AND` &amp; `OR`). Maximum nested expression depth allowed
+    /// is 5.
+    ///
     /// For example: `display_name = "test" AND metadata.field1.bool_value = true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12290,7 +12294,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    For example: `metadata.field_1.number_value = 10.0`
     ///
     /// Each of the above supported filter types can be combined together using
-    /// logical operators (`AND` &amp; `OR`).
+    /// logical operators (`AND` &amp; `OR`). Maximum nested expression depth allowed
+    /// is 5.
     ///
     /// For example: `display_name = "test" AND metadata.field1.bool_value = true`.
     /// </summary>

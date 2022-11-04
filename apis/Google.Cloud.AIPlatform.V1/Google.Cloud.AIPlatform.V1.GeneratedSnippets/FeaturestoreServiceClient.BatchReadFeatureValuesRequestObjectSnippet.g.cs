@@ -19,6 +19,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     // [START aiplatform_v1_generated_FeaturestoreService_BatchReadFeatureValues_sync]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFeaturestoreServiceClientSnippets
     {
@@ -45,6 +46,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 {
                     new BatchReadFeatureValuesRequest.Types.PassThroughField(),
                 },
+                StartTime = new Timestamp(),
             };
             // Make the request
             Operation<BatchReadFeatureValuesResponse, BatchReadFeatureValuesOperationMetadata> response = featurestoreServiceClient.BatchReadFeatureValues(request);
