@@ -36,6 +36,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             {
                 ChannelConnection = "channel_connection1ad4645e",
                 Events = { new wkt::Any(), },
+                TextEvents =
+                {
+                    "text_events2754ee7c",
+                },
             };
             PublishChannelConnectionEventsResponse expectedResponse = new PublishChannelConnectionEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishChannelConnectionEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -53,6 +57,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             {
                 ChannelConnection = "channel_connection1ad4645e",
                 Events = { new wkt::Any(), },
+                TextEvents =
+                {
+                    "text_events2754ee7c",
+                },
             };
             PublishChannelConnectionEventsResponse expectedResponse = new PublishChannelConnectionEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishChannelConnectionEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishChannelConnectionEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -72,6 +80,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             {
                 Channel = "channeledd285c4",
                 Events = { new wkt::Any(), },
+                TextEvents =
+                {
+                    "text_events2754ee7c",
+                },
             };
             PublishEventsResponse expectedResponse = new PublishEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -89,6 +101,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             {
                 Channel = "channeledd285c4",
                 Events = { new wkt::Any(), },
+                TextEvents =
+                {
+                    "text_events2754ee7c",
+                },
             };
             PublishEventsResponse expectedResponse = new PublishEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

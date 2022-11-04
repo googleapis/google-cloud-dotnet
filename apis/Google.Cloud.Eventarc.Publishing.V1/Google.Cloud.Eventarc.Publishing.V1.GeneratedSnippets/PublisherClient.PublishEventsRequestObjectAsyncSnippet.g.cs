@@ -37,6 +37,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
             {
                 Channel = "",
                 Events = { new Any(), },
+                TextEvents = { "", },
             };
             // Make the request
             PublishEventsResponse response = await publisherClient.PublishEventsAsync(request);

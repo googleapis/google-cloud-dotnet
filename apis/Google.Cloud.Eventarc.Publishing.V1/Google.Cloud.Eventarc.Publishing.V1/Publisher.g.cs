@@ -27,38 +27,39 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
             "CjNnb29nbGUvY2xvdWQvZXZlbnRhcmMvcHVibGlzaGluZy92MS9wdWJsaXNo",
             "ZXIucHJvdG8SI2dvb2dsZS5jbG91ZC5ldmVudGFyYy5wdWJsaXNoaW5nLnYx",
             "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2Ns",
-            "aWVudC5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90byJpCiVQdWJs",
+            "aWVudC5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90byJ+CiVQdWJs",
             "aXNoQ2hhbm5lbENvbm5lY3Rpb25FdmVudHNSZXF1ZXN0EhoKEmNoYW5uZWxf",
             "Y29ubmVjdGlvbhgBIAEoCRIkCgZldmVudHMYAiADKAsyFC5nb29nbGUucHJv",
-            "dG9idWYuQW55IigKJlB1Ymxpc2hDaGFubmVsQ29ubmVjdGlvbkV2ZW50c1Jl",
-            "c3BvbnNlIk0KFFB1Ymxpc2hFdmVudHNSZXF1ZXN0Eg8KB2NoYW5uZWwYASAB",
-            "KAkSJAoGZXZlbnRzGAIgAygLMhQuZ29vZ2xlLnByb3RvYnVmLkFueSIXChVQ",
-            "dWJsaXNoRXZlbnRzUmVzcG9uc2Uy0AQKCVB1Ymxpc2hlchKYAgoeUHVibGlz",
-            "aENoYW5uZWxDb25uZWN0aW9uRXZlbnRzEkouZ29vZ2xlLmNsb3VkLmV2ZW50",
-            "YXJjLnB1Ymxpc2hpbmcudjEuUHVibGlzaENoYW5uZWxDb25uZWN0aW9uRXZl",
-            "bnRzUmVxdWVzdBpLLmdvb2dsZS5jbG91ZC5ldmVudGFyYy5wdWJsaXNoaW5n",
-            "LnYxLlB1Ymxpc2hDaGFubmVsQ29ubmVjdGlvbkV2ZW50c1Jlc3BvbnNlIl2C",
-            "0+STAlciUi92MS97Y2hhbm5lbF9jb25uZWN0aW9uPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY2hhbm5lbENvbm5lY3Rpb25zLyp9OnB1Ymxpc2hFdmVudHM6",
-            "ASoS0AEKDVB1Ymxpc2hFdmVudHMSOS5nb29nbGUuY2xvdWQuZXZlbnRhcmMu",
-            "cHVibGlzaGluZy52MS5QdWJsaXNoRXZlbnRzUmVxdWVzdBo6Lmdvb2dsZS5j",
-            "bG91ZC5ldmVudGFyYy5wdWJsaXNoaW5nLnYxLlB1Ymxpc2hFdmVudHNSZXNw",
-            "b25zZSJIgtPkkwJCIj0vdjEve2NoYW5uZWw9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jaGFubmVscy8qfTpwdWJsaXNoRXZlbnRzOgEqGlXKQSFldmVudGFy",
-            "Y3B1Ymxpc2hpbmcuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQv8BCidjb20uZ29vZ2xl",
-            "LmNsb3VkLmV2ZW50YXJjLnB1Ymxpc2hpbmcudjFCDlB1Ymxpc2hlclByb3Rv",
-            "UAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvZXZlbnRhcmMvcHVibGlzaGluZy92MTtwdWJsaXNoZXKqAiNHb29nbGUu",
-            "Q2xvdWQuRXZlbnRhcmMuUHVibGlzaGluZy5WMcoCI0dvb2dsZVxDbG91ZFxF",
-            "dmVudGFyY1xQdWJsaXNoaW5nXFYx6gInR29vZ2xlOjpDbG91ZDo6RXZlbnRh",
-            "cmM6OlB1Ymxpc2hpbmc6OlYxYgZwcm90bzM="));
+            "dG9idWYuQW55EhMKC3RleHRfZXZlbnRzGAMgAygJIigKJlB1Ymxpc2hDaGFu",
+            "bmVsQ29ubmVjdGlvbkV2ZW50c1Jlc3BvbnNlImIKFFB1Ymxpc2hFdmVudHNS",
+            "ZXF1ZXN0Eg8KB2NoYW5uZWwYASABKAkSJAoGZXZlbnRzGAIgAygLMhQuZ29v",
+            "Z2xlLnByb3RvYnVmLkFueRITCgt0ZXh0X2V2ZW50cxgDIAMoCSIXChVQdWJs",
+            "aXNoRXZlbnRzUmVzcG9uc2Uy0AQKCVB1Ymxpc2hlchKYAgoeUHVibGlzaENo",
+            "YW5uZWxDb25uZWN0aW9uRXZlbnRzEkouZ29vZ2xlLmNsb3VkLmV2ZW50YXJj",
+            "LnB1Ymxpc2hpbmcudjEuUHVibGlzaENoYW5uZWxDb25uZWN0aW9uRXZlbnRz",
+            "UmVxdWVzdBpLLmdvb2dsZS5jbG91ZC5ldmVudGFyYy5wdWJsaXNoaW5nLnYx",
+            "LlB1Ymxpc2hDaGFubmVsQ29ubmVjdGlvbkV2ZW50c1Jlc3BvbnNlIl2C0+ST",
+            "AlciUi92MS97Y2hhbm5lbF9jb25uZWN0aW9uPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovY2hhbm5lbENvbm5lY3Rpb25zLyp9OnB1Ymxpc2hFdmVudHM6ASoS",
+            "0AEKDVB1Ymxpc2hFdmVudHMSOS5nb29nbGUuY2xvdWQuZXZlbnRhcmMucHVi",
+            "bGlzaGluZy52MS5QdWJsaXNoRXZlbnRzUmVxdWVzdBo6Lmdvb2dsZS5jbG91",
+            "ZC5ldmVudGFyYy5wdWJsaXNoaW5nLnYxLlB1Ymxpc2hFdmVudHNSZXNwb25z",
+            "ZSJIgtPkkwJCIj0vdjEve2NoYW5uZWw9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jaGFubmVscy8qfTpwdWJsaXNoRXZlbnRzOgEqGlXKQSFldmVudGFyY3B1",
+            "Ymxpc2hpbmcuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQv8BCidjb20uZ29vZ2xlLmNs",
+            "b3VkLmV2ZW50YXJjLnB1Ymxpc2hpbmcudjFCDlB1Ymxpc2hlclByb3RvUAFa",
+            "TGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "ZXZlbnRhcmMvcHVibGlzaGluZy92MTtwdWJsaXNoZXKqAiNHb29nbGUuQ2xv",
+            "dWQuRXZlbnRhcmMuUHVibGlzaGluZy5WMcoCI0dvb2dsZVxDbG91ZFxFdmVu",
+            "dGFyY1xQdWJsaXNoaW5nXFYx6gInR29vZ2xlOjpDbG91ZDo6RXZlbnRhcmM6",
+            "OlB1Ymxpc2hpbmc6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest), global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest.Parser, new[]{ "ChannelConnection", "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest), global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest.Parser, new[]{ "ChannelConnection", "Events", "TextEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse), global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest), global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest.Parser, new[]{ "Channel", "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest), global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest.Parser, new[]{ "Channel", "Events", "TextEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse), global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse.Parser, null, null, null, null, null)
           }));
     }
@@ -105,6 +106,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     public PublishChannelConnectionEventsRequest(PublishChannelConnectionEventsRequest other) : this() {
       channelConnection_ = other.channelConnection_;
       events_ = other.events_.Clone();
+      textEvents_ = other.textEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -137,11 +139,30 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> events_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any>();
     /// <summary>
     /// The CloudEvents v1.0 events to publish. No other types are allowed.
+    /// If this field is set, then the `text_events` fields must not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> Events {
       get { return events_; }
+    }
+
+    /// <summary>Field number for the "text_events" field.</summary>
+    public const int TextEventsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_textEvents_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> textEvents_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The text representation of events to publish.
+    /// CloudEvent v1.0 in JSON format is the only allowed type. Refer to
+    /// https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/json-format.md
+    /// for specification.
+    /// If this field is set, then the `events` fields must not be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TextEvents {
+      get { return textEvents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,6 +182,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       }
       if (ChannelConnection != other.ChannelConnection) return false;
       if(!events_.Equals(other.events_)) return false;
+      if(!textEvents_.Equals(other.textEvents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -170,6 +192,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       int hash = 1;
       if (ChannelConnection.Length != 0) hash ^= ChannelConnection.GetHashCode();
       hash ^= events_.GetHashCode();
+      hash ^= textEvents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -193,6 +216,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         output.WriteString(ChannelConnection);
       }
       events_.WriteTo(output, _repeated_events_codec);
+      textEvents_.WriteTo(output, _repeated_textEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -208,6 +232,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         output.WriteString(ChannelConnection);
       }
       events_.WriteTo(ref output, _repeated_events_codec);
+      textEvents_.WriteTo(ref output, _repeated_textEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -222,6 +247,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelConnection);
       }
       size += events_.CalculateSize(_repeated_events_codec);
+      size += textEvents_.CalculateSize(_repeated_textEvents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -238,6 +264,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         ChannelConnection = other.ChannelConnection;
       }
       events_.Add(other.events_);
+      textEvents_.Add(other.textEvents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -261,6 +288,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
             events_.AddEntriesFrom(input, _repeated_events_codec);
             break;
           }
+          case 26: {
+            textEvents_.AddEntriesFrom(input, _repeated_textEvents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -282,6 +313,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
           }
           case 18: {
             events_.AddEntriesFrom(ref input, _repeated_events_codec);
+            break;
+          }
+          case 26: {
+            textEvents_.AddEntriesFrom(ref input, _repeated_textEvents_codec);
             break;
           }
         }
@@ -485,6 +520,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     public PublishEventsRequest(PublishEventsRequest other) : this() {
       channel_ = other.channel_;
       events_ = other.events_.Clone();
+      textEvents_ = other.textEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -517,11 +553,30 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> events_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any>();
     /// <summary>
     /// The CloudEvents v1.0 events to publish. No other types are allowed.
+    /// If this field is set, then the `text_events` fields must not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> Events {
       get { return events_; }
+    }
+
+    /// <summary>Field number for the "text_events" field.</summary>
+    public const int TextEventsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_textEvents_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> textEvents_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The text representation of events to publish.
+    /// CloudEvent v1.0 in JSON format is the only allowed type. Refer to
+    /// https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/json-format.md
+    /// for specification.
+    /// If this field is set, then the `events` fields must not be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TextEvents {
+      get { return textEvents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -541,6 +596,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       }
       if (Channel != other.Channel) return false;
       if(!events_.Equals(other.events_)) return false;
+      if(!textEvents_.Equals(other.textEvents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -550,6 +606,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       int hash = 1;
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= events_.GetHashCode();
+      hash ^= textEvents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -573,6 +630,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         output.WriteString(Channel);
       }
       events_.WriteTo(output, _repeated_events_codec);
+      textEvents_.WriteTo(output, _repeated_textEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -588,6 +646,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         output.WriteString(Channel);
       }
       events_.WriteTo(ref output, _repeated_events_codec);
+      textEvents_.WriteTo(ref output, _repeated_textEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -602,6 +661,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Channel);
       }
       size += events_.CalculateSize(_repeated_events_codec);
+      size += textEvents_.CalculateSize(_repeated_textEvents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -618,6 +678,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         Channel = other.Channel;
       }
       events_.Add(other.events_);
+      textEvents_.Add(other.textEvents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -641,6 +702,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
             events_.AddEntriesFrom(input, _repeated_events_codec);
             break;
           }
+          case 26: {
+            textEvents_.AddEntriesFrom(input, _repeated_textEvents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -662,6 +727,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
           }
           case 18: {
             events_.AddEntriesFrom(ref input, _repeated_events_codec);
+            break;
+          }
+          case 26: {
+            textEvents_.AddEntriesFrom(ref input, _repeated_textEvents_codec);
             break;
           }
         }
