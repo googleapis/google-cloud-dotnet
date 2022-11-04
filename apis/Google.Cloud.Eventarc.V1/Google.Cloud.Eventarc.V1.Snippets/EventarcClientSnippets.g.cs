@@ -125,6 +125,7 @@ namespace Google.Cloud.Eventarc.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListTriggersResponse, Trigger> response = eventarcClient.ListTriggers(request);
@@ -174,6 +175,7 @@ namespace Google.Cloud.Eventarc.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListTriggersResponse, Trigger> response = eventarcClient.ListTriggersAsync(request);
@@ -2898,6 +2900,157 @@ namespace Google.Cloud.Eventarc.V1.Snippets
                 // If it has completed, then access the result
                 ChannelConnection retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfig</summary>
+        public void GetGoogleChannelConfigRequestObject()
+        {
+            // Snippet: GetGoogleChannelConfig(GetGoogleChannelConfigRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            GoogleChannelConfig response = eventarcClient.GetGoogleChannelConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfigAsync</summary>
+        public async Task GetGoogleChannelConfigRequestObjectAsync()
+        {
+            // Snippet: GetGoogleChannelConfigAsync(GetGoogleChannelConfigRequest, CallSettings)
+            // Additional: GetGoogleChannelConfigAsync(GetGoogleChannelConfigRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            GoogleChannelConfig response = await eventarcClient.GetGoogleChannelConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfig</summary>
+        public void GetGoogleChannelConfig()
+        {
+            // Snippet: GetGoogleChannelConfig(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleChannelConfig";
+            // Make the request
+            GoogleChannelConfig response = eventarcClient.GetGoogleChannelConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfigAsync</summary>
+        public async Task GetGoogleChannelConfigAsync()
+        {
+            // Snippet: GetGoogleChannelConfigAsync(string, CallSettings)
+            // Additional: GetGoogleChannelConfigAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleChannelConfig";
+            // Make the request
+            GoogleChannelConfig response = await eventarcClient.GetGoogleChannelConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfig</summary>
+        public void GetGoogleChannelConfigResourceNames()
+        {
+            // Snippet: GetGoogleChannelConfig(GoogleChannelConfigName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GoogleChannelConfigName name = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            GoogleChannelConfig response = eventarcClient.GetGoogleChannelConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleChannelConfigAsync</summary>
+        public async Task GetGoogleChannelConfigResourceNamesAsync()
+        {
+            // Snippet: GetGoogleChannelConfigAsync(GoogleChannelConfigName, CallSettings)
+            // Additional: GetGoogleChannelConfigAsync(GoogleChannelConfigName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GoogleChannelConfigName name = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            GoogleChannelConfig response = await eventarcClient.GetGoogleChannelConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleChannelConfig</summary>
+        public void UpdateGoogleChannelConfigRequestObject()
+        {
+            // Snippet: UpdateGoogleChannelConfig(UpdateGoogleChannelConfigRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            GoogleChannelConfig response = eventarcClient.UpdateGoogleChannelConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleChannelConfigAsync</summary>
+        public async Task UpdateGoogleChannelConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateGoogleChannelConfigAsync(UpdateGoogleChannelConfigRequest, CallSettings)
+            // Additional: UpdateGoogleChannelConfigAsync(UpdateGoogleChannelConfigRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            GoogleChannelConfig response = await eventarcClient.UpdateGoogleChannelConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleChannelConfig</summary>
+        public void UpdateGoogleChannelConfig()
+        {
+            // Snippet: UpdateGoogleChannelConfig(GoogleChannelConfig, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GoogleChannelConfig googleChannelConfig = new GoogleChannelConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            GoogleChannelConfig response = eventarcClient.UpdateGoogleChannelConfig(googleChannelConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleChannelConfigAsync</summary>
+        public async Task UpdateGoogleChannelConfigAsync()
+        {
+            // Snippet: UpdateGoogleChannelConfigAsync(GoogleChannelConfig, FieldMask, CallSettings)
+            // Additional: UpdateGoogleChannelConfigAsync(GoogleChannelConfig, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GoogleChannelConfig googleChannelConfig = new GoogleChannelConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            GoogleChannelConfig response = await eventarcClient.UpdateGoogleChannelConfigAsync(googleChannelConfig, updateMask);
             // End snippet
         }
     }

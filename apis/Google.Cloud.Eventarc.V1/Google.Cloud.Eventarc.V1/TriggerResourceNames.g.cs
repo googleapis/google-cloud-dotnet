@@ -707,6 +707,236 @@ namespace Google.Cloud.Eventarc.V1
         public static bool operator !=(ServiceAccountName a, ServiceAccountName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Workflow</c> resource.</summary>
+    public sealed partial class WorkflowName : gax::IResourceName, sys::IEquatable<WorkflowName>
+    {
+        /// <summary>The possible contents of <see cref="WorkflowName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+            /// </summary>
+            ProjectLocationWorkflow = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationWorkflow = new gax::PathTemplate("projects/{project}/locations/{location}/workflows/{workflow}");
+
+        /// <summary>Creates a <see cref="WorkflowName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="WorkflowName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static WorkflowName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new WorkflowName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="WorkflowName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowId">The <c>Workflow</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="WorkflowName"/> constructed from the provided ids.</returns>
+        public static WorkflowName FromProjectLocationWorkflow(string projectId, string locationId, string workflowId) =>
+            new WorkflowName(ResourceNameType.ProjectLocationWorkflow, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workflowId: gax::GaxPreconditions.CheckNotNullOrEmpty(workflowId, nameof(workflowId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkflowName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowId">The <c>Workflow</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkflowName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string workflowId) =>
+            FormatProjectLocationWorkflow(projectId, locationId, workflowId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkflowName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowId">The <c>Workflow</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkflowName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>.
+        /// </returns>
+        public static string FormatProjectLocationWorkflow(string projectId, string locationId, string workflowId) =>
+            s_projectLocationWorkflow.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(workflowId, nameof(workflowId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="WorkflowName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/workflows/{workflow}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workflowName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="WorkflowName"/> if successful.</returns>
+        public static WorkflowName Parse(string workflowName) => Parse(workflowName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="WorkflowName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/workflows/{workflow}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workflowName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="WorkflowName"/> if successful.</returns>
+        public static WorkflowName Parse(string workflowName, bool allowUnparsed) =>
+            TryParse(workflowName, allowUnparsed, out WorkflowName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkflowName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/workflows/{workflow}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workflowName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkflowName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workflowName, out WorkflowName result) => TryParse(workflowName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkflowName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/workflows/{workflow}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workflowName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkflowName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workflowName, bool allowUnparsed, out WorkflowName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(workflowName, nameof(workflowName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationWorkflow.TryParseName(workflowName, out resourceName))
+            {
+                result = FromProjectLocationWorkflow(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(workflowName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private WorkflowName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string workflowId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            WorkflowId = workflowId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="WorkflowName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/workflows/{workflow}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowId">The <c>Workflow</c> ID. Must not be <c>null</c> or empty.</param>
+        public WorkflowName(string projectId, string locationId, string workflowId) : this(ResourceNameType.ProjectLocationWorkflow, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workflowId: gax::GaxPreconditions.CheckNotNullOrEmpty(workflowId, nameof(workflowId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Workflow</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string WorkflowId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationWorkflow: return s_projectLocationWorkflow.Expand(ProjectId, LocationId, WorkflowId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as WorkflowName);
+
+        /// <inheritdoc/>
+        public bool Equals(WorkflowName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(WorkflowName a, WorkflowName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(WorkflowName a, WorkflowName b) => !(a == b);
+    }
+
     public partial class Trigger
     {
         /// <summary>
@@ -737,6 +967,15 @@ namespace Google.Cloud.Eventarc.V1
         {
             get => string.IsNullOrEmpty(CloudFunction) ? null : CloudFunctionName.Parse(CloudFunction, allowUnparsed: true);
             set => CloudFunction = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="WorkflowName"/>-typed view over the <see cref="Workflow"/> resource name property.
+        /// </summary>
+        public WorkflowName WorkflowAsWorkflowName
+        {
+            get => string.IsNullOrEmpty(Workflow) ? null : WorkflowName.Parse(Workflow, allowUnparsed: true);
+            set => Workflow = value?.ToString() ?? "";
         }
     }
 

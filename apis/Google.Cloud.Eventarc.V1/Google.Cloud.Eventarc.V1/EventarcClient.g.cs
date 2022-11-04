@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -72,6 +74,10 @@ namespace Google.Cloud.Eventarc.V1
             CreateChannelConnectionOperationsSettings = existing.CreateChannelConnectionOperationsSettings.Clone();
             DeleteChannelConnectionSettings = existing.DeleteChannelConnectionSettings;
             DeleteChannelConnectionOperationsSettings = existing.DeleteChannelConnectionOperationsSettings.Clone();
+            GetGoogleChannelConfigSettings = existing.GetGoogleChannelConfigSettings;
+            UpdateGoogleChannelConfigSettings = existing.UpdateGoogleChannelConfigSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -413,6 +419,40 @@ namespace Google.Cloud.Eventarc.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.GetGoogleChannelConfig</c> and <c>EventarcClient.GetGoogleChannelConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdateGoogleChannelConfig</c> and <c>EventarcClient.UpdateGoogleChannelConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EventarcSettings"/> object.</returns>
         public EventarcSettings Clone() => new EventarcSettings(this);
@@ -553,6 +593,12 @@ namespace Google.Cloud.Eventarc.V1
 
         /// <summary>The underlying gRPC Eventarc client</summary>
         public virtual Eventarc.EventarcClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Get a single trigger.
@@ -2609,6 +2655,194 @@ namespace Google.Cloud.Eventarc.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(ChannelConnectionName name, st::CancellationToken cancellationToken) =>
             DeleteChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleChannelConfig GetGoogleChannelConfig(GetGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(GetGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(GetGoogleChannelConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetGoogleChannelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleChannelConfig GetGoogleChannelConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleChannelConfig(new GetGoogleChannelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleChannelConfigAsync(new GetGoogleChannelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoogleChannelConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleChannelConfig GetGoogleChannelConfig(GoogleChannelConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleChannelConfig(new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(GoogleChannelConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleChannelConfigAsync(new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the config to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(GoogleChannelConfigName name, st::CancellationToken cancellationToken) =>
+            GetGoogleChannelConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleChannelConfig UpdateGoogleChannelConfig(UpdateGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(UpdateGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(UpdateGoogleChannelConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGoogleChannelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="googleChannelConfig">
+        /// Required. The config to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleChannelConfig UpdateGoogleChannelConfig(GoogleChannelConfig googleChannelConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoogleChannelConfig(new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = gax::GaxPreconditions.CheckNotNull(googleChannelConfig, nameof(googleChannelConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="googleChannelConfig">
+        /// Required. The config to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(GoogleChannelConfig googleChannelConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoogleChannelConfigAsync(new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = gax::GaxPreconditions.CheckNotNull(googleChannelConfig, nameof(googleChannelConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="googleChannelConfig">
+        /// Required. The config to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(GoogleChannelConfig googleChannelConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGoogleChannelConfigAsync(googleChannelConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Eventarc client wrapper implementation, for convenient use.</summary>
@@ -2650,6 +2884,10 @@ namespace Google.Cloud.Eventarc.V1
 
         private readonly gaxgrpc::ApiCall<DeleteChannelConnectionRequest, lro::Operation> _callDeleteChannelConnection;
 
+        private readonly gaxgrpc::ApiCall<GetGoogleChannelConfigRequest, GoogleChannelConfig> _callGetGoogleChannelConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig> _callUpdateGoogleChannelConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the Eventarc service, with the specified gRPC client and settings.
         /// </summary>
@@ -2669,6 +2907,8 @@ namespace Google.Cloud.Eventarc.V1
             DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings, logger);
             CreateChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelConnectionOperationsSettings, logger);
             DeleteChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelConnectionOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetTrigger = clientHelper.BuildApiCall<GetTriggerRequest, Trigger>("GetTrigger", grpcClient.GetTriggerAsync, grpcClient.GetTrigger, effectiveSettings.GetTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTrigger);
             Modify_GetTriggerApiCall(ref _callGetTrigger);
@@ -2717,6 +2957,12 @@ namespace Google.Cloud.Eventarc.V1
             _callDeleteChannelConnection = clientHelper.BuildApiCall<DeleteChannelConnectionRequest, lro::Operation>("DeleteChannelConnection", grpcClient.DeleteChannelConnectionAsync, grpcClient.DeleteChannelConnection, effectiveSettings.DeleteChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannelConnection);
             Modify_DeleteChannelConnectionApiCall(ref _callDeleteChannelConnection);
+            _callGetGoogleChannelConfig = clientHelper.BuildApiCall<GetGoogleChannelConfigRequest, GoogleChannelConfig>("GetGoogleChannelConfig", grpcClient.GetGoogleChannelConfigAsync, grpcClient.GetGoogleChannelConfig, effectiveSettings.GetGoogleChannelConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoogleChannelConfig);
+            Modify_GetGoogleChannelConfigApiCall(ref _callGetGoogleChannelConfig);
+            _callUpdateGoogleChannelConfig = clientHelper.BuildApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig>("UpdateGoogleChannelConfig", grpcClient.UpdateGoogleChannelConfigAsync, grpcClient.UpdateGoogleChannelConfig, effectiveSettings.UpdateGoogleChannelConfigSettings).WithGoogleRequestParam("google_channel_config.name", request => request.GoogleChannelConfig?.Name);
+            Modify_ApiCall(ref _callUpdateGoogleChannelConfig);
+            Modify_UpdateGoogleChannelConfigApiCall(ref _callUpdateGoogleChannelConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2754,10 +3000,20 @@ namespace Google.Cloud.Eventarc.V1
 
         partial void Modify_DeleteChannelConnectionApiCall(ref gaxgrpc::ApiCall<DeleteChannelConnectionRequest, lro::Operation> call);
 
+        partial void Modify_GetGoogleChannelConfigApiCall(ref gaxgrpc::ApiCall<GetGoogleChannelConfigRequest, GoogleChannelConfig> call);
+
+        partial void Modify_UpdateGoogleChannelConfigApiCall(ref gaxgrpc::ApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig> call);
+
         partial void OnConstruction(Eventarc.EventarcClient grpcClient, EventarcSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Eventarc client</summary>
         public override Eventarc.EventarcClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_GetTriggerRequest(ref GetTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2790,6 +3046,10 @@ namespace Google.Cloud.Eventarc.V1
         partial void Modify_CreateChannelConnectionRequest(ref CreateChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteChannelConnectionRequest(ref DeleteChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoogleChannelConfigRequest(ref GetGoogleChannelConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGoogleChannelConfigRequest(ref UpdateGoogleChannelConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Get a single trigger.
@@ -3198,6 +3458,54 @@ namespace Google.Cloud.Eventarc.V1
             Modify_DeleteChannelConnectionRequest(ref request, ref callSettings);
             return new lro::Operation<ChannelConnection, OperationMetadata>(await _callDeleteChannelConnection.Async(request, callSettings).ConfigureAwait(false), DeleteChannelConnectionOperationsClient);
         }
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoogleChannelConfig GetGoogleChannelConfig(GetGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoogleChannelConfigRequest(ref request, ref callSettings);
+            return _callGetGoogleChannelConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoogleChannelConfig> GetGoogleChannelConfigAsync(GetGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoogleChannelConfigRequest(ref request, ref callSettings);
+            return _callGetGoogleChannelConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoogleChannelConfig UpdateGoogleChannelConfig(UpdateGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoogleChannelConfigRequest(ref request, ref callSettings);
+            return _callUpdateGoogleChannelConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a single GoogleChannelConfig
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(UpdateGoogleChannelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoogleChannelConfigRequest(ref request, ref callSettings);
+            return _callUpdateGoogleChannelConfig.Async(request, callSettings);
+        }
     }
 
     public partial class ListTriggersRequest : gaxgrpc::IPageRequest
@@ -3259,6 +3567,32 @@ namespace Google.Cloud.Eventarc.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Eventarc
+    {
+        public partial class EventarcClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

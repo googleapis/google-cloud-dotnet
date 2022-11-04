@@ -27,27 +27,28 @@ namespace Google.Cloud.Eventarc.V1 {
             "CiZnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvY2hhbm5lbC5wcm90bxIYZ29v",
             "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvMDCgdDaGFubmVsEhEKBG5hbWUY",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrIECgdDaGFubmVsEhEKBG5hbWUY",
             "ASABKAlCA+BBAhIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgF",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
             "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIVCghwcm92aWRlchgHIAEoCUID4EECEhsKDHB1YnN1Yl90b3BpYxgIIAEo",
-            "CUID4EEDSAASOwoFc3RhdGUYCSABKA4yJy5nb29nbGUuY2xvdWQuZXZlbnRh",
-            "cmMudjEuQ2hhbm5lbC5TdGF0ZUID4EEDEh0KEGFjdGl2YXRpb25fdG9rZW4Y",
-            "CiABKAlCA+BBAyJFCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
-            "B1BFTkRJTkcQARIKCgZBQ1RJVkUQAhIMCghJTkFDVElWRRADOnPqQXAKH2V2",
-            "ZW50YXJjLmdvb2dsZWFwaXMuY29tL0NoYW5uZWwSOnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jaGFubmVscy97Y2hhbm5lbH0q",
-            "CGNoYW5uZWxzMgdjaGFubmVsQgsKCXRyYW5zcG9ydELEAQocY29tLmdvb2ds",
-            "ZS5jbG91ZC5ldmVudGFyYy52MUIMQ2hhbm5lbFByb3RvUAFaQGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZXZlbnRhcmMv",
-            "djE7ZXZlbnRhcmOqAhhHb29nbGUuQ2xvdWQuRXZlbnRhcmMuVjHKAhhHb29n",
-            "bGVcQ2xvdWRcRXZlbnRhcmNcVjHqAhtHb29nbGU6OkNsb3VkOjpFdmVudGFy",
-            "Yzo6VjFiBnByb3RvMw=="));
+            "AxIQCghwcm92aWRlchgHIAEoCRIbCgxwdWJzdWJfdG9waWMYCCABKAlCA+BB",
+            "A0gAEjsKBXN0YXRlGAkgASgOMicuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
+            "LkNoYW5uZWwuU3RhdGVCA+BBAxIdChBhY3RpdmF0aW9uX3Rva2VuGAogASgJ",
+            "QgPgQQMSQgoPY3J5cHRvX2tleV9uYW1lGAsgASgJQingQQH6QSMKIWNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleSJFCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJVkUQAhIMCghJ",
+            "TkFDVElWRRADOnPqQXAKH2V2ZW50YXJjLmdvb2dsZWFwaXMuY29tL0NoYW5u",
+            "ZWwSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
+            "aGFubmVscy97Y2hhbm5lbH0qCGNoYW5uZWxzMgdjaGFubmVsQgsKCXRyYW5z",
+            "cG9ydELEAQocY29tLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52MUIMQ2hhbm5l",
+            "bFByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvZXZlbnRhcmMvdjE7ZXZlbnRhcmOqAhhHb29nbGUuQ2xvdWQu",
+            "RXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNcVjHqAhtHb29n",
+            "bGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken", "CryptoKeyName" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -101,6 +102,7 @@ namespace Google.Cloud.Eventarc.V1 {
       provider_ = other.provider_;
       state_ = other.state_;
       activationToken_ = other.activationToken_;
+      cryptoKeyName_ = other.cryptoKeyName_;
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
           PubsubTopic = other.PubsubTopic;
@@ -120,8 +122,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the channel. Must be unique within the location
-    /// on the project and must be in
+    /// Required. The resource name of the channel. Must be unique within the
+    /// location on the project and must be in
     /// `projects/{project}/locations/{location}/channels/{channel_id}` format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +139,9 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the channel. The value is a UUID4
-    /// string and guaranteed to remain unchanged until the resource is deleted.
+    /// Output only. Server assigned unique identifier for the channel. The value
+    /// is a UUID4 string and guaranteed to remain unchanged until the resource is
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,7 +186,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int ProviderFieldNumber = 7;
     private string provider_ = "";
     /// <summary>
-    /// Required. The name of the event provider (e.g. Eventarc SaaS partner) associated
+    /// The name of the event provider (e.g. Eventarc SaaS partner) associated
     /// with the channel. This provider will be granted permissions to publish
     /// events to the channel. Format:
     /// `projects/{project}/locations/{location}/providers/{provider_id}`.
@@ -200,8 +203,8 @@ namespace Google.Cloud.Eventarc.V1 {
     /// <summary>Field number for the "pubsub_topic" field.</summary>
     public const int PubsubTopicFieldNumber = 8;
     /// <summary>
-    /// Output only. The name of the Pub/Sub topic created and managed by Eventarc system as
-    /// a transport for the event delivery. Format:
+    /// Output only. The name of the Pub/Sub topic created and managed by
+    /// Eventarc system as a transport for the event delivery. Format:
     /// `projects/{project}/topics/{topic_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -233,8 +236,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int ActivationTokenFieldNumber = 10;
     private string activationToken_ = "";
     /// <summary>
-    /// Output only. The activation token for the channel. The token must be used by the
-    /// provider to register the channel for publishing.
+    /// Output only. The activation token for the channel. The token must be used
+    /// by the provider to register the channel for publishing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -242,6 +245,25 @@ namespace Google.Cloud.Eventarc.V1 {
       get { return activationToken_; }
       set {
         activationToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "crypto_key_name" field.</summary>
+    public const int CryptoKeyNameFieldNumber = 11;
+    private string cryptoKeyName_ = "";
+    /// <summary>
+    /// Optional. Resource name of a KMS crypto key (managed by the user) used to
+    /// encrypt/decrypt their event data.
+    ///
+    /// It must match the pattern
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CryptoKeyName {
+      get { return cryptoKeyName_; }
+      set {
+        cryptoKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -288,6 +310,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (PubsubTopic != other.PubsubTopic) return false;
       if (State != other.State) return false;
       if (ActivationToken != other.ActivationToken) return false;
+      if (CryptoKeyName != other.CryptoKeyName) return false;
       if (TransportCase != other.TransportCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -304,6 +327,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (transportCase_ == TransportOneofCase.PubsubTopic) hash ^= PubsubTopic.GetHashCode();
       if (State != global::Google.Cloud.Eventarc.V1.Channel.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (ActivationToken.Length != 0) hash ^= ActivationToken.GetHashCode();
+      if (CryptoKeyName.Length != 0) hash ^= CryptoKeyName.GetHashCode();
       hash ^= (int) transportCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -355,6 +379,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(82);
         output.WriteString(ActivationToken);
       }
+      if (CryptoKeyName.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CryptoKeyName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -397,6 +425,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(82);
         output.WriteString(ActivationToken);
       }
+      if (CryptoKeyName.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CryptoKeyName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -430,6 +462,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (ActivationToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ActivationToken);
+      }
+      if (CryptoKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CryptoKeyName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -469,6 +504,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (other.ActivationToken.Length != 0) {
         ActivationToken = other.ActivationToken;
+      }
+      if (other.CryptoKeyName.Length != 0) {
+        CryptoKeyName = other.CryptoKeyName;
       }
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
@@ -529,6 +567,10 @@ namespace Google.Cloud.Eventarc.V1 {
             ActivationToken = input.ReadString();
             break;
           }
+          case 90: {
+            CryptoKeyName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -582,6 +624,10 @@ namespace Google.Cloud.Eventarc.V1 {
             ActivationToken = input.ReadString();
             break;
           }
+          case 90: {
+            CryptoKeyName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -614,11 +660,13 @@ namespace Google.Cloud.Eventarc.V1 {
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 2,
         /// <summary>
-        /// The INACTIVE state means that the Channel cannot receive events
+        /// The INACTIVE state indicates that the Channel cannot receive events
         /// permanently. There are two possible cases this state can happen:
+        ///
         /// 1. The SaaS provider disconnected from this Channel.
         /// 2. The Channel activation token has expired but the SaaS provider
         ///    wasn't connected.
+        ///
         /// To re-establish a Connection with a provider, the subscriber
         /// should create a new Channel and give it to the provider.
         /// </summary>

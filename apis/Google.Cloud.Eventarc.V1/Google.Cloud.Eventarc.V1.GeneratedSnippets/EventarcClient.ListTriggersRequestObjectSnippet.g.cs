@@ -38,6 +38,7 @@ namespace Google.Cloud.Eventarc.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListTriggersResponse, Trigger> response = eventarcClient.ListTriggers(request);
