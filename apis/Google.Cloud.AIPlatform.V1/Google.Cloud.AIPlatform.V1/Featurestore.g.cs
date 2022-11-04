@@ -211,8 +211,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OnlineServingConfigFieldNumber = 7;
     private global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig onlineServingConfig_;
     /// <summary>
-    /// Optional. Config for online storage resources. If unset, the featurestore will
-    /// not have an online store and cannot be used for online serving.
+    /// Optional. Config for online storage resources. The field should not co-exist with the
+    /// field of `OnlineStoreReplicationConfig`. If both of it and
+    /// OnlineStoreReplicationConfig are unset, the feature store will not have an
+    /// online store and cannot be used for online serving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

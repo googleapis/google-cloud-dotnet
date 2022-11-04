@@ -3571,6 +3571,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 {
                     new BatchReadFeatureValuesRequest.Types.PassThroughField(),
                 },
+                StartTime = new Timestamp(),
             };
             // Make the request
             Operation<BatchReadFeatureValuesResponse, BatchReadFeatureValuesOperationMetadata> response = featurestoreServiceClient.BatchReadFeatureValues(request);
@@ -3614,6 +3615,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 {
                     new BatchReadFeatureValuesRequest.Types.PassThroughField(),
                 },
+                StartTime = new Timestamp(),
             };
             // Make the request
             Operation<BatchReadFeatureValuesResponse, BatchReadFeatureValuesOperationMetadata> response = await featurestoreServiceClient.BatchReadFeatureValuesAsync(request);

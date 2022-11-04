@@ -284,7 +284,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// are mutually exclusive.
     ///
     /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
-    /// projects/{project}/global/networks/{network}.
+    /// `projects/{project}/global/networks/{network}`.
     /// Where {project} is a project number, as in '12345', and {network} is
     /// network name.
     /// </summary>
