@@ -151,7 +151,8 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. The full name of the Execution.
     /// Format:
-    /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+    /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+    /// where {project} can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -351,7 +352,8 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. The Execution from which the Executions should be listed.
     /// To list all Executions across Jobs, use "-" instead of Job name.
-    /// Format: projects/{project}/locations/{location}/jobs/{job}
+    /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+    /// can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -893,7 +895,8 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. The name of the Execution to delete.
     /// Format:
-    /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+    /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+    /// where {project} can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1207,9 +1210,8 @@ namespace Google.Cloud.Run.V2 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the Execution. The value
-    /// is a UUID4 string and guaranteed to remain unchanged until the resource is
-    /// deleted.
+    /// Output only. Server assigned unique identifier for the Execution. The value is a UUID4
+    /// string and guaranteed to remain unchanged until the resource is deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1276,9 +1278,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Represents time when the execution was acknowledged by the
-    /// execution controller. It is not guaranteed to be set in happens-before
-    /// order across separate operations.
+    /// Output only. Represents time when the execution was acknowledged by the execution
+    /// controller. It is not guaranteed to be set in happens-before order across
+    /// separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1310,8 +1312,8 @@ namespace Google.Cloud.Run.V2 {
     public const int CompletionTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp completionTime_;
     /// <summary>
-    /// Output only. Represents time when the execution was completed. It is not
-    /// guaranteed to be set in happens-before order across separate operations.
+    /// Output only. Represents time when the execution was completed. It is not guaranteed to
+    /// be set in happens-before order across separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1407,8 +1409,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ParallelismFieldNumber = 13;
     private int parallelism_;
     /// <summary>
-    /// Output only. Specifies the maximum desired number of tasks the execution
-    /// should run at any given time. Must be &lt;= task_count. The actual number of
+    /// Output only. Specifies the maximum desired number of tasks the execution should
+    /// run at any given time. Must be &lt;= task_count. The actual number of
     /// tasks running in steady state will be less than this number when
     /// ((.spec.task_count - .status.successful) &lt; .spec.parallelism), i.e. when
     /// the work left to do is less than max parallelism. More info:
@@ -1427,8 +1429,8 @@ namespace Google.Cloud.Run.V2 {
     public const int TaskCountFieldNumber = 14;
     private int taskCount_;
     /// <summary>
-    /// Output only. Specifies the desired number of tasks the execution should
-    /// run. Setting to 1 means that parallelism is limited to 1 and the success of
+    /// Output only. Specifies the desired number of tasks the execution should run.
+    /// Setting to 1 means that parallelism is limited to 1 and the success of
     /// that task signals the success of the execution.
     /// More info:
     /// https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
@@ -1461,8 +1463,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ReconcilingFieldNumber = 16;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether the resource's reconciliation is still in
-    /// progress. See comments in `Job.reconciling` for additional information on
+    /// Output only. Indicates whether the resource's reconciliation is still in progress.
+    /// See comments in `Job.reconciling` for additional information on
     /// reconciliation process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1480,9 +1482,8 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(138, global::Google.Cloud.Run.V2.Condition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition>();
     /// <summary>
-    /// Output only. The Condition of this Execution, containing its readiness
-    /// status, and detailed error information in case it did not reach the desired
-    /// state.
+    /// Output only. The Condition of this Execution, containing its readiness status, and
+    /// detailed error information in case it did not reach the desired state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1494,9 +1495,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ObservedGenerationFieldNumber = 18;
     private long observedGeneration_;
     /// <summary>
-    /// Output only. The generation of this Execution. See comments in
-    /// `reconciling` for additional information on reconciliation process in Cloud
-    /// Run.
+    /// Output only. The generation of this Execution. See comments in `reconciling` for
+    /// additional information on reconciliation process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

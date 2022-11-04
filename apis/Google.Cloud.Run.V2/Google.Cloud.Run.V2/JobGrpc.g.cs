@@ -247,7 +247,7 @@ namespace Google.Cloud.Run.V2 {
       }
 
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given Job.
+      /// Gets the IAM Access Control policy currently in effect for the given Job.
       /// This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -604,7 +604,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_RunJob, null, options, request);
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given Job.
+      /// Gets the IAM Access Control policy currently in effect for the given Job.
       /// This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -618,7 +618,7 @@ namespace Google.Cloud.Run.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given Job.
+      /// Gets the IAM Access Control policy currently in effect for the given Job.
       /// This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -630,7 +630,7 @@ namespace Google.Cloud.Run.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given Job.
+      /// Gets the IAM Access Control policy currently in effect for the given Job.
       /// This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -644,7 +644,7 @@ namespace Google.Cloud.Run.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the IAM Access Control policy currently in effect for the given Job.
+      /// Gets the IAM Access Control policy currently in effect for the given Job.
       /// This result does not include any inherited policies.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

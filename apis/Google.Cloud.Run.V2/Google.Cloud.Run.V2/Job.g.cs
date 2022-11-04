@@ -189,7 +189,8 @@ namespace Google.Cloud.Run.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The location and project in which this Job should be created.
-    /// Format: projects/{project}/locations/{location}
+    /// Format: projects/{project}/locations/{location}, where {project} can be
+    /// project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -513,7 +514,8 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The full name of the Job.
-    /// Format: projects/{project}/locations/{location}/jobs/{job}
+    /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+    /// can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -999,7 +1001,8 @@ namespace Google.Cloud.Run.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The location and project to list resources on.
-    /// Format: projects/{project}/locations/{location}
+    /// Format: projects/{project}/locations/{location}, where {project} can be
+    /// project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1540,7 +1543,8 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The full name of the Job.
-    /// Format: projects/{project}/locations/{location}/jobs/{job}
+    /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+    /// can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1818,7 +1822,8 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The full name of the Job.
-    /// Format: projects/{project}/locations/{location}/jobs/{job}
+    /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+    /// can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

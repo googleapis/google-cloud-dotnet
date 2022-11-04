@@ -291,7 +291,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -307,7 +308,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -323,7 +325,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -336,7 +339,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -352,7 +356,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -368,7 +373,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -399,7 +405,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -425,7 +432,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -451,7 +459,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -477,7 +486,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -556,7 +566,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -572,7 +583,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -588,7 +600,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -601,7 +614,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -617,7 +631,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -633,7 +648,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+        /// where {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

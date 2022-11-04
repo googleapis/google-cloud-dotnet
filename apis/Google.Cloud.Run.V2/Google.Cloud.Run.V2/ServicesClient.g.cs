@@ -433,15 +433,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -459,15 +459,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -485,15 +485,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -506,15 +506,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -532,15 +532,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -558,15 +558,15 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this service should be created.
-        /// Format: projects/{project}/locations/{location}
-        /// Only lowercase characters, digits, and hyphens.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number. Only lowercase characters, digits, and hyphens.
         /// </param>
         /// <param name="service">
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
         /// Required. The unique identifier for the Service. It must begin with letter,
-        /// and may not end with hyphen; must contain fewer than 50 characters.
+        /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -606,7 +606,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -621,7 +622,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -636,7 +638,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -648,7 +651,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -663,7 +667,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -678,7 +683,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -708,8 +714,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}
+        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -734,8 +741,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}
+        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -760,8 +768,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}
+        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -786,8 +795,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and may not be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}
+        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -965,7 +975,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -982,7 +993,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -999,7 +1011,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1013,7 +1026,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1030,7 +1044,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1047,7 +1062,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Service.
-        /// Format: projects/{project}/locations/{location}/services/{service}
+        /// Format: projects/{project}/locations/{location}/services/{service}, where
+        /// {project} can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

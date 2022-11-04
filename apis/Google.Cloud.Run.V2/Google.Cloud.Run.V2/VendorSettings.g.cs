@@ -155,7 +155,8 @@ namespace Google.Cloud.Run.V2 {
     private string connector_ = "";
     /// <summary>
     /// VPC Access connector name.
-    /// Format: projects/{project}/locations/{location}/connectors/{connector}
+    /// Format: projects/{project}/locations/{location}/connectors/{connector},
+    /// where {project} can be project id or number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
