@@ -452,7 +452,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -476,7 +477,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -500,7 +502,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -519,7 +522,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -543,7 +547,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -567,7 +572,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project in which this Job should be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="job">
         /// Required. The Job instance to create.
@@ -613,7 +619,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -628,7 +635,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -643,7 +651,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -655,7 +664,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -670,7 +680,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -685,7 +696,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -715,7 +727,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -740,7 +753,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -765,7 +779,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -790,7 +805,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}
+        /// Format: projects/{project}/locations/{location}, where {project} can be
+        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -960,7 +976,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -975,7 +992,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -990,7 +1008,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1002,7 +1021,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1017,7 +1037,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1032,7 +1053,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1097,7 +1119,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1112,7 +1135,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1127,7 +1151,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1139,7 +1164,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1154,7 +1180,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1169,7 +1196,8 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the Job.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}
+        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1177,7 +1205,7 @@ namespace Google.Cloud.Run.V2
             RunJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given Job.
+        /// Gets the IAM Access Control policy currently in effect for the given Job.
         /// This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1187,7 +1215,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given Job.
+        /// Gets the IAM Access Control policy currently in effect for the given Job.
         /// This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1197,7 +1225,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given Job.
+        /// Gets the IAM Access Control policy currently in effect for the given Job.
         /// This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1543,7 +1571,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given Job.
+        /// Gets the IAM Access Control policy currently in effect for the given Job.
         /// This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1556,7 +1584,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Get the IAM Access Control policy currently in effect for the given Job.
+        /// Gets the IAM Access Control policy currently in effect for the given Job.
         /// This result does not include any inherited policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

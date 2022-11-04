@@ -58,27 +58,30 @@ namespace Google.Cloud.Run.V2 {
             "ZC5ydW4udjIuVmVyc2lvblRvUGF0aBIUCgxkZWZhdWx0X21vZGUYAyABKAUi",
             "QQoNVmVyc2lvblRvUGF0aBIRCgRwYXRoGAEgASgJQgPgQQISDwoHdmVyc2lv",
             "bhgCIAEoCRIMCgRtb2RlGAMgASgFIiUKEENsb3VkU3FsSW5zdGFuY2USEQoJ",
-            "aW5zdGFuY2VzGAEgAygJIvQBCgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3Nl",
+            "aW5zdGFuY2VzGAEgAygJIqUCCgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3Nl",
             "Y29uZHMYASABKAUSFwoPdGltZW91dF9zZWNvbmRzGAIgASgFEhYKDnBlcmlv",
             "ZF9zZWNvbmRzGAMgASgFEhkKEWZhaWx1cmVfdGhyZXNob2xkGAQgASgFEjYK",
             "CGh0dHBfZ2V0GAUgASgLMiIuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQR2V0",
             "QWN0aW9uSAASOgoKdGNwX3NvY2tldBgGIAEoCzIkLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjIuVENQU29ja2V0QWN0aW9uSABCDAoKcHJvYmVfdHlwZSJUCg1IVFRQ",
-            "R2V0QWN0aW9uEgwKBHBhdGgYASABKAkSNQoMaHR0cF9oZWFkZXJzGAQgAygL",
-            "Mh8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQSGVhZGVyIi4KCkhUVFBIZWFk",
-            "ZXISEQoEbmFtZRgBIAEoCUID4EECEg0KBXZhbHVlGAIgASgJIh8KD1RDUFNv",
-            "Y2tldEFjdGlvbhIMCgRwb3J0GAEgASgFQvYDChdjb20uZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52MkILSzhzTWluUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9ydW4vdjI7cnVu6kF4CiFjbG91ZGtt",
-            "cy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2Ny",
-            "eXB0b0tleXMve2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2ds",
-            "ZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMv",
-            "e3NlY3JldH3qQWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2Vj",
-            "cmV0VmVyc2lvbhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3Jl",
-            "dH0vdmVyc2lvbnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBp",
-            "cy5jb20vQ29ubmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIGcHJvdG8z"));
+            "dW4udjIuVENQU29ja2V0QWN0aW9uSAASLwoEZ3JwYxgHIAEoCzIfLmdvb2ds",
+            "ZS5jbG91ZC5ydW4udjIuR1JQQ0FjdGlvbkgAQgwKCnByb2JlX3R5cGUiVAoN",
+            "SFRUUEdldEFjdGlvbhIMCgRwYXRoGAEgASgJEjUKDGh0dHBfaGVhZGVycxgE",
+            "IAMoCzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuSFRUUEhlYWRlciIuCgpIVFRQ",
+            "SGVhZGVyEhEKBG5hbWUYASABKAlCA+BBAhINCgV2YWx1ZRgCIAEoCSIfCg9U",
+            "Q1BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEoBSIrCgpHUlBDQWN0aW9uEgwK",
+            "BHBvcnQYASABKAUSDwoHc2VydmljZRgCIAEoCUL2AwoXY29tLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaNmdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcnVuL3YyO3J1bupBeAohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
+            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBSgojc2VjcmV0bWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9TZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0fS9zZWNy",
+            "ZXRzL3tzZWNyZXR96kFkCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L1NlY3JldFZlcnNpb24SNnByb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tz",
+            "ZWNyZXR9L3ZlcnNpb25zL3t2ZXJzaW9ufepBZAoidnBjYWNjZXNzLmdvb2ds",
+            "ZWFwaXMuY29tL0Nvbm5lY3RvchI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2Nvbm5lY3RvcnMve2Nvbm5lY3Rvcn1iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,10 +96,11 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretVolumeSource), global::Google.Cloud.Run.V2.SecretVolumeSource.Parser, new[]{ "Secret", "Items", "DefaultMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VersionToPath), global::Google.Cloud.Run.V2.VersionToPath.Parser, new[]{ "Path", "Version", "Mode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket" }, new[]{ "ProbeType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket", "Grpc" }, new[]{ "ProbeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPHeader), global::Google.Cloud.Run.V2.HTTPHeader.Parser, new[]{ "Name", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TCPSocketAction), global::Google.Cloud.Run.V2.TCPSocketAction.Parser, new[]{ "Port" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TCPSocketAction), global::Google.Cloud.Run.V2.TCPSocketAction.Parser, new[]{ "Port" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GRPCAction), global::Google.Cloud.Run.V2.GRPCAction.Parser, new[]{ "Port", "Service" }, null, null, null, null)
           }));
     }
     #endregion
@@ -763,9 +767,9 @@ namespace Google.Cloud.Run.V2 {
     private readonly pbc::MapField<string, string> limits_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Only memory and CPU are supported. Note: The only
-    /// supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at
-    /// least 2Gi of memory.
-    /// The values of the map is string form of the 'quantity' k8s type:
+    /// supported values for CPU are '1', '2',  '4', and '8'. Setting 4 CPU
+    /// requires at least 2Gi of memory. The values of the map is string form of
+    /// the 'quantity' k8s type:
     /// https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1540,7 +1544,8 @@ namespace Google.Cloud.Run.V2 {
     private string version_ = "";
     /// <summary>
     /// The Cloud Secret Manager secret version.
-    /// Can be 'latest' for the latest value or an integer for a specific version.
+    /// Can be 'latest' for the latest version, an integer for a specific version,
+    /// or a version alias.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2881,7 +2886,8 @@ namespace Google.Cloud.Run.V2 {
     private string version_ = "";
     /// <summary>
     /// The Cloud Secret Manager secret version.
-    /// Can be 'latest' for the latest value or an integer for a specific version.
+    /// Can be 'latest' for the latest value, or an integer or a secret alias for a
+    /// specific version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3339,6 +3345,9 @@ namespace Google.Cloud.Run.V2 {
         case ProbeTypeOneofCase.TcpSocket:
           TcpSocket = other.TcpSocket.Clone();
           break;
+        case ProbeTypeOneofCase.Grpc:
+          Grpc = other.Grpc.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3427,7 +3436,7 @@ namespace Google.Cloud.Run.V2 {
     public const int HttpGetFieldNumber = 5;
     /// <summary>
     /// HTTPGet specifies the http request to perform.
-    /// Exactly one of HTTPGet or TCPSocket must be specified.
+    /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3443,7 +3452,7 @@ namespace Google.Cloud.Run.V2 {
     public const int TcpSocketFieldNumber = 6;
     /// <summary>
     /// TCPSocket specifies an action involving a TCP port.
-    /// Exactly one of HTTPGet or TCPSocket must be specified.
+    /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3455,12 +3464,29 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "grpc" field.</summary>
+    public const int GrpcFieldNumber = 7;
+    /// <summary>
+    /// GRPC specifies an action involving a gRPC port.
+    /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.GRPCAction Grpc {
+      get { return probeTypeCase_ == ProbeTypeOneofCase.Grpc ? (global::Google.Cloud.Run.V2.GRPCAction) probeType_ : null; }
+      set {
+        probeType_ = value;
+        probeTypeCase_ = value == null ? ProbeTypeOneofCase.None : ProbeTypeOneofCase.Grpc;
+      }
+    }
+
     private object probeType_;
     /// <summary>Enum of possible cases for the "probe_type" oneof.</summary>
     public enum ProbeTypeOneofCase {
       None = 0,
       HttpGet = 5,
       TcpSocket = 6,
+      Grpc = 7,
     }
     private ProbeTypeOneofCase probeTypeCase_ = ProbeTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3497,6 +3523,7 @@ namespace Google.Cloud.Run.V2 {
       if (FailureThreshold != other.FailureThreshold) return false;
       if (!object.Equals(HttpGet, other.HttpGet)) return false;
       if (!object.Equals(TcpSocket, other.TcpSocket)) return false;
+      if (!object.Equals(Grpc, other.Grpc)) return false;
       if (ProbeTypeCase != other.ProbeTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3511,6 +3538,7 @@ namespace Google.Cloud.Run.V2 {
       if (FailureThreshold != 0) hash ^= FailureThreshold.GetHashCode();
       if (probeTypeCase_ == ProbeTypeOneofCase.HttpGet) hash ^= HttpGet.GetHashCode();
       if (probeTypeCase_ == ProbeTypeOneofCase.TcpSocket) hash ^= TcpSocket.GetHashCode();
+      if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) hash ^= Grpc.GetHashCode();
       hash ^= (int) probeTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3554,6 +3582,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(TcpSocket);
       }
+      if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Grpc);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3588,6 +3620,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(TcpSocket);
       }
+      if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Grpc);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3615,6 +3651,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (probeTypeCase_ == ProbeTypeOneofCase.TcpSocket) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TcpSocket);
+      }
+      if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Grpc);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3652,6 +3691,12 @@ namespace Google.Cloud.Run.V2 {
             TcpSocket = new global::Google.Cloud.Run.V2.TCPSocketAction();
           }
           TcpSocket.MergeFrom(other.TcpSocket);
+          break;
+        case ProbeTypeOneofCase.Grpc:
+          if (Grpc == null) {
+            Grpc = new global::Google.Cloud.Run.V2.GRPCAction();
+          }
+          Grpc.MergeFrom(other.Grpc);
           break;
       }
 
@@ -3704,6 +3749,15 @@ namespace Google.Cloud.Run.V2 {
             TcpSocket = subBuilder;
             break;
           }
+          case 58: {
+            global::Google.Cloud.Run.V2.GRPCAction subBuilder = new global::Google.Cloud.Run.V2.GRPCAction();
+            if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) {
+              subBuilder.MergeFrom(Grpc);
+            }
+            input.ReadMessage(subBuilder);
+            Grpc = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3751,6 +3805,15 @@ namespace Google.Cloud.Run.V2 {
             }
             input.ReadMessage(subBuilder);
             TcpSocket = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Run.V2.GRPCAction subBuilder = new global::Google.Cloud.Run.V2.GRPCAction();
+            if (probeTypeCase_ == ProbeTypeOneofCase.Grpc) {
+              subBuilder.MergeFrom(Grpc);
+            }
+            input.ReadMessage(subBuilder);
+            Grpc = subBuilder;
             break;
           }
         }
@@ -4271,6 +4334,7 @@ namespace Google.Cloud.Run.V2 {
     private int port_;
     /// <summary>
     /// Port number to access on the container. Must be in the range 1 to 65535.
+    /// If not specified, defaults to 8080.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4405,6 +4469,244 @@ namespace Google.Cloud.Run.V2 {
             break;
           case 8: {
             Port = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// GRPCAction describes an action involving a GRPC port.
+  /// </summary>
+  public sealed partial class GRPCAction : pb::IMessage<GRPCAction>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GRPCAction> _parser = new pb::MessageParser<GRPCAction>(() => new GRPCAction());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GRPCAction> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GRPCAction() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GRPCAction(GRPCAction other) : this() {
+      port_ = other.port_;
+      service_ = other.service_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GRPCAction Clone() {
+      return new GRPCAction(this);
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 1;
+    private int port_;
+    /// <summary>
+    /// Port number of the gRPC service. Number must be in the range 1 to 65535.
+    /// If not specified, defaults to 8080.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 2;
+    private string service_ = "";
+    /// <summary>
+    /// Service is the name of the service to place in the gRPC HealthCheckRequest
+    /// (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If
+    /// this is not specified, the default behavior is defined by gRPC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Service {
+      get { return service_; }
+      set {
+        service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GRPCAction);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GRPCAction other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Port != other.Port) return false;
+      if (Service != other.Service) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Port != 0) hash ^= Port.GetHashCode();
+      if (Service.Length != 0) hash ^= Service.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Port != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Port);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Service);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Port != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Port);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Service);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
+      if (Service.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GRPCAction other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
+      if (other.Service.Length != 0) {
+        Service = other.Service;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Service = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Service = input.ReadString();
             break;
           }
         }
