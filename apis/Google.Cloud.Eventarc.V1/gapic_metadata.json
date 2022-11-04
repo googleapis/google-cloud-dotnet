@@ -58,6 +58,12 @@
                 "GetChannelConnectionAsync"
               ]
             },
+            "GetGoogleChannelConfig": {
+              "methods": [
+                "GetGoogleChannelConfig",
+                "GetGoogleChannelConfigAsync"
+              ]
+            },
             "GetProvider": {
               "methods": [
                 "GetProvider",
@@ -98,6 +104,12 @@
               "methods": [
                 "UpdateChannel",
                 "UpdateChannelAsync"
+              ]
+            },
+            "UpdateGoogleChannelConfig": {
+              "methods": [
+                "UpdateGoogleChannelConfig",
+                "UpdateGoogleChannelConfigAsync"
               ]
             },
             "UpdateTrigger": {

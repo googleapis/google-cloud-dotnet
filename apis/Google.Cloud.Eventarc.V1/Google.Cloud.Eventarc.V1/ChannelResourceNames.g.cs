@@ -260,5 +260,14 @@ namespace Google.Cloud.Eventarc.V1
             get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gcev::CryptoKeyName"/>-typed view over the <see cref="CryptoKeyName"/> resource name property.
+        /// </summary>
+        public gcev::CryptoKeyName CryptoKeyNameAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(CryptoKeyName) ? null : gcev::CryptoKeyName.Parse(CryptoKeyName, allowUnparsed: true);
+            set => CryptoKeyName = value?.ToString() ?? "";
+        }
     }
 }

@@ -2387,6 +2387,265 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_sync",
+      "title": "GetGoogleChannelConfigRequestObject",
+      "description": "Snippet for GetGoogleChannelConfig",
+      "file": "EventarcClient.GetGoogleChannelConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfig",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_async",
+      "title": "GetGoogleChannelConfigRequestObjectAsync",
+      "description": "Snippet for GetGoogleChannelConfigAsync",
+      "file": "EventarcClient.GetGoogleChannelConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfigAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_sync_flattened",
+      "title": "GetGoogleChannelConfig",
+      "description": "Snippet for GetGoogleChannelConfig",
+      "file": "EventarcClient.GetGoogleChannelConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfig",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_async_flattened",
+      "title": "GetGoogleChannelConfigAsync",
+      "description": "Snippet for GetGoogleChannelConfigAsync",
+      "file": "EventarcClient.GetGoogleChannelConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfigAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_sync_flattened_resourceNames",
+      "title": "GetGoogleChannelConfigResourceNames",
+      "description": "Snippet for GetGoogleChannelConfig",
+      "file": "EventarcClient.GetGoogleChannelConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfig",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleChannelConfig_async_flattened_resourceNames",
+      "title": "GetGoogleChannelConfigResourceNamesAsync",
+      "description": "Snippet for GetGoogleChannelConfigAsync",
+      "file": "EventarcClient.GetGoogleChannelConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleChannelConfigAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleChannelConfig_sync",
+      "title": "UpdateGoogleChannelConfigRequestObject",
+      "description": "Snippet for UpdateGoogleChannelConfig",
+      "file": "EventarcClient.UpdateGoogleChannelConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleChannelConfig",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfig",
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleChannelConfig_async",
+      "title": "UpdateGoogleChannelConfigRequestObjectAsync",
+      "description": "Snippet for UpdateGoogleChannelConfigAsync",
+      "file": "EventarcClient.UpdateGoogleChannelConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleChannelConfigAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleChannelConfig_sync_flattened",
+      "title": "UpdateGoogleChannelConfig",
+      "description": "Snippet for UpdateGoogleChannelConfig",
+      "file": "EventarcClient.UpdateGoogleChannelConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleChannelConfig",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfig",
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleChannelConfig_async_flattened",
+      "title": "UpdateGoogleChannelConfigAsync",
+      "description": "Snippet for UpdateGoogleChannelConfigAsync",
+      "file": "EventarcClient.UpdateGoogleChannelConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleChannelConfigAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleChannelConfig",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleChannelConfig",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }

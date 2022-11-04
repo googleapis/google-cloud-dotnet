@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -56,6 +60,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -70,6 +81,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -92,6 +105,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -108,6 +128,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -130,6 +152,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -144,6 +173,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -166,6 +197,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -182,6 +220,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -204,6 +244,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -218,6 +265,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTriggerRequest request = new GetTriggerRequest
             {
                 TriggerName = TriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
@@ -240,6 +289,13 @@ namespace Google.Cloud.Eventarc.V1.Tests
                     },
                 },
                 Channel = "channeledd285c4",
+                Conditions =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new StateCondition()
+                    },
+                },
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -256,6 +312,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -270,6 +328,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -283,6 +342,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -297,6 +358,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -312,6 +374,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -326,6 +390,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -339,6 +404,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -353,6 +420,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -368,6 +436,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -382,6 +452,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -395,6 +466,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelRequest request = new GetChannelRequest
             {
                 ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
@@ -409,6 +482,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 PubsubTopic = "pubsub_topic8ad2d986",
                 State = Channel.Types.State.Active,
                 ActivationToken = "activation_token8b38ce39",
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
@@ -424,6 +498,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -446,6 +522,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -470,6 +548,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -492,6 +572,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -516,6 +598,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -538,6 +622,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetProviderRequest request = new GetProviderRequest
             {
                 ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
@@ -562,6 +648,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -587,6 +675,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -614,6 +704,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -639,6 +731,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -666,6 +760,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -691,6 +787,8 @@ namespace Google.Cloud.Eventarc.V1.Tests
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetChannelConnectionRequest request = new GetChannelConnectionRequest
             {
                 ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
@@ -709,6 +807,260 @@ namespace Google.Cloud.Eventarc.V1.Tests
             ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request.ChannelConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request.ChannelConnectionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleChannelConfigRequestObject()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig response = client.GetGoogleChannelConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleChannelConfigRequestObjectAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleChannelConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig responseCallSettings = await client.GetGoogleChannelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleChannelConfig responseCancellationToken = await client.GetGoogleChannelConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleChannelConfig()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig response = client.GetGoogleChannelConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleChannelConfigAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleChannelConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig responseCallSettings = await client.GetGoogleChannelConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleChannelConfig responseCancellationToken = await client.GetGoogleChannelConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleChannelConfigResourceNames()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig response = client.GetGoogleChannelConfig(request.GoogleChannelConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleChannelConfigResourceNamesAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetGoogleChannelConfigRequest request = new GetGoogleChannelConfigRequest
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleChannelConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleChannelConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig responseCallSettings = await client.GetGoogleChannelConfigAsync(request.GoogleChannelConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleChannelConfig responseCancellationToken = await client.GetGoogleChannelConfigAsync(request.GoogleChannelConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGoogleChannelConfigRequestObject()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleChannelConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig response = client.UpdateGoogleChannelConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGoogleChannelConfigRequestObjectAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleChannelConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleChannelConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig responseCallSettings = await client.UpdateGoogleChannelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleChannelConfig responseCancellationToken = await client.UpdateGoogleChannelConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGoogleChannelConfig()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleChannelConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig response = client.UpdateGoogleChannelConfig(request.GoogleChannelConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGoogleChannelConfigAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            UpdateGoogleChannelConfigRequest request = new UpdateGoogleChannelConfigRequest
+            {
+                GoogleChannelConfig = new GoogleChannelConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleChannelConfig expectedResponse = new GoogleChannelConfig
+            {
+                GoogleChannelConfigName = GoogleChannelConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                UpdateTime = new wkt::Timestamp(),
+                CryptoKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleChannelConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleChannelConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
+            GoogleChannelConfig responseCallSettings = await client.UpdateGoogleChannelConfigAsync(request.GoogleChannelConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleChannelConfig responseCancellationToken = await client.UpdateGoogleChannelConfigAsync(request.GoogleChannelConfig, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

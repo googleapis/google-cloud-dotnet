@@ -187,4 +187,16 @@ namespace Google.Cloud.Eventarc.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetGoogleChannelConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::GoogleChannelConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::GoogleChannelConfigName GoogleChannelConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::GoogleChannelConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

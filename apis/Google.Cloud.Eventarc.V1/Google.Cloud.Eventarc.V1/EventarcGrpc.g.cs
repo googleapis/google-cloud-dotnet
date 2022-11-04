@@ -114,6 +114,12 @@ namespace Google.Cloud.Eventarc.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest> __Marshaller_google_cloud_eventarc_v1_CreateChannelConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest> __Marshaller_google_cloud_eventarc_v1_DeleteChannelConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest> __Marshaller_google_cloud_eventarc_v1_GetGoogleChannelConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> __Marshaller_google_cloud_eventarc_v1_GoogleChannelConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest> __Marshaller_google_cloud_eventarc_v1_UpdateGoogleChannelConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.GetTriggerRequest, global::Google.Cloud.Eventarc.V1.Trigger> __Method_GetTrigger = new grpc::Method<global::Google.Cloud.Eventarc.V1.GetTriggerRequest, global::Google.Cloud.Eventarc.V1.Trigger>(
@@ -242,6 +248,22 @@ namespace Google.Cloud.Eventarc.V1 {
         "DeleteChannelConnection",
         __Marshaller_google_cloud_eventarc_v1_DeleteChannelConnectionRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> __Method_GetGoogleChannelConfig = new grpc::Method<global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGoogleChannelConfig",
+        __Marshaller_google_cloud_eventarc_v1_GetGoogleChannelConfigRequest,
+        __Marshaller_google_cloud_eventarc_v1_GoogleChannelConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> __Method_UpdateGoogleChannelConfig = new grpc::Method<global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGoogleChannelConfig",
+        __Marshaller_google_cloud_eventarc_v1_UpdateGoogleChannelConfigRequest,
+        __Marshaller_google_cloud_eventarc_v1_GoogleChannelConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -441,6 +463,30 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteChannelConnection(global::Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> GetGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a single GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> UpdateGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1242,6 +1288,102 @@ namespace Google.Cloud.Eventarc.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelConnection, null, options, request);
       }
+      /// <summary>
+      /// Get a GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.GoogleChannelConfig GetGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGoogleChannelConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.GoogleChannelConfig GetGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGoogleChannelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Get a GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> GetGoogleChannelConfigAsync(global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGoogleChannelConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> GetGoogleChannelConfigAsync(global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGoogleChannelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update a single GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.GoogleChannelConfig UpdateGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoogleChannelConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a single GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.GoogleChannelConfig UpdateGoogleChannelConfig(global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGoogleChannelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update a single GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> UpdateGoogleChannelConfigAsync(global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoogleChannelConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a single GoogleChannelConfig
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.GoogleChannelConfig> UpdateGoogleChannelConfigAsync(global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGoogleChannelConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EventarcClient NewInstance(ClientBaseConfiguration configuration)
@@ -1271,7 +1413,9 @@ namespace Google.Cloud.Eventarc.V1 {
           .AddMethod(__Method_GetChannelConnection, serviceImpl.GetChannelConnection)
           .AddMethod(__Method_ListChannelConnections, serviceImpl.ListChannelConnections)
           .AddMethod(__Method_CreateChannelConnection, serviceImpl.CreateChannelConnection)
-          .AddMethod(__Method_DeleteChannelConnection, serviceImpl.DeleteChannelConnection).Build();
+          .AddMethod(__Method_DeleteChannelConnection, serviceImpl.DeleteChannelConnection)
+          .AddMethod(__Method_GetGoogleChannelConfig, serviceImpl.GetGoogleChannelConfig)
+          .AddMethod(__Method_UpdateGoogleChannelConfig, serviceImpl.UpdateGoogleChannelConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1297,6 +1441,8 @@ namespace Google.Cloud.Eventarc.V1 {
       serviceBinder.AddMethod(__Method_ListChannelConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.ListChannelConnectionsRequest, global::Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse>(serviceImpl.ListChannelConnections));
       serviceBinder.AddMethod(__Method_CreateChannelConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateChannelConnection));
       serviceBinder.AddMethod(__Method_DeleteChannelConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteChannelConnection));
+      serviceBinder.AddMethod(__Method_GetGoogleChannelConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig>(serviceImpl.GetGoogleChannelConfig));
+      serviceBinder.AddMethod(__Method_UpdateGoogleChannelConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest, global::Google.Cloud.Eventarc.V1.GoogleChannelConfig>(serviceImpl.UpdateGoogleChannelConfig));
     }
 
   }
