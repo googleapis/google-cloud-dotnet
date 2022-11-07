@@ -39,7 +39,7 @@ namespace Google.Cloud.Tools.Common
             // 5 minute limit stops us from hanging forever...
             if (!process.WaitForExit((int) timeout.TotalMilliseconds))
             {
-                throw new Exception($"dotnet process didn't complete after {(int) timeout.Seconds}s. Aborting tool.");
+                throw new Exception($"dotnet process didn't complete after {(int) timeout.TotalSeconds}s. Aborting tool.");
             }
             if (process.ExitCode != 0)
             {
