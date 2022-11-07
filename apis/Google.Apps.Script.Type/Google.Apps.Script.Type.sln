@@ -1,34 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
-MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Script.Type", "Google.Apps.Script.Type\Google.Apps.Script.Type.csproj", "{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Script.Type", "Google.Apps.Script.Type\Google.Apps.Script.Type.csproj", "{0D6CB6E8-C24D-4A62-90FD-98E4141A1849}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|x64.Build.0 = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Debug|x86.Build.0 = Debug|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|x64.ActiveCfg = Release|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|x64.Build.0 = Release|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|x86.ActiveCfg = Release|Any CPU
-		{5DC6D0AC-473B-4CF6-8205-70214C82DBFE}.Release|x86.Build.0 = Release|Any CPU
+		{0D6CB6E8-C24D-4A62-90FD-98E4141A1849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6CB6E8-C24D-4A62-90FD-98E4141A1849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6CB6E8-C24D-4A62-90FD-98E4141A1849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6CB6E8-C24D-4A62-90FD-98E4141A1849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

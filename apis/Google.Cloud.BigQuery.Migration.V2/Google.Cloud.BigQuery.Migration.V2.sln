@@ -1,17 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2", "Google.Cloud.BigQuery.Migration.V2\Google.Cloud.BigQuery.Migration.V2.csproj", "{64A32BEA-9F34-4E97-9886-02BB47B40068}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2", "Google.Cloud.BigQuery.Migration.V2\Google.Cloud.BigQuery.Migration.V2.csproj", "{EFF464FC-9EC4-434E-93B6-38C981FDFBAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets", "Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets\Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets.csproj", "{637E0DA4-A4A5-47AE-8A02-2BC9D5C80902}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets", "Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets\Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets.csproj", "{89ACDC9E-C6DF-4F0F-9FEA-6A4503019DA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{D073BBE0-A073-4619-8B02-0EDF9466BDE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{04D8B3AB-7415-4EF3-8B29-D480D3E325AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2.Snippets", "Google.Cloud.BigQuery.Migration.V2.Snippets\Google.Cloud.BigQuery.Migration.V2.Snippets.csproj", "{D43CFD8E-94C3-49BB-A8A7-D5FDCA72D2A0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2.Tests", "Google.Cloud.BigQuery.Migration.V2.Tests\Google.Cloud.BigQuery.Migration.V2.Tests.csproj", "{8E11F94D-0959-434E-8A72-E6CD76ABB44D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Migration.V2.Snippets", "Google.Cloud.BigQuery.Migration.V2.Snippets\Google.Cloud.BigQuery.Migration.V2.Snippets.csproj", "{0AA702D9-3F6C-4763-B32A-43ADC60AF4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +20,21 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64A32BEA-9F34-4E97-9886-02BB47B40068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64A32BEA-9F34-4E97-9886-02BB47B40068}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64A32BEA-9F34-4E97-9886-02BB47B40068}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64A32BEA-9F34-4E97-9886-02BB47B40068}.Release|Any CPU.Build.0 = Release|Any CPU
-		{637E0DA4-A4A5-47AE-8A02-2BC9D5C80902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{637E0DA4-A4A5-47AE-8A02-2BC9D5C80902}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{637E0DA4-A4A5-47AE-8A02-2BC9D5C80902}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{637E0DA4-A4A5-47AE-8A02-2BC9D5C80902}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D073BBE0-A073-4619-8B02-0EDF9466BDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D073BBE0-A073-4619-8B02-0EDF9466BDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D073BBE0-A073-4619-8B02-0EDF9466BDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D073BBE0-A073-4619-8B02-0EDF9466BDE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D43CFD8E-94C3-49BB-A8A7-D5FDCA72D2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D43CFD8E-94C3-49BB-A8A7-D5FDCA72D2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D43CFD8E-94C3-49BB-A8A7-D5FDCA72D2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D43CFD8E-94C3-49BB-A8A7-D5FDCA72D2A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E11F94D-0959-434E-8A72-E6CD76ABB44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E11F94D-0959-434E-8A72-E6CD76ABB44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E11F94D-0959-434E-8A72-E6CD76ABB44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E11F94D-0959-434E-8A72-E6CD76ABB44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF464FC-9EC4-434E-93B6-38C981FDFBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF464FC-9EC4-434E-93B6-38C981FDFBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF464FC-9EC4-434E-93B6-38C981FDFBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF464FC-9EC4-434E-93B6-38C981FDFBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89ACDC9E-C6DF-4F0F-9FEA-6A4503019DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89ACDC9E-C6DF-4F0F-9FEA-6A4503019DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89ACDC9E-C6DF-4F0F-9FEA-6A4503019DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89ACDC9E-C6DF-4F0F-9FEA-6A4503019DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D8B3AB-7415-4EF3-8B29-D480D3E325AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D8B3AB-7415-4EF3-8B29-D480D3E325AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D8B3AB-7415-4EF3-8B29-D480D3E325AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D8B3AB-7415-4EF3-8B29-D480D3E325AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA702D9-3F6C-4763-B32A-43ADC60AF4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA702D9-3F6C-4763-B32A-43ADC60AF4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA702D9-3F6C-4763-B32A-43ADC60AF4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA702D9-3F6C-4763-B32A-43ADC60AF4D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

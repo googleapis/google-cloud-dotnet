@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Logging.V1", "Google.Cloud.BigQuery.Logging.V1\Google.Cloud.BigQuery.Logging.V1.csproj", "{CD361032-DCC9-4C67-9E7F-5B48A7C3D4D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Logging.V1", "Google.Cloud.BigQuery.Logging.V1\Google.Cloud.BigQuery.Logging.V1.csproj", "{71F22878-E331-4AB4-9942-9FABFA09ABC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD361032-DCC9-4C67-9E7F-5B48A7C3D4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD361032-DCC9-4C67-9E7F-5B48A7C3D4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD361032-DCC9-4C67-9E7F-5B48A7C3D4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD361032-DCC9-4C67-9E7F-5B48A7C3D4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F22878-E331-4AB4-9942-9FABFA09ABC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F22878-E331-4AB4-9942-9FABFA09ABC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F22878-E331-4AB4-9942-9FABFA09ABC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F22878-E331-4AB4-9942-9FABFA09ABC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
