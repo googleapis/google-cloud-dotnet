@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,20 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.RecommendationEngine.V1Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.RecommendationEngine.V1Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1beta1/{name=projects/*/locations/*/catalogs/*/operations/*}", "additionalBindings": [ { "get": "/v1beta1/{name=projects/*/locations/*/catalogs/*/eventStores/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("Ej4vdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovb3BlcmF0aW9ucy8qfVpOEkwvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovZXZlbnRTdG9yZXMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1beta1/{name=projects/*/locations/*/catalogs/*}/operations", "additionalBindings": [ { "get": "/v1beta1/{name=projects/*/locations/*/catalogs/*/eventStores/*}/operations" } ] }
+                    proto::ByteString.FromBase64("EjwvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9L29wZXJhdGlvbnNaTBJKL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyp9L29wZXJhdGlvbnM=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -38,6 +53,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
             yield return RecommendationengineResourcesReflection.Descriptor;
             yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

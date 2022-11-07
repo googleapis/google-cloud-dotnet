@@ -6,10 +6,6 @@
     <IsPackable>false</IsPackable>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net452|AnyCPU'">
-    <DebugType>full</DebugType>
-    <DebugSymbols>True</DebugSymbols>
-  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" Version="[4.2.0, 5.0.0)" />
     <PackageReference Include="Google.Apis.CloudResourceManager.v1" Version="[1.57.0.2677, 2.0.0.0)" />

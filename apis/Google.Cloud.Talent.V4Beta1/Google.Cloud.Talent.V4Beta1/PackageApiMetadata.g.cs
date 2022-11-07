@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,15 @@ namespace Google.Cloud.Talent.V4Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Talent.V4Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Talent.V4Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v4beta1/{name=projects/*/operations/*}" }
+                    proto::ByteString.FromBase64("EicvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn0=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -42,6 +52,7 @@ namespace Google.Cloud.Talent.V4Beta1
             yield return JobServiceReflection.Descriptor;
             yield return TenantReflection.Descriptor;
             yield return TenantServiceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

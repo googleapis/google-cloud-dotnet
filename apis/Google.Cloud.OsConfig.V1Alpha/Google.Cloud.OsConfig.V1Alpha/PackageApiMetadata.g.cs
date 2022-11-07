@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,20 @@ namespace Google.Cloud.OsConfig.V1Alpha
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.OsConfig.V1Alpha", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.OsConfig.V1Alpha", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1alpha/{name=projects/*/locations/*/osPolicyAssignments/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IlAvdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29zUG9saWN5QXNzaWdubWVudHMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1alpha/{name=projects/*/locations/*/osPolicyAssignments/*/operations/*}" }
+                    proto::ByteString.FromBase64("EkkvdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29zUG9saWN5QXNzaWdubWVudHMvKi9vcGVyYXRpb25zLyp9")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -38,6 +53,7 @@ namespace Google.Cloud.OsConfig.V1Alpha
             yield return OsconfigCommonReflection.Descriptor;
             yield return OsconfigZonalServiceReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

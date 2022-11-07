@@ -24,8 +24,11 @@ namespace Google.Cloud.OsConfig.V1.Snippets
     {
         /// <summary>Snippet for GetOSPolicyAssignmentReportAsync</summary>
         /// <remarks>
-        /// This snippet has been automatically generated for illustrative purposes only.
-        /// It may require modifications to work in your environment.
+        /// This snippet has been automatically generated and should be regarded as a code template only.
+        /// It will require modifications to work:
+        /// - It may require correct/in-range values for request initialization.
+        /// - It may require specifying regional endpoints when creating the service client as shown in
+        ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
         public async Task GetOSPolicyAssignmentReportResourceNamesAsync()
         {

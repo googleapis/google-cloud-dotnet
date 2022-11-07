@@ -16,6 +16,9 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +28,35 @@ namespace Google.Cloud.Dialogflow.V2Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Dialogflow.V2Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Dialogflow.V2Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v2beta1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiYvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfQ==")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v2beta1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("EiQvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
+                },
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v2beta1/{name=projects/*/operations/*}:cancel", "additionalBindings": [ { "post": "/v2beta1/{name=projects/*/locations/*/operations/*}:cancel" } ] }
+                    proto::ByteString.FromBase64("Ii4vdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsWjwiOi92MmJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw=")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v2beta1/{name=projects/*/operations/*}", "additionalBindings": [ { "get": "/v2beta1/{name=projects/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EicvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn1aNRIzL3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v2beta1/{name=projects/*}/operations", "additionalBindings": [ { "get": "/v2beta1/{name=projects/*/locations/*}/operations" } ] }
+                    proto::ByteString.FromBase64("EiUvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qfS9vcGVyYXRpb25zWjMSMS92MmJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyp9L29wZXJhdGlvbnM=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -50,6 +81,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return ValidationResultReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return WebhookReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

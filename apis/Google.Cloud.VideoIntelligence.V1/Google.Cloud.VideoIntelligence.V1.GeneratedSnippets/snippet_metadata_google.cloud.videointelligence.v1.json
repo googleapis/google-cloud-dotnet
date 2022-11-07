@@ -34,7 +34,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 70,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 68,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async",
@@ -61,7 +73,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 71,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 69,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync_flattened",
@@ -86,7 +110,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async_flattened",
@@ -112,7 +148,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

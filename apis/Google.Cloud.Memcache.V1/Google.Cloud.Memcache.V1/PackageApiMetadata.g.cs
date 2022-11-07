@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -30,6 +31,7 @@ namespace Google.Cloud.Memcache.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudMemcacheReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

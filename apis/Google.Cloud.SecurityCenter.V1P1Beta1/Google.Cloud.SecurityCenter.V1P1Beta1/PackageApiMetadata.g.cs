@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,30 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.SecurityCenter.V1P1Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.SecurityCenter.V1P1Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1p1beta1/{name=organizations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjUvdjFwMWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1p1beta1/{name=organizations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ki4vdjFwMWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1p1beta1/{name=organizations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjFwMWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1p1beta1/{name=organizations/*/operations}" }
+                    proto::ByteString.FromBase64("EiwvdjFwMWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9vcGVyYXRpb25zfQ==")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -40,6 +65,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
             yield return SecurityMarksReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
             yield return SourceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

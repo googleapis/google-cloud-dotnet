@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -31,6 +32,7 @@ namespace Google.Cloud.Dlp.V2
         {
             yield return DlpReflection.Descriptor;
             yield return StorageReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
         }
     }
 }
