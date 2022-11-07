@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -44,6 +45,9 @@ namespace Google.Cloud.DataCatalog.V1
             yield return TagsReflection.Descriptor;
             yield return TimestampsReflection.Descriptor;
             yield return UsageReflection.Descriptor;
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
         }
     }
 }

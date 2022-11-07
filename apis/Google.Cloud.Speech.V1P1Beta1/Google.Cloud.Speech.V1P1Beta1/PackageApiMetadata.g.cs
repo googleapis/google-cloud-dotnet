@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,13 +27,27 @@ namespace Google.Cloud.Speech.V1P1Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Speech.V1P1Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Speech.V1P1Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1p1beta1/operations/{name=**}" }
+                    proto::ByteString.FromBase64("Eh8vdjFwMWJldGExL29wZXJhdGlvbnMve25hbWU9Kip9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1p1beta1/operations" }
+                    proto::ByteString.FromBase64("EhUvdjFwMWJldGExL29wZXJhdGlvbnM=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudSpeechReflection.Descriptor;
             yield return CloudSpeechAdaptationReflection.Descriptor;
             yield return ResourceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

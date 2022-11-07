@@ -34,7 +34,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async",
@@ -61,7 +73,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync_flattened",
@@ -86,7 +110,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async_flattened",
@@ -112,7 +148,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync_flattened_resourceNames",
@@ -137,7 +185,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async_flattened_resourceNames",
@@ -163,7 +223,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_sync",
@@ -189,7 +261,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_async",
@@ -216,7 +300,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_sync_flattened",
@@ -241,7 +337,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_async_flattened",
@@ -267,7 +375,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync",
@@ -292,7 +412,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async",
@@ -319,7 +451,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync_flattened",
@@ -343,7 +487,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async_flattened",
@@ -369,7 +525,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync_flattened_resourceNames",
@@ -393,7 +561,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async_flattened_resourceNames",
@@ -419,7 +599,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync",
@@ -445,7 +637,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_async",
@@ -472,7 +676,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync_flattened",
@@ -497,7 +713,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_async_flattened",
@@ -523,7 +751,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync_flattened_resourceNames",
@@ -548,7 +788,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetContent_async_flattened_resourceNames",
@@ -574,7 +826,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_sync",
@@ -600,7 +864,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_async",
@@ -627,7 +903,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_sync_flattened",
@@ -652,7 +940,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_async_flattened",
@@ -678,7 +978,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_sync_flattened_resourceNames",
@@ -703,7 +1015,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_GetIamPolicy_async_flattened_resourceNames",
@@ -729,7 +1053,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_SetIamPolicy_sync",
@@ -755,7 +1091,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_SetIamPolicy_async",
@@ -782,7 +1130,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_TestIamPermissions_sync",
@@ -808,7 +1168,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_TestIamPermissions_async",
@@ -835,7 +1207,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync",
@@ -861,7 +1245,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_async",
@@ -888,7 +1284,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync_flattened",
@@ -913,7 +1321,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_async_flattened",
@@ -939,7 +1359,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync_flattened_resourceNames",
@@ -964,7 +1396,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_ContentService_ListContent_async_flattened_resourceNames",
@@ -990,7 +1434,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_sync",
@@ -1016,7 +1472,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_async",
@@ -1043,7 +1511,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_sync_flattened",
@@ -1068,7 +1548,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_async_flattened",
@@ -1094,7 +1586,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_sync_flattened_resourceNames",
@@ -1119,7 +1623,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_async_flattened_resourceNames",
@@ -1145,7 +1661,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateLake_sync",
@@ -1171,7 +1699,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateLake_async",
@@ -1198,7 +1738,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateLake_sync_flattened",
@@ -1223,7 +1775,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateLake_async_flattened",
@@ -1249,7 +1813,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_sync",
@@ -1275,7 +1851,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_async",
@@ -1302,7 +1890,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_sync_flattened",
@@ -1327,7 +1927,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_async_flattened",
@@ -1353,7 +1965,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_sync_flattened_resourceNames",
@@ -1378,7 +2002,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteLake_async_flattened_resourceNames",
@@ -1404,7 +2040,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_sync",
@@ -1430,7 +2078,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_async",
@@ -1457,7 +2117,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_sync_flattened",
@@ -1482,7 +2154,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_async_flattened",
@@ -1508,7 +2192,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_sync_flattened_resourceNames",
@@ -1533,7 +2229,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakes_async_flattened_resourceNames",
@@ -1559,7 +2267,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_sync",
@@ -1585,7 +2305,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_async",
@@ -1612,7 +2344,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_sync_flattened",
@@ -1637,7 +2381,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_async_flattened",
@@ -1663,7 +2419,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_sync_flattened_resourceNames",
@@ -1688,7 +2456,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetLake_async_flattened_resourceNames",
@@ -1714,7 +2494,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_sync",
@@ -1740,7 +2532,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_async",
@@ -1767,7 +2571,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_sync_flattened",
@@ -1792,7 +2608,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_async_flattened",
@@ -1818,7 +2646,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_sync_flattened_resourceNames",
@@ -1843,7 +2683,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListLakeActions_async_flattened_resourceNames",
@@ -1869,7 +2721,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_sync",
@@ -1895,7 +2759,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_async",
@@ -1922,7 +2798,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_sync_flattened",
@@ -1947,7 +2835,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_async_flattened",
@@ -1973,7 +2873,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_sync_flattened_resourceNames",
@@ -1998,7 +2910,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateZone_async_flattened_resourceNames",
@@ -2024,7 +2948,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateZone_sync",
@@ -2050,7 +2986,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateZone_async",
@@ -2077,7 +3025,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateZone_sync_flattened",
@@ -2102,7 +3062,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateZone_async_flattened",
@@ -2128,7 +3100,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_sync",
@@ -2154,7 +3138,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_async",
@@ -2181,7 +3177,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_sync_flattened",
@@ -2206,7 +3214,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_async_flattened",
@@ -2232,7 +3252,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_sync_flattened_resourceNames",
@@ -2257,7 +3289,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteZone_async_flattened_resourceNames",
@@ -2283,7 +3327,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_sync",
@@ -2309,7 +3365,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_async",
@@ -2336,7 +3404,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_sync_flattened",
@@ -2361,7 +3441,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_async_flattened",
@@ -2387,7 +3479,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_sync_flattened_resourceNames",
@@ -2412,7 +3516,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZones_async_flattened_resourceNames",
@@ -2438,7 +3554,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_sync",
@@ -2464,7 +3592,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_async",
@@ -2491,7 +3631,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_sync_flattened",
@@ -2516,7 +3668,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_async_flattened",
@@ -2542,7 +3706,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_sync_flattened_resourceNames",
@@ -2567,7 +3743,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetZone_async_flattened_resourceNames",
@@ -2593,7 +3781,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_sync",
@@ -2619,7 +3819,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_async",
@@ -2646,7 +3858,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_sync_flattened",
@@ -2671,7 +3895,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_async_flattened",
@@ -2697,7 +3933,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_sync_flattened_resourceNames",
@@ -2722,7 +3970,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListZoneActions_async_flattened_resourceNames",
@@ -2748,7 +4008,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_sync",
@@ -2774,7 +4046,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_async",
@@ -2801,7 +4085,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_sync_flattened",
@@ -2826,7 +4122,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_async_flattened",
@@ -2852,7 +4160,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_sync_flattened_resourceNames",
@@ -2877,7 +4197,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateAsset_async_flattened_resourceNames",
@@ -2903,7 +4235,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateAsset_sync",
@@ -2929,7 +4273,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateAsset_async",
@@ -2956,7 +4312,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateAsset_sync_flattened",
@@ -2981,7 +4349,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateAsset_async_flattened",
@@ -3007,7 +4387,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_sync",
@@ -3033,7 +4425,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_async",
@@ -3060,7 +4464,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_sync_flattened",
@@ -3085,7 +4501,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_async_flattened",
@@ -3111,7 +4539,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_sync_flattened_resourceNames",
@@ -3136,7 +4576,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteAsset_async_flattened_resourceNames",
@@ -3162,7 +4614,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_sync",
@@ -3188,7 +4652,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_async",
@@ -3215,7 +4691,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_sync_flattened",
@@ -3240,7 +4728,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_async_flattened",
@@ -3266,7 +4766,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_sync_flattened_resourceNames",
@@ -3291,7 +4803,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssets_async_flattened_resourceNames",
@@ -3317,7 +4841,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_sync",
@@ -3343,7 +4879,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_async",
@@ -3370,7 +4918,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_sync_flattened",
@@ -3395,7 +4955,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_async_flattened",
@@ -3421,7 +4993,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_sync_flattened_resourceNames",
@@ -3446,7 +5030,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetAsset_async_flattened_resourceNames",
@@ -3472,7 +5068,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_sync",
@@ -3498,7 +5106,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_async",
@@ -3525,7 +5145,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_sync_flattened",
@@ -3550,7 +5182,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_async_flattened",
@@ -3576,7 +5220,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_sync_flattened_resourceNames",
@@ -3601,7 +5257,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListAssetActions_async_flattened_resourceNames",
@@ -3627,7 +5295,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_sync",
@@ -3653,7 +5333,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_async",
@@ -3680,7 +5372,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_sync_flattened",
@@ -3705,7 +5409,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_async_flattened",
@@ -3731,7 +5447,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_sync_flattened_resourceNames",
@@ -3756,7 +5484,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateTask_async_flattened_resourceNames",
@@ -3782,7 +5522,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateTask_sync",
@@ -3808,7 +5560,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateTask_async",
@@ -3835,7 +5599,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateTask_sync_flattened",
@@ -3860,7 +5636,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateTask_async_flattened",
@@ -3886,7 +5674,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_sync",
@@ -3912,7 +5712,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_async",
@@ -3939,7 +5751,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_sync_flattened",
@@ -3964,7 +5788,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_async_flattened",
@@ -3990,7 +5826,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_sync_flattened_resourceNames",
@@ -4015,7 +5863,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteTask_async_flattened_resourceNames",
@@ -4041,7 +5901,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_sync",
@@ -4067,7 +5939,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_async",
@@ -4094,7 +5978,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_sync_flattened",
@@ -4119,7 +6015,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_async_flattened",
@@ -4145,7 +6053,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_sync_flattened_resourceNames",
@@ -4170,7 +6090,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListTasks_async_flattened_resourceNames",
@@ -4196,7 +6128,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_sync",
@@ -4222,7 +6166,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_async",
@@ -4249,7 +6205,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_sync_flattened",
@@ -4274,7 +6242,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_async_flattened",
@@ -4300,7 +6280,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_sync_flattened_resourceNames",
@@ -4325,7 +6317,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetTask_async_flattened_resourceNames",
@@ -4351,7 +6355,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_sync",
@@ -4377,7 +6393,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_async",
@@ -4404,7 +6432,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_sync_flattened",
@@ -4429,7 +6469,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_async_flattened",
@@ -4455,7 +6507,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_sync_flattened_resourceNames",
@@ -4480,7 +6544,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListJobs_async_flattened_resourceNames",
@@ -4506,7 +6582,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_sync",
@@ -4532,7 +6620,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_async",
@@ -4559,7 +6659,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_sync_flattened",
@@ -4584,7 +6696,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_async_flattened",
@@ -4610,7 +6734,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_sync_flattened_resourceNames",
@@ -4635,7 +6771,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetJob_async_flattened_resourceNames",
@@ -4661,7 +6809,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_sync",
@@ -4686,7 +6846,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_async",
@@ -4713,7 +6885,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_sync_flattened",
@@ -4737,7 +6921,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_async_flattened",
@@ -4763,7 +6959,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_sync_flattened_resourceNames",
@@ -4787,7 +6995,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CancelJob_async_flattened_resourceNames",
@@ -4813,7 +7033,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync",
@@ -4839,7 +7071,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async",
@@ -4866,7 +7110,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync_flattened",
@@ -4891,7 +7147,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async_flattened",
@@ -4917,7 +7185,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync_flattened_resourceNames",
@@ -4942,7 +7222,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async_flattened_resourceNames",
@@ -4968,7 +7260,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_sync",
@@ -4994,7 +7298,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_async",
@@ -5021,7 +7337,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_sync_flattened",
@@ -5046,7 +7374,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_async_flattened",
@@ -5072,7 +7412,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync",
@@ -5098,7 +7450,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async",
@@ -5125,7 +7489,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync_flattened",
@@ -5150,7 +7526,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async_flattened",
@@ -5176,7 +7564,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync_flattened_resourceNames",
@@ -5201,7 +7601,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async_flattened_resourceNames",
@@ -5227,7 +7639,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync",
@@ -5253,7 +7677,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async",
@@ -5280,7 +7716,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync_flattened",
@@ -5305,7 +7753,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async_flattened",
@@ -5331,7 +7791,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync_flattened_resourceNames",
@@ -5356,7 +7828,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async_flattened_resourceNames",
@@ -5382,7 +7866,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync",
@@ -5408,7 +7904,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async",
@@ -5435,7 +7943,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync_flattened",
@@ -5460,7 +7980,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened",
@@ -5486,7 +8018,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync_flattened_resourceNames",
@@ -5511,7 +8055,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened_resourceNames",
@@ -5537,7 +8093,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync",
@@ -5563,7 +8131,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async",
@@ -5590,7 +8170,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync_flattened",
@@ -5615,7 +8207,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async_flattened",
@@ -5641,7 +8245,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync_flattened_resourceNames",
@@ -5666,7 +8282,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async_flattened_resourceNames",
@@ -5692,7 +8320,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync",
@@ -5718,7 +8358,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async",
@@ -5745,7 +8397,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened",
@@ -5770,7 +8434,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened",
@@ -5796,7 +8472,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened_resourceNames",
@@ -5821,7 +8509,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened_resourceNames",
@@ -5847,7 +8547,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_sync",
@@ -5873,7 +8585,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_async",
@@ -5900,7 +8624,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync",
@@ -5925,7 +8661,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async",
@@ -5952,7 +8700,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened",
@@ -5976,7 +8736,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened",
@@ -6002,7 +8774,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened_resourceNames",
@@ -6026,7 +8810,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened_resourceNames",
@@ -6052,7 +8848,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync",
@@ -6078,7 +8886,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async",
@@ -6105,7 +8925,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened",
@@ -6130,7 +8962,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened",
@@ -6156,7 +9000,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened_resourceNames",
@@ -6181,7 +9037,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened_resourceNames",
@@ -6207,7 +9075,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync",
@@ -6233,7 +9113,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async",
@@ -6260,7 +9152,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened",
@@ -6285,7 +9189,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened",
@@ -6311,7 +9227,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened_resourceNames",
@@ -6336,7 +9264,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened_resourceNames",
@@ -6362,7 +9302,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync",
@@ -6388,7 +9340,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async",
@@ -6415,7 +9379,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened",
@@ -6440,7 +9416,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened",
@@ -6466,7 +9454,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened_resourceNames",
@@ -6491,7 +9491,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames",
@@ -6517,7 +9529,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync",
@@ -6542,7 +9566,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async",
@@ -6569,7 +9605,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened",
@@ -6593,7 +9641,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened",
@@ -6619,7 +9679,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened_resourceNames",
@@ -6643,7 +9715,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened_resourceNames",
@@ -6669,7 +9753,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync",
@@ -6695,7 +9791,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async",
@@ -6722,7 +9830,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened",
@@ -6747,7 +9867,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened",
@@ -6773,7 +9905,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened_resourceNames",
@@ -6798,7 +9942,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened_resourceNames",
@@ -6824,7 +9980,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync",
@@ -6850,7 +10018,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async",
@@ -6877,7 +10057,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened",
@@ -6902,7 +10094,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened",
@@ -6928,7 +10132,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened_resourceNames",
@@ -6953,7 +10169,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened_resourceNames",
@@ -6979,7 +10207,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

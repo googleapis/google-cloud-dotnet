@@ -34,7 +34,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_SearchDomains_async",
@@ -61,7 +73,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_SearchDomains_sync_flattened",
@@ -86,7 +110,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_SearchDomains_async_flattened",
@@ -112,7 +148,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_SearchDomains_sync_flattened_resourceNames",
@@ -137,7 +185,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_SearchDomains_async_flattened_resourceNames",
@@ -163,7 +223,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_sync",
@@ -189,7 +261,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_async",
@@ -216,7 +300,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_sync_flattened",
@@ -241,7 +337,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_async_flattened",
@@ -267,7 +375,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_sync_flattened_resourceNames",
@@ -292,7 +412,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveRegisterParameters_async_flattened_resourceNames",
@@ -318,7 +450,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_sync",
@@ -344,7 +488,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 74,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 72,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_async",
@@ -371,7 +527,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_sync_flattened",
@@ -396,7 +564,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_async_flattened",
@@ -422,7 +602,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_sync_flattened_resourceNames",
@@ -447,7 +639,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RegisterDomain_async_flattened_resourceNames",
@@ -473,7 +677,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_sync",
@@ -499,7 +715,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_async",
@@ -526,7 +754,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_sync_flattened",
@@ -551,7 +791,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_async_flattened",
@@ -577,7 +829,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_sync_flattened_resourceNames",
@@ -602,7 +866,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveTransferParameters_async_flattened_resourceNames",
@@ -628,7 +904,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_sync",
@@ -654,7 +942,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 71,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 69,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_async",
@@ -681,7 +981,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 72,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 70,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_sync_flattened",
@@ -706,7 +1018,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_async_flattened",
@@ -732,7 +1056,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_sync_flattened_resourceNames",
@@ -757,7 +1093,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_TransferDomain_async_flattened_resourceNames",
@@ -783,7 +1131,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_sync",
@@ -809,7 +1169,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_async",
@@ -836,7 +1208,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_sync_flattened",
@@ -861,7 +1245,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_async_flattened",
@@ -887,7 +1283,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_sync_flattened_resourceNames",
@@ -912,7 +1320,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ListRegistrations_async_flattened_resourceNames",
@@ -938,7 +1358,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_sync",
@@ -964,7 +1396,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_async",
@@ -991,7 +1435,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_sync_flattened",
@@ -1016,7 +1472,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_async_flattened",
@@ -1042,7 +1510,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_sync_flattened_resourceNames",
@@ -1067,7 +1547,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_GetRegistration_async_flattened_resourceNames",
@@ -1093,7 +1585,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_UpdateRegistration_sync",
@@ -1119,7 +1623,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_UpdateRegistration_async",
@@ -1146,7 +1662,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_UpdateRegistration_sync_flattened",
@@ -1171,7 +1699,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_UpdateRegistration_async_flattened",
@@ -1197,7 +1737,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_sync",
@@ -1223,7 +1775,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_async",
@@ -1250,7 +1814,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_sync_flattened",
@@ -1275,7 +1851,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_async_flattened",
@@ -1301,7 +1889,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_sync_flattened_resourceNames",
@@ -1326,7 +1926,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureManagementSettings_async_flattened_resourceNames",
@@ -1352,7 +1964,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_sync",
@@ -1378,7 +2002,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_async",
@@ -1405,7 +2041,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_sync_flattened",
@@ -1430,7 +2078,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_async_flattened",
@@ -1456,7 +2116,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_sync_flattened_resourceNames",
@@ -1481,7 +2153,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureDnsSettings_async_flattened_resourceNames",
@@ -1507,7 +2191,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_sync",
@@ -1533,7 +2229,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_async",
@@ -1560,7 +2268,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 70,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 68,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_sync_flattened",
@@ -1585,7 +2305,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_async_flattened",
@@ -1611,7 +2343,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_sync_flattened_resourceNames",
@@ -1636,7 +2380,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ConfigureContactSettings_async_flattened_resourceNames",
@@ -1662,7 +2418,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_sync",
@@ -1688,7 +2456,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_async",
@@ -1715,7 +2495,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_sync_flattened",
@@ -1740,7 +2532,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_async_flattened",
@@ -1766,7 +2570,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_sync_flattened_resourceNames",
@@ -1791,7 +2607,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ExportRegistration_async_flattened_resourceNames",
@@ -1817,7 +2645,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_sync",
@@ -1843,7 +2683,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_async",
@@ -1870,7 +2722,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_sync_flattened",
@@ -1895,7 +2759,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_async_flattened",
@@ -1921,7 +2797,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_sync_flattened_resourceNames",
@@ -1946,7 +2834,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_DeleteRegistration_async_flattened_resourceNames",
@@ -1972,7 +2872,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_sync",
@@ -1998,7 +2910,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_async",
@@ -2025,7 +2949,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_sync_flattened",
@@ -2050,7 +2986,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_async_flattened",
@@ -2076,7 +3024,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_sync_flattened_resourceNames",
@@ -2101,7 +3061,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_RetrieveAuthorizationCode_async_flattened_resourceNames",
@@ -2127,7 +3099,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_sync",
@@ -2153,7 +3137,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_async",
@@ -2180,7 +3176,19 @@
         }
       },
       "canonical": true,
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_sync_flattened",
@@ -2205,7 +3213,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_async_flattened",
@@ -2231,7 +3251,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_sync_flattened_resourceNames",
@@ -2256,7 +3288,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
     },
     {
       "regionTag": "domains_v1_generated_Domains_ResetAuthorizationCode_async_flattened_resourceNames",
@@ -2282,7 +3326,19 @@
           }
         }
       },
-      "origin": "API_DEFINITION"
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -55,38 +55,39 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "GAMgASgLMjcuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TeW50",
             "aGVzaXplU3BlZWNoQ29uZmlnIloKE1RlbGVwaG9ueUR0bWZFdmVudHMSQwoL",
             "ZHRtZl9ldmVudHMYASADKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MmJldGExLlRlbGVwaG9ueUR0bWYiZwoSU3BlZWNoVG9UZXh0Q29uZmlnElEK",
+            "MmJldGExLlRlbGVwaG9ueUR0bWYidgoSU3BlZWNoVG9UZXh0Q29uZmlnElEK",
             "FHNwZWVjaF9tb2RlbF92YXJpYW50GAEgASgOMjMuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjJiZXRhMS5TcGVlY2hNb2RlbFZhcmlhbnQq+wEKDUF1ZGlv",
-            "RW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhB",
-            "VURJT19FTkNPRElOR19MSU5FQVJfMTYQARIXChNBVURJT19FTkNPRElOR19G",
-            "TEFDEAISGAoUQVVESU9fRU5DT0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNP",
-            "RElOR19BTVIQBBIZChVBVURJT19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJ",
-            "T19FTkNPRElOR19PR0dfT1BVUxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVY",
-            "X1dJVEhfSEVBREVSX0JZVEUQByp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAog",
-            "U1BFRUNIX01PREVMX1ZBUklBTlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVT",
-            "VF9BVkFJTEFCTEUQARIQCgxVU0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5D",
-            "RUQQAyqNAQoPU3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVS",
-            "X1VOU1BFQ0lGSUVEEAASGgoWU1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwK",
-            "GFNTTUxfVk9JQ0VfR0VOREVSX0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VO",
-            "REVSX05FVVRSQUwQAyrsAQoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQ",
-            "VVRfQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVE",
-            "SU9fRU5DT0RJTkdfTElORUFSXzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09E",
-            "SU5HX01QMxACEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19NUDNfNjRfS0JQ",
-            "UxAEEiIKHk9VVFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADEh8KG09V",
-            "VFBVVF9BVURJT19FTkNPRElOR19NVUxBVxAFKpQCCg1UZWxlcGhvbnlEdG1m",
-            "Eh4KGlRFTEVQSE9OWV9EVE1GX1VOU1BFQ0lGSUVEEAASDAoIRFRNRl9PTkUQ",
-            "ARIMCghEVE1GX1RXTxACEg4KCkRUTUZfVEhSRUUQAxINCglEVE1GX0ZPVVIQ",
-            "BBINCglEVE1GX0ZJVkUQBRIMCghEVE1GX1NJWBAGEg4KCkRUTUZfU0VWRU4Q",
-            "BxIOCgpEVE1GX0VJR0hUEAgSDQoJRFRNRl9OSU5FEAkSDQoJRFRNRl9aRVJP",
-            "EAoSCgoGRFRNRl9BEAsSCgoGRFRNRl9CEAwSCgoGRFRNRl9DEA0SCgoGRFRN",
-            "Rl9EEA4SDQoJRFRNRl9TVEFSEA8SDgoKRFRNRl9QT1VORBAQQoYCCiNjb20u",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUIQQXVkaW9Db25maWdQ",
-            "cm90b1ABWklnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMTtkaWFsb2dmbG93+AEBogICREaq",
-            "Ah9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJldGEx6kFVChthdXRvbWwu",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
+            "YWxvZ2Zsb3cudjJiZXRhMS5TcGVlY2hNb2RlbFZhcmlhbnQSDQoFbW9kZWwY",
+            "AiABKAkq+wEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5T",
+            "UEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIXChNB",
+            "VURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9fRU5DT0RJTkdfTVVMQVcQ",
+            "AxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVBVURJT19FTkNPRElOR19B",
+            "TVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0dfT1BVUxAGEikKJUFVRElP",
+            "X0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQByp2ChJTcGVlY2hN",
+            "b2RlbFZhcmlhbnQSJAogU1BFRUNIX01PREVMX1ZBUklBTlRfVU5TUEVDSUZJ",
+            "RUQQABIWChJVU0VfQkVTVF9BVkFJTEFCTEUQARIQCgxVU0VfU1RBTkRBUkQQ",
+            "AhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoPU3NtbFZvaWNlR2VuZGVyEiEKHVNT",
+            "TUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASGgoWU1NNTF9WT0lDRV9H",
+            "RU5ERVJfTUFMRRABEhwKGFNTTUxfVk9JQ0VfR0VOREVSX0ZFTUFMRRACEh0K",
+            "GVNTTUxfVk9JQ0VfR0VOREVSX05FVVRSQUwQAyrsAQoTT3V0cHV0QXVkaW9F",
+            "bmNvZGluZxIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQ",
+            "ABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAESHQoZT1VU",
+            "UFVUX0FVRElPX0VOQ09ESU5HX01QMxACEiUKIU9VVFBVVF9BVURJT19FTkNP",
+            "RElOR19NUDNfNjRfS0JQUxAEEiIKHk9VVFBVVF9BVURJT19FTkNPRElOR19P",
+            "R0dfT1BVUxADEh8KG09VVFBVVF9BVURJT19FTkNPRElOR19NVUxBVxAFKpQC",
+            "Cg1UZWxlcGhvbnlEdG1mEh4KGlRFTEVQSE9OWV9EVE1GX1VOU1BFQ0lGSUVE",
+            "EAASDAoIRFRNRl9PTkUQARIMCghEVE1GX1RXTxACEg4KCkRUTUZfVEhSRUUQ",
+            "AxINCglEVE1GX0ZPVVIQBBINCglEVE1GX0ZJVkUQBRIMCghEVE1GX1NJWBAG",
+            "Eg4KCkRUTUZfU0VWRU4QBxIOCgpEVE1GX0VJR0hUEAgSDQoJRFRNRl9OSU5F",
+            "EAkSDQoJRFRNRl9aRVJPEAoSCgoGRFRNRl9BEAsSCgoGRFRNRl9CEAwSCgoG",
+            "RFRNRl9DEA0SCgoGRFRNRl9EEA4SDQoJRFRNRl9TVEFSEA8SDgoKRFRNRl9Q",
+            "T1VORBAQQoYCCiNjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRh",
+            "MUIQQXVkaW9Db25maWdQcm90b1ABWklnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMTtkaWFs",
+            "b2dmbG93+AEBogICREaqAh9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJl",
+            "dGEx6kFVChthdXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVs",
+            "fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2Beta1.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmf), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +98,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2Beta1.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmfEvents), global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmfEvents.Parser, new[]{ "DtmfEvents" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model" }, null, null, null, null)
           }));
     }
     #endregion
@@ -165,7 +166,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Variant of the specified [Speech model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] to use.
+  /// Variant of the specified [Speech
+  /// model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] to use.
   ///
   /// See the [Cloud Speech
   /// documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -199,8 +201,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Use an enhanced model variant:
     ///
     /// * If an enhanced variant does not exist for the given
-    ///   [model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] and request language, Dialogflow falls
-    ///   back to the standard variant.
+    ///   [model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] and
+    ///   request language, Dialogflow falls back to the standard variant.
     ///
     ///   The [Cloud Speech
     ///   documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -1051,10 +1053,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int EnableWordInfoFieldNumber = 13;
     private bool enableWordInfo_;
     /// <summary>
-    /// If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.v2beta1.SpeechWordInfo] in
-    /// [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult] with information about the recognized speech
-    /// words, e.g. start and end time offsets. If false or unspecified, Speech
-    /// doesn't return any word-level information.
+    /// If `true`, Dialogflow returns
+    /// [SpeechWordInfo][google.cloud.dialogflow.v2beta1.SpeechWordInfo] in
+    /// [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult]
+    /// with information about the recognized speech words, e.g. start and end time
+    /// offsets. If false or unspecified, Speech doesn't return any word-level
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1136,7 +1140,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int ModelVariantFieldNumber = 10;
     private global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant modelVariant_ = global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant.Unspecified;
     /// <summary>
-    /// Which variant of the [Speech model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] to use.
+    /// Which variant of the [Speech
+    /// model][google.cloud.dialogflow.v2beta1.InputAudioConfig.model] to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1175,7 +1180,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int DisableNoSpeechRecognizedEventFieldNumber = 14;
     private bool disableNoSpeechRecognizedEvent_;
     /// <summary>
-    /// Only used in [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent] and
+    /// Only used in
+    /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent]
+    /// and
     /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
     /// If `false` and recognition doesn't return any result, trigger
     /// `NO_SPEECH_RECOGNIZED` event to Dialogflow agent.
@@ -1592,9 +1599,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Optional. The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
-    /// [name][google.cloud.dialogflow.v2beta1.VoiceSelectionParams.name]. Note that this is only a preference, not requirement. If a
-    /// voice of the appropriate gender is not available, the synthesizer should
-    /// substitute a voice with a different gender rather than failing the request.
+    /// [name][google.cloud.dialogflow.v2beta1.VoiceSelectionParams.name]. Note
+    /// that this is only a preference, not requirement. If a voice of the
+    /// appropriate gender is not available, the synthesizer should substitute a
+    /// voice with a different gender rather than failing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2606,7 +2614,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Configures speech transcription for [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile].
+  /// Configures speech transcription for
+  /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile].
   /// </summary>
   public sealed partial class SpeechToTextConfig : pb::IMessage<SpeechToTextConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2643,6 +2652,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechToTextConfig(SpeechToTextConfig other) : this() {
       speechModelVariant_ = other.speechModelVariant_;
+      model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2658,11 +2668,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// The speech model used in speech to text.
     /// `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as
-    /// `USE_ENHANCED`. It can be overridden in [AnalyzeContentRequest][google.cloud.dialogflow.v2beta1.AnalyzeContentRequest] and
-    /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest] request.
-    /// If enhanced model variant is specified and an enhanced
-    /// version of the specified model for the language does not exist, then it
-    /// would emit an error.
+    /// `USE_ENHANCED`. It can be overridden in
+    /// [AnalyzeContentRequest][google.cloud.dialogflow.v2beta1.AnalyzeContentRequest]
+    /// and
+    /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest]
+    /// request. If enhanced model variant is specified and an enhanced version of
+    /// the specified model for the language does not exist, then it would emit an
+    /// error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2670,6 +2682,27 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       get { return speechModelVariant_; }
       set {
         speechModelVariant_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 2;
+    private string model_ = "";
+    /// <summary>
+    /// Which Speech model to select. Select the model best suited to your domain
+    /// to get best results. If a model is not explicitly specified, then a default
+    /// model is used.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2689,6 +2722,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         return true;
       }
       if (SpeechModelVariant != other.SpeechModelVariant) return false;
+      if (Model != other.Model) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2697,6 +2731,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant.Unspecified) hash ^= SpeechModelVariant.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2719,6 +2754,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SpeechModelVariant);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2733,6 +2772,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SpeechModelVariant);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2745,6 +2788,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       int size = 0;
       if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpeechModelVariant);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2760,6 +2806,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (other.SpeechModelVariant != global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant.Unspecified) {
         SpeechModelVariant = other.SpeechModelVariant;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2780,6 +2829,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant) input.ReadEnum();
             break;
           }
+          case 18: {
+            Model = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2797,6 +2850,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             break;
           case 8: {
             SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Model = input.ReadString();
             break;
           }
         }

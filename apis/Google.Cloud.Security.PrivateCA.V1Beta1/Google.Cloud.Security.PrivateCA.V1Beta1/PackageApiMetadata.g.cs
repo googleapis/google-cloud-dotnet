@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,12 +27,36 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Security.PrivateCA.V1Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Security.PrivateCA.V1Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1beta1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjovdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1beta1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("KjMvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1beta1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("EjMvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1beta1/{name=projects/*/locations/*}/operations" }
+                    proto::ByteString.FromBase64("EjEvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9vcGVyYXRpb25z")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

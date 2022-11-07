@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,15 @@ namespace Google.Cloud.ResourceManager.V3
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.ResourceManager.V3", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.ResourceManager.V3", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v3/{name=operations/**}" }
+                    proto::ByteString.FromBase64("EhgvdjMve25hbWU9b3BlcmF0aW9ucy8qKn0=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -35,6 +45,7 @@ namespace Google.Cloud.ResourceManager.V3
             yield return TagBindingsReflection.Descriptor;
             yield return TagKeysReflection.Descriptor;
             yield return TagValuesReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

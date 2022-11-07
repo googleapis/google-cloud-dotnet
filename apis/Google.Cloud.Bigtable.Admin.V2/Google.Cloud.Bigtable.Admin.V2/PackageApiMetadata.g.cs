@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,30 @@ namespace Google.Cloud.Bigtable.Admin.V2
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Bigtable.Admin.V2", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Bigtable.Admin.V2", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v2/{name=operations/**}:cancel" }
+                    proto::ByteString.FromBase64("Ih8vdjIve25hbWU9b3BlcmF0aW9ucy8qKn06Y2FuY2Vs")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v2/{name=operations/**}" }
+                    proto::ByteString.FromBase64("KhgvdjIve25hbWU9b3BlcmF0aW9ucy8qKn0=")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v2/{name=operations/**}" }
+                    proto::ByteString.FromBase64("EhgvdjIve25hbWU9b3BlcmF0aW9ucy8qKn0=")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v2/{name=operations/projects/**}/operations" }
+                    proto::ByteString.FromBase64("EiwvdjIve25hbWU9b3BlcmF0aW9ucy9wcm9qZWN0cy8qKn0vb3BlcmF0aW9ucw==")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -34,6 +59,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             yield return CommonReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
             yield return TableReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

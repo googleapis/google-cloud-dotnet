@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Iam.V1.Snippets
 {
-    // [START api_v1_generated_IAMPolicy_SetIamPolicy_sync]
+    // [START iam_v1_generated_IAMPolicy_SetIamPolicy_sync]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using Google.Protobuf.WellKnownTypes;
@@ -25,8 +25,11 @@ namespace Google.Cloud.Iam.V1.Snippets
     {
         /// <summary>Snippet for SetIamPolicy</summary>
         /// <remarks>
-        /// This snippet has been automatically generated for illustrative purposes only.
-        /// It may require modifications to work in your environment.
+        /// This snippet has been automatically generated and should be regarded as a code template only.
+        /// It will require modifications to work:
+        /// - It may require correct/in-range values for request initialization.
+        /// - It may require specifying regional endpoints when creating the service client as shown in
+        ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
         public void SetIamPolicyRequestObject()
         {
@@ -43,5 +46,5 @@ namespace Google.Cloud.Iam.V1.Snippets
             Policy response = iAMPolicyClient.SetIamPolicy(request);
         }
     }
-    // [END api_v1_generated_IAMPolicy_SetIamPolicy_sync]
+    // [END iam_v1_generated_IAMPolicy_SetIamPolicy_sync]
 }

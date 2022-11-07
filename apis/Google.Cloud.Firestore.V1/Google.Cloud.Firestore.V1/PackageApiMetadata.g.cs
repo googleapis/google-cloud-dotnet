@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -35,6 +36,7 @@ namespace Google.Cloud.Firestore.V1
             yield return FirestoreReflection.Descriptor;
             yield return QueryReflection.Descriptor;
             yield return WriteReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
         }
     }
 }

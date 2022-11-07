@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,12 +27,26 @@ namespace Google.Cloud.Functions.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Functions.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Functions.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=operations/*}" }
+                    proto::ByteString.FromBase64("EhcvdjEve25hbWU9b3BlcmF0aW9ucy8qfQ==")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/operations" }
+                    proto::ByteString.FromBase64("Eg4vdjEvb3BlcmF0aW9ucw==")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return FunctionsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

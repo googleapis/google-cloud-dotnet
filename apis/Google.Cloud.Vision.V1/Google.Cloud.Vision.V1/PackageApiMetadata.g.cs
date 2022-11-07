@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,15 @@ namespace Google.Cloud.Vision.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Vision.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Vision.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/operations/*}" }, { "get": "/v1/{name=operations/*}" }, { "get": "/v1/{name=locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9WjASLi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aGRIXL3YxL3tuYW1lPW9wZXJhdGlvbnMvKn1aJRIjL3YxL3tuYW1lPWxvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -35,6 +45,7 @@ namespace Google.Cloud.Vision.V1
             yield return ProductSearchServiceReflection.Descriptor;
             yield return TextAnnotationReflection.Descriptor;
             yield return WebDetectionReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

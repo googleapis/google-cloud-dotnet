@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,30 @@ namespace Google.Cloud.DataLabeling.V1Beta1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.DataLabeling.V1Beta1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.DataLabeling.V1Beta1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "get": "/v1beta1/{name=projects/*/operations/*}:cancel" }
+                    proto::ByteString.FromBase64("Ei4vdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn06Y2FuY2Vs")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1beta1/{name=projects/*/operations/*}" }
+                    proto::ByteString.FromBase64("KicvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1beta1/{name=projects/*/operations/*}" }
+                    proto::ByteString.FromBase64("EicvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1beta1/{name=projects/*}/operations" }
+                    proto::ByteString.FromBase64("EiUvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qfS9vcGVyYXRpb25z")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -39,6 +64,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
             yield return HumanAnnotationConfigReflection.Descriptor;
             yield return InstructionReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

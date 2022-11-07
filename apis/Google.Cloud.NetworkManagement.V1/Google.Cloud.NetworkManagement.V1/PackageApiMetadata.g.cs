@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,13 +27,37 @@ namespace Google.Cloud.NetworkManagement.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.NetworkManagement.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.NetworkManagement.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/locations/global/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1/{name=projects/*/locations/global/operations/*}" }
+                    proto::ByteString.FromBase64("KjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/locations/global/operations/*}" }
+                    proto::ByteString.FromBase64("EjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/{name=projects/*/locations/global}/operations" }
+                    proto::ByteString.FromBase64("EjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsfS9vcGVyYXRpb25z")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ConnectivityTestReflection.Descriptor;
             yield return ReachabilityReflection.Descriptor;
             yield return TraceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

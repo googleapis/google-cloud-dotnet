@@ -16,6 +16,9 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +28,30 @@ namespace Google.Cloud.Firestore.Admin.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Firestore.Admin.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Firestore.Admin.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/databases/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1/{name=projects/*/databases/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/databases/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/{name=projects/*/databases/*}/operations" }
+                    proto::ByteString.FromBase64("EiwvdjEve25hbWU9cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vb3BlcmF0aW9ucw==")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -35,6 +61,8 @@ namespace Google.Cloud.Firestore.Admin.V1
             yield return IndexReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return OperationReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

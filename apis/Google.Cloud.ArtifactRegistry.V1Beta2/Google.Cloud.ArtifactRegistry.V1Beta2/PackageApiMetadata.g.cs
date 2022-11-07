@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.ArtifactRegistry.V1Beta2", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.ArtifactRegistry.V1Beta2", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1beta2/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("EjMvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -38,6 +48,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             yield return TagReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return YumArtifactReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

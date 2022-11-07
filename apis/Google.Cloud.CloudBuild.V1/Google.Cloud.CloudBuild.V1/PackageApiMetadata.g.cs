@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,11 +27,25 @@ namespace Google.Cloud.CloudBuild.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.CloudBuild.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.CloudBuild.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=operations/**}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("Ih8vdjEve25hbWU9b3BlcmF0aW9ucy8qKn06Y2FuY2VsOgEqWjoiNS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=operations/**}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn1aMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudbuildReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

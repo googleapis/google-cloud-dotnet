@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -25,7 +27,20 @@ namespace Google.Cloud.AppEngine.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.AppEngine.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.AppEngine.V1", GetFileDescriptors)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=apps/*/operations/*}" }
+                    proto::ByteString.FromBase64("Eh4vdjEve25hbWU9YXBwcy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/{name=apps/*}/operations" }
+                    proto::ByteString.FromBase64("EhwvdjEve25hbWU9YXBwcy8qfS9vcGVyYXRpb25z")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
@@ -45,6 +60,7 @@ namespace Google.Cloud.AppEngine.V1
             yield return OperationReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return VersionReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }
