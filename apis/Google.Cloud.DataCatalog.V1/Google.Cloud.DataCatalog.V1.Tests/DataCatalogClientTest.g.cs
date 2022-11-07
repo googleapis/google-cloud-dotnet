@@ -36,6 +36,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntryGroupRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -60,6 +61,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryGroupRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -86,6 +88,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntryGroup()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -110,6 +113,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryGroupAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -136,6 +140,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntryGroupResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -160,6 +165,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryGroupResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryGroupRequest request = new CreateEntryGroupRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -186,6 +192,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryGroupRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -209,6 +216,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryGroupRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -234,6 +242,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryGroup1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -256,6 +265,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryGroup1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -280,6 +290,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryGroup1ResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -302,6 +313,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryGroup1ResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -326,6 +338,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryGroup2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -349,6 +362,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryGroup2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -374,6 +388,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryGroup2ResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -397,6 +412,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryGroup2ResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryGroupRequest request = new GetEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -422,6 +438,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntryGroupRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -445,6 +462,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntryGroupRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -470,6 +488,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntryGroup1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -492,6 +511,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntryGroup1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -516,6 +536,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntryGroup2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -539,6 +560,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntryGroup2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryGroupRequest request = new UpdateEntryGroupRequest
             {
                 EntryGroup = new EntryGroup(),
@@ -564,6 +586,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntryGroupRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -580,6 +603,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryGroupRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -597,6 +621,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntryGroup()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -612,6 +637,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryGroupAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -628,6 +654,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntryGroupResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -643,6 +670,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryGroupResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryGroupRequest request = new DeleteEntryGroupRequest
             {
                 EntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -659,6 +687,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -708,6 +737,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -759,6 +789,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntry()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -808,6 +839,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -859,6 +891,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateEntryResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -908,6 +941,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateEntryResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateEntryRequest request = new CreateEntryRequest
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
@@ -959,6 +993,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest
             {
                 Entry = new Entry(),
@@ -1007,6 +1042,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest
             {
                 Entry = new Entry(),
@@ -1057,6 +1093,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntry1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest { Entry = new Entry(), };
             Entry expectedResponse = new Entry
             {
@@ -1101,6 +1138,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntry1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest { Entry = new Entry(), };
             Entry expectedResponse = new Entry
             {
@@ -1147,6 +1185,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateEntry2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest
             {
                 Entry = new Entry(),
@@ -1195,6 +1234,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateEntry2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntryRequest request = new UpdateEntryRequest
             {
                 Entry = new Entry(),
@@ -1245,6 +1285,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1260,6 +1301,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1276,6 +1318,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntry()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1291,6 +1334,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1307,6 +1351,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteEntryResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1322,6 +1367,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteEntryResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteEntryRequest request = new DeleteEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1338,6 +1384,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1385,6 +1432,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1434,6 +1482,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntry()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1481,6 +1530,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1530,6 +1580,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetEntryResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1577,6 +1628,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetEntryResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntryRequest request = new GetEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1626,6 +1678,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void LookupEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupEntryRequest request = new LookupEntryRequest
             {
                 LinkedResource = "linked_resourcef4db0f72",
@@ -1675,6 +1728,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task LookupEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupEntryRequest request = new LookupEntryRequest
             {
                 LinkedResource = "linked_resourcef4db0f72",
@@ -1726,6 +1780,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void ModifyEntryOverviewRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1746,6 +1801,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task ModifyEntryOverviewRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1768,6 +1824,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void ModifyEntryContactsRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1791,6 +1848,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task ModifyEntryContactsRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -1816,6 +1874,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplateRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1846,6 +1905,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1878,6 +1938,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplate()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1908,6 +1969,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1940,6 +2002,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplateResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1970,6 +2033,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateRequest request = new CreateTagTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -2002,6 +2066,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTagTemplateRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2030,6 +2095,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTagTemplateRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2060,6 +2126,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTagTemplate()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2088,6 +2155,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTagTemplateAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2118,6 +2186,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTagTemplateResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2146,6 +2215,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTagTemplateResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTagTemplateRequest request = new GetTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2176,6 +2246,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2205,6 +2276,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2236,6 +2308,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplate1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2264,6 +2337,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplate1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2294,6 +2368,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplate2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2323,6 +2398,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplate2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateRequest request = new UpdateTagTemplateRequest
             {
                 TagTemplate = new TagTemplate(),
@@ -2354,6 +2430,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplateRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2370,6 +2447,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2387,6 +2465,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplate()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2403,6 +2482,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2420,6 +2500,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplateResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2436,6 +2517,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateRequest request = new DeleteTagTemplateRequest
             {
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2453,6 +2535,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplateFieldRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2479,6 +2562,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateFieldRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2507,6 +2591,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplateField()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2533,6 +2618,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateFieldAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2561,6 +2647,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagTemplateFieldResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2587,6 +2674,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagTemplateFieldResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagTemplateFieldRequest request = new CreateTagTemplateFieldRequest
             {
                 ParentAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
@@ -2615,6 +2703,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateFieldRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2641,6 +2730,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateFieldRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2669,6 +2759,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateField1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2694,6 +2785,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateField1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2721,6 +2813,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateField1ResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2746,6 +2839,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateField1ResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2773,6 +2867,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateField2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2799,6 +2894,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateField2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2827,6 +2923,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagTemplateField2ResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2853,6 +2950,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagTemplateField2ResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagTemplateFieldRequest request = new UpdateTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2881,6 +2979,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateFieldRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2906,6 +3005,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2933,6 +3033,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateField()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2958,6 +3059,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -2985,6 +3087,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateFieldResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3010,6 +3113,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldRequest request = new RenameTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3037,6 +3141,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateFieldEnumValueRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3062,6 +3167,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldEnumValueRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3089,6 +3195,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateFieldEnumValue()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3114,6 +3221,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldEnumValueAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3141,6 +3249,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void RenameTagTemplateFieldEnumValueResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3166,6 +3275,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task RenameTagTemplateFieldEnumValueResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
             {
                 TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
@@ -3193,6 +3303,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplateFieldRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3209,6 +3320,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateFieldRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3226,6 +3338,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplateField()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3242,6 +3355,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateFieldAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3259,6 +3373,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagTemplateFieldResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3275,6 +3390,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagTemplateFieldResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagTemplateFieldRequest request = new DeleteTagTemplateFieldRequest
             {
                 TagTemplateFieldName = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]"),
@@ -3292,6 +3408,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3322,6 +3439,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3354,6 +3472,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTag()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3384,6 +3503,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3416,6 +3536,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTagResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3446,6 +3567,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTagResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTagRequest request = new CreateTagRequest
             {
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3478,6 +3600,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTagRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
                 Tag = new Tag(),
@@ -3508,6 +3631,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTagRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
                 Tag = new Tag(),
@@ -3540,6 +3664,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTag1()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest { Tag = new Tag(), };
             Tag expectedResponse = new Tag
             {
@@ -3566,6 +3691,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTag1Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest { Tag = new Tag(), };
             Tag expectedResponse = new Tag
             {
@@ -3594,6 +3720,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTag2()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
                 Tag = new Tag(),
@@ -3624,6 +3751,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTag2Async()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
                 Tag = new Tag(),
@@ -3656,6 +3784,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3671,6 +3800,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3687,6 +3817,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTag()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3702,6 +3833,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3718,6 +3850,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTagResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3733,6 +3866,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTagResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTagRequest request = new DeleteTagRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3749,6 +3883,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void StarEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3765,6 +3900,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task StarEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3783,6 +3919,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void StarEntry()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3799,6 +3936,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task StarEntryAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3817,6 +3955,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void StarEntryResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3833,6 +3972,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task StarEntryResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StarEntryRequest request = new StarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3851,6 +3991,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UnstarEntryRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3867,6 +4008,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UnstarEntryRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3885,6 +4027,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UnstarEntry()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3901,6 +4044,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UnstarEntryAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3919,6 +4063,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UnstarEntryResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3935,6 +4080,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UnstarEntryResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UnstarEntryRequest request = new UnstarEntryRequest
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
@@ -3953,6 +4099,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -3983,6 +4130,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4015,6 +4163,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4044,6 +4193,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4075,6 +4225,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void SetIamPolicyResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4104,6 +4255,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4135,6 +4287,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4164,6 +4317,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4195,6 +4349,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4223,6 +4378,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4253,6 +4409,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetIamPolicyResourceNames()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4281,6 +4438,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4311,6 +4469,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -4337,6 +4496,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),

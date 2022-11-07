@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -32,6 +33,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void ReplaceTaxonomyRequestObject()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -60,6 +62,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task ReplaceTaxonomyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -90,6 +93,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void ImportTaxonomiesRequestObject()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportTaxonomiesRequest request = new ImportTaxonomiesRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -111,6 +115,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task ImportTaxonomiesRequestObjectAsync()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportTaxonomiesRequest request = new ImportTaxonomiesRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -134,6 +139,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void ExportTaxonomiesRequestObject()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExportTaxonomiesRequest request = new ExportTaxonomiesRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -161,6 +167,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task ExportTaxonomiesRequestObjectAsync()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExportTaxonomiesRequest request = new ExportTaxonomiesRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),

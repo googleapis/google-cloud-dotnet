@@ -25,24 +25,25 @@ namespace Google.Cloud.DataCatalog.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvdXNhZ2UucHJvdG8SG2dv",
-            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MRofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byKRAQoKVXNhZ2VTdGF0cxIZChF0b3RhbF9jb21wbGV0",
-            "aW9ucxgBIAEoAhIWCg50b3RhbF9mYWlsdXJlcxgCIAEoAhIbChN0b3RhbF9j",
-            "YW5jZWxsYXRpb25zGAMgASgCEjMKK3RvdGFsX2V4ZWN1dGlvbl90aW1lX2Zv",
-            "cl9jb21wbGV0aW9uc19taWxsaXMYBCABKAIiiQIKC1VzYWdlU2lnbmFsEi8K",
-            "C3VwZGF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBJjChd1c2FnZV93aXRoaW5fdGltZV9yYW5nZRgCIAMoCzJCLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy52MS5Vc2FnZVNpZ25hbC5Vc2FnZVdpdGhpblRp",
-            "bWVSYW5nZUVudHJ5GmQKGVVzYWdlV2l0aGluVGltZVJhbmdlRW50cnkSCwoD",
-            "a2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicuZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLlVzYWdlU3RhdHM6AjgBQssBCh9jb20uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNhdGFsb2f4",
-            "AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xv",
-            "dWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxv",
-            "Zzo6VjFiBnByb3RvMw=="));
+            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
+            "ZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "byKRAQoKVXNhZ2VTdGF0cxIZChF0b3RhbF9jb21wbGV0aW9ucxgBIAEoAhIW",
+            "Cg50b3RhbF9mYWlsdXJlcxgCIAEoAhIbChN0b3RhbF9jYW5jZWxsYXRpb25z",
+            "GAMgASgCEjMKK3RvdGFsX2V4ZWN1dGlvbl90aW1lX2Zvcl9jb21wbGV0aW9u",
+            "c19taWxsaXMYBCABKAIijgIKC1VzYWdlU2lnbmFsEi8KC3VwZGF0ZV90aW1l",
+            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJoChd1c2FnZV93",
+            "aXRoaW5fdGltZV9yYW5nZRgCIAMoCzJCLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
+            "YWxvZy52MS5Vc2FnZVNpZ25hbC5Vc2FnZVdpdGhpblRpbWVSYW5nZUVudHJ5",
+            "QgPgQQMaZAoZVXNhZ2VXaXRoaW5UaW1lUmFuZ2VFbnRyeRILCgNrZXkYASAB",
+            "KAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
+            "djEuVXNhZ2VTdGF0czoCOAFCywEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjFQAVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9kYXRhY2F0YWxvZy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dv",
+            "b2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRh",
+            "Q2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.UsageStats), global::Google.Cloud.DataCatalog.V1.UsageStats.Parser, new[]{ "TotalCompletions", "TotalFailures", "TotalCancellations", "TotalExecutionTimeForCompletionsMillis" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.UsageSignal), global::Google.Cloud.DataCatalog.V1.UsageSignal.Parser, new[]{ "UpdateTime", "UsageWithinTimeRange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -448,7 +449,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.UsageStats>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.DataCatalog.V1.UsageStats.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.UsageStats> usageWithinTimeRange_ = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.UsageStats>();
     /// <summary>
-    /// Usage statistics over each of the predefined time ranges.
+    /// Output only. BigQuery usage statistics over each of the predefined time ranges.
     ///
     /// Supported time ranges are `{"24H", "7D", "30D"}`.
     /// </summary>

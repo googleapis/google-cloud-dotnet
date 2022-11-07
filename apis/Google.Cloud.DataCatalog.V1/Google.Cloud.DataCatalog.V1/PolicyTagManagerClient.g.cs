@@ -61,6 +61,7 @@ namespace Google.Cloud.DataCatalog.V1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -222,6 +223,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PolicyTagManagerSettings"/> object.</returns>
         public PolicyTagManagerSettings Clone() => new PolicyTagManagerSettings(this);
@@ -367,6 +373,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC PolicyTagManager client</summary>
         public virtual PolicyTagManager.PolicyTagManagerClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a taxonomy in a specified project.
@@ -1658,6 +1667,7 @@ namespace Google.Cloud.DataCatalog.V1
             GrpcClient = grpcClient;
             PolicyTagManagerSettings effectiveSettings = settings ?? PolicyTagManagerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTaxonomy = clientHelper.BuildApiCall<CreateTaxonomyRequest, Taxonomy>("CreateTaxonomy", grpcClient.CreateTaxonomyAsync, grpcClient.CreateTaxonomy, effectiveSettings.CreateTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTaxonomy);
             Modify_CreateTaxonomyApiCall(ref _callCreateTaxonomy);
@@ -1732,6 +1742,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC PolicyTagManager client</summary>
         public override PolicyTagManager.PolicyTagManagerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateTaxonomyRequest(ref CreateTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2120,5 +2133,21 @@ namespace Google.Cloud.DataCatalog.V1
         public scg::IEnumerator<PolicyTag> GetEnumerator() => PolicyTags.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class PolicyTagManager
+    {
+        public partial class PolicyTagManagerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTaxonomyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -64,6 +65,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTaxonomyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -94,6 +96,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTaxonomy()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -122,6 +125,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTaxonomyAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -152,6 +156,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreateTaxonomyResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -180,6 +185,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreateTaxonomyResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTaxonomyRequest request = new CreateTaxonomyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -210,6 +216,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTaxonomyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -225,6 +232,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTaxonomyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -241,6 +249,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTaxonomy()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -256,6 +265,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTaxonomyAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -272,6 +282,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeleteTaxonomyResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -287,6 +298,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeleteTaxonomyResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTaxonomyRequest request = new DeleteTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -303,6 +315,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTaxonomyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTaxonomyRequest request = new UpdateTaxonomyRequest
             {
                 Taxonomy = new Taxonomy(),
@@ -331,6 +344,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTaxonomyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTaxonomyRequest request = new UpdateTaxonomyRequest
             {
                 Taxonomy = new Taxonomy(),
@@ -361,6 +375,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdateTaxonomy()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTaxonomyRequest request = new UpdateTaxonomyRequest
             {
                 Taxonomy = new Taxonomy(),
@@ -388,6 +403,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdateTaxonomyAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTaxonomyRequest request = new UpdateTaxonomyRequest
             {
                 Taxonomy = new Taxonomy(),
@@ -417,6 +433,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTaxonomyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -444,6 +461,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTaxonomyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -473,6 +491,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTaxonomy()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -500,6 +519,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTaxonomyAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -529,6 +549,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetTaxonomyResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -556,6 +577,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetTaxonomyResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTaxonomyRequest request = new GetTaxonomyRequest
             {
                 TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -585,6 +607,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreatePolicyTagRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -612,6 +635,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreatePolicyTagRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -641,6 +665,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreatePolicyTag()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -668,6 +693,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreatePolicyTagAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -697,6 +723,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void CreatePolicyTagResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -724,6 +751,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task CreatePolicyTagResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePolicyTagRequest request = new CreatePolicyTagRequest
             {
                 ParentAsTaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
@@ -753,6 +781,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeletePolicyTagRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -768,6 +797,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeletePolicyTagRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -784,6 +814,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeletePolicyTag()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -799,6 +830,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeletePolicyTagAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -815,6 +847,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void DeletePolicyTagResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -830,6 +863,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task DeletePolicyTagResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeletePolicyTagRequest request = new DeletePolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -846,6 +880,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdatePolicyTagRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdatePolicyTagRequest request = new UpdatePolicyTagRequest
             {
                 PolicyTag = new PolicyTag(),
@@ -873,6 +908,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdatePolicyTagRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdatePolicyTagRequest request = new UpdatePolicyTagRequest
             {
                 PolicyTag = new PolicyTag(),
@@ -902,6 +938,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void UpdatePolicyTag()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdatePolicyTagRequest request = new UpdatePolicyTagRequest
             {
                 PolicyTag = new PolicyTag(),
@@ -928,6 +965,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task UpdatePolicyTagAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdatePolicyTagRequest request = new UpdatePolicyTagRequest
             {
                 PolicyTag = new PolicyTag(),
@@ -956,6 +994,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetPolicyTagRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -982,6 +1021,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetPolicyTagRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -1010,6 +1050,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetPolicyTag()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -1036,6 +1077,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetPolicyTagAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -1064,6 +1106,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetPolicyTagResourceNames()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -1090,6 +1133,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetPolicyTagResourceNamesAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPolicyTagRequest request = new GetPolicyTagRequest
             {
                 PolicyTagName = PolicyTagName.FromProjectLocationTaxonomyPolicyTag("[PROJECT]", "[LOCATION]", "[TAXONOMY]", "[POLICY_TAG]"),
@@ -1118,6 +1162,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1147,6 +1192,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1178,6 +1224,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1208,6 +1255,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1240,6 +1288,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1266,6 +1315,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<PolicyTagManager.PolicyTagManagerClient> mockGrpcClient = new moq::Mock<PolicyTagManager.PolicyTagManagerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
