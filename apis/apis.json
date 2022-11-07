@@ -1553,12 +1553,15 @@
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Discovery Engine",
       "productUrl": "https://cloud.google.com/discovery-engine/docs",
-      "description": "Recommended Google client library to access the Google Discovery Engine API (v1beta).",
-      "tags": [],
+      "description": "Recommended Google client library to access the Google Discovery Engine API (v1beta). Discovery Engine powers high-quality content recommendations on your digital properties for Discovery for Media.",
+      "tags": [
+        "discovery",
+        "media"
+      ],
       "dependencies": {
         "Google.LongRunning": "3.0.0"
       },
