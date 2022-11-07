@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -49,6 +50,7 @@ namespace Google.Cloud.DataCatalog.V1
             ReplaceTaxonomySettings = existing.ReplaceTaxonomySettings;
             ImportTaxonomiesSettings = existing.ImportTaxonomiesSettings;
             ExportTaxonomiesSettings = existing.ExportTaxonomiesSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -92,6 +94,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ExportTaxonomiesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PolicyTagManagerSerializationSettings"/> object.</returns>
@@ -240,6 +247,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC PolicyTagManagerSerialization client</summary>
         public virtual PolicyTagManagerSerialization.PolicyTagManagerSerializationClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Replaces (updates) a taxonomy and all its policy tags.
@@ -424,6 +434,7 @@ namespace Google.Cloud.DataCatalog.V1
             GrpcClient = grpcClient;
             PolicyTagManagerSerializationSettings effectiveSettings = settings ?? PolicyTagManagerSerializationSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callReplaceTaxonomy = clientHelper.BuildApiCall<ReplaceTaxonomyRequest, Taxonomy>("ReplaceTaxonomy", grpcClient.ReplaceTaxonomyAsync, grpcClient.ReplaceTaxonomy, effectiveSettings.ReplaceTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReplaceTaxonomy);
             Modify_ReplaceTaxonomyApiCall(ref _callReplaceTaxonomy);
@@ -448,6 +459,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC PolicyTagManagerSerialization client</summary>
         public override PolicyTagManagerSerialization.PolicyTagManagerSerializationClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ReplaceTaxonomyRequest(ref ReplaceTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -573,6 +587,22 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Modify_ExportTaxonomiesRequest(ref request, ref callSettings);
             return _callExportTaxonomies.Async(request, callSettings);
+        }
+    }
+
+    public static partial class PolicyTagManagerSerialization
+    {
+        public partial class PolicyTagManagerSerializationClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

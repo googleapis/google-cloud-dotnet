@@ -80,6 +80,7 @@ namespace Google.Cloud.DataCatalog.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -518,6 +519,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataCatalogSettings"/> object.</returns>
         public DataCatalogSettings Clone() => new DataCatalogSettings(this);
@@ -658,6 +664,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC DataCatalog client</summary>
         public virtual DataCatalog.DataCatalogClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Searches Data Catalog for multiple resources like entries and tags that
@@ -6458,6 +6467,7 @@ namespace Google.Cloud.DataCatalog.V1
             GrpcClient = grpcClient;
             DataCatalogSettings effectiveSettings = settings ?? DataCatalogSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callSearchCatalog = clientHelper.BuildApiCall<SearchCatalogRequest, SearchCatalogResponse>("SearchCatalog", grpcClient.SearchCatalogAsync, grpcClient.SearchCatalog, effectiveSettings.SearchCatalogSettings);
             Modify_ApiCall(ref _callSearchCatalog);
             Modify_SearchCatalogApiCall(ref _callSearchCatalog);
@@ -6627,6 +6637,9 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>The underlying gRPC DataCatalog client</summary>
         public override DataCatalog.DataCatalogClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_SearchCatalogRequest(ref SearchCatalogRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7889,5 +7902,21 @@ namespace Google.Cloud.DataCatalog.V1
         public scg::IEnumerator<Tag> GetEnumerator() => Tags.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class DataCatalog
+    {
+        public partial class DataCatalogClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }
