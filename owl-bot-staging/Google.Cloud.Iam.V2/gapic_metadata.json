@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.iam.v2",
+  "libraryPackage": "Google.Cloud.Iam.V2",
+  "services": {
+    "Policies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PoliciesClient",
+          "rpcs": {
+            "CreatePolicy": {
+              "methods": [
+                "CreatePolicy",
+                "CreatePolicyAsync"
+              ]
+            },
+            "DeletePolicy": {
+              "methods": [
+                "DeletePolicy",
+                "DeletePolicyAsync"
+              ]
+            },
+            "GetPolicy": {
+              "methods": [
+                "GetPolicy",
+                "GetPolicyAsync"
+              ]
+            },
+            "ListPolicies": {
+              "methods": [
+                "ListPolicies",
+                "ListPoliciesAsync"
+              ]
+            },
+            "UpdatePolicy": {
+              "methods": [
+                "UpdatePolicy",
+                "UpdatePolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

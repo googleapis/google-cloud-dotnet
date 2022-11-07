@@ -1,0 +1,1143 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.enterpriseknowledgegraph.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_sync",
+      "title": "CreateEntityReconciliationJobRequestObject",
+      "description": "Snippet for CreateEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_async",
+      "title": "CreateEntityReconciliationJobRequestObjectAsync",
+      "description": "Snippet for CreateEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_sync_flattened",
+      "title": "CreateEntityReconciliationJob",
+      "description": "Snippet for CreateEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_async_flattened",
+      "title": "CreateEntityReconciliationJobAsync",
+      "description": "Snippet for CreateEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_sync_flattened_resourceNames",
+      "title": "CreateEntityReconciliationJobResourceNames",
+      "description": "Snippet for CreateEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CreateEntityReconciliationJob_async_flattened_resourceNames",
+      "title": "CreateEntityReconciliationJobResourceNamesAsync",
+      "description": "Snippet for CreateEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CreateEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_sync",
+      "title": "GetEntityReconciliationJobRequestObject",
+      "description": "Snippet for GetEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_async",
+      "title": "GetEntityReconciliationJobRequestObjectAsync",
+      "description": "Snippet for GetEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_sync_flattened",
+      "title": "GetEntityReconciliationJob",
+      "description": "Snippet for GetEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_async_flattened",
+      "title": "GetEntityReconciliationJobAsync",
+      "description": "Snippet for GetEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_sync_flattened_resourceNames",
+      "title": "GetEntityReconciliationJobResourceNames",
+      "description": "Snippet for GetEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_GetEntityReconciliationJob_async_flattened_resourceNames",
+      "title": "GetEntityReconciliationJobResourceNamesAsync",
+      "description": "Snippet for GetEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.GetEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_sync",
+      "title": "ListEntityReconciliationJobsRequestObject",
+      "description": "Snippet for ListEntityReconciliationJobs",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobs",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_async",
+      "title": "ListEntityReconciliationJobsRequestObjectAsync",
+      "description": "Snippet for ListEntityReconciliationJobsAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobsAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_sync_flattened",
+      "title": "ListEntityReconciliationJobs",
+      "description": "Snippet for ListEntityReconciliationJobs",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobs",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_async_flattened",
+      "title": "ListEntityReconciliationJobsAsync",
+      "description": "Snippet for ListEntityReconciliationJobsAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobsAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_sync_flattened_resourceNames",
+      "title": "ListEntityReconciliationJobsResourceNames",
+      "description": "Snippet for ListEntityReconciliationJobs",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobs",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_ListEntityReconciliationJobs_async_flattened_resourceNames",
+      "title": "ListEntityReconciliationJobsResourceNamesAsync",
+      "description": "Snippet for ListEntityReconciliationJobsAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityReconciliationJobsAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntityReconciliationJobs",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_sync",
+      "title": "CancelEntityReconciliationJobRequestObject",
+      "description": "Snippet for CancelEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_async",
+      "title": "CancelEntityReconciliationJobRequestObjectAsync",
+      "description": "Snippet for CancelEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_sync_flattened",
+      "title": "CancelEntityReconciliationJob",
+      "description": "Snippet for CancelEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_async_flattened",
+      "title": "CancelEntityReconciliationJobAsync",
+      "description": "Snippet for CancelEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_sync_flattened_resourceNames",
+      "title": "CancelEntityReconciliationJobResourceNames",
+      "description": "Snippet for CancelEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_CancelEntityReconciliationJob_async_flattened_resourceNames",
+      "title": "CancelEntityReconciliationJobResourceNamesAsync",
+      "description": "Snippet for CancelEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "CancelEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.CancelEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_sync",
+      "title": "DeleteEntityReconciliationJobRequestObject",
+      "description": "Snippet for DeleteEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_async",
+      "title": "DeleteEntityReconciliationJobRequestObjectAsync",
+      "description": "Snippet for DeleteEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_sync_flattened",
+      "title": "DeleteEntityReconciliationJob",
+      "description": "Snippet for DeleteEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_async_flattened",
+      "title": "DeleteEntityReconciliationJobAsync",
+      "description": "Snippet for DeleteEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_sync_flattened_resourceNames",
+      "title": "DeleteEntityReconciliationJobResourceNames",
+      "description": "Snippet for DeleteEntityReconciliationJob",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJob",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_DeleteEntityReconciliationJob_async_flattened_resourceNames",
+      "title": "DeleteEntityReconciliationJobResourceNamesAsync",
+      "description": "Snippet for DeleteEntityReconciliationJobAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityReconciliationJobAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntityReconciliationJob",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.DeleteEntityReconciliationJob",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
