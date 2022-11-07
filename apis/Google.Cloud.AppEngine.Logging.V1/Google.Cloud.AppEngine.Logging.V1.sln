@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AppEngine.Logging.V1", "Google.Cloud.AppEngine.Logging.V1\Google.Cloud.AppEngine.Logging.V1.csproj", "{081C1375-BA11-4252-8533-0139C3E21778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AppEngine.Logging.V1", "Google.Cloud.AppEngine.Logging.V1\Google.Cloud.AppEngine.Logging.V1.csproj", "{24D2C781-163E-485C-B119-AF36E928F0A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{081C1375-BA11-4252-8533-0139C3E21778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{081C1375-BA11-4252-8533-0139C3E21778}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{081C1375-BA11-4252-8533-0139C3E21778}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{081C1375-BA11-4252-8533-0139C3E21778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D2C781-163E-485C-B119-AF36E928F0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D2C781-163E-485C-B119-AF36E928F0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D2C781-163E-485C-B119-AF36E928F0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D2C781-163E-485C-B119-AF36E928F0A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

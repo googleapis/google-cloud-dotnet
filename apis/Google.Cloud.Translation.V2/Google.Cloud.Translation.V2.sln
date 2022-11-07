@@ -1,57 +1,52 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2", "Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.csproj", "{3434B211-D93C-4E78-9F62-47E404E2511C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Translation.V2", "Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.csproj", "{82ABEB48-9DAF-4B89-A4D7-ACD514E8D9E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.LanguageCodeGenerator", "Google.Cloud.Translation.V2.LanguageCodeGenerator\Google.Cloud.Translation.V2.LanguageCodeGenerator.csproj", "{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Translation.V2.IntegrationTests", "Google.Cloud.Translation.V2.IntegrationTests\Google.Cloud.Translation.V2.IntegrationTests.csproj", "{BBCEEAB8-4E24-4B15-B5D3-3CBA88538170}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.Snippets", "Google.Cloud.Translation.V2.Snippets\Google.Cloud.Translation.V2.Snippets.csproj", "{05AF166A-4B0D-475F-ACCE-82C1E6295999}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{91149A06-BC74-4F79-A9F1-6892A17B08C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D64DC15F-64B5-48D0-9D17-A7E827C93C22}"
-	ProjectSection(SolutionItems) = preProject
-		docs\index.md = docs\index.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Translation.V2.LanguageCodeGenerator", "Google.Cloud.Translation.V2.LanguageCodeGenerator\Google.Cloud.Translation.V2.LanguageCodeGenerator.csproj", "{2C963A3C-EC42-4A1C-9373-1B33F72E440E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.Tests", "Google.Cloud.Translation.V2.Tests\Google.Cloud.Translation.V2.Tests.csproj", "{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Translation.V2.Snippets", "Google.Cloud.Translation.V2.Snippets\Google.Cloud.Translation.V2.Snippets.csproj", "{D8EE36C2-1A15-4BAA-A607-A2FCE4855535}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.IntegrationTests", "Google.Cloud.Translation.V2.IntegrationTests\Google.Cloud.Translation.V2.IntegrationTests.csproj", "{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Translation.V2.Tests", "Google.Cloud.Translation.V2.Tests\Google.Cloud.Translation.V2.Tests.csproj", "{98424CAC-0359-4838-9AF3-D04701F09BB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3434B211-D93C-4E78-9F62-47E404E2511C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3434B211-D93C-4E78-9F62-47E404E2511C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3434B211-D93C-4E78-9F62-47E404E2511C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3434B211-D93C-4E78-9F62-47E404E2511C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05AF166A-4B0D-475F-ACCE-82C1E6295999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05AF166A-4B0D-475F-ACCE-82C1E6295999}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05AF166A-4B0D-475F-ACCE-82C1E6295999}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05AF166A-4B0D-475F-ACCE-82C1E6295999}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82ABEB48-9DAF-4B89-A4D7-ACD514E8D9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ABEB48-9DAF-4B89-A4D7-ACD514E8D9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ABEB48-9DAF-4B89-A4D7-ACD514E8D9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ABEB48-9DAF-4B89-A4D7-ACD514E8D9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBCEEAB8-4E24-4B15-B5D3-3CBA88538170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBCEEAB8-4E24-4B15-B5D3-3CBA88538170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBCEEAB8-4E24-4B15-B5D3-3CBA88538170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBCEEAB8-4E24-4B15-B5D3-3CBA88538170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91149A06-BC74-4F79-A9F1-6892A17B08C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91149A06-BC74-4F79-A9F1-6892A17B08C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91149A06-BC74-4F79-A9F1-6892A17B08C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91149A06-BC74-4F79-A9F1-6892A17B08C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C963A3C-EC42-4A1C-9373-1B33F72E440E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C963A3C-EC42-4A1C-9373-1B33F72E440E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C963A3C-EC42-4A1C-9373-1B33F72E440E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C963A3C-EC42-4A1C-9373-1B33F72E440E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8EE36C2-1A15-4BAA-A607-A2FCE4855535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EE36C2-1A15-4BAA-A607-A2FCE4855535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EE36C2-1A15-4BAA-A607-A2FCE4855535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EE36C2-1A15-4BAA-A607-A2FCE4855535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98424CAC-0359-4838-9AF3-D04701F09BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98424CAC-0359-4838-9AF3-D04701F09BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98424CAC-0359-4838-9AF3-D04701F09BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98424CAC-0359-4838-9AF3-D04701F09BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
