@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTestCommand : CommandBase
     {
-        private const string TestTargetFramework = "netcoreapp3.1";
+        private const string PublishTargetFramework = "netstandard2.1";
         private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
 
         public SmokeTestCommand()
@@ -52,7 +52,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 return;
             }
 
-            var assembly = PublishUnitTestsAndLoadAssembly(id);
+            var assembly = PublishAndLoadAssembly(id);
             RunTests(smokeTests, assembly, projectId);
         }
 
@@ -64,16 +64,13 @@ namespace Google.Cloud.Tools.ReleaseManager
                 : new List<SmokeTest>();
         }
 
-        private Assembly PublishUnitTestsAndLoadAssembly(string id)
+        private Assembly PublishAndLoadAssembly(string id)
         {
-            // We publish the *test* project, as that's executable - so the appropriate gRPC native
-            // libraries are published as well. (They're not published within the library project.)
-            Console.WriteLine($"Publishing release version of unit test project");
+            Console.WriteLine($"Publishing release version of library");
             var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
-            var testProject = $"{id}.Tests";
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", testProject, "-f", TestTargetFramework);
+            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", PublishTargetFramework);
 
-            var assemblyFile = Path.Combine(sourceRoot, testProject, "bin", "Release", TestTargetFramework, "publish", $"{id}.dll");
+            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
             return Assembly.LoadFrom(assemblyFile);
         }
 
