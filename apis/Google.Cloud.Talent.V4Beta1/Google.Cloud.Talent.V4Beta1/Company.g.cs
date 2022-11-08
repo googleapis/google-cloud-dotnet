@@ -27,25 +27,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGihn",
-            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIvwECgdD",
+            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIoAFCgdD",
             "b21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPg",
             "QQISGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAhI2CgRzaXplGAQgASgOMigu",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnlTaXplEhwKFGhl",
             "YWRxdWFydGVyc19hZGRyZXNzGAUgASgJEhUKDWhpcmluZ19hZ2VuY3kYBiAB",
             "KAgSEAoIZWVvX3RleHQYByABKAkSEwoLd2Vic2l0ZV91cmkYCCABKAkSFwoP",
-            "Y2FyZWVyX3NpdGVfdXJpGAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRIwCihr",
+            "Y2FyZWVyX3NpdGVfdXJpGAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRI0Cihr",
             "ZXl3b3JkX3NlYXJjaGFibGVfam9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsgAygJ",
-            "EksKDGRlcml2ZWRfaW5mbxgMIAEoCzIwLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5Db21wYW55LkRlcml2ZWRJbmZvQgPgQQMSFgoJc3VzcGVuZGVk",
-            "GA0gASgIQgPgQQMaUwoLRGVyaXZlZEluZm8SRAoVaGVhZHF1YXJ0ZXJzX2xv",
-            "Y2F0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxv",
-            "Y2F0aW9uOoEB6kF+Chtqb2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkSN3By",
-            "b2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0ZW5hbnR9L2NvbXBhbmllcy97",
-            "Y29tcGFueX0SJnByb2plY3RzL3twcm9qZWN0fS9jb21wYW5pZXMve2NvbXBh",
-            "bnl9QoIBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhRDb21w",
-            "YW55UmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NU",
-            "U2IGcHJvdG8z"));
+            "QgIYARJLCgxkZXJpdmVkX2luZm8YDCABKAsyMC5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuQ29tcGFueS5EZXJpdmVkSW5mb0ID4EEDEhYKCXN1c3Bl",
+            "bmRlZBgNIAEoCEID4EEDGlMKC0Rlcml2ZWRJbmZvEkQKFWhlYWRxdWFydGVy",
+            "c19sb2NhdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Mb2NhdGlvbjqBAepBfgobam9icy5nb29nbGVhcGlzLmNvbS9Db21wYW55",
+            "Ejdwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50cy97dGVuYW50fS9jb21wYW5p",
+            "ZXMve2NvbXBhbnl9EiZwcm9qZWN0cy97cHJvamVjdH0vY29tcGFuaWVzL3tj",
+            "b21wYW55fUKCAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIU",
+            "Q29tcGFueVJlc291cmNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSi",
+            "AgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -300,6 +300,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// This field is deprecated. Please set the searchability of the custom
+    /// attribute in the [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] going forward.
+    ///
     /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes], whose
     /// corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any
@@ -307,6 +310,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// parenthesis, brackets and special symbols are not searchable as-is,
     /// and those keyword queries must be surrounded by quotes.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> KeywordSearchableJobCustomAttributes {
