@@ -45,6 +45,7 @@ namespace Google.Identity.AccessContextManager.V1.Snippets
                 CreateTime = new Timestamp(),
                 UpdateTime = new Timestamp(),
                 Etag = "",
+                Scopes = { "", },
             };
             // Make the request
             Operation<AccessPolicy, AccessContextManagerOperationMetadata> response = await accessContextManagerClient.CreateAccessPolicyAsync(request);
