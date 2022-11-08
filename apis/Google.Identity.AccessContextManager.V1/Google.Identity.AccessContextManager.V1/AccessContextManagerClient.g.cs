@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -86,6 +87,9 @@ namespace Google.Identity.AccessContextManager.V1
             UpdateGcpUserAccessBindingOperationsSettings = existing.UpdateGcpUserAccessBindingOperationsSettings.Clone();
             DeleteGcpUserAccessBindingSettings = existing.DeleteGcpUserAccessBindingSettings;
             DeleteGcpUserAccessBindingOperationsSettings = existing.DeleteGcpUserAccessBindingOperationsSettings.Clone();
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -659,6 +663,43 @@ namespace Google.Identity.AccessContextManager.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccessContextManagerClient.SetIamPolicy</c> and <c>AccessContextManagerClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccessContextManagerClient.GetIamPolicy</c> and <c>AccessContextManagerClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccessContextManagerClient.TestIamPermissions</c> and
+        /// <c>AccessContextManagerClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AccessContextManagerSettings"/> object.</returns>
         public AccessContextManagerSettings Clone() => new AccessContextManagerSettings(this);
@@ -718,15 +759,15 @@ namespace Google.Identity.AccessContextManager.V1
 
     /// <summary>AccessContextManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// API for setting [Access Levels]
-    /// [google.identity.accesscontextmanager.v1.AccessLevel] and [Service
-    /// Perimeters] [google.identity.accesscontextmanager.v1.ServicePerimeter]
-    /// for Google Cloud Projects. Each organization has one [AccessPolicy]
-    /// [google.identity.accesscontextmanager.v1.AccessPolicy] containing the
-    /// [Access Levels] [google.identity.accesscontextmanager.v1.AccessLevel]
-    /// and [Service Perimeters]
+    /// API for setting [access levels]
+    /// [google.identity.accesscontextmanager.v1.AccessLevel] and [service
+    /// perimeters] [google.identity.accesscontextmanager.v1.ServicePerimeter]
+    /// for Google Cloud projects. Each organization has one [access policy]
+    /// [google.identity.accesscontextmanager.v1.AccessPolicy] that contains the
+    /// [access levels] [google.identity.accesscontextmanager.v1.AccessLevel]
+    /// and [service perimeters]
     /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. This
-    /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy] is
+    /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy] is
     /// applicable to all resources in the organization.
     /// AccessPolicies
     /// </remarks>
@@ -814,9 +855,9 @@ namespace Google.Identity.AccessContextManager.V1
         public virtual AccessContextManager.AccessContextManagerClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [AccessPolicies]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] under a
-        /// container.
+        /// Lists all [access policies]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] in an
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -825,9 +866,9 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [AccessPolicies]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] under a
-        /// container.
+        /// Lists all [access policies]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] in an
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -836,8 +877,8 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -846,8 +887,8 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -856,8 +897,8 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -866,8 +907,8 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -883,8 +924,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -900,8 +941,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -914,8 +955,8 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -931,8 +972,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -948,8 +989,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to get.
@@ -962,10 +1003,10 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create an `AccessPolicy`. Fails if this organization already has a
-        /// `AccessPolicy`. The longrunning Operation will have a successful status
-        /// once the `AccessPolicy` has propagated to long-lasting storage.
-        /// Syntactic and basic semantic errors will be returned in `metadata` as a
+        /// Creates an access policy. This method fails if the organization already has
+        /// an access policy. The long-running operation has a successful status
+        /// after the access policy propagates to long-lasting storage.
+        /// Syntactic and basic semantic errors are returned in `metadata` as a
         /// BadRequest proto.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -975,10 +1016,10 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create an `AccessPolicy`. Fails if this organization already has a
-        /// `AccessPolicy`. The longrunning Operation will have a successful status
-        /// once the `AccessPolicy` has propagated to long-lasting storage.
-        /// Syntactic and basic semantic errors will be returned in `metadata` as a
+        /// Creates an access policy. This method fails if the organization already has
+        /// an access policy. The long-running operation has a successful status
+        /// after the access policy propagates to long-lasting storage.
+        /// Syntactic and basic semantic errors are returned in `metadata` as a
         /// BadRequest proto.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -988,10 +1029,10 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create an `AccessPolicy`. Fails if this organization already has a
-        /// `AccessPolicy`. The longrunning Operation will have a successful status
-        /// once the `AccessPolicy` has propagated to long-lasting storage.
-        /// Syntactic and basic semantic errors will be returned in `metadata` as a
+        /// Creates an access policy. This method fails if the organization already has
+        /// an access policy. The long-running operation has a successful status
+        /// after the access policy propagates to long-lasting storage.
+        /// Syntactic and basic semantic errors are returned in `metadata` as a
         /// BadRequest proto.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1028,13 +1069,12 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<AccessPolicy, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAccessPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1043,13 +1083,12 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1058,13 +1097,12 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1100,13 +1138,12 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<AccessPolicy, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccessPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="policy">
         /// Required. The updated AccessPolicy.
@@ -1124,13 +1161,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="policy">
         /// Required. The updated AccessPolicy.
@@ -1148,13 +1184,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="policy">
         /// Required. The updated AccessPolicy.
@@ -1168,11 +1203,11 @@ namespace Google.Identity.AccessContextManager.V1
             UpdateAccessPolicyAsync(policy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1181,11 +1216,11 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,11 +1229,11 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1234,11 +1269,11 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<wkt::Empty, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccessPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1254,11 +1289,11 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1274,11 +1309,11 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1291,11 +1326,11 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteAccessPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1311,11 +1346,11 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1331,11 +1366,11 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the access policy to delete.
@@ -1348,7 +1383,7 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteAccessPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1359,7 +1394,7 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1370,7 +1405,7 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1400,7 +1435,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1430,7 +1465,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1460,7 +1495,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -1490,8 +1525,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1501,8 +1536,8 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1512,8 +1547,8 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1523,8 +1558,8 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessLevelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1543,8 +1578,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1563,8 +1598,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1580,8 +1615,8 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessLevelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1600,8 +1635,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1620,8 +1655,8 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="name">
@@ -1637,13 +1672,13 @@ namespace Google.Identity.AccessContextManager.V1
             GetAccessLevelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1652,13 +1687,13 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1667,13 +1702,13 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1709,13 +1744,13 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<AccessLevel, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAccessLevelOperationsClient, callSettings);
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1740,13 +1775,13 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1771,13 +1806,13 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1798,13 +1833,13 @@ namespace Google.Identity.AccessContextManager.V1
             CreateAccessLevelAsync(parent, accessLevel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1829,13 +1864,13 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1860,13 +1895,13 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Access
@@ -1887,14 +1922,14 @@ namespace Google.Identity.AccessContextManager.V1
             CreateAccessLevelAsync(parent, accessLevel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1903,14 +1938,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1919,14 +1954,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1962,14 +1997,14 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<AccessLevel, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccessLevelOperationsClient, callSettings);
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="accessLevel">
         /// Required. The updated [Access Level]
@@ -1991,14 +2026,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="accessLevel">
         /// Required. The updated [Access Level]
@@ -2020,14 +2055,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="accessLevel">
         /// Required. The updated [Access Level]
@@ -2045,10 +2080,10 @@ namespace Google.Identity.AccessContextManager.V1
             UpdateAccessLevelAsync(accessLevel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2059,10 +2094,10 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2073,10 +2108,10 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2114,10 +2149,10 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<wkt::Empty, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccessLevelOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2137,10 +2172,10 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2160,10 +2195,10 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2180,10 +2215,10 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteAccessLevelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2203,10 +2238,10 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2226,10 +2261,10 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -2246,22 +2281,22 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteAccessLevelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Replace all existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [Access
-        /// Policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
-        /// the [Access Levels]
+        /// Replaces all existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
+        /// the [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] provided. This
-        /// is done atomically. The longrunning operation from this RPC will have a
-        /// successful status once all replacements have propagated to long-lasting
-        /// storage. Replacements containing errors will result in an error response
-        /// for the first error encountered.  Replacement will be cancelled on error,
-        /// existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] will not be
-        /// affected. Operation.response field will contain
-        /// ReplaceAccessLevelsResponse. Removing [Access Levels]
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting
+        /// storage. If the replacement contains errors, an error response is returned
+        /// for the first error encountered.  Upon error, the replacement is cancelled,
+        /// and existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] are not
+        /// affected. The Operation.response field contains
+        /// ReplaceAccessLevelsResponse. Removing [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] contained in existing
-        /// [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will result in
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] result in an
         /// error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2271,22 +2306,22 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Replace all existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [Access
-        /// Policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
-        /// the [Access Levels]
+        /// Replaces all existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
+        /// the [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] provided. This
-        /// is done atomically. The longrunning operation from this RPC will have a
-        /// successful status once all replacements have propagated to long-lasting
-        /// storage. Replacements containing errors will result in an error response
-        /// for the first error encountered.  Replacement will be cancelled on error,
-        /// existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] will not be
-        /// affected. Operation.response field will contain
-        /// ReplaceAccessLevelsResponse. Removing [Access Levels]
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting
+        /// storage. If the replacement contains errors, an error response is returned
+        /// for the first error encountered.  Upon error, the replacement is cancelled,
+        /// and existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] are not
+        /// affected. The Operation.response field contains
+        /// ReplaceAccessLevelsResponse. Removing [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] contained in existing
-        /// [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will result in
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] result in an
         /// error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2296,22 +2331,22 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Replace all existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [Access
-        /// Policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
-        /// the [Access Levels]
+        /// Replaces all existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
+        /// the [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] provided. This
-        /// is done atomically. The longrunning operation from this RPC will have a
-        /// successful status once all replacements have propagated to long-lasting
-        /// storage. Replacements containing errors will result in an error response
-        /// for the first error encountered.  Replacement will be cancelled on error,
-        /// existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] will not be
-        /// affected. Operation.response field will contain
-        /// ReplaceAccessLevelsResponse. Removing [Access Levels]
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting
+        /// storage. If the replacement contains errors, an error response is returned
+        /// for the first error encountered.  Upon error, the replacement is cancelled,
+        /// and existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] are not
+        /// affected. The Operation.response field contains
+        /// ReplaceAccessLevelsResponse. Removing [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] contained in existing
-        /// [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will result in
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] result in an
         /// error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2348,7 +2383,7 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<ReplaceAccessLevelsResponse, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReplaceAccessLevelsOperationsClient, callSettings);
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2359,7 +2394,7 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2370,7 +2405,7 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2400,7 +2435,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2430,7 +2465,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2460,7 +2495,7 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -2490,9 +2525,9 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2501,9 +2536,9 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2512,9 +2547,9 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2523,9 +2558,9 @@ namespace Google.Identity.AccessContextManager.V1
             GetServicePerimeterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2543,9 +2578,9 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2563,9 +2598,9 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2580,9 +2615,9 @@ namespace Google.Identity.AccessContextManager.V1
             GetServicePerimeterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2600,9 +2635,9 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2620,9 +2655,9 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -2637,14 +2672,14 @@ namespace Google.Identity.AccessContextManager.V1
             GetServicePerimeterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2653,14 +2688,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2669,14 +2704,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2712,14 +2747,14 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<ServicePerimeter, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateServicePerimeterOperationsClient, callSettings);
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2744,14 +2779,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2776,14 +2811,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2804,14 +2839,14 @@ namespace Google.Identity.AccessContextManager.V1
             CreateServicePerimeterAsync(parent, servicePerimeter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2836,14 +2871,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2868,14 +2903,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name for the access policy which owns this [Service
@@ -2896,14 +2931,14 @@ namespace Google.Identity.AccessContextManager.V1
             CreateServicePerimeterAsync(parent, servicePerimeter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2912,14 +2947,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2928,14 +2963,14 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2971,14 +3006,14 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<ServicePerimeter, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateServicePerimeterOperationsClient, callSettings);
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="servicePerimeter">
         /// Required. The updated `ServicePerimeter`. Syntactic correctness of the
@@ -2997,14 +3032,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="servicePerimeter">
         /// Required. The updated `ServicePerimeter`. Syntactic correctness of the
@@ -3023,14 +3058,14 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="servicePerimeter">
         /// Required. The updated `ServicePerimeter`. Syntactic correctness of the
@@ -3045,12 +3080,12 @@ namespace Google.Identity.AccessContextManager.V1
             UpdateServicePerimeterAsync(servicePerimeter, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3059,12 +3094,12 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3073,12 +3108,12 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3114,12 +3149,12 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<wkt::Empty, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteServicePerimeterOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3137,12 +3172,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3160,12 +3195,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3180,12 +3215,12 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteServicePerimeterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3203,12 +3238,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3226,12 +3261,12 @@ namespace Google.Identity.AccessContextManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name for the [Service Perimeter]
@@ -3246,18 +3281,18 @@ namespace Google.Identity.AccessContextManager.V1
             DeleteServicePerimeterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Replace all existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// with the [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided.
-        /// This is done atomically. The longrunning operation from this
-        /// RPC will have a successful status once all replacements have propagated to
-        /// long-lasting storage. Replacements containing errors will result in an
-        /// error response for the first error encountered. Replacement will be
-        /// cancelled on error, existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will not be
-        /// affected. Operation.response field will contain
+        /// Replace all existing [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with the
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided. This
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting storage.
+        /// Replacements containing errors result in an error response for the first
+        /// error encountered. Upon an error, replacement are cancelled and existing
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] are not
+        /// affected. The Operation.response field contains
         /// ReplaceServicePerimetersResponse.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3267,18 +3302,18 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Replace all existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// with the [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided.
-        /// This is done atomically. The longrunning operation from this
-        /// RPC will have a successful status once all replacements have propagated to
-        /// long-lasting storage. Replacements containing errors will result in an
-        /// error response for the first error encountered. Replacement will be
-        /// cancelled on error, existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will not be
-        /// affected. Operation.response field will contain
+        /// Replace all existing [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with the
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided. This
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting storage.
+        /// Replacements containing errors result in an error response for the first
+        /// error encountered. Upon an error, replacement are cancelled and existing
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] are not
+        /// affected. The Operation.response field contains
         /// ReplaceServicePerimetersResponse.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3288,18 +3323,18 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Replace all existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// with the [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided.
-        /// This is done atomically. The longrunning operation from this
-        /// RPC will have a successful status once all replacements have propagated to
-        /// long-lasting storage. Replacements containing errors will result in an
-        /// error response for the first error encountered. Replacement will be
-        /// cancelled on error, existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will not be
-        /// affected. Operation.response field will contain
+        /// Replace all existing [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with the
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided. This
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting storage.
+        /// Replacements containing errors result in an error response for the first
+        /// error encountered. Upon an error, replacement are cancelled and existing
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] are not
+        /// affected. The Operation.response field contains
         /// ReplaceServicePerimetersResponse.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3336,21 +3371,21 @@ namespace Google.Identity.AccessContextManager.V1
             lro::Operation<ReplaceServicePerimetersResponse, AccessContextManagerOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReplaceServicePerimetersOperationsClient, callSettings);
 
         /// <summary>
-        /// Commit the dry-run spec for all the [Service Perimeters]
+        /// Commits the dry-run specification for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
-        /// A commit operation on a Service Perimeter involves copying its `spec` field
-        /// to that Service Perimeter's `status` field. Only [Service Perimeters]
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// A commit operation on a service perimeter involves copying its `spec` field
+        /// to the `status` field of the service perimeter. Only [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] with
         /// `use_explicit_dry_run_spec` field set to true are affected by a commit
-        /// operation. The longrunning operation from this RPC will have a successful
-        /// status once the dry-run specs for all the [Service Perimeters]
+        /// operation. The long-running operation from this RPC has a successful
+        /// status after the dry-run specifications for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have been
-        /// committed. If a commit fails, it will cause the longrunning operation to
-        /// return an error response and the entire commit operation will be cancelled.
-        /// When successful, Operation.response field will contain
-        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will
-        /// be cleared after a successful commit operation.
+        /// committed. If a commit fails, it causes the long-running operation to
+        /// return an error response and the entire commit operation is cancelled.
+        /// When successful, the Operation.response field contains
+        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are
+        /// cleared after a successful commit operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3359,21 +3394,21 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Commit the dry-run spec for all the [Service Perimeters]
+        /// Commits the dry-run specification for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
-        /// A commit operation on a Service Perimeter involves copying its `spec` field
-        /// to that Service Perimeter's `status` field. Only [Service Perimeters]
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// A commit operation on a service perimeter involves copying its `spec` field
+        /// to the `status` field of the service perimeter. Only [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] with
         /// `use_explicit_dry_run_spec` field set to true are affected by a commit
-        /// operation. The longrunning operation from this RPC will have a successful
-        /// status once the dry-run specs for all the [Service Perimeters]
+        /// operation. The long-running operation from this RPC has a successful
+        /// status after the dry-run specifications for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have been
-        /// committed. If a commit fails, it will cause the longrunning operation to
-        /// return an error response and the entire commit operation will be cancelled.
-        /// When successful, Operation.response field will contain
-        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will
-        /// be cleared after a successful commit operation.
+        /// committed. If a commit fails, it causes the long-running operation to
+        /// return an error response and the entire commit operation is cancelled.
+        /// When successful, the Operation.response field contains
+        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are
+        /// cleared after a successful commit operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3382,21 +3417,21 @@ namespace Google.Identity.AccessContextManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Commit the dry-run spec for all the [Service Perimeters]
+        /// Commits the dry-run specification for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
-        /// A commit operation on a Service Perimeter involves copying its `spec` field
-        /// to that Service Perimeter's `status` field. Only [Service Perimeters]
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// A commit operation on a service perimeter involves copying its `spec` field
+        /// to the `status` field of the service perimeter. Only [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] with
         /// `use_explicit_dry_run_spec` field set to true are affected by a commit
-        /// operation. The longrunning operation from this RPC will have a successful
-        /// status once the dry-run specs for all the [Service Perimeters]
+        /// operation. The long-running operation from this RPC has a successful
+        /// status after the dry-run specifications for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have been
-        /// committed. If a commit fails, it will cause the longrunning operation to
-        /// return an error response and the entire commit operation will be cancelled.
-        /// When successful, Operation.response field will contain
-        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will
-        /// be cleared after a successful commit operation.
+        /// committed. If a commit fails, it causes the long-running operation to
+        /// return an error response and the entire commit operation is cancelled.
+        /// When successful, the Operation.response field contains
+        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are
+        /// cleared after a successful commit operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3685,7 +3720,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3703,7 +3738,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3721,7 +3756,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3766,7 +3801,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3794,7 +3829,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3822,7 +3857,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3846,7 +3881,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3874,7 +3909,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -3902,7 +3937,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -4234,19 +4269,133 @@ namespace Google.Identity.AccessContextManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, GcpUserAccessBindingOperationMetadata>> DeleteGcpUserAccessBindingAsync(GcpUserAccessBindingName name, st::CancellationToken cancellationToken) =>
             DeleteGcpUserAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// This method replaces the existing IAM policy on the access policy. The IAM
+        /// policy controls the set of users who can perform specific operations on the
+        /// Access Context Manager [access
+        /// policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// This method replaces the existing IAM policy on the access policy. The IAM
+        /// policy controls the set of users who can perform specific operations on the
+        /// Access Context Manager [access
+        /// policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// This method replaces the existing IAM policy on the access policy. The IAM
+        /// policy controls the set of users who can perform specific operations on the
+        /// Access Context Manager [access
+        /// policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the IAM permissions that the caller has on the specified Access
+        /// Context Manager resource. The resource can be an
+        /// [AccessPolicy][google.identity.accesscontextmanager.v1.AccessPolicy],
+        /// [AccessLevel][google.identity.accesscontextmanager.v1.AccessLevel], or
+        /// [ServicePerimeter][google.identity.accesscontextmanager.v1.ServicePerimeter
+        /// ]. This method does not support other resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the IAM permissions that the caller has on the specified Access
+        /// Context Manager resource. The resource can be an
+        /// [AccessPolicy][google.identity.accesscontextmanager.v1.AccessPolicy],
+        /// [AccessLevel][google.identity.accesscontextmanager.v1.AccessLevel], or
+        /// [ServicePerimeter][google.identity.accesscontextmanager.v1.ServicePerimeter
+        /// ]. This method does not support other resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the IAM permissions that the caller has on the specified Access
+        /// Context Manager resource. The resource can be an
+        /// [AccessPolicy][google.identity.accesscontextmanager.v1.AccessPolicy],
+        /// [AccessLevel][google.identity.accesscontextmanager.v1.AccessLevel], or
+        /// [ServicePerimeter][google.identity.accesscontextmanager.v1.ServicePerimeter
+        /// ]. This method does not support other resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AccessContextManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// API for setting [Access Levels]
-    /// [google.identity.accesscontextmanager.v1.AccessLevel] and [Service
-    /// Perimeters] [google.identity.accesscontextmanager.v1.ServicePerimeter]
-    /// for Google Cloud Projects. Each organization has one [AccessPolicy]
-    /// [google.identity.accesscontextmanager.v1.AccessPolicy] containing the
-    /// [Access Levels] [google.identity.accesscontextmanager.v1.AccessLevel]
-    /// and [Service Perimeters]
+    /// API for setting [access levels]
+    /// [google.identity.accesscontextmanager.v1.AccessLevel] and [service
+    /// perimeters] [google.identity.accesscontextmanager.v1.ServicePerimeter]
+    /// for Google Cloud projects. Each organization has one [access policy]
+    /// [google.identity.accesscontextmanager.v1.AccessPolicy] that contains the
+    /// [access levels] [google.identity.accesscontextmanager.v1.AccessLevel]
+    /// and [service perimeters]
     /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. This
-    /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy] is
+    /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy] is
     /// applicable to all resources in the organization.
     /// AccessPolicies
     /// </remarks>
@@ -4297,6 +4446,12 @@ namespace Google.Identity.AccessContextManager.V1
         private readonly gaxgrpc::ApiCall<UpdateGcpUserAccessBindingRequest, lro::Operation> _callUpdateGcpUserAccessBinding;
 
         private readonly gaxgrpc::ApiCall<DeleteGcpUserAccessBindingRequest, lro::Operation> _callDeleteGcpUserAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the AccessContextManager service, with the specified gRPC client and
@@ -4394,6 +4549,15 @@ namespace Google.Identity.AccessContextManager.V1
             _callDeleteGcpUserAccessBinding = clientHelper.BuildApiCall<DeleteGcpUserAccessBindingRequest, lro::Operation>("DeleteGcpUserAccessBinding", grpcClient.DeleteGcpUserAccessBindingAsync, grpcClient.DeleteGcpUserAccessBinding, effectiveSettings.DeleteGcpUserAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGcpUserAccessBinding);
             Modify_DeleteGcpUserAccessBindingApiCall(ref _callDeleteGcpUserAccessBinding);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4444,6 +4608,12 @@ namespace Google.Identity.AccessContextManager.V1
         partial void Modify_UpdateGcpUserAccessBindingApiCall(ref gaxgrpc::ApiCall<UpdateGcpUserAccessBindingRequest, lro::Operation> call);
 
         partial void Modify_DeleteGcpUserAccessBindingApiCall(ref gaxgrpc::ApiCall<DeleteGcpUserAccessBindingRequest, lro::Operation> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
         partial void OnConstruction(AccessContextManager.AccessContextManagerClient grpcClient, AccessContextManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4496,10 +4666,16 @@ namespace Google.Identity.AccessContextManager.V1
 
         partial void Modify_DeleteGcpUserAccessBindingRequest(ref DeleteGcpUserAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// List all [AccessPolicies]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] under a
-        /// container.
+        /// Lists all [access policies]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] in an
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4511,9 +4687,9 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// List all [AccessPolicies]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] under a
-        /// container.
+        /// Lists all [access policies]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] in an
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4525,8 +4701,8 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4538,8 +4714,8 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by name.
+        /// Returns an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4554,10 +4730,10 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient CreateAccessPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Create an `AccessPolicy`. Fails if this organization already has a
-        /// `AccessPolicy`. The longrunning Operation will have a successful status
-        /// once the `AccessPolicy` has propagated to long-lasting storage.
-        /// Syntactic and basic semantic errors will be returned in `metadata` as a
+        /// Creates an access policy. This method fails if the organization already has
+        /// an access policy. The long-running operation has a successful status
+        /// after the access policy propagates to long-lasting storage.
+        /// Syntactic and basic semantic errors are returned in `metadata` as a
         /// BadRequest proto.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4570,10 +4746,10 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Create an `AccessPolicy`. Fails if this organization already has a
-        /// `AccessPolicy`. The longrunning Operation will have a successful status
-        /// once the `AccessPolicy` has propagated to long-lasting storage.
-        /// Syntactic and basic semantic errors will be returned in `metadata` as a
+        /// Creates an access policy. This method fails if the organization already has
+        /// an access policy. The long-running operation has a successful status
+        /// after the access policy propagates to long-lasting storage.
+        /// Syntactic and basic semantic errors are returned in `metadata` as a
         /// BadRequest proto.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4589,13 +4765,12 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient UpdateAccessPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4607,13 +4782,12 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Update an [AccessPolicy]
+        /// Updates an [access policy]
         /// [google.identity.accesscontextmanager.v1.AccessPolicy]. The
-        /// longrunning Operation from this RPC will have a successful status once the
-        /// changes to the [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] have propagated
-        /// to long-lasting storage. Syntactic and basic semantic errors will be
-        /// returned in `metadata` as a BadRequest proto.
+        /// long-running operation from this RPC has a successful status after the
+        /// changes to the [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] propagate
+        /// to long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4628,11 +4802,11 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient DeleteAccessPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4644,11 +4818,11 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Delete an [AccessPolicy]
-        /// [google.identity.accesscontextmanager.v1.AccessPolicy] by resource
-        /// name. The longrunning Operation will have a successful status once the
-        /// [AccessPolicy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// has been removed from long-lasting storage.
+        /// Deletes an [access policy]
+        /// [google.identity.accesscontextmanager.v1.AccessPolicy] based on the
+        /// resource name. The long-running operation has a successful status after the
+        /// [access policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
+        /// is removed from long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4660,7 +4834,7 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -4674,7 +4848,7 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// List all [Access Levels]
+        /// Lists all [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] for an access
         /// policy.
         /// </summary>
@@ -4688,8 +4862,8 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4702,8 +4876,8 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
+        /// Gets an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
         /// name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4719,13 +4893,13 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient CreateAccessLevelOperationsClient { get; }
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4737,13 +4911,13 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Create an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the [Access
-        /// Level] [google.identity.accesscontextmanager.v1.AccessLevel] has
-        /// propagated to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Creates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the [access
+        /// level] [google.identity.accesscontextmanager.v1.AccessLevel]
+        /// propagates to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4758,14 +4932,14 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient UpdateAccessLevelOperationsClient { get; }
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4777,14 +4951,14 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Update an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The longrunning
-        /// operation from this RPC will have a successful status once the changes to
-        /// the [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] have propagated
-        /// to long-lasting storage. [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] containing
-        /// errors will result in an error response for the first error encountered.
+        /// Updates an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel]. The long-running
+        /// operation from this RPC has a successful status after the changes to
+        /// the [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] propagate
+        /// to long-lasting storage. If [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] contain
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4799,10 +4973,10 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient DeleteAccessLevelOperationsClient { get; }
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -4816,10 +4990,10 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Delete an [Access Level]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Access Level]
+        /// Deletes an [access level]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] based on the resource
+        /// name. The long-running operation from this RPC has a successful status
+        /// after the [access level]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] has been removed
         /// from long-lasting storage.
         /// </summary>
@@ -4836,22 +5010,22 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient ReplaceAccessLevelsOperationsClient { get; }
 
         /// <summary>
-        /// Replace all existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [Access
-        /// Policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
-        /// the [Access Levels]
+        /// Replaces all existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
+        /// the [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] provided. This
-        /// is done atomically. The longrunning operation from this RPC will have a
-        /// successful status once all replacements have propagated to long-lasting
-        /// storage. Replacements containing errors will result in an error response
-        /// for the first error encountered.  Replacement will be cancelled on error,
-        /// existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] will not be
-        /// affected. Operation.response field will contain
-        /// ReplaceAccessLevelsResponse. Removing [Access Levels]
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting
+        /// storage. If the replacement contains errors, an error response is returned
+        /// for the first error encountered.  Upon error, the replacement is cancelled,
+        /// and existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] are not
+        /// affected. The Operation.response field contains
+        /// ReplaceAccessLevelsResponse. Removing [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] contained in existing
-        /// [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will result in
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] result in an
         /// error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4864,22 +5038,22 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Replace all existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [Access
-        /// Policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
-        /// the [Access Levels]
+        /// Replaces all existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with
+        /// the [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] provided. This
-        /// is done atomically. The longrunning operation from this RPC will have a
-        /// successful status once all replacements have propagated to long-lasting
-        /// storage. Replacements containing errors will result in an error response
-        /// for the first error encountered.  Replacement will be cancelled on error,
-        /// existing [Access Levels]
-        /// [google.identity.accesscontextmanager.v1.AccessLevel] will not be
-        /// affected. Operation.response field will contain
-        /// ReplaceAccessLevelsResponse. Removing [Access Levels]
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting
+        /// storage. If the replacement contains errors, an error response is returned
+        /// for the first error encountered.  Upon error, the replacement is cancelled,
+        /// and existing [access levels]
+        /// [google.identity.accesscontextmanager.v1.AccessLevel] are not
+        /// affected. The Operation.response field contains
+        /// ReplaceAccessLevelsResponse. Removing [access levels]
         /// [google.identity.accesscontextmanager.v1.AccessLevel] contained in existing
-        /// [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will result in
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] result in an
         /// error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4892,7 +5066,7 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -4906,7 +5080,7 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// List all [Service Perimeters]
+        /// Lists all [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] for an
         /// access policy.
         /// </summary>
@@ -4920,9 +5094,9 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4934,9 +5108,9 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Get a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name.
+        /// Gets a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4951,14 +5125,14 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient CreateServicePerimeterOperationsClient { get; }
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4970,14 +5144,14 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Create a [Service Perimeter]
+        /// Creates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has
-        /// propagated to long-lasting storage. [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4992,14 +5166,14 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient UpdateServicePerimeterOperationsClient { get; }
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5011,14 +5185,14 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Update a [Service Perimeter]
+        /// Updates a [service perimeter]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter]. The
-        /// longrunning operation from this RPC will have a successful status once the
-        /// changes to the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have
-        /// propagated to long-lasting storage. [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] containing
-        /// errors will result in an error response for the first error encountered.
+        /// long-running operation from this RPC has a successful status after the
+        /// [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter]
+        /// propagates to long-lasting storage. If a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] contains
+        /// errors, an error response is returned for the first error encountered.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5033,12 +5207,12 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient DeleteServicePerimeterOperationsClient { get; }
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5050,12 +5224,12 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Delete a [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] by resource
-        /// name. The longrunning operation from this RPC will have a successful status
-        /// once the [Service Perimeter]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] has been
-        /// removed from long-lasting storage.
+        /// Deletes a [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] based on the
+        /// resource name. The long-running operation from this RPC has a successful
+        /// status after the [service perimeter]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is removed from
+        /// long-lasting storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5070,18 +5244,18 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient ReplaceServicePerimetersOperationsClient { get; }
 
         /// <summary>
-        /// Replace all existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// with the [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided.
-        /// This is done atomically. The longrunning operation from this
-        /// RPC will have a successful status once all replacements have propagated to
-        /// long-lasting storage. Replacements containing errors will result in an
-        /// error response for the first error encountered. Replacement will be
-        /// cancelled on error, existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will not be
-        /// affected. Operation.response field will contain
+        /// Replace all existing [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with the
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided. This
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting storage.
+        /// Replacements containing errors result in an error response for the first
+        /// error encountered. Upon an error, replacement are cancelled and existing
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] are not
+        /// affected. The Operation.response field contains
         /// ReplaceServicePerimetersResponse.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5094,18 +5268,18 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Replace all existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy] [google.identity.accesscontextmanager.v1.AccessPolicy]
-        /// with the [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided.
-        /// This is done atomically. The longrunning operation from this
-        /// RPC will have a successful status once all replacements have propagated to
-        /// long-lasting storage. Replacements containing errors will result in an
-        /// error response for the first error encountered. Replacement will be
-        /// cancelled on error, existing [Service Perimeters]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] will not be
-        /// affected. Operation.response field will contain
+        /// Replace all existing [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an [access
+        /// policy] [google.identity.accesscontextmanager.v1.AccessPolicy] with the
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] provided. This
+        /// is done atomically. The long-running operation from this RPC has a
+        /// successful status after all replacements propagate to long-lasting storage.
+        /// Replacements containing errors result in an error response for the first
+        /// error encountered. Upon an error, replacement are cancelled and existing
+        /// [service perimeters]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeter] are not
+        /// affected. The Operation.response field contains
         /// ReplaceServicePerimetersResponse.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5121,21 +5295,21 @@ namespace Google.Identity.AccessContextManager.V1
         public override lro::OperationsClient CommitServicePerimetersOperationsClient { get; }
 
         /// <summary>
-        /// Commit the dry-run spec for all the [Service Perimeters]
+        /// Commits the dry-run specification for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
-        /// A commit operation on a Service Perimeter involves copying its `spec` field
-        /// to that Service Perimeter's `status` field. Only [Service Perimeters]
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// A commit operation on a service perimeter involves copying its `spec` field
+        /// to the `status` field of the service perimeter. Only [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] with
         /// `use_explicit_dry_run_spec` field set to true are affected by a commit
-        /// operation. The longrunning operation from this RPC will have a successful
-        /// status once the dry-run specs for all the [Service Perimeters]
+        /// operation. The long-running operation from this RPC has a successful
+        /// status after the dry-run specifications for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have been
-        /// committed. If a commit fails, it will cause the longrunning operation to
-        /// return an error response and the entire commit operation will be cancelled.
-        /// When successful, Operation.response field will contain
-        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will
-        /// be cleared after a successful commit operation.
+        /// committed. If a commit fails, it causes the long-running operation to
+        /// return an error response and the entire commit operation is cancelled.
+        /// When successful, the Operation.response field contains
+        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are
+        /// cleared after a successful commit operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5147,21 +5321,21 @@ namespace Google.Identity.AccessContextManager.V1
         }
 
         /// <summary>
-        /// Commit the dry-run spec for all the [Service Perimeters]
+        /// Commits the dry-run specification for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in an
-        /// [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
-        /// A commit operation on a Service Perimeter involves copying its `spec` field
-        /// to that Service Perimeter's `status` field. Only [Service Perimeters]
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// A commit operation on a service perimeter involves copying its `spec` field
+        /// to the `status` field of the service perimeter. Only [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] with
         /// `use_explicit_dry_run_spec` field set to true are affected by a commit
-        /// operation. The longrunning operation from this RPC will have a successful
-        /// status once the dry-run specs for all the [Service Perimeters]
+        /// operation. The long-running operation from this RPC has a successful
+        /// status after the dry-run specifications for all the [service perimeters]
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter] have been
-        /// committed. If a commit fails, it will cause the longrunning operation to
-        /// return an error response and the entire commit operation will be cancelled.
-        /// When successful, Operation.response field will contain
-        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will
-        /// be cleared after a successful commit operation.
+        /// committed. If a commit fails, it causes the long-running operation to
+        /// return an error response and the entire commit operation is cancelled.
+        /// When successful, the Operation.response field contains
+        /// CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are
+        /// cleared after a successful commit operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5236,7 +5410,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -5257,7 +5431,7 @@ namespace Google.Identity.AccessContextManager.V1
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]. If the
         /// client specifies a [name]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.name],
-        /// the server will ignore it. Fails if a resource already exists with the same
+        /// the server ignores it. Fails if a resource already exists with the same
         /// [group_key]
         /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding.group_key].
         /// Completion of this long-running operation does not necessarily signify that
@@ -5341,6 +5515,100 @@ namespace Google.Identity.AccessContextManager.V1
         {
             Modify_DeleteGcpUserAccessBindingRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, GcpUserAccessBindingOperationMetadata>(await _callDeleteGcpUserAccessBinding.Async(request, callSettings).ConfigureAwait(false), DeleteGcpUserAccessBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// This method replaces the existing IAM policy on the access policy. The IAM
+        /// policy controls the set of users who can perform specific operations on the
+        /// Access Context Manager [access
+        /// policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// This method replaces the existing IAM policy on the access policy. The IAM
+        /// policy controls the set of users who can perform specific operations on the
+        /// Access Context Manager [access
+        /// policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM policy for the specified Access Context Manager
+        /// [access policy][google.identity.accesscontextmanager.v1.AccessPolicy].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the IAM permissions that the caller has on the specified Access
+        /// Context Manager resource. The resource can be an
+        /// [AccessPolicy][google.identity.accesscontextmanager.v1.AccessPolicy],
+        /// [AccessLevel][google.identity.accesscontextmanager.v1.AccessLevel], or
+        /// [ServicePerimeter][google.identity.accesscontextmanager.v1.ServicePerimeter
+        /// ]. This method does not support other resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the IAM permissions that the caller has on the specified Access
+        /// Context Manager resource. The resource can be an
+        /// [AccessPolicy][google.identity.accesscontextmanager.v1.AccessPolicy],
+        /// [AccessLevel][google.identity.accesscontextmanager.v1.AccessLevel], or
+        /// [ServicePerimeter][google.identity.accesscontextmanager.v1.ServicePerimeter
+        /// ]. This method does not support other resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
         }
     }
 

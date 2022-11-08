@@ -342,12 +342,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -381,12 +381,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -4177,6 +4177,237 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "AccessContextManagerClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.SetIamPolicy",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "AccessContextManagerClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.SetIamPolicy",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "AccessContextManagerClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.GetIamPolicy",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "AccessContextManagerClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.GetIamPolicy",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "AccessContextManagerClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.TestIamPermissions",
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.TestIamPermissions",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "accesscontextmanager_v1_generated_AccessContextManager_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "AccessContextManagerClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient.TestIamPermissionsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "AccessContextManagerClient",
+          "fullName": "Google.Identity.AccessContextManager.V1.AccessContextManagerClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager.TestIamPermissions",
+          "service": {
+            "shortName": "AccessContextManager",
+            "fullName": "google.identity.accesscontextmanager.v1.AccessContextManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
           "type": "SHORT"
         }
       ]

@@ -42,7 +42,7 @@ namespace Google.Identity.AccessContextManager.V1 {
             "FVBFUklNRVRFUl9UWVBFX0JSSURHRRABOn/qQXwKNGFjY2Vzc2NvbnRleHRt",
             "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VQZXJpbWV0ZXISRGFjY2Vz",
             "c1BvbGljaWVzL3thY2Nlc3NfcG9saWN5fS9zZXJ2aWNlUGVyaW1ldGVycy97",
-            "c2VydmljZV9wZXJpbWV0ZXJ9IpgPChZTZXJ2aWNlUGVyaW1ldGVyQ29uZmln",
+            "c2VydmljZV9wZXJpbWV0ZXJ9IrUPChZTZXJ2aWNlUGVyaW1ldGVyQ29uZmln",
             "EhEKCXJlc291cmNlcxgBIAMoCRIVCg1hY2Nlc3NfbGV2ZWxzGAIgAygJEhsK",
             "E3Jlc3RyaWN0ZWRfc2VydmljZXMYBCADKAkSdgoXdnBjX2FjY2Vzc2libGVf",
             "c2VydmljZXMYCiABKAsyVS5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4",
@@ -59,40 +59,41 @@ namespace Google.Identity.AccessContextManager.V1 {
             "ChBtZXRob2Rfc2VsZWN0b3JzGAIgAygLMk4uZ29vZ2xlLmlkZW50aXR5LmFj",
             "Y2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcu",
             "TWV0aG9kU2VsZWN0b3IaRQoNSW5ncmVzc1NvdXJjZRIWCgxhY2Nlc3NfbGV2",
-            "ZWwYASABKAlIABISCghyZXNvdXJjZRgCIAEoCUgAQggKBnNvdXJjZRp/CghF",
-            "Z3Jlc3NUbxIRCglyZXNvdXJjZXMYASADKAkSYAoKb3BlcmF0aW9ucxgCIAMo",
-            "CzJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5T",
-            "ZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkFwaU9wZXJhdGlvbhrmAQoLSW5ncmVz",
-            "c0Zyb20SXgoHc291cmNlcxgBIAMoCzJNLmdvb2dsZS5pZGVudGl0eS5hY2Nl",
-            "c3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLklu",
-            "Z3Jlc3NTb3VyY2USEgoKaWRlbnRpdGllcxgCIAMoCRJjCg1pZGVudGl0eV90",
-            "eXBlGAMgASgOMkwuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5h",
-            "Z2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuSWRlbnRpdHlUeXBlGoAB",
-            "CglJbmdyZXNzVG8SYAoKb3BlcmF0aW9ucxgBIAMoCzJMLmdvb2dsZS5pZGVu",
-            "dGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVy",
-            "Q29uZmlnLkFwaU9wZXJhdGlvbhIRCglyZXNvdXJjZXMYAiADKAka0QEKDUlu",
-            "Z3Jlc3NQb2xpY3kSYQoMaW5ncmVzc19mcm9tGAEgASgLMksuZ29vZ2xlLmlk",
-            "ZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0",
-            "ZXJDb25maWcuSW5ncmVzc0Zyb20SXQoKaW5ncmVzc190bxgCIAEoCzJJLmdv",
-            "b2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNl",
-            "UGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NUbxrMAQoMRWdyZXNzUG9saWN5El8K",
-            "C2VncmVzc19mcm9tGAEgASgLMkouZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2Nv",
-            "bnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuRWdyZXNz",
-            "RnJvbRJbCgllZ3Jlc3NfdG8YAiABKAsySC5nb29nbGUuaWRlbnRpdHkuYWNj",
-            "ZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5F",
-            "Z3Jlc3NUbxqFAQoKRWdyZXNzRnJvbRISCgppZGVudGl0aWVzGAEgAygJEmMK",
-            "DWlkZW50aXR5X3R5cGUYAiABKA4yTC5nb29nbGUuaWRlbnRpdHkuYWNjZXNz",
-            "Y29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JZGVu",
-            "dGl0eVR5cGUibgoMSWRlbnRpdHlUeXBlEh0KGUlERU5USVRZX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIQCgxBTllfSURFTlRJVFkQARIUChBBTllfVVNFUl9BQ0NP",
-            "VU5UEAISFwoTQU5ZX1NFUlZJQ0VfQUNDT1VOVBADQqsCCitjb20uZ29vZ2xl",
-            "LmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxQhVTZXJ2aWNlUGVy",
-            "aW1ldGVyUHJvdG9QAVpbZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdlci92MTthY2Nl",
-            "c3Njb250ZXh0bWFuYWdlcqICBEdBQ02qAidHb29nbGUuSWRlbnRpdHkuQWNj",
-            "ZXNzQ29udGV4dE1hbmFnZXIuVjHKAidHb29nbGVcSWRlbnRpdHlcQWNjZXNz",
-            "Q29udGV4dE1hbmFnZXJcVjHqAipHb29nbGU6OklkZW50aXR5OjpBY2Nlc3ND",
-            "b250ZXh0TWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "ZWwYASABKAlIABISCghyZXNvdXJjZRgCIAEoCUgAQggKBnNvdXJjZRrmAQoL",
+            "SW5ncmVzc0Zyb20SXgoHc291cmNlcxgBIAMoCzJNLmdvb2dsZS5pZGVudGl0",
+            "eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29u",
+            "ZmlnLkluZ3Jlc3NTb3VyY2USEgoKaWRlbnRpdGllcxgCIAMoCRJjCg1pZGVu",
+            "dGl0eV90eXBlGAMgASgOMkwuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRl",
+            "eHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuSWRlbnRpdHlU",
+            "eXBlGoABCglJbmdyZXNzVG8SYAoKb3BlcmF0aW9ucxgBIAMoCzJMLmdvb2ds",
+            "ZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVy",
+            "aW1ldGVyQ29uZmlnLkFwaU9wZXJhdGlvbhIRCglyZXNvdXJjZXMYAiADKAka",
+            "0QEKDUluZ3Jlc3NQb2xpY3kSYQoMaW5ncmVzc19mcm9tGAEgASgLMksuZ29v",
+            "Z2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQ",
+            "ZXJpbWV0ZXJDb25maWcuSW5ncmVzc0Zyb20SXQoKaW5ncmVzc190bxgCIAEo",
+            "CzJJLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5T",
+            "ZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NUbxqFAQoKRWdyZXNzRnJv",
+            "bRISCgppZGVudGl0aWVzGAEgAygJEmMKDWlkZW50aXR5X3R5cGUYAiABKA4y",
+            "TC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2Vy",
+            "dmljZVBlcmltZXRlckNvbmZpZy5JZGVudGl0eVR5cGUamwEKCEVncmVzc1Rv",
+            "EhEKCXJlc291cmNlcxgBIAMoCRJgCgpvcGVyYXRpb25zGAIgAygLMkwuZ29v",
+            "Z2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQ",
+            "ZXJpbWV0ZXJDb25maWcuQXBpT3BlcmF0aW9uEhoKEmV4dGVybmFsX3Jlc291",
+            "cmNlcxgDIAMoCRrMAQoMRWdyZXNzUG9saWN5El8KC2VncmVzc19mcm9tGAEg",
+            "ASgLMkouZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYx",
+            "LlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuRWdyZXNzRnJvbRJbCgllZ3Jlc3Nf",
+            "dG8YAiABKAsySC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFn",
+            "ZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5FZ3Jlc3NUbyJuCgxJZGVu",
+            "dGl0eVR5cGUSHQoZSURFTlRJVFlfVFlQRV9VTlNQRUNJRklFRBAAEhAKDEFO",
+            "WV9JREVOVElUWRABEhQKEEFOWV9VU0VSX0FDQ09VTlQQAhIXChNBTllfU0VS",
+            "VklDRV9BQ0NPVU5UEANCqwIKK2NvbS5nb29nbGUuaWRlbnRpdHkuYWNjZXNz",
+            "Y29udGV4dG1hbmFnZXIudjFCFVNlcnZpY2VQZXJpbWV0ZXJQcm90b1ABWltn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lkZW50aXR5",
+            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxO2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
+            "ogIER0FDTaoCJ0dvb2dsZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdl",
+            "ci5WMcoCJ0dvb2dsZVxJZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxW",
+            "MeoCKkdvb2dsZTo6SWRlbnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,12 +102,12 @@ namespace Google.Identity.AccessContextManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.MethodSelector), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.MethodSelector.Parser, new[]{ "Method", "Permission" }, new[]{ "Kind" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation.Parser, new[]{ "ServiceName", "MethodSelectors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressSource), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressSource.Parser, new[]{ "AccessLevel", "Resource" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo.Parser, new[]{ "Resources", "Operations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressFrom), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressFrom.Parser, new[]{ "Sources", "Identities", "IdentityType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressTo), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressTo.Parser, new[]{ "Operations", "Resources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressPolicy), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressPolicy.Parser, new[]{ "IngressFrom", "IngressTo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressPolicy), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressPolicy.Parser, new[]{ "EgressFrom", "EgressTo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressFrom), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressFrom.Parser, new[]{ "Identities", "IdentityType" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressFrom), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressFrom.Parser, new[]{ "Identities", "IdentityType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo.Parser, new[]{ "Resources", "Operations", "ExternalResources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressPolicy), global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressPolicy.Parser, new[]{ "EgressFrom", "EgressTo" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -2170,245 +2171,6 @@ namespace Google.Identity.AccessContextManager.V1 {
       }
 
       /// <summary>
-      /// Defines the conditions under which an [EgressPolicy]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressPolicy]
-      /// matches a request. Conditions are based on information about the
-      /// [ApiOperation]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation]
-      /// intended to be performed on the `resources` specified. Note that if the
-      /// destination of the request is also protected by a [ServicePerimeter]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeter], then that
-      /// [ServicePerimeter]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeter] must have
-      /// an [IngressPolicy]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
-      /// which allows access in order for this request to succeed. The request must
-      /// match `operations` AND `resources` fields in order to be allowed egress out
-      /// of the perimeter.
-      /// </summary>
-      public sealed partial class EgressTo : pb::IMessage<EgressTo>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<EgressTo> _parser = new pb::MessageParser<EgressTo>(() => new EgressTo());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<EgressTo> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[4]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressTo() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressTo(EgressTo other) : this() {
-          resources_ = other.resources_.Clone();
-          operations_ = other.operations_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressTo Clone() {
-          return new EgressTo(this);
-        }
-
-        /// <summary>Field number for the "resources" field.</summary>
-        public const int ResourcesFieldNumber = 1;
-        private static readonly pb::FieldCodec<string> _repeated_resources_codec
-            = pb::FieldCodec.ForString(10);
-        private readonly pbc::RepeatedField<string> resources_ = new pbc::RepeatedField<string>();
-        /// <summary>
-        /// A list of resources, currently only projects in the form
-        /// `projects/&lt;projectnumber>`, that are allowed to be accessed by sources
-        /// defined in the corresponding [EgressFrom]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressFrom].
-        /// A request matches if it contains a resource in this list.  If `*` is
-        /// specified for `resources`, then this [EgressTo]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressTo]
-        /// rule will authorize access to all resources outside the perimeter.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<string> Resources {
-          get { return resources_; }
-        }
-
-        /// <summary>Field number for the "operations" field.</summary>
-        public const int OperationsFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> _repeated_operations_codec
-            = pb::FieldCodec.ForMessage(18, global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation.Parser);
-        private readonly pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> operations_ = new pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation>();
-        /// <summary>
-        /// A list of [ApiOperations]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation]
-        /// allowed to be performed by the sources specified in the corresponding
-        /// [EgressFrom]
-        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressFrom].
-        /// A request matches if it uses an operation/service in this list.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> Operations {
-          get { return operations_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other) {
-          return Equals(other as EgressTo);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(EgressTo other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if(!resources_.Equals(other.resources_)) return false;
-          if(!operations_.Equals(other.operations_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode() {
-          int hash = 1;
-          hash ^= resources_.GetHashCode();
-          hash ^= operations_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          resources_.WriteTo(output, _repeated_resources_codec);
-          operations_.WriteTo(output, _repeated_operations_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          resources_.WriteTo(ref output, _repeated_resources_codec);
-          operations_.WriteTo(ref output, _repeated_operations_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize() {
-          int size = 0;
-          size += resources_.CalculateSize(_repeated_resources_codec);
-          size += operations_.CalculateSize(_repeated_operations_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(EgressTo other) {
-          if (other == null) {
-            return;
-          }
-          resources_.Add(other.resources_);
-          operations_.Add(other.operations_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                resources_.AddEntriesFrom(input, _repeated_resources_codec);
-                break;
-              }
-              case 18: {
-                operations_.AddEntriesFrom(input, _repeated_operations_codec);
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                resources_.AddEntriesFrom(ref input, _repeated_resources_codec);
-                break;
-              }
-              case 18: {
-                operations_.AddEntriesFrom(ref input, _repeated_operations_codec);
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
       /// Defines the conditions under which an [IngressPolicy]
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
       /// matches a request. Conditions are based on information about the source of
@@ -2429,7 +2191,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2695,7 +2457,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2940,7 +2702,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3184,6 +2946,517 @@ namespace Google.Identity.AccessContextManager.V1 {
       }
 
       /// <summary>
+      /// Defines the conditions under which an [EgressPolicy]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressPolicy]
+      /// matches a request. Conditions based on information about the source of the
+      /// request. Note that if the destination of the request is also protected by a
+      /// [ServicePerimeter]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeter], then that
+      /// [ServicePerimeter]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeter] must have
+      /// an [IngressPolicy]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
+      /// which allows access in order for this request to succeed.
+      /// </summary>
+      public sealed partial class EgressFrom : pb::IMessage<EgressFrom>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EgressFrom> _parser = new pb::MessageParser<EgressFrom>(() => new EgressFrom());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EgressFrom> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressFrom() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressFrom(EgressFrom other) : this() {
+          identities_ = other.identities_.Clone();
+          identityType_ = other.identityType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressFrom Clone() {
+          return new EgressFrom(this);
+        }
+
+        /// <summary>Field number for the "identities" field.</summary>
+        public const int IdentitiesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_identities_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> identities_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// A list of identities that are allowed access through this [EgressPolicy].
+        /// Should be in the format of email address. The email address should
+        /// represent individual user or service account only.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Identities {
+          get { return identities_; }
+        }
+
+        /// <summary>Field number for the "identity_type" field.</summary>
+        public const int IdentityTypeFieldNumber = 2;
+        private global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType identityType_ = global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified;
+        /// <summary>
+        /// Specifies the type of identities that are allowed access to outside the
+        /// perimeter. If left unspecified, then members of `identities` field will
+        /// be allowed access.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType IdentityType {
+          get { return identityType_; }
+          set {
+            identityType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EgressFrom);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EgressFrom other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!identities_.Equals(other.identities_)) return false;
+          if (IdentityType != other.IdentityType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= identities_.GetHashCode();
+          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) hash ^= IdentityType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          identities_.WriteTo(output, _repeated_identities_codec);
+          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IdentityType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          identities_.WriteTo(ref output, _repeated_identities_codec);
+          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IdentityType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += identities_.CalculateSize(_repeated_identities_codec);
+          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IdentityType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EgressFrom other) {
+          if (other == null) {
+            return;
+          }
+          identities_.Add(other.identities_);
+          if (other.IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
+            IdentityType = other.IdentityType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                identities_.AddEntriesFrom(input, _repeated_identities_codec);
+                break;
+              }
+              case 16: {
+                IdentityType = (global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                identities_.AddEntriesFrom(ref input, _repeated_identities_codec);
+                break;
+              }
+              case 16: {
+                IdentityType = (global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Defines the conditions under which an [EgressPolicy]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressPolicy]
+      /// matches a request. Conditions are based on information about the
+      /// [ApiOperation]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation]
+      /// intended to be performed on the `resources` specified. Note that if the
+      /// destination of the request is also protected by a [ServicePerimeter]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeter], then that
+      /// [ServicePerimeter]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeter] must have
+      /// an [IngressPolicy]
+      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
+      /// which allows access in order for this request to succeed. The request must
+      /// match `operations` AND `resources` fields in order to be allowed egress out
+      /// of the perimeter.
+      /// </summary>
+      public sealed partial class EgressTo : pb::IMessage<EgressTo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EgressTo> _parser = new pb::MessageParser<EgressTo>(() => new EgressTo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EgressTo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressTo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressTo(EgressTo other) : this() {
+          resources_ = other.resources_.Clone();
+          operations_ = other.operations_.Clone();
+          externalResources_ = other.externalResources_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EgressTo Clone() {
+          return new EgressTo(this);
+        }
+
+        /// <summary>Field number for the "resources" field.</summary>
+        public const int ResourcesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_resources_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> resources_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// A list of resources, currently only projects in the form
+        /// `projects/&lt;projectnumber>`, that are allowed to be accessed by sources
+        /// defined in the corresponding [EgressFrom]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressFrom].
+        /// A request matches if it contains a resource in this list.  If `*` is
+        /// specified for `resources`, then this [EgressTo]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressTo]
+        /// rule will authorize access to all resources outside the perimeter.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Resources {
+          get { return resources_; }
+        }
+
+        /// <summary>Field number for the "operations" field.</summary>
+        public const int OperationsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> _repeated_operations_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation.Parser);
+        private readonly pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> operations_ = new pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation>();
+        /// <summary>
+        /// A list of [ApiOperations]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation]
+        /// allowed to be performed by the sources specified in the corresponding
+        /// [EgressFrom]
+        /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressFrom].
+        /// A request matches if it uses an operation/service in this list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> Operations {
+          get { return operations_; }
+        }
+
+        /// <summary>Field number for the "external_resources" field.</summary>
+        public const int ExternalResourcesFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_externalResources_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> externalResources_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// A list of external resources that are allowed to be accessed. Only AWS
+        /// and Azure resources are supported. For Amazon S3, the supported format is
+        /// s3://BUCKET_NAME. For Azure Storage, the supported format is
+        /// azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
+        /// if it contains an external resource in this list (Example:
+        /// s3://bucket/path). Currently '*' is not allowed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExternalResources {
+          get { return externalResources_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EgressTo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EgressTo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!resources_.Equals(other.resources_)) return false;
+          if(!operations_.Equals(other.operations_)) return false;
+          if(!externalResources_.Equals(other.externalResources_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= resources_.GetHashCode();
+          hash ^= operations_.GetHashCode();
+          hash ^= externalResources_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          resources_.WriteTo(output, _repeated_resources_codec);
+          operations_.WriteTo(output, _repeated_operations_codec);
+          externalResources_.WriteTo(output, _repeated_externalResources_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          resources_.WriteTo(ref output, _repeated_resources_codec);
+          operations_.WriteTo(ref output, _repeated_operations_codec);
+          externalResources_.WriteTo(ref output, _repeated_externalResources_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += resources_.CalculateSize(_repeated_resources_codec);
+          size += operations_.CalculateSize(_repeated_operations_codec);
+          size += externalResources_.CalculateSize(_repeated_externalResources_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EgressTo other) {
+          if (other == null) {
+            return;
+          }
+          resources_.Add(other.resources_);
+          operations_.Add(other.operations_);
+          externalResources_.Add(other.externalResources_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                resources_.AddEntriesFrom(input, _repeated_resources_codec);
+                break;
+              }
+              case 18: {
+                operations_.AddEntriesFrom(input, _repeated_operations_codec);
+                break;
+              }
+              case 26: {
+                externalResources_.AddEntriesFrom(input, _repeated_externalResources_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                resources_.AddEntriesFrom(ref input, _repeated_resources_codec);
+                break;
+              }
+              case 18: {
+                operations_.AddEntriesFrom(ref input, _repeated_operations_codec);
+                break;
+              }
+              case 26: {
+                externalResources_.AddEntriesFrom(ref input, _repeated_externalResources_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Policy for egress from perimeter.
       ///
       /// [EgressPolicies]
@@ -3227,7 +3500,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[8]; }
+          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3460,244 +3733,6 @@ namespace Google.Identity.AccessContextManager.V1 {
                   EgressTo = new global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo();
                 }
                 input.ReadMessage(EgressTo);
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
-      /// Defines the conditions under which an [EgressPolicy]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressPolicy]
-      /// matches a request. Conditions based on information about the source of the
-      /// request. Note that if the destination of the request is also protected by a
-      /// [ServicePerimeter]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeter], then that
-      /// [ServicePerimeter]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeter] must have
-      /// an [IngressPolicy]
-      /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
-      /// which allows access in order for this request to succeed.
-      /// </summary>
-      public sealed partial class EgressFrom : pb::IMessage<EgressFrom>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<EgressFrom> _parser = new pb::MessageParser<EgressFrom>(() => new EgressFrom());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<EgressFrom> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[9]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressFrom() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressFrom(EgressFrom other) : this() {
-          identities_ = other.identities_.Clone();
-          identityType_ = other.identityType_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EgressFrom Clone() {
-          return new EgressFrom(this);
-        }
-
-        /// <summary>Field number for the "identities" field.</summary>
-        public const int IdentitiesFieldNumber = 1;
-        private static readonly pb::FieldCodec<string> _repeated_identities_codec
-            = pb::FieldCodec.ForString(10);
-        private readonly pbc::RepeatedField<string> identities_ = new pbc::RepeatedField<string>();
-        /// <summary>
-        /// A list of identities that are allowed access through this [EgressPolicy].
-        /// Should be in the format of email address. The email address should
-        /// represent individual user or service account only.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<string> Identities {
-          get { return identities_; }
-        }
-
-        /// <summary>Field number for the "identity_type" field.</summary>
-        public const int IdentityTypeFieldNumber = 2;
-        private global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType identityType_ = global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified;
-        /// <summary>
-        /// Specifies the type of identities that are allowed access to outside the
-        /// perimeter. If left unspecified, then members of `identities` field will
-        /// be allowed access.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType IdentityType {
-          get { return identityType_; }
-          set {
-            identityType_ = value;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other) {
-          return Equals(other as EgressFrom);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(EgressFrom other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if(!identities_.Equals(other.identities_)) return false;
-          if (IdentityType != other.IdentityType) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode() {
-          int hash = 1;
-          hash ^= identities_.GetHashCode();
-          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) hash ^= IdentityType.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          identities_.WriteTo(output, _repeated_identities_codec);
-          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
-            output.WriteRawTag(16);
-            output.WriteEnum((int) IdentityType);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          identities_.WriteTo(ref output, _repeated_identities_codec);
-          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
-            output.WriteRawTag(16);
-            output.WriteEnum((int) IdentityType);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize() {
-          int size = 0;
-          size += identities_.CalculateSize(_repeated_identities_codec);
-          if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
-            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IdentityType);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(EgressFrom other) {
-          if (other == null) {
-            return;
-          }
-          identities_.Add(other.identities_);
-          if (other.IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
-            IdentityType = other.IdentityType;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                identities_.AddEntriesFrom(input, _repeated_identities_codec);
-                break;
-              }
-              case 16: {
-                IdentityType = (global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType) input.ReadEnum();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                identities_.AddEntriesFrom(ref input, _repeated_identities_codec);
-                break;
-              }
-              case 16: {
-                IdentityType = (global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType) input.ReadEnum();
                 break;
               }
             }

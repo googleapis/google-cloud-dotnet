@@ -27,24 +27,24 @@ namespace Google.Identity.AccessContextManager.V1 {
             "Cjtnb29nbGUvaWRlbnRpdHkvYWNjZXNzY29udGV4dG1hbmFnZXIvdjEvYWNj",
             "ZXNzX3BvbGljeS5wcm90bxInZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRl",
             "eHRtYW5hZ2VyLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoICCgxBY2Nlc3NQb2xpY3kS",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpICCgxBY2Nlc3NQb2xpY3kS",
             "DAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSDQoFdGl0bGUYAyABKAkS",
-            "LwoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEi8KC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIMCgRldGFnGAYgASgJOlXqQVIKMGFjY2Vzc2NvbnRleHRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL0FjY2Vzc1BvbGljeRIeYWNjZXNzUG9saWNp",
-            "ZXMve2FjY2Vzc19wb2xpY3l9QqECCitjb20uZ29vZ2xlLmlkZW50aXR5LmFj",
-            "Y2Vzc2NvbnRleHRtYW5hZ2VyLnYxQgtQb2xpY3lQcm90b1ABWltnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lkZW50aXR5L2FjY2Vz",
-            "c2NvbnRleHRtYW5hZ2VyL3YxO2FjY2Vzc2NvbnRleHRtYW5hZ2VyogIER0FD",
-            "TaoCJ0dvb2dsZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdlci5WMcoC",
-            "J0dvb2dsZVxJZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxWMeoCKkdv",
-            "b2dsZTo6SWRlbnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpWMWIGcHJv",
-            "dG8z"));
+            "DgoGc2NvcGVzGAcgAygJEi8KC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgFIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEZXRhZxgGIAEoCTpV6kFSCjBh",
+            "Y2Nlc3Njb250ZXh0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BY2Nlc3NQb2xp",
+            "Y3kSHmFjY2Vzc1BvbGljaWVzL3thY2Nlc3NfcG9saWN5fUKhAgorY29tLmdv",
+            "b2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MUILUG9saWN5",
+            "UHJvdG9QAVpbZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdlci92MTthY2Nlc3Njb250",
+            "ZXh0bWFuYWdlcqICBEdBQ02qAidHb29nbGUuSWRlbnRpdHkuQWNjZXNzQ29u",
+            "dGV4dE1hbmFnZXIuVjHKAidHb29nbGVcSWRlbnRpdHlcQWNjZXNzQ29udGV4",
+            "dE1hbmFnZXJcVjHqAipHb29nbGU6OklkZW50aXR5OjpBY2Nlc3NDb250ZXh0",
+            "TWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.AccessPolicy), global::Google.Identity.AccessContextManager.V1.AccessPolicy.Parser, new[]{ "Name", "Parent", "Title", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.AccessPolicy), global::Google.Identity.AccessContextManager.V1.AccessPolicy.Parser, new[]{ "Name", "Parent", "Title", "Scopes", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +95,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       name_ = other.name_;
       parent_ = other.parent_;
       title_ = other.title_;
+      scopes_ = other.scopes_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
@@ -153,6 +154,33 @@ namespace Google.Identity.AccessContextManager.V1 {
       set {
         title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "scopes" field.</summary>
+    public const int ScopesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_scopes_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> scopes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The scopes of a policy define which resources an ACM policy can restrict,
+    /// and where ACM resources can be referenced.
+    /// For example, a policy with scopes=["folders/123"] has the following
+    /// behavior:
+    /// - vpcsc perimeters can only restrict projects within folders/123
+    /// - access levels can only be referenced by resources within folders/123.
+    /// If empty, there are no limitations on which resources can be restricted by
+    /// an ACM policy, and there are no limitations on where ACM resources can be
+    /// referenced.
+    /// Only one policy can include a given scope (attempting to create a second
+    /// policy which includes "folders/123" will result in an error).
+    /// Currently, scopes cannot be modified after a policy is created.
+    /// Currently, policies can only have a single scope.
+    /// Format: list of `folders/{folder_number}` or `projects/{project_number}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Scopes {
+      get { return scopes_; }
     }
 
     /// <summary>Field number for the "create_time" field.</summary>
@@ -221,6 +249,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (Name != other.Name) return false;
       if (Parent != other.Parent) return false;
       if (Title != other.Title) return false;
+      if(!scopes_.Equals(other.scopes_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
@@ -234,6 +263,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
+      hash ^= scopes_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
@@ -279,6 +309,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      scopes_.WriteTo(output, _repeated_scopes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -313,6 +344,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      scopes_.WriteTo(ref output, _repeated_scopes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -332,6 +364,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
+      size += scopes_.CalculateSize(_repeated_scopes_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
@@ -362,6 +395,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (other.Title.Length != 0) {
         Title = other.Title;
       }
+      scopes_.Add(other.scopes_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -422,6 +456,10 @@ namespace Google.Identity.AccessContextManager.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 58: {
+            scopes_.AddEntriesFrom(input, _repeated_scopes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -465,6 +503,10 @@ namespace Google.Identity.AccessContextManager.V1 {
           }
           case 50: {
             Etag = input.ReadString();
+            break;
+          }
+          case 58: {
+            scopes_.AddEntriesFrom(ref input, _repeated_scopes_codec);
             break;
           }
         }
