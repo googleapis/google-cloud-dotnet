@@ -433,6 +433,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
     /// Specifies which fields to include in ProcessResponse's document.
+    /// Only supports top level document and pages field so it must be in the form
+    /// of `{document_field_name}` or `pages.{page_field_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
