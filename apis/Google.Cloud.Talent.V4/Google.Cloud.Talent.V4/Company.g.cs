@@ -27,23 +27,23 @@ namespace Google.Cloud.Talent.V4 {
             "CiRnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2NvbXBhbnkucHJvdG8SFmdvb2ds",
             "ZS5jbG91ZC50YWxlbnQudjQaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91",
-            "ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvIsQECgdDb21wYW55EgwKBG5hbWUY",
+            "ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvIsgECgdDb21wYW55EgwKBG5hbWUY",
             "ASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZXh0ZXJuYWxf",
             "aWQYAyABKAlCA+BBAhIxCgRzaXplGAQgASgOMiMuZ29vZ2xlLmNsb3VkLnRh",
             "bGVudC52NC5Db21wYW55U2l6ZRIcChRoZWFkcXVhcnRlcnNfYWRkcmVzcxgF",
             "IAEoCRIVCg1oaXJpbmdfYWdlbmN5GAYgASgIEhAKCGVlb190ZXh0GAcgASgJ",
             "EhMKC3dlYnNpdGVfdXJpGAggASgJEhcKD2NhcmVlcl9zaXRlX3VyaRgJIAEo",
-            "CRIRCglpbWFnZV91cmkYCiABKAkSMAooa2V5d29yZF9zZWFyY2hhYmxlX2pv",
-            "Yl9jdXN0b21fYXR0cmlidXRlcxgLIAMoCRJGCgxkZXJpdmVkX2luZm8YDCAB",
-            "KAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0LkNvbXBhbnkuRGVyaXZlZElu",
-            "Zm9CA+BBAxIWCglzdXNwZW5kZWQYDSABKAhCA+BBAxpOCgtEZXJpdmVkSW5m",
-            "bxI/ChVoZWFkcXVhcnRlcnNfbG9jYXRpb24YASABKAsyIC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0LkxvY2F0aW9uOlnqQVYKG2pvYnMuZ29vZ2xlYXBpcy5j",
-            "b20vQ29tcGFueRI3cHJvamVjdHMve3Byb2plY3R9L3RlbmFudHMve3RlbmFu",
-            "dH0vY29tcGFuaWVzL3tjb21wYW55fUJwChpjb20uZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NEIMQ29tcGFueVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVudKICA0NU",
-            "U2IGcHJvdG8z"));
+            "CRIRCglpbWFnZV91cmkYCiABKAkSNAooa2V5d29yZF9zZWFyY2hhYmxlX2pv",
+            "Yl9jdXN0b21fYXR0cmlidXRlcxgLIAMoCUICGAESRgoMZGVyaXZlZF9pbmZv",
+            "GAwgASgLMisuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55LkRlcml2",
+            "ZWRJbmZvQgPgQQMSFgoJc3VzcGVuZGVkGA0gASgIQgPgQQMaTgoLRGVyaXZl",
+            "ZEluZm8SPwoVaGVhZHF1YXJ0ZXJzX2xvY2F0aW9uGAEgASgLMiAuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NC5Mb2NhdGlvbjpZ6kFWChtqb2JzLmdvb2dsZWFw",
+            "aXMuY29tL0NvbXBhbnkSN3Byb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0",
+            "ZW5hbnR9L2NvbXBhbmllcy97Y29tcGFueX1CcAoaY29tLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRCDENvbXBhbnlQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NDt0YWxlbnSi",
+            "AgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -295,6 +295,9 @@ namespace Google.Cloud.Talent.V4 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// This field is deprecated. Please set the searchability of the custom
+    /// attribute in the [Job.custom_attributes][google.cloud.talent.v4.Job.custom_attributes] going forward.
+    ///
     /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4.Job.custom_attributes], whose
     /// corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any
@@ -302,6 +305,7 @@ namespace Google.Cloud.Talent.V4 {
     /// parenthesis, brackets and special symbols are not searchable as-is,
     /// and those keyword queries must be surrounded by quotes.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> KeywordSearchableJobCustomAttributes {
