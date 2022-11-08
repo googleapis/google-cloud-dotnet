@@ -109,7 +109,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the processor type.
-    /// Format: projects/{project}/processorTypes/{processor_type}
+    /// Format: `projects/{project}/processorTypes/{processor_type}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The type of the processor, e.g., "invoice_parsing".
+    /// The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
