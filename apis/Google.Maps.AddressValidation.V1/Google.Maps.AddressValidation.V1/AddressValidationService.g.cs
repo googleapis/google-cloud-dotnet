@@ -154,7 +154,7 @@ namespace Google.Maps.AddressValidation.V1 {
     /// Required. The address being validated. Unformatted addresses should be
     /// submitted via [`address_lines`][google.type.PostalAddress.address_lines].
     ///
-    /// The total length of the fields in this input must not exceed 300
+    /// The total length of the fields in this input must not exceed 280
     /// characters.
     ///
     /// Supported regions can be found in the

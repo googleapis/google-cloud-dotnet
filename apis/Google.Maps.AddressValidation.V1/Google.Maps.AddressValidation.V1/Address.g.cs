@@ -152,11 +152,11 @@ namespace Google.Maps.AddressValidation.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Maps.AddressValidation.V1.AddressComponent.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent> addressComponents_ = new pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent>();
     /// <summary>
-    /// The individual address components of the formatted and corrected address,
+    /// Unordered list. The individual address components of the formatted and corrected address,
     /// along with validation information. This provides information on the
     /// validation status of the individual components.
     ///
-    /// Address components are not ordered in a particular way. DO NOT make any
+    /// Address components are not ordered in a particular way. Do not make any
     /// assumptions on the ordering of the address components in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -176,8 +176,8 @@ namespace Google.Maps.AddressValidation.V1 {
     /// not be inferred. Components of this type are not present in
     /// `formatted_address`, `postal_address`, or `address_components`. An
     /// example might be `['street_number', 'route']` for an input like
-    /// "Boulder, Colorado, 80301, USA." The list of possible types can be found
-    /// [here](https://developers.google.com/maps/documentation/geocoding/overview#Types).
+    /// "Boulder, Colorado, 80301, USA". The list of possible types can be found
+    /// [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,8 +200,8 @@ namespace Google.Maps.AddressValidation.V1 {
     /// [CONFIRMED][google.maps.addressvalidation.v1.AddressComponent.ConfirmationLevel.CONFIRMED]
     /// or the
     /// [inferred][google.maps.addressvalidation.v1.AddressComponent.inferred]
-    /// flag is not set to `true`.The list of possible types can be found
-    /// [here](https://developers.google.com/maps/documentation/geocoding/overview#Types).
+    /// flag is not set to `true`. The list of possible types can be found
+    /// [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

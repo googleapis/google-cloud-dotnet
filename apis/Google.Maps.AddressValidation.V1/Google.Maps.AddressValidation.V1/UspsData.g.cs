@@ -821,8 +821,8 @@ namespace Google.Maps.AddressValidation.V1 {
     private string carrierRoute_ = "";
     /// <summary>
     /// The carrier route code.
-    /// A four character code--a one letter prefix and a three digit route
-    /// designator.
+    /// A four character code consisting of a one letter prefix and a three digit
+    /// route designator.
     ///
     /// Prefixes:
     ///
@@ -1122,7 +1122,7 @@ namespace Google.Maps.AddressValidation.V1 {
     /// processing is suspended because of the detection of artificially created
     /// addresses.
     ///
-    /// The USPS data fields may not be populated when this error is present.
+    /// The USPS data fields might not be populated when this error is present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
