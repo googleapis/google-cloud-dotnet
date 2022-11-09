@@ -53,20 +53,16 @@ public class RetryConformanceTest
     {
         Skip.IfNot(ShouldRunTest(test));
 
-        // TODO: Work out what to do about groups. The old CreateMethodMapping 
-        //CreateMethodMapping(test);
-
         foreach (InstructionList instructionList in test.Cases)
         {
             /*
              * Will remove this section in final PR
              * This is to allow testing on cloud run without reseting connection
-             * 
+             */
             if (!ShouldRunInstruction(instructionList))
             {
                 continue;
             }
-            */
 
             foreach (Method method in test.Methods)
             {
@@ -93,9 +89,8 @@ public class RetryConformanceTest
         /*
          * Will remove this section in final PR
          * This is to allow testing on cloud run without reseting connection
-         *
+         */
         bool ShouldRunInstruction(InstructionList instructionList) => !instructionList.Instructions.Contains("return-reset-connection");
-        */
     }
 
     /// <summary>
@@ -109,7 +104,7 @@ public class RetryConformanceTest
         {
             if (expectSuccess)
             {
-                RunRetryTest(response, context, specifyPreconditions);
+                RunRetryTest(response, context, method.Group, specifyPreconditions);
                 var postTestResponse = await GetRetryTest(response.Id);
                 Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
             }
@@ -117,7 +112,7 @@ public class RetryConformanceTest
             {
                 try
                 {
-                    RunRetryTest(response, context, specifyPreconditions);
+                    RunRetryTest(response, context, method.Group, specifyPreconditions);
 
                     //storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
                     if (!method.Name.Contains("buckets.setIamPolicy"))
@@ -178,17 +173,17 @@ public class RetryConformanceTest
     /// <summary>
     /// Add retry header for each request and make a call to retry and test each API.
     /// </summary>
-    private void RunRetryTest(TestResponse response, TestContext context, bool specifyPreconditions)
+    private void RunRetryTest(TestResponse response, TestContext context, string group, bool specifyPreconditions)
     {
         AddRetryIdHeader(response.Id);
 
-        string rpc = response.GetMethodName();
+        // For resumable uploads and downloads, pick the group name instead of method name 
+        string rpc = (group == null || group == "") ? response.GetMethodName() : group;
         var result = ExecuteRpc(rpc, context, specifyPreconditions);
 
         // For list methods, we need to fetch a page in order to actually perform requests.
         if (rpc.Contains("list") && !rpc.Contains("notification"))
         {
-            // TODO: maybe do this more elegantly...
             ConsumeListOutput((dynamic) result);
         }
     }
@@ -199,11 +194,10 @@ public class RetryConformanceTest
 
     private object ExecuteRpc(string rpc, TestContext ctx, bool specifyPreconditions)
     {
-        // Note: we could potentially extract commonly accessed properties, e.g. ctx.BucketName and ctx.ObjectName to local variables
         var client = _fixture.Client;
         return rpc switch
         {
-            "storage.buckets.delete" => InvokeVoid(() => client.DeleteBucket(ctx.BucketName)), // TODO: preconditions?
+            "storage.buckets.delete" => InvokeVoid(() => client.DeleteBucket(ctx.BucketName)),
             "storage.buckets.get" => client.GetBucket(ctx.BucketName),
             "storage.buckets.getIamPolicy" => client.GetBucketIamPolicy(ctx.BucketName),
             "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, IdGenerator.FromDateTime(prefix: "retry-test-insert-bucket-")),
@@ -237,7 +231,7 @@ public class RetryConformanceTest
             "storage.serviceaccount.get" => client.GetStorageServiceAccountEmail(ctx.ProjectId),
             "storage.resumable.upload" => client.UploadObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, File.OpenRead(_fixture.SampleObjectContentPath)),
             "storage.objects.download" => client.DownloadObject(ctx.BucketName, ctx.ObjectName, new MemoryStream()),
-            // TODO: Return null from any RPCs we don't support.
+            // Return null from any RPCs we don't support.
             _ => throw new ArgumentException($"Unknown RPC: {rpc}")
         };
 
@@ -331,7 +325,6 @@ public class RetryConformanceTest
         return context;
 
         // Local methods used to perform the actual resource creation.
-        // TODO: Perhaps move these into the fixture?
         string CreateBucket(string bucketName)
         {
             Client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName });
