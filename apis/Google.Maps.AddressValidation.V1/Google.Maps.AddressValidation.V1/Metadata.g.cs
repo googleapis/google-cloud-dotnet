@@ -25,22 +25,20 @@ namespace Google.Maps.AddressValidation.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvbWFwcy9hZGRyZXNzdmFsaWRhdGlvbi92MS9tZXRhZGF0YS5w",
-            "cm90bxIgZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEi1wEKD0Fk",
-            "ZHJlc3NNZXRhZGF0YRIZCghoaWdocmlzZRgBIAEoCEICGAFIAIgBARIVCghi",
-            "dXNpbmVzcxgCIAEoCEgBiAEBEhMKBnBvX2JveBgDIAEoCEgCiAEBEh0KDG11",
-            "bHRpX2ZhbWlseRgEIAEoCEICGAFIA4gBARIYCgtyZXNpZGVudGlhbBgGIAEo",
-            "CEgEiAEBQgsKCV9oaWdocmlzZUILCglfYnVzaW5lc3NCCQoHX3BvX2JveEIP",
-            "Cg1fbXVsdGlfZmFtaWx5Qg4KDF9yZXNpZGVudGlhbEKDAgokY29tLmdvb2ds",
-            "ZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQg1NZXRhZGF0YVByb3RvUAFa",
-            "UWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFwcy9h",
-            "ZGRyZXNzdmFsaWRhdGlvbi92MTthZGRyZXNzdmFsaWRhdGlvbvgBAaICB0dN",
-            "UEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRhdGlvbi5WMcoCIEdv",
-            "b2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIjR29vZ2xlOjpNYXBz",
-            "OjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
+            "cm90bxIgZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEifwoPQWRk",
+            "cmVzc01ldGFkYXRhEhUKCGJ1c2luZXNzGAIgASgISACIAQESEwoGcG9fYm94",
+            "GAMgASgISAGIAQESGAoLcmVzaWRlbnRpYWwYBiABKAhIAogBAUILCglfYnVz",
+            "aW5lc3NCCQoHX3BvX2JveEIOCgxfcmVzaWRlbnRpYWxCgwIKJGNvbS5nb29n",
+            "bGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MUINTWV0YWRhdGFQcm90b1AB",
+            "WlFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMv",
+            "YWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRkcmVzc3ZhbGlkYXRpb274AQGiAgdH",
+            "TVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlkYXRpb24uVjHKAiBH",
+            "b29nbGVcTWFwc1xBZGRyZXNzVmFsaWRhdGlvblxWMeoCI0dvb2dsZTo6TWFw",
+            "czo6QWRkcmVzc1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.AddressMetadata), global::Google.Maps.AddressValidation.V1.AddressMetadata.Parser, new[]{ "Highrise", "Business", "PoBox", "MultiFamily", "Residential" }, new[]{ "Highrise", "Business", "PoBox", "MultiFamily", "Residential" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.AddressMetadata), global::Google.Maps.AddressValidation.V1.AddressMetadata.Parser, new[]{ "Business", "PoBox", "Residential" }, new[]{ "Business", "PoBox", "Residential" }, null, null, null)
           }));
     }
     #endregion
@@ -86,10 +84,8 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AddressMetadata(AddressMetadata other) : this() {
       _hasBits0 = other._hasBits0;
-      highrise_ = other.highrise_;
       business_ = other.business_;
       poBox_ = other.poBox_;
-      multiFamily_ = other.multiFamily_;
       residential_ = other.residential_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -98,42 +94,6 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AddressMetadata Clone() {
       return new AddressMetadata(this);
-    }
-
-    /// <summary>Field number for the "highrise" field.</summary>
-    public const int HighriseFieldNumber = 1;
-    private bool highrise_;
-    /// <summary>
-    /// Indicates that this address is a high-rise building.
-    /// If unset, indicates that the value is unknown.
-    ///
-    /// DEPRECATED: Please use
-    /// [`address_record_type`](google.maps.addressvalidation.v1.ValidationResult.usps_data.address_record_type)
-    /// instead. This field will be removed with the GA release.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Highrise {
-      get { if ((_hasBits0 & 1) != 0) { return highrise_; } else { return false; } }
-      set {
-        _hasBits0 |= 1;
-        highrise_ = value;
-      }
-    }
-    /// <summary>Gets whether the "highrise" field is set</summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasHighrise {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "highrise" field</summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearHighrise() {
-      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "business" field.</summary>
@@ -146,9 +106,9 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Business {
-      get { if ((_hasBits0 & 2) != 0) { return business_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return business_; } else { return false; } }
       set {
-        _hasBits0 |= 2;
+        _hasBits0 |= 1;
         business_ = value;
       }
     }
@@ -156,13 +116,13 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasBusiness {
-      get { return (_hasBits0 & 2) != 0; }
+      get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "business" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBusiness() {
-      _hasBits0 &= ~2;
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "po_box" field.</summary>
@@ -175,9 +135,9 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PoBox {
-      get { if ((_hasBits0 & 4) != 0) { return poBox_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return poBox_; } else { return false; } }
       set {
-        _hasBits0 |= 4;
+        _hasBits0 |= 2;
         poBox_ = value;
       }
     }
@@ -185,47 +145,13 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasPoBox {
-      get { return (_hasBits0 & 4) != 0; }
+      get { return (_hasBits0 & 2) != 0; }
     }
     /// <summary>Clears the value of the "po_box" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPoBox() {
-      _hasBits0 &= ~4;
-    }
-
-    /// <summary>Field number for the "multi_family" field.</summary>
-    public const int MultiFamilyFieldNumber = 4;
-    private bool multiFamily_;
-    /// <summary>
-    /// Indicates that the address is of a multi-family building.
-    /// If unset, indicates that the value is unknown.
-    ///
-    /// DEPRECATED: this field will be removed with the GA release.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MultiFamily {
-      get { if ((_hasBits0 & 8) != 0) { return multiFamily_; } else { return false; } }
-      set {
-        _hasBits0 |= 8;
-        multiFamily_ = value;
-      }
-    }
-    /// <summary>Gets whether the "multi_family" field is set</summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasMultiFamily {
-      get { return (_hasBits0 & 8) != 0; }
-    }
-    /// <summary>Clears the value of the "multi_family" field</summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearMultiFamily() {
-      _hasBits0 &= ~8;
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "residential" field.</summary>
@@ -238,9 +164,9 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Residential {
-      get { if ((_hasBits0 & 16) != 0) { return residential_; } else { return false; } }
+      get { if ((_hasBits0 & 4) != 0) { return residential_; } else { return false; } }
       set {
-        _hasBits0 |= 16;
+        _hasBits0 |= 4;
         residential_ = value;
       }
     }
@@ -248,13 +174,13 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasResidential {
-      get { return (_hasBits0 & 16) != 0; }
+      get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "residential" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearResidential() {
-      _hasBits0 &= ~16;
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -272,10 +198,8 @@ namespace Google.Maps.AddressValidation.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Highrise != other.Highrise) return false;
       if (Business != other.Business) return false;
       if (PoBox != other.PoBox) return false;
-      if (MultiFamily != other.MultiFamily) return false;
       if (Residential != other.Residential) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -284,10 +208,8 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasHighrise) hash ^= Highrise.GetHashCode();
       if (HasBusiness) hash ^= Business.GetHashCode();
       if (HasPoBox) hash ^= PoBox.GetHashCode();
-      if (HasMultiFamily) hash ^= MultiFamily.GetHashCode();
       if (HasResidential) hash ^= Residential.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -307,10 +229,6 @@ namespace Google.Maps.AddressValidation.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasHighrise) {
-        output.WriteRawTag(8);
-        output.WriteBool(Highrise);
-      }
       if (HasBusiness) {
         output.WriteRawTag(16);
         output.WriteBool(Business);
@@ -318,10 +236,6 @@ namespace Google.Maps.AddressValidation.V1 {
       if (HasPoBox) {
         output.WriteRawTag(24);
         output.WriteBool(PoBox);
-      }
-      if (HasMultiFamily) {
-        output.WriteRawTag(32);
-        output.WriteBool(MultiFamily);
       }
       if (HasResidential) {
         output.WriteRawTag(48);
@@ -337,10 +251,6 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasHighrise) {
-        output.WriteRawTag(8);
-        output.WriteBool(Highrise);
-      }
       if (HasBusiness) {
         output.WriteRawTag(16);
         output.WriteBool(Business);
@@ -348,10 +258,6 @@ namespace Google.Maps.AddressValidation.V1 {
       if (HasPoBox) {
         output.WriteRawTag(24);
         output.WriteBool(PoBox);
-      }
-      if (HasMultiFamily) {
-        output.WriteRawTag(32);
-        output.WriteBool(MultiFamily);
       }
       if (HasResidential) {
         output.WriteRawTag(48);
@@ -367,16 +273,10 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasHighrise) {
-        size += 1 + 1;
-      }
       if (HasBusiness) {
         size += 1 + 1;
       }
       if (HasPoBox) {
-        size += 1 + 1;
-      }
-      if (HasMultiFamily) {
         size += 1 + 1;
       }
       if (HasResidential) {
@@ -394,17 +294,11 @@ namespace Google.Maps.AddressValidation.V1 {
       if (other == null) {
         return;
       }
-      if (other.HasHighrise) {
-        Highrise = other.Highrise;
-      }
       if (other.HasBusiness) {
         Business = other.Business;
       }
       if (other.HasPoBox) {
         PoBox = other.PoBox;
-      }
-      if (other.HasMultiFamily) {
-        MultiFamily = other.MultiFamily;
       }
       if (other.HasResidential) {
         Residential = other.Residential;
@@ -424,20 +318,12 @@ namespace Google.Maps.AddressValidation.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Highrise = input.ReadBool();
-            break;
-          }
           case 16: {
             Business = input.ReadBool();
             break;
           }
           case 24: {
             PoBox = input.ReadBool();
-            break;
-          }
-          case 32: {
-            MultiFamily = input.ReadBool();
             break;
           }
           case 48: {
@@ -459,20 +345,12 @@ namespace Google.Maps.AddressValidation.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Highrise = input.ReadBool();
-            break;
-          }
           case 16: {
             Business = input.ReadBool();
             break;
           }
           case 24: {
             PoBox = input.ReadBool();
-            break;
-          }
-          case 32: {
-            MultiFamily = input.ReadBool();
             break;
           }
           case 48: {

@@ -200,7 +200,7 @@ namespace Google.Maps.AddressValidation.V1 {
     /// <summary>
     /// The type(s) of place that the input geocoded to. For example,
     /// `['locality', 'political']`. The full list of types can be found
-    /// [here](https://developers.google.com/maps/documentation/geocoding/overview#Types).
+    /// [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
