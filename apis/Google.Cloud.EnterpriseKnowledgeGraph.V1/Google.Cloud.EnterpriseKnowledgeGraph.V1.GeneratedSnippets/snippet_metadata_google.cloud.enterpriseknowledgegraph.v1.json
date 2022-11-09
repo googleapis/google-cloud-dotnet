@@ -1138,6 +1138,914 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_sync",
+      "title": "LookupRequestObject",
+      "description": "Snippet for Lookup",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Lookup",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_async",
+      "title": "LookupRequestObjectAsync",
+      "description": "Snippet for LookupAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_sync_flattened",
+      "title": "Lookup",
+      "description": "Snippet for Lookup",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Lookup",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_async_flattened",
+      "title": "LookupAsync",
+      "description": "Snippet for LookupAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_sync_flattened_resourceNames",
+      "title": "LookupResourceNames",
+      "description": "Snippet for Lookup",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Lookup",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_async_flattened_resourceNames",
+      "title": "LookupResourceNamesAsync",
+      "description": "Snippet for LookupAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Lookup",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_sync",
+      "title": "SearchRequestObject",
+      "description": "Snippet for Search",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_async",
+      "title": "SearchRequestObjectAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_sync_flattened",
+      "title": "Search",
+      "description": "Snippet for Search",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_async_flattened",
+      "title": "SearchAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_sync_flattened_resourceNames",
+      "title": "SearchResourceNames",
+      "description": "Snippet for Search",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Search_async_flattened_resourceNames",
+      "title": "SearchResourceNamesAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_sync",
+      "title": "LookupPublicKgRequestObject",
+      "description": "Snippet for LookupPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_async",
+      "title": "LookupPublicKgRequestObjectAsync",
+      "description": "Snippet for LookupPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_sync_flattened",
+      "title": "LookupPublicKg",
+      "description": "Snippet for LookupPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_async_flattened",
+      "title": "LookupPublicKgAsync",
+      "description": "Snippet for LookupPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_sync_flattened_resourceNames",
+      "title": "LookupPublicKgResourceNames",
+      "description": "Snippet for LookupPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_LookupPublicKg_async_flattened_resourceNames",
+      "title": "LookupPublicKgResourceNamesAsync",
+      "description": "Snippet for LookupPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.LookupPublicKgResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "LookupPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_sync",
+      "title": "SearchPublicKgRequestObject",
+      "description": "Snippet for SearchPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_async",
+      "title": "SearchPublicKgRequestObjectAsync",
+      "description": "Snippet for SearchPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_sync_flattened",
+      "title": "SearchPublicKg",
+      "description": "Snippet for SearchPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_async_flattened",
+      "title": "SearchPublicKgAsync",
+      "description": "Snippet for SearchPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_sync_flattened_resourceNames",
+      "title": "SearchPublicKgResourceNames",
+      "description": "Snippet for SearchPublicKg",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKg",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_SearchPublicKg_async_flattened_resourceNames",
+      "title": "SearchPublicKgResourceNamesAsync",
+      "description": "Snippet for SearchPublicKgAsync",
+      "file": "EnterpriseKnowledgeGraphServiceClient.SearchPublicKgResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPublicKgAsync",
+        "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
+        "client": {
+          "shortName": "EnterpriseKnowledgeGraphServiceClient",
+          "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPublicKg",
+          "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.SearchPublicKg",
+          "service": {
+            "shortName": "EnterpriseKnowledgeGraphService",
+            "fullName": "google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -79,6 +79,22 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_DeleteEntityReconciliationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupPublicKgRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupPublicKgResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchPublicKgRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse> __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchPublicKgResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.CreateEntityReconciliationJobRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob> __Method_CreateEntityReconciliationJob = new grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.CreateEntityReconciliationJobRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>(
@@ -119,6 +135,38 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
         "DeleteEntityReconciliationJob",
         __Marshaller_google_cloud_enterpriseknowledgegraph_v1_DeleteEntityReconciliationJobRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse> __Method_Lookup = new grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Lookup",
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupRequest,
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse> __Method_Search = new grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Search",
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchRequest,
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse> __Method_LookupPublicKg = new grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LookupPublicKg",
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupPublicKgRequest,
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_LookupPublicKgResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse> __Method_SearchPublicKg = new grpc::Method<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchPublicKg",
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchPublicKgRequest,
+        __Marshaller_google_cloud_enterpriseknowledgegraph_v1_SearchPublicKgResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -190,6 +238,54 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntityReconciliationJob(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finds the Cloud KG entities with CKG ID(s).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse> Lookup(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches the Cloud KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse> Search(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finds the public KG entities with public KG ID(s).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse> LookupPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches the public KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse> SearchPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -479,6 +575,198 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEntityReconciliationJob, null, options, request);
       }
+      /// <summary>
+      /// Finds the Cloud KG entities with CKG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse Lookup(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Lookup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the Cloud KG entities with CKG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse Lookup(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Lookup, null, options, request);
+      }
+      /// <summary>
+      /// Finds the Cloud KG entities with CKG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse> LookupAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the Cloud KG entities with CKG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse> LookupAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Lookup, null, options, request);
+      }
+      /// <summary>
+      /// Searches the Cloud KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse Search(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Search(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches the Cloud KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse Search(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Search, null, options, request);
+      }
+      /// <summary>
+      /// Searches the Cloud KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse> SearchAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches the Cloud KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse> SearchAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Search, null, options, request);
+      }
+      /// <summary>
+      /// Finds the public KG entities with public KG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse LookupPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupPublicKg(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the public KG entities with public KG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse LookupPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LookupPublicKg, null, options, request);
+      }
+      /// <summary>
+      /// Finds the public KG entities with public KG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse> LookupPublicKgAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupPublicKgAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the public KG entities with public KG ID(s).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse> LookupPublicKgAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LookupPublicKg, null, options, request);
+      }
+      /// <summary>
+      /// Searches the public KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse SearchPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchPublicKg(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches the public KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse SearchPublicKg(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchPublicKg, null, options, request);
+      }
+      /// <summary>
+      /// Searches the public KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse> SearchPublicKgAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchPublicKgAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches the public KG entities with entity name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse> SearchPublicKgAsync(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchPublicKg, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EnterpriseKnowledgeGraphServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -497,7 +785,11 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
           .AddMethod(__Method_GetEntityReconciliationJob, serviceImpl.GetEntityReconciliationJob)
           .AddMethod(__Method_ListEntityReconciliationJobs, serviceImpl.ListEntityReconciliationJobs)
           .AddMethod(__Method_CancelEntityReconciliationJob, serviceImpl.CancelEntityReconciliationJob)
-          .AddMethod(__Method_DeleteEntityReconciliationJob, serviceImpl.DeleteEntityReconciliationJob).Build();
+          .AddMethod(__Method_DeleteEntityReconciliationJob, serviceImpl.DeleteEntityReconciliationJob)
+          .AddMethod(__Method_Lookup, serviceImpl.Lookup)
+          .AddMethod(__Method_Search, serviceImpl.Search)
+          .AddMethod(__Method_LookupPublicKg, serviceImpl.LookupPublicKg)
+          .AddMethod(__Method_SearchPublicKg, serviceImpl.SearchPublicKg).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -512,6 +804,10 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
       serviceBinder.AddMethod(__Method_ListEntityReconciliationJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse>(serviceImpl.ListEntityReconciliationJobs));
       serviceBinder.AddMethod(__Method_CancelEntityReconciliationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.CancelEntityReconciliationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelEntityReconciliationJob));
       serviceBinder.AddMethod(__Method_DeleteEntityReconciliationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEntityReconciliationJob));
+      serviceBinder.AddMethod(__Method_Lookup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>(serviceImpl.Lookup));
+      serviceBinder.AddMethod(__Method_Search, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>(serviceImpl.Search));
+      serviceBinder.AddMethod(__Method_LookupPublicKg, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>(serviceImpl.LookupPublicKg));
+      serviceBinder.AddMethod(__Method_SearchPublicKg, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest, global::Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>(serviceImpl.SearchPublicKg));
     }
 
   }

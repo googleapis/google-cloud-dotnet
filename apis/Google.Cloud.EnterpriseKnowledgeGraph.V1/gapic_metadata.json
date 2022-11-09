@@ -39,6 +39,30 @@
                 "ListEntityReconciliationJobs",
                 "ListEntityReconciliationJobsAsync"
               ]
+            },
+            "Lookup": {
+              "methods": [
+                "Lookup",
+                "LookupAsync"
+              ]
+            },
+            "LookupPublicKg": {
+              "methods": [
+                "LookupPublicKg",
+                "LookupPublicKgAsync"
+              ]
+            },
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
+              ]
+            },
+            "SearchPublicKg": {
+              "methods": [
+                "SearchPublicKg",
+                "SearchPublicKgAsync"
+              ]
             }
           }
         }

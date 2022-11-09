@@ -19,6 +19,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -654,6 +655,394 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1.Snippets
             EntityReconciliationJobName name = EntityReconciliationJobName.FromProjectLocationEntityReconciliationJob("[PROJECT]", "[LOCATION]", "[ENTITY_RECONCILIATION_JOB]");
             // Make the request
             await enterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Lookup</summary>
+        public void LookupRequestObject()
+        {
+            // Snippet: Lookup(LookupRequest, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LookupRequest request = new LookupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Ids = { "", },
+                Languages = { "", },
+            };
+            // Make the request
+            LookupResponse response = enterpriseKnowledgeGraphServiceClient.Lookup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupAsync</summary>
+        public async Task LookupRequestObjectAsync()
+        {
+            // Snippet: LookupAsync(LookupRequest, CallSettings)
+            // Additional: LookupAsync(LookupRequest, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LookupRequest request = new LookupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Ids = { "", },
+                Languages = { "", },
+            };
+            // Make the request
+            LookupResponse response = await enterpriseKnowledgeGraphServiceClient.LookupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Lookup</summary>
+        public void Lookup()
+        {
+            // Snippet: Lookup(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupResponse response = enterpriseKnowledgeGraphServiceClient.Lookup(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupAsync</summary>
+        public async Task LookupAsync()
+        {
+            // Snippet: LookupAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: LookupAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupResponse response = await enterpriseKnowledgeGraphServiceClient.LookupAsync(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Lookup</summary>
+        public void LookupResourceNames()
+        {
+            // Snippet: Lookup(LocationName, IEnumerable<string>, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupResponse response = enterpriseKnowledgeGraphServiceClient.Lookup(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupAsync</summary>
+        public async Task LookupResourceNamesAsync()
+        {
+            // Snippet: LookupAsync(LocationName, IEnumerable<string>, CallSettings)
+            // Additional: LookupAsync(LocationName, IEnumerable<string>, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupResponse response = await enterpriseKnowledgeGraphServiceClient.LookupAsync(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Search</summary>
+        public void SearchRequestObject()
+        {
+            // Snippet: Search(SearchRequest, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            SearchRequest request = new SearchRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+                Languages = { "", },
+                Types_ = { "", },
+                Limit = 0,
+            };
+            // Make the request
+            SearchResponse response = enterpriseKnowledgeGraphServiceClient.Search(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAsync</summary>
+        public async Task SearchRequestObjectAsync()
+        {
+            // Snippet: SearchAsync(SearchRequest, CallSettings)
+            // Additional: SearchAsync(SearchRequest, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchRequest request = new SearchRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+                Languages = { "", },
+                Types_ = { "", },
+                Limit = 0,
+            };
+            // Make the request
+            SearchResponse response = await enterpriseKnowledgeGraphServiceClient.SearchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Search</summary>
+        public void Search()
+        {
+            // Snippet: Search(string, string, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            SearchResponse response = enterpriseKnowledgeGraphServiceClient.Search(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAsync</summary>
+        public async Task SearchAsync()
+        {
+            // Snippet: SearchAsync(string, string, CallSettings)
+            // Additional: SearchAsync(string, string, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            SearchResponse response = await enterpriseKnowledgeGraphServiceClient.SearchAsync(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Search</summary>
+        public void SearchResourceNames()
+        {
+            // Snippet: Search(LocationName, string, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            SearchResponse response = enterpriseKnowledgeGraphServiceClient.Search(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAsync</summary>
+        public async Task SearchResourceNamesAsync()
+        {
+            // Snippet: SearchAsync(LocationName, string, CallSettings)
+            // Additional: SearchAsync(LocationName, string, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            SearchResponse response = await enterpriseKnowledgeGraphServiceClient.SearchAsync(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKg</summary>
+        public void LookupPublicKgRequestObject()
+        {
+            // Snippet: LookupPublicKg(LookupPublicKgRequest, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LookupPublicKgRequest request = new LookupPublicKgRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Ids = { "", },
+                Languages = { "", },
+            };
+            // Make the request
+            LookupPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.LookupPublicKg(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKgAsync</summary>
+        public async Task LookupPublicKgRequestObjectAsync()
+        {
+            // Snippet: LookupPublicKgAsync(LookupPublicKgRequest, CallSettings)
+            // Additional: LookupPublicKgAsync(LookupPublicKgRequest, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LookupPublicKgRequest request = new LookupPublicKgRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Ids = { "", },
+                Languages = { "", },
+            };
+            // Make the request
+            LookupPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKg</summary>
+        public void LookupPublicKg()
+        {
+            // Snippet: LookupPublicKg(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.LookupPublicKg(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKgAsync</summary>
+        public async Task LookupPublicKgAsync()
+        {
+            // Snippet: LookupPublicKgAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: LookupPublicKgAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKg</summary>
+        public void LookupPublicKgResourceNames()
+        {
+            // Snippet: LookupPublicKg(LocationName, IEnumerable<string>, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.LookupPublicKg(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicKgAsync</summary>
+        public async Task LookupPublicKgResourceNamesAsync()
+        {
+            // Snippet: LookupPublicKgAsync(LocationName, IEnumerable<string>, CallSettings)
+            // Additional: LookupPublicKgAsync(LocationName, IEnumerable<string>, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> ids = new string[] { "", };
+            // Make the request
+            LookupPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync(parent, ids);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKg</summary>
+        public void SearchPublicKgRequestObject()
+        {
+            // Snippet: SearchPublicKg(SearchPublicKgRequest, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            SearchPublicKgRequest request = new SearchPublicKgRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+                Languages = { "", },
+                Types_ = { "", },
+                Limit = 0,
+            };
+            // Make the request
+            SearchPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.SearchPublicKg(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKgAsync</summary>
+        public async Task SearchPublicKgRequestObjectAsync()
+        {
+            // Snippet: SearchPublicKgAsync(SearchPublicKgRequest, CallSettings)
+            // Additional: SearchPublicKgAsync(SearchPublicKgRequest, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchPublicKgRequest request = new SearchPublicKgRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+                Languages = { "", },
+                Types_ = { "", },
+                Limit = 0,
+            };
+            // Make the request
+            SearchPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKg</summary>
+        public void SearchPublicKg()
+        {
+            // Snippet: SearchPublicKg(string, string, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            SearchPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.SearchPublicKg(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKgAsync</summary>
+        public async Task SearchPublicKgAsync()
+        {
+            // Snippet: SearchPublicKgAsync(string, string, CallSettings)
+            // Additional: SearchPublicKgAsync(string, string, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            SearchPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKg</summary>
+        public void SearchPublicKgResourceNames()
+        {
+            // Snippet: SearchPublicKg(LocationName, string, CallSettings)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = EnterpriseKnowledgeGraphServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            SearchPublicKgResponse response = enterpriseKnowledgeGraphServiceClient.SearchPublicKg(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchPublicKgAsync</summary>
+        public async Task SearchPublicKgResourceNamesAsync()
+        {
+            // Snippet: SearchPublicKgAsync(LocationName, string, CallSettings)
+            // Additional: SearchPublicKgAsync(LocationName, string, CancellationToken)
+            // Create client
+            EnterpriseKnowledgeGraphServiceClient enterpriseKnowledgeGraphServiceClient = await EnterpriseKnowledgeGraphServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            SearchPublicKgResponse response = await enterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync(parent, query);
             // End snippet
         }
     }

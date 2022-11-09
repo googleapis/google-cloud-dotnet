@@ -730,6 +730,564 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         public static bool operator !=(TableName a, TableName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>CloudKnowledgeGraphEntity</c> resource.</summary>
+    public sealed partial class CloudKnowledgeGraphEntityName : gax::IResourceName, sys::IEquatable<CloudKnowledgeGraphEntityName>
+    {
+        /// <summary>The possible contents of <see cref="CloudKnowledgeGraphEntityName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+            /// .
+            /// </summary>
+            ProjectLocationCloudKnowledgeGraphEntity = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationCloudKnowledgeGraphEntity = new gax::PathTemplate("projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}");
+
+        /// <summary>
+        /// Creates a <see cref="CloudKnowledgeGraphEntityName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CloudKnowledgeGraphEntityName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CloudKnowledgeGraphEntityName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CloudKnowledgeGraphEntityName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CloudKnowledgeGraphEntityName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudKnowledgeGraphEntityId">
+        /// The <c>CloudKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="CloudKnowledgeGraphEntityName"/> constructed from the provided ids.
+        /// </returns>
+        public static CloudKnowledgeGraphEntityName FromProjectLocationCloudKnowledgeGraphEntity(string projectId, string locationId, string cloudKnowledgeGraphEntityId) =>
+            new CloudKnowledgeGraphEntityName(ResourceNameType.ProjectLocationCloudKnowledgeGraphEntity, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), cloudKnowledgeGraphEntityId: gax::GaxPreconditions.CheckNotNullOrEmpty(cloudKnowledgeGraphEntityId, nameof(cloudKnowledgeGraphEntityId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CloudKnowledgeGraphEntityName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudKnowledgeGraphEntityId">
+        /// The <c>CloudKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="CloudKnowledgeGraphEntityName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string cloudKnowledgeGraphEntityId) =>
+            FormatProjectLocationCloudKnowledgeGraphEntity(projectId, locationId, cloudKnowledgeGraphEntityId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CloudKnowledgeGraphEntityName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudKnowledgeGraphEntityId">
+        /// The <c>CloudKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="CloudKnowledgeGraphEntityName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>.
+        /// </returns>
+        public static string FormatProjectLocationCloudKnowledgeGraphEntity(string projectId, string locationId, string cloudKnowledgeGraphEntityId) =>
+            s_projectLocationCloudKnowledgeGraphEntity.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(cloudKnowledgeGraphEntityId, nameof(cloudKnowledgeGraphEntityId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CloudKnowledgeGraphEntityName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="cloudKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="CloudKnowledgeGraphEntityName"/> if successful.</returns>
+        public static CloudKnowledgeGraphEntityName Parse(string cloudKnowledgeGraphEntityName) =>
+            Parse(cloudKnowledgeGraphEntityName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CloudKnowledgeGraphEntityName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="cloudKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CloudKnowledgeGraphEntityName"/> if successful.</returns>
+        public static CloudKnowledgeGraphEntityName Parse(string cloudKnowledgeGraphEntityName, bool allowUnparsed) =>
+            TryParse(cloudKnowledgeGraphEntityName, allowUnparsed, out CloudKnowledgeGraphEntityName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CloudKnowledgeGraphEntityName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="cloudKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CloudKnowledgeGraphEntityName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string cloudKnowledgeGraphEntityName, out CloudKnowledgeGraphEntityName result) =>
+            TryParse(cloudKnowledgeGraphEntityName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CloudKnowledgeGraphEntityName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="cloudKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CloudKnowledgeGraphEntityName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string cloudKnowledgeGraphEntityName, bool allowUnparsed, out CloudKnowledgeGraphEntityName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(cloudKnowledgeGraphEntityName, nameof(cloudKnowledgeGraphEntityName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationCloudKnowledgeGraphEntity.TryParseName(cloudKnowledgeGraphEntityName, out resourceName))
+            {
+                result = FromProjectLocationCloudKnowledgeGraphEntity(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(cloudKnowledgeGraphEntityName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CloudKnowledgeGraphEntityName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cloudKnowledgeGraphEntityId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CloudKnowledgeGraphEntityId = cloudKnowledgeGraphEntityId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CloudKnowledgeGraphEntityName"/> class from the component parts of
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/cloudKnowledgeGraphEntities/{cloud_knowledge_graph_entity}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudKnowledgeGraphEntityId">
+        /// The <c>CloudKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public CloudKnowledgeGraphEntityName(string projectId, string locationId, string cloudKnowledgeGraphEntityId) : this(ResourceNameType.ProjectLocationCloudKnowledgeGraphEntity, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), cloudKnowledgeGraphEntityId: gax::GaxPreconditions.CheckNotNullOrEmpty(cloudKnowledgeGraphEntityId, nameof(cloudKnowledgeGraphEntityId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CloudKnowledgeGraphEntity</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string CloudKnowledgeGraphEntityId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationCloudKnowledgeGraphEntity: return s_projectLocationCloudKnowledgeGraphEntity.Expand(ProjectId, LocationId, CloudKnowledgeGraphEntityId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CloudKnowledgeGraphEntityName);
+
+        /// <inheritdoc/>
+        public bool Equals(CloudKnowledgeGraphEntityName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(CloudKnowledgeGraphEntityName a, CloudKnowledgeGraphEntityName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(CloudKnowledgeGraphEntityName a, CloudKnowledgeGraphEntityName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>PublicKnowledgeGraphEntity</c> resource.</summary>
+    public sealed partial class PublicKnowledgeGraphEntityName : gax::IResourceName, sys::IEquatable<PublicKnowledgeGraphEntityName>
+    {
+        /// <summary>The possible contents of <see cref="PublicKnowledgeGraphEntityName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+            /// .
+            /// </summary>
+            ProjectLocationPublicKnowledgeGraphEntity = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationPublicKnowledgeGraphEntity = new gax::PathTemplate("projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}");
+
+        /// <summary>
+        /// Creates a <see cref="PublicKnowledgeGraphEntityName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="PublicKnowledgeGraphEntityName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static PublicKnowledgeGraphEntityName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new PublicKnowledgeGraphEntityName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="PublicKnowledgeGraphEntityName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publicKnowledgeGraphEntityId">
+        /// The <c>PublicKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="PublicKnowledgeGraphEntityName"/> constructed from the provided ids.
+        /// </returns>
+        public static PublicKnowledgeGraphEntityName FromProjectLocationPublicKnowledgeGraphEntity(string projectId, string locationId, string publicKnowledgeGraphEntityId) =>
+            new PublicKnowledgeGraphEntityName(ResourceNameType.ProjectLocationPublicKnowledgeGraphEntity, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), publicKnowledgeGraphEntityId: gax::GaxPreconditions.CheckNotNullOrEmpty(publicKnowledgeGraphEntityId, nameof(publicKnowledgeGraphEntityId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="PublicKnowledgeGraphEntityName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publicKnowledgeGraphEntityId">
+        /// The <c>PublicKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="PublicKnowledgeGraphEntityName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string publicKnowledgeGraphEntityId) =>
+            FormatProjectLocationPublicKnowledgeGraphEntity(projectId, locationId, publicKnowledgeGraphEntityId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="PublicKnowledgeGraphEntityName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publicKnowledgeGraphEntityId">
+        /// The <c>PublicKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="PublicKnowledgeGraphEntityName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>.
+        /// </returns>
+        public static string FormatProjectLocationPublicKnowledgeGraphEntity(string projectId, string locationId, string publicKnowledgeGraphEntityId) =>
+            s_projectLocationPublicKnowledgeGraphEntity.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(publicKnowledgeGraphEntityId, nameof(publicKnowledgeGraphEntityId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="PublicKnowledgeGraphEntityName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="publicKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="PublicKnowledgeGraphEntityName"/> if successful.</returns>
+        public static PublicKnowledgeGraphEntityName Parse(string publicKnowledgeGraphEntityName) =>
+            Parse(publicKnowledgeGraphEntityName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="PublicKnowledgeGraphEntityName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="publicKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="PublicKnowledgeGraphEntityName"/> if successful.</returns>
+        public static PublicKnowledgeGraphEntityName Parse(string publicKnowledgeGraphEntityName, bool allowUnparsed) =>
+            TryParse(publicKnowledgeGraphEntityName, allowUnparsed, out PublicKnowledgeGraphEntityName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="PublicKnowledgeGraphEntityName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="publicKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="PublicKnowledgeGraphEntityName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string publicKnowledgeGraphEntityName, out PublicKnowledgeGraphEntityName result) =>
+            TryParse(publicKnowledgeGraphEntityName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="PublicKnowledgeGraphEntityName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="publicKnowledgeGraphEntityName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="PublicKnowledgeGraphEntityName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string publicKnowledgeGraphEntityName, bool allowUnparsed, out PublicKnowledgeGraphEntityName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(publicKnowledgeGraphEntityName, nameof(publicKnowledgeGraphEntityName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationPublicKnowledgeGraphEntity.TryParseName(publicKnowledgeGraphEntityName, out resourceName))
+            {
+                result = FromProjectLocationPublicKnowledgeGraphEntity(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(publicKnowledgeGraphEntityName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private PublicKnowledgeGraphEntityName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string publicKnowledgeGraphEntityId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            PublicKnowledgeGraphEntityId = publicKnowledgeGraphEntityId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="PublicKnowledgeGraphEntityName"/> class from the component parts
+        /// of pattern
+        /// <c>projects/{project}/locations/{location}/publicKnowledgeGraphEntities/{public_knowledge_graph_entity}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publicKnowledgeGraphEntityId">
+        /// The <c>PublicKnowledgeGraphEntity</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public PublicKnowledgeGraphEntityName(string projectId, string locationId, string publicKnowledgeGraphEntityId) : this(ResourceNameType.ProjectLocationPublicKnowledgeGraphEntity, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), publicKnowledgeGraphEntityId: gax::GaxPreconditions.CheckNotNullOrEmpty(publicKnowledgeGraphEntityId, nameof(publicKnowledgeGraphEntityId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>PublicKnowledgeGraphEntity</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string PublicKnowledgeGraphEntityId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationPublicKnowledgeGraphEntity: return s_projectLocationPublicKnowledgeGraphEntity.Expand(ProjectId, LocationId, PublicKnowledgeGraphEntityId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as PublicKnowledgeGraphEntityName);
+
+        /// <inheritdoc/>
+        public bool Equals(PublicKnowledgeGraphEntityName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(PublicKnowledgeGraphEntityName a, PublicKnowledgeGraphEntityName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(PublicKnowledgeGraphEntityName a, PublicKnowledgeGraphEntityName b) => !(a == b);
+    }
+
     public partial class InputConfig
     {
         /// <summary>
@@ -840,6 +1398,54 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcev::EntityReconciliationJobName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class LookupRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class LookupPublicKgRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchPublicKgRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }
