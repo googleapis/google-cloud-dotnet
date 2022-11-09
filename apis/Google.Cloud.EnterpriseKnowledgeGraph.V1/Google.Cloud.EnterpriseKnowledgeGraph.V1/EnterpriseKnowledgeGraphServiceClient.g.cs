@@ -54,6 +54,10 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
             ListEntityReconciliationJobsSettings = existing.ListEntityReconciliationJobsSettings;
             CancelEntityReconciliationJobSettings = existing.CancelEntityReconciliationJobSettings;
             DeleteEntityReconciliationJobSettings = existing.DeleteEntityReconciliationJobSettings;
+            LookupSettings = existing.LookupSettings;
+            SearchSettings = existing.SearchSettings;
+            LookupPublicKgSettings = existing.LookupPublicKgSettings;
+            SearchPublicKgSettings = existing.SearchPublicKgSettings;
             OnCopy(existing);
         }
 
@@ -135,6 +139,58 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteEntityReconciliationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnterpriseKnowledgeGraphServiceClient.Lookup</c> and <c>EnterpriseKnowledgeGraphServiceClient.LookupAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnterpriseKnowledgeGraphServiceClient.Search</c> and <c>EnterpriseKnowledgeGraphServiceClient.SearchAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnterpriseKnowledgeGraphServiceClient.LookupPublicKg</c> and
+        /// <c>EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupPublicKgSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnterpriseKnowledgeGraphServiceClient.SearchPublicKg</c> and
+        /// <c>EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchPublicKgSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EnterpriseKnowledgeGraphServiceSettings"/> object.</returns>
@@ -924,6 +980,586 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteEntityReconciliationJobAsync(EntityReconciliationJobName name, st::CancellationToken cancellationToken) =>
             DeleteEntityReconciliationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupResponse Lookup(LookupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(LookupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(LookupRequest request, st::CancellationToken cancellationToken) =>
+            LookupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupResponse Lookup(string parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            Lookup(new LookupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(string parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupAsync(new LookupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(string parent, scg::IEnumerable<string> ids, st::CancellationToken cancellationToken) =>
+            LookupAsync(parent, ids, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupResponse Lookup(gagr::LocationName parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            Lookup(new LookupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(gagr::LocationName parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupAsync(new LookupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupResponse> LookupAsync(gagr::LocationName parent, scg::IEnumerable<string> ids, st::CancellationToken cancellationToken) =>
+            LookupAsync(parent, ids, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchResponse Search(SearchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(SearchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(SearchRequest request, st::CancellationToken cancellationToken) =>
+            SearchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchResponse Search(string parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            Search(new SearchRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(string parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAsync(new SearchRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(string parent, string query, st::CancellationToken cancellationToken) =>
+            SearchAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchResponse Search(gagr::LocationName parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            Search(new SearchRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(gagr::LocationName parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAsync(new SearchRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchResponse> SearchAsync(gagr::LocationName parent, string query, st::CancellationToken cancellationToken) =>
+            SearchAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupPublicKgResponse LookupPublicKg(LookupPublicKgRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(LookupPublicKgRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(LookupPublicKgRequest request, st::CancellationToken cancellationToken) =>
+            LookupPublicKgAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupPublicKgResponse LookupPublicKg(string parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupPublicKg(new LookupPublicKgRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(string parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupPublicKgAsync(new LookupPublicKgRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(string parent, scg::IEnumerable<string> ids, st::CancellationToken cancellationToken) =>
+            LookupPublicKgAsync(parent, ids, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupPublicKgResponse LookupPublicKg(gagr::LocationName parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupPublicKg(new LookupPublicKgRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(gagr::LocationName parent, scg::IEnumerable<string> ids, gaxgrpc::CallSettings callSettings = null) =>
+            LookupPublicKgAsync(new LookupPublicKgRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Ids =
+                {
+                    gax::GaxPreconditions.CheckNotNull(ids, nameof(ids)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="ids">
+        /// Required. The list of entity ids to be used for lookup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(gagr::LocationName parent, scg::IEnumerable<string> ids, st::CancellationToken cancellationToken) =>
+            LookupPublicKgAsync(parent, ids, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchPublicKgResponse SearchPublicKg(SearchPublicKgRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(SearchPublicKgRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(SearchPublicKgRequest request, st::CancellationToken cancellationToken) =>
+            SearchPublicKgAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchPublicKgResponse SearchPublicKg(string parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchPublicKg(new SearchPublicKgRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(string parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchPublicKgAsync(new SearchPublicKgRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(string parent, string query, st::CancellationToken cancellationToken) =>
+            SearchPublicKgAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchPublicKgResponse SearchPublicKg(gagr::LocationName parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchPublicKg(new SearchPublicKgRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(gagr::LocationName parent, string query, gaxgrpc::CallSettings callSettings = null) =>
+            SearchPublicKgAsync(new SearchPublicKgRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Entity's parent resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="query">
+        /// Required. The literal query string for search.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(gagr::LocationName parent, string query, st::CancellationToken cancellationToken) =>
+            SearchPublicKgAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EnterpriseKnowledgeGraphService client wrapper implementation, for convenient use.</summary>
@@ -941,6 +1577,14 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         private readonly gaxgrpc::ApiCall<CancelEntityReconciliationJobRequest, wkt::Empty> _callCancelEntityReconciliationJob;
 
         private readonly gaxgrpc::ApiCall<DeleteEntityReconciliationJobRequest, wkt::Empty> _callDeleteEntityReconciliationJob;
+
+        private readonly gaxgrpc::ApiCall<LookupRequest, LookupResponse> _callLookup;
+
+        private readonly gaxgrpc::ApiCall<SearchRequest, SearchResponse> _callSearch;
+
+        private readonly gaxgrpc::ApiCall<LookupPublicKgRequest, LookupPublicKgResponse> _callLookupPublicKg;
+
+        private readonly gaxgrpc::ApiCall<SearchPublicKgRequest, SearchPublicKgResponse> _callSearchPublicKg;
 
         /// <summary>
         /// Constructs a client wrapper for the EnterpriseKnowledgeGraphService service, with the specified gRPC client
@@ -971,6 +1615,18 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
             _callDeleteEntityReconciliationJob = clientHelper.BuildApiCall<DeleteEntityReconciliationJobRequest, wkt::Empty>("DeleteEntityReconciliationJob", grpcClient.DeleteEntityReconciliationJobAsync, grpcClient.DeleteEntityReconciliationJob, effectiveSettings.DeleteEntityReconciliationJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntityReconciliationJob);
             Modify_DeleteEntityReconciliationJobApiCall(ref _callDeleteEntityReconciliationJob);
+            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callLookup);
+            Modify_LookupApiCall(ref _callLookup);
+            _callSearch = clientHelper.BuildApiCall<SearchRequest, SearchResponse>("Search", grpcClient.SearchAsync, grpcClient.Search, effectiveSettings.SearchSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearch);
+            Modify_SearchApiCall(ref _callSearch);
+            _callLookupPublicKg = clientHelper.BuildApiCall<LookupPublicKgRequest, LookupPublicKgResponse>("LookupPublicKg", grpcClient.LookupPublicKgAsync, grpcClient.LookupPublicKg, effectiveSettings.LookupPublicKgSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callLookupPublicKg);
+            Modify_LookupPublicKgApiCall(ref _callLookupPublicKg);
+            _callSearchPublicKg = clientHelper.BuildApiCall<SearchPublicKgRequest, SearchPublicKgResponse>("SearchPublicKg", grpcClient.SearchPublicKgAsync, grpcClient.SearchPublicKg, effectiveSettings.SearchPublicKgSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchPublicKg);
+            Modify_SearchPublicKgApiCall(ref _callSearchPublicKg);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -986,6 +1642,14 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
 
         partial void Modify_DeleteEntityReconciliationJobApiCall(ref gaxgrpc::ApiCall<DeleteEntityReconciliationJobRequest, wkt::Empty> call);
 
+        partial void Modify_LookupApiCall(ref gaxgrpc::ApiCall<LookupRequest, LookupResponse> call);
+
+        partial void Modify_SearchApiCall(ref gaxgrpc::ApiCall<SearchRequest, SearchResponse> call);
+
+        partial void Modify_LookupPublicKgApiCall(ref gaxgrpc::ApiCall<LookupPublicKgRequest, LookupPublicKgResponse> call);
+
+        partial void Modify_SearchPublicKgApiCall(ref gaxgrpc::ApiCall<SearchPublicKgRequest, SearchPublicKgResponse> call);
+
         partial void OnConstruction(EnterpriseKnowledgeGraphService.EnterpriseKnowledgeGraphServiceClient grpcClient, EnterpriseKnowledgeGraphServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC EnterpriseKnowledgeGraphService client</summary>
@@ -1000,6 +1664,14 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         partial void Modify_CancelEntityReconciliationJobRequest(ref CancelEntityReconciliationJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEntityReconciliationJobRequest(ref DeleteEntityReconciliationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LookupRequest(ref LookupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchRequest(ref SearchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LookupPublicKgRequest(ref LookupPublicKgRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchPublicKgRequest(ref SearchPublicKgRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a EntityReconciliationJob. A EntityReconciliationJob once created
@@ -1127,6 +1799,102 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         {
             Modify_DeleteEntityReconciliationJobRequest(ref request, ref callSettings);
             return _callDeleteEntityReconciliationJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LookupResponse Lookup(LookupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupRequest(ref request, ref callSettings);
+            return _callLookup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds the Cloud KG entities with CKG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LookupResponse> LookupAsync(LookupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupRequest(ref request, ref callSettings);
+            return _callLookup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchResponse Search(SearchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRequest(ref request, ref callSettings);
+            return _callSearch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches the Cloud KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchResponse> SearchAsync(SearchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRequest(ref request, ref callSettings);
+            return _callSearch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LookupPublicKgResponse LookupPublicKg(LookupPublicKgRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupPublicKgRequest(ref request, ref callSettings);
+            return _callLookupPublicKg.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds the public KG entities with public KG ID(s).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LookupPublicKgResponse> LookupPublicKgAsync(LookupPublicKgRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupPublicKgRequest(ref request, ref callSettings);
+            return _callLookupPublicKg.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchPublicKgResponse SearchPublicKg(SearchPublicKgRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchPublicKgRequest(ref request, ref callSettings);
+            return _callSearchPublicKg.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches the public KG entities with entity name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchPublicKgResponse> SearchPublicKgAsync(SearchPublicKgRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchPublicKgRequest(ref request, ref callSettings);
+            return _callSearchPublicKg.Async(request, callSettings);
         }
     }
 
