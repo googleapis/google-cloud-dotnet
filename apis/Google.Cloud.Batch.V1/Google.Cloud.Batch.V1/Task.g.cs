@@ -1907,7 +1907,7 @@ namespace Google.Cloud.Batch.V1 {
         private string username_ = "";
         /// <summary>
         /// Optional username for logging in to a docker registry. If username
-        /// matches "projects/*/secrets/*/versions/*" then Batch will read the
+        /// matches `projects/*/secrets/*/versions/*` then Batch will read the
         /// username from the Secret Manager.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1924,7 +1924,7 @@ namespace Google.Cloud.Batch.V1 {
         private string password_ = "";
         /// <summary>
         /// Optional password for logging in to a docker registry. If password
-        /// matches "projects/*/secrets/*/versions/*" then Batch will read the
+        /// matches `projects/*/secrets/*/versions/*` then Batch will read the
         /// password from the Secret Manager;
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
