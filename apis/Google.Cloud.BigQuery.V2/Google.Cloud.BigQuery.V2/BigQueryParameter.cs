@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,6 +53,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>Timestamp</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
     ///   <item><description><c>Numeric</c>: <c>Google.Cloud.BigQuery.V1.BigQueryNumeric</c></description></item>
     ///   <item><description><c>Geography</c>: <c>Google.Cloud.BigQuery.V1.BigQueryGeography</c></description></item>
+    ///   <item><description><c>Json</c>: <c>System.String</c></description></item>
     ///   <item><description><c>Array</c>: An <c>IReadOnlyList&lt;T&gt;</c> of any of the above types corresponding to the <see cref="ArrayElementType"/>,
     ///   which will be inferred from the value's element type if not otherwise specified.</description></item>
     /// </list>
@@ -265,6 +266,7 @@ namespace Google.Cloud.BigQuery.V2
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.String:
+                case BigQueryDbType.Json:
                     return parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Struct: throw new NotImplementedException("Struct parameters are not yet implemented");

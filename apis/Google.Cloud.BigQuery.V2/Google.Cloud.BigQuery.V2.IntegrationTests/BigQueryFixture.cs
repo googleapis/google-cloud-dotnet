@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -234,6 +234,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "single_numeric", BigQueryDbType.Numeric },
                 { "single_big_numeric", BigQueryDbType.BigNumeric },
                 { "single_geography", BigQueryDbType.Geography },
+                { "single_json", BigQueryDbType.Json },
                 { "single_record", recordSchema },
                 
                 // Repeated fields
@@ -249,6 +250,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
                 { "array_big_numeric", BigQueryDbType.BigNumeric, BigQueryFieldMode.Repeated },
                 { "array_geography", BigQueryDbType.Geography, BigQueryFieldMode.Repeated },
+                { "array_json", BigQueryDbType.Json, BigQueryFieldMode.Repeated },
                 { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
             }.Build());
 

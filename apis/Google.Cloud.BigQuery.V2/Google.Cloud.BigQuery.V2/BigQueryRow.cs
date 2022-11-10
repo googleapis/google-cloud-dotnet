@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -112,6 +112,7 @@ namespace Google.Cloud.BigQuery.V2
                 switch (type)
                 {
                     case BigQueryDbType.String:
+                    case BigQueryDbType.Json:
                         return ConvertArray(array, StringConverter);
                     case BigQueryDbType.Int64:
                         return ConvertArray(array, Int64Converter);
@@ -144,6 +145,7 @@ namespace Google.Cloud.BigQuery.V2
             switch (type)
             {
                 case BigQueryDbType.String:
+                case BigQueryDbType.Json:
                     return StringConverter((string)rawValue);
                 case BigQueryDbType.Int64:
                     return Int64Converter((string)rawValue);

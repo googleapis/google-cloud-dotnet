@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -144,6 +144,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var row = new BigQueryInsertRow { { "field", value } };
             var rowData = row.ToRowsData(false);
             Assert.Equal("123.456", rowData.Json["field"]);
+        }
+
+        [Fact]
+        public void Json()
+        {
+            object value = "{\"x\": 10, \"y\": \"text\"}";
+            var row = new BigQueryInsertRow { { "field", value } };
+            var rowData = row.ToRowsData(false);
+            Assert.Equal(value.ToString(), rowData.Json["field"]);
         }
 
         [Fact]
