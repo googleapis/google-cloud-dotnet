@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,13 +30,48 @@ namespace Google.Cloud.ClientTesting
     /// </summary>
     public class ReplayingMessageHandler : HttpMessageHandler
     {
+        private readonly string _headerToCapture;
+
         private readonly Queue<Tuple<Uri, string, HttpResponseMessage>> _requestResponses =
             new Queue<Tuple<Uri, string, HttpResponseMessage>>();
+
+        /// <summary>
+        /// The captured headers, or null if headers are not being captured.
+        /// There is one element per request, with an element value of null if the header is not present for the corresponding request.
+        /// </summary>
+        public List<string> CapturedHeaders { get; }
+
+        /// <summary>
+        /// Creates a handler that doesn't capture any headers
+        /// </summary>
+        public ReplayingMessageHandler()
+        {
+        }
+
+        /// <summary>
+        /// Creates a handler that captures the given header in <see cref="CapturedHeaders"/>,
+        /// once per request.
+        /// </summary>
+        public ReplayingMessageHandler(string header)
+        {
+            _headerToCapture = header;
+            CapturedHeaders = new List<string>();
+        }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             Assert.NotEmpty(_requestResponses);
-
+            if (_headerToCapture is string header)
+            {
+                if (request.Headers.TryGetValues(header, out var values))
+                {
+                    CapturedHeaders.Add(string.Join(",", values));
+                }
+                else
+                {
+                    CapturedHeaders.Add(null);
+                }
+            }
             var requestResponse = _requestResponses.Dequeue();
             Uri expectedRequestUri = requestResponse.Item1;
             string expectedRequestContent = requestResponse.Item2;
