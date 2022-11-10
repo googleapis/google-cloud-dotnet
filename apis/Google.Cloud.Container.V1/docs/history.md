@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.5.0, released 2022-11-10
+
+### New features
+
+- Add APIs for GKE Control Plane Logs ([commit 45f1266](https://github.com/googleapis/google-cloud-dotnet/commit/45f1266a6af8dc2f4247882d0815270c3a76c461))
+- GKE cluster's control plan/node-pool network isolation ([commit 45f1266](https://github.com/googleapis/google-cloud-dotnet/commit/45f1266a6af8dc2f4247882d0815270c3a76c461))
+- Add nodeconfig resource_labels api ([commit 45f1266](https://github.com/googleapis/google-cloud-dotnet/commit/45f1266a6af8dc2f4247882d0815270c3a76c461))
+- Add API to enable GKE Gateway controller ([commit 45f1266](https://github.com/googleapis/google-cloud-dotnet/commit/45f1266a6af8dc2f4247882d0815270c3a76c461))
+
 ## Version 3.4.0, released 2022-10-17
 
 ### New features
