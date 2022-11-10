@@ -342,7 +342,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// creating a CustomInfoType, or one of the names listed
     /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
     /// a built-in type.  When sending Cloud DLP results to Data Catalog, infoType
-    /// names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+    /// names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
