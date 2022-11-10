@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2022-11-10
+
+### New features
+
+- Add deal_code field to message Offer ([commit 454d398](https://github.com/googleapis/google-cloud-dotnet/commit/454d398f44d71fc3666c1d40d9bf7cabbba7e430))
+
 ## Version 2.1.0, released 2022-11-02
 
 ### New features
