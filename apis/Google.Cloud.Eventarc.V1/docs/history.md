@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.1.0, released 2022-11-10
+
+### New features
+
+- Add CMEK support to Eventarc client library ([commit 907cfb5](https://github.com/googleapis/google-cloud-dotnet/commit/907cfb526db4fad4c9bdb0ff4d10608603248c1c))
+- Update Eventarc Channel to support custom events ([commit 907cfb5](https://github.com/googleapis/google-cloud-dotnet/commit/907cfb526db4fad4c9bdb0ff4d10608603248c1c))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
