@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.1.0, released 2022-11-10
+
+### New features
+
+- Added font_family to document.proto ([commit 3885e56](https://github.com/googleapis/google-cloud-dotnet/commit/3885e56d1f7cc455b06c8f7c6d49c786edf134ca))
+- Added ImageQualityScores message to document.proto ([commit 3885e56](https://github.com/googleapis/google-cloud-dotnet/commit/3885e56d1f7cc455b06c8f7c6d49c786edf134ca))
+- Added PropertyMetadata and EntityTypeMetadata to document_schema.proto ([commit 3885e56](https://github.com/googleapis/google-cloud-dotnet/commit/3885e56d1f7cc455b06c8f7c6d49c786edf134ca))
+
 ## Version 3.0.0, released 2022-08-16
 
 ### New features
