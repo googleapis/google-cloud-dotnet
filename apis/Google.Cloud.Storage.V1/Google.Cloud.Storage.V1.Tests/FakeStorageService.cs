@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,19 +20,26 @@ using System.Net.Http;
 
 namespace Google.Cloud.Storage.V1.Tests
 {
-    class FakeStorageService : StorageService
+    internal class FakeStorageService : StorageService
     {
         private readonly ReplayingMessageHandler handler;
 
-        public FakeStorageService() : base(new Initializer
+        public FakeStorageService() : this(new ReplayingMessageHandler())
         {
-            HttpClientFactory = new FakeHttpClientFactory(new ReplayingMessageHandler()),
-            ApplicationName = "Fake",
-            GZipEnabled = false
-        })
-        {
-            handler = (ReplayingMessageHandler)HttpClient.MessageHandler.InnerHandler;
         }
+
+        public FakeStorageService(ReplayingMessageHandler handler) : base(CreateInitializer(handler))
+        {
+            this.handler = handler;
+        }
+
+        private static Initializer CreateInitializer(ReplayingMessageHandler handler) =>
+            new Initializer
+            {
+                HttpClientFactory = new FakeHttpClientFactory(handler),
+                ApplicationName = "Fake",
+                GZipEnabled = false
+            };
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, TResponse response)
         {

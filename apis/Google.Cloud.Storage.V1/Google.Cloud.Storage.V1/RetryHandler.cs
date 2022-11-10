@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google Inc. All Rights Reserved.
+// Copyright 2022 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Http;
 using Google.Apis.Storage.v1;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Storage.V1
@@ -28,6 +33,10 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     internal sealed class RetryHandler : IHttpUnsuccessfulResponseHandler
     {
+        // For testing
+        internal const string InvocationIdHeaderPart = "gccl-invocation-id";
+        internal const string AttemptCountHeaderPart = "gccl-attempt-count";
+
         private static readonly int[] s_retriableErrorCodes =
         {
                 408, // Request timeout
@@ -37,12 +46,17 @@ namespace Google.Cloud.Storage.V1
                 503, // Service unavailable
                 504 // Gateway timeout
         };
-        private static RetryHandler s_instance = new RetryHandler();
+        private static readonly RetryHandler s_instance = new RetryHandler();
 
         private RetryHandler() { }
 
-        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request) =>
+        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request)
+        {
+            // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
+            // Additionally, that's only called once, and we may want to record the attempt number as well.
+            request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
             request.AddUnsuccessfulResponseHandler(s_instance);
+        }
 
         // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
         internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) => 
@@ -64,6 +78,70 @@ namespace Google.Cloud.Storage.V1
             var delay = TimeSpan.FromSeconds(seconds);
             await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
             return true;
+        }
+
+        /// <summary>
+        /// Interceptor which adds a random invocation ID within the x-goog-api-client header,
+        /// along with an attempt count.
+        /// </summary>
+        private sealed class InvocationIdInterceptor : IHttpExecuteInterceptor
+        {
+            internal static InvocationIdInterceptor Instance { get; } = new InvocationIdInterceptor();
+
+            private const string InvocationIdPrefix = InvocationIdHeaderPart + "/";
+            private const string AttemptCountPrefix = AttemptCountHeaderPart + "/";
+
+            private InvocationIdInterceptor()
+            {
+            }
+
+            public Task InterceptAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+            {
+                // If we don't have the header already, or if there isn't a single value,
+                // that's an odd situation: don't add one with just the invocation ID.
+                if (!request.Headers.TryGetValues(VersionHeaderBuilder.HeaderName, out var values) || values.Count() != 1)
+                {
+                    return Task.CompletedTask;
+                }
+                string value = values.Single();
+                List<string> parts = value.Split(' ').ToList();
+
+                bool gotInvocationId = false;
+                bool gotAttemptCount = false;
+                for (int i = 0; i < parts.Count; i++)
+                {
+                    if (parts[i].StartsWith(InvocationIdPrefix, StringComparison.Ordinal))
+                    {
+                        gotInvocationId = true;
+                    }
+                    else if (parts[i].StartsWith(AttemptCountPrefix, StringComparison.Ordinal))
+                    {
+                        gotAttemptCount = true;
+                        string countText = parts[i].Substring(AttemptCountPrefix.Length);
+                        if (int.TryParse(countText, NumberStyles.None, CultureInfo.InvariantCulture, out int count))
+                        {
+                            count++;
+                            parts[i] = AttemptCountPrefix + count.ToString(CultureInfo.InvariantCulture);
+                        }
+                    }
+                }
+                if (!gotInvocationId)
+                {
+                    parts.Add(InvocationIdPrefix + Guid.NewGuid());
+                }
+                if (!gotAttemptCount)
+                {
+                    // TODO: Check this: should we add it on the first request,
+                    // or only subsequent requests? Design doc is unclear.
+                    parts.Add(AttemptCountPrefix + "1");
+                }
+
+                request.Headers.Remove(VersionHeaderBuilder.HeaderName);
+                request.Headers.Add(VersionHeaderBuilder.HeaderName, string.Join(" ", parts));
+
+
+                return Task.CompletedTask;
+            }
         }
     }
 }

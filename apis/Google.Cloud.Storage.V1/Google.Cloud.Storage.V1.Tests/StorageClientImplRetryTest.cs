@@ -16,7 +16,9 @@ using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Util;
+using Google.Cloud.ClientTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using Xunit;
@@ -430,6 +432,47 @@ namespace Google.Cloud.Storage.V1.Tests
 
         #endregion
 
+        #region Invocation ID test cases
+        [Fact]
+        public void InvocationIdAndCountAreSet()
+        {
+            var replayingMessageHandler = new ReplayingMessageHandler(VersionHeaderBuilder.HeaderName);
+            var service = new FakeStorageService(replayingMessageHandler);
+            service.HttpClient.MessageHandler.GoogleApiClientHeader = "test/fake";
+            
+            var request = service.Buckets.Get("bucket");
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Bucket());
+
+            var client = new StorageClientImpl(service);
+            client.GetBucket("bucket");
+            service.Verify();
+
+            var actualHeaders = replayingMessageHandler.CapturedHeaders;
+            Assert.Equal(3, actualHeaders.Count);
+
+            string invocationIdName = RetryHandler.InvocationIdHeaderPart;
+            string attemptCountName = RetryHandler.AttemptCountHeaderPart;
+
+            var request1Parts = ConvertHeader(actualHeaders[0]);
+            Assert.Equal("fake", request1Parts["test"]);
+            Assert.Equal("1", request1Parts[attemptCountName]);
+            var guid = request1Parts[invocationIdName];
+            // Just validate that it's a real GUID...
+            Guid.Parse(guid);
+
+            var request2Parts = ConvertHeader(actualHeaders[1]);
+            Assert.Equal("2", request2Parts[attemptCountName]);
+            Assert.Equal(guid, request2Parts[invocationIdName]);
+
+            var request3Parts = ConvertHeader(actualHeaders[2]);
+            Assert.Equal("3", request3Parts[attemptCountName]);
+            Assert.Equal(guid, request3Parts[invocationIdName]);
+
+            Dictionary<string, string> ConvertHeader(string header) =>
+                header.Split(' ').ToDictionary(piece => piece.Split('/')[0], piece => piece.Split('/')[1]);
+        }
+        #endregion
     }
 }
-
