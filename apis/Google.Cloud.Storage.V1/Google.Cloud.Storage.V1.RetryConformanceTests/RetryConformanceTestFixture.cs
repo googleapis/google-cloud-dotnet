@@ -23,20 +23,17 @@ using System.Net.Http;
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
 [CollectionDefinition(nameof(RetryConformanceTestFixture))]
-public class RetryConformanceTestFixture : CloudProjectFixtureBase, ICollectionFixture<RetryConformanceTestFixture>
+public class RetryConformanceTestFixture
 {
     internal StorageClient Client { get; }
     internal string ServiceAccountEmail { get; }
-    internal static string TestBenchUrl { get; } = GetEnvironmentVariableOrDefault("TEST_BENCH_URL", "https://storage-testbench-vkcain7hhq-el.a.run.app/");
     internal string TestTopic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic");
     internal string SampleObjectContentPath => Path.Combine(StorageConformanceTestData.TestData.DataPath, "test_service_account.not-a-test.json");
-
+    internal string ProjectId { get; } = GetEnvironmentVariableOrDefault("PROJECT_ID", "test");
     internal HttpClient HttpClient { get; }
+    internal static string TestBenchUrl { get; } = GetEnvironmentVariableOrDefault("TEST_BENCH_URL", "http://localhost:9000/");
 
-    //internal static string TestBenchUrl { get; } = GetEnvironmentVariableOrDefault("TEST_BENCH_URL", "http://localhost:9000/");
-
-    // PROJECT_ID to be set to "test" for storage test bench
-    public RetryConformanceTestFixture() : base("PROJECT_ID")
+    public RetryConformanceTestFixture()
     {
         var clientBuilder = new StorageClientBuilder
         {
@@ -53,7 +50,7 @@ public class RetryConformanceTestFixture : CloudProjectFixtureBase, ICollectionF
     }
 
     /// <summary>
-    /// Function created to be used for getting environmental variables
+    /// Function created to be used for getting environment variables
     /// </summary>
     private static string GetEnvironmentVariableOrDefault(string name, string defaultValue)
     {

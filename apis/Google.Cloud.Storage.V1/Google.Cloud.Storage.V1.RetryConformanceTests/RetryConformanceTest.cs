@@ -35,12 +35,9 @@ public class RetryConformanceTest
 {
     private const string RetryIdHeader = "x-retry-test-id";
     public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
+
+    private readonly RetryConformanceTestFixture _fixture = new RetryConformanceTestFixture();
     private StorageClient Client => _fixture.Client;
-
-    private readonly RetryConformanceTestFixture _fixture;
-
-    public RetryConformanceTest(RetryConformanceTestFixture fixture) =>
-        _fixture = fixture;
 
     /// <summary>
     /// Iterate throught the json file and run the test cases 
@@ -55,15 +52,6 @@ public class RetryConformanceTest
 
         foreach (InstructionList instructionList in test.Cases)
         {
-            /*
-             * Will remove this section in final PR
-             * This is to allow testing on cloud run without reseting connection
-             */
-            if (!ShouldRunInstruction(instructionList))
-            {
-                continue;
-            }
-
             foreach (Method method in test.Methods)
             {
                 if (!ShouldRunMethod(method.Name))
@@ -85,12 +73,6 @@ public class RetryConformanceTest
         // Ids with description "handle_complex_retries" are to test resumable uploads and downloads
         // This section will be implemented in the next phase
         bool ShouldRunTest(RetryTest test) => !test.Description.Contains("handle_complex_retries");
-
-        /*
-         * Will remove this section in final PR
-         * This is to allow testing on cloud run without reseting connection
-         */
-        bool ShouldRunInstruction(InstructionList instructionList) => !instructionList.Instructions.Contains("return-reset-connection");
     }
 
     /// <summary>
@@ -114,7 +96,7 @@ public class RetryConformanceTest
                 {
                     RunRetryTest(response, context, method.Group, specifyPreconditions);
 
-                    //storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
+                    // storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
                     if (!method.Name.Contains("buckets.setIamPolicy"))
                     {
                         Assert.False(response.Completed);
@@ -122,9 +104,9 @@ public class RetryConformanceTest
                 }
                 catch (Exception ex) // To catch expected exception when retry should not happen.
                 {
-                    if (ex != null && ex is GoogleApiException)
+                    if (ex != null && ex is GoogleApiException exception)
                     {
-                        var statusCode = ((GoogleApiException) ex).HttpStatusCode;
+                        var statusCode = exception.HttpStatusCode;
 
                         if ((instructionList.Instructions.Contains("return-503") && statusCode == System.Net.HttpStatusCode.ServiceUnavailable)
                             || (instructionList.Instructions.Contains("return-400") && statusCode == System.Net.HttpStatusCode.BadRequest)
@@ -152,7 +134,7 @@ public class RetryConformanceTest
                 RemoveRetryIdHeader();
                 await DeleteRetryTest(response.Id);
             }
-            catch// To catch and ignore exceptions occured, if any, while doing clean up of test.
+            catch // To catch and ignore exceptions occured, if any, while doing clean up of test.
             {
             }
         }
@@ -231,7 +213,6 @@ public class RetryConformanceTest
             "storage.serviceaccount.get" => client.GetStorageServiceAccountEmail(ctx.ProjectId),
             "storage.resumable.upload" => client.UploadObject(new Object { Name = ctx.ObjectName, Bucket = ctx.BucketName }, File.OpenRead(_fixture.SampleObjectContentPath)),
             "storage.objects.download" => client.DownloadObject(ctx.BucketName, ctx.ObjectName, new MemoryStream()),
-            // Return null from any RPCs we don't support.
             _ => throw new ArgumentException($"Unknown RPC: {rpc}")
         };
 
@@ -387,10 +368,6 @@ public class RetryConformanceTest
             {
                 return;
             }
-            if (Client.GetBucket(bucketName) is null)
-            {
-                return;
-            }
             try
             {
                 Client.DeleteBucket(bucketName, new DeleteBucketOptions { UserProject = null, DeleteObjects = true });
@@ -411,7 +388,6 @@ public class RetryConformanceTest
         bool contains = Client.Service.HttpClient.DefaultRequestHeaders.Contains(header);
         if (contains)
         {
-            // Remove.
             Client.Service.HttpClient.DefaultRequestHeaders.Remove(header);
         }
 
