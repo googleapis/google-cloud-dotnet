@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-11-10
+
+### New features
+
+- Added AccessPolicy.scopes, EgressTo.external_resources, and IAM methods ([commit a4ebef3](https://github.com/googleapis/google-cloud-dotnet/commit/a4ebef36c9c7cc6b5ddaa1a0abfaff3242ec6309))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
