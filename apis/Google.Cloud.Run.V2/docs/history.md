@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta03, released 2022-11-10
+
+### New features
+
+- Adds gRPC probe support to Cloud Run v2 API client libraries ([commit e832ba9](https://github.com/googleapis/google-cloud-dotnet/commit/e832ba9d89b130ebc9be9f0344c272000b5060d0))
+- Adds Cloud Run Jobs v2 API client libraries ([commit 85bc403](https://github.com/googleapis/google-cloud-dotnet/commit/85bc403b5b3336fc5aff49ab08b43d06626dfeef))
+
 ## Version 2.0.0-beta02, released 2022-10-17
 
 ### New features
