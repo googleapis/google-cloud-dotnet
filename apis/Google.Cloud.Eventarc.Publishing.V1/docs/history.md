@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-11-10
+
+### New features
+
+- Introduce the event publishing using JSON representation of CloudEvents ([commit 9e59b13](https://github.com/googleapis/google-cloud-dotnet/commit/9e59b13261111da71197061589a8716f0fb4cd4d))
+
 ## Version 2.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
