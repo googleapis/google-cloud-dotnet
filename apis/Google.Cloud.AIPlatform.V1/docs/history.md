@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.5.0, released 2022-11-10
+
+### New features
+
+- Add annotation_labels to ImportDataConfig in aiplatform v1 dataset.proto ([commit f94d859](https://github.com/googleapis/google-cloud-dotnet/commit/f94d8598ffce8de96037023be374fef58e528061))
+- Add start_time to BatchReadFeatureValuesRequest in aiplatform v1 featurestore_service.proto ([commit f94d859](https://github.com/googleapis/google-cloud-dotnet/commit/f94d8598ffce8de96037023be374fef58e528061))
+- Add metadata_artifact to Model in aiplatform v1 model.proto ([commit f94d859](https://github.com/googleapis/google-cloud-dotnet/commit/f94d8598ffce8de96037023be374fef58e528061))
+- Add failed_main_jobs and failed_pre_caching_check_jobs to ContainerDetail in aiplatform v1 pipeline_job.proto ([commit f94d859](https://github.com/googleapis/google-cloud-dotnet/commit/f94d8598ffce8de96037023be374fef58e528061))
+- Add persist_ml_use_assignment to InputDataConfig in aiplatform v1 training_pipeline.proto ([commit f94d859](https://github.com/googleapis/google-cloud-dotnet/commit/f94d8598ffce8de96037023be374fef58e528061))
+
 ## Version 2.4.0, released 2022-10-03
 
 ### New features
