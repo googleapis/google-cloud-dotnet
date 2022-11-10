@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -145,6 +145,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             ScalarTest("Geogprahy parameter, string value", BigQueryDbType.Numeric, "POINT", "POINT"),
             ScalarTest("Geography parameter, null value", BigQueryDbType.Geography, null, null),
 
+            // Json
+            ScalarTest("Json parameter", BigQueryDbType.Json, "{\"foo\":\"bar\"}", "{\"foo\":\"bar\"}"),
+            ScalarTest("Json parameter, string value", BigQueryDbType.Json, "{\"foo\":\"bar\"}", "{\"foo\":\"bar\"}"),
+            ScalarTest("Json parameter, null value", BigQueryDbType.Json, null, null),
         };
 
         public static IEnumerable<object[]> InvalidParameterData => new[]

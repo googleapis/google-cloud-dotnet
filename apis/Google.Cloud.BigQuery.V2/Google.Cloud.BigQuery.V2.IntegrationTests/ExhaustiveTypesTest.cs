@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -69,6 +69,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["single_numeric"]);
             Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric) row["single_big_numeric"]);
             Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["single_geography"]);
+            Assert.Equal("{\"x\":10,\"y\":\"text\"}", row["single_json"]);
 
             var singleRecord = (Dictionary<string, object>) row["single_record"];
             Assert.Equal("nested string", (string) singleRecord["single_string"]);
@@ -98,6 +99,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 (BigQueryBigNumeric[])row["array_big_numeric"]);
             Assert.Equal(new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
                 (BigQueryGeography[]) row["array_geography"]);
+            Assert.Equal(new[] { "{\"x\":10,\"y\":\"text1\"}", "{\"x\":20,\"y\":\"text2\"}" }, row["array_json"]);
 
             var arrayRecords = (Dictionary<string, object>[]) row["array_record"];
 
@@ -130,6 +132,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Numeric, BigQueryNumeric.Parse("1234567890123456789012345678.123456789")));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.BigNumeric, BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678")));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Geography, BigQueryGeography.Parse("POINT(1 2)")));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Json, "{\"x\":10,\"y\":\"text\"}"));
 
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array, new[] { "foo", "bar" }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array, new[] { true, false }));
@@ -154,6 +157,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("123.456") }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") }));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
+               new[] { "{\"x\": 10, \"y\": \"text1\"}", "{\"x\": 20, \"y\": \"text2\"}" }));
         }
 
         // Parameterized test to make it easy to add more test cases.
@@ -229,6 +234,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["single_numeric"] = BigQueryNumeric.Parse("1234567890123456789012345678.123456789"),
             ["single_big_numeric"] = BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"),
             ["single_geography"] = BigQueryGeography.Parse("POINT(1 2)"),
+            ["single_json"] = "{\"x\":10,\"y\":\"text\"}",
             ["single_record"] = new BigQueryInsertRow
             {
                 ["single_string"] = "nested string",
@@ -248,6 +254,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["array_numeric"] = new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") },
             ["array_big_numeric"] = new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("123.456") },
             ["array_geography"] = new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
+            ["array_json"] = new[] { "{\"x\":10,\"y\":\"text1\"}", "{\"x\":20,\"y\":\"text2\"}" },
             ["array_record"] = new[] {
                     new BigQueryInsertRow
                     {

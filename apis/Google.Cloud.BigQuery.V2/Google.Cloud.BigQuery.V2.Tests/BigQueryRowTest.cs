@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,6 +40,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "numeric", BigQueryDbType.Numeric },
                 { "bigNumeric", BigQueryDbType.BigNumeric },
                 { "geography", BigQueryDbType.Geography },
+                { "json", BigQueryDbType.Json },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } } }
             }.Build();
             var rawRow = new TableRow
@@ -58,6 +59,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = "1234567890123456789012345678.123456789" },
                     new TableCell { V = "123456789012345678901234567890123456789.12345678901234567890123456789012345678" },
                     new TableCell { V = "POINT(1 2)" },
+                    new TableCell { V = "{\"x\": 10, \"y\": \"text\"}" },
                     new TableCell { V = new JObject { ["f"] = new JArray {new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } }
                 }
             };
@@ -74,6 +76,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["numeric"]);
             Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric)row["bigNumeric"]);
             Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["geography"]);
+            Assert.Equal("{\"x\": 10, \"y\": \"text\"}", (string) row["json"]);
             Assert.Equal(new Dictionary<string, object> { { "x", 100L }, { "y", "xyz" } }, (Dictionary<string, object>)row["struct"]);
         }
 
@@ -94,6 +97,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
                 { "bigNumeric", BigQueryDbType.BigNumeric, BigQueryFieldMode.Repeated },
                 { "geography", BigQueryDbType.Geography, BigQueryFieldMode.Repeated },
+                { "json", BigQueryDbType.Json, BigQueryFieldMode.Repeated },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } }, BigQueryFieldMode.Repeated }
             }.Build();
             var rawRow = new TableRow
@@ -112,6 +116,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = CreateArray("1234567890123456789012345678.123456789", "0.000000001") },
                     new TableCell { V = CreateArray("123456789012345678901234567890123456789.12345678901234567890123456789012345678", "0.00000000000000000000000000000000000001") },
                     new TableCell { V = CreateArray("POINT(1 3)", "POINT(2 4)") },
+                    new TableCell { V = CreateArray("{\"x\": 10, \"y\": \"text1\"}", "{\"x\": 11, \"y\": \"text2\"}") },
                     new TableCell { V = new JArray {
                         new JObject { ["v"] = new JObject { ["f"] = new JArray { new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } },
                         new JObject { ["v"] = new JObject { ["f"] = new JArray { new JObject { ["v"] = "200" }, new JObject { ["v"] = "abc" } } } }
@@ -134,6 +139,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("0.000000001") }, (BigQueryNumeric[]) row["numeric"]);
             Assert.Equal(new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("0.00000000000000000000000000000000000001") }, (BigQueryBigNumeric[])row["bigNumeric"]);
             Assert.Equal(new[] { BigQueryGeography.Parse("POINT(1 3)"), BigQueryGeography.Parse("POINT(2 4)") }, (BigQueryGeography[]) row["geography"]);
+            Assert.Equal(new[] { "{\"x\": 10, \"y\": \"text1\"}", "{\"x\": 11, \"y\": \"text2\"}" }, (string[]) row["json"]);
             Assert.Equal(new[]
                 {
                     new Dictionary<string, object> { { "x", 100L }, { "y", "xyz" } },

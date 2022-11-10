@@ -100,6 +100,10 @@ namespace Google.Cloud.BigQuery.V2
         /// and always 38 decimal places.
         /// </summary>
         BigNumeric,
+        /// <summary>
+        /// A JSON-formatted string as described in RFC 7159.
+        /// </summary>
+        Json,
     }
 
     internal static class BigQueryDbTypeExtensions
@@ -122,7 +126,8 @@ namespace Google.Cloud.BigQuery.V2
             { BigQueryDbType.Struct, "STRUCT" },
             { BigQueryDbType.Numeric, "NUMERIC" },
             { BigQueryDbType.Geography, "GEOGRAPHY" },
-            { BigQueryDbType.BigNumeric, "BIGNUMERIC" }
+            { BigQueryDbType.BigNumeric, "BIGNUMERIC" },
+            { BigQueryDbType.Json, "JSON" }
         };
 
         internal static string ToParameterApiType(this BigQueryDbType type) => s_typeToNameMapping[type];
