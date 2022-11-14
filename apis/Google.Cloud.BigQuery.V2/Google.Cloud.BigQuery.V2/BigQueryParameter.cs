@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public sealed class BigQueryParameter
     {
-        private static HashSet<Type> s_validSingleTypes = new HashSet<Type>
+        private static readonly HashSet<Type> s_validSingleTypes = new HashSet<Type>
         {
             typeof(short), typeof(ushort),
             typeof(int), typeof(uint),
@@ -93,14 +93,14 @@ namespace Google.Cloud.BigQuery.V2
             typeof(BigQueryGeography),
         };
 
-        private static List<TypeInfo> s_validRepeatedTypes = s_validSingleTypes
+        private static readonly List<TypeInfo> s_validRepeatedTypes = s_validSingleTypes
             .Select(t => typeof(IReadOnlyList<>).MakeGenericType(t).GetTypeInfo())
             .ToList();
 
         /// <summary>
         /// Mapping of CLR type to BigQuery parameter type for simple cases.
         /// </summary>
-        private static Dictionary<Type, BigQueryDbType> s_typeMapping = new Dictionary<Type, BigQueryDbType>
+        private static readonly Dictionary<Type, BigQueryDbType> s_typeMapping = new Dictionary<Type, BigQueryDbType>
         {
             { typeof(short), BigQueryDbType.Int64 },
             { typeof(int), BigQueryDbType.Int64 },
@@ -234,73 +234,61 @@ namespace Google.Cloud.BigQuery.V2
                 Name = Name,
                 ParameterType = new QueryParameterType { Type = type.ToParameterApiType() },
             };
-            switch (type)
+            return type switch
             {
-                case BigQueryDbType.Array:
-                    return PopulateArrayParameter(parameter, value, ArrayElementType);
-                case BigQueryDbType.Bool:
-                    return parameter.PopulateScalar<bool>(value, x => x ? "TRUE" : "FALSE")
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Bytes:
-                    return parameter.PopulateScalar<byte[]>(value, x => Convert.ToBase64String(x))
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Date:
-                    return parameter.PopulateScalar<DateTime>(value, x => x.AsBigQueryDate())
-                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.AsBigQueryDate())
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.DateTime:
-                    return parameter.PopulateScalar<DateTime>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
-                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Float64:
-                    return parameter.PopulateInteger(value)
-                        ?? parameter.PopulateFloatingPoint(value)
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Int64:
-                    return parameter.PopulateInteger(value)
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.String:
-                case BigQueryDbType.Json:
-                    return parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Struct: throw new NotImplementedException("Struct parameters are not yet implemented");
-                case BigQueryDbType.Time:
-                    return parameter.PopulateScalar<TimeSpan>(value, FormatTimeSpan)
-                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
-                        ?? parameter.PopulateScalar<DateTime>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Numeric:
-                    return parameter.PopulateScalar<BigQueryNumeric>(value, x => x.ToString())
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.BigNumeric:
-                    return parameter.PopulateScalar<BigQueryBigNumeric>(value, x => x.ToString())
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Geography:
-                    return parameter.PopulateScalar<BigQueryGeography>(value, x => x.Text)
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryDbType.Timestamp:
-                    return parameter.PopulateScalar<DateTime>(value, x =>
-                        {
-                            if (x.Kind != DateTimeKind.Utc)
-                            {
-                                throw new InvalidOperationException($"A DateTime with a Kind of {x.Kind} cannot be used for a Timestamp parameter");
-                            }
-                            return x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF+00", InvariantCulture);
-                        })
-                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFFzzz", InvariantCulture))
-                        ?? parameter.PopulateScalar<string>(value, x => x)
-                        ?? parameter.UseNullScalarOrThrow(value);
-                default: throw new InvalidOperationException($"No conversion available for parameter type {type}");
+                BigQueryDbType.Array => PopulateArrayParameter(parameter, value, ArrayElementType),
+                BigQueryDbType.Bool => parameter.PopulateScalar<bool>(value, x => x ? "TRUE" : "FALSE")
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Bytes => parameter.PopulateScalar<byte[]>(value, x => Convert.ToBase64String(x))
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Date => parameter.PopulateScalar<DateTime>(value, x => x.AsBigQueryDate())
+                    ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.AsBigQueryDate())
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.DateTime => parameter.PopulateScalar<DateTime>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
+                    ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Float64 => parameter.PopulateInteger(value)
+                    ?? parameter.PopulateFloatingPoint(value)
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Int64 => parameter.PopulateInteger(value)
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.String or BigQueryDbType.Json => parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Struct => throw new NotImplementedException("Struct parameters are not yet implemented"),
+                BigQueryDbType.Time => parameter.PopulateScalar<TimeSpan>(value, FormatTimeSpan)
+                    ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
+                    ?? parameter.PopulateScalar<DateTime>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Numeric => parameter.PopulateScalar<BigQueryNumeric>(value, x => x.ToString())
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.BigNumeric => parameter.PopulateScalar<BigQueryBigNumeric>(value, x => x.ToString())
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Geography => parameter.PopulateScalar<BigQueryGeography>(value, x => x.Text)
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                BigQueryDbType.Timestamp => parameter.PopulateScalar<DateTime>(value, ConvertTimestampToString)
+                    ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFFzzz", InvariantCulture))
+                    ?? parameter.PopulateScalar<string>(value, x => x)
+                    ?? parameter.UseNullScalarOrThrow(value),
+                _ => throw new InvalidOperationException($"No conversion available for parameter type {type}"),
+            };
+
+            static string ConvertTimestampToString(DateTime dateTime)
+            {
+                if (dateTime.Kind != DateTimeKind.Utc)
+                {
+                    throw new InvalidOperationException($"A DateTime with a Kind of {dateTime.Kind} cannot be used for a Timestamp parameter");
+                }
+                return dateTime.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF+00", InvariantCulture);
             }
         }
 

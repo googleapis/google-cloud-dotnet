@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -77,7 +77,7 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public sealed class BigQueryInsertRow : IEnumerable
     {
-        private static HashSet<Type> ValidSingleTypes = new HashSet<Type>
+        private static readonly HashSet<Type> ValidSingleTypes = new HashSet<Type>
         {
             typeof(int), typeof(long), typeof(uint),
             typeof(short), typeof(ushort),
@@ -92,7 +92,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(BigQueryInsertRow)
         };
 
-        private static List<TypeInfo> ValidRepeatedTypes = ValidSingleTypes
+        private static readonly List<TypeInfo> ValidRepeatedTypes = ValidSingleTypes
             .Select(t => typeof(IReadOnlyList<>).MakeGenericType(t).GetTypeInfo())
             .ToList();
 
@@ -197,54 +197,40 @@ namespace Google.Cloud.BigQuery.V2
 
         internal Dictionary<string, object> GetJsonValues() => _fields.ToDictionary(pair => pair.Key, pair => ConvertRowValue(pair.Value));
 
-        private static object ConvertRowValue(object value)
+        private static object ConvertRowValue(object value) => value switch
         {
-            // Types that require special handling
-            switch (value)
+            null => null,
+            DateTime { Kind: DateTimeKind.Unspecified } dt => dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture),
+            DateTime { Kind: DateTimeKind.Utc } dt => dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture),
+            DateTime _ => throw new InvalidOperationException("Local DateTime values are not supported"),
+            DateTimeOffset dto => dto.ToUniversalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture),
+            // Note: we convert to a DateTime as the formatting is simpler. This avoids a trailing . when there are no fractional seconds.
+            TimeSpan ts => ConvertTimeSpanToDateTime(ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture),
+            BigQueryNumeric numeric => numeric.ToString(),
+            BigQueryBigNumeric bigNumeric => bigNumeric.ToString(),
+            BigQueryGeography geography => geography.ToString(),
+            BigQueryInsertRow row => row.GetJsonValues(),
+            _ => GetValue(value),
+        };
+
+        private static DateTime ConvertTimeSpanToDateTime(TimeSpan timeSpan)
+        {
+            if (timeSpan < TimeSpan.Zero || timeSpan >= TimeSpan.FromHours(24))
             {
-                case null:
-                    return null;
-                case DateTime dt:
-                    // TODO: three patterns in C# 8 with property matching?
-                    switch (dt.Kind)
-                    {
-                        // Civil datetime
-                        case DateTimeKind.Unspecified:
-                            return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
-                        // Timestamp
-                        case DateTimeKind.Utc:
-                            return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-                        // We can get into this situation if we accept a list of DateTime values. We can't
-                        // validate when we're given the list, as it can change.
-                        default:
-                            throw new InvalidOperationException("Local DateTime values are not supported");
-                    }
-                case DateTimeOffset dto:
-                    // Timestamp
-                    return dto.ToUniversalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-                case TimeSpan ts:
-                    if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
-                    {
-                        throw new InvalidOperationException("TimeSpan values must be non-negative and less than 24 hours");
-                    }
-                    // This is ugly, but it avoids a trailing . when there are no fractional seconds.
-                    return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
-                case BigQueryNumeric numeric:
-                    return numeric.ToString();
-                case BigQueryBigNumeric bigNumeric:
-                    return bigNumeric.ToString();
-                case BigQueryGeography geography:
-                    return geography.ToString();
-                case BigQueryInsertRow row:
-                    return row.GetJsonValues();
+                throw new InvalidOperationException("TimeSpan values must be non-negative and less than 24 hours");
             }
+            return new DateTime(1970, 1, 1) + timeSpan;
+        }
+
+        private static object GetValue(object value)
+        {
             if (ValidSingleTypes.Contains(value.GetType()))
             {
                 // Anything single value should be fine as it is. We've already validated that it's a known type.
                 return value;
             }
             // Note: not IEnumerable<object> as we need to box value types.
-            IEnumerable values = (IEnumerable)value;
+            IEnumerable values = (IEnumerable) value;
             return values.Cast<object>().Select(ValidateRepeatedElementNotNull).Select(ConvertRowValue).ToArray();
         }
 
@@ -264,17 +250,15 @@ namespace Google.Cloud.BigQuery.V2
                 return;
             }
             Type type = value.GetType();
-            if (value is DateTime)
+            if (value is DateTime dt)
             {
-                DateTime dt = (DateTime) value;
                 if (dt.Kind == DateTimeKind.Local)
                 {
                     throw new ArgumentException("Local DateTime values are not supported", paramName);
                 }
             }
-            if (value is TimeSpan)
+            if (value is TimeSpan ts)
             {
-                TimeSpan ts = (TimeSpan) value;
                 if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
                 {
                     throw new ArgumentException("TimeSpan values must be non-negative and less than 24 hours", paramName);

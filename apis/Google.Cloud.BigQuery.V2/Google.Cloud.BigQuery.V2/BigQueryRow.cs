@@ -108,72 +108,42 @@ namespace Google.Cloud.BigQuery.V2
 
             if (field.GetFieldMode() == BigQueryFieldMode.Repeated)
             {
-                JArray array = (JArray)rawValue;
-                switch (type)
+                JArray array = (JArray) rawValue;
+                return type switch
                 {
-                    case BigQueryDbType.String:
-                    case BigQueryDbType.Json:
-                        return ConvertArray(array, StringConverter);
-                    case BigQueryDbType.Int64:
-                        return ConvertArray(array, Int64Converter);
-                    case BigQueryDbType.Float64:
-                        return ConvertArray(array, DoubleConverter);
-                    case BigQueryDbType.Bytes:
-                        return ConvertArray(array, BytesConverter);
-                    case BigQueryDbType.Bool:
-                        return ConvertArray(array, BooleanConverter);
-                    case BigQueryDbType.Timestamp:
-                        return ConvertArray(array, TimestampConverter);
-                    case BigQueryDbType.Date:
-                        return ConvertArray(array, DateConverter);
-                    case BigQueryDbType.Time:
-                        return ConvertArray(array, TimeConverter);
-                    case BigQueryDbType.DateTime:
-                        return ConvertArray(array, DateTimeConverter);
-                    case BigQueryDbType.Struct:
-                        return ConvertRecordArray(array, field);
-                    case BigQueryDbType.Numeric:
-                        return ConvertArray(array, NumericConverter);
-                    case BigQueryDbType.BigNumeric:
-                        return ConvertArray(array, BigNumericConverter);
-                    case BigQueryDbType.Geography:
-                        return ConvertArray(array, GeographyConverter);
-                    default:
-                        throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
-                }
+                    BigQueryDbType.String or BigQueryDbType.Json => ConvertArray(array, StringConverter),
+                    BigQueryDbType.Int64 => ConvertArray(array, Int64Converter),
+                    BigQueryDbType.Float64 => ConvertArray(array, DoubleConverter),
+                    BigQueryDbType.Bytes => ConvertArray(array, BytesConverter),
+                    BigQueryDbType.Bool => ConvertArray(array, BooleanConverter),
+                    BigQueryDbType.Timestamp => ConvertArray(array, TimestampConverter),
+                    BigQueryDbType.Date => ConvertArray(array, DateConverter),
+                    BigQueryDbType.Time => ConvertArray(array, TimeConverter),
+                    BigQueryDbType.DateTime => ConvertArray(array, DateTimeConverter),
+                    BigQueryDbType.Struct => ConvertRecordArray(array, field),
+                    BigQueryDbType.Numeric => ConvertArray(array, NumericConverter),
+                    BigQueryDbType.BigNumeric => ConvertArray(array, BigNumericConverter),
+                    BigQueryDbType.Geography => ConvertArray(array, GeographyConverter),
+                    _ => throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}"),
+                };
             }
-            switch (type)
+            return type switch
             {
-                case BigQueryDbType.String:
-                case BigQueryDbType.Json:
-                    return StringConverter((string)rawValue);
-                case BigQueryDbType.Int64:
-                    return Int64Converter((string)rawValue);
-                case BigQueryDbType.Float64:
-                    return DoubleConverter((string)rawValue);
-                case BigQueryDbType.Bytes:
-                    return BytesConverter((string)rawValue);
-                case BigQueryDbType.Bool:
-                    return BooleanConverter((string)rawValue);
-                case BigQueryDbType.Timestamp:
-                    return TimestampConverter((string)rawValue);
-                case BigQueryDbType.Date:
-                    return DateConverter((string) rawValue);
-                case BigQueryDbType.Time:
-                    return TimeConverter((string) rawValue);
-                case BigQueryDbType.DateTime:
-                    return DateTimeConverter((string) rawValue);
-                case BigQueryDbType.Numeric:
-                    return NumericConverter((string) rawValue);
-                case BigQueryDbType.BigNumeric:
-                    return BigNumericConverter((string) rawValue);
-                case BigQueryDbType.Geography:
-                    return GeographyConverter((string) rawValue);
-                case BigQueryDbType.Struct:
-                    return ConvertRecord((JObject)rawValue, field);
-                default:
-                    throw new InvalidOperationException($"Unhandled field type {type} (Underlying type: {rawValue.GetType()})");
-            }
+                BigQueryDbType.String or BigQueryDbType.Json => StringConverter((string) rawValue),
+                BigQueryDbType.Int64 => Int64Converter((string) rawValue),
+                BigQueryDbType.Float64 => DoubleConverter((string) rawValue),
+                BigQueryDbType.Bytes => BytesConverter((string) rawValue),
+                BigQueryDbType.Bool => BooleanConverter((string) rawValue),
+                BigQueryDbType.Timestamp => TimestampConverter((string) rawValue),
+                BigQueryDbType.Date => DateConverter((string) rawValue),
+                BigQueryDbType.Time => TimeConverter((string) rawValue),
+                BigQueryDbType.DateTime => DateTimeConverter((string) rawValue),
+                BigQueryDbType.Numeric => NumericConverter((string) rawValue),
+                BigQueryDbType.BigNumeric => BigNumericConverter((string) rawValue),
+                BigQueryDbType.Geography => GeographyConverter((string) rawValue),
+                BigQueryDbType.Struct => ConvertRecord((JObject) rawValue, field),
+                _ => throw new InvalidOperationException($"Unhandled field type {type} (Underlying type: {rawValue.GetType()})"),
+            };
         }
 
         // TODO: GetString etc, like IDataReader etc. (Should we actually implement IDataReader?)
