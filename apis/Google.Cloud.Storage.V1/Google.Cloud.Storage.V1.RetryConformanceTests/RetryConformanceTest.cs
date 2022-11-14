@@ -107,9 +107,9 @@ public class RetryConformanceTest
                 }
                 catch (Exception ex) // To catch expected exception when retry should not happen.
                 {
-                    if (ex is GoogleApiException)
+                    if (ex is GoogleApiException exception)
                     {
-                        var statusCode = ((GoogleApiException) ex).HttpStatusCode;
+                        var statusCode = exception.HttpStatusCode;
 
                         if ((instructionList.Instructions.Contains("return-503") && statusCode == System.Net.HttpStatusCode.ServiceUnavailable)
                             || (instructionList.Instructions.Contains("return-400") && statusCode == System.Net.HttpStatusCode.BadRequest)
