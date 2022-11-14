@@ -65,6 +65,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             yield return DocumentIoReflection.Descriptor;
             yield return DocumentProcessorServiceReflection.Descriptor;
             yield return DocumentSchemaReflection.Descriptor;
+            yield return EvaluationReflection.Descriptor;
             yield return GeometryReflection.Descriptor;
             yield return OperationMetadataReflection.Descriptor;
             yield return ProcessorReflection.Descriptor;
