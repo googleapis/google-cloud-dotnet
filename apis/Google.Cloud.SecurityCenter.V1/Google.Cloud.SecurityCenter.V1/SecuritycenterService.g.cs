@@ -9993,7 +9993,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// Required. The relative resource name of the finding. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10279,9 +10279,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// Required. The relative resource name of the finding. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-    /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-    /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+    /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+    /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13051,7 +13051,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for listing  BigQuery exports at a given scope e.g.
+  /// Request message for listing BigQuery exports at a given scope e.g.
   /// organization, folder or project.
   /// </summary>
   public sealed partial class ListBigQueryExportsRequest : pb::IMessage<ListBigQueryExportsRequest>
