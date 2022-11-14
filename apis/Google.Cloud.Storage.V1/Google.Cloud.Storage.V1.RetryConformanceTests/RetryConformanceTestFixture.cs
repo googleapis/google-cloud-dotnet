@@ -23,13 +23,13 @@ using System.Net.Http;
 namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 
 [CollectionDefinition(nameof(RetryConformanceTestFixture))]
-public class RetryConformanceTestFixture
+public class RetryConformanceTestFixture : ICollectionFixture<RetryConformanceTestFixture>
 {
     internal StorageClient Client { get; }
     internal string ServiceAccountEmail { get; }
     internal string TestTopic { get; } = GetEnvironmentVariableOrDefault("TOPIC", "test-topic");
     internal string SampleObjectContentPath => Path.Combine(StorageConformanceTestData.TestData.DataPath, "test_service_account.not-a-test.json");
-    internal string ProjectId { get; } = GetEnvironmentVariableOrDefault("PROJECT_ID", "test");
+    internal string ProjectId { get; } = "test";
     internal HttpClient HttpClient { get; }
     internal static string TestBenchUrl { get; } = GetEnvironmentVariableOrDefault("TEST_BENCH_URL", "http://localhost:9000/");
 

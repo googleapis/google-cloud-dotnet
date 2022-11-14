@@ -36,7 +36,10 @@ public class RetryConformanceTest
     private const string RetryIdHeader = "x-retry-test-id";
     public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
 
-    private readonly RetryConformanceTestFixture _fixture = new RetryConformanceTestFixture();
+    private readonly RetryConformanceTestFixture _fixture;
+    public RetryConformanceTest(RetryConformanceTestFixture fixture) =>
+        _fixture = fixture;
+
     private StorageClient Client => _fixture.Client;
 
     /// <summary>
@@ -104,9 +107,9 @@ public class RetryConformanceTest
                 }
                 catch (Exception ex) // To catch expected exception when retry should not happen.
                 {
-                    if (ex != null && ex is GoogleApiException exception)
+                    if (ex is GoogleApiException)
                     {
-                        var statusCode = exception.HttpStatusCode;
+                        var statusCode = ((GoogleApiException) ex).HttpStatusCode;
 
                         if ((instructionList.Instructions.Contains("return-503") && statusCode == System.Net.HttpStatusCode.ServiceUnavailable)
                             || (instructionList.Instructions.Contains("return-400") && statusCode == System.Net.HttpStatusCode.BadRequest)
