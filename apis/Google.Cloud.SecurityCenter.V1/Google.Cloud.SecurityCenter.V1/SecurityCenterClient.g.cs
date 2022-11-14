@@ -4580,7 +4580,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4605,7 +4605,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4630,7 +4630,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4650,7 +4650,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4675,7 +4675,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4700,7 +4700,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4747,9 +4747,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -4770,9 +4770,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -4793,9 +4793,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -4812,9 +4812,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -4835,9 +4835,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.
@@ -4858,9 +4858,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-        /// "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-        /// "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="mute">
         /// Required. The desired state of the Mute.

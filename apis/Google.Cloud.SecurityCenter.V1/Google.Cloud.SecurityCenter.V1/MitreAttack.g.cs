@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbWl0cmVfYXR0YWNr",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi0gwKC01p",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi6AwKC01p",
             "dHJlQXR0YWNrEkoKDnByaW1hcnlfdGFjdGljGAEgASgOMjIuZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLk1pdHJlQXR0YWNrLlRhY3RpYxJRChJw",
             "cmltYXJ5X3RlY2huaXF1ZXMYAiADKA4yNS5nb29nbGUuY2xvdWQuc2VjdXJp",
@@ -40,7 +40,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "R0VfRVNDQUxBVElPThAIEhMKD0RFRkVOU0VfRVZBU0lPThAHEhUKEUNSRURF",
             "TlRJQUxfQUNDRVNTEAkSDQoJRElTQ09WRVJZEAoSFAoQTEFURVJBTF9NT1ZF",
             "TUVOVBALEg4KCkNPTExFQ1RJT04QDBIXChNDT01NQU5EX0FORF9DT05UUk9M",
-            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4itQcKCVRlY2huaXF1",
+            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4iywcKCVRlY2huaXF1",
             "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABITCg9BQ1RJVkVfU0NBTk5J",
             "TkcQARIWChJTQ0FOTklOR19JUF9CTE9DS1MQAhIZChVJTkdSRVNTX1RPT0xf",
             "VFJBTlNGRVIQAxIOCgpOQVRJVkVfQVBJEAQSEgoOU0hBUkVEX01PRFVMRVMQ",
@@ -61,13 +61,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "ChBEQVRBX0RFU1RSVUNUSU9OEB0SHgoaRE9NQUlOX1BPTElDWV9NT0RJRklD",
             "QVRJT04QHhITCg9JTVBBSVJfREVGRU5TRVMQHxIdChlORVRXT1JLX1NFUlZJ",
             "Q0VfRElTQ09WRVJZECASHQoZQUNDRVNTX1RPS0VOX01BTklQVUxBVElPThAh",
-            "EiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTRAiQuwBCiJj",
-            "b20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQhBNaXRyZUF0dGFj",
-            "a1Byb3RvUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJpdHljZW50ZXKqAh5H",
-            "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRc",
-            "U2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNl",
-            "bnRlcjo6VjFiBnByb3RvMw=="));
+            "EiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTRAiEhQKEERF",
+            "RkFVTFRfQUNDT1VOVFMQI0LsAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MUIQTWl0cmVBdHRhY2tQcm90b1ABWkxnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
+            "L3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2Vu",
+            "dGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29v",
+            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -628,6 +628,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// T1548
         /// </summary>
         [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM")] AbuseElevationControlMechanism = 34,
+        /// <summary>
+        /// T1078.001
+        /// </summary>
+        [pbr::OriginalName("DEFAULT_ACCOUNTS")] DefaultAccounts = 35,
       }
 
     }
