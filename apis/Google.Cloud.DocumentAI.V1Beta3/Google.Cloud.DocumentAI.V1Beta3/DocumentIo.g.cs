@@ -128,7 +128,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private string mimeType_ = "";
     /// <summary>
     /// An IANA MIME type (RFC6838) indicating the nature and format of the
-    /// [content].
+    /// [content][google.cloud.documentai.v1beta3.RawDocument.content].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -968,7 +968,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// <summary>Field number for the "gcs_prefix" field.</summary>
     public const int GcsPrefixFieldNumber = 1;
     /// <summary>
-    /// The set of documents that match the specified Cloud Storage [gcs_prefix].
+    /// The set of documents that match the specified Cloud Storage `gcs_prefix`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
