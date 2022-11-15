@@ -11,6 +11,233 @@
   },
   "snippets": [
     {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_sync",
+      "title": "CreateSshPublicKeyRequestObject",
+      "description": "Snippet for CreateSshPublicKey",
+      "file": "OsLoginServiceClient.CreateSshPublicKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKey",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKey",
+        "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_async",
+      "title": "CreateSshPublicKeyRequestObjectAsync",
+      "description": "Snippet for CreateSshPublicKeyAsync",
+      "file": "OsLoginServiceClient.CreateSshPublicKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKeyAsync",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_sync_flattened",
+      "title": "CreateSshPublicKey",
+      "description": "Snippet for CreateSshPublicKey",
+      "file": "OsLoginServiceClient.CreateSshPublicKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKey",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKey",
+        "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_async_flattened",
+      "title": "CreateSshPublicKeyAsync",
+      "description": "Snippet for CreateSshPublicKeyAsync",
+      "file": "OsLoginServiceClient.CreateSshPublicKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKeyAsync",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_sync_flattened_resourceNames",
+      "title": "CreateSshPublicKeyResourceNames",
+      "description": "Snippet for CreateSshPublicKey",
+      "file": "OsLoginServiceClient.CreateSshPublicKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKey",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKey",
+        "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_async_flattened_resourceNames",
+      "title": "CreateSshPublicKeyResourceNamesAsync",
+      "description": "Snippet for CreateSshPublicKeyAsync",
+      "file": "OsLoginServiceClient.CreateSshPublicKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSshPublicKeyAsync",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.CreateSshPublicKeyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.CreateSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "oslogin_v1beta_generated_OsLoginService_DeletePosixAccount_sync",
       "title": "DeletePosixAccountRequestObject",
       "description": "Snippet for DeletePosixAccount",
@@ -486,12 +713,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -525,12 +752,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -940,12 +1167,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -979,12 +1206,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 47,
           "type": "SHORT"
         }
       ]

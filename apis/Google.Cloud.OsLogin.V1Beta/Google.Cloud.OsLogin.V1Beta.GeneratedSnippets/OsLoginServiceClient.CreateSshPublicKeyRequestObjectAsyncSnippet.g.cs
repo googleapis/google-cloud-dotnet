@@ -16,14 +16,14 @@
 
 namespace Google.Cloud.OsLogin.V1Beta.Snippets
 {
-    // [START oslogin_v1beta_generated_OsLoginService_GetLoginProfile_async]
+    // [START oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_async]
     using Google.Cloud.OsLogin.Common;
     using Google.Cloud.OsLogin.V1Beta;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedOsLoginServiceClientSnippets
     {
-        /// <summary>Snippet for GetLoginProfileAsync</summary>
+        /// <summary>Snippet for CreateSshPublicKeyAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,21 +31,19 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetLoginProfileRequestObjectAsync()
+        public async Task CreateSshPublicKeyRequestObjectAsync()
         {
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetLoginProfileRequest request = new GetLoginProfileRequest
+            CreateSshPublicKeyRequest request = new CreateSshPublicKeyRequest
             {
-                UserName = UserName.FromUser("[USER]"),
-                ProjectId = "",
-                SystemId = "",
-                View = LoginProfileView.Unspecified,
+                ParentAsUserName = UserName.FromUser("[USER]"),
+                SshPublicKey = new SshPublicKey(),
             };
             // Make the request
-            LoginProfile response = await osLoginServiceClient.GetLoginProfileAsync(request);
+            SshPublicKey response = await osLoginServiceClient.CreateSshPublicKeyAsync(request);
         }
     }
-    // [END oslogin_v1beta_generated_OsLoginService_GetLoginProfile_async]
+    // [END oslogin_v1beta_generated_OsLoginService_CreateSshPublicKey_async]
 }

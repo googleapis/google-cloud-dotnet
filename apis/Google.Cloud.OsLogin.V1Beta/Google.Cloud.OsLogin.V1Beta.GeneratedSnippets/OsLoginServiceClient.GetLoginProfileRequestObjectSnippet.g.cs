@@ -40,6 +40,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
                 UserName = UserName.FromUser("[USER]"),
                 ProjectId = "",
                 SystemId = "",
+                View = LoginProfileView.Unspecified,
             };
             // Make the request
             LoginProfile response = osLoginServiceClient.GetLoginProfile(request);
