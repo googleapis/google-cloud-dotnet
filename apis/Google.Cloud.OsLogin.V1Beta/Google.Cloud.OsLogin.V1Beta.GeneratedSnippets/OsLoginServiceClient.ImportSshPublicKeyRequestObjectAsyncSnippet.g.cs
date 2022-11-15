@@ -41,6 +41,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
                 ParentAsUserName = UserName.FromUser("[USER]"),
                 SshPublicKey = new SshPublicKey(),
                 ProjectId = "",
+                View = LoginProfileView.Unspecified,
             };
             // Make the request
             ImportSshPublicKeyResponse response = await osLoginServiceClient.ImportSshPublicKeyAsync(request);
