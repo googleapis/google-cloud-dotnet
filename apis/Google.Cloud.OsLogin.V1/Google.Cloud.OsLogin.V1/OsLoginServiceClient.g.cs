@@ -46,6 +46,7 @@ namespace Google.Cloud.OsLogin.V1
         private OsLoginServiceSettings(OsLoginServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateSshPublicKeySettings = existing.CreateSshPublicKeySettings;
             DeletePosixAccountSettings = existing.DeletePosixAccountSettings;
             DeleteSshPublicKeySettings = existing.DeleteSshPublicKeySettings;
             GetLoginProfileSettings = existing.GetLoginProfileSettings;
@@ -56,6 +57,18 @@ namespace Google.Cloud.OsLogin.V1
         }
 
         partial void OnCopy(OsLoginServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsLoginServiceClient.CreateSshPublicKey</c> and <c>OsLoginServiceClient.CreateSshPublicKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSshPublicKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -260,13 +273,17 @@ namespace Google.Cloud.OsLogin.V1
         /// The default OsLoginService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
         /// <item><description>https://www.googleapis.com/auth/compute</description></item>
+        /// <item><description>https://www.googleapis.com/auth/compute.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/compute.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -328,6 +345,133 @@ namespace Google.Cloud.OsLogin.V1
 
         /// <summary>The underlying gRPC OsLoginService client</summary>
         public virtual OsLoginService.OsLoginServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gcoc::SshPublicKey CreateSshPublicKey(CreateSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(CreateSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(CreateSshPublicKeyRequest request, st::CancellationToken cancellationToken) =>
+            CreateSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gcoc::SshPublicKey CreateSshPublicKey(string parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSshPublicKey(new CreateSshPublicKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(string parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSshPublicKeyAsync(new CreateSshPublicKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(string parent, gcoc::SshPublicKey sshPublicKey, st::CancellationToken cancellationToken) =>
+            CreateSshPublicKeyAsync(parent, sshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gcoc::SshPublicKey CreateSshPublicKey(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSshPublicKey(new CreateSshPublicKeyRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSshPublicKeyAsync(new CreateSshPublicKeyRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// Required. The SSH public key and expiration time.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, st::CancellationToken cancellationToken) =>
+            CreateSshPublicKeyAsync(parent, sshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a POSIX account.
@@ -1371,6 +1515,8 @@ namespace Google.Cloud.OsLogin.V1
     /// </remarks>
     public sealed partial class OsLoginServiceClientImpl : OsLoginServiceClient
     {
+        private readonly gaxgrpc::ApiCall<CreateSshPublicKeyRequest, gcoc::SshPublicKey> _callCreateSshPublicKey;
+
         private readonly gaxgrpc::ApiCall<DeletePosixAccountRequest, wkt::Empty> _callDeletePosixAccount;
 
         private readonly gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, wkt::Empty> _callDeleteSshPublicKey;
@@ -1394,6 +1540,9 @@ namespace Google.Cloud.OsLogin.V1
             GrpcClient = grpcClient;
             OsLoginServiceSettings effectiveSettings = settings ?? OsLoginServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateSshPublicKey = clientHelper.BuildApiCall<CreateSshPublicKeyRequest, gcoc::SshPublicKey>("CreateSshPublicKey", grpcClient.CreateSshPublicKeyAsync, grpcClient.CreateSshPublicKey, effectiveSettings.CreateSshPublicKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSshPublicKey);
+            Modify_CreateSshPublicKeyApiCall(ref _callCreateSshPublicKey);
             _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, wkt::Empty>("DeletePosixAccount", grpcClient.DeletePosixAccountAsync, grpcClient.DeletePosixAccount, effectiveSettings.DeletePosixAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePosixAccount);
             Modify_DeletePosixAccountApiCall(ref _callDeletePosixAccount);
@@ -1417,6 +1566,8 @@ namespace Google.Cloud.OsLogin.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_CreateSshPublicKeyApiCall(ref gaxgrpc::ApiCall<CreateSshPublicKeyRequest, gcoc::SshPublicKey> call);
+
         partial void Modify_DeletePosixAccountApiCall(ref gaxgrpc::ApiCall<DeletePosixAccountRequest, wkt::Empty> call);
 
         partial void Modify_DeleteSshPublicKeyApiCall(ref gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, wkt::Empty> call);
@@ -1434,6 +1585,8 @@ namespace Google.Cloud.OsLogin.V1
         /// <summary>The underlying gRPC OsLoginService client</summary>
         public override OsLoginService.OsLoginServiceClient GrpcClient { get; }
 
+        partial void Modify_CreateSshPublicKeyRequest(ref CreateSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeletePosixAccountRequest(ref DeletePosixAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSshPublicKeyRequest(ref DeleteSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
@@ -1445,6 +1598,30 @@ namespace Google.Cloud.OsLogin.V1
         partial void Modify_ImportSshPublicKeyRequest(ref ImportSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSshPublicKeyRequest(ref UpdateSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gcoc::SshPublicKey CreateSshPublicKey(CreateSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSshPublicKeyRequest(ref request, ref callSettings);
+            return _callCreateSshPublicKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create an SSH public key
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gcoc::SshPublicKey> CreateSshPublicKeyAsync(CreateSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSshPublicKeyRequest(ref request, ref callSettings);
+            return _callCreateSshPublicKey.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a POSIX account.
