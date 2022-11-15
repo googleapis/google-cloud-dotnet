@@ -25,35 +25,36 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50X2lv",
-            "LnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzIjEKC1Jh",
-            "d0RvY3VtZW50Eg8KB2NvbnRlbnQYASABKAwSEQoJbWltZV90eXBlGAIgASgJ",
-            "IjEKC0djc0RvY3VtZW50Eg8KB2djc191cmkYASABKAkSEQoJbWltZV90eXBl",
-            "GAIgASgJIk8KDEdjc0RvY3VtZW50cxI/Cglkb2N1bWVudHMYASADKAsyLC5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkdjc0RvY3VtZW50IiMK",
-            "CUdjc1ByZWZpeBIWCg5nY3NfdXJpX3ByZWZpeBgBIAEoCSKvAQoZQmF0Y2hE",
-            "b2N1bWVudHNJbnB1dENvbmZpZxJACgpnY3NfcHJlZml4GAEgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5HY3NQcmVmaXhIABJGCg1n",
-            "Y3NfZG9jdW1lbnRzGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
-            "djFiZXRhMy5HY3NEb2N1bWVudHNIAEIICgZzb3VyY2UirQEKFERvY3VtZW50",
-            "T3V0cHV0Q29uZmlnEmIKEWdjc19vdXRwdXRfY29uZmlnGAEgASgLMkUuZ29v",
-            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudE91dHB1dENv",
-            "bmZpZy5HY3NPdXRwdXRDb25maWdIABoiCg9HY3NPdXRwdXRDb25maWcSDwoH",
-            "Z2NzX3VyaRgBIAEoCUINCgtkZXN0aW5hdGlvbkLsAQojY29tLmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCD0RvY3VtZW50SW9Qcm90b1ABWkln",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rv",
-            "Y3VtZW50YWkvdjFiZXRhMztkb2N1bWVudGFpqgIfR29vZ2xlLkNsb3VkLkRv",
-            "Y3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYx",
-            "YmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZw",
-            "cm90bzM="));
+            "LnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGiBnb29n",
+            "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byIxCgtSYXdEb2N1bWVudBIP",
+            "Cgdjb250ZW50GAEgASgMEhEKCW1pbWVfdHlwZRgCIAEoCSIxCgtHY3NEb2N1",
+            "bWVudBIPCgdnY3NfdXJpGAEgASgJEhEKCW1pbWVfdHlwZRgCIAEoCSJPCgxH",
+            "Y3NEb2N1bWVudHMSPwoJZG9jdW1lbnRzGAEgAygLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5HY3NEb2N1bWVudCIjCglHY3NQcmVmaXgS",
+            "FgoOZ2NzX3VyaV9wcmVmaXgYASABKAkirwEKGUJhdGNoRG9jdW1lbnRzSW5w",
+            "dXRDb25maWcSQAoKZ2NzX3ByZWZpeBgBIAEoCzIqLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuR2NzUHJlZml4SAASRgoNZ2NzX2RvY3VtZW50",
+            "cxgCIAEoCzItLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2Nz",
+            "RG9jdW1lbnRzSABCCAoGc291cmNlIt0BChREb2N1bWVudE91dHB1dENvbmZp",
+            "ZxJiChFnY3Nfb3V0cHV0X2NvbmZpZxgBIAEoCzJFLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2NzT3V0",
+            "cHV0Q29uZmlnSAAaUgoPR2NzT3V0cHV0Q29uZmlnEg8KB2djc191cmkYASAB",
+            "KAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2tCDQoLZGVzdGluYXRpb25C7AEKI2NvbS5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzQg9Eb2N1bWVudElvUHJvdG9QAVpJZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFp",
+            "L3YxYmV0YTM7ZG9jdW1lbnRhaaoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJ",
+            "LlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIi",
+            "R29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RawDocument), global::Google.Cloud.DocumentAI.V1Beta3.RawDocument.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument.Parser, new[]{ "GcsUri", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1484,6 +1485,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GcsOutputConfig(GcsOutputConfig other) : this() {
           gcsUri_ = other.gcsUri_;
+          fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1508,6 +1510,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
         }
 
+        /// <summary>Field number for the "field_mask" field.</summary>
+        public const int FieldMaskFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+        /// <summary>
+        /// Specifies which fields to include in the output documents.
+        /// Only supports top level document and pages field so it must be in the
+        /// form of `{document_field_name}` or `pages.{page_field_name}`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+          get { return fieldMask_; }
+          set {
+            fieldMask_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1524,6 +1543,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             return true;
           }
           if (GcsUri != other.GcsUri) return false;
+          if (!object.Equals(FieldMask, other.FieldMask)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1532,6 +1552,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public override int GetHashCode() {
           int hash = 1;
           if (GcsUri.Length != 0) hash ^= GcsUri.GetHashCode();
+          if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1554,6 +1575,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(10);
             output.WriteString(GcsUri);
           }
+          if (fieldMask_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FieldMask);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1568,6 +1593,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(10);
             output.WriteString(GcsUri);
           }
+          if (fieldMask_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FieldMask);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1580,6 +1609,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           int size = 0;
           if (GcsUri.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
+          }
+          if (fieldMask_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1595,6 +1627,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           if (other.GcsUri.Length != 0) {
             GcsUri = other.GcsUri;
+          }
+          if (other.fieldMask_ != null) {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            FieldMask.MergeFrom(other.FieldMask);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1615,6 +1653,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 GcsUri = input.ReadString();
                 break;
               }
+              case 18: {
+                if (fieldMask_ == null) {
+                  FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+                }
+                input.ReadMessage(FieldMask);
+                break;
+              }
             }
           }
         #endif
@@ -1632,6 +1677,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 break;
               case 10: {
                 GcsUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (fieldMask_ == null) {
+                  FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+                }
+                input.ReadMessage(FieldMask);
                 break;
               }
             }
