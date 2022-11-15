@@ -36,68 +36,80 @@ namespace Google.Cloud.OsLogin.V1 {
             "cxgDIAMoCzI4Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmls",
             "ZS5Tc2hQdWJsaWNLZXlzRW50cnkaXwoSU3NoUHVibGljS2V5c0VudHJ5EgsK",
             "A2tleRgBIAEoCRI4CgV2YWx1ZRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xv",
-            "Z2luLmNvbW1vbi5Tc2hQdWJsaWNLZXk6AjgBIlYKGURlbGV0ZVBvc2l4QWNj",
-            "b3VudFJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNvc2xvZ2luLmdv",
-            "b2dsZWFwaXMuY29tL1Bvc2l4QWNjb3VudCJWChlEZWxldGVTc2hQdWJsaWNL",
-            "ZXlSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojb3Nsb2dpbi5nb29n",
-            "bGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkiegoWR2V0TG9naW5Qcm9maWxlUmVx",
-            "dWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUSI29zbG9naW4uZ29vZ2xlYXBp",
-            "cy5jb20vUG9zaXhBY2NvdW50EhIKCnByb2plY3RfaWQYAiABKAkSEQoJc3lz",
-            "dGVtX2lkGAMgASgJIlMKFkdldFNzaFB1YmxpY0tleVJlcXVlc3QSOQoEbmFt",
-            "ZRgBIAEoCUIr4EEC+kElCiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1NzaFB1",
-            "YmxpY0tleSK0AQoZSW1wb3J0U3NoUHVibGljS2V5UmVxdWVzdBI7CgZwYXJl",
-            "bnQYASABKAlCK+BBAvpBJRIjb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Tc2hQ",
-            "dWJsaWNLZXkSRgoOc3NoX3B1YmxpY19rZXkYAiABKAsyKS5nb29nbGUuY2xv",
-            "dWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5QgPgQQESEgoKcHJvamVj",
-            "dF9pZBgDIAEoCSJaChpJbXBvcnRTc2hQdWJsaWNLZXlSZXNwb25zZRI8Cg1s",
-            "b2dpbl9wcm9maWxlGAEgASgLMiUuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjEu",
-            "TG9naW5Qcm9maWxlIs8BChlVcGRhdGVTc2hQdWJsaWNLZXlSZXF1ZXN0EjkK",
+            "Z2luLmNvbW1vbi5Tc2hQdWJsaWNLZXk6AjgBIqABChlDcmVhdGVTc2hQdWJs",
+            "aWNLZXlSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiNvc2xvZ2lu",
+            "Lmdvb2dsZWFwaXMuY29tL1NzaFB1YmxpY0tleRJGCg5zc2hfcHVibGljX2tl",
+            "eRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJs",
+            "aWNLZXlCA+BBAiJWChlEZWxldGVQb3NpeEFjY291bnRSZXF1ZXN0EjkKBG5h",
+            "bWUYASABKAlCK+BBAvpBJQojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Qb3Np",
+            "eEFjY291bnQiVgoZRGVsZXRlU3NoUHVibGljS2V5UmVxdWVzdBI5CgRuYW1l",
+            "GAEgASgJQivgQQL6QSUKI29zbG9naW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVi",
+            "bGljS2V5InoKFkdldExvZ2luUHJvZmlsZVJlcXVlc3QSOQoEbmFtZRgBIAEo",
+            "CUIr4EEC+kElEiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1Bvc2l4QWNjb3Vu",
+            "dBISCgpwcm9qZWN0X2lkGAIgASgJEhEKCXN5c3RlbV9pZBgDIAEoCSJTChZH",
+            "ZXRTc2hQdWJsaWNLZXlSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQoj",
+            "b3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkitAEKGUltcG9y",
+            "dFNzaFB1YmxpY0tleVJlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUS",
+            "I29zbG9naW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9w",
+            "dWJsaWNfa2V5GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9u",
+            "LlNzaFB1YmxpY0tleUID4EEBEhIKCnByb2plY3RfaWQYAyABKAkiawoaSW1w",
+            "b3J0U3NoUHVibGljS2V5UmVzcG9uc2USPAoNbG9naW5fcHJvZmlsZRgBIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmlsZRIPCgdk",
+            "ZXRhaWxzGAIgASgJIs8BChlVcGRhdGVTc2hQdWJsaWNLZXlSZXF1ZXN0EjkK",
             "BG5hbWUYASABKAlCK+BBAvpBJQojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9T",
             "c2hQdWJsaWNLZXkSRgoOc3NoX3B1YmxpY19rZXkYAiABKAsyKS5nb29nbGUu",
             "Y2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5QgPgQQISLwoLdXBk",
-            "YXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrMtAJ",
-            "Cg5Pc0xvZ2luU2VydmljZRKOAQoSRGVsZXRlUG9zaXhBY2NvdW50EjIuZ29v",
-            "Z2xlLmNsb3VkLm9zbG9naW4udjEuRGVsZXRlUG9zaXhBY2NvdW50UmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIsgtPkkwIfKh0vdjEve25hbWU9",
-            "dXNlcnMvKi9wcm9qZWN0cy8qfdpBBG5hbWUSkwEKEkRlbGV0ZVNzaFB1Ymxp",
-            "Y0tleRIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkRlbGV0ZVNzaFB1Ymxp",
-            "Y0tleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiMYLT5JMCJCoi",
-            "L3YxL3tuYW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfdpBBG5hbWUSmQEK",
-            "D0dldExvZ2luUHJvZmlsZRIvLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkdl",
-            "dExvZ2luUHJvZmlsZVJlcXVlc3QaJS5nb29nbGUuY2xvdWQub3Nsb2dpbi52",
-            "MS5Mb2dpblByb2ZpbGUiLoLT5JMCIRIfL3YxL3tuYW1lPXVzZXJzLyp9L2xv",
-            "Z2luUHJvZmlsZdpBBG5hbWUSoAEKD0dldFNzaFB1YmxpY0tleRIvLmdvb2ds",
-            "ZS5jbG91ZC5vc2xvZ2luLnYxLkdldFNzaFB1YmxpY0tleVJlcXVlc3QaKS5n",
-            "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5IjGC0+ST",
-            "AiQSIi92MS97bmFtZT11c2Vycy8qL3NzaFB1YmxpY0tleXMvKn3aQQRuYW1l",
-            "EvkBChJJbXBvcnRTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi52MS5JbXBvcnRTc2hQdWJsaWNLZXlSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
-            "Lm9zbG9naW4udjEuSW1wb3J0U3NoUHVibGljS2V5UmVzcG9uc2UieoLT5JMC",
-            "OSInL3YxL3twYXJlbnQ9dXNlcnMvKn06aW1wb3J0U3NoUHVibGljS2V5Og5z",
-            "c2hfcHVibGljX2tledpBFXBhcmVudCxzc2hfcHVibGljX2tledpBIHBhcmVu",
-            "dCxzc2hfcHVibGljX2tleSxwcm9qZWN0X2lkEucBChJVcGRhdGVTc2hQdWJs",
-            "aWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5VcGRhdGVTc2hQdWJs",
-            "aWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNz",
-            "aFB1YmxpY0tleSJygtPkkwI0MiIvdjEve25hbWU9dXNlcnMvKi9zc2hQdWJs",
-            "aWNLZXlzLyp9Og5zc2hfcHVibGljX2tledpBE25hbWUsc3NoX3B1YmxpY19r",
-            "ZXnaQR9uYW1lLHNzaF9wdWJsaWNfa2V5LHVwZGF0ZV9tYXNrGnLKQRZvc2xv",
-            "Z2luLmdvb2dsZWFwaXMuY29t0kFWaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2NvbXB1dGVCvgEKG2NvbS5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi52MUIMT3NMb2dpblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Nsb2dpbi92MTtvc2xvZ2luqgIXR29v",
-            "Z2xlLkNsb3VkLk9zTG9naW4uVjHKAhdHb29nbGVcQ2xvdWRcT3NMb2dpblxW",
-            "MeoCGkdvb2dsZTo6Q2xvdWQ6Ok9zTG9naW46OlYxYgZwcm90bzM="));
+            "YXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrMoYM",
+            "Cg5Pc0xvZ2luU2VydmljZRLHAQoSQ3JlYXRlU3NoUHVibGljS2V5EjIuZ29v",
+            "Z2xlLmNsb3VkLm9zbG9naW4udjEuQ3JlYXRlU3NoUHVibGljS2V5UmVxdWVz",
+            "dBopLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXki",
+            "UoLT5JMCNCIiL3YxL3twYXJlbnQ9dXNlcnMvKn0vc3NoUHVibGljS2V5czoO",
+            "c3NoX3B1YmxpY19rZXnaQRVwYXJlbnQsc3NoX3B1YmxpY19rZXkSjgEKEkRl",
+            "bGV0ZVBvc2l4QWNjb3VudBIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkRl",
+            "bGV0ZVBvc2l4QWNjb3VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiLILT5JMCHyodL3YxL3tuYW1lPXVzZXJzLyovcHJvamVjdHMvKn3aQQRu",
+            "YW1lEpMBChJEZWxldGVTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Ns",
+            "b2dpbi52MS5EZWxldGVTc2hQdWJsaWNLZXlSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IjGC0+STAiQqIi92MS97bmFtZT11c2Vycy8qL3NzaFB1",
+            "YmxpY0tleXMvKn3aQQRuYW1lEpkBCg9HZXRMb2dpblByb2ZpbGUSLy5nb29n",
+            "bGUuY2xvdWQub3Nsb2dpbi52MS5HZXRMb2dpblByb2ZpbGVSZXF1ZXN0GiUu",
+            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjEuTG9naW5Qcm9maWxlIi6C0+STAiES",
+            "Hy92MS97bmFtZT11c2Vycy8qfS9sb2dpblByb2ZpbGXaQQRuYW1lEqABCg9H",
+            "ZXRTc2hQdWJsaWNLZXkSLy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5HZXRT",
+            "c2hQdWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29t",
+            "bW9uLlNzaFB1YmxpY0tleSIxgtPkkwIkEiIvdjEve25hbWU9dXNlcnMvKi9z",
+            "c2hQdWJsaWNLZXlzLyp92kEEbmFtZRL5AQoSSW1wb3J0U3NoUHVibGljS2V5",
+            "EjIuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjEuSW1wb3J0U3NoUHVibGljS2V5",
+            "UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkltcG9ydFNzaFB1",
+            "YmxpY0tleVJlc3BvbnNlInqC0+STAjkiJy92MS97cGFyZW50PXVzZXJzLyp9",
+            "OmltcG9ydFNzaFB1YmxpY0tleToOc3NoX3B1YmxpY19rZXnaQRVwYXJlbnQs",
+            "c3NoX3B1YmxpY19rZXnaQSBwYXJlbnQsc3NoX3B1YmxpY19rZXkscHJvamVj",
+            "dF9pZBLnAQoSVXBkYXRlU3NoUHVibGljS2V5EjIuZ29vZ2xlLmNsb3VkLm9z",
+            "bG9naW4udjEuVXBkYXRlU3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5j",
+            "bG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXkicoLT5JMCNDIiL3Yx",
+            "L3tuYW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfToOc3NoX3B1YmxpY19r",
+            "ZXnaQRNuYW1lLHNzaF9wdWJsaWNfa2V52kEfbmFtZSxzc2hfcHVibGljX2tl",
+            "eSx1cGRhdGVfbWFzaxrdAcpBFm9zbG9naW4uZ29vZ2xlYXBpcy5jb23SQcAB",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLnJlYWQtb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2NvbXB1dGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21w",
+            "dXRlLnJlYWRvbmx5Qr4BChtjb20uZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFC",
+            "DE9zTG9naW5Qcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL29zbG9naW4vdjE7b3Nsb2dpbqoCF0dvb2dsZS5D",
+            "bG91ZC5Pc0xvZ2luLlYxygIXR29vZ2xlXENsb3VkXE9zTG9naW5cVjHqAhpH",
+            "b29nbGU6OkNsb3VkOjpPc0xvZ2luOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.CreateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.CreateSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest), global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile", "Details" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest.Parser, new[]{ "Name", "SshPublicKey", "UpdateMask" }, null, null, null, null)
           }));
     }
@@ -360,6 +372,250 @@ namespace Google.Cloud.OsLogin.V1 {
   }
 
   /// <summary>
+  /// A request message for creating an SSH public key.
+  /// </summary>
+  public sealed partial class CreateSshPublicKeyRequest : pb::IMessage<CreateSshPublicKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateSshPublicKeyRequest> _parser = new pb::MessageParser<CreateSshPublicKeyRequest>(() => new CreateSshPublicKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateSshPublicKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSshPublicKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSshPublicKeyRequest(CreateSshPublicKeyRequest other) : this() {
+      parent_ = other.parent_;
+      sshPublicKey_ = other.sshPublicKey_ != null ? other.sshPublicKey_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSshPublicKeyRequest Clone() {
+      return new CreateSshPublicKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The unique ID for the user in format `users/{user}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ssh_public_key" field.</summary>
+    public const int SshPublicKeyFieldNumber = 2;
+    private global::Google.Cloud.OsLogin.Common.SshPublicKey sshPublicKey_;
+    /// <summary>
+    /// Required. The SSH public key and expiration time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OsLogin.Common.SshPublicKey SshPublicKey {
+      get { return sshPublicKey_; }
+      set {
+        sshPublicKey_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateSshPublicKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateSshPublicKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(SshPublicKey, other.SshPublicKey)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (sshPublicKey_ != null) hash ^= SshPublicKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (sshPublicKey_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SshPublicKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (sshPublicKey_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SshPublicKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (sshPublicKey_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SshPublicKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateSshPublicKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.sshPublicKey_ != null) {
+        if (sshPublicKey_ == null) {
+          SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+        }
+        SshPublicKey.MergeFrom(other.SshPublicKey);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sshPublicKey_ == null) {
+              SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+            }
+            input.ReadMessage(SshPublicKey);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sshPublicKey_ == null) {
+              SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+            }
+            input.ReadMessage(SshPublicKey);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A request message for deleting a POSIX account entry.
   /// </summary>
   public sealed partial class DeletePosixAccountRequest : pb::IMessage<DeletePosixAccountRequest>
@@ -376,7 +632,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -573,7 +829,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -770,7 +1026,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1045,7 +1301,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1242,7 +1498,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1526,7 +1782,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1547,6 +1803,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportSshPublicKeyResponse(ImportSshPublicKeyResponse other) : this() {
       loginProfile_ = other.loginProfile_ != null ? other.loginProfile_.Clone() : null;
+      details_ = other.details_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1571,6 +1828,21 @@ namespace Google.Cloud.OsLogin.V1 {
       }
     }
 
+    /// <summary>Field number for the "details" field.</summary>
+    public const int DetailsFieldNumber = 2;
+    private string details_ = "";
+    /// <summary>
+    /// Detailed information about import results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Details {
+      get { return details_; }
+      set {
+        details_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1587,6 +1859,7 @@ namespace Google.Cloud.OsLogin.V1 {
         return true;
       }
       if (!object.Equals(LoginProfile, other.LoginProfile)) return false;
+      if (Details != other.Details) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1595,6 +1868,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (loginProfile_ != null) hash ^= LoginProfile.GetHashCode();
+      if (Details.Length != 0) hash ^= Details.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1617,6 +1891,10 @@ namespace Google.Cloud.OsLogin.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(LoginProfile);
       }
+      if (Details.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Details);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1631,6 +1909,10 @@ namespace Google.Cloud.OsLogin.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(LoginProfile);
       }
+      if (Details.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Details);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1643,6 +1925,9 @@ namespace Google.Cloud.OsLogin.V1 {
       int size = 0;
       if (loginProfile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoginProfile);
+      }
+      if (Details.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Details);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1661,6 +1946,9 @@ namespace Google.Cloud.OsLogin.V1 {
           LoginProfile = new global::Google.Cloud.OsLogin.V1.LoginProfile();
         }
         LoginProfile.MergeFrom(other.LoginProfile);
+      }
+      if (other.Details.Length != 0) {
+        Details = other.Details;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1684,6 +1972,10 @@ namespace Google.Cloud.OsLogin.V1 {
             input.ReadMessage(LoginProfile);
             break;
           }
+          case 18: {
+            Details = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1704,6 +1996,10 @@ namespace Google.Cloud.OsLogin.V1 {
               LoginProfile = new global::Google.Cloud.OsLogin.V1.LoginProfile();
             }
             input.ReadMessage(LoginProfile);
+            break;
+          }
+          case 18: {
+            Details = input.ReadString();
             break;
           }
         }
@@ -1730,7 +2026,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.OsLogin.V1.OsloginReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

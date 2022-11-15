@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "OsLoginServiceClient",
           "rpcs": {
+            "CreateSshPublicKey": {
+              "methods": [
+                "CreateSshPublicKey",
+                "CreateSshPublicKeyAsync"
+              ]
+            },
             "DeletePosixAccount": {
               "methods": [
                 "DeletePosixAccount",

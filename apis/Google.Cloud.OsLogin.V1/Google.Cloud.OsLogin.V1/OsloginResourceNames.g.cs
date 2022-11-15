@@ -19,6 +19,18 @@ using gcoc = Google.Cloud.OsLogin.Common;
 
 namespace Google.Cloud.OsLogin.V1
 {
+    public partial class CreateSshPublicKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gcoc::UserName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcoc::UserName ParentAsUserName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcoc::UserName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeletePosixAccountRequest
     {
         /// <summary>

@@ -23,6 +23,99 @@ namespace Google.Cloud.OsLogin.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedOsLoginServiceClientSnippets
     {
+        /// <summary>Snippet for CreateSshPublicKey</summary>
+        public void CreateSshPublicKeyRequestObject()
+        {
+            // Snippet: CreateSshPublicKey(CreateSshPublicKeyRequest, CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSshPublicKeyRequest request = new CreateSshPublicKeyRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+                SshPublicKey = new SshPublicKey(),
+            };
+            // Make the request
+            SshPublicKey response = osLoginServiceClient.CreateSshPublicKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSshPublicKeyAsync</summary>
+        public async Task CreateSshPublicKeyRequestObjectAsync()
+        {
+            // Snippet: CreateSshPublicKeyAsync(CreateSshPublicKeyRequest, CallSettings)
+            // Additional: CreateSshPublicKeyAsync(CreateSshPublicKeyRequest, CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSshPublicKeyRequest request = new CreateSshPublicKeyRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+                SshPublicKey = new SshPublicKey(),
+            };
+            // Make the request
+            SshPublicKey response = await osLoginServiceClient.CreateSshPublicKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSshPublicKey</summary>
+        public void CreateSshPublicKey()
+        {
+            // Snippet: CreateSshPublicKey(string, SshPublicKey, CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            // Make the request
+            SshPublicKey response = osLoginServiceClient.CreateSshPublicKey(parent, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSshPublicKeyAsync</summary>
+        public async Task CreateSshPublicKeyAsync()
+        {
+            // Snippet: CreateSshPublicKeyAsync(string, SshPublicKey, CallSettings)
+            // Additional: CreateSshPublicKeyAsync(string, SshPublicKey, CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            // Make the request
+            SshPublicKey response = await osLoginServiceClient.CreateSshPublicKeyAsync(parent, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSshPublicKey</summary>
+        public void CreateSshPublicKeyResourceNames()
+        {
+            // Snippet: CreateSshPublicKey(UserName, SshPublicKey, CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            // Make the request
+            SshPublicKey response = osLoginServiceClient.CreateSshPublicKey(parent, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSshPublicKeyAsync</summary>
+        public async Task CreateSshPublicKeyResourceNamesAsync()
+        {
+            // Snippet: CreateSshPublicKeyAsync(UserName, SshPublicKey, CallSettings)
+            // Additional: CreateSshPublicKeyAsync(UserName, SshPublicKey, CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            // Make the request
+            SshPublicKey response = await osLoginServiceClient.CreateSshPublicKeyAsync(parent, sshPublicKey);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeletePosixAccount</summary>
         public void DeletePosixAccountRequestObject()
         {
