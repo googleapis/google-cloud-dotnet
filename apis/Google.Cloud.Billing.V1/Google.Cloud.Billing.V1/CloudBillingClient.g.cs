@@ -322,7 +322,8 @@ namespace Google.Cloud.Billing.V1
 
     /// <summary>CloudBilling client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Retrieves GCP Console billing accounts and associates them with projects.
+    /// Retrieves the Google Cloud Console billing accounts and associates them with
+    /// projects.
     /// </remarks>
     public abstract partial class CloudBillingClient
     {
@@ -336,11 +337,15 @@ namespace Google.Cloud.Billing.V1
         /// <remarks>
         /// The default CloudBilling scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/cloud-billing</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-billing.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/cloud-billing",
+            "https://www.googleapis.com/auth/cloud-billing.readonly",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -772,15 +777,20 @@ namespace Google.Cloud.Billing.V1
             UpdateBillingAccountAsync(name, account, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -790,15 +800,20 @@ namespace Google.Cloud.Billing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -808,15 +823,20 @@ namespace Google.Cloud.Billing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -826,21 +846,26 @@ namespace Google.Cloud.Billing.V1
             CreateBillingAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
         /// Currently CreateBillingAccount only supports subaccount creation, so
-        /// any created billing accounts must be under a provided master billing
+        /// any created billing accounts must be under a provided parent billing
         /// account.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -852,21 +877,26 @@ namespace Google.Cloud.Billing.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
         /// Currently CreateBillingAccount only supports subaccount creation, so
-        /// any created billing accounts must be under a provided master billing
+        /// any created billing accounts must be under a provided parent billing
         /// account.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -878,21 +908,26 @@ namespace Google.Cloud.Billing.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
         /// Currently CreateBillingAccount only supports subaccount creation, so
-        /// any created billing accounts must be under a provided master billing
+        /// any created billing accounts must be under a provided parent billing
         /// account.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1038,9 +1073,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1050,9 +1086,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1062,9 +1099,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1074,9 +1112,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the project for which billing information is
@@ -1092,9 +1131,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the project for which billing information is
@@ -1110,9 +1150,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the project for which billing information is
@@ -1133,7 +1174,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1172,7 +1213,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1211,7 +1252,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1250,7 +1291,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1300,7 +1341,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1350,7 +1391,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -1895,7 +1936,8 @@ namespace Google.Cloud.Billing.V1
 
     /// <summary>CloudBilling client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Retrieves GCP Console billing accounts and associates them with projects.
+    /// Retrieves the Google Cloud Console billing accounts and associates them with
+    /// projects.
     /// </remarks>
     public sealed partial class CloudBillingClientImpl : CloudBillingClient
     {
@@ -2101,15 +2143,20 @@ namespace Google.Cloud.Billing.V1
         }
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2122,15 +2169,20 @@ namespace Google.Cloud.Billing.V1
         }
 
         /// <summary>
-        /// Creates a billing account.
-        /// This method can only be used to create
-        /// [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-        /// by GCP resellers.
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
         /// When creating a subaccount, the current authenticated user must have the
-        /// `billing.accounts.update` IAM permission on the master account, which is
+        /// `billing.accounts.update` IAM permission on the parent account, which is
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-        /// This method will return an error if the master account has not been
+        /// This method will return an error if the parent account has not been
         /// provisioned as a reseller account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2174,9 +2226,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2189,9 +2242,10 @@ namespace Google.Cloud.Billing.V1
 
         /// <summary>
         /// Gets the billing information for a project. The current authenticated user
-        /// must have [permission to view the
-        /// project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-        /// ).
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2212,7 +2266,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
@@ -2254,7 +2308,7 @@ namespace Google.Cloud.Billing.V1
         /// usage charges.
         /// 
         /// *Note:* Incurred charges that have not yet been reported in the transaction
-        /// history of the GCP Console might be billed to the new billing
+        /// history of the Google Cloud Console might be billed to the new billing
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 

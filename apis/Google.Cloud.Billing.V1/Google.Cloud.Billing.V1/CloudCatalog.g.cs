@@ -32,70 +32,79 @@ namespace Google.Cloud.Billing.V1 {
             "ZS90eXBlL21vbmV5LnByb3RvIp0BCgdTZXJ2aWNlEgwKBG5hbWUYASABKAkS",
             "EgoKc2VydmljZV9pZBgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyABKAkSHAoU",
             "YnVzaW5lc3NfZW50aXR5X25hbWUYBCABKAk6POpBOQojY2xvdWRiaWxsaW5n",
-            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USEnNlcnZpY2VzL3tzZXJ2aWNlfSKm",
+            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USEnNlcnZpY2VzL3tzZXJ2aWNlfSLi",
             "AgoDU2t1EgwKBG5hbWUYASABKAkSDgoGc2t1X2lkGAIgASgJEhMKC2Rlc2Ny",
             "aXB0aW9uGAMgASgJEjMKCGNhdGVnb3J5GAQgASgLMiEuZ29vZ2xlLmNsb3Vk",
             "LmJpbGxpbmcudjEuQ2F0ZWdvcnkSFwoPc2VydmljZV9yZWdpb25zGAUgAygJ",
             "EjoKDHByaWNpbmdfaW5mbxgGIAMoCzIkLmdvb2dsZS5jbG91ZC5iaWxsaW5n",
             "LnYxLlByaWNpbmdJbmZvEh0KFXNlcnZpY2VfcHJvdmlkZXJfbmFtZRgHIAEo",
-            "CTpD6kFACh9jbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5jb20vU2t1Eh1zZXJ2",
-            "aWNlcy97c2VydmljZX0vc2t1cy97c2t1fSJtCghDYXRlZ29yeRIcChRzZXJ2",
-            "aWNlX2Rpc3BsYXlfbmFtZRgBIAEoCRIXCg9yZXNvdXJjZV9mYW1pbHkYAiAB",
-            "KAkSFgoOcmVzb3VyY2VfZ3JvdXAYAyABKAkSEgoKdXNhZ2VfdHlwZRgEIAEo",
-            "CSKAAgoLUHJpY2luZ0luZm8SMgoOZWZmZWN0aXZlX3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB3N1bW1hcnkYAiABKAkSRgoS",
-            "cHJpY2luZ19leHByZXNzaW9uGAMgASgLMiouZ29vZ2xlLmNsb3VkLmJpbGxp",
-            "bmcudjEuUHJpY2luZ0V4cHJlc3Npb24SQgoQYWdncmVnYXRpb25faW5mbxgE",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkFnZ3JlZ2F0aW9uSW5m",
-            "bxIgChhjdXJyZW5jeV9jb252ZXJzaW9uX3JhdGUYBSABKAEi0wIKEVByaWNp",
-            "bmdFeHByZXNzaW9uEhIKCnVzYWdlX3VuaXQYASABKAkSHgoWdXNhZ2VfdW5p",
-            "dF9kZXNjcmlwdGlvbhgEIAEoCRIRCgliYXNlX3VuaXQYBSABKAkSHQoVYmFz",
-            "ZV91bml0X2Rlc2NyaXB0aW9uGAYgASgJEiMKG2Jhc2VfdW5pdF9jb252ZXJz",
-            "aW9uX2ZhY3RvchgHIAEoARIYChBkaXNwbGF5X3F1YW50aXR5GAIgASgBEkkK",
-            "DHRpZXJlZF9yYXRlcxgDIAMoCzIzLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYx",
-            "LlByaWNpbmdFeHByZXNzaW9uLlRpZXJSYXRlGk4KCFRpZXJSYXRlEhoKEnN0",
-            "YXJ0X3VzYWdlX2Ftb3VudBgBIAEoARImCgp1bml0X3ByaWNlGAIgASgLMhIu",
-            "Z29vZ2xlLnR5cGUuTW9uZXkihAMKD0FnZ3JlZ2F0aW9uSW5mbxJUChFhZ2dy",
-            "ZWdhdGlvbl9sZXZlbBgBIAEoDjI5Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYx",
-            "LkFnZ3JlZ2F0aW9uSW5mby5BZ2dyZWdhdGlvbkxldmVsEloKFGFnZ3JlZ2F0",
-            "aW9uX2ludGVydmFsGAIgASgOMjwuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEu",
-            "QWdncmVnYXRpb25JbmZvLkFnZ3JlZ2F0aW9uSW50ZXJ2YWwSGQoRYWdncmVn",
-            "YXRpb25fY291bnQYAyABKAUiTwoQQWdncmVnYXRpb25MZXZlbBIhCh1BR0dS",
-            "RUdBVElPTl9MRVZFTF9VTlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARILCgdQ",
-            "Uk9KRUNUEAIiUwoTQWdncmVnYXRpb25JbnRlcnZhbBIkCiBBR0dSRUdBVElP",
-            "Tl9JTlRFUlZBTF9VTlNQRUNJRklFRBAAEgkKBURBSUxZEAESCwoHTU9OVEhM",
-            "WRACIjwKE0xpc3RTZXJ2aWNlc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAiABKAkiYwoUTGlzdFNlcnZpY2VzUmVzcG9uc2US",
-            "MgoIc2VydmljZXMYASADKAsyIC5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5T",
-            "ZXJ2aWNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLqAQoPTGlzdFNrdXNS",
-            "ZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElCiNjbG91ZGJpbGxpbmcu",
-            "Z29vZ2xlYXBpcy5jb20vU2VydmljZRIuCgpzdGFydF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNY3VycmVuY3lfY29kZRgE",
-            "IAEoCRIRCglwYWdlX3NpemUYBSABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJX",
-            "ChBMaXN0U2t1c1Jlc3BvbnNlEioKBHNrdXMYASADKAsyHC5nb29nbGUuY2xv",
-            "dWQuYmlsbGluZy52MS5Ta3USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMvcC",
-            "CgxDbG91ZENhdGFsb2cShAEKDExpc3RTZXJ2aWNlcxIsLmdvb2dsZS5jbG91",
-            "ZC5iaWxsaW5nLnYxLkxpc3RTZXJ2aWNlc1JlcXVlc3QaLS5nb29nbGUuY2xv",
-            "dWQuYmlsbGluZy52MS5MaXN0U2VydmljZXNSZXNwb25zZSIXgtPkkwIOEgwv",
-            "djEvc2VydmljZXPaQQASjgEKCExpc3RTa3VzEiguZ29vZ2xlLmNsb3VkLmJp",
-            "bGxpbmcudjEuTGlzdFNrdXNSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmJpbGxp",
-            "bmcudjEuTGlzdFNrdXNSZXNwb25zZSItgtPkkwIeEhwvdjEve3BhcmVudD1z",
-            "ZXJ2aWNlcy8qfS9za3Vz2kEGcGFyZW50Gk/KQRtjbG91ZGJpbGxpbmcuZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQpYBChtjb20uZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
-            "djFCEUNsb3VkQ2F0YWxvZ1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlsbGluZy92MTtiaWxsaW5nogIH",
-            "Q0xEQ1RMR6oCF0dvb2dsZS5DbG91ZC5CaWxsaW5nLlYxYgZwcm90bzM="));
+            "CRI6CgxnZW9fdGF4b25vbXkYCCABKAsyJC5nb29nbGUuY2xvdWQuYmlsbGlu",
+            "Zy52MS5HZW9UYXhvbm9teTpD6kFACh9jbG91ZGJpbGxpbmcuZ29vZ2xlYXBp",
+            "cy5jb20vU2t1Eh1zZXJ2aWNlcy97c2VydmljZX0vc2t1cy97c2t1fSJtCghD",
+            "YXRlZ29yeRIcChRzZXJ2aWNlX2Rpc3BsYXlfbmFtZRgBIAEoCRIXCg9yZXNv",
+            "dXJjZV9mYW1pbHkYAiABKAkSFgoOcmVzb3VyY2VfZ3JvdXAYAyABKAkSEgoK",
+            "dXNhZ2VfdHlwZRgEIAEoCSKAAgoLUHJpY2luZ0luZm8SMgoOZWZmZWN0aXZl",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB3N1",
+            "bW1hcnkYAiABKAkSRgoScHJpY2luZ19leHByZXNzaW9uGAMgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLmJpbGxpbmcudjEuUHJpY2luZ0V4cHJlc3Npb24SQgoQYWdn",
+            "cmVnYXRpb25faW5mbxgEIAEoCzIoLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYx",
+            "LkFnZ3JlZ2F0aW9uSW5mbxIgChhjdXJyZW5jeV9jb252ZXJzaW9uX3JhdGUY",
+            "BSABKAEi0wIKEVByaWNpbmdFeHByZXNzaW9uEhIKCnVzYWdlX3VuaXQYASAB",
+            "KAkSGAoQZGlzcGxheV9xdWFudGl0eRgCIAEoARJJCgx0aWVyZWRfcmF0ZXMY",
+            "AyADKAsyMy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5QcmljaW5nRXhwcmVz",
+            "c2lvbi5UaWVyUmF0ZRIeChZ1c2FnZV91bml0X2Rlc2NyaXB0aW9uGAQgASgJ",
+            "EhEKCWJhc2VfdW5pdBgFIAEoCRIdChViYXNlX3VuaXRfZGVzY3JpcHRpb24Y",
+            "BiABKAkSIwobYmFzZV91bml0X2NvbnZlcnNpb25fZmFjdG9yGAcgASgBGk4K",
+            "CFRpZXJSYXRlEhoKEnN0YXJ0X3VzYWdlX2Ftb3VudBgBIAEoARImCgp1bml0",
+            "X3ByaWNlGAIgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXkihAMKD0FnZ3JlZ2F0",
+            "aW9uSW5mbxJUChFhZ2dyZWdhdGlvbl9sZXZlbBgBIAEoDjI5Lmdvb2dsZS5j",
+            "bG91ZC5iaWxsaW5nLnYxLkFnZ3JlZ2F0aW9uSW5mby5BZ2dyZWdhdGlvbkxl",
+            "dmVsEloKFGFnZ3JlZ2F0aW9uX2ludGVydmFsGAIgASgOMjwuZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcudjEuQWdncmVnYXRpb25JbmZvLkFnZ3JlZ2F0aW9uSW50",
+            "ZXJ2YWwSGQoRYWdncmVnYXRpb25fY291bnQYAyABKAUiTwoQQWdncmVnYXRp",
+            "b25MZXZlbBIhCh1BR0dSRUdBVElPTl9MRVZFTF9VTlNQRUNJRklFRBAAEgsK",
+            "B0FDQ09VTlQQARILCgdQUk9KRUNUEAIiUwoTQWdncmVnYXRpb25JbnRlcnZh",
+            "bBIkCiBBR0dSRUdBVElPTl9JTlRFUlZBTF9VTlNQRUNJRklFRBAAEgkKBURB",
+            "SUxZEAESCwoHTU9OVEhMWRACIqMBCgtHZW9UYXhvbm9teRI3CgR0eXBlGAEg",
+            "ASgOMikuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuR2VvVGF4b25vbXkuVHlw",
+            "ZRIPCgdyZWdpb25zGAIgAygJIkoKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgoKBkdMT0JBTBABEgwKCFJFR0lPTkFMEAISEgoOTVVMVElfUkVHSU9O",
+            "QUwQAyI8ChNMaXN0U2VydmljZXNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEo",
+            "BRISCgpwYWdlX3Rva2VuGAIgASgJImMKFExpc3RTZXJ2aWNlc1Jlc3BvbnNl",
+            "EjIKCHNlcnZpY2VzGAEgAygLMiAuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEu",
+            "U2VydmljZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki6gEKD0xpc3RTa3Vz",
+            "UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJQojY2xvdWRiaWxsaW5n",
+            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USLgoKc3RhcnRfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWN1cnJlbmN5X2NvZGUY",
+            "BCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAki",
+            "VwoQTGlzdFNrdXNSZXNwb25zZRIqCgRza3VzGAEgAygLMhwuZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcudjEuU2t1EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLe",
+            "AwoMQ2xvdWRDYXRhbG9nEoQBCgxMaXN0U2VydmljZXMSLC5nb29nbGUuY2xv",
+            "dWQuYmlsbGluZy52MS5MaXN0U2VydmljZXNSZXF1ZXN0Gi0uZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcudjEuTGlzdFNlcnZpY2VzUmVzcG9uc2UiF4LT5JMCDhIM",
+            "L3YxL3NlcnZpY2Vz2kEAEo4BCghMaXN0U2t1cxIoLmdvb2dsZS5jbG91ZC5i",
+            "aWxsaW5nLnYxLkxpc3RTa3VzUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5iaWxs",
+            "aW5nLnYxLkxpc3RTa3VzUmVzcG9uc2UiLYLT5JMCHhIcL3YxL3twYXJlbnQ9",
+            "c2VydmljZXMvKn0vc2t1c9pBBnBhcmVudBq1AcpBG2Nsb3VkYmlsbGluZy5n",
+            "b29nbGVhcGlzLmNvbdJBkwFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLWJpbGxpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1iaWxsaW5nLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClgEKG2NvbS5nb29nbGUu",
+            "Y2xvdWQuYmlsbGluZy52MUIRQ2xvdWRDYXRhbG9nUHJvdG9QAVo+Z29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iaWxsaW5n",
+            "L3YxO2JpbGxpbmeiAgdDTERDVExHqgIXR29vZ2xlLkNsb3VkLkJpbGxpbmcu",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Service), global::Google.Cloud.Billing.V1.Service.Parser, new[]{ "Name", "ServiceId", "DisplayName", "BusinessEntityName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Sku), global::Google.Cloud.Billing.V1.Sku.Parser, new[]{ "Name", "SkuId", "Description", "Category", "ServiceRegions", "PricingInfo", "ServiceProviderName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Sku), global::Google.Cloud.Billing.V1.Sku.Parser, new[]{ "Name", "SkuId", "Description", "Category", "ServiceRegions", "PricingInfo", "ServiceProviderName", "GeoTaxonomy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Category), global::Google.Cloud.Billing.V1.Category.Parser, new[]{ "ServiceDisplayName", "ResourceFamily", "ResourceGroup", "UsageType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingInfo), global::Google.Cloud.Billing.V1.PricingInfo.Parser, new[]{ "EffectiveTime", "Summary", "PricingExpression", "AggregationInfo", "CurrencyConversionRate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression), global::Google.Cloud.Billing.V1.PricingExpression.Parser, new[]{ "UsageUnit", "UsageUnitDescription", "BaseUnit", "BaseUnitDescription", "BaseUnitConversionFactor", "DisplayQuantity", "TieredRates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate), global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser, new[]{ "StartUsageAmount", "UnitPrice" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression), global::Google.Cloud.Billing.V1.PricingExpression.Parser, new[]{ "UsageUnit", "DisplayQuantity", "TieredRates", "UsageUnitDescription", "BaseUnit", "BaseUnitDescription", "BaseUnitConversionFactor" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate), global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser, new[]{ "StartUsageAmount", "UnitPrice" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.AggregationInfo), global::Google.Cloud.Billing.V1.AggregationInfo.Parser, new[]{ "AggregationLevel", "AggregationInterval", "AggregationCount" }, null, new[]{ typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel), typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GeoTaxonomy), global::Google.Cloud.Billing.V1.GeoTaxonomy.Parser, new[]{ "Type", "Regions" }, null, new[]{ typeof(global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesRequest), global::Google.Cloud.Billing.V1.ListServicesRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesResponse), global::Google.Cloud.Billing.V1.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListSkusRequest), global::Google.Cloud.Billing.V1.ListSkusRequest.Parser, new[]{ "Parent", "StartTime", "EndTime", "CurrencyCode", "PageSize", "PageToken" }, null, null, null, null),
@@ -468,6 +477,7 @@ namespace Google.Cloud.Billing.V1 {
       serviceRegions_ = other.serviceRegions_.Clone();
       pricingInfo_ = other.pricingInfo_.Clone();
       serviceProviderName_ = other.serviceProviderName_;
+      geoTaxonomy_ = other.geoTaxonomy_ != null ? other.geoTaxonomy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -586,6 +596,21 @@ namespace Google.Cloud.Billing.V1 {
       }
     }
 
+    /// <summary>Field number for the "geo_taxonomy" field.</summary>
+    public const int GeoTaxonomyFieldNumber = 8;
+    private global::Google.Cloud.Billing.V1.GeoTaxonomy geoTaxonomy_;
+    /// <summary>
+    /// The geographic taxonomy for this sku.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Billing.V1.GeoTaxonomy GeoTaxonomy {
+      get { return geoTaxonomy_; }
+      set {
+        geoTaxonomy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -608,6 +633,7 @@ namespace Google.Cloud.Billing.V1 {
       if(!serviceRegions_.Equals(other.serviceRegions_)) return false;
       if(!pricingInfo_.Equals(other.pricingInfo_)) return false;
       if (ServiceProviderName != other.ServiceProviderName) return false;
+      if (!object.Equals(GeoTaxonomy, other.GeoTaxonomy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -622,6 +648,7 @@ namespace Google.Cloud.Billing.V1 {
       hash ^= serviceRegions_.GetHashCode();
       hash ^= pricingInfo_.GetHashCode();
       if (ServiceProviderName.Length != 0) hash ^= ServiceProviderName.GetHashCode();
+      if (geoTaxonomy_ != null) hash ^= GeoTaxonomy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -662,6 +689,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(58);
         output.WriteString(ServiceProviderName);
       }
+      if (geoTaxonomy_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GeoTaxonomy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -694,6 +725,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(58);
         output.WriteString(ServiceProviderName);
       }
+      if (geoTaxonomy_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GeoTaxonomy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -720,6 +755,9 @@ namespace Google.Cloud.Billing.V1 {
       size += pricingInfo_.CalculateSize(_repeated_pricingInfo_codec);
       if (ServiceProviderName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceProviderName);
+      }
+      if (geoTaxonomy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GeoTaxonomy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -752,6 +790,12 @@ namespace Google.Cloud.Billing.V1 {
       pricingInfo_.Add(other.pricingInfo_);
       if (other.ServiceProviderName.Length != 0) {
         ServiceProviderName = other.ServiceProviderName;
+      }
+      if (other.geoTaxonomy_ != null) {
+        if (geoTaxonomy_ == null) {
+          GeoTaxonomy = new global::Google.Cloud.Billing.V1.GeoTaxonomy();
+        }
+        GeoTaxonomy.MergeFrom(other.GeoTaxonomy);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -799,6 +843,13 @@ namespace Google.Cloud.Billing.V1 {
             ServiceProviderName = input.ReadString();
             break;
           }
+          case 66: {
+            if (geoTaxonomy_ == null) {
+              GeoTaxonomy = new global::Google.Cloud.Billing.V1.GeoTaxonomy();
+            }
+            input.ReadMessage(GeoTaxonomy);
+            break;
+          }
         }
       }
     #endif
@@ -843,6 +894,13 @@ namespace Google.Cloud.Billing.V1 {
           }
           case 58: {
             ServiceProviderName = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (geoTaxonomy_ == null) {
+              GeoTaxonomy = new global::Google.Cloud.Billing.V1.GeoTaxonomy();
+            }
+            input.ReadMessage(GeoTaxonomy);
             break;
           }
         }
@@ -1610,12 +1668,12 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PricingExpression(PricingExpression other) : this() {
       usageUnit_ = other.usageUnit_;
+      displayQuantity_ = other.displayQuantity_;
+      tieredRates_ = other.tieredRates_.Clone();
       usageUnitDescription_ = other.usageUnitDescription_;
       baseUnit_ = other.baseUnit_;
       baseUnitDescription_ = other.baseUnitDescription_;
       baseUnitConversionFactor_ = other.baseUnitConversionFactor_;
-      displayQuantity_ = other.displayQuantity_;
-      tieredRates_ = other.tieredRates_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1639,6 +1697,44 @@ namespace Google.Cloud.Billing.V1 {
       set {
         usageUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "display_quantity" field.</summary>
+    public const int DisplayQuantityFieldNumber = 2;
+    private double displayQuantity_;
+    /// <summary>
+    /// The recommended quantity of units for displaying pricing info. When
+    /// displaying pricing info it is recommended to display:
+    /// (unit_price * display_quantity) per display_quantity usage_unit.
+    /// This field does not affect the pricing formula and is for display purposes
+    /// only.
+    /// Example: If the unit_price is "0.0001 USD", the usage_unit is "GB" and
+    /// the display_quantity is "1000" then the recommended way of displaying the
+    /// pricing info is "0.10 USD per 1000 GB"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double DisplayQuantity {
+      get { return displayQuantity_; }
+      set {
+        displayQuantity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tiered_rates" field.</summary>
+    public const int TieredRatesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> _repeated_tieredRates_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> tieredRates_ = new pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate>();
+    /// <summary>
+    /// The list of tiered rates for this pricing. The total cost is computed by
+    /// applying each of the tiered rates on usage. This repeated list is sorted
+    /// by ascending order of start_usage_amount.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> TieredRates {
+      get { return tieredRates_; }
     }
 
     /// <summary>Field number for the "usage_unit_description" field.</summary>
@@ -1708,44 +1804,6 @@ namespace Google.Cloud.Billing.V1 {
       }
     }
 
-    /// <summary>Field number for the "display_quantity" field.</summary>
-    public const int DisplayQuantityFieldNumber = 2;
-    private double displayQuantity_;
-    /// <summary>
-    /// The recommended quantity of units for displaying pricing info. When
-    /// displaying pricing info it is recommended to display:
-    /// (unit_price * display_quantity) per display_quantity usage_unit.
-    /// This field does not affect the pricing formula and is for display purposes
-    /// only.
-    /// Example: If the unit_price is "0.0001 USD", the usage_unit is "GB" and
-    /// the display_quantity is "1000" then the recommended way of displaying the
-    /// pricing info is "0.10 USD per 1000 GB"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double DisplayQuantity {
-      get { return displayQuantity_; }
-      set {
-        displayQuantity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tiered_rates" field.</summary>
-    public const int TieredRatesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> _repeated_tieredRates_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> tieredRates_ = new pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate>();
-    /// <summary>
-    /// The list of tiered rates for this pricing. The total cost is computed by
-    /// applying each of the tiered rates on usage. This repeated list is sorted
-    /// by ascending order of start_usage_amount.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate> TieredRates {
-      get { return tieredRates_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1762,12 +1820,12 @@ namespace Google.Cloud.Billing.V1 {
         return true;
       }
       if (UsageUnit != other.UsageUnit) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DisplayQuantity, other.DisplayQuantity)) return false;
+      if(!tieredRates_.Equals(other.tieredRates_)) return false;
       if (UsageUnitDescription != other.UsageUnitDescription) return false;
       if (BaseUnit != other.BaseUnit) return false;
       if (BaseUnitDescription != other.BaseUnitDescription) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BaseUnitConversionFactor, other.BaseUnitConversionFactor)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DisplayQuantity, other.DisplayQuantity)) return false;
-      if(!tieredRates_.Equals(other.tieredRates_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1776,12 +1834,12 @@ namespace Google.Cloud.Billing.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (UsageUnit.Length != 0) hash ^= UsageUnit.GetHashCode();
+      if (DisplayQuantity != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DisplayQuantity);
+      hash ^= tieredRates_.GetHashCode();
       if (UsageUnitDescription.Length != 0) hash ^= UsageUnitDescription.GetHashCode();
       if (BaseUnit.Length != 0) hash ^= BaseUnit.GetHashCode();
       if (BaseUnitDescription.Length != 0) hash ^= BaseUnitDescription.GetHashCode();
       if (BaseUnitConversionFactor != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BaseUnitConversionFactor);
-      if (DisplayQuantity != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DisplayQuantity);
-      hash ^= tieredRates_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1873,6 +1931,10 @@ namespace Google.Cloud.Billing.V1 {
       if (UsageUnit.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UsageUnit);
       }
+      if (DisplayQuantity != 0D) {
+        size += 1 + 8;
+      }
+      size += tieredRates_.CalculateSize(_repeated_tieredRates_codec);
       if (UsageUnitDescription.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UsageUnitDescription);
       }
@@ -1885,10 +1947,6 @@ namespace Google.Cloud.Billing.V1 {
       if (BaseUnitConversionFactor != 0D) {
         size += 1 + 8;
       }
-      if (DisplayQuantity != 0D) {
-        size += 1 + 8;
-      }
-      size += tieredRates_.CalculateSize(_repeated_tieredRates_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1904,6 +1962,10 @@ namespace Google.Cloud.Billing.V1 {
       if (other.UsageUnit.Length != 0) {
         UsageUnit = other.UsageUnit;
       }
+      if (other.DisplayQuantity != 0D) {
+        DisplayQuantity = other.DisplayQuantity;
+      }
+      tieredRates_.Add(other.tieredRates_);
       if (other.UsageUnitDescription.Length != 0) {
         UsageUnitDescription = other.UsageUnitDescription;
       }
@@ -1916,10 +1978,6 @@ namespace Google.Cloud.Billing.V1 {
       if (other.BaseUnitConversionFactor != 0D) {
         BaseUnitConversionFactor = other.BaseUnitConversionFactor;
       }
-      if (other.DisplayQuantity != 0D) {
-        DisplayQuantity = other.DisplayQuantity;
-      }
-      tieredRates_.Add(other.tieredRates_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2570,6 +2628,263 @@ namespace Google.Cloud.Billing.V1 {
   }
 
   /// <summary>
+  /// Encapsulates the geographic taxonomy data for a sku.
+  /// </summary>
+  public sealed partial class GeoTaxonomy : pb::IMessage<GeoTaxonomy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GeoTaxonomy> _parser = new pb::MessageParser<GeoTaxonomy>(() => new GeoTaxonomy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GeoTaxonomy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoTaxonomy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoTaxonomy(GeoTaxonomy other) : this() {
+      type_ = other.type_;
+      regions_ = other.regions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoTaxonomy Clone() {
+      return new GeoTaxonomy(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type type_ = global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified;
+    /// <summary>
+    /// The type of Geo Taxonomy: GLOBAL, REGIONAL, or MULTI_REGIONAL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "regions" field.</summary>
+    public const int RegionsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_regions_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> regions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of regions associated with a sku. Empty for Global skus, which are
+    /// associated with all Google Cloud regions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Regions {
+      get { return regions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GeoTaxonomy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GeoTaxonomy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if(!regions_.Equals(other.regions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      hash ^= regions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Type != global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      regions_.WriteTo(output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      regions_.WriteTo(ref output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      size += regions_.CalculateSize(_repeated_regions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GeoTaxonomy other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      regions_.Add(other.regions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            regions_.AddEntriesFrom(input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Billing.V1.GeoTaxonomy.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GeoTaxonomy message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of Geo Taxonomy: GLOBAL, REGIONAL, or MULTI_REGIONAL.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// The type is not specified.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The sku is global in nature, e.g. a license sku. Global skus are
+        /// available in all regions, and so have an empty region list.
+        /// </summary>
+        [pbr::OriginalName("GLOBAL")] Global = 1,
+        /// <summary>
+        /// The sku is available in a specific region, e.g. "us-west2".
+        /// </summary>
+        [pbr::OriginalName("REGIONAL")] Regional = 2,
+        /// <summary>
+        /// The sku is associated with multiple regions, e.g. "us-west2" and
+        /// "us-east1".
+        /// </summary>
+        [pbr::OriginalName("MULTI_REGIONAL")] MultiRegional = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Request message for `ListServices`.
   /// </summary>
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
@@ -2586,7 +2901,7 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2823,7 +3138,7 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3049,7 +3364,7 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3477,7 +3792,7 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Billing.V1.CloudCatalogReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
