@@ -151,6 +151,13 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
                     Offset = 0L,
                     ProtoRows = new AppendRowsRequest.Types.ProtoData(),
                     TraceId = "",
+                    MissingValueInterpretations =
+                    {
+                        {
+                            "",
+                            AppendRowsRequest.Types.MissingValueInterpretation.Unspecified
+                        },
+                    },
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
