@@ -285,12 +285,12 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
 
     /// <summary>AppConnectorsService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The AppConnectorsService exposes the following resource:
     /// 
@@ -1243,12 +1243,12 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
 
     /// <summary>AppConnectorsService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The AppConnectorsService exposes the following resource:
     /// 
