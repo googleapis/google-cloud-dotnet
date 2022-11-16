@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta03, released 2022-11-16
+
+### New features
+
+- Added field_mask field in DocumentOutputConfig.GcsOutputConfig in document_io.proto ([commit a4e2380](https://github.com/googleapis/google-cloud-dotnet/commit/a4e238091d9633f85c8ddbd6fe369d96db4b8390))
+- Added TrainProcessorVersion, EvaluateProcessorVersion, GetEvaluation, and ListEvaluations v1beta3 APIs ([commit cbd4d22](https://github.com/googleapis/google-cloud-dotnet/commit/cbd4d2277958fe365c1615e34a98990573e01d27))
+- Added evaluation.proto ([commit cbd4d22](https://github.com/googleapis/google-cloud-dotnet/commit/cbd4d2277958fe365c1615e34a98990573e01d27))
+- Added document_schema field in ProcessorVersion processor.proto ([commit cbd4d22](https://github.com/googleapis/google-cloud-dotnet/commit/cbd4d2277958fe365c1615e34a98990573e01d27))
+- Added image_quality_scores field in Document.Page in document.proto ([commit cbd4d22](https://github.com/googleapis/google-cloud-dotnet/commit/cbd4d2277958fe365c1615e34a98990573e01d27))
+- Added font_family field in Document.Style in document.proto ([commit cbd4d22](https://github.com/googleapis/google-cloud-dotnet/commit/cbd4d2277958fe365c1615e34a98990573e01d27))
+
 ## Version 2.0.0-beta02, released 2022-08-26
 
 ### New features
