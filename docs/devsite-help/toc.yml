@@ -2,6 +2,8 @@
   items:
   - name: Getting started
     href: getting-started.md
+  - name: Support
+    href: support.md
   - name: Client configuration
     href: client-configuration.md
   - name: Client lifecycle
@@ -12,11 +14,17 @@
     href: troubleshooting.md
   - name: Emulator support
     href: emulators.md
+  - name: Library types
+    href: library-types.md
+  - name: Protocol buffers
+    href: protobuf.md
   - name: Supported platforms
     href: platforms.md
   - name: Package names
     href: package-names.md
-  - name: Page streaming
+  - name: Long-running operations
+    href: long-running-operations.md
+  - name: Pagination (page streaming)
     href: page-streaming.md
   - name: Resource names and IDs
     href: resource-names.md

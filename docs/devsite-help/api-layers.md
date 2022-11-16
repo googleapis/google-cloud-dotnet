@@ -28,6 +28,8 @@ libraries for the [Google Cloud Storage](https://cloud.google.com/storage) and
 [BigQuery](https://cloud.google.com/bigquery) APIs, whereas other libraries target gRPC-based APIs.
 Where gRPC access to an API is available, our client libraries use it.
 
+See the [library types documentation](library-types.md) for more details.
+
 ## Layers of gRPC-based libraries
 
 All gRPC-based libraries contain generated code, and some also contain hand-written code. The 

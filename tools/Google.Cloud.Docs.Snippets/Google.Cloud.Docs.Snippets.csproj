@@ -3,6 +3,7 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>10</LangVersion>
     <AssemblyName>Google.Cloud.Docs.Snippets</AssemblyName>
     <PackageId>Google.Cloud.Docs.Snippets</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>

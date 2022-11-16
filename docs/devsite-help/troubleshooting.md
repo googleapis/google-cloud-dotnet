@@ -1,5 +1,8 @@
 # Troubleshooting
 
+See the [support page](support.md) for suggestions about how to ask for more help
+if the sections below don't cover your question.
+
 ## How can I trace gRPC issues?
 
 When working with libraries that use gRPC, you need to be aware of which gRPC
@@ -26,6 +29,15 @@ var client = new ExampleClientBuilder
 {
     Logger = loggerFactory.CreateLogger("ExampleClient")
 }.Build();
+```
+
+Adding this code into the [getting started Translation sample code](getting-started.md) produces output such as this:
+
+```text
+trce: TranslationClient[0]
+      Starting synchronous API call to TranslateText.
+trce: TranslationClient[0]
+      Call completed to TranslateText.
 ```
 
 ### Transport logging with Grpc.Net.Client
@@ -59,6 +71,26 @@ var client = new ExampleClientBuilder
 Note that however the logger is set up, it needs to be configured with a minimum log level of debug or trace
 in order to be useful.
 
+Adding this code into the [getting started Translation sample code](getting-started.md) produces output such as this:
+
+```text
+dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://translate.googleapis.com/google.cloud.translation.v3.TranslationService/TranslateText'.
+dbug: Grpc.Net.Client.Balancer.Subchannel[1]
+      Subchannel id '1' created with addresses: translate.googleapis.com:443
+
+... (more output) ...
+
+dbug: Grpc.Net.Client.Internal.GrpcCall[18]
+      Sending message.
+dbug: Grpc.Net.Client.Internal.GrpcCall[13]
+      Reading message.
+dbug: Grpc.Net.Client.Internal.GrpcCall[4]
+      Finished gRPC call.
+```
+
+With a minimum log level of Trace, there's considerably more output.
+
 ### Transport logging with Grpc.Core
 
 There are two aspects to configuring logging with Grpc.Core.
@@ -70,7 +102,7 @@ The environment variables affecting gRPC are [listed in the gRPC
 repository](https://github.com/grpc/grpc/blob/master/doc/environment_variables.md).
 The important ones for diagnostics are `GRPC_TRACE` and
 `GRPC_VERBOSITY`. For example, you might want to start off with
-`GRPC_TRACE=all` and `GRPC_VERBOSITY=DEBUG` which will dump a *lot*
+`GRPC_TRACE=all` and `GRPC_VERBOSITY=debug` which will dump a *lot*
 of information, then tweak them to reduce this to only useful
 data... or start with one kind of tracing (e.g.
 `GRPC_TRACE=call_error`) and add more as required.
@@ -92,6 +124,16 @@ it yourself to integrate with other systems - see the
 [Grpc.Core.Logging](https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging)
 namespace for details.
 
+Adding this code into the [getting started Translation sample code](getting-started.md),
+using `GRPC_VERBOSITY=info` and `GRPC_TRACE=all` produces output starting with lines such as this:
+
+```text
+D1128 12:45:03.460271 Grpc.Core.Internal.UnmanagedLibrary Attempting to load native library "C:\Users\[...]\GettingStarted\bin\Debug\net48\grpc_csharp_ext.x64.dll"
+D1128 12:45:03.549778 Grpc.Core.Internal.NativeExtension gRPC native library loaded successfully.
+I1128 12:45:03.564911 0 ..\..\..\src\core\lib\iomgr\timer_manager.cc:88: Spawn timer thread
+I1128 12:45:03.564911 0 ..\..\..\src\core\lib\surface\init.cc:196: grpc_init(void)
+```
+
 ## How can I trace requests and responses in REST-based APIs?
 
 For libraries that use HTTP1.1 and REST (Google.Cloud.Storage.V1, Google.Cloud.BigQuery.V2, Google.Cloud.Translation.V2),
@@ -109,6 +151,37 @@ headers and the response body:
 
 To log *all* events from the message handler, you can set the `LogEvents` property to
 `~LogEventType.None`.
+
+The above sample code produces output such as this:
+
+```text
+D2022-11-28 12:50:31.615723 Google.Apis.Auth.OAuth2.DefaultCredentialProvider Loading Credential from file [...]
+D2022-11-28 12:50:31.991560 Google.Apis.Auth.OAuth2.ServiceCredential Token has expired, trying to get a new one.
+D2022-11-28 12:50:32.024800 Google.Apis.Auth.OAuth2.ServiceCredential Request a new access token. Assertion data is: [...]
+D2022-11-28 12:50:32.027101 Google.Apis.Http.ConfigurableMessageHandler Request[00000001] (triesRemaining=3) URI: 'https://oauth2.googleapis.com/token'
+D2022-11-28 12:50:32.351707 Google.Apis.Http.ConfigurableMessageHandler Response[00000001] Response status: OK 'OK'
+I2022-11-28 12:50:32.360147 Google.Apis.Auth.OAuth2.ServiceCredential New access token was received successfully
+D2022-11-28 12:50:32.366091 Google.Apis.Http.ConfigurableMessageHandler Request[00000001] Headers:
+  [User-Agent] 'gcloud-dotnet/3.1.0; google-api-dotnet-client/1.57.0.0; (gzip)'
+  [x-goog-api-client] 'gl-dotnet/7.0.0 gccl/3.1.0 gax/4.0.0 gdcl/1.57.0.875'
+  [Authorization] 'Bearer [...]'
+D2022-11-28 12:50:32.463410 Google.Apis.Http.ConfigurableMessageHandler Response[00000001] Body: '{.  "data": {.    "languages": [ { ... }, { ... }, ... ] }'
+```
+
+## How can I debug into the libraries?
+
+The NuGet packages for the libraries contain the PDB files
+and SourceLink information required to enable a rich debugging experience,
+but in many build scenarios the PDB files are not automatically copied.
+If you need to debug into the library code itself (whether for the
+API-specific library or support libraries such as Google.Apis.Auth,
+Google.Protobuf or Google.Api.Gax.Grpc), set the
+`CopyDebugSymbolFilesFromPackages` build property to `true`, for example
+by adding the element below to a `<PropertyGroup>` element in your project file:
+
+```xml
+<CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
+```
 
 ## Why aren't the gRPC native libraries being found?
 
@@ -143,71 +216,5 @@ native libraries are copied appropriately.
 
 ## How can I modify repeated fields and maps in protobuf messages?
 
-The generated C# code for protobuf messages makes simple properties
-read/write, but repeated fields and map fields are read-only. That
-doesn't stop you from populating them, though: it just means you
-can't change the property to refer to a *different* list or map.
-
-Typically you'll populate this using a *collection initializer*
-nested within an *object initializer*. As an example, let's look at
-how we might create a `BatchAnnotateImagesRequest` message in the
-Vision API. (This is just an easy-to-understand example; the
-Google.Cloud.Vision.V1 package provides helper methods to avoid you
-having to create batches yourself in most cases.)
-
-The protobuf description looks like this:
-
-```proto
-// Multiple image annotation requests are batched into a single service call.
-message BatchAnnotateImagesRequest {
-  // Individual image annotation requests for this batch.
-  repeated AnnotateImageRequest requests = 1;
-}
-```
-
-In the generated C# code, the `Requests` property of
-`BatchAnnotateImagesRequest` is read-only, but you can populate it
-with a collection initializer:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField1)]
-
-You don't *have* to use a collection initializer though, and
-sometimes it would be inconvenient to do so. It's perfectly valid to
-add to the repeated field after other initialization:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField2)]
-
-Finally, it's worth being aware that `RepeatedField<T>` has an `Add`
-overload accepting an `IEnumerable<T>`. This allows you to use a
-collection initializer to copy items out of another collection, or a
-LINQ query result:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField3)]
-
-Likewise for map fields (which are significantly less common) you
-can use collection initializers, or (from C# 6 onwards) the indexer
-syntax within an object initializer. As an example of this, let's
-consider the Scheduler V1 API, which contains a message like this:
-
-```proto
-message HttpTarget {
-  // Other fields omitted
-
-  // The user can specify HTTP request headers to send with the job's
-  // HTTP request. (Further documentation omitted here.)
-  map<string, string> headers = 3;
-}
-```
-
-Again, the `Headers` property in the generated message is read-only,
-but you can populate it with a collection initializer:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoMap1)]
-
-Or an indexer in an object initializer:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoMap2)]
-
-Or modify it after other initialization steps:
-
-[!code-cs[](../examples/help.Faq.txt#ProtoMap3)]
+This information is now in the [protocol buffers guide](protobuf.md#repeated-fields-and-maps); this section has been
+retained for the sake of existing links.
