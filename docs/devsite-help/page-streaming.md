@@ -1,4 +1,4 @@
-# Page streaming
+# Pagination (page streaming)
 
 ## Introduction
 
