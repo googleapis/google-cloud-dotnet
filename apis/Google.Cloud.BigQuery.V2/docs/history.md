@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-11-16
+
+### New features
+
+- Add JSON DB type support in BigQuery ([commit afa19c1](https://github.com/googleapis/google-cloud-dotnet/commit/afa19c179ae8fde5e78655041c72915bc6a0afaa))
+
 ## Version 3.1.0, released 2022-07-25
 
 ### New features
