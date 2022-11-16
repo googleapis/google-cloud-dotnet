@@ -216,12 +216,12 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
 
     /// <summary>AppGatewaysService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The AppGatewaysService exposes the following resources:
     /// 
@@ -888,12 +888,12 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
 
     /// <summary>AppGatewaysService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The AppGatewaysService exposes the following resources:
     /// 

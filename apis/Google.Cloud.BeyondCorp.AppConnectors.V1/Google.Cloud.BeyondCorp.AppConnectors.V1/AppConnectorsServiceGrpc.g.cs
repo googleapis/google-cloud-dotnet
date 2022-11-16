@@ -24,12 +24,12 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
-  /// ## API Overview
+  /// API Overview:
   ///
   /// The `beyondcorp.googleapis.com` service implements the Google Cloud
   /// BeyondCorp API.
   ///
-  /// ## Data Model
+  /// Data Model:
   ///
   /// The AppConnectorsService exposes the following resource:
   ///

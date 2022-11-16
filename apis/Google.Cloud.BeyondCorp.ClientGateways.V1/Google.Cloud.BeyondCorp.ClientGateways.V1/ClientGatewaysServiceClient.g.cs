@@ -222,12 +222,12 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
 
     /// <summary>ClientGatewaysService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The ClientGatewaysService exposes the following resources:
     /// 
@@ -871,12 +871,12 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1
 
     /// <summary>ClientGatewaysService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview:
     /// 
     /// The `beyondcorp.googleapis.com` service implements the Google Cloud
     /// BeyondCorp API.
     /// 
-    /// ## Data Model
+    /// Data Model:
     /// 
     /// The ClientGatewaysService exposes the following resources:
     /// 
