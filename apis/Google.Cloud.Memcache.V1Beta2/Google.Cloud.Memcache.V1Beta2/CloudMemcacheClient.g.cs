@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -63,6 +64,9 @@ namespace Google.Cloud.Memcache.V1Beta2
             ApplyParametersOperationsSettings = existing.ApplyParametersOperationsSettings.Clone();
             ApplySoftwareUpdateSettings = existing.ApplySoftwareUpdateSettings;
             ApplySoftwareUpdateOperationsSettings = existing.ApplySoftwareUpdateOperationsSettings.Clone();
+            RescheduleMaintenanceSettings = existing.RescheduleMaintenanceSettings;
+            RescheduleMaintenanceOperationsSettings = existing.RescheduleMaintenanceOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -272,6 +276,41 @@ namespace Google.Cloud.Memcache.V1Beta2
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudMemcacheClient.RescheduleMaintenance</c> and <c>CloudMemcacheClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 1200 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RescheduleMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudMemcacheClient.RescheduleMaintenance</c> and
+        /// <c>CloudMemcacheClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RescheduleMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudMemcacheSettings"/> object.</returns>
         public CloudMemcacheSettings Clone() => new CloudMemcacheSettings(this);
@@ -426,6 +465,9 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         /// <summary>The underlying gRPC CloudMemcache client</summary>
         public virtual CloudMemcache.CloudMemcacheClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Instances in a given location.
@@ -965,6 +1007,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
+        /// 
         /// *  `displayName`
         /// </param>
         /// <param name="resource">
@@ -985,6 +1028,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
+        /// 
         /// *  `displayName`
         /// </param>
         /// <param name="resource">
@@ -1005,6 +1049,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
+        /// 
         /// *  `displayName`
         /// </param>
         /// <param name="resource">
@@ -1792,6 +1837,206 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(InstanceName instance, scg::IEnumerable<string> nodeIds, bool applyAll, st::CancellationToken cancellationToken) =>
             ApplySoftwareUpdateAsync(instance, nodeIds, applyAll, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public virtual lro::OperationsClient RescheduleMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RescheduleMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceRescheduleMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceRescheduleMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(string instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(instance, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(InstanceName instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Memcache instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName instance, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(instance, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudMemcache client wrapper implementation, for convenient use.</summary>
@@ -1830,6 +2075,8 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         private readonly gaxgrpc::ApiCall<ApplySoftwareUpdateRequest, lro::Operation> _callApplySoftwareUpdate;
 
+        private readonly gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> _callRescheduleMaintenance;
+
         /// <summary>
         /// Constructs a client wrapper for the CloudMemcache service, with the specified gRPC client and settings.
         /// </summary>
@@ -1847,6 +2094,8 @@ namespace Google.Cloud.Memcache.V1Beta2
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             ApplyParametersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApplyParametersOperationsSettings, logger);
             ApplySoftwareUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApplySoftwareUpdateOperationsSettings, logger);
+            RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -1871,6 +2120,9 @@ namespace Google.Cloud.Memcache.V1Beta2
             _callApplySoftwareUpdate = clientHelper.BuildApiCall<ApplySoftwareUpdateRequest, lro::Operation>("ApplySoftwareUpdate", grpcClient.ApplySoftwareUpdateAsync, grpcClient.ApplySoftwareUpdate, effectiveSettings.ApplySoftwareUpdateSettings).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callApplySoftwareUpdate);
             Modify_ApplySoftwareUpdateApiCall(ref _callApplySoftwareUpdate);
+            _callRescheduleMaintenance = clientHelper.BuildApiCall<RescheduleMaintenanceRequest, lro::Operation>("RescheduleMaintenance", grpcClient.RescheduleMaintenanceAsync, grpcClient.RescheduleMaintenance, effectiveSettings.RescheduleMaintenanceSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callRescheduleMaintenance);
+            Modify_RescheduleMaintenanceApiCall(ref _callRescheduleMaintenance);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1892,10 +2144,15 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         partial void Modify_ApplySoftwareUpdateApiCall(ref gaxgrpc::ApiCall<ApplySoftwareUpdateRequest, lro::Operation> call);
 
+        partial void Modify_RescheduleMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> call);
+
         partial void OnConstruction(CloudMemcache.CloudMemcacheClient grpcClient, CloudMemcacheSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudMemcache client</summary>
         public override CloudMemcache.CloudMemcacheClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1912,6 +2169,8 @@ namespace Google.Cloud.Memcache.V1Beta2
         partial void Modify_ApplyParametersRequest(ref ApplyParametersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ApplySoftwareUpdateRequest(ref ApplySoftwareUpdateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RescheduleMaintenanceRequest(ref RescheduleMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given location.
@@ -2130,6 +2389,33 @@ namespace Google.Cloud.Memcache.V1Beta2
             Modify_ApplySoftwareUpdateRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callApplySoftwareUpdate.Async(request, callSettings).ConfigureAwait(false), ApplySoftwareUpdateOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public override lro::OperationsClient RescheduleMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callRescheduleMaintenance.Sync(request, callSettings), RescheduleMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Performs the apply phase of the RescheduleMaintenance verb.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callRescheduleMaintenance.Async(request, callSettings).ConfigureAwait(false), RescheduleMaintenanceOperationsClient);
+        }
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
@@ -2155,6 +2441,22 @@ namespace Google.Cloud.Memcache.V1Beta2
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CloudMemcache
+    {
+        public partial class CloudMemcacheClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
