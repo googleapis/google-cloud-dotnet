@@ -3,7 +3,7 @@
 //     source: google/cloud/memcache/v1/cloud_memcache.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -96,6 +96,8 @@ namespace Google.Cloud.Memcache.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1.DeleteInstanceRequest> __Marshaller_google_cloud_memcache_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1.DeleteInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1.ApplyParametersRequest> __Marshaller_google_cloud_memcache_v1_ApplyParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1.ApplyParametersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest> __Marshaller_google_cloud_memcache_v1_RescheduleMaintenanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memcache.V1.ListInstancesRequest, global::Google.Cloud.Memcache.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memcache.V1.ListInstancesRequest, global::Google.Cloud.Memcache.V1.ListInstancesResponse>(
@@ -151,6 +153,14 @@ namespace Google.Cloud.Memcache.V1 {
         __ServiceName,
         "ApplyParameters",
         __Marshaller_google_cloud_memcache_v1_ApplyParametersRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation> __Method_RescheduleMaintenance = new grpc::Method<global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RescheduleMaintenance",
+        __Marshaller_google_cloud_memcache_v1_RescheduleMaintenanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -212,9 +222,10 @@ namespace Google.Cloud.Memcache.V1 {
       }
 
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -238,7 +249,7 @@ namespace Google.Cloud.Memcache.V1 {
       }
 
       /// <summary>
-      /// ApplyParameters will restart the set of specified nodes in order to update
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
       /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -246,6 +257,18 @@ namespace Google.Cloud.Memcache.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApplyParameters(global::Google.Cloud.Memcache.V1.ApplyParametersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Reschedules upcoming maintenance event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RescheduleMaintenance(global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -472,9 +495,10 @@ namespace Google.Cloud.Memcache.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -487,9 +511,10 @@ namespace Google.Cloud.Memcache.V1 {
         return UpdateParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -500,9 +525,10 @@ namespace Google.Cloud.Memcache.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateParameters, null, options, request);
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -515,9 +541,10 @@ namespace Google.Cloud.Memcache.V1 {
         return UpdateParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -576,7 +603,7 @@ namespace Google.Cloud.Memcache.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      /// ApplyParameters will restart the set of specified nodes in order to update
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
       /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -590,7 +617,7 @@ namespace Google.Cloud.Memcache.V1 {
         return ApplyParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ApplyParameters will restart the set of specified nodes in order to update
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
       /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -602,7 +629,7 @@ namespace Google.Cloud.Memcache.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ApplyParameters, null, options, request);
       }
       /// <summary>
-      /// ApplyParameters will restart the set of specified nodes in order to update
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
       /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -616,7 +643,7 @@ namespace Google.Cloud.Memcache.V1 {
         return ApplyParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ApplyParameters will restart the set of specified nodes in order to update
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
       /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -626,6 +653,54 @@ namespace Google.Cloud.Memcache.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplyParametersAsync(global::Google.Cloud.Memcache.V1.ApplyParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ApplyParameters, null, options, request);
+      }
+      /// <summary>
+      /// Reschedules upcoming maintenance event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reschedules upcoming maintenance event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RescheduleMaintenance, null, options, request);
+      }
+      /// <summary>
+      /// Reschedules upcoming maintenance event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reschedules upcoming maintenance event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RescheduleMaintenance, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -647,7 +722,8 @@ namespace Google.Cloud.Memcache.V1 {
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_UpdateParameters, serviceImpl.UpdateParameters)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
-          .AddMethod(__Method_ApplyParameters, serviceImpl.ApplyParameters).Build();
+          .AddMethod(__Method_ApplyParameters, serviceImpl.ApplyParameters)
+          .AddMethod(__Method_RescheduleMaintenance, serviceImpl.RescheduleMaintenance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -664,6 +740,7 @@ namespace Google.Cloud.Memcache.V1 {
       serviceBinder.AddMethod(__Method_UpdateParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1.UpdateParametersRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateParameters));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_ApplyParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1.ApplyParametersRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplyParameters));
+      serviceBinder.AddMethod(__Method_RescheduleMaintenance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RescheduleMaintenance));
     }
 
   }
