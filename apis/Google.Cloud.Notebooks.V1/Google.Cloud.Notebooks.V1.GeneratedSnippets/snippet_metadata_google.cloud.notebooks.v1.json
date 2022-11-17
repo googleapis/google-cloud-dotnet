@@ -692,6 +692,158 @@
       ]
     },
     {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpdateRuntime_sync",
+      "title": "UpdateRuntimeRequestObject",
+      "description": "Snippet for UpdateRuntime",
+      "file": "ManagedNotebookServiceClient.UpdateRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpdateRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpdateRuntime_async",
+      "title": "UpdateRuntimeRequestObjectAsync",
+      "description": "Snippet for UpdateRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.UpdateRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpdateRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpdateRuntime_sync_flattened",
+      "title": "UpdateRuntime",
+      "description": "Snippet for UpdateRuntime",
+      "file": "ManagedNotebookServiceClient.UpdateRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpdateRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpdateRuntime_async_flattened",
+      "title": "UpdateRuntimeAsync",
+      "description": "Snippet for UpdateRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.UpdateRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpdateRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "notebooks_v1_generated_ManagedNotebookService_DeleteRuntime_sync",
       "title": "DeleteRuntimeRequestObject",
       "description": "Snippet for DeleteRuntime",
@@ -1527,6 +1679,158 @@
       ]
     },
     {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpgradeRuntime_sync",
+      "title": "UpgradeRuntimeRequestObject",
+      "description": "Snippet for UpgradeRuntime",
+      "file": "ManagedNotebookServiceClient.UpgradeRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpgradeRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpgradeRuntime_async",
+      "title": "UpgradeRuntimeRequestObjectAsync",
+      "description": "Snippet for UpgradeRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.UpgradeRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpgradeRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpgradeRuntime_sync_flattened",
+      "title": "UpgradeRuntime",
+      "description": "Snippet for UpgradeRuntime",
+      "file": "ManagedNotebookServiceClient.UpgradeRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpgradeRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_UpgradeRuntime_async_flattened",
+      "title": "UpgradeRuntimeAsync",
+      "description": "Snippet for UpgradeRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.UpgradeRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.UpgradeRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "notebooks_v1_generated_ManagedNotebookService_ReportRuntimeEvent_sync",
       "title": "ReportRuntimeEventRequestObject",
       "description": "Snippet for ReportRuntimeEvent",
@@ -1976,6 +2280,233 @@
         {
           "start": 35,
           "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_sync",
+      "title": "DiagnoseRuntimeRequestObject",
+      "description": "Snippet for DiagnoseRuntime",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_async",
+      "title": "DiagnoseRuntimeRequestObjectAsync",
+      "description": "Snippet for DiagnoseRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_sync_flattened",
+      "title": "DiagnoseRuntime",
+      "description": "Snippet for DiagnoseRuntime",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_async_flattened",
+      "title": "DiagnoseRuntimeAsync",
+      "description": "Snippet for DiagnoseRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_sync_flattened_resourceNames",
+      "title": "DiagnoseRuntimeResourceNames",
+      "description": "Snippet for DiagnoseRuntime",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntime",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_DiagnoseRuntime_async_flattened_resourceNames",
+      "title": "DiagnoseRuntimeResourceNamesAsync",
+      "description": "Snippet for DiagnoseRuntimeAsync",
+      "file": "ManagedNotebookServiceClient.DiagnoseRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseRuntimeAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseRuntime",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.DiagnoseRuntime",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -3889,6 +4420,233 @@
         {
           "start": 36,
           "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_sync",
+      "title": "DiagnoseInstanceRequestObject",
+      "description": "Snippet for DiagnoseInstance",
+      "file": "NotebookServiceClient.DiagnoseInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstance",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_async",
+      "title": "DiagnoseInstanceRequestObjectAsync",
+      "description": "Snippet for DiagnoseInstanceAsync",
+      "file": "NotebookServiceClient.DiagnoseInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstanceAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_sync_flattened",
+      "title": "DiagnoseInstance",
+      "description": "Snippet for DiagnoseInstance",
+      "file": "NotebookServiceClient.DiagnoseInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstance",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_async_flattened",
+      "title": "DiagnoseInstanceAsync",
+      "description": "Snippet for DiagnoseInstanceAsync",
+      "file": "NotebookServiceClient.DiagnoseInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstanceAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_sync_flattened_resourceNames",
+      "title": "DiagnoseInstanceResourceNames",
+      "description": "Snippet for DiagnoseInstance",
+      "file": "NotebookServiceClient.DiagnoseInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstance",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_DiagnoseInstance_async_flattened_resourceNames",
+      "title": "DiagnoseInstanceResourceNamesAsync",
+      "description": "Snippet for DiagnoseInstanceAsync",
+      "file": "NotebookServiceClient.DiagnoseInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DiagnoseInstanceAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DiagnoseInstance",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.DiagnoseInstance",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
           "type": "SHORT"
         }
       ]

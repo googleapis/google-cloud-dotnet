@@ -22,6 +22,12 @@
                 "DeleteRuntimeAsync"
               ]
             },
+            "DiagnoseRuntime": {
+              "methods": [
+                "DiagnoseRuntime",
+                "DiagnoseRuntimeAsync"
+              ]
+            },
             "GetRuntime": {
               "methods": [
                 "GetRuntime",
@@ -68,6 +74,18 @@
               "methods": [
                 "SwitchRuntime",
                 "SwitchRuntimeAsync"
+              ]
+            },
+            "UpdateRuntime": {
+              "methods": [
+                "UpdateRuntime",
+                "UpdateRuntimeAsync"
+              ]
+            },
+            "UpgradeRuntime": {
+              "methods": [
+                "UpgradeRuntime",
+                "UpgradeRuntimeAsync"
               ]
             }
           }
@@ -125,6 +143,12 @@
               "methods": [
                 "DeleteSchedule",
                 "DeleteScheduleAsync"
+              ]
+            },
+            "DiagnoseInstance": {
+              "methods": [
+                "DiagnoseInstance",
+                "DiagnoseInstanceAsync"
               ]
             },
             "GetEnvironment": {

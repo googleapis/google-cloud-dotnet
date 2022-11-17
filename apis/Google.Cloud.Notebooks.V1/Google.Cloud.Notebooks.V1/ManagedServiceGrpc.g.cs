@@ -76,6 +76,8 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_UpdateRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_DeleteRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.StartRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_StartRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.StartRuntimeRequest.Parser));
@@ -86,11 +88,15 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_ResetRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_UpgradeRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest> __Marshaller_google_cloud_notebooks_v1_ReportRuntimeEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest> __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_DiagnoseRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.ListRuntimesRequest, global::Google.Cloud.Notebooks.V1.ListRuntimesResponse> __Method_ListRuntimes = new grpc::Method<global::Google.Cloud.Notebooks.V1.ListRuntimesRequest, global::Google.Cloud.Notebooks.V1.ListRuntimesResponse>(
@@ -114,6 +120,14 @@ namespace Google.Cloud.Notebooks.V1 {
         __ServiceName,
         "CreateRuntime",
         __Marshaller_google_cloud_notebooks_v1_CreateRuntimeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest, global::Google.LongRunning.Operation> __Method_UpdateRuntime = new grpc::Method<global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRuntime",
+        __Marshaller_google_cloud_notebooks_v1_UpdateRuntimeRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -157,6 +171,14 @@ namespace Google.Cloud.Notebooks.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest, global::Google.LongRunning.Operation> __Method_UpgradeRuntime = new grpc::Method<global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpgradeRuntime",
+        __Marshaller_google_cloud_notebooks_v1_UpgradeRuntimeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest, global::Google.LongRunning.Operation> __Method_ReportRuntimeEvent = new grpc::Method<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -171,6 +193,14 @@ namespace Google.Cloud.Notebooks.V1 {
         "RefreshRuntimeTokenInternal",
         __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalRequest,
         __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest, global::Google.LongRunning.Operation> __Method_DiagnoseRuntime = new grpc::Method<global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DiagnoseRuntime",
+        __Marshaller_google_cloud_notebooks_v1_DiagnoseRuntimeRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -215,6 +245,18 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRuntime(global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update Notebook Runtime configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRuntime(global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -288,6 +330,18 @@ namespace Google.Cloud.Notebooks.V1 {
       }
 
       /// <summary>
+      /// Upgrades a Managed Notebook Runtime to the latest version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpgradeRuntime(global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Report and process a runtime event.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -308,6 +362,18 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternal(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DiagnoseRuntime(global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -488,6 +554,54 @@ namespace Google.Cloud.Notebooks.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRuntimeAsync(global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRuntime, null, options, request);
+      }
+      /// <summary>
+      /// Update Notebook Runtime configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRuntime(global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRuntime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update Notebook Runtime configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRuntime(global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRuntime, null, options, request);
+      }
+      /// <summary>
+      /// Update Notebook Runtime configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRuntimeAsync(global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRuntimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update Notebook Runtime configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRuntimeAsync(global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRuntime, null, options, request);
       }
       /// <summary>
       /// Deletes a single Runtime.
@@ -762,6 +876,54 @@ namespace Google.Cloud.Notebooks.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ResetRuntime, null, options, request);
       }
       /// <summary>
+      /// Upgrades a Managed Notebook Runtime to the latest version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpgradeRuntime(global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeRuntime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades a Managed Notebook Runtime to the latest version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpgradeRuntime(global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpgradeRuntime, null, options, request);
+      }
+      /// <summary>
+      /// Upgrades a Managed Notebook Runtime to the latest version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeRuntimeAsync(global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeRuntimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades a Managed Notebook Runtime to the latest version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeRuntimeAsync(global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpgradeRuntime, null, options, request);
+      }
+      /// <summary>
       /// Report and process a runtime event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -861,6 +1023,54 @@ namespace Google.Cloud.Notebooks.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RefreshRuntimeTokenInternal, null, options, request);
       }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DiagnoseRuntime(global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiagnoseRuntime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DiagnoseRuntime(global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DiagnoseRuntime, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseRuntimeAsync(global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiagnoseRuntimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseRuntimeAsync(global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DiagnoseRuntime, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ManagedNotebookServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -878,13 +1088,16 @@ namespace Google.Cloud.Notebooks.V1 {
           .AddMethod(__Method_ListRuntimes, serviceImpl.ListRuntimes)
           .AddMethod(__Method_GetRuntime, serviceImpl.GetRuntime)
           .AddMethod(__Method_CreateRuntime, serviceImpl.CreateRuntime)
+          .AddMethod(__Method_UpdateRuntime, serviceImpl.UpdateRuntime)
           .AddMethod(__Method_DeleteRuntime, serviceImpl.DeleteRuntime)
           .AddMethod(__Method_StartRuntime, serviceImpl.StartRuntime)
           .AddMethod(__Method_StopRuntime, serviceImpl.StopRuntime)
           .AddMethod(__Method_SwitchRuntime, serviceImpl.SwitchRuntime)
           .AddMethod(__Method_ResetRuntime, serviceImpl.ResetRuntime)
+          .AddMethod(__Method_UpgradeRuntime, serviceImpl.UpgradeRuntime)
           .AddMethod(__Method_ReportRuntimeEvent, serviceImpl.ReportRuntimeEvent)
-          .AddMethod(__Method_RefreshRuntimeTokenInternal, serviceImpl.RefreshRuntimeTokenInternal).Build();
+          .AddMethod(__Method_RefreshRuntimeTokenInternal, serviceImpl.RefreshRuntimeTokenInternal)
+          .AddMethod(__Method_DiagnoseRuntime, serviceImpl.DiagnoseRuntime).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -897,13 +1110,16 @@ namespace Google.Cloud.Notebooks.V1 {
       serviceBinder.AddMethod(__Method_ListRuntimes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ListRuntimesRequest, global::Google.Cloud.Notebooks.V1.ListRuntimesResponse>(serviceImpl.ListRuntimes));
       serviceBinder.AddMethod(__Method_GetRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.GetRuntimeRequest, global::Google.Cloud.Notebooks.V1.Runtime>(serviceImpl.GetRuntime));
       serviceBinder.AddMethod(__Method_CreateRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRuntime));
+      serviceBinder.AddMethod(__Method_UpdateRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpdateRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRuntime));
       serviceBinder.AddMethod(__Method_DeleteRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRuntime));
       serviceBinder.AddMethod(__Method_StartRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.StartRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.StartRuntime));
       serviceBinder.AddMethod(__Method_StopRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.StopRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.StopRuntime));
       serviceBinder.AddMethod(__Method_SwitchRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.SwitchRuntime));
       serviceBinder.AddMethod(__Method_ResetRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.ResetRuntime));
+      serviceBinder.AddMethod(__Method_UpgradeRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeRuntime));
       serviceBinder.AddMethod(__Method_ReportRuntimeEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest, global::Google.LongRunning.Operation>(serviceImpl.ReportRuntimeEvent));
       serviceBinder.AddMethod(__Method_RefreshRuntimeTokenInternal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>(serviceImpl.RefreshRuntimeTokenInternal));
+      serviceBinder.AddMethod(__Method_DiagnoseRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.DiagnoseRuntime));
     }
 
   }

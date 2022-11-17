@@ -31,6 +31,18 @@ namespace Google.Cloud.Notebooks.V1
         }
     }
 
+    public partial class DiagnoseInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListSchedulesRequest
     {
         /// <summary>
