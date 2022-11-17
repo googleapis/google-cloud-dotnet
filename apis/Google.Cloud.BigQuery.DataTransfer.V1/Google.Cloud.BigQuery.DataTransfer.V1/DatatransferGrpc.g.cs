@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/datatransfer/v1/datatransfer.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -428,10 +428,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Enroll data sources in a user project. This allows users to create transfer
       /// configurations for these data sources. They will also appear in the
-      /// ListDataSources RPC and as such, will appear in the BigQuery UI
-      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-      /// https://cloud.google.com/bigquery/bigquery-web-ui and
-      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// ListDataSources RPC and as such, will appear in the
+      /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+      /// can be found in the public guide for
+      /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+      /// [Data Transfer
+      /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1190,10 +1192,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Enroll data sources in a user project. This allows users to create transfer
       /// configurations for these data sources. They will also appear in the
-      /// ListDataSources RPC and as such, will appear in the BigQuery UI
-      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-      /// https://cloud.google.com/bigquery/bigquery-web-ui and
-      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// ListDataSources RPC and as such, will appear in the
+      /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+      /// can be found in the public guide for
+      /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+      /// [Data Transfer
+      /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1208,10 +1212,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Enroll data sources in a user project. This allows users to create transfer
       /// configurations for these data sources. They will also appear in the
-      /// ListDataSources RPC and as such, will appear in the BigQuery UI
-      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-      /// https://cloud.google.com/bigquery/bigquery-web-ui and
-      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// ListDataSources RPC and as such, will appear in the
+      /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+      /// can be found in the public guide for
+      /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+      /// [Data Transfer
+      /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1224,10 +1230,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Enroll data sources in a user project. This allows users to create transfer
       /// configurations for these data sources. They will also appear in the
-      /// ListDataSources RPC and as such, will appear in the BigQuery UI
-      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-      /// https://cloud.google.com/bigquery/bigquery-web-ui and
-      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// ListDataSources RPC and as such, will appear in the
+      /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+      /// can be found in the public guide for
+      /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+      /// [Data Transfer
+      /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1242,10 +1250,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Enroll data sources in a user project. This allows users to create transfer
       /// configurations for these data sources. They will also appear in the
-      /// ListDataSources RPC and as such, will appear in the BigQuery UI
-      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-      /// https://cloud.google.com/bigquery/bigquery-web-ui and
-      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// ListDataSources RPC and as such, will appear in the
+      /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+      /// can be found in the public guide for
+      /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+      /// [Data Transfer
+      /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

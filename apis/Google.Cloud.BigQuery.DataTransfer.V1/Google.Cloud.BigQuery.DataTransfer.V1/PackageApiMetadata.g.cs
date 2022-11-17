@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -31,6 +32,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             yield return DatatransferReflection.Descriptor;
             yield return TransferReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
         }
     }
 }

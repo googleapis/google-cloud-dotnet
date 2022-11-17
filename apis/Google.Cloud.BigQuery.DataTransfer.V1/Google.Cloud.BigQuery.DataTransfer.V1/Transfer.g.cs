@@ -994,7 +994,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public const int DataSourceIdFieldNumber = 5;
     private string dataSourceId_ = "";
     /// <summary>
-    /// Data source id. Cannot be changed once data transfer is created.
+    /// Data source ID. This cannot be changed once data transfer is created. The
+    /// full list of available data source IDs can be returned through an API call:
+    /// https://cloud.google.com/bigquery-transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
