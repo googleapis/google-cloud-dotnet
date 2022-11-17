@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -62,6 +63,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferLogsSettings = existing.ListTransferLogsSettings;
             CheckValidCredsSettings = existing.CheckValidCredsSettings;
             EnrollDataSourcesSettings = existing.EnrollDataSourcesSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -348,6 +350,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </remarks>
         public gaxgrpc::CallSettings EnrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataTransferServiceSettings"/> object.</returns>
         public DataTransferServiceSettings Clone() => new DataTransferServiceSettings(this);
@@ -492,6 +499,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>The underlying gRPC DataTransferService client</summary>
         public virtual DataTransferService.DataTransferServiceClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Retrieves a supported data source and returns its settings.
         /// </summary>
@@ -633,7 +643,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -659,7 +669,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -685,7 +695,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -711,7 +721,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -737,7 +747,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -763,7 +773,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}` or
-        /// `projects/{project_id}/locations/{location_id}
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1338,7 +1348,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -1365,7 +1375,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -1392,7 +1402,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -1419,7 +1429,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -1446,7 +1456,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -1473,7 +1483,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which transfer configs
         /// should be returned: `projects/{project_id}` or
         /// `projects/{project_id}/locations/{location_id}`
         /// </param>
@@ -2360,10 +2370,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Enroll data sources in a user project. This allows users to create transfer
         /// configurations for these data sources. They will also appear in the
-        /// ListDataSources RPC and as such, will appear in the BigQuery UI
-        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-        /// https://cloud.google.com/bigquery/bigquery-web-ui and
-        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// ListDataSources RPC and as such, will appear in the
+        /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+        /// can be found in the public guide for
+        /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+        /// [Data Transfer
+        /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2374,10 +2386,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Enroll data sources in a user project. This allows users to create transfer
         /// configurations for these data sources. They will also appear in the
-        /// ListDataSources RPC and as such, will appear in the BigQuery UI
-        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-        /// https://cloud.google.com/bigquery/bigquery-web-ui and
-        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// ListDataSources RPC and as such, will appear in the
+        /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+        /// can be found in the public guide for
+        /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+        /// [Data Transfer
+        /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2388,10 +2402,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Enroll data sources in a user project. This allows users to create transfer
         /// configurations for these data sources. They will also appear in the
-        /// ListDataSources RPC and as such, will appear in the BigQuery UI
-        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-        /// https://cloud.google.com/bigquery/bigquery-web-ui and
-        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// ListDataSources RPC and as such, will appear in the
+        /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+        /// can be found in the public guide for
+        /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+        /// [Data Transfer
+        /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2448,6 +2464,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GrpcClient = grpcClient;
             DataTransferServiceSettings effectiveSettings = settings ?? DataTransferServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetDataSource = clientHelper.BuildApiCall<GetDataSourceRequest, DataSource>("GetDataSource", grpcClient.GetDataSourceAsync, grpcClient.GetDataSource, effectiveSettings.GetDataSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSource);
             Modify_GetDataSourceApiCall(ref _callGetDataSource);
@@ -2534,6 +2551,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
         /// <summary>The underlying gRPC DataTransferService client</summary>
         public override DataTransferService.DataTransferServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_GetDataSourceRequest(ref GetDataSourceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2928,10 +2948,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Enroll data sources in a user project. This allows users to create transfer
         /// configurations for these data sources. They will also appear in the
-        /// ListDataSources RPC and as such, will appear in the BigQuery UI
-        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-        /// https://cloud.google.com/bigquery/bigquery-web-ui and
-        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// ListDataSources RPC and as such, will appear in the
+        /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+        /// can be found in the public guide for
+        /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+        /// [Data Transfer
+        /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2945,10 +2967,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Enroll data sources in a user project. This allows users to create transfer
         /// configurations for these data sources. They will also appear in the
-        /// ListDataSources RPC and as such, will appear in the BigQuery UI
-        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
-        /// https://cloud.google.com/bigquery/bigquery-web-ui and
-        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// ListDataSources RPC and as such, will appear in the
+        /// [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents
+        /// can be found in the public guide for
+        /// [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and
+        /// [Data Transfer
+        /// Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3006,5 +3030,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public scg::IEnumerator<TransferMessage> GetEnumerator() => TransferMessages.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class DataTransferService
+    {
+        public partial class DataTransferServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }

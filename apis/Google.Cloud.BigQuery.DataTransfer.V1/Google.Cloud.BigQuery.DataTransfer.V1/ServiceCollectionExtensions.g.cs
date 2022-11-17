@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbdv = Google.Cloud.BigQuery.DataTransfer.V1;
+using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using sys = System;
 using scg = System.Collections.Generic;
