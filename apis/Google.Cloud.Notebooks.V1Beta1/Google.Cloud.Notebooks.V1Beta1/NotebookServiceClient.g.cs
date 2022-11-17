@@ -17,6 +17,8 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -80,6 +82,8 @@ namespace Google.Cloud.Notebooks.V1Beta1
             CreateEnvironmentOperationsSettings = existing.CreateEnvironmentOperationsSettings.Clone();
             DeleteEnvironmentSettings = existing.DeleteEnvironmentSettings;
             DeleteEnvironmentOperationsSettings = existing.DeleteEnvironmentOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -569,6 +573,16 @@ namespace Google.Cloud.Notebooks.V1Beta1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="NotebookServiceSettings"/> object.</returns>
         public NotebookServiceSettings Clone() => new NotebookServiceSettings(this);
@@ -709,6 +723,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>The underlying gRPC NotebookService client</summary>
         public virtual NotebookService.NotebookServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists instances in a given project and location.
@@ -1309,55 +1329,67 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>
         /// Check if a notebook instance is upgradable.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual IsInstanceUpgradeableResponse IsInstanceUpgradeable(IsInstanceUpgradeableRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Check if a notebook instance is upgradable.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<IsInstanceUpgradeableResponse> IsInstanceUpgradeableAsync(IsInstanceUpgradeableRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Check if a notebook instance is upgradable.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<IsInstanceUpgradeableResponse> IsInstanceUpgradeableAsync(IsInstanceUpgradeableRequest request, st::CancellationToken cancellationToken) =>
             IsInstanceUpgradeableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Upgrades a notebook instance to the latest version.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<Instance, OperationMetadata> UpgradeInstance(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Upgrades a notebook instance to the latest version.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceAsync(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Upgrades a notebook instance to the latest version.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceAsync(UpgradeInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpgradeInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1372,6 +1404,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<Instance, OperationMetadata> PollOnceUpgradeInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceOperationsClient, callSettings);
 
@@ -1384,36 +1417,43 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceUpgradeInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceOperationsClient, callSettings);
 
         /// <summary>
         /// Allows notebook instances to
         /// call this endpoint to upgrade themselves. Do not use this method directly.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<Instance, OperationMetadata> UpgradeInstanceInternal(UpgradeInstanceInternalRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Allows notebook instances to
         /// call this endpoint to upgrade themselves. Do not use this method directly.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceInternalAsync(UpgradeInstanceInternalRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Allows notebook instances to
         /// call this endpoint to upgrade themselves. Do not use this method directly.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceInternalAsync(UpgradeInstanceInternalRequest request, st::CancellationToken cancellationToken) =>
             UpgradeInstanceInternalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1429,6 +1469,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<Instance, OperationMetadata> PollOnceUpgradeInstanceInternal(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceInternalOperationsClient, callSettings);
 
@@ -1441,6 +1482,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceUpgradeInstanceInternalAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceInternalOperationsClient, callSettings);
 
@@ -1667,6 +1709,8 @@ namespace Google.Cloud.Notebooks.V1Beta1
             UpgradeInstanceInternalOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceInternalOperationsSettings, logger);
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -1703,13 +1747,19 @@ namespace Google.Cloud.Notebooks.V1Beta1
             _callReportInstanceInfo = clientHelper.BuildApiCall<ReportInstanceInfoRequest, lro::Operation>("ReportInstanceInfo", grpcClient.ReportInstanceInfoAsync, grpcClient.ReportInstanceInfo, effectiveSettings.ReportInstanceInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReportInstanceInfo);
             Modify_ReportInstanceInfoApiCall(ref _callReportInstanceInfo);
+#pragma warning disable CS0612
             _callIsInstanceUpgradeable = clientHelper.BuildApiCall<IsInstanceUpgradeableRequest, IsInstanceUpgradeableResponse>("IsInstanceUpgradeable", grpcClient.IsInstanceUpgradeableAsync, grpcClient.IsInstanceUpgradeable, effectiveSettings.IsInstanceUpgradeableSettings).WithGoogleRequestParam("notebook_instance", request => request.NotebookInstance);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callIsInstanceUpgradeable);
             Modify_IsInstanceUpgradeableApiCall(ref _callIsInstanceUpgradeable);
+#pragma warning disable CS0612
             _callUpgradeInstance = clientHelper.BuildApiCall<UpgradeInstanceRequest, lro::Operation>("UpgradeInstance", grpcClient.UpgradeInstanceAsync, grpcClient.UpgradeInstance, effectiveSettings.UpgradeInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpgradeInstance);
             Modify_UpgradeInstanceApiCall(ref _callUpgradeInstance);
+#pragma warning disable CS0612
             _callUpgradeInstanceInternal = clientHelper.BuildApiCall<UpgradeInstanceInternalRequest, lro::Operation>("UpgradeInstanceInternal", grpcClient.UpgradeInstanceInternalAsync, grpcClient.UpgradeInstanceInternal, effectiveSettings.UpgradeInstanceInternalSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpgradeInstanceInternal);
             Modify_UpgradeInstanceInternalApiCall(ref _callUpgradeInstanceInternal);
             _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>("ListEnvironments", grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1771,6 +1821,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>The underlying gRPC NotebookService client</summary>
         public override NotebookService.NotebookServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2142,10 +2198,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>
         /// Check if a notebook instance is upgradable.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override IsInstanceUpgradeableResponse IsInstanceUpgradeable(IsInstanceUpgradeableRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_IsInstanceUpgradeableRequest(ref request, ref callSettings);
@@ -2154,10 +2212,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>
         /// Check if a notebook instance is upgradable.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<IsInstanceUpgradeableResponse> IsInstanceUpgradeableAsync(IsInstanceUpgradeableRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_IsInstanceUpgradeableRequest(ref request, ref callSettings);
@@ -2169,10 +2229,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>
         /// Upgrades a notebook instance to the latest version.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<Instance, OperationMetadata> UpgradeInstance(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpgradeInstanceRequest(ref request, ref callSettings);
@@ -2181,10 +2243,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         /// <summary>
         /// Upgrades a notebook instance to the latest version.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceAsync(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpgradeInstanceRequest(ref request, ref callSettings);
@@ -2197,10 +2261,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// <summary>
         /// Allows notebook instances to
         /// call this endpoint to upgrade themselves. Do not use this method directly.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<Instance, OperationMetadata> UpgradeInstanceInternal(UpgradeInstanceInternalRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpgradeInstanceInternalRequest(ref request, ref callSettings);
@@ -2210,10 +2276,12 @@ namespace Google.Cloud.Notebooks.V1Beta1
         /// <summary>
         /// Allows notebook instances to
         /// call this endpoint to upgrade themselves. Do not use this method directly.
+        /// Deprecated. Please consider using v1.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<Instance, OperationMetadata>> UpgradeInstanceInternalAsync(UpgradeInstanceInternalRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpgradeInstanceInternalRequest(ref request, ref callSettings);
@@ -2358,6 +2426,32 @@ namespace Google.Cloud.Notebooks.V1Beta1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class NotebookService
+    {
+        public partial class NotebookServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

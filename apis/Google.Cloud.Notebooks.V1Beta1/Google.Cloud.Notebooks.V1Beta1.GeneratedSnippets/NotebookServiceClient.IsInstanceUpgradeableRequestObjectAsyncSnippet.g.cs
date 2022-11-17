@@ -40,7 +40,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
                 NotebookInstance = "",
             };
             // Make the request
+#pragma warning disable CS0612
             IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END notebooks_v1beta1_generated_NotebookService_IsInstanceUpgradeable_async]
