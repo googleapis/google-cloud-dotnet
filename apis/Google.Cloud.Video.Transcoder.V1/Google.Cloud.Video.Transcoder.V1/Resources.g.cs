@@ -126,7 +126,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "bmQYAyABKAsyNi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5P",
             "dmVybGF5LkFuaW1hdGlvbkVuZEgAQhAKDmFuaW1hdGlvbl90eXBlIkAKCEZh",
             "ZGVUeXBlEhkKFUZBREVfVFlQRV9VTlNQRUNJRklFRBAAEgsKB0ZBREVfSU4Q",
-            "ARIMCghGQURFX09VVBACIvQGChNQcmVwcm9jZXNzaW5nQ29uZmlnEkoKBWNv",
+            "ARIMCghGQURFX09VVBACIvMKChNQcmVwcm9jZXNzaW5nQ29uZmlnEkoKBWNv",
             "bG9yGAEgASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEu",
             "UHJlcHJvY2Vzc2luZ0NvbmZpZy5Db2xvchJOCgdkZW5vaXNlGAIgASgLMj0u",
             "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2lu",
@@ -137,68 +137,80 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "BSABKAsyOi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5QcmVw",
             "cm9jZXNzaW5nQ29uZmlnLkNyb3ASRgoDcGFkGAYgASgLMjkuZ29vZ2xlLmNs",
             "b3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Q",
-            "YWQaQQoFQ29sb3ISEgoKc2F0dXJhdGlvbhgBIAEoARIQCghjb250cmFzdBgC",
-            "IAEoARISCgpicmlnaHRuZXNzGAMgASgBGikKB0Rlbm9pc2USEAoIc3RyZW5n",
-            "dGgYASABKAESDAoEdHVuZRgCIAEoCRosCgdEZWJsb2NrEhAKCHN0cmVuZ3Ro",
-            "GAEgASgBEg8KB2VuYWJsZWQYAiABKAgaPAoFQXVkaW8SDAoEbHVmcxgBIAEo",
-            "ARISCgpoaWdoX2Jvb3N0GAIgASgIEhEKCWxvd19ib29zdBgDIAEoCBpcCgRD",
-            "cm9wEhIKCnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEo",
-            "BRITCgtsZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUa",
-            "WwoDUGFkEhIKCnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgC",
-            "IAEoBRITCgtsZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCAB",
-            "KAUilQwKC1ZpZGVvU3RyZWFtEk8KBGgyNjQYASABKAsyPy5nb29nbGUuY2xv",
-            "dWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY0Q29kZWNT",
-            "ZXR0aW5nc0gAEk8KBGgyNjUYAiABKAsyPy5nb29nbGUuY2xvdWQudmlkZW8u",
-            "dHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY1Q29kZWNTZXR0aW5nc0gA",
-            "Ek0KA3ZwORgDIAEoCzI+Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxLlZpZGVvU3RyZWFtLlZwOUNvZGVjU2V0dGluZ3NIABr5AwoRSDI2NENv",
-            "ZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxzGAEgASgFEhUKDWhlaWdodF9w",
-            "aXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgDIAEoAUID4EECEhgKC2JpdHJh",
-            "dGVfYnBzGAQgASgFQgPgQQISFAoMcGl4ZWxfZm9ybWF0GAUgASgJEhkKEXJh",
-            "dGVfY29udHJvbF9tb2RlGAYgASgJEhEKCWNyZl9sZXZlbBgHIAEoBRIWCg5h",
-            "bGxvd19vcGVuX2dvcBgIIAEoCBIZCg9nb3BfZnJhbWVfY291bnQYCSABKAVI",
-            "ABIxCgxnb3BfZHVyYXRpb24YCiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb25IABIXCg9lbmFibGVfdHdvX3Bhc3MYCyABKAgSFQoNdmJ2X3NpemVf",
-            "Yml0cxgMIAEoBRIZChF2YnZfZnVsbG5lc3NfYml0cxgNIAEoBRIVCg1lbnRy",
-            "b3B5X2NvZGVyGA4gASgJEhEKCWJfcHlyYW1pZBgPIAEoCBIVCg1iX2ZyYW1l",
-            "X2NvdW50GBAgASgFEhMKC2FxX3N0cmVuZ3RoGBEgASgBEg8KB3Byb2ZpbGUY",
-            "EiABKAkSDAoEdHVuZRgTIAEoCRIOCgZwcmVzZXQYFCABKAlCCgoIZ29wX21v",
-            "ZGUa4gMKEUgyNjVDb2RlY1NldHRpbmdzEhQKDHdpZHRoX3BpeGVscxgBIAEo",
-            "BRIVCg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcKCmZyYW1lX3JhdGUYAyABKAFC",
-            "A+BBAhIYCgtiaXRyYXRlX2JwcxgEIAEoBUID4EECEhQKDHBpeGVsX2Zvcm1h",
-            "dBgFIAEoCRIZChFyYXRlX2NvbnRyb2xfbW9kZRgGIAEoCRIRCgljcmZfbGV2",
-            "ZWwYByABKAUSFgoOYWxsb3dfb3Blbl9nb3AYCCABKAgSGQoPZ29wX2ZyYW1l",
-            "X2NvdW50GAkgASgFSAASMQoMZ29wX2R1cmF0aW9uGAogASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uSAASFwoPZW5hYmxlX3R3b19wYXNzGAsgASgI",
-            "EhUKDXZidl9zaXplX2JpdHMYDCABKAUSGQoRdmJ2X2Z1bGxuZXNzX2JpdHMY",
-            "DSABKAUSEQoJYl9weXJhbWlkGA4gASgIEhUKDWJfZnJhbWVfY291bnQYDyAB",
-            "KAUSEwoLYXFfc3RyZW5ndGgYECABKAESDwoHcHJvZmlsZRgRIAEoCRIMCgR0",
-            "dW5lGBIgASgJEg4KBnByZXNldBgTIAEoCUIKCghnb3BfbW9kZRqhAgoQVnA5",
-            "Q29kZWNTZXR0aW5ncxIUCgx3aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0",
-            "X3BpeGVscxgCIAEoBRIXCgpmcmFtZV9yYXRlGAMgASgBQgPgQQISGAoLYml0",
-            "cmF0ZV9icHMYBCABKAVCA+BBAhIUCgxwaXhlbF9mb3JtYXQYBSABKAkSGQoR",
-            "cmF0ZV9jb250cm9sX21vZGUYBiABKAkSEQoJY3JmX2xldmVsGAcgASgFEhkK",
-            "D2dvcF9mcmFtZV9jb3VudBgIIAEoBUgAEjEKDGdvcF9kdXJhdGlvbhgJIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEg8KB3Byb2ZpbGUYCiAB",
-            "KAlCCgoIZ29wX21vZGVCEAoOY29kZWNfc2V0dGluZ3Mi8QIKC0F1ZGlvU3Ry",
-            "ZWFtEg0KBWNvZGVjGAEgASgJEhgKC2JpdHJhdGVfYnBzGAIgASgFQgPgQQIS",
-            "FQoNY2hhbm5lbF9jb3VudBgDIAEoBRIWCg5jaGFubmVsX2xheW91dBgEIAMo",
-            "CRJLCgdtYXBwaW5nGAUgAygLMjouZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjEuQXVkaW9TdHJlYW0uQXVkaW9NYXBwaW5nEhkKEXNhbXBsZV9y",
-            "YXRlX2hlcnR6GAYgASgFGqEBCgxBdWRpb01hcHBpbmcSFQoIYXRvbV9rZXkY",
-            "ASABKAlCA+BBAhIWCglpbnB1dF9rZXkYAiABKAlCA+BBAhIYCgtpbnB1dF90",
-            "cmFjaxgDIAEoBUID4EECEhoKDWlucHV0X2NoYW5uZWwYBCABKAVCA+BBAhIb",
-            "Cg5vdXRwdXRfY2hhbm5lbBgFIAEoBUID4EECEg8KB2dhaW5fZGIYBiABKAEi",
-            "vgEKClRleHRTdHJlYW0SDQoFY29kZWMYASABKAkSSQoHbWFwcGluZxgDIAMo",
-            "CzI4Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlRleHRTdHJl",
-            "YW0uVGV4dE1hcHBpbmcaVgoLVGV4dE1hcHBpbmcSFQoIYXRvbV9rZXkYASAB",
-            "KAlCA+BBAhIWCglpbnB1dF9rZXkYAiABKAlCA+BBAhIYCgtpbnB1dF90cmFj",
-            "axgDIAEoBUID4EECImgKD1NlZ21lbnRTZXR0aW5ncxIzChBzZWdtZW50X2R1",
-            "cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiAKE2lu",
-            "ZGl2aWR1YWxfc2VnbWVudHMYAyABKAhCA+BBAkKEAQokY29tLmdvb2dsZS5j",
-            "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxQg5SZXNvdXJjZXNQcm90b1ABWkpn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Zp",
-            "ZGVvL3RyYW5zY29kZXIvdjE7dHJhbnNjb2RlcmIGcHJvdG8z"));
+            "YWQSVgoLZGVpbnRlcmxhY2UYByABKAsyQS5nb29nbGUuY2xvdWQudmlkZW8u",
+            "dHJhbnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkRlaW50ZXJsYWNl",
+            "GkEKBUNvbG9yEhIKCnNhdHVyYXRpb24YASABKAESEAoIY29udHJhc3QYAiAB",
+            "KAESEgoKYnJpZ2h0bmVzcxgDIAEoARopCgdEZW5vaXNlEhAKCHN0cmVuZ3Ro",
+            "GAEgASgBEgwKBHR1bmUYAiABKAkaLAoHRGVibG9jaxIQCghzdHJlbmd0aBgB",
+            "IAEoARIPCgdlbmFibGVkGAIgASgIGjwKBUF1ZGlvEgwKBGx1ZnMYASABKAES",
+            "EgoKaGlnaF9ib29zdBgCIAEoCBIRCglsb3dfYm9vc3QYAyABKAgaXAoEQ3Jv",
+            "cBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUS",
+            "EwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsK",
+            "A1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiAB",
+            "KAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgF",
+            "GqQDCgtEZWludGVybGFjZRJeCgV5YWRpZhgBIAEoCzJNLmdvb2dsZS5jbG91",
+            "ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuRGVp",
+            "bnRlcmxhY2UuWWFkaWZDb25maWdIABJeCgVid2RpZhgCIAEoCzJNLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25m",
+            "aWcuRGVpbnRlcmxhY2UuQndkaWZDb25maWdIABpwCgtZYWRpZkNvbmZpZxIM",
+            "CgRtb2RlGAEgASgJEiMKG2Rpc2FibGVfc3BhdGlhbF9pbnRlcmxhY2luZxgC",
+            "IAEoCBIOCgZwYXJpdHkYAyABKAkSHgoWZGVpbnRlcmxhY2VfYWxsX2ZyYW1l",
+            "cxgEIAEoCBpLCgtCd2RpZkNvbmZpZxIMCgRtb2RlGAEgASgJEg4KBnBhcml0",
+            "eRgCIAEoCRIeChZkZWludGVybGFjZV9hbGxfZnJhbWVzGAMgASgIQhYKFGRl",
+            "aW50ZXJsYWNpbmdfZmlsdGVyIpUMCgtWaWRlb1N0cmVhbRJPCgRoMjY0GAEg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9T",
+            "dHJlYW0uSDI2NENvZGVjU2V0dGluZ3NIABJPCgRoMjY1GAIgASgLMj8uZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9TdHJlYW0uSDI2",
+            "NUNvZGVjU2V0dGluZ3NIABJNCgN2cDkYAyABKAsyPi5nb29nbGUuY2xvdWQu",
+            "dmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5WcDlDb2RlY1NldHRp",
+            "bmdzSAAa+QMKEUgyNjRDb2RlY1NldHRpbmdzEhQKDHdpZHRoX3BpeGVscxgB",
+            "IAEoBRIVCg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcKCmZyYW1lX3JhdGUYAyAB",
+            "KAFCA+BBAhIYCgtiaXRyYXRlX2JwcxgEIAEoBUID4EECEhQKDHBpeGVsX2Zv",
+            "cm1hdBgFIAEoCRIZChFyYXRlX2NvbnRyb2xfbW9kZRgGIAEoCRIRCgljcmZf",
+            "bGV2ZWwYByABKAUSFgoOYWxsb3dfb3Blbl9nb3AYCCABKAgSGQoPZ29wX2Zy",
+            "YW1lX2NvdW50GAkgASgFSAASMQoMZ29wX2R1cmF0aW9uGAogASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uSAASFwoPZW5hYmxlX3R3b19wYXNzGAsg",
+            "ASgIEhUKDXZidl9zaXplX2JpdHMYDCABKAUSGQoRdmJ2X2Z1bGxuZXNzX2Jp",
+            "dHMYDSABKAUSFQoNZW50cm9weV9jb2RlchgOIAEoCRIRCgliX3B5cmFtaWQY",
+            "DyABKAgSFQoNYl9mcmFtZV9jb3VudBgQIAEoBRITCgthcV9zdHJlbmd0aBgR",
+            "IAEoARIPCgdwcm9maWxlGBIgASgJEgwKBHR1bmUYEyABKAkSDgoGcHJlc2V0",
+            "GBQgASgJQgoKCGdvcF9tb2RlGuIDChFIMjY1Q29kZWNTZXR0aW5ncxIUCgx3",
+            "aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0X3BpeGVscxgCIAEoBRIXCgpm",
+            "cmFtZV9yYXRlGAMgASgBQgPgQQISGAoLYml0cmF0ZV9icHMYBCABKAVCA+BB",
+            "AhIUCgxwaXhlbF9mb3JtYXQYBSABKAkSGQoRcmF0ZV9jb250cm9sX21vZGUY",
+            "BiABKAkSEQoJY3JmX2xldmVsGAcgASgFEhYKDmFsbG93X29wZW5fZ29wGAgg",
+            "ASgIEhkKD2dvcF9mcmFtZV9jb3VudBgJIAEoBUgAEjEKDGdvcF9kdXJhdGlv",
+            "bhgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhcKD2VuYWJs",
+            "ZV90d29fcGFzcxgLIAEoCBIVCg12YnZfc2l6ZV9iaXRzGAwgASgFEhkKEXZi",
+            "dl9mdWxsbmVzc19iaXRzGA0gASgFEhEKCWJfcHlyYW1pZBgOIAEoCBIVCg1i",
+            "X2ZyYW1lX2NvdW50GA8gASgFEhMKC2FxX3N0cmVuZ3RoGBAgASgBEg8KB3By",
+            "b2ZpbGUYESABKAkSDAoEdHVuZRgSIAEoCRIOCgZwcmVzZXQYEyABKAlCCgoI",
+            "Z29wX21vZGUaoQIKEFZwOUNvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxz",
+            "GAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgD",
+            "IAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFAoMcGl4ZWxf",
+            "Zm9ybWF0GAUgASgJEhkKEXJhdGVfY29udHJvbF9tb2RlGAYgASgJEhEKCWNy",
+            "Zl9sZXZlbBgHIAEoBRIZCg9nb3BfZnJhbWVfY291bnQYCCABKAVIABIxCgxn",
+            "b3BfZHVyYXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25I",
+            "ABIPCgdwcm9maWxlGAogASgJQgoKCGdvcF9tb2RlQhAKDmNvZGVjX3NldHRp",
+            "bmdzIvECCgtBdWRpb1N0cmVhbRINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRl",
+            "X2JwcxgCIAEoBUID4EECEhUKDWNoYW5uZWxfY291bnQYAyABKAUSFgoOY2hh",
+            "bm5lbF9sYXlvdXQYBCADKAkSSwoHbWFwcGluZxgFIAMoCzI6Lmdvb2dsZS5j",
+            "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkF1ZGlvU3RyZWFtLkF1ZGlvTWFw",
+            "cGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRqhAQoMQXVkaW9NYXBw",
+            "aW5nEhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJ",
+            "QgPgQQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAhIaCg1pbnB1dF9jaGFu",
+            "bmVsGAQgASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBSABKAVCA+BBAhIP",
+            "CgdnYWluX2RiGAYgASgBIr4BCgpUZXh0U3RyZWFtEg0KBWNvZGVjGAEgASgJ",
+            "EkkKB21hcHBpbmcYAyADKAsyOC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
+            "b2Rlci52MS5UZXh0U3RyZWFtLlRleHRNYXBwaW5nGlYKC1RleHRNYXBwaW5n",
+            "EhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJQgPg",
+            "QQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAiJoCg9TZWdtZW50U2V0dGlu",
+            "Z3MSMwoQc2VnbWVudF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIgChNpbmRpdmlkdWFsX3NlZ21lbnRzGAMgASgIQgPgQQJC",
+            "hAEKJGNvbS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MUIOUmVz",
+            "b3VyY2VzUHJvdG9QAVpKZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC92aWRlby90cmFuc2NvZGVyL3YxO3RyYW5zY29kZXJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,12 +232,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationFade), global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationFade.Parser, new[]{ "FadeType", "Xy", "StartTimeOffset", "EndTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationEnd), global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationEnd.Parser, new[]{ "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation), global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation.Parser, new[]{ "AnimationStatic", "AnimationFade", "AnimationEnd" }, new[]{ "AnimationType" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Parser, new[]{ "Color", "Denoise", "Deblock", "Audio", "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Color), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Color.Parser, new[]{ "Saturation", "Contrast", "Brightness" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Parser, new[]{ "Color", "Denoise", "Deblock", "Audio", "Crop", "Pad", "Deinterlace" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Color), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Color.Parser, new[]{ "Saturation", "Contrast", "Brightness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Denoise), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Denoise.Parser, new[]{ "Strength", "Tune" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deblock), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deblock.Parser, new[]{ "Strength", "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs", "HighBoost", "LowBoost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Parser, new[]{ "Yadif", "Bwdif" }, new[]{ "DeinterlacingFilter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig.Parser, new[]{ "Mode", "DisableSpatialInterlacing", "Parity", "DeinterlaceAllFrames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig.Parser, new[]{ "Mode", "Parity", "DeinterlaceAllFrames" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Parser, new[]{ "H264", "H265", "Vp9" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "GopFrameCount", "GopDuration", "Profile" }, new[]{ "GopMode" }, null, null, null)}),
@@ -4144,6 +4158,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// source aspect ratio, set the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field or
     /// the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field, but not both (the API will
     /// automatically calculate the missing field).
+    ///
+    /// For portrait videos that contain horizontal ASR and rotation metadata,
+    /// provide the width, in pixels, per the horizontal ASR. The API calculates
+    /// the height per the horizontal ASR. The API detects any rotation metadata
+    /// and swaps the requested height and width for the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4162,6 +4181,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// source aspect ratio, set the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field or
     /// the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field, but not both (the API will
     /// automatically calculate the missing field).
+    ///
+    /// For portrait videos that contain horizontal ASR and rotation metadata,
+    /// provide the height, in pixels, per the horizontal ASR. The API calculates
+    /// the width per the horizontal ASR. The API detects any rotation metadata
+    /// and swaps the requested height and width for the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6706,6 +6730,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       audio_ = other.audio_ != null ? other.audio_.Clone() : null;
       crop_ = other.crop_ != null ? other.crop_.Clone() : null;
       pad_ = other.pad_ != null ? other.pad_.Clone() : null;
+      deinterlace_ = other.deinterlace_ != null ? other.deinterlace_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6805,6 +6830,21 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "deinterlace" field.</summary>
+    public const int DeinterlaceFieldNumber = 7;
+    private global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace deinterlace_;
+    /// <summary>
+    /// Specify the video deinterlace configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace Deinterlace {
+      get { return deinterlace_; }
+      set {
+        deinterlace_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6826,6 +6866,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (!object.Equals(Audio, other.Audio)) return false;
       if (!object.Equals(Crop, other.Crop)) return false;
       if (!object.Equals(Pad, other.Pad)) return false;
+      if (!object.Equals(Deinterlace, other.Deinterlace)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6839,6 +6880,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (audio_ != null) hash ^= Audio.GetHashCode();
       if (crop_ != null) hash ^= Crop.GetHashCode();
       if (pad_ != null) hash ^= Pad.GetHashCode();
+      if (deinterlace_ != null) hash ^= Deinterlace.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6881,6 +6923,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Pad);
       }
+      if (deinterlace_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Deinterlace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6915,6 +6961,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Pad);
       }
+      if (deinterlace_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Deinterlace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6942,6 +6992,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (pad_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pad);
+      }
+      if (deinterlace_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Deinterlace);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6990,6 +7043,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           Pad = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad();
         }
         Pad.MergeFrom(other.Pad);
+      }
+      if (other.deinterlace_ != null) {
+        if (deinterlace_ == null) {
+          Deinterlace = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace();
+        }
+        Deinterlace.MergeFrom(other.Deinterlace);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7048,6 +7107,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             input.ReadMessage(Pad);
             break;
           }
+          case 58: {
+            if (deinterlace_ == null) {
+              Deinterlace = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace();
+            }
+            input.ReadMessage(Deinterlace);
+            break;
+          }
         }
       }
     #endif
@@ -7103,6 +7169,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               Pad = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad();
             }
             input.ReadMessage(Pad);
+            break;
+          }
+          case 58: {
+            if (deinterlace_ == null) {
+              Deinterlace = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace();
+            }
+            input.ReadMessage(Deinterlace);
             break;
           }
         }
@@ -8801,6 +8874,923 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
       }
 
+      /// <summary>
+      /// Deinterlace configuration for input video.
+      /// </summary>
+      public sealed partial class Deinterlace : pb::IMessage<Deinterlace>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Deinterlace> _parser = new pb::MessageParser<Deinterlace>(() => new Deinterlace());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Deinterlace> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Deinterlace() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Deinterlace(Deinterlace other) : this() {
+          switch (other.DeinterlacingFilterCase) {
+            case DeinterlacingFilterOneofCase.Yadif:
+              Yadif = other.Yadif.Clone();
+              break;
+            case DeinterlacingFilterOneofCase.Bwdif:
+              Bwdif = other.Bwdif.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Deinterlace Clone() {
+          return new Deinterlace(this);
+        }
+
+        /// <summary>Field number for the "yadif" field.</summary>
+        public const int YadifFieldNumber = 1;
+        /// <summary>
+        /// Specifies the Yet Another Deinterlacing Filter Configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig Yadif {
+          get { return deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif ? (global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig) deinterlacingFilter_ : null; }
+          set {
+            deinterlacingFilter_ = value;
+            deinterlacingFilterCase_ = value == null ? DeinterlacingFilterOneofCase.None : DeinterlacingFilterOneofCase.Yadif;
+          }
+        }
+
+        /// <summary>Field number for the "bwdif" field.</summary>
+        public const int BwdifFieldNumber = 2;
+        /// <summary>
+        /// Specifies the Bob Weaver Deinterlacing Filter Configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig Bwdif {
+          get { return deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif ? (global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig) deinterlacingFilter_ : null; }
+          set {
+            deinterlacingFilter_ = value;
+            deinterlacingFilterCase_ = value == null ? DeinterlacingFilterOneofCase.None : DeinterlacingFilterOneofCase.Bwdif;
+          }
+        }
+
+        private object deinterlacingFilter_;
+        /// <summary>Enum of possible cases for the "deinterlacing_filter" oneof.</summary>
+        public enum DeinterlacingFilterOneofCase {
+          None = 0,
+          Yadif = 1,
+          Bwdif = 2,
+        }
+        private DeinterlacingFilterOneofCase deinterlacingFilterCase_ = DeinterlacingFilterOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeinterlacingFilterOneofCase DeinterlacingFilterCase {
+          get { return deinterlacingFilterCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDeinterlacingFilter() {
+          deinterlacingFilterCase_ = DeinterlacingFilterOneofCase.None;
+          deinterlacingFilter_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Deinterlace);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Deinterlace other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Yadif, other.Yadif)) return false;
+          if (!object.Equals(Bwdif, other.Bwdif)) return false;
+          if (DeinterlacingFilterCase != other.DeinterlacingFilterCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) hash ^= Yadif.GetHashCode();
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) hash ^= Bwdif.GetHashCode();
+          hash ^= (int) deinterlacingFilterCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Yadif);
+          }
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Bwdif);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Yadif);
+          }
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Bwdif);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Yadif);
+          }
+          if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Bwdif);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Deinterlace other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.DeinterlacingFilterCase) {
+            case DeinterlacingFilterOneofCase.Yadif:
+              if (Yadif == null) {
+                Yadif = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig();
+              }
+              Yadif.MergeFrom(other.Yadif);
+              break;
+            case DeinterlacingFilterOneofCase.Bwdif:
+              if (Bwdif == null) {
+                Bwdif = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig();
+              }
+              Bwdif.MergeFrom(other.Bwdif);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig subBuilder = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig();
+                if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) {
+                  subBuilder.MergeFrom(Yadif);
+                }
+                input.ReadMessage(subBuilder);
+                Yadif = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig subBuilder = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig();
+                if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) {
+                  subBuilder.MergeFrom(Bwdif);
+                }
+                input.ReadMessage(subBuilder);
+                Bwdif = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig subBuilder = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig();
+                if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Yadif) {
+                  subBuilder.MergeFrom(Yadif);
+                }
+                input.ReadMessage(subBuilder);
+                Yadif = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig subBuilder = new global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig();
+                if (deinterlacingFilterCase_ == DeinterlacingFilterOneofCase.Bwdif) {
+                  subBuilder.MergeFrom(Bwdif);
+                }
+                input.ReadMessage(subBuilder);
+                Bwdif = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Deinterlace message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Yet Another Deinterlacing Filter Configuration.
+          /// </summary>
+          public sealed partial class YadifConfig : pb::IMessage<YadifConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<YadifConfig> _parser = new pb::MessageParser<YadifConfig>(() => new YadifConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<YadifConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YadifConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YadifConfig(YadifConfig other) : this() {
+              mode_ = other.mode_;
+              disableSpatialInterlacing_ = other.disableSpatialInterlacing_;
+              parity_ = other.parity_;
+              deinterlaceAllFrames_ = other.deinterlaceAllFrames_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YadifConfig Clone() {
+              return new YadifConfig(this);
+            }
+
+            /// <summary>Field number for the "mode" field.</summary>
+            public const int ModeFieldNumber = 1;
+            private string mode_ = "";
+            /// <summary>
+            /// Specifies the deinterlacing mode to adopt.
+            /// The default is `send_frame`.
+            /// Supported values:
+            ///
+            /// - `send_frame`: Output one frame for each frame
+            /// - `send_field`: Output one frame for each field
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Mode {
+              get { return mode_; }
+              set {
+                mode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "disable_spatial_interlacing" field.</summary>
+            public const int DisableSpatialInterlacingFieldNumber = 2;
+            private bool disableSpatialInterlacing_;
+            /// <summary>
+            /// Disable spacial interlacing.
+            /// The default is `false`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisableSpatialInterlacing {
+              get { return disableSpatialInterlacing_; }
+              set {
+                disableSpatialInterlacing_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "parity" field.</summary>
+            public const int ParityFieldNumber = 3;
+            private string parity_ = "";
+            /// <summary>
+            /// The picture field parity assumed for the input interlaced video.
+            /// The default is `auto`.
+            /// Supported values:
+            ///
+            /// - `tff`: Assume the top field is first
+            /// - `bff`: Assume the bottom field is first
+            /// - `auto`: Enable automatic detection of field parity
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Parity {
+              get { return parity_; }
+              set {
+                parity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "deinterlace_all_frames" field.</summary>
+            public const int DeinterlaceAllFramesFieldNumber = 4;
+            private bool deinterlaceAllFrames_;
+            /// <summary>
+            /// Deinterlace all frames rather than just the frames identified as
+            /// interlaced. The default is `false`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DeinterlaceAllFrames {
+              get { return deinterlaceAllFrames_; }
+              set {
+                deinterlaceAllFrames_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as YadifConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(YadifConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Mode != other.Mode) return false;
+              if (DisableSpatialInterlacing != other.DisableSpatialInterlacing) return false;
+              if (Parity != other.Parity) return false;
+              if (DeinterlaceAllFrames != other.DeinterlaceAllFrames) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Mode.Length != 0) hash ^= Mode.GetHashCode();
+              if (DisableSpatialInterlacing != false) hash ^= DisableSpatialInterlacing.GetHashCode();
+              if (Parity.Length != 0) hash ^= Parity.GetHashCode();
+              if (DeinterlaceAllFrames != false) hash ^= DeinterlaceAllFrames.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Mode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Mode);
+              }
+              if (DisableSpatialInterlacing != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(DisableSpatialInterlacing);
+              }
+              if (Parity.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                output.WriteRawTag(32);
+                output.WriteBool(DeinterlaceAllFrames);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Mode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Mode);
+              }
+              if (DisableSpatialInterlacing != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(DisableSpatialInterlacing);
+              }
+              if (Parity.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                output.WriteRawTag(32);
+                output.WriteBool(DeinterlaceAllFrames);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Mode.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Mode);
+              }
+              if (DisableSpatialInterlacing != false) {
+                size += 1 + 1;
+              }
+              if (Parity.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(YadifConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Mode.Length != 0) {
+                Mode = other.Mode;
+              }
+              if (other.DisableSpatialInterlacing != false) {
+                DisableSpatialInterlacing = other.DisableSpatialInterlacing;
+              }
+              if (other.Parity.Length != 0) {
+                Parity = other.Parity;
+              }
+              if (other.DeinterlaceAllFrames != false) {
+                DeinterlaceAllFrames = other.DeinterlaceAllFrames;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Mode = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    DisableSpatialInterlacing = input.ReadBool();
+                    break;
+                  }
+                  case 26: {
+                    Parity = input.ReadString();
+                    break;
+                  }
+                  case 32: {
+                    DeinterlaceAllFrames = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Mode = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    DisableSpatialInterlacing = input.ReadBool();
+                    break;
+                  }
+                  case 26: {
+                    Parity = input.ReadString();
+                    break;
+                  }
+                  case 32: {
+                    DeinterlaceAllFrames = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Bob Weaver Deinterlacing Filter Configuration.
+          /// </summary>
+          public sealed partial class BwdifConfig : pb::IMessage<BwdifConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BwdifConfig> _parser = new pb::MessageParser<BwdifConfig>(() => new BwdifConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BwdifConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BwdifConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BwdifConfig(BwdifConfig other) : this() {
+              mode_ = other.mode_;
+              parity_ = other.parity_;
+              deinterlaceAllFrames_ = other.deinterlaceAllFrames_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BwdifConfig Clone() {
+              return new BwdifConfig(this);
+            }
+
+            /// <summary>Field number for the "mode" field.</summary>
+            public const int ModeFieldNumber = 1;
+            private string mode_ = "";
+            /// <summary>
+            /// Specifies the deinterlacing mode to adopt.
+            /// The default is `send_frame`.
+            /// Supported values:
+            ///
+            /// - `send_frame`: Output one frame for each frame
+            /// - `send_field`: Output one frame for each field
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Mode {
+              get { return mode_; }
+              set {
+                mode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "parity" field.</summary>
+            public const int ParityFieldNumber = 2;
+            private string parity_ = "";
+            /// <summary>
+            /// The picture field parity assumed for the input interlaced video.
+            /// The default is `auto`.
+            /// Supported values:
+            ///
+            /// - `tff`: Assume the top field is first
+            /// - `bff`: Assume the bottom field is first
+            /// - `auto`: Enable automatic detection of field parity
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Parity {
+              get { return parity_; }
+              set {
+                parity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "deinterlace_all_frames" field.</summary>
+            public const int DeinterlaceAllFramesFieldNumber = 3;
+            private bool deinterlaceAllFrames_;
+            /// <summary>
+            /// Deinterlace all frames rather than just the frames identified as
+            /// interlaced. The default is `false`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DeinterlaceAllFrames {
+              get { return deinterlaceAllFrames_; }
+              set {
+                deinterlaceAllFrames_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BwdifConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BwdifConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Mode != other.Mode) return false;
+              if (Parity != other.Parity) return false;
+              if (DeinterlaceAllFrames != other.DeinterlaceAllFrames) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Mode.Length != 0) hash ^= Mode.GetHashCode();
+              if (Parity.Length != 0) hash ^= Parity.GetHashCode();
+              if (DeinterlaceAllFrames != false) hash ^= DeinterlaceAllFrames.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Mode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Mode);
+              }
+              if (Parity.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(DeinterlaceAllFrames);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Mode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Mode);
+              }
+              if (Parity.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(DeinterlaceAllFrames);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Mode.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Mode);
+              }
+              if (Parity.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Parity);
+              }
+              if (DeinterlaceAllFrames != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BwdifConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Mode.Length != 0) {
+                Mode = other.Mode;
+              }
+              if (other.Parity.Length != 0) {
+                Parity = other.Parity;
+              }
+              if (other.DeinterlaceAllFrames != false) {
+                DeinterlaceAllFrames = other.DeinterlaceAllFrames;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Mode = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Parity = input.ReadString();
+                    break;
+                  }
+                  case 24: {
+                    DeinterlaceAllFrames = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Mode = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Parity = input.ReadString();
+                    break;
+                  }
+                  case 24: {
+                    DeinterlaceAllFrames = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
@@ -9239,6 +10229,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The width of the video in pixels. Must be an even integer.
         /// When not specified, the width is adjusted to match the specified height
         /// and input aspect ratio. If both are omitted, the input width is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the width, in pixels, per the horizontal ASR. The API calculates
+        /// the height per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9256,6 +10251,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The height of the video in pixels. Must be an even integer.
         /// When not specified, the height is adjusted to match the specified width
         /// and input aspect ratio. If both are omitted, the input height is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the height, in pixels, per the horizontal ASR. The API calculates
+        /// the width per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10308,6 +11308,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The width of the video in pixels. Must be an even integer.
         /// When not specified, the width is adjusted to match the specified height
         /// and input aspect ratio. If both are omitted, the input width is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the width, in pixels, per the horizontal ASR. The API calculates
+        /// the height per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10325,6 +11330,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The height of the video in pixels. Must be an even integer.
         /// When not specified, the height is adjusted to match the specified width
         /// and input aspect ratio. If both are omitted, the input height is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the height, in pixels, per the horizontal ASR. The API calculates
+        /// the width per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11339,6 +12349,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The width of the video in pixels. Must be an even integer.
         /// When not specified, the width is adjusted to match the specified height
         /// and input aspect ratio. If both are omitted, the input width is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the width, in pixels, per the horizontal ASR. The API calculates
+        /// the height per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11356,6 +12371,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The height of the video in pixels. Must be an even integer.
         /// When not specified, the height is adjusted to match the specified width
         /// and input aspect ratio. If both are omitted, the input height is used.
+        ///
+        /// For portrait videos that contain horizontal ASR and rotation metadata,
+        /// provide the height, in pixels, per the horizontal ASR. The API calculates
+        /// the width per the horizontal ASR. The API detects any rotation metadata
+        /// and swaps the requested height and width for the output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
