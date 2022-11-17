@@ -587,6 +587,136 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateRuntime</summary>
+        public void UpdateRuntimeRequestObject()
+        {
+            // Snippet: UpdateRuntime(UpdateRuntimeRequest, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateRuntimeRequest request = new UpdateRuntimeRequest
+            {
+                Runtime = new Runtime(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.UpdateRuntime(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceUpdateRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRuntimeAsync</summary>
+        public async Task UpdateRuntimeRequestObjectAsync()
+        {
+            // Snippet: UpdateRuntimeAsync(UpdateRuntimeRequest, CallSettings)
+            // Additional: UpdateRuntimeAsync(UpdateRuntimeRequest, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRuntimeRequest request = new UpdateRuntimeRequest
+            {
+                Runtime = new Runtime(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.UpdateRuntimeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceUpdateRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRuntime</summary>
+        public void UpdateRuntime()
+        {
+            // Snippet: UpdateRuntime(Runtime, FieldMask, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            Runtime runtime = new Runtime();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.UpdateRuntime(runtime, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceUpdateRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRuntimeAsync</summary>
+        public async Task UpdateRuntimeAsync()
+        {
+            // Snippet: UpdateRuntimeAsync(Runtime, FieldMask, CallSettings)
+            // Additional: UpdateRuntimeAsync(Runtime, FieldMask, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Runtime runtime = new Runtime();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.UpdateRuntimeAsync(runtime, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceUpdateRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteRuntime</summary>
         public void DeleteRuntimeRequestObject()
         {
@@ -1280,6 +1410,132 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpgradeRuntime</summary>
+        public void UpgradeRuntimeRequestObject()
+        {
+            // Snippet: UpgradeRuntime(UpgradeRuntimeRequest, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            UpgradeRuntimeRequest request = new UpgradeRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.UpgradeRuntime(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceUpgradeRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeRuntimeAsync</summary>
+        public async Task UpgradeRuntimeRequestObjectAsync()
+        {
+            // Snippet: UpgradeRuntimeAsync(UpgradeRuntimeRequest, CallSettings)
+            // Additional: UpgradeRuntimeAsync(UpgradeRuntimeRequest, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpgradeRuntimeRequest request = new UpgradeRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.UpgradeRuntimeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceUpgradeRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeRuntime</summary>
+        public void UpgradeRuntime()
+        {
+            // Snippet: UpgradeRuntime(string, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.UpgradeRuntime(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceUpgradeRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeRuntimeAsync</summary>
+        public async Task UpgradeRuntimeAsync()
+        {
+            // Snippet: UpgradeRuntimeAsync(string, CallSettings)
+            // Additional: UpgradeRuntimeAsync(string, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.UpgradeRuntimeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceUpgradeRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ReportRuntimeEvent</summary>
         public void ReportRuntimeEventRequestObject()
         {
@@ -1557,6 +1813,195 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             string vmId = "";
             // Make the request
             RefreshRuntimeTokenInternalResponse response = await managedNotebookServiceClient.RefreshRuntimeTokenInternalAsync(name, vmId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntime</summary>
+        public void DiagnoseRuntimeRequestObject()
+        {
+            // Snippet: DiagnoseRuntime(DiagnoseRuntimeRequest, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            DiagnoseRuntimeRequest request = new DiagnoseRuntimeRequest
+            {
+                RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                DiagnosticConfig = new DiagnosticConfig(),
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.DiagnoseRuntime(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceDiagnoseRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntimeAsync</summary>
+        public async Task DiagnoseRuntimeRequestObjectAsync()
+        {
+            // Snippet: DiagnoseRuntimeAsync(DiagnoseRuntimeRequest, CallSettings)
+            // Additional: DiagnoseRuntimeAsync(DiagnoseRuntimeRequest, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DiagnoseRuntimeRequest request = new DiagnoseRuntimeRequest
+            {
+                RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                DiagnosticConfig = new DiagnosticConfig(),
+            };
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.DiagnoseRuntimeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceDiagnoseRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntime</summary>
+        public void DiagnoseRuntime()
+        {
+            // Snippet: DiagnoseRuntime(string, DiagnosticConfig, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/runtimes/[RUNTIME]";
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.DiagnoseRuntime(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceDiagnoseRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntimeAsync</summary>
+        public async Task DiagnoseRuntimeAsync()
+        {
+            // Snippet: DiagnoseRuntimeAsync(string, DiagnosticConfig, CallSettings)
+            // Additional: DiagnoseRuntimeAsync(string, DiagnosticConfig, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/runtimes/[RUNTIME]";
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.DiagnoseRuntimeAsync(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceDiagnoseRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntime</summary>
+        public void DiagnoseRuntimeResourceNames()
+        {
+            // Snippet: DiagnoseRuntime(RuntimeName, DiagnosticConfig, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            RuntimeName name = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]");
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.DiagnoseRuntime(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = managedNotebookServiceClient.PollOnceDiagnoseRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseRuntimeAsync</summary>
+        public async Task DiagnoseRuntimeResourceNamesAsync()
+        {
+            // Snippet: DiagnoseRuntimeAsync(RuntimeName, DiagnosticConfig, CallSettings)
+            // Additional: DiagnoseRuntimeAsync(RuntimeName, DiagnosticConfig, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RuntimeName name = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]");
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.DiagnoseRuntimeAsync(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Runtime, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Runtime result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Runtime, OperationMetadata> retrievedResponse = await managedNotebookServiceClient.PollOnceDiagnoseRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Runtime retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

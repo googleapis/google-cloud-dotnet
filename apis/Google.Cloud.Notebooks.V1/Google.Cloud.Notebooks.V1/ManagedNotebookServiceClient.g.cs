@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -54,6 +56,8 @@ namespace Google.Cloud.Notebooks.V1
             GetRuntimeSettings = existing.GetRuntimeSettings;
             CreateRuntimeSettings = existing.CreateRuntimeSettings;
             CreateRuntimeOperationsSettings = existing.CreateRuntimeOperationsSettings.Clone();
+            UpdateRuntimeSettings = existing.UpdateRuntimeSettings;
+            UpdateRuntimeOperationsSettings = existing.UpdateRuntimeOperationsSettings.Clone();
             DeleteRuntimeSettings = existing.DeleteRuntimeSettings;
             DeleteRuntimeOperationsSettings = existing.DeleteRuntimeOperationsSettings.Clone();
             StartRuntimeSettings = existing.StartRuntimeSettings;
@@ -64,9 +68,15 @@ namespace Google.Cloud.Notebooks.V1
             SwitchRuntimeOperationsSettings = existing.SwitchRuntimeOperationsSettings.Clone();
             ResetRuntimeSettings = existing.ResetRuntimeSettings;
             ResetRuntimeOperationsSettings = existing.ResetRuntimeOperationsSettings.Clone();
+            UpgradeRuntimeSettings = existing.UpgradeRuntimeSettings;
+            UpgradeRuntimeOperationsSettings = existing.UpgradeRuntimeOperationsSettings.Clone();
             ReportRuntimeEventSettings = existing.ReportRuntimeEventSettings;
             ReportRuntimeEventOperationsSettings = existing.ReportRuntimeEventOperationsSettings.Clone();
             RefreshRuntimeTokenInternalSettings = existing.RefreshRuntimeTokenInternalSettings;
+            DiagnoseRuntimeSettings = existing.DiagnoseRuntimeSettings;
+            DiagnoseRuntimeOperationsSettings = existing.DiagnoseRuntimeOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -123,6 +133,37 @@ namespace Google.Cloud.Notebooks.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedNotebookServiceClient.UpdateRuntime</c> and <c>ManagedNotebookServiceClient.UpdateRuntimeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRuntimeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ManagedNotebookServiceClient.UpdateRuntime</c> and
+        /// <c>ManagedNotebookServiceClient.UpdateRuntimeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -287,6 +328,43 @@ namespace Google.Cloud.Notebooks.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedNotebookServiceClient.UpgradeRuntime</c> and <c>ManagedNotebookServiceClient.UpgradeRuntimeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpgradeRuntimeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ManagedNotebookServiceClient.UpgradeRuntime</c> and
+        /// <c>ManagedNotebookServiceClient.UpgradeRuntimeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpgradeRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ManagedNotebookServiceClient.ReportRuntimeEvent</c> and
         /// <c>ManagedNotebookServiceClient.ReportRuntimeEventAsync</c>.
         /// </summary>
@@ -334,6 +412,47 @@ namespace Google.Cloud.Notebooks.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RefreshRuntimeTokenInternalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedNotebookServiceClient.DiagnoseRuntime</c> and <c>ManagedNotebookServiceClient.DiagnoseRuntimeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DiagnoseRuntimeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ManagedNotebookServiceClient.DiagnoseRuntime</c> and
+        /// <c>ManagedNotebookServiceClient.DiagnoseRuntimeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DiagnoseRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ManagedNotebookServiceSettings"/> object.</returns>
@@ -478,6 +597,12 @@ namespace Google.Cloud.Notebooks.V1
 
         /// <summary>The underlying gRPC ManagedNotebookService client</summary>
         public virtual ManagedNotebookService.ManagedNotebookServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -897,6 +1022,175 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> CreateRuntimeAsync(RuntimeName parent, string runtimeId, Runtime runtime, st::CancellationToken cancellationToken) =>
             CreateRuntimeAsync(parent, runtimeId, runtime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> UpdateRuntime(UpdateRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpdateRuntimeAsync(UpdateRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpdateRuntimeAsync(UpdateRuntimeRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRuntimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRuntime</c>.</summary>
+        public virtual lro::OperationsClient UpdateRuntimeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> PollOnceUpdateRuntime(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> PollOnceUpdateRuntimeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="runtime">
+        /// Required. The Runtime to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Specifies the path, relative to `Runtime`, of
+        /// the field to update. For example, to change the software configuration
+        /// kernels, the `update_mask` parameter would be
+        /// specified as `software_config.kernels`,
+        /// and the `PATCH` request body would specify the new value, as follows:
+        /// 
+        /// {
+        /// "software_config":{
+        /// "kernels": [{
+        /// 'repository':
+        /// 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag':
+        /// 'latest' }],
+        /// }
+        /// }
+        /// 
+        /// 
+        /// Currently, only the following fields can be updated:
+        /// - software_config.kernels
+        /// - software_config.post_startup_script
+        /// - software_config.custom_gpu_driver_path
+        /// - software_config.idle_shutdown
+        /// - software_config.idle_shutdown_timeout
+        /// - software_config.disable_terminal
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> UpdateRuntime(Runtime runtime, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRuntime(new UpdateRuntimeRequest
+            {
+                Runtime = gax::GaxPreconditions.CheckNotNull(runtime, nameof(runtime)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="runtime">
+        /// Required. The Runtime to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Specifies the path, relative to `Runtime`, of
+        /// the field to update. For example, to change the software configuration
+        /// kernels, the `update_mask` parameter would be
+        /// specified as `software_config.kernels`,
+        /// and the `PATCH` request body would specify the new value, as follows:
+        /// 
+        /// {
+        /// "software_config":{
+        /// "kernels": [{
+        /// 'repository':
+        /// 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag':
+        /// 'latest' }],
+        /// }
+        /// }
+        /// 
+        /// 
+        /// Currently, only the following fields can be updated:
+        /// - software_config.kernels
+        /// - software_config.post_startup_script
+        /// - software_config.custom_gpu_driver_path
+        /// - software_config.idle_shutdown
+        /// - software_config.idle_shutdown_timeout
+        /// - software_config.disable_terminal
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpdateRuntimeAsync(Runtime runtime, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRuntimeAsync(new UpdateRuntimeRequest
+            {
+                Runtime = gax::GaxPreconditions.CheckNotNull(runtime, nameof(runtime)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="runtime">
+        /// Required. The Runtime to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Specifies the path, relative to `Runtime`, of
+        /// the field to update. For example, to change the software configuration
+        /// kernels, the `update_mask` parameter would be
+        /// specified as `software_config.kernels`,
+        /// and the `PATCH` request body would specify the new value, as follows:
+        /// 
+        /// {
+        /// "software_config":{
+        /// "kernels": [{
+        /// 'repository':
+        /// 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag':
+        /// 'latest' }],
+        /// }
+        /// }
+        /// 
+        /// 
+        /// Currently, only the following fields can be updated:
+        /// - software_config.kernels
+        /// - software_config.post_startup_script
+        /// - software_config.custom_gpu_driver_path
+        /// - software_config.idle_shutdown
+        /// - software_config.idle_shutdown_timeout
+        /// - software_config.disable_terminal
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpdateRuntimeAsync(Runtime runtime, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRuntimeAsync(runtime, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single Runtime.
@@ -1464,6 +1758,101 @@ namespace Google.Cloud.Notebooks.V1
             ResetRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> UpgradeRuntime(UpgradeRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpgradeRuntimeAsync(UpgradeRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpgradeRuntimeAsync(UpgradeRuntimeRequest request, st::CancellationToken cancellationToken) =>
+            UpgradeRuntimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpgradeRuntime</c>.</summary>
+        public virtual lro::OperationsClient UpgradeRuntimeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpgradeRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> PollOnceUpgradeRuntime(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpgradeRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> PollOnceUpgradeRuntimeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> UpgradeRuntime(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeRuntime(new UpgradeRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpgradeRuntimeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeRuntimeAsync(new UpgradeRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> UpgradeRuntimeAsync(string name, st::CancellationToken cancellationToken) =>
+            UpgradeRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Report and process a runtime event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1748,6 +2137,165 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RuntimeName name, string vmId, st::CancellationToken cancellationToken) =>
             RefreshRuntimeTokenInternalAsync(name, vmId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> DiagnoseRuntime(DiagnoseRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(DiagnoseRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(DiagnoseRuntimeRequest request, st::CancellationToken cancellationToken) =>
+            DiagnoseRuntimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DiagnoseRuntime</c>.</summary>
+        public virtual lro::OperationsClient DiagnoseRuntimeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DiagnoseRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> PollOnceDiagnoseRuntime(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DiagnoseRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> PollOnceDiagnoseRuntimeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Runtime, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> DiagnoseRuntime(string name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseRuntime(new DiagnoseRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(string name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseRuntimeAsync(new DiagnoseRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(string name, DiagnosticConfig diagnosticConfig, st::CancellationToken cancellationToken) =>
+            DiagnoseRuntimeAsync(name, diagnosticConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Runtime, OperationMetadata> DiagnoseRuntime(RuntimeName name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseRuntime(new DiagnoseRuntimeRequest
+            {
+                RuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(RuntimeName name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseRuntimeAsync(new DiagnoseRuntimeRequest
+            {
+                RuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(RuntimeName name, DiagnosticConfig diagnosticConfig, st::CancellationToken cancellationToken) =>
+            DiagnoseRuntimeAsync(name, diagnosticConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ManagedNotebookService client wrapper implementation, for convenient use.</summary>
@@ -1762,6 +2310,8 @@ namespace Google.Cloud.Notebooks.V1
 
         private readonly gaxgrpc::ApiCall<CreateRuntimeRequest, lro::Operation> _callCreateRuntime;
 
+        private readonly gaxgrpc::ApiCall<UpdateRuntimeRequest, lro::Operation> _callUpdateRuntime;
+
         private readonly gaxgrpc::ApiCall<DeleteRuntimeRequest, lro::Operation> _callDeleteRuntime;
 
         private readonly gaxgrpc::ApiCall<StartRuntimeRequest, lro::Operation> _callStartRuntime;
@@ -1772,9 +2322,13 @@ namespace Google.Cloud.Notebooks.V1
 
         private readonly gaxgrpc::ApiCall<ResetRuntimeRequest, lro::Operation> _callResetRuntime;
 
+        private readonly gaxgrpc::ApiCall<UpgradeRuntimeRequest, lro::Operation> _callUpgradeRuntime;
+
         private readonly gaxgrpc::ApiCall<ReportRuntimeEventRequest, lro::Operation> _callReportRuntimeEvent;
 
         private readonly gaxgrpc::ApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse> _callRefreshRuntimeTokenInternal;
+
+        private readonly gaxgrpc::ApiCall<DiagnoseRuntimeRequest, lro::Operation> _callDiagnoseRuntime;
 
         /// <summary>
         /// Constructs a client wrapper for the ManagedNotebookService service, with the specified gRPC client and
@@ -1791,12 +2345,17 @@ namespace Google.Cloud.Notebooks.V1
             ManagedNotebookServiceSettings effectiveSettings = settings ?? ManagedNotebookServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRuntimeOperationsSettings, logger);
+            UpdateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRuntimeOperationsSettings, logger);
             DeleteRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRuntimeOperationsSettings, logger);
             StartRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartRuntimeOperationsSettings, logger);
             StopRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopRuntimeOperationsSettings, logger);
             SwitchRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchRuntimeOperationsSettings, logger);
             ResetRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetRuntimeOperationsSettings, logger);
+            UpgradeRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeRuntimeOperationsSettings, logger);
             ReportRuntimeEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportRuntimeEventOperationsSettings, logger);
+            DiagnoseRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DiagnoseRuntimeOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListRuntimes = clientHelper.BuildApiCall<ListRuntimesRequest, ListRuntimesResponse>("ListRuntimes", grpcClient.ListRuntimesAsync, grpcClient.ListRuntimes, effectiveSettings.ListRuntimesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRuntimes);
             Modify_ListRuntimesApiCall(ref _callListRuntimes);
@@ -1806,6 +2365,9 @@ namespace Google.Cloud.Notebooks.V1
             _callCreateRuntime = clientHelper.BuildApiCall<CreateRuntimeRequest, lro::Operation>("CreateRuntime", grpcClient.CreateRuntimeAsync, grpcClient.CreateRuntime, effectiveSettings.CreateRuntimeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRuntime);
             Modify_CreateRuntimeApiCall(ref _callCreateRuntime);
+            _callUpdateRuntime = clientHelper.BuildApiCall<UpdateRuntimeRequest, lro::Operation>("UpdateRuntime", grpcClient.UpdateRuntimeAsync, grpcClient.UpdateRuntime, effectiveSettings.UpdateRuntimeSettings).WithGoogleRequestParam("runtime.name", request => request.Runtime?.Name);
+            Modify_ApiCall(ref _callUpdateRuntime);
+            Modify_UpdateRuntimeApiCall(ref _callUpdateRuntime);
             _callDeleteRuntime = clientHelper.BuildApiCall<DeleteRuntimeRequest, lro::Operation>("DeleteRuntime", grpcClient.DeleteRuntimeAsync, grpcClient.DeleteRuntime, effectiveSettings.DeleteRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRuntime);
             Modify_DeleteRuntimeApiCall(ref _callDeleteRuntime);
@@ -1821,12 +2383,18 @@ namespace Google.Cloud.Notebooks.V1
             _callResetRuntime = clientHelper.BuildApiCall<ResetRuntimeRequest, lro::Operation>("ResetRuntime", grpcClient.ResetRuntimeAsync, grpcClient.ResetRuntime, effectiveSettings.ResetRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetRuntime);
             Modify_ResetRuntimeApiCall(ref _callResetRuntime);
+            _callUpgradeRuntime = clientHelper.BuildApiCall<UpgradeRuntimeRequest, lro::Operation>("UpgradeRuntime", grpcClient.UpgradeRuntimeAsync, grpcClient.UpgradeRuntime, effectiveSettings.UpgradeRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpgradeRuntime);
+            Modify_UpgradeRuntimeApiCall(ref _callUpgradeRuntime);
             _callReportRuntimeEvent = clientHelper.BuildApiCall<ReportRuntimeEventRequest, lro::Operation>("ReportRuntimeEvent", grpcClient.ReportRuntimeEventAsync, grpcClient.ReportRuntimeEvent, effectiveSettings.ReportRuntimeEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReportRuntimeEvent);
             Modify_ReportRuntimeEventApiCall(ref _callReportRuntimeEvent);
             _callRefreshRuntimeTokenInternal = clientHelper.BuildApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse>("RefreshRuntimeTokenInternal", grpcClient.RefreshRuntimeTokenInternalAsync, grpcClient.RefreshRuntimeTokenInternal, effectiveSettings.RefreshRuntimeTokenInternalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRefreshRuntimeTokenInternal);
             Modify_RefreshRuntimeTokenInternalApiCall(ref _callRefreshRuntimeTokenInternal);
+            _callDiagnoseRuntime = clientHelper.BuildApiCall<DiagnoseRuntimeRequest, lro::Operation>("DiagnoseRuntime", grpcClient.DiagnoseRuntimeAsync, grpcClient.DiagnoseRuntime, effectiveSettings.DiagnoseRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDiagnoseRuntime);
+            Modify_DiagnoseRuntimeApiCall(ref _callDiagnoseRuntime);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1838,6 +2406,8 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_CreateRuntimeApiCall(ref gaxgrpc::ApiCall<CreateRuntimeRequest, lro::Operation> call);
 
+        partial void Modify_UpdateRuntimeApiCall(ref gaxgrpc::ApiCall<UpdateRuntimeRequest, lro::Operation> call);
+
         partial void Modify_DeleteRuntimeApiCall(ref gaxgrpc::ApiCall<DeleteRuntimeRequest, lro::Operation> call);
 
         partial void Modify_StartRuntimeApiCall(ref gaxgrpc::ApiCall<StartRuntimeRequest, lro::Operation> call);
@@ -1848,20 +2418,32 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_ResetRuntimeApiCall(ref gaxgrpc::ApiCall<ResetRuntimeRequest, lro::Operation> call);
 
+        partial void Modify_UpgradeRuntimeApiCall(ref gaxgrpc::ApiCall<UpgradeRuntimeRequest, lro::Operation> call);
+
         partial void Modify_ReportRuntimeEventApiCall(ref gaxgrpc::ApiCall<ReportRuntimeEventRequest, lro::Operation> call);
 
         partial void Modify_RefreshRuntimeTokenInternalApiCall(ref gaxgrpc::ApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse> call);
+
+        partial void Modify_DiagnoseRuntimeApiCall(ref gaxgrpc::ApiCall<DiagnoseRuntimeRequest, lro::Operation> call);
 
         partial void OnConstruction(ManagedNotebookService.ManagedNotebookServiceClient grpcClient, ManagedNotebookServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ManagedNotebookService client</summary>
         public override ManagedNotebookService.ManagedNotebookServiceClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
+
         partial void Modify_ListRuntimesRequest(ref ListRuntimesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRuntimeRequest(ref GetRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateRuntimeRequest(ref CreateRuntimeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRuntimeRequest(ref UpdateRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRuntimeRequest(ref DeleteRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1873,9 +2455,13 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_ResetRuntimeRequest(ref ResetRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpgradeRuntimeRequest(ref UpgradeRuntimeRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ReportRuntimeEventRequest(ref ReportRuntimeEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RefreshRuntimeTokenInternalRequest(ref RefreshRuntimeTokenInternalRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DiagnoseRuntimeRequest(ref DiagnoseRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -1952,6 +2538,33 @@ namespace Google.Cloud.Notebooks.V1
         {
             Modify_CreateRuntimeRequest(ref request, ref callSettings);
             return new lro::Operation<Runtime, OperationMetadata>(await _callCreateRuntime.Async(request, callSettings).ConfigureAwait(false), CreateRuntimeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRuntime</c>.</summary>
+        public override lro::OperationsClient UpdateRuntimeOperationsClient { get; }
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Runtime, OperationMetadata> UpdateRuntime(UpdateRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(_callUpdateRuntime.Sync(request, callSettings), UpdateRuntimeOperationsClient);
+        }
+
+        /// <summary>
+        /// Update Notebook Runtime configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Runtime, OperationMetadata>> UpdateRuntimeAsync(UpdateRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(await _callUpdateRuntime.Async(request, callSettings).ConfigureAwait(false), UpdateRuntimeOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteRuntime</c>.</summary>
@@ -2105,6 +2718,33 @@ namespace Google.Cloud.Notebooks.V1
             return new lro::Operation<Runtime, OperationMetadata>(await _callResetRuntime.Async(request, callSettings).ConfigureAwait(false), ResetRuntimeOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpgradeRuntime</c>.</summary>
+        public override lro::OperationsClient UpgradeRuntimeOperationsClient { get; }
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Runtime, OperationMetadata> UpgradeRuntime(UpgradeRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(_callUpgradeRuntime.Sync(request, callSettings), UpgradeRuntimeOperationsClient);
+        }
+
+        /// <summary>
+        /// Upgrades a Managed Notebook Runtime to the latest version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Runtime, OperationMetadata>> UpgradeRuntimeAsync(UpgradeRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(await _callUpgradeRuntime.Async(request, callSettings).ConfigureAwait(false), UpgradeRuntimeOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>ReportRuntimeEvent</c>.</summary>
         public override lro::OperationsClient ReportRuntimeEventOperationsClient { get; }
 
@@ -2157,6 +2797,33 @@ namespace Google.Cloud.Notebooks.V1
             Modify_RefreshRuntimeTokenInternalRequest(ref request, ref callSettings);
             return _callRefreshRuntimeTokenInternal.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>DiagnoseRuntime</c>.</summary>
+        public override lro::OperationsClient DiagnoseRuntimeOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Runtime, OperationMetadata> DiagnoseRuntime(DiagnoseRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiagnoseRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(_callDiagnoseRuntime.Sync(request, callSettings), DiagnoseRuntimeOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Runtime, OperationMetadata>> DiagnoseRuntimeAsync(DiagnoseRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiagnoseRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<Runtime, OperationMetadata>(await _callDiagnoseRuntime.Async(request, callSettings).ConfigureAwait(false), DiagnoseRuntimeOperationsClient);
+        }
     }
 
     public partial class ListRuntimesRequest : gaxgrpc::IPageRequest
@@ -2182,6 +2849,32 @@ namespace Google.Cloud.Notebooks.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ManagedNotebookService
+    {
+        public partial class ManagedNotebookServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

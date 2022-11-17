@@ -114,6 +114,8 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.RollbackInstanceRequest> __Marshaller_google_cloud_notebooks_v1_RollbackInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.RollbackInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest> __Marshaller_google_cloud_notebooks_v1_DiagnoseInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpgradeInstanceInternalRequest> __Marshaller_google_cloud_notebooks_v1_UpgradeInstanceInternalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpgradeInstanceInternalRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.ListEnvironmentsRequest> __Marshaller_google_cloud_notebooks_v1_ListEnvironmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.ListEnvironmentsRequest.Parser));
@@ -304,6 +306,14 @@ namespace Google.Cloud.Notebooks.V1 {
         __ServiceName,
         "RollbackInstance",
         __Marshaller_google_cloud_notebooks_v1_RollbackInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest, global::Google.LongRunning.Operation> __Method_DiagnoseInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DiagnoseInstance",
+        __Marshaller_google_cloud_notebooks_v1_DiagnoseInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -658,6 +668,18 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RollbackInstance(global::Google.Cloud.Notebooks.V1.RollbackInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DiagnoseInstance(global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1797,6 +1819,54 @@ namespace Google.Cloud.Notebooks.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RollbackInstance, null, options, request);
       }
       /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DiagnoseInstance(global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiagnoseInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DiagnoseInstance(global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DiagnoseInstance, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseInstanceAsync(global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiagnoseInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseInstanceAsync(global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DiagnoseInstance, null, options, request);
+      }
+      /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
       /// </summary>
@@ -2505,6 +2575,7 @@ namespace Google.Cloud.Notebooks.V1 {
           .AddMethod(__Method_GetInstanceHealth, serviceImpl.GetInstanceHealth)
           .AddMethod(__Method_UpgradeInstance, serviceImpl.UpgradeInstance)
           .AddMethod(__Method_RollbackInstance, serviceImpl.RollbackInstance)
+          .AddMethod(__Method_DiagnoseInstance, serviceImpl.DiagnoseInstance)
           .AddMethod(__Method_UpgradeInstanceInternal, serviceImpl.UpgradeInstanceInternal)
           .AddMethod(__Method_ListEnvironments, serviceImpl.ListEnvironments)
           .AddMethod(__Method_GetEnvironment, serviceImpl.GetEnvironment)
@@ -2547,6 +2618,7 @@ namespace Google.Cloud.Notebooks.V1 {
       serviceBinder.AddMethod(__Method_GetInstanceHealth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.GetInstanceHealthRequest, global::Google.Cloud.Notebooks.V1.GetInstanceHealthResponse>(serviceImpl.GetInstanceHealth));
       serviceBinder.AddMethod(__Method_UpgradeInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpgradeInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeInstance));
       serviceBinder.AddMethod(__Method_RollbackInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.RollbackInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RollbackInstance));
+      serviceBinder.AddMethod(__Method_DiagnoseInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DiagnoseInstance));
       serviceBinder.AddMethod(__Method_UpgradeInstanceInternal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpgradeInstanceInternalRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeInstanceInternal));
       serviceBinder.AddMethod(__Method_ListEnvironments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ListEnvironmentsRequest, global::Google.Cloud.Notebooks.V1.ListEnvironmentsResponse>(serviceImpl.ListEnvironments));
       serviceBinder.AddMethod(__Method_GetEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.GetEnvironmentRequest, global::Google.Cloud.Notebooks.V1.Environment>(serviceImpl.GetEnvironment));

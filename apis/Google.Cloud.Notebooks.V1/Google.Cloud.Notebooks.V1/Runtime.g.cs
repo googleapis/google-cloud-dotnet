@@ -49,93 +49,101 @@ namespace Google.Cloud.Notebooks.V1 {
             "E0FHRU5UX05PVF9JTlNUQUxMRUQQAxIVChFBR0VOVF9OT1RfUlVOTklORxAE",
             "OmHqQV4KIG5vdGVib29rcy5nb29nbGVhcGlzLmNvbS9SdW50aW1lEjpwcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcnVudGltZXMv",
-            "e3J1bnRpbWV9Qg4KDHJ1bnRpbWVfdHlwZSKhAwoYUnVudGltZUFjY2VsZXJh",
+            "e3J1bnRpbWV9Qg4KDHJ1bnRpbWVfdHlwZSKlAwoYUnVudGltZUFjY2VsZXJh",
             "dG9yQ29uZmlnElEKBHR5cGUYASABKA4yQy5nb29nbGUuY2xvdWQubm90ZWJv",
             "b2tzLnYxLlJ1bnRpbWVBY2NlbGVyYXRvckNvbmZpZy5BY2NlbGVyYXRvclR5",
-            "cGUSEgoKY29yZV9jb3VudBgCIAEoAyKdAgoPQWNjZWxlcmF0b3JUeXBlEiAK",
-            "HEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIUChBOVklESUFfVEVT",
-            "TEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIVChFOVklESUFfVEVT",
-            "TEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMKD05WSURJQV9URVNM",
-            "QV9UNBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAYSCgoGVFBVX1YyEAcSCgoG",
-            "VFBVX1YzEAgSFwoTTlZJRElBX1RFU0xBX1Q0X1ZXUxAJEhkKFU5WSURJQV9U",
-            "RVNMQV9QMTAwX1ZXUxAKEhcKE05WSURJQV9URVNMQV9QNF9WV1MQCyIjChBF",
-            "bmNyeXB0aW9uQ29uZmlnEg8KB2ttc19rZXkYASABKAkiqAMKCUxvY2FsRGlz",
-            "axIYCgthdXRvX2RlbGV0ZRgBIAEoCEID4EEDEhEKBGJvb3QYAiABKAhCA+BB",
-            "AxIYCgtkZXZpY2VfbmFtZRgDIAEoCUID4EEDEloKEWd1ZXN0X29zX2ZlYXR1",
-            "cmVzGAQgAygLMjouZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5Mb2NhbERp",
-            "c2suUnVudGltZUd1ZXN0T3NGZWF0dXJlQgPgQQMSEgoFaW5kZXgYBSABKAVC",
-            "A+BBAxJUChFpbml0aWFsaXplX3BhcmFtcxgGIAEoCzI0Lmdvb2dsZS5jbG91",
-            "ZC5ub3RlYm9va3MudjEuTG9jYWxEaXNrSW5pdGlhbGl6ZVBhcmFtc0ID4EEE",
-            "EhEKCWludGVyZmFjZRgHIAEoCRIRCgRraW5kGAggASgJQgPgQQMSFQoIbGlj",
-            "ZW5zZXMYCSADKAlCA+BBAxIMCgRtb2RlGAogASgJEg4KBnNvdXJjZRgLIAEo",
-            "CRIMCgR0eXBlGAwgASgJGiUKFVJ1bnRpbWVHdWVzdE9zRmVhdHVyZRIMCgR0",
-            "eXBlGAEgASgJIqoDChlMb2NhbERpc2tJbml0aWFsaXplUGFyYW1zEhgKC2Rl",
-            "c2NyaXB0aW9uGAEgASgJQgPgQQESFgoJZGlza19uYW1lGAIgASgJQgPgQQES",
-            "GQoMZGlza19zaXplX2diGAMgASgDQgPgQQESVQoJZGlza190eXBlGAQgASgO",
-            "Mj0uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5Mb2NhbERpc2tJbml0aWFs",
-            "aXplUGFyYW1zLkRpc2tUeXBlQgPgQQQSVQoGbGFiZWxzGAUgAygLMkAuZ29v",
-            "Z2xlLmNsb3VkLm5vdGVib29rcy52MS5Mb2NhbERpc2tJbml0aWFsaXplUGFy",
-            "YW1zLkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASJjCghEaXNrVHlwZRIZChVESVNLX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIPCgtQRF9TVEFOREFSRBABEgoKBlBEX1NTRBAC",
-            "Eg8KC1BEX0JBTEFOQ0VEEAMSDgoKUERfRVhUUkVNRRAEIvsBChNSdW50aW1l",
-            "QWNjZXNzQ29uZmlnElUKC2FjY2Vzc190eXBlGAEgASgOMkAuZ29vZ2xlLmNs",
-            "b3VkLm5vdGVib29rcy52MS5SdW50aW1lQWNjZXNzQ29uZmlnLlJ1bnRpbWVB",
-            "Y2Nlc3NUeXBlEhUKDXJ1bnRpbWVfb3duZXIYAiABKAkSFgoJcHJveHlfdXJp",
-            "GAMgASgJQgPgQQMiXgoRUnVudGltZUFjY2Vzc1R5cGUSIwofUlVOVElNRV9B",
-            "Q0NFU1NfVFlQRV9VTlNQRUNJRklFRBAAEg8KC1NJTkdMRV9VU0VSEAESEwoP",
-            "U0VSVklDRV9BQ0NPVU5UEAIilAMKFVJ1bnRpbWVTb2Z0d2FyZUNvbmZpZxIh",
-            "Chlub3RlYm9va191cGdyYWRlX3NjaGVkdWxlGAEgASgJEiUKGGVuYWJsZV9o",
-            "ZWFsdGhfbW9uaXRvcmluZxgCIAEoCEgAiAEBEhoKDWlkbGVfc2h1dGRvd24Y",
-            "AyABKAhIAYgBARIdChVpZGxlX3NodXRkb3duX3RpbWVvdXQYBCABKAUSGgoS",
-            "aW5zdGFsbF9ncHVfZHJpdmVyGAUgASgIEh4KFmN1c3RvbV9ncHVfZHJpdmVy",
-            "X3BhdGgYBiABKAkSGwoTcG9zdF9zdGFydHVwX3NjcmlwdBgHIAEoCRI/Cgdr",
-            "ZXJuZWxzGAggAygLMikuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5Db250",
-            "YWluZXJJbWFnZUID4EEBEh0KC3VwZ3JhZGVhYmxlGAkgASgIQgPgQQNIAogB",
-            "AUIbChlfZW5hYmxlX2hlYWx0aF9tb25pdG9yaW5nQhAKDl9pZGxlX3NodXRk",
-            "b3duQg4KDF91cGdyYWRlYWJsZSKhAQoOUnVudGltZU1ldHJpY3MSWQoOc3lz",
-            "dGVtX21ldHJpY3MYASADKAsyPC5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
-            "LlJ1bnRpbWVNZXRyaWNzLlN5c3RlbU1ldHJpY3NFbnRyeUID4EEDGjQKElN5",
-            "c3RlbU1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBInUKHVJ1bnRpbWVTaGllbGRlZEluc3RhbmNlQ29uZmlnEhoKEmVuYWJs",
-            "ZV9zZWN1cmVfYm9vdBgBIAEoCBITCgtlbmFibGVfdnRwbRgCIAEoCBIjChtl",
-            "bmFibGVfaW50ZWdyaXR5X21vbml0b3JpbmcYAyABKAgilwEKDlZpcnR1YWxN",
-            "YWNoaW5lEhoKDWluc3RhbmNlX25hbWUYASABKAlCA+BBAxIYCgtpbnN0YW5j",
-            "ZV9pZBgCIAEoCUID4EEDEk8KFnZpcnR1YWxfbWFjaGluZV9jb25maWcYAyAB",
-            "KAsyLy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlZpcnR1YWxNYWNoaW5l",
-            "Q29uZmlnIuMJChRWaXJ0dWFsTWFjaGluZUNvbmZpZxIRCgR6b25lGAEgASgJ",
-            "QgPgQQMSGQoMbWFjaGluZV90eXBlGAIgASgJQgPgQQISSAoQY29udGFpbmVy",
-            "X2ltYWdlcxgDIAMoCzIpLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuQ29u",
-            "dGFpbmVySW1hZ2VCA+BBARI8CglkYXRhX2Rpc2sYBCABKAsyJC5nb29nbGUu",
-            "Y2xvdWQubm90ZWJvb2tzLnYxLkxvY2FsRGlza0ID4EECEksKEWVuY3J5cHRp",
-            "b25fY29uZmlnGAUgASgLMisuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5F",
-            "bmNyeXB0aW9uQ29uZmlnQgPgQQESXwoYc2hpZWxkZWRfaW5zdGFuY2VfY29u",
-            "ZmlnGAYgASgLMjguZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5SdW50aW1l",
-            "U2hpZWxkZWRJbnN0YW5jZUNvbmZpZ0ID4EEBElQKEmFjY2VsZXJhdG9yX2Nv",
-            "bmZpZxgHIAEoCzIzLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuUnVudGlt",
-            "ZUFjY2VsZXJhdG9yQ29uZmlnQgPgQQESFAoHbmV0d29yaxgIIAEoCUID4EEB",
-            "EhMKBnN1Ym5ldBgJIAEoCUID4EEBEh0KEGludGVybmFsX2lwX29ubHkYCiAB",
-            "KAhCA+BBARIRCgR0YWdzGA0gAygJQgPgQQESYwoQZ3Vlc3RfYXR0cmlidXRl",
-            "cxgOIAMoCzJELmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuVmlydHVhbE1h",
-            "Y2hpbmVDb25maWcuR3Vlc3RBdHRyaWJ1dGVzRW50cnlCA+BBAxJUCghtZXRh",
-            "ZGF0YRgPIAMoCzI9Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuVmlydHVh",
-            "bE1hY2hpbmVDb25maWcuTWV0YWRhdGFFbnRyeUID4EEBElAKBmxhYmVscxgQ",
-            "IAMoCzI7Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuVmlydHVhbE1hY2hp",
-            "bmVDb25maWcuTGFiZWxzRW50cnlCA+BBARJOCghuaWNfdHlwZRgRIAEoDjI3",
-            "Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuVmlydHVhbE1hY2hpbmVDb25m",
-            "aWcuTmljVHlwZUID4EEBEh4KEXJlc2VydmVkX2lwX3JhbmdlGBIgASgJQgPg",
-            "QQESUgoKYm9vdF9pbWFnZRgTIAEoCzI5Lmdvb2dsZS5jbG91ZC5ub3RlYm9v",
-            "a3MudjEuVmlydHVhbE1hY2hpbmVDb25maWcuQm9vdEltYWdlQgPgQQEaCwoJ",
-            "Qm9vdEltYWdlGjYKFEd1ZXN0QXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiPgoHTmljVHlwZRIYChRVTlNQ",
-            "RUNJRklFRF9OSUNfVFlQRRAAEg4KClZJUlRJT19ORVQQARIJCgVHVk5JQxAC",
-            "QsoBCh1jb20uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MUIMUnVudGltZVBy",
-            "b3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvbm90ZWJvb2tzL3YxO25vdGVib29rc6oCGUdvb2dsZS5DbG91ZC5O",
-            "b3RlYm9va3MuVjHKAhlHb29nbGVcQ2xvdWRcTm90ZWJvb2tzXFYx6gIcR29v",
-            "Z2xlOjpDbG91ZDo6Tm90ZWJvb2tzOjpWMWIGcHJvdG8z"));
+            "cGUSEgoKY29yZV9jb3VudBgCIAEoAyKhAgoPQWNjZWxlcmF0b3JUeXBlEiAK",
+            "HEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIYChBOVklESUFfVEVT",
+            "TEFfSzgwEAEaAggBEhUKEU5WSURJQV9URVNMQV9QMTAwEAISFQoRTlZJRElB",
+            "X1RFU0xBX1YxMDAQAxITCg9OVklESUFfVEVTTEFfUDQQBBITCg9OVklESUFf",
+            "VEVTTEFfVDQQBRIVChFOVklESUFfVEVTTEFfQTEwMBAGEgoKBlRQVV9WMhAH",
+            "EgoKBlRQVV9WMxAIEhcKE05WSURJQV9URVNMQV9UNF9WV1MQCRIZChVOVklE",
+            "SUFfVEVTTEFfUDEwMF9WV1MQChIXChNOVklESUFfVEVTTEFfUDRfVldTEAsi",
+            "IwoQRW5jcnlwdGlvbkNvbmZpZxIPCgdrbXNfa2V5GAEgASgJIqgDCglMb2Nh",
+            "bERpc2sSGAoLYXV0b19kZWxldGUYASABKAhCA+BBAxIRCgRib290GAIgASgI",
+            "QgPgQQMSGAoLZGV2aWNlX25hbWUYAyABKAlCA+BBAxJaChFndWVzdF9vc19m",
+            "ZWF0dXJlcxgEIAMoCzI6Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuTG9j",
+            "YWxEaXNrLlJ1bnRpbWVHdWVzdE9zRmVhdHVyZUID4EEDEhIKBWluZGV4GAUg",
+            "ASgFQgPgQQMSVAoRaW5pdGlhbGl6ZV9wYXJhbXMYBiABKAsyNC5nb29nbGUu",
+            "Y2xvdWQubm90ZWJvb2tzLnYxLkxvY2FsRGlza0luaXRpYWxpemVQYXJhbXNC",
+            "A+BBBBIRCglpbnRlcmZhY2UYByABKAkSEQoEa2luZBgIIAEoCUID4EEDEhUK",
+            "CGxpY2Vuc2VzGAkgAygJQgPgQQMSDAoEbW9kZRgKIAEoCRIOCgZzb3VyY2UY",
+            "CyABKAkSDAoEdHlwZRgMIAEoCRolChVSdW50aW1lR3Vlc3RPc0ZlYXR1cmUS",
+            "DAoEdHlwZRgBIAEoCSKqAwoZTG9jYWxEaXNrSW5pdGlhbGl6ZVBhcmFtcxIY",
+            "CgtkZXNjcmlwdGlvbhgBIAEoCUID4EEBEhYKCWRpc2tfbmFtZRgCIAEoCUID",
+            "4EEBEhkKDGRpc2tfc2l6ZV9nYhgDIAEoA0ID4EEBElUKCWRpc2tfdHlwZRgE",
+            "IAEoDjI9Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuTG9jYWxEaXNrSW5p",
+            "dGlhbGl6ZVBhcmFtcy5EaXNrVHlwZUID4EEEElUKBmxhYmVscxgFIAMoCzJA",
+            "Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuTG9jYWxEaXNrSW5pdGlhbGl6",
+            "ZVBhcmFtcy5MYWJlbHNFbnRyeUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYwoIRGlza1R5cGUSGQoVRElT",
+            "S19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLUERfU1RBTkRBUkQQARIKCgZQRF9T",
+            "U0QQAhIPCgtQRF9CQUxBTkNFRBADEg4KClBEX0VYVFJFTUUQBCL7AQoTUnVu",
+            "dGltZUFjY2Vzc0NvbmZpZxJVCgthY2Nlc3NfdHlwZRgBIAEoDjJALmdvb2ds",
+            "ZS5jbG91ZC5ub3RlYm9va3MudjEuUnVudGltZUFjY2Vzc0NvbmZpZy5SdW50",
+            "aW1lQWNjZXNzVHlwZRIVCg1ydW50aW1lX293bmVyGAIgASgJEhYKCXByb3h5",
+            "X3VyaRgDIAEoCUID4EEDIl4KEVJ1bnRpbWVBY2Nlc3NUeXBlEiMKH1JVTlRJ",
+            "TUVfQUNDRVNTX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtTSU5HTEVfVVNFUhAB",
+            "EhMKD1NFUlZJQ0VfQUNDT1VOVBACIuQFChVSdW50aW1lU29mdHdhcmVDb25m",
+            "aWcSIQoZbm90ZWJvb2tfdXBncmFkZV9zY2hlZHVsZRgBIAEoCRIlChhlbmFi",
+            "bGVfaGVhbHRoX21vbml0b3JpbmcYAiABKAhIAIgBARIaCg1pZGxlX3NodXRk",
+            "b3duGAMgASgISAGIAQESHQoVaWRsZV9zaHV0ZG93bl90aW1lb3V0GAQgASgF",
+            "EhoKEmluc3RhbGxfZ3B1X2RyaXZlchgFIAEoCBIeChZjdXN0b21fZ3B1X2Ry",
+            "aXZlcl9wYXRoGAYgASgJEhsKE3Bvc3Rfc3RhcnR1cF9zY3JpcHQYByABKAkS",
+            "PwoHa2VybmVscxgIIAMoCzIpLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEu",
+            "Q29udGFpbmVySW1hZ2VCA+BBARIdCgt1cGdyYWRlYWJsZRgJIAEoCEID4EED",
+            "SAKIAQEScAoccG9zdF9zdGFydHVwX3NjcmlwdF9iZWhhdmlvchgKIAEoDjJK",
+            "Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuUnVudGltZVNvZnR3YXJlQ29u",
+            "ZmlnLlBvc3RTdGFydHVwU2NyaXB0QmVoYXZpb3ISHQoQZGlzYWJsZV90ZXJt",
+            "aW5hbBgLIAEoCEgDiAEBEhkKB3ZlcnNpb24YDCABKAlCA+BBA0gEiAEBIoAB",
+            "ChlQb3N0U3RhcnR1cFNjcmlwdEJlaGF2aW9yEiwKKFBPU1RfU1RBUlRVUF9T",
+            "Q1JJUFRfQkVIQVZJT1JfVU5TUEVDSUZJRUQQABITCg9SVU5fRVZFUllfU1RB",
+            "UlQQARIgChxET1dOTE9BRF9BTkRfUlVOX0VWRVJZX1NUQVJUEAJCGwoZX2Vu",
+            "YWJsZV9oZWFsdGhfbW9uaXRvcmluZ0IQCg5faWRsZV9zaHV0ZG93bkIOCgxf",
+            "dXBncmFkZWFibGVCEwoRX2Rpc2FibGVfdGVybWluYWxCCgoIX3ZlcnNpb24i",
+            "oQEKDlJ1bnRpbWVNZXRyaWNzElkKDnN5c3RlbV9tZXRyaWNzGAEgAygLMjwu",
+            "Z29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5SdW50aW1lTWV0cmljcy5TeXN0",
+            "ZW1NZXRyaWNzRW50cnlCA+BBAxo0ChJTeXN0ZW1NZXRyaWNzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ1Ch1SdW50aW1lU2hpZWxk",
+            "ZWRJbnN0YW5jZUNvbmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgS",
+            "EwoLZW5hYmxlX3Z0cG0YAiABKAgSIwobZW5hYmxlX2ludGVncml0eV9tb25p",
+            "dG9yaW5nGAMgASgIIpcBCg5WaXJ0dWFsTWFjaGluZRIaCg1pbnN0YW5jZV9u",
+            "YW1lGAEgASgJQgPgQQMSGAoLaW5zdGFuY2VfaWQYAiABKAlCA+BBAxJPChZ2",
+            "aXJ0dWFsX21hY2hpbmVfY29uZmlnGAMgASgLMi8uZ29vZ2xlLmNsb3VkLm5v",
+            "dGVib29rcy52MS5WaXJ0dWFsTWFjaGluZUNvbmZpZyLjCQoUVmlydHVhbE1h",
+            "Y2hpbmVDb25maWcSEQoEem9uZRgBIAEoCUID4EEDEhkKDG1hY2hpbmVfdHlw",
+            "ZRgCIAEoCUID4EECEkgKEGNvbnRhaW5lcl9pbWFnZXMYAyADKAsyKS5nb29n",
+            "bGUuY2xvdWQubm90ZWJvb2tzLnYxLkNvbnRhaW5lckltYWdlQgPgQQESPAoJ",
+            "ZGF0YV9kaXNrGAQgASgLMiQuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5M",
+            "b2NhbERpc2tCA+BBAhJLChFlbmNyeXB0aW9uX2NvbmZpZxgFIAEoCzIrLmdv",
+            "b2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRW5jcnlwdGlvbkNvbmZpZ0ID4EEB",
+            "El8KGHNoaWVsZGVkX2luc3RhbmNlX2NvbmZpZxgGIAEoCzI4Lmdvb2dsZS5j",
+            "bG91ZC5ub3RlYm9va3MudjEuUnVudGltZVNoaWVsZGVkSW5zdGFuY2VDb25m",
+            "aWdCA+BBARJUChJhY2NlbGVyYXRvcl9jb25maWcYByABKAsyMy5nb29nbGUu",
+            "Y2xvdWQubm90ZWJvb2tzLnYxLlJ1bnRpbWVBY2NlbGVyYXRvckNvbmZpZ0ID",
+            "4EEBEhQKB25ldHdvcmsYCCABKAlCA+BBARITCgZzdWJuZXQYCSABKAlCA+BB",
+            "ARIdChBpbnRlcm5hbF9pcF9vbmx5GAogASgIQgPgQQESEQoEdGFncxgNIAMo",
+            "CUID4EEBEmMKEGd1ZXN0X2F0dHJpYnV0ZXMYDiADKAsyRC5nb29nbGUuY2xv",
+            "dWQubm90ZWJvb2tzLnYxLlZpcnR1YWxNYWNoaW5lQ29uZmlnLkd1ZXN0QXR0",
+            "cmlidXRlc0VudHJ5QgPgQQMSVAoIbWV0YWRhdGEYDyADKAsyPS5nb29nbGUu",
+            "Y2xvdWQubm90ZWJvb2tzLnYxLlZpcnR1YWxNYWNoaW5lQ29uZmlnLk1ldGFk",
+            "YXRhRW50cnlCA+BBARJQCgZsYWJlbHMYECADKAsyOy5nb29nbGUuY2xvdWQu",
+            "bm90ZWJvb2tzLnYxLlZpcnR1YWxNYWNoaW5lQ29uZmlnLkxhYmVsc0VudHJ5",
+            "QgPgQQESTgoIbmljX3R5cGUYESABKA4yNy5nb29nbGUuY2xvdWQubm90ZWJv",
+            "b2tzLnYxLlZpcnR1YWxNYWNoaW5lQ29uZmlnLk5pY1R5cGVCA+BBARIeChFy",
+            "ZXNlcnZlZF9pcF9yYW5nZRgSIAEoCUID4EEBElIKCmJvb3RfaW1hZ2UYEyAB",
+            "KAsyOS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlZpcnR1YWxNYWNoaW5l",
+            "Q29uZmlnLkJvb3RJbWFnZUID4EEBGgsKCUJvb3RJbWFnZRo2ChRHdWVzdEF0",
+            "dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "Gi8KDU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIj4KB05pY1R5cGUSGAoUVU5TUEVDSUZJRURfTklDX1RZUEUQABIO",
+            "CgpWSVJUSU9fTkVUEAESCQoFR1ZOSUMQAkLKAQodY29tLmdvb2dsZS5jbG91",
+            "ZC5ub3RlYm9va3MudjFCDFJ1bnRpbWVQcm90b1ABWkJnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25vdGVib29rcy92MTtu",
+            "b3RlYm9va3OqAhlHb29nbGUuQ2xvdWQuTm90ZWJvb2tzLlYxygIZR29vZ2xl",
+            "XENsb3VkXE5vdGVib29rc1xWMeoCHEdvb2dsZTo6Q2xvdWQ6Ok5vdGVib29r",
+            "czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.EnvironmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +153,7 @@ namespace Google.Cloud.Notebooks.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.LocalDisk), global::Google.Cloud.Notebooks.V1.LocalDisk.Parser, new[]{ "AutoDelete", "Boot", "DeviceName", "GuestOsFeatures", "Index", "InitializeParams", "Interface", "Kind", "Licenses", "Mode", "Source", "Type" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.LocalDisk.Types.RuntimeGuestOsFeature), global::Google.Cloud.Notebooks.V1.LocalDisk.Types.RuntimeGuestOsFeature.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.LocalDiskInitializeParams), global::Google.Cloud.Notebooks.V1.LocalDiskInitializeParams.Parser, new[]{ "Description", "DiskName", "DiskSizeGb", "DiskType", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.LocalDiskInitializeParams.Types.DiskType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RuntimeAccessConfig), global::Google.Cloud.Notebooks.V1.RuntimeAccessConfig.Parser, new[]{ "AccessType", "RuntimeOwner", "ProxyUri" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.RuntimeAccessConfig.Types.RuntimeAccessType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig), global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Parser, new[]{ "NotebookUpgradeSchedule", "EnableHealthMonitoring", "IdleShutdown", "IdleShutdownTimeout", "InstallGpuDriver", "CustomGpuDriverPath", "PostStartupScript", "Kernels", "Upgradeable" }, new[]{ "EnableHealthMonitoring", "IdleShutdown", "Upgradeable" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig), global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Parser, new[]{ "NotebookUpgradeSchedule", "EnableHealthMonitoring", "IdleShutdown", "IdleShutdownTimeout", "InstallGpuDriver", "CustomGpuDriverPath", "PostStartupScript", "Kernels", "Upgradeable", "PostStartupScriptBehavior", "DisableTerminal", "Version" }, new[]{ "EnableHealthMonitoring", "IdleShutdown", "Upgradeable", "DisableTerminal", "Version" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RuntimeMetrics), global::Google.Cloud.Notebooks.V1.RuntimeMetrics.Parser, new[]{ "SystemMetrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RuntimeShieldedInstanceConfig), global::Google.Cloud.Notebooks.V1.RuntimeShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableVtpm", "EnableIntegrityMonitoring" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.VirtualMachine), global::Google.Cloud.Notebooks.V1.VirtualMachine.Parser, new[]{ "InstanceName", "InstanceId", "VirtualMachineConfig" }, null, null, null, null),
@@ -2980,6 +2988,9 @@ namespace Google.Cloud.Notebooks.V1 {
       postStartupScript_ = other.postStartupScript_;
       kernels_ = other.kernels_.Clone();
       upgradeable_ = other.upgradeable_;
+      postStartupScriptBehavior_ = other.postStartupScriptBehavior_;
+      disableTerminal_ = other.disableTerminal_;
+      version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3169,6 +3180,77 @@ namespace Google.Cloud.Notebooks.V1 {
       _hasBits0 &= ~4;
     }
 
+    /// <summary>Field number for the "post_startup_script_behavior" field.</summary>
+    public const int PostStartupScriptBehaviorFieldNumber = 10;
+    private global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior postStartupScriptBehavior_ = global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified;
+    /// <summary>
+    /// Behavior for the post startup script.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior PostStartupScriptBehavior {
+      get { return postStartupScriptBehavior_; }
+      set {
+        postStartupScriptBehavior_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disable_terminal" field.</summary>
+    public const int DisableTerminalFieldNumber = 11;
+    private bool disableTerminal_;
+    /// <summary>
+    /// Bool indicating whether JupyterLab terminal will be available or not.
+    /// Default: False
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableTerminal {
+      get { if ((_hasBits0 & 8) != 0) { return disableTerminal_; } else { return false; } }
+      set {
+        _hasBits0 |= 8;
+        disableTerminal_ = value;
+      }
+    }
+    /// <summary>Gets whether the "disable_terminal" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisableTerminal {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "disable_terminal" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisableTerminal() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 12;
+    private string version_;
+    /// <summary>
+    /// Output only. version of boot image such as M100, from release label of the image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_ ?? ""; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVersion {
+      get { return version_ != null; }
+    }
+    /// <summary>Clears the value of the "version" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVersion() {
+      version_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3193,6 +3275,9 @@ namespace Google.Cloud.Notebooks.V1 {
       if (PostStartupScript != other.PostStartupScript) return false;
       if(!kernels_.Equals(other.kernels_)) return false;
       if (Upgradeable != other.Upgradeable) return false;
+      if (PostStartupScriptBehavior != other.PostStartupScriptBehavior) return false;
+      if (DisableTerminal != other.DisableTerminal) return false;
+      if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3209,6 +3294,9 @@ namespace Google.Cloud.Notebooks.V1 {
       if (PostStartupScript.Length != 0) hash ^= PostStartupScript.GetHashCode();
       hash ^= kernels_.GetHashCode();
       if (HasUpgradeable) hash ^= Upgradeable.GetHashCode();
+      if (PostStartupScriptBehavior != global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified) hash ^= PostStartupScriptBehavior.GetHashCode();
+      if (HasDisableTerminal) hash ^= DisableTerminal.GetHashCode();
+      if (HasVersion) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3260,6 +3348,18 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(72);
         output.WriteBool(Upgradeable);
       }
+      if (PostStartupScriptBehavior != global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) PostStartupScriptBehavior);
+      }
+      if (HasDisableTerminal) {
+        output.WriteRawTag(88);
+        output.WriteBool(DisableTerminal);
+      }
+      if (HasVersion) {
+        output.WriteRawTag(98);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3303,6 +3403,18 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(72);
         output.WriteBool(Upgradeable);
       }
+      if (PostStartupScriptBehavior != global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) PostStartupScriptBehavior);
+      }
+      if (HasDisableTerminal) {
+        output.WriteRawTag(88);
+        output.WriteBool(DisableTerminal);
+      }
+      if (HasVersion) {
+        output.WriteRawTag(98);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3337,6 +3449,15 @@ namespace Google.Cloud.Notebooks.V1 {
       size += kernels_.CalculateSize(_repeated_kernels_codec);
       if (HasUpgradeable) {
         size += 1 + 1;
+      }
+      if (PostStartupScriptBehavior != global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PostStartupScriptBehavior);
+      }
+      if (HasDisableTerminal) {
+        size += 1 + 1;
+      }
+      if (HasVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3374,6 +3495,15 @@ namespace Google.Cloud.Notebooks.V1 {
       kernels_.Add(other.kernels_);
       if (other.HasUpgradeable) {
         Upgradeable = other.Upgradeable;
+      }
+      if (other.PostStartupScriptBehavior != global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior.Unspecified) {
+        PostStartupScriptBehavior = other.PostStartupScriptBehavior;
+      }
+      if (other.HasDisableTerminal) {
+        DisableTerminal = other.DisableTerminal;
+      }
+      if (other.HasVersion) {
+        Version = other.Version;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3424,6 +3554,18 @@ namespace Google.Cloud.Notebooks.V1 {
           }
           case 72: {
             Upgradeable = input.ReadBool();
+            break;
+          }
+          case 80: {
+            PostStartupScriptBehavior = (global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            DisableTerminal = input.ReadBool();
+            break;
+          }
+          case 98: {
+            Version = input.ReadString();
             break;
           }
         }
@@ -3477,10 +3619,48 @@ namespace Google.Cloud.Notebooks.V1 {
             Upgradeable = input.ReadBool();
             break;
           }
+          case 80: {
+            PostStartupScriptBehavior = (global::Google.Cloud.Notebooks.V1.RuntimeSoftwareConfig.Types.PostStartupScriptBehavior) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            DisableTerminal = input.ReadBool();
+            break;
+          }
+          case 98: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RuntimeSoftwareConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Behavior for the post startup script.
+      /// </summary>
+      public enum PostStartupScriptBehavior {
+        /// <summary>
+        /// Unspecified post startup script behavior. Will run only once at creation.
+        /// </summary>
+        [pbr::OriginalName("POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Runs the post startup script provided during creation at every start.
+        /// </summary>
+        [pbr::OriginalName("RUN_EVERY_START")] RunEveryStart = 1,
+        /// <summary>
+        /// Downloads and runs the provided post startup script at every start.
+        /// </summary>
+        [pbr::OriginalName("DOWNLOAD_AND_RUN_EVERY_START")] DownloadAndRunEveryStart = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -4424,8 +4604,8 @@ namespace Google.Cloud.Notebooks.V1 {
     ///
     /// A full URL or partial URI. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default`
-    /// * `projects/[project_id]/regions/global/default`
+    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default`
+    /// * `projects/[project_id]/global/networks/default`
     ///
     /// Runtimes are managed resources inside Google Infrastructure.
     /// Runtimes support the following network configurations:

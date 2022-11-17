@@ -1454,6 +1454,195 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DiagnoseInstance</summary>
+        public void DiagnoseInstanceRequestObject()
+        {
+            // Snippet: DiagnoseInstance(DiagnoseInstanceRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            DiagnoseInstanceRequest request = new DiagnoseInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DiagnosticConfig = new DiagnosticConfig(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseInstanceAsync</summary>
+        public async Task DiagnoseInstanceRequestObjectAsync()
+        {
+            // Snippet: DiagnoseInstanceAsync(DiagnoseInstanceRequest, CallSettings)
+            // Additional: DiagnoseInstanceAsync(DiagnoseInstanceRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DiagnoseInstanceRequest request = new DiagnoseInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DiagnosticConfig = new DiagnosticConfig(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseInstance</summary>
+        public void DiagnoseInstance()
+        {
+            // Snippet: DiagnoseInstance(string, DiagnosticConfig, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseInstanceAsync</summary>
+        public async Task DiagnoseInstanceAsync()
+        {
+            // Snippet: DiagnoseInstanceAsync(string, DiagnosticConfig, CallSettings)
+            // Additional: DiagnoseInstanceAsync(string, DiagnosticConfig, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseInstance</summary>
+        public void DiagnoseInstanceResourceNames()
+        {
+            // Snippet: DiagnoseInstance(InstanceName, DiagnosticConfig, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DiagnoseInstanceAsync</summary>
+        public async Task DiagnoseInstanceResourceNamesAsync()
+        {
+            // Snippet: DiagnoseInstanceAsync(InstanceName, DiagnosticConfig, CallSettings)
+            // Additional: DiagnoseInstanceAsync(InstanceName, DiagnosticConfig, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpgradeInstanceInternal</summary>
         public void UpgradeInstanceInternalRequestObject()
         {

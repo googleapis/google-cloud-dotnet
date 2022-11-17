@@ -17,6 +17,8 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -80,6 +82,8 @@ namespace Google.Cloud.Notebooks.V1
             UpgradeInstanceOperationsSettings = existing.UpgradeInstanceOperationsSettings.Clone();
             RollbackInstanceSettings = existing.RollbackInstanceSettings;
             RollbackInstanceOperationsSettings = existing.RollbackInstanceOperationsSettings.Clone();
+            DiagnoseInstanceSettings = existing.DiagnoseInstanceSettings;
+            DiagnoseInstanceOperationsSettings = existing.DiagnoseInstanceOperationsSettings.Clone();
             UpgradeInstanceInternalSettings = existing.UpgradeInstanceInternalSettings;
             UpgradeInstanceInternalOperationsSettings = existing.UpgradeInstanceInternalOperationsSettings.Clone();
             ListEnvironmentsSettings = existing.ListEnvironmentsSettings;
@@ -102,6 +106,8 @@ namespace Google.Cloud.Notebooks.V1
             DeleteExecutionOperationsSettings = existing.DeleteExecutionOperationsSettings.Clone();
             CreateExecutionSettings = existing.CreateExecutionSettings;
             CreateExecutionOperationsSettings = existing.CreateExecutionOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -601,6 +607,36 @@ namespace Google.Cloud.Notebooks.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.DiagnoseInstance</c> and <c>NotebookServiceClient.DiagnoseInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DiagnoseInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NotebookServiceClient.DiagnoseInstance</c> and
+        /// <c>NotebookServiceClient.DiagnoseInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DiagnoseInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotebookServiceClient.UpgradeInstanceInternal</c> and
         /// <c>NotebookServiceClient.UpgradeInstanceInternalAsync</c>.
         /// </summary>
@@ -918,6 +954,16 @@ namespace Google.Cloud.Notebooks.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="NotebookServiceSettings"/> object.</returns>
         public NotebookServiceSettings Clone() => new NotebookServiceSettings(this);
@@ -1058,6 +1104,12 @@ namespace Google.Cloud.Notebooks.V1
 
         /// <summary>The underlying gRPC NotebookService client</summary>
         public virtual NotebookService.NotebookServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists instances in a given project and location.
@@ -2232,6 +2284,165 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceRollbackInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RollbackInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> DiagnoseInstance(DiagnoseInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(DiagnoseInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(DiagnoseInstanceRequest request, st::CancellationToken cancellationToken) =>
+            DiagnoseInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DiagnoseInstance</c>.</summary>
+        public virtual lro::OperationsClient DiagnoseInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DiagnoseInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceDiagnoseInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DiagnoseInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceDiagnoseInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> DiagnoseInstance(string name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseInstance(new DiagnoseInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(string name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseInstanceAsync(new DiagnoseInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(string name, DiagnosticConfig diagnosticConfig, st::CancellationToken cancellationToken) =>
+            DiagnoseInstanceAsync(name, diagnosticConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> DiagnoseInstance(InstanceName name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseInstance(new DiagnoseInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(InstanceName name, DiagnosticConfig diagnosticConfig, gaxgrpc::CallSettings callSettings = null) =>
+            DiagnoseInstanceAsync(new DiagnoseInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiagnosticConfig = gax::GaxPreconditions.CheckNotNull(diagnosticConfig, nameof(diagnosticConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="diagnosticConfig">
+        /// Required. Defines flags that are used to run the diagnostic tool
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(InstanceName name, DiagnosticConfig diagnosticConfig, st::CancellationToken cancellationToken) =>
+            DiagnoseInstanceAsync(name, diagnosticConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Allows notebook instances to
@@ -3837,6 +4048,8 @@ namespace Google.Cloud.Notebooks.V1
 
         private readonly gaxgrpc::ApiCall<RollbackInstanceRequest, lro::Operation> _callRollbackInstance;
 
+        private readonly gaxgrpc::ApiCall<DiagnoseInstanceRequest, lro::Operation> _callDiagnoseInstance;
+
         private readonly gaxgrpc::ApiCall<UpgradeInstanceInternalRequest, lro::Operation> _callUpgradeInstanceInternal;
 
         private readonly gaxgrpc::ApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse> _callListEnvironments;
@@ -3890,6 +4103,7 @@ namespace Google.Cloud.Notebooks.V1
             ReportInstanceInfoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportInstanceInfoOperationsSettings, logger);
             UpgradeInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceOperationsSettings, logger);
             RollbackInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RollbackInstanceOperationsSettings, logger);
+            DiagnoseInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DiagnoseInstanceOperationsSettings, logger);
             UpgradeInstanceInternalOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceInternalOperationsSettings, logger);
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
@@ -3898,6 +4112,8 @@ namespace Google.Cloud.Notebooks.V1
             TriggerScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerScheduleOperationsSettings, logger);
             DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings, logger);
             CreateExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExecutionOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -3955,6 +4171,9 @@ namespace Google.Cloud.Notebooks.V1
             _callRollbackInstance = clientHelper.BuildApiCall<RollbackInstanceRequest, lro::Operation>("RollbackInstance", grpcClient.RollbackInstanceAsync, grpcClient.RollbackInstance, effectiveSettings.RollbackInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRollbackInstance);
             Modify_RollbackInstanceApiCall(ref _callRollbackInstance);
+            _callDiagnoseInstance = clientHelper.BuildApiCall<DiagnoseInstanceRequest, lro::Operation>("DiagnoseInstance", grpcClient.DiagnoseInstanceAsync, grpcClient.DiagnoseInstance, effectiveSettings.DiagnoseInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDiagnoseInstance);
+            Modify_DiagnoseInstanceApiCall(ref _callDiagnoseInstance);
             _callUpgradeInstanceInternal = clientHelper.BuildApiCall<UpgradeInstanceInternalRequest, lro::Operation>("UpgradeInstanceInternal", grpcClient.UpgradeInstanceInternalAsync, grpcClient.UpgradeInstanceInternal, effectiveSettings.UpgradeInstanceInternalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpgradeInstanceInternal);
             Modify_UpgradeInstanceInternalApiCall(ref _callUpgradeInstanceInternal);
@@ -4040,6 +4259,8 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_RollbackInstanceApiCall(ref gaxgrpc::ApiCall<RollbackInstanceRequest, lro::Operation> call);
 
+        partial void Modify_DiagnoseInstanceApiCall(ref gaxgrpc::ApiCall<DiagnoseInstanceRequest, lro::Operation> call);
+
         partial void Modify_UpgradeInstanceInternalApiCall(ref gaxgrpc::ApiCall<UpgradeInstanceInternalRequest, lro::Operation> call);
 
         partial void Modify_ListEnvironmentsApiCall(ref gaxgrpc::ApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse> call);
@@ -4072,6 +4293,12 @@ namespace Google.Cloud.Notebooks.V1
 
         /// <summary>The underlying gRPC NotebookService client</summary>
         public override NotebookService.NotebookServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4110,6 +4337,8 @@ namespace Google.Cloud.Notebooks.V1
         partial void Modify_UpgradeInstanceRequest(ref UpgradeInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RollbackInstanceRequest(ref RollbackInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DiagnoseInstanceRequest(ref DiagnoseInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpgradeInstanceInternalRequest(ref UpgradeInstanceInternalRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4649,6 +4878,33 @@ namespace Google.Cloud.Notebooks.V1
             return new lro::Operation<Instance, OperationMetadata>(await _callRollbackInstance.Async(request, callSettings).ConfigureAwait(false), RollbackInstanceOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>DiagnoseInstance</c>.</summary>
+        public override lro::OperationsClient DiagnoseInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> DiagnoseInstance(DiagnoseInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiagnoseInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callDiagnoseInstance.Sync(request, callSettings), DiagnoseInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> DiagnoseInstanceAsync(DiagnoseInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiagnoseInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callDiagnoseInstance.Async(request, callSettings).ConfigureAwait(false), DiagnoseInstanceOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>UpgradeInstanceInternal</c>.</summary>
         public override lro::OperationsClient UpgradeInstanceInternalOperationsClient { get; }
 
@@ -5071,6 +5327,32 @@ namespace Google.Cloud.Notebooks.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class NotebookService
+    {
+        public partial class NotebookServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
