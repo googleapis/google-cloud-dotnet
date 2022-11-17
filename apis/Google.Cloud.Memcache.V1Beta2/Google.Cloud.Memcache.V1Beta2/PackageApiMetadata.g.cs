@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -30,6 +31,16 @@ namespace Google.Cloud.Memcache.V1Beta2
         internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Memcache.V1Beta2", GetFileDescriptors)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1beta2/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiYvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfQ==")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1beta2/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("EiQvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1beta2/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -54,6 +65,7 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gcl::LocationsReflection.Descriptor;
             yield return CloudMemcacheReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

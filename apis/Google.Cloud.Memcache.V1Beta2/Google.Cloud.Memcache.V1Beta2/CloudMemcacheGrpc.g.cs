@@ -3,7 +3,7 @@
 //     source: google/cloud/memcache/v1beta2/cloud_memcache.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -98,6 +98,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest> __Marshaller_google_cloud_memcache_v1beta2_ApplyParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest> __Marshaller_google_cloud_memcache_v1beta2_ApplySoftwareUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest> __Marshaller_google_cloud_memcache_v1beta2_RescheduleMaintenanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest, global::Google.Cloud.Memcache.V1Beta2.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest, global::Google.Cloud.Memcache.V1Beta2.ListInstancesResponse>(
@@ -161,6 +163,14 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         __ServiceName,
         "ApplySoftwareUpdate",
         __Marshaller_google_cloud_memcache_v1beta2_ApplySoftwareUpdateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation> __Method_RescheduleMaintenance = new grpc::Method<global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RescheduleMaintenance",
+        __Marshaller_google_cloud_memcache_v1beta2_RescheduleMaintenanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -269,6 +279,18 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApplySoftwareUpdate(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Performs the apply phase of the RescheduleMaintenance verb.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RescheduleMaintenance(global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -702,6 +724,54 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ApplySoftwareUpdate, null, options, request);
       }
+      /// <summary>
+      /// Performs the apply phase of the RescheduleMaintenance verb.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs the apply phase of the RescheduleMaintenance verb.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RescheduleMaintenance, null, options, request);
+      }
+      /// <summary>
+      /// Performs the apply phase of the RescheduleMaintenance verb.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs the apply phase of the RescheduleMaintenance verb.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RescheduleMaintenance, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudMemcacheClient NewInstance(ClientBaseConfiguration configuration)
@@ -723,7 +793,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           .AddMethod(__Method_UpdateParameters, serviceImpl.UpdateParameters)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_ApplyParameters, serviceImpl.ApplyParameters)
-          .AddMethod(__Method_ApplySoftwareUpdate, serviceImpl.ApplySoftwareUpdate).Build();
+          .AddMethod(__Method_ApplySoftwareUpdate, serviceImpl.ApplySoftwareUpdate)
+          .AddMethod(__Method_RescheduleMaintenance, serviceImpl.RescheduleMaintenance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -741,6 +812,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_ApplyParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplyParameters));
       serviceBinder.AddMethod(__Method_ApplySoftwareUpdate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplySoftwareUpdate));
+      serviceBinder.AddMethod(__Method_RescheduleMaintenance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RescheduleMaintenance));
     }
 
   }
