@@ -802,7 +802,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
                 NotebookInstance = "",
             };
             // Make the request
+#pragma warning disable CS0612
             IsInstanceUpgradeableResponse response = notebookServiceClient.IsInstanceUpgradeable(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -819,7 +821,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
                 NotebookInstance = "",
             };
             // Make the request
+#pragma warning disable CS0612
             IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -832,7 +836,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceRequest request = new UpgradeInstanceRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstance(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -842,7 +848,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstance(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -862,7 +870,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceRequest request = new UpgradeInstanceRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -872,7 +882,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -891,7 +903,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest { Name = "", VmId = "", };
             // Make the request
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstanceInternal(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -901,7 +915,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstanceInternal(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -921,7 +937,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest { Name = "", VmId = "", };
             // Make the request
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceInternalAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -931,7 +949,9 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceInternalAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

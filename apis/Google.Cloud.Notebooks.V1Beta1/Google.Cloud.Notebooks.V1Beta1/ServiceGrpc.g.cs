@@ -3,7 +3,7 @@
 //     source: google/cloud/notebooks/v1beta1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -428,6 +428,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
       /// <summary>
       /// Check if a notebook instance is upgradable.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -440,6 +441,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
       /// <summary>
       /// Upgrades a notebook instance to the latest version.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -453,6 +455,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1142,6 +1145,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Check if a notebook instance is upgradable.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1155,6 +1159,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Check if a notebook instance is upgradable.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1166,6 +1171,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Check if a notebook instance is upgradable.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1179,6 +1185,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Check if a notebook instance is upgradable.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1190,6 +1197,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Upgrades a notebook instance to the latest version.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1203,6 +1211,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Upgrades a notebook instance to the latest version.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1214,6 +1223,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Upgrades a notebook instance to the latest version.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1227,6 +1237,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       /// <summary>
       /// Upgrades a notebook instance to the latest version.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1239,6 +1250,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1253,6 +1265,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1265,6 +1278,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1279,6 +1293,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <summary>
       /// Allows notebook instances to
       /// call this endpoint to upgrade themselves. Do not use this method directly.
+      /// Deprecated. Please consider using v1.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

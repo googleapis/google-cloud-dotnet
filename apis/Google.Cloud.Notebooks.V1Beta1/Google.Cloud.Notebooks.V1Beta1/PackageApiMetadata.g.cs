@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -30,6 +32,31 @@ namespace Google.Cloud.Notebooks.V1Beta1
         internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Notebooks.V1Beta1", GetFileDescriptors)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1beta1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiYvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfQ==")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1beta1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("EiQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.GetIamPolicy",
+                    // { "get": "/v1beta1/{resource=projects/*/locations/*/instances/*}:getIamPolicy" }
+                    proto::ByteString.FromBase64("EkMvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06Z2V0SWFtUG9saWN5")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.SetIamPolicy",
+                    // { "post": "/v1beta1/{resource=projects/*/locations/*/instances/*}:setIamPolicy", "body": "*" }
+                    proto::ByteString.FromBase64("IkMvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06c2V0SWFtUG9saWN5OgEq")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.TestIamPermissions",
+                    // { "post": "/v1beta1/{resource=projects/*/locations/*/instances/*}:testIamPermissions", "body": "*" }
+                    proto::ByteString.FromBase64("IkkvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1beta1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -54,6 +81,10 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
             yield return ServiceReflection.Descriptor;

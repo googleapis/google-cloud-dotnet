@@ -28,64 +28,77 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             "dG8SHmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRhMRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxowZ29vZ2xlL2Nsb3VkL25vdGVib29rcy92MWJldGExL2Vudmlyb25t",
-            "ZW50LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrwQ",
-            "CghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSOwoIdm1faW1hZ2UYAiAB",
-            "KAsyJy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxYmV0YTEuVm1JbWFnZUgA",
-            "EkkKD2NvbnRhaW5lcl9pbWFnZRgDIAEoCzIuLmdvb2dsZS5jbG91ZC5ub3Rl",
-            "Ym9va3MudjFiZXRhMS5Db250YWluZXJJbWFnZUgAEhsKE3Bvc3Rfc3RhcnR1",
-            "cF9zY3JpcHQYBCABKAkSFgoJcHJveHlfdXJpGAUgASgJQgPgQQMSHAoPaW5z",
-            "dGFuY2Vfb3duZXJzGAYgAygJQgPgQQQSFwoPc2VydmljZV9hY2NvdW50GAcg",
-            "ASgJEhkKDG1hY2hpbmVfdHlwZRgIIAEoCUID4EECElYKEmFjY2VsZXJhdG9y",
-            "X2NvbmZpZxgJIAEoCzI6Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRh",
-            "MS5JbnN0YW5jZS5BY2NlbGVyYXRvckNvbmZpZxJCCgVzdGF0ZRgKIAEoDjIu",
-            "Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRhMS5JbnN0YW5jZS5TdGF0",
-            "ZUID4EEDEhoKEmluc3RhbGxfZ3B1X2RyaXZlchgLIAEoCBIeChZjdXN0b21f",
-            "Z3B1X2RyaXZlcl9wYXRoGAwgASgJEk4KDmJvb3RfZGlza190eXBlGA0gASgO",
-            "MjEuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGExLkluc3RhbmNlLkRp",
-            "c2tUeXBlQgPgQQQSHgoRYm9vdF9kaXNrX3NpemVfZ2IYDiABKANCA+BBBBJO",
-            "Cg5kYXRhX2Rpc2tfdHlwZRgZIAEoDjIxLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
-            "a3MudjFiZXRhMS5JbnN0YW5jZS5EaXNrVHlwZUID4EEEEh4KEWRhdGFfZGlz",
-            "a19zaXplX2diGBogASgDQgPgQQQSIAoTbm9fcmVtb3ZlX2RhdGFfZGlzaxgb",
-            "IAEoCEID4EEEElUKD2Rpc2tfZW5jcnlwdGlvbhgPIAEoDjI3Lmdvb2dsZS5j",
-            "bG91ZC5ub3RlYm9va3MudjFiZXRhMS5JbnN0YW5jZS5EaXNrRW5jcnlwdGlv",
-            "bkID4EEEEhQKB2ttc19rZXkYECABKAlCA+BBBBIUCgxub19wdWJsaWNfaXAY",
-            "ESABKAgSFwoPbm9fcHJveHlfYWNjZXNzGBIgASgIEg8KB25ldHdvcmsYEyAB",
-            "KAkSDgoGc3VibmV0GBQgASgJEkQKBmxhYmVscxgVIAMoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5ub3RlYm9va3MudjFiZXRhMS5JbnN0YW5jZS5MYWJlbHNFbnRyeRJI",
-            "CghtZXRhZGF0YRgWIAMoCzI2Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFi",
-            "ZXRhMS5JbnN0YW5jZS5NZXRhZGF0YUVudHJ5EjQKC2NyZWF0ZV90aW1lGBcg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGBggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "Gm8KEUFjY2VsZXJhdG9yQ29uZmlnEkYKBHR5cGUYASABKA4yOC5nb29nbGUu",
-            "Y2xvdWQubm90ZWJvb2tzLnYxYmV0YTEuSW5zdGFuY2UuQWNjZWxlcmF0b3JU",
-            "eXBlEhIKCmNvcmVfY291bnQYAiABKAMaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARovCg1NZXRhZGF0YUVudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEihgIKD0FjY2VsZXJhdG9y",
-            "VHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQTlZJ",
-            "RElBX1RFU0xBX0s4MBABEhUKEU5WSURJQV9URVNMQV9QMTAwEAISFQoRTlZJ",
-            "RElBX1RFU0xBX1YxMDAQAxITCg9OVklESUFfVEVTTEFfUDQQBBITCg9OVklE",
-            "SUFfVEVTTEFfVDQQBRIXChNOVklESUFfVEVTTEFfVDRfVldTEAgSGQoVTlZJ",
-            "RElBX1RFU0xBX1AxMDBfVldTEAkSFwoTTlZJRElBX1RFU0xBX1A0X1ZXUxAK",
-            "EgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHIqQBCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgwKCFNUQVJUSU5HEAESEAoMUFJPVklTSU9OSU5HEAIS",
-            "CgoGQUNUSVZFEAMSDAoIU1RPUFBJTkcQBBILCgdTVE9QUEVEEAUSCwoHREVM",
-            "RVRFRBAGEg0KCVVQR1JBRElORxAHEhAKDElOSVRJQUxJWklORxAIEg8KC1JF",
-            "R0lTVEVSSU5HEAkiUwoIRGlza1R5cGUSGQoVRElTS19UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDwoLUERfU1RBTkRBUkQQARIKCgZQRF9TU0QQAhIPCgtQRF9CQUxB",
-            "TkNFRBADIkUKDkRpc2tFbmNyeXB0aW9uEh8KG0RJU0tfRU5DUllQVElPTl9V",
-            "TlNQRUNJRklFRBAAEggKBEdNRUsQARIICgRDTUVLEAI6T+pBTAohbm90ZWJv",
-            "b2tzLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVj",
-            "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX1CDQoLZW52aXJvbm1lbnRC5AEKImNv",
-            "bS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxYmV0YTFCDUluc3RhbmNlUHJv",
-            "dG9QAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9ub3RlYm9va3MvdjFiZXRhMTtub3RlYm9va3OqAh5Hb29nbGUuQ2xv",
-            "dWQuTm90ZWJvb2tzLlYxQmV0YTHKAh5Hb29nbGVcQ2xvdWRcTm90ZWJvb2tz",
-            "XFYxYmV0YTHqAiFHb29nbGU6OkNsb3VkOjpOb3RlYm9va3M6OlYxYmV0YTFi",
-            "BnByb3RvMw=="));
+            "ZW50LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIv4B",
+            "ChNSZXNlcnZhdGlvbkFmZmluaXR5El8KGGNvbnN1bWVfcmVzZXJ2YXRpb25f",
+            "dHlwZRgBIAEoDjI4Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRhMS5S",
+            "ZXNlcnZhdGlvbkFmZmluaXR5LlR5cGVCA+BBARIQCgNrZXkYAiABKAlCA+BB",
+            "ARITCgZ2YWx1ZXMYAyADKAlCA+BBASJfCgRUeXBlEhQKEFRZUEVfVU5TUEVD",
+            "SUZJRUQQABISCg5OT19SRVNFUlZBVElPThABEhMKD0FOWV9SRVNFUlZBVElP",
+            "ThACEhgKFFNQRUNJRklDX1JFU0VSVkFUSU9OEAMi2RIKCEluc3RhbmNlEhEK",
+            "BG5hbWUYASABKAlCA+BBAxI7Cgh2bV9pbWFnZRgCIAEoCzInLmdvb2dsZS5j",
+            "bG91ZC5ub3RlYm9va3MudjFiZXRhMS5WbUltYWdlSAASSQoPY29udGFpbmVy",
+            "X2ltYWdlGAMgASgLMi4uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGEx",
+            "LkNvbnRhaW5lckltYWdlSAASGwoTcG9zdF9zdGFydHVwX3NjcmlwdBgEIAEo",
+            "CRIWCglwcm94eV91cmkYBSABKAlCA+BBAxIcCg9pbnN0YW5jZV9vd25lcnMY",
+            "BiADKAlCA+BBBBIXCg9zZXJ2aWNlX2FjY291bnQYByABKAkSGQoMbWFjaGlu",
+            "ZV90eXBlGAggASgJQgPgQQISVgoSYWNjZWxlcmF0b3JfY29uZmlnGAkgASgL",
+            "MjouZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGExLkluc3RhbmNlLkFj",
+            "Y2VsZXJhdG9yQ29uZmlnEkIKBXN0YXRlGAogASgOMi4uZ29vZ2xlLmNsb3Vk",
+            "Lm5vdGVib29rcy52MWJldGExLkluc3RhbmNlLlN0YXRlQgPgQQMSGgoSaW5z",
+            "dGFsbF9ncHVfZHJpdmVyGAsgASgIEh4KFmN1c3RvbV9ncHVfZHJpdmVyX3Bh",
+            "dGgYDCABKAkSTgoOYm9vdF9kaXNrX3R5cGUYDSABKA4yMS5nb29nbGUuY2xv",
+            "dWQubm90ZWJvb2tzLnYxYmV0YTEuSW5zdGFuY2UuRGlza1R5cGVCA+BBBBIe",
+            "ChFib290X2Rpc2tfc2l6ZV9nYhgOIAEoA0ID4EEEEk4KDmRhdGFfZGlza190",
+            "eXBlGBkgASgOMjEuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGExLklu",
+            "c3RhbmNlLkRpc2tUeXBlQgPgQQQSHgoRZGF0YV9kaXNrX3NpemVfZ2IYGiAB",
+            "KANCA+BBBBIgChNub19yZW1vdmVfZGF0YV9kaXNrGBsgASgIQgPgQQQSVQoP",
+            "ZGlza19lbmNyeXB0aW9uGA8gASgOMjcuZ29vZ2xlLmNsb3VkLm5vdGVib29r",
+            "cy52MWJldGExLkluc3RhbmNlLkRpc2tFbmNyeXB0aW9uQgPgQQQSFAoHa21z",
+            "X2tleRgQIAEoCUID4EEEEhQKDG5vX3B1YmxpY19pcBgRIAEoCBIXCg9ub19w",
+            "cm94eV9hY2Nlc3MYEiABKAgSDwoHbmV0d29yaxgTIAEoCRIOCgZzdWJuZXQY",
+            "FCABKAkSRAoGbGFiZWxzGBUgAygLMjQuZ29vZ2xlLmNsb3VkLm5vdGVib29r",
+            "cy52MWJldGExLkluc3RhbmNlLkxhYmVsc0VudHJ5EkgKCG1ldGFkYXRhGBYg",
+            "AygLMjYuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGExLkluc3RhbmNl",
+            "Lk1ldGFkYXRhRW50cnkSRwoIbmljX3R5cGUYHCABKA4yMC5nb29nbGUuY2xv",
+            "dWQubm90ZWJvb2tzLnYxYmV0YTEuSW5zdGFuY2UuTmljVHlwZUID4EEBElYK",
+            "FHJlc2VydmF0aW9uX2FmZmluaXR5GB0gASgLMjMuZ29vZ2xlLmNsb3VkLm5v",
+            "dGVib29rcy52MWJldGExLlJlc2VydmF0aW9uQWZmaW5pdHlCA+BBARIbCg5j",
+            "YW5faXBfZm9yd2FyZBgfIAEoCEID4EEBEjQKC2NyZWF0ZV90aW1lGBcgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGBggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGm8K",
+            "EUFjY2VsZXJhdG9yQ29uZmlnEkYKBHR5cGUYASABKA4yOC5nb29nbGUuY2xv",
+            "dWQubm90ZWJvb2tzLnYxYmV0YTEuSW5zdGFuY2UuQWNjZWxlcmF0b3JUeXBl",
+            "EhIKCmNvcmVfY291bnQYAiABKAMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARovCg1NZXRhZGF0YUVudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEihgIKD0FjY2VsZXJhdG9yVHlw",
+            "ZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQTlZJRElB",
+            "X1RFU0xBX0s4MBABEhUKEU5WSURJQV9URVNMQV9QMTAwEAISFQoRTlZJRElB",
+            "X1RFU0xBX1YxMDAQAxITCg9OVklESUFfVEVTTEFfUDQQBBITCg9OVklESUFf",
+            "VEVTTEFfVDQQBRIXChNOVklESUFfVEVTTEFfVDRfVldTEAgSGQoVTlZJRElB",
+            "X1RFU0xBX1AxMDBfVldTEAkSFwoTTlZJRElBX1RFU0xBX1A0X1ZXUxAKEgoK",
+            "BlRQVV9WMhAGEgoKBlRQVV9WMxAHIsMBCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgwKCFNUQVJUSU5HEAESEAoMUFJPVklTSU9OSU5HEAISCgoG",
+            "QUNUSVZFEAMSDAoIU1RPUFBJTkcQBBILCgdTVE9QUEVEEAUSCwoHREVMRVRF",
+            "RBAGEg0KCVVQR1JBRElORxAHEhAKDElOSVRJQUxJWklORxAIEg8KC1JFR0lT",
+            "VEVSSU5HEAkSDgoKU1VTUEVORElORxAKEg0KCVNVU1BFTkRFRBALIlMKCERp",
+            "c2tUeXBlEhkKFURJU0tfVFlQRV9VTlNQRUNJRklFRBAAEg8KC1BEX1NUQU5E",
+            "QVJEEAESCgoGUERfU1NEEAISDwoLUERfQkFMQU5DRUQQAyJFCg5EaXNrRW5j",
+            "cnlwdGlvbhIfChtESVNLX0VOQ1JZUFRJT05fVU5TUEVDSUZJRUQQABIICgRH",
+            "TUVLEAESCAoEQ01FSxACIj4KB05pY1R5cGUSGAoUVU5TUEVDSUZJRURfTklD",
+            "X1RZUEUQABIOCgpWSVJUSU9fTkVUEAESCQoFR1ZOSUMQAjpP6kFMCiFub3Rl",
+            "Ym9va3MuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USJ3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfUINCgtlbnZpcm9ubWVudELkAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRhMUINSW5zdGFuY2VQ",
+            "cm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL25vdGVib29rcy92MWJldGExO25vdGVib29rc6oCHkdvb2dsZS5D",
+            "bG91ZC5Ob3RlYm9va3MuVjFCZXRhMcoCHkdvb2dsZVxDbG91ZFxOb3RlYm9v",
+            "a3NcVjFiZXRhMeoCIUdvb2dsZTo6Q2xvdWQ6Ok5vdGVib29rczo6VjFiZXRh",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1Beta1.EnvironmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance), global::Google.Cloud.Notebooks.V1Beta1.Instance.Parser, new[]{ "Name", "VmImage", "ContainerImage", "PostStartupScript", "ProxyUri", "InstanceOwners", "ServiceAccount", "MachineType", "AcceleratorConfig", "State", "InstallGpuDriver", "CustomGpuDriverPath", "BootDiskType", "BootDiskSizeGb", "DataDiskType", "DataDiskSizeGb", "NoRemoveDataDisk", "DiskEncryption", "KmsKey", "NoPublicIp", "NoProxyAccess", "Network", "Subnet", "Labels", "Metadata", "CreateTime", "UpdateTime" }, new[]{ "Environment" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig), global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity), global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Parser, new[]{ "ConsumeReservationType", "Key", "Values" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance), global::Google.Cloud.Notebooks.V1Beta1.Instance.Parser, new[]{ "Name", "VmImage", "ContainerImage", "PostStartupScript", "ProxyUri", "InstanceOwners", "ServiceAccount", "MachineType", "AcceleratorConfig", "State", "InstallGpuDriver", "CustomGpuDriverPath", "BootDiskType", "BootDiskSizeGb", "DataDiskType", "DataDiskSizeGb", "NoRemoveDataDisk", "DiskEncryption", "KmsKey", "NoPublicIp", "NoProxyAccess", "Network", "Subnet", "Labels", "Metadata", "NicType", "ReservationAffinity", "CanIpForward", "CreateTime", "UpdateTime" }, new[]{ "Environment" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption), typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig), global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
             null, null, })
           }));
     }
@@ -93,6 +106,301 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
   }
   #region Messages
+  /// <summary>
+  /// Reservation Affinity for consuming Zonal reservation.
+  /// </summary>
+  public sealed partial class ReservationAffinity : pb::IMessage<ReservationAffinity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReservationAffinity> _parser = new pb::MessageParser<ReservationAffinity>(() => new ReservationAffinity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReservationAffinity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Notebooks.V1Beta1.InstanceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationAffinity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationAffinity(ReservationAffinity other) : this() {
+      consumeReservationType_ = other.consumeReservationType_;
+      key_ = other.key_;
+      values_ = other.values_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationAffinity Clone() {
+      return new ReservationAffinity(this);
+    }
+
+    /// <summary>Field number for the "consume_reservation_type" field.</summary>
+    public const int ConsumeReservationTypeFieldNumber = 1;
+    private global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type consumeReservationType_ = global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified;
+    /// <summary>
+    /// Optional. Type of reservation to consume
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type ConsumeReservationType {
+      get { return consumeReservationType_; }
+      set {
+        consumeReservationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 2;
+    private string key_ = "";
+    /// <summary>
+    /// Optional. Corresponds to the label key of reservation resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "values" field.</summary>
+    public const int ValuesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_values_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Corresponds to the label values of reservation resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Values {
+      get { return values_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReservationAffinity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReservationAffinity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ConsumeReservationType != other.ConsumeReservationType) return false;
+      if (Key != other.Key) return false;
+      if(!values_.Equals(other.values_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ConsumeReservationType != global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified) hash ^= ConsumeReservationType.GetHashCode();
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      hash ^= values_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ConsumeReservationType != global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ConsumeReservationType);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Key);
+      }
+      values_.WriteTo(output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ConsumeReservationType != global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ConsumeReservationType);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Key);
+      }
+      values_.WriteTo(ref output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ConsumeReservationType != global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConsumeReservationType);
+      }
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      size += values_.CalculateSize(_repeated_values_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReservationAffinity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ConsumeReservationType != global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type.Unspecified) {
+        ConsumeReservationType = other.ConsumeReservationType;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      values_.Add(other.values_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ConsumeReservationType = (global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Key = input.ReadString();
+            break;
+          }
+          case 26: {
+            values_.AddEntriesFrom(input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ConsumeReservationType = (global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Key = input.ReadString();
+            break;
+          }
+          case 26: {
+            values_.AddEntriesFrom(ref input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReservationAffinity message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Indicates whether to consume capacity from an reservation or not.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Default type.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Do not consume from any allocated capacity.
+        /// </summary>
+        [pbr::OriginalName("NO_RESERVATION")] NoReservation = 1,
+        /// <summary>
+        /// Consume any reservation available.
+        /// </summary>
+        [pbr::OriginalName("ANY_RESERVATION")] AnyReservation = 2,
+        /// <summary>
+        /// Must consume from a specific reservation. Must specify key value fields
+        /// for specifying the reservations.
+        /// </summary>
+        [pbr::OriginalName("SPECIFIC_RESERVATION")] SpecificReservation = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
   /// <summary>
   /// The definition of a notebook instance.
   /// </summary>
@@ -110,7 +418,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Notebooks.V1Beta1.InstanceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Notebooks.V1Beta1.InstanceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,6 +461,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       subnet_ = other.subnet_;
       labels_ = other.labels_.Clone();
       metadata_ = other.metadata_.Clone();
+      nicType_ = other.nicType_;
+      reservationAffinity_ = other.reservationAffinity_ != null ? other.reservationAffinity_.Clone() : null;
+      canIpForward_ = other.canIpForward_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       switch (other.EnvironmentCase) {
@@ -225,7 +536,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// <summary>
     /// Path to a Bash script that automatically runs after a notebook instance
     /// fully boots up. The path must be a URL or
-    /// Cloud Storage path (`gs://path-to-file/file-name`).
+    /// Cloud Storage path (gs://path-to-file/file-name).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -240,8 +551,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int ProxyUriFieldNumber = 5;
     private string proxyUri_ = "";
     /// <summary>
-    /// Output only. The proxy endpoint that is used to access the Jupyter
-    /// notebook.
+    /// Output only. The proxy endpoint that is used to access the Jupyter notebook.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -258,8 +568,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> instanceOwners_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Input only. The owner of this instance after creation. Format:
-    /// `alias@example.com`
+    /// Input only. The owner of this instance after creation. Format: `alias@example.com`
     ///
     /// Currently supports one owner only. If not specified, all of the service
     /// account users of your VM instance's service account can use
@@ -297,8 +606,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int MachineTypeFieldNumber = 8;
     private string machineType_ = "";
     /// <summary>
-    /// Required. The [Compute Engine machine
-    /// type](https://cloud.google.com/compute/docs/machine-types) of this
+    /// Required. The [Compute Engine machine type](/compute/docs/machine-types) of this
     /// instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -317,7 +625,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// The hardware accelerator used on this instance. If you use
     /// accelerators, make sure that your configuration has
     /// [enough vCPUs and memory to support the `machine_type` you
-    /// have selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
+    /// have selected](/compute/docs/gpus/#gpus-list).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -381,8 +689,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int BootDiskTypeFieldNumber = 13;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType bootDiskType_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified;
     /// <summary>
-    /// Input only. The type of the boot disk attached to this instance, defaults
-    /// to standard persistent disk (`PD_STANDARD`).
+    /// Input only. The type of the boot disk attached to this instance, defaults to
+    /// standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -397,9 +705,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int BootDiskSizeGbFieldNumber = 14;
     private long bootDiskSizeGb_;
     /// <summary>
-    /// Input only. The size of the boot disk in GB attached to this instance, up
-    /// to a maximum of 64000&amp;nbsp;GB (64&amp;nbsp;TB). The minimum recommended value
-    /// is 100&amp;nbsp;GB. If not specified, this defaults to 100.
+    /// Input only. The size of the boot disk in GB attached to this instance, up to a maximum
+    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). The minimum recommended value is
+    /// 100&amp;nbsp;GB. If not specified, this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -414,8 +722,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DataDiskTypeFieldNumber = 25;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType dataDiskType_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified;
     /// <summary>
-    /// Input only. The type of the data disk attached to this instance, defaults
-    /// to standard persistent disk (`PD_STANDARD`).
+    /// Input only. The type of the data disk attached to this instance, defaults to
+    /// standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -430,10 +738,10 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DataDiskSizeGbFieldNumber = 26;
     private long dataDiskSizeGb_;
     /// <summary>
-    /// Input only. The size of the data disk in GB attached to this instance, up
-    /// to a maximum of 64000&amp;nbsp;GB (64&amp;nbsp;TB). You can choose the size of the
-    /// data disk based on how big your notebooks and data are. If not specified,
-    /// this defaults to 100.
+    /// Input only. The size of the data disk in GB attached to this instance, up to a maximum
+    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). You can choose the size of the data disk
+    /// based on how big your notebooks and data are. If not specified, this
+    /// defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -448,8 +756,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int NoRemoveDataDiskFieldNumber = 27;
     private bool noRemoveDataDisk_;
     /// <summary>
-    /// Input only. If true, the data disk will not be auto deleted when deleting
-    /// the instance.
+    /// Input only. If true, the data disk will not be auto deleted when deleting the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -464,8 +771,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DiskEncryptionFieldNumber = 15;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption diskEncryption_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption.Unspecified;
     /// <summary>
-    /// Input only. Disk encryption method used on the boot and data disks,
-    /// defaults to GMEK.
+    /// Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -480,12 +786,12 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int KmsKeyFieldNumber = 16;
     private string kmsKey_ = "";
     /// <summary>
-    /// Input only. The KMS key used to encrypt the disks, only applicable if
-    /// disk_encryption is CMEK. Format:
+    /// Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption
+    /// is CMEK.
+    /// Format:
     /// `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}`
     ///
-    /// Learn more about [using your own encryption keys](
-    /// https://cloud.google.com/kms/docs/quickstart).
+    /// Learn more about [using your own encryption keys](/kms/docs/quickstart).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -589,6 +895,56 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       get { return metadata_; }
     }
 
+    /// <summary>Field number for the "nic_type" field.</summary>
+    public const int NicTypeFieldNumber = 28;
+    private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType nicType_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType;
+    /// <summary>
+    /// Optional. The type of vNIC to be used on this interface. This may be gVNIC or
+    /// VirtioNet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType NicType {
+      get { return nicType_; }
+      set {
+        nicType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reservation_affinity" field.</summary>
+    public const int ReservationAffinityFieldNumber = 29;
+    private global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity reservationAffinity_;
+    /// <summary>
+    /// Optional. The optional reservation affinity. Setting this field will apply
+    /// the specified [Zonal Compute
+    /// Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+    /// to this notebook instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity ReservationAffinity {
+      get { return reservationAffinity_; }
+      set {
+        reservationAffinity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "can_ip_forward" field.</summary>
+    public const int CanIpForwardFieldNumber = 31;
+    private bool canIpForward_;
+    /// <summary>
+    /// Optional. Flag to enable ip forwarding or not, default false/off.
+    /// https://cloud.google.com/vpc/docs/using-routes#canipforward
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CanIpForward {
+      get { return canIpForward_; }
+      set {
+        canIpForward_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 23;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -680,6 +1036,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (Subnet != other.Subnet) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Metadata.Equals(other.Metadata)) return false;
+      if (NicType != other.NicType) return false;
+      if (!object.Equals(ReservationAffinity, other.ReservationAffinity)) return false;
+      if (CanIpForward != other.CanIpForward) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (EnvironmentCase != other.EnvironmentCase) return false;
@@ -715,6 +1074,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (Subnet.Length != 0) hash ^= Subnet.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Metadata.GetHashCode();
+      if (NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) hash ^= NicType.GetHashCode();
+      if (reservationAffinity_ != null) hash ^= ReservationAffinity.GetHashCode();
+      if (CanIpForward != false) hash ^= CanIpForward.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) environmentCase_;
@@ -835,6 +1197,18 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         output.WriteRawTag(216, 1);
         output.WriteBool(NoRemoveDataDisk);
       }
+      if (NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) {
+        output.WriteRawTag(224, 1);
+        output.WriteEnum((int) NicType);
+      }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(ReservationAffinity);
+      }
+      if (CanIpForward != false) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(CanIpForward);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -944,6 +1318,18 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         output.WriteRawTag(216, 1);
         output.WriteBool(NoRemoveDataDisk);
       }
+      if (NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) {
+        output.WriteRawTag(224, 1);
+        output.WriteEnum((int) NicType);
+      }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(ReservationAffinity);
+      }
+      if (CanIpForward != false) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(CanIpForward);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1023,6 +1409,15 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += metadata_.CalculateSize(_map_metadata_codec);
+      if (NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) NicType);
+      }
+      if (reservationAffinity_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReservationAffinity);
+      }
+      if (CanIpForward != false) {
+        size += 2 + 1;
+      }
       if (createTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
@@ -1107,6 +1502,18 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       }
       labels_.Add(other.labels_);
       metadata_.Add(other.metadata_);
+      if (other.NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) {
+        NicType = other.NicType;
+      }
+      if (other.reservationAffinity_ != null) {
+        if (reservationAffinity_ == null) {
+          ReservationAffinity = new global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity();
+        }
+        ReservationAffinity.MergeFrom(other.ReservationAffinity);
+      }
+      if (other.CanIpForward != false) {
+        CanIpForward = other.CanIpForward;
+      }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -1276,6 +1683,21 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             NoRemoveDataDisk = input.ReadBool();
             break;
           }
+          case 224: {
+            NicType = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType) input.ReadEnum();
+            break;
+          }
+          case 234: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
+            break;
+          }
+          case 248: {
+            CanIpForward = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1418,6 +1840,21 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             NoRemoveDataDisk = input.ReadBool();
             break;
           }
+          case 224: {
+            NicType = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType) input.ReadEnum();
+            break;
+          }
+          case 234: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.Notebooks.V1Beta1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
+            break;
+          }
+          case 248: {
+            CanIpForward = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1450,7 +1887,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_V100")] NvidiaTeslaV100 = 3,
         /// <summary>
-        /// Accelerator type is Nvidia Tesla P_4.
+        /// Accelerator type is Nvidia Tesla P4.
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P4")] NvidiaTeslaP4 = 4,
         /// <summary>
@@ -1466,7 +1903,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P100_VWS")] NvidiaTeslaP100Vws = 9,
         /// <summary>
-        /// Accelerator type is NVIDIA Tesla P_4 Virtual Workstations.
+        /// Accelerator type is NVIDIA Tesla P4 Virtual Workstations.
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P4_VWS")] NvidiaTeslaP4Vws = 10,
         /// <summary>
@@ -1524,6 +1961,14 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// The instance is getting registered.
         /// </summary>
         [pbr::OriginalName("REGISTERING")] Registering = 9,
+        /// <summary>
+        /// The instance is suspending.
+        /// </summary>
+        [pbr::OriginalName("SUSPENDING")] Suspending = 10,
+        /// <summary>
+        /// The instance is suspended.
+        /// </summary>
+        [pbr::OriginalName("SUSPENDED")] Suspended = 11,
       }
 
       /// <summary>
@@ -1564,6 +2009,25 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// Use customer managed encryption keys to encrypt the boot disk.
         /// </summary>
         [pbr::OriginalName("CMEK")] Cmek = 2,
+      }
+
+      /// <summary>
+      /// The type of vNIC driver.
+      /// </summary>
+      public enum NicType {
+        /// <summary>
+        /// No type specified. Default should be UNSPECIFIED_NIC_TYPE.
+        /// </summary>
+        [pbr::OriginalName("UNSPECIFIED_NIC_TYPE")] UnspecifiedNicType = 0,
+        /// <summary>
+        /// VIRTIO. Default in Notebooks DLVM.
+        /// </summary>
+        [pbr::OriginalName("VIRTIO_NET")] VirtioNet = 1,
+        /// <summary>
+        /// GVNIC. Alternative to VIRTIO.
+        /// https://github.com/GoogleCloudPlatform/compute-virtual-ethernet-linux
+        /// </summary>
+        [pbr::OriginalName("GVNIC")] Gvnic = 2,
       }
 
       /// <summary>
