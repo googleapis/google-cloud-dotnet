@@ -88,7 +88,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "LnYxYWxwaGEuSm9iU3RhdHVzLlN0YXRlEkQKDm5ld190YXNrX3N0YXRlGAMg",
             "ASgOMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5T",
             "dGF0ZSJLCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIVChFKT0JfU1RB",
-            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIpIPChBBbGxv",
+            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIqcPChBBbGxv",
             "Y2F0aW9uUG9saWN5Ek0KCGxvY2F0aW9uGAEgASgLMjsuZ29vZ2xlLmNsb3Vk",
             "LmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5Mb2NhdGlvblBvbGlj",
             "eRJRCghpbnN0YW5jZRgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
@@ -112,7 +112,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "bGxvY2F0aW9uUG9saWN5LkRpc2tIABIXCg1leGlzdGluZ19kaXNrGAIgASgJ",
             "SAASEwoLZGV2aWNlX25hbWUYAyABKAlCCgoIYXR0YWNoZWQaSwoLQWNjZWxl",
             "cmF0b3ISDAoEdHlwZRgBIAEoCRINCgVjb3VudBgCIAEoAxIfChNpbnN0YWxs",
-            "X2dwdV9kcml2ZXJzGAMgASgIQgIYARrZAgoOSW5zdGFuY2VQb2xpY3kSIQoV",
+            "X2dwdV9kcml2ZXJzGAMgASgIQgIYARruAgoOSW5zdGFuY2VQb2xpY3kSIQoV",
             "YWxsb3dlZF9tYWNoaW5lX3R5cGVzGAEgAygJQgIYARIUCgxtYWNoaW5lX3R5",
             "cGUYAiABKAkSGAoQbWluX2NwdV9wbGF0Zm9ybRgDIAEoCRJaChJwcm92aXNp",
             "b25pbmdfbW9kZWwYBCABKA4yPi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
@@ -120,41 +120,41 @@ namespace Google.Cloud.Batch.V1Alpha {
             "ZXJhdG9ycxgFIAMoCzI4Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFs",
             "bG9jYXRpb25Qb2xpY3kuQWNjZWxlcmF0b3ISSAoFZGlza3MYBiADKAsyOS5n",
             "b29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5LkF0",
-            "dGFjaGVkRGlzaxq2AQoYSW5zdGFuY2VQb2xpY3lPclRlbXBsYXRlEk0KBnBv",
-            "bGljeRgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9j",
-            "YXRpb25Qb2xpY3kuSW5zdGFuY2VQb2xpY3lIABIbChFpbnN0YW5jZV90ZW1w",
-            "bGF0ZRgCIAEoCUgAEhsKE2luc3RhbGxfZ3B1X2RyaXZlcnMYAyABKAhCEQoP",
-            "cG9saWN5X3RlbXBsYXRlGlcKEE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0d29y",
-            "axgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEh4KFm5vX2V4dGVybmFsX2lw",
-            "X2FkZHJlc3MYAyABKAgaagoNTmV0d29ya1BvbGljeRJZChJuZXR3b3JrX2lu",
-            "dGVyZmFjZXMYASADKAsyPS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5B",
-            "bGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJbnRlcmZhY2UaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNp",
-            "b25pbmdNb2RlbBIiCh5QUk9WSVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQ",
-            "ABIMCghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIukF",
-            "CglUYXNrR3JvdXASEQoEbmFtZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgD",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPg",
-            "QQISEgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJR",
-            "ChFzY2hlZHVsaW5nX3BvbGljeRgGIAEoDjI2Lmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLlRhc2tHcm91cC5TY2hlZHVsaW5nUG9saWN5EkcKEWFsbG9j",
-            "YXRpb25fcG9saWN5GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
-            "aGEuQWxsb2NhdGlvblBvbGljeRJBCgZsYWJlbHMYCCADKAsyMS5nb29nbGUu",
-            "Y2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNrR3JvdXAuTGFiZWxzRW50cnkSQgoR",
-            "dGFza19lbnZpcm9ubWVudHMYCSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djFhbHBoYS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAog",
-            "ASgDEhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZl",
-            "X3NzaBgMIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIk4KEFNjaGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElO",
-            "R19QT0xJQ1lfVU5TUEVDSUZJRUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxF",
-            "EAE6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFza0dyb3VwEkpwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9i",
-            "fS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIzCg5TZXJ2aWNlQWNjb3VudBIN",
-            "CgVlbWFpbBgBIAEoCRISCgZzY29wZXMYAiADKAlCAhgBQs0BCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaP2dvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmF0Y2gvdjFh",
-            "bHBoYTtiYXRjaKICA0dDQqoCGkdvb2dsZS5DbG91ZC5CYXRjaC5WMUFscGhh",
-            "ygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
+            "dGFjaGVkRGlzaxITCgtyZXNlcnZhdGlvbhgHIAEoCRq2AQoYSW5zdGFuY2VQ",
+            "b2xpY3lPclRlbXBsYXRlEk0KBnBvbGljeRgBIAEoCzI7Lmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuSW5zdGFuY2VQb2xp",
+            "Y3lIABIbChFpbnN0YW5jZV90ZW1wbGF0ZRgCIAEoCUgAEhsKE2luc3RhbGxf",
+            "Z3B1X2RyaXZlcnMYAyABKAhCEQoPcG9saWN5X3RlbXBsYXRlGlcKEE5ldHdv",
+            "cmtJbnRlcmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIg",
+            "ASgJEh4KFm5vX2V4dGVybmFsX2lwX2FkZHJlc3MYAyABKAgaagoNTmV0d29y",
+            "a1BvbGljeRJZChJuZXR3b3JrX2ludGVyZmFjZXMYASADKAsyPS5nb29nbGUu",
+            "Y2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJ",
+            "bnRlcmZhY2UaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ASJgChFQcm92aXNpb25pbmdNb2RlbBIiCh5QUk9WSVNJT05J",
+            "TkdfTU9ERUxfVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEggKBFNQT1QQ",
+            "AhIPCgtQUkVFTVBUSUJMRRADIukFCglUYXNrR3JvdXASEQoEbmFtZRgBIAEo",
+            "CUID4EEDEjwKCXRhc2tfc3BlYxgDIAEoCzIkLmdvb2dsZS5jbG91ZC5iYXRj",
+            "aC52MWFscGhhLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEoAxIT",
+            "CgtwYXJhbGxlbGlzbRgFIAEoAxJRChFzY2hlZHVsaW5nX3BvbGljeRgGIAEo",
+            "DjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91cC5TY2hl",
+            "ZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRpb25fcG9saWN5GAcgASgLMiwuZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeRJBCgZs",
+            "YWJlbHMYCCADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNr",
+            "R3JvdXAuTGFiZWxzRW50cnkSQgoRdGFza19lbnZpcm9ubWVudHMYCSADKAsy",
+            "Jy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudBIbChN0",
+            "YXNrX2NvdW50X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9zdHNfZmls",
+            "ZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3NzaBgMIAEoCBotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIk4KEFNjaGVkdWxp",
+            "bmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lfVU5TUEVDSUZJRUQQABIX",
+            "ChNBU19TT09OX0FTX1BPU1NJQkxFEAE6b+pBbAoeYmF0Y2guZ29vZ2xlYXBp",
+            "cy5jb20vVGFza0dyb3VwEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3Vw",
+            "fSIzCg5TZXJ2aWNlQWNjb3VudBINCgVlbWFpbBgBIAEoCRISCgZzY29wZXMY",
+            "AiADKAlCAhgBQs0BCh5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFC",
+            "CEpvYlByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvYmF0Y2gvdjFhbHBoYTtiYXRjaKICA0dDQqoCGkdvb2ds",
+            "ZS5DbG91ZC5CYXRjaC5WMUFscGhhygIaR29vZ2xlXENsb3VkXEJhdGNoXFYx",
+            "YWxwaGHqAh1Hb29nbGU6OkNsb3VkOjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -169,7 +169,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Disk.Parser, new[]{ "Image", "Snapshot", "Type", "SizeGb", "DiskInterface" }, new[]{ "DataSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk.Parser, new[]{ "NewDisk", "ExistingDisk", "DeviceName" }, new[]{ "Attached" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "AllowedMachineTypes", "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "Disks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "AllowedMachineTypes", "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "Disks", "Reservation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers" }, new[]{ "PolicyTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
@@ -2942,7 +2942,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel> provisioningModels_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel>();
     /// <summary>
-    /// Deprecated: please use instances[i].policy.provisioning_model instead.
+    /// Deprecated: please use instances[0].policy.provisioning_model instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3991,7 +3991,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// A new or an existing persistent disk or a local ssd attached to a VM
+      /// A new or an existing persistent disk (PD) or a local ssd attached to a VM
       /// instance.
       /// </summary>
       public sealed partial class AttachedDisk : pb::IMessage<AttachedDisk>
@@ -4313,7 +4313,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// Accelerator describes Compute Engine accelerators to be attached to VMs.
+      /// Accelerator describes Compute Engine accelerators to be attached to the VM.
       /// </summary>
       public sealed partial class Accelerator : pb::IMessage<Accelerator>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4633,6 +4633,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           provisioningModel_ = other.provisioningModel_;
           accelerators_ = other.accelerators_.Clone();
           disks_ = other.disks_.Clone();
+          reservation_ = other.reservation_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4712,7 +4713,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator> accelerators_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator>();
         /// <summary>
         /// The accelerators attached to each VM instance.
-        /// Not yet implemented.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4727,12 +4727,27 @@ namespace Google.Cloud.Batch.V1Alpha {
         private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk> disks_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk>();
         /// <summary>
         /// Non-boot disks to be attached for each VM created by this InstancePolicy.
-        /// New disks will be deleted when the attached VM is deleted.
+        /// New disks will be deleted when the VM is deleted.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.AttachedDisk> Disks {
           get { return disks_; }
+        }
+
+        /// <summary>Field number for the "reservation" field.</summary>
+        public const int ReservationFieldNumber = 7;
+        private string reservation_ = "";
+        /// <summary>
+        /// If specified, VMs will be allocated only inside the matching reservation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Reservation {
+          get { return reservation_; }
+          set {
+            reservation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4756,6 +4771,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (ProvisioningModel != other.ProvisioningModel) return false;
           if(!accelerators_.Equals(other.accelerators_)) return false;
           if(!disks_.Equals(other.disks_)) return false;
+          if (Reservation != other.Reservation) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4769,6 +4785,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (ProvisioningModel != global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.ProvisioningModel.Unspecified) hash ^= ProvisioningModel.GetHashCode();
           hash ^= accelerators_.GetHashCode();
           hash ^= disks_.GetHashCode();
+          if (Reservation.Length != 0) hash ^= Reservation.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4802,6 +4819,10 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           accelerators_.WriteTo(output, _repeated_accelerators_codec);
           disks_.WriteTo(output, _repeated_disks_codec);
+          if (Reservation.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Reservation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4827,6 +4848,10 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           accelerators_.WriteTo(ref output, _repeated_accelerators_codec);
           disks_.WriteTo(ref output, _repeated_disks_codec);
+          if (Reservation.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Reservation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4849,6 +4874,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           size += accelerators_.CalculateSize(_repeated_accelerators_codec);
           size += disks_.CalculateSize(_repeated_disks_codec);
+          if (Reservation.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Reservation);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4873,6 +4901,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           accelerators_.Add(other.accelerators_);
           disks_.Add(other.disks_);
+          if (other.Reservation.Length != 0) {
+            Reservation = other.Reservation;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4912,6 +4943,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 disks_.AddEntriesFrom(input, _repeated_disks_codec);
                 break;
               }
+              case 58: {
+                Reservation = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -4949,6 +4984,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 50: {
                 disks_.AddEntriesFrom(ref input, _repeated_disks_codec);
+                break;
+              }
+              case 58: {
+                Reservation = input.ReadString();
                 break;
               }
             }
