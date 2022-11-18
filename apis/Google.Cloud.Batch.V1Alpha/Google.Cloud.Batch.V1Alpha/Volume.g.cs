@@ -53,9 +53,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
   #region Messages
   /// <summary>
-  /// Volume and mount parameters to be associated with a TaskSpec. A TaskSpec
-  /// might describe zero, one, or multiple volumes to be mounted as part of the
-  /// task.
+  /// Volume describes a volume and parameters for it to be mounted to a VM.
   /// </summary>
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -120,7 +118,8 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// <summary>Field number for the "nfs" field.</summary>
     public const int NfsFieldNumber = 1;
     /// <summary>
-    /// An NFS source for the volume (could be a Filestore, for example).
+    /// A Network File System (NFS) volume. For example, a
+    /// Filestore file share.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,7 +134,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// <summary>Field number for the "pd" field.</summary>
     public const int PdFieldNumber = 2;
     /// <summary>
-    /// A persistent disk source for the volume.
+    /// Deprecated: please use device_name instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,7 +150,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// <summary>Field number for the "gcs" field.</summary>
     public const int GcsFieldNumber = 3;
     /// <summary>
-    /// A Google Cloud Storage source for the volume.
+    /// A Google Cloud Storage (GCS) volume.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,7 +165,11 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// <summary>Field number for the "device_name" field.</summary>
     public const int DeviceNameFieldNumber = 6;
     /// <summary>
-    /// Device name of an attached disk
+    /// Device name of an attached disk volume, which should align with a
+    /// device_name specified by
+    /// job.allocation_policy.instances[0].policy.disks[i].device_name or
+    /// defined by the given instance template in
+    /// job.allocation_policy.instances[0].instance_template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,7 +185,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int MountPathFieldNumber = 4;
     private string mountPath_ = "";
     /// <summary>
-    /// Mount path for the volume, e.g. /mnt/share
+    /// The mount path for the volume, e.g. /mnt/disks/share.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,14 +202,15 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> mountOptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Mount options
-    /// For Google Cloud Storage, mount options are the global options supported by
-    /// gcsfuse tool. Batch will use them to mount the volume with the following
-    /// command:
-    /// "gcsfuse [global options] bucket mountpoint".
-    /// For PD, NFS, mount options are these supported by /etc/fstab. Batch will
-    /// use Fstab to mount such volumes.
-    /// https://help.ubuntu.com/community/Fstab
+    /// For Google Cloud Storage (GCS), mount options are the options supported by
+    /// the gcsfuse tool (https://github.com/GoogleCloudPlatform/gcsfuse).
+    /// For existing persistent disks, mount options provided by the
+    /// mount command (https://man7.org/linux/man-pages/man8/mount.8.html) except
+    /// writing are supported. This is due to restrictions of multi-writer mode
+    /// (https://cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
+    /// For other attached disks and Network File System (NFS), mount options are
+    /// these supported by the mount command
+    /// (https://man7.org/linux/man-pages/man8/mount.8.html).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -525,7 +529,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// Represents an NFS server and remote path: &lt;server>:&lt;remote_path>
+  /// Represents an NFS volume.
   /// </summary>
   public sealed partial class NFS : pb::IMessage<NFS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -576,7 +580,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int ServerFieldNumber = 1;
     private string server_ = "";
     /// <summary>
-    /// URI of the NFS server, e.g. an IP address.
+    /// The IP address of the NFS.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -591,7 +595,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int RemotePathFieldNumber = 2;
     private string remotePath_ = "";
     /// <summary>
-    /// Remote source path exported from NFS, e.g., "/share".
+    /// Remote source path exported from the NFS, e.g., "/share".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -760,7 +764,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// Represents a GCP persistent disk
+  /// Deprecated: please use device_name instead.
   /// </summary>
   public sealed partial class PD : pb::IMessage<PD>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1039,7 +1043,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// Represents a Google Cloud Storage volume source config.
+  /// Represents a Google Cloud Storage volume.
   /// </summary>
   public sealed partial class GCS : pb::IMessage<GCS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
