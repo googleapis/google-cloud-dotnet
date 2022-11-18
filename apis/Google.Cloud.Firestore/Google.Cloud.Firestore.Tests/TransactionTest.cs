@@ -87,6 +87,28 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public async Task GetSnaphsotAsync_AggregationQuery()
+        {
+            var db = CreateFirestoreDbExpectingNoCommits();
+            var transaction = await Transaction.BeginAsync(db, null, default);
+            var query = db.Collection("col");
+            var aggQuery = query.Count();
+            var snapshot = await transaction.GetSnapshotAsync(aggQuery);
+            Assert.Equal(aggQuery, snapshot.Query);
+            Assert.NotNull(snapshot);
+        }
+
+        [Fact]
+        public async Task GetSnaphotAsync_FailAfterWriteForAggregationQuery()
+        {
+            var db = CreateFirestoreDbExpectingNoCommits();
+            var transaction = await Transaction.BeginAsync(db, null, default);
+            var doc = db.Document("col/doc");
+            transaction.Delete(doc);
+            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetSnapshotAsync(doc.Parent));
+        }
+
+        [Fact]
         public async Task CommitAsync()
         {
             var client = new TransactionTestingClient();

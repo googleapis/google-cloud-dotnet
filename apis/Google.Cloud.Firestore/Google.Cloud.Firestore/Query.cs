@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// You may obtain a copy of the License at 
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     http://www.apache.org/licenses/LICENSE-2.0 
 //
-// Unless required by applicable law or agreed to in writing, software
+// Unless required by applicable law or agreed to in writing, software 
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
+// See the License for the specific language governing permissions and 
 // limitations under the License.
 
 using Google.Api.Gax;
@@ -22,6 +22,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types;
+using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
 using FieldOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator;
 using UnaryOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator;
@@ -418,6 +420,13 @@ namespace Google.Cloud.Firestore
             Where(fieldPath, FieldOp.NotIn, ValidateWhereInValues(values));
 
         /// <summary>
+        /// Returns an <see cref="AggregateQuery"/> with count(*) aggregation applied on this query.
+        /// </summary>
+        /// <returns>An instance of <see cref="AggregateQuery"/> with count(*) aggregation applied.</returns>
+        public AggregateQuery Count() =>
+            new AggregateQuery(this).WithAggregation(Aggregates.CreateCountAggregate());
+
+        /// <summary>
         /// Validates that a value is suitable for a WhereIn or WhereNotIn query. It can't be null or a string.
         /// The reason for highlighting string is that it's an IEnumerable{char}, but users
         /// don't tend to think of it that way: anyone passing a single string to WhereIn is doing so
@@ -677,7 +686,7 @@ namespace Google.Cloud.Firestore
         /// </remarks>
         /// <param name="fieldValues">The field values. Must not be null or empty, or have more values than query has orderings.</param>
         /// <returns>A new query based on the current one, but with the specified end position.</returns>
-        public Query EndAt(params object[] fieldValues) => EndAt(fieldValues, false);        
+        public Query EndAt(params object[] fieldValues) => EndAt(fieldValues, false);
 
         /// <summary>
         /// Creates and returns a new query that starts at the document snapshot provided fields relative to the order of the

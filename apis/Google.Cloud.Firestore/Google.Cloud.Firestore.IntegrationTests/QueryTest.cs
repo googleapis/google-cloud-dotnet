@@ -431,6 +431,24 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(new[] { "a", "b", "d", "e" }, ids);
         }
 
+        [Fact]
+        public async Task Count_WithoutLimit()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshot = await collection.Count().GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.Length, snapshot.Count);
+        }
+
+        [Fact]
+        public async Task Count_WithLimit()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshotWithoutLimit = await collection.Count().GetSnapshotAsync();
+            var snapshotWithLimit = await collection.Limit(2).Count().GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.Length, snapshotWithoutLimit.Count);
+            Assert.Equal(2, snapshotWithLimit.Count);
+        }
+
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
         {
             { "StringArray", "x", new[] { "string-x,y", "mixed" } },
