@@ -3409,7 +3409,7 @@ namespace Google.Cloud.Batch.V1 {
       }
 
       /// <summary>
-      /// A new or an existing persistent disk or a local ssd attached to a VM
+      /// A new or an existing persistent disk (PD) or a local ssd attached to a VM
       /// instance.
       /// </summary>
       public sealed partial class AttachedDisk : pb::IMessage<AttachedDisk>
@@ -3731,7 +3731,7 @@ namespace Google.Cloud.Batch.V1 {
       }
 
       /// <summary>
-      /// Accelerator describes Compute Engine accelerators to be attached to VMs.
+      /// Accelerator describes Compute Engine accelerators to be attached to the VM.
       /// </summary>
       public sealed partial class Accelerator : pb::IMessage<Accelerator>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4114,7 +4114,6 @@ namespace Google.Cloud.Batch.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator> accelerators_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator>();
         /// <summary>
         /// The accelerators attached to each VM instance.
-        /// Not yet implemented.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4129,7 +4128,7 @@ namespace Google.Cloud.Batch.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk> disks_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk>();
         /// <summary>
         /// Non-boot disks to be attached for each VM created by this InstancePolicy.
-        /// New disks will be deleted when the attached VM is deleted.
+        /// New disks will be deleted when the VM is deleted.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
