@@ -137,6 +137,20 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Fetch the <see cref="AggregateQuerySnapshot"/> from the specified <see cref="AggregateQuery"/>.
+        /// </summary>
+        /// <param name="query">The aggregate query to execute. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>A <see cref="AggregateQuerySnapshot"/> of results of the given query with respect to this transaction.</returns>
+        public Task<AggregateQuerySnapshot> GetSnapshotAsync(AggregateQuery query, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
+            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
+            return query.GetSnapshotAsync(TransactionId, cts.Token);
+        }
+
+        /// <summary>
         /// Adds an operation to create a document in this transaction.
         /// </summary>
         /// <param name="documentReference">The document reference to create. Must not be null.</param>

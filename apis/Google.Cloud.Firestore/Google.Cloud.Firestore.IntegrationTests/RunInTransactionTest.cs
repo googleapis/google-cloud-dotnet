@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.IntegrationTests.Models;
 using Grpc.Core;
 using System;
 using System.Threading;
@@ -129,6 +130,18 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 }
                 transaction.Set(doc, new { Count = snapshot.GetValue<int>("Count") + 1 });
             }
+        }
+
+        [Fact]
+        public async Task TransactionWithCountAggregation()
+        {
+            var collection = _fixture.HighScoreCollection;
+            await _fixture.FirestoreDb.RunTransactionAsync(async txn =>
+            {
+                var aggQuery = collection.Count();
+                var snapshot = await txn.GetSnapshotAsync(aggQuery);
+                Assert.Equal(HighScore.Data.Length, snapshot.Count);
+            });
         }
     }
 }

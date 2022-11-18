@@ -86,6 +86,16 @@ namespace Google.Cloud.Firestore.Tests
             return new FakeQueryStream(new[] { response });
         }
 
+        public override RunAggregationQueryStream RunAggregationQuery(RunAggregationQueryRequest request, CallSettings callSettings = null)
+        {
+            var response = new RunAggregationQueryResponse { ReadTime = GetNextTimestamp(), Result = new AggregationResult() };
+            if (request.ConsistencySelectorCase == RunAggregationQueryRequest.ConsistencySelectorOneofCase.Transaction)
+            {
+                response.Transaction = request.Transaction;
+            }
+            return new FakeAggregationQueryStream(new[] { response });
+        }
+
         public override BatchGetDocumentsStream BatchGetDocuments(BatchGetDocumentsRequest request, CallSettings callSettings = null)
         {
             string transaction = request.ConsistencySelectorCase == BatchGetDocumentsRequest.ConsistencySelectorOneofCase.Transaction ?
