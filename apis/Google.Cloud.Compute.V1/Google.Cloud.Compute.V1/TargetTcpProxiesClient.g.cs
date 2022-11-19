@@ -23,6 +23,7 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -45,6 +46,7 @@ namespace Google.Cloud.Compute.V1
         private TargetTcpProxiesSettings(TargetTcpProxiesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -59,6 +61,27 @@ namespace Google.Cloud.Compute.V1
         }
 
         partial void OnCopy(TargetTcpProxiesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetTcpProxiesClient.AggregatedList</c> and <c>TargetTcpProxiesClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -364,6 +387,76 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC TargetTcpProxies client</summary>
         public virtual TargetTcpProxies.TargetTcpProxiesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedList(AggregatedListTargetTcpProxiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedListAsync(AggregatedListTargetTcpProxiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedList(new AggregatedListTargetTcpProxiesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedListAsync(new AggregatedListTargetTcpProxiesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Deletes the specified TargetTcpProxy resource.
@@ -950,6 +1043,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class TargetTcpProxiesClientImpl : TargetTcpProxiesClient
     {
+        private readonly gaxgrpc::ApiCall<AggregatedListTargetTcpProxiesRequest, TargetTcpProxyAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteTargetTcpProxyRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetTargetTcpProxyRequest, TargetTcpProxy> _callGet;
@@ -977,6 +1072,9 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             SetBackendServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetBackendServiceOperationsSettings, logger);
             SetProxyHeaderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetProxyHeaderOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListTargetTcpProxiesRequest, TargetTcpProxyAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteTargetTcpProxyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_tcp_proxy", request => request.TargetTcpProxy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1000,6 +1098,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListTargetTcpProxiesRequest, TargetTcpProxyAggregatedList> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteTargetTcpProxyRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetTargetTcpProxyRequest, TargetTcpProxy> call);
@@ -1017,6 +1117,8 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The underlying gRPC TargetTcpProxies client</summary>
         public override TargetTcpProxies.TargetTcpProxiesClient GrpcClient { get; }
 
+        partial void Modify_AggregatedListTargetTcpProxiesRequest(ref AggregatedListTargetTcpProxiesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteTargetTcpProxyRequest(ref DeleteTargetTcpProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTargetTcpProxyRequest(ref GetTargetTcpProxyRequest request, ref gaxgrpc::CallSettings settings);
@@ -1028,6 +1130,32 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetBackendServiceTargetTcpProxyRequest(ref SetBackendServiceTargetTcpProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetProxyHeaderTargetTcpProxyRequest(ref SetProxyHeaderTargetTcpProxyRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedList(AggregatedListTargetTcpProxiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListTargetTcpProxiesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListTargetTcpProxiesRequest, TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all TargetTcpProxy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>> AggregatedListAsync(AggregatedListTargetTcpProxiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListTargetTcpProxiesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListTargetTcpProxiesRequest, TargetTcpProxyAggregatedList, scg::KeyValuePair<string, TargetTcpProxiesScopedList>>(_callAggregatedList, request, callSettings);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1210,6 +1338,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListTargetTcpProxiesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListTargetTcpProxiesRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -1218,6 +1356,15 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
+    }
+
+    public partial class TargetTcpProxyAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, TargetTcpProxiesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, TargetTcpProxiesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class TargetTcpProxies

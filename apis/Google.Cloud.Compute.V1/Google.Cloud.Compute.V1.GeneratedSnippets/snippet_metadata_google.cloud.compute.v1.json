@@ -95315,6 +95315,158 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_TargetTcpProxies_AggregatedList_sync",
+      "title": "AggregatedListRequestObject",
+      "description": "Snippet for AggregatedList",
+      "file": "TargetTcpProxiesClient.AggregatedListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.TargetTcpProxiesScopedList>>",
+        "client": {
+          "shortName": "TargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.TargetTcpProxies.AggregatedList",
+          "service": {
+            "shortName": "TargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.TargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetTcpProxies_AggregatedList_async",
+      "title": "AggregatedListRequestObjectAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "TargetTcpProxiesClient.AggregatedListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.TargetTcpProxiesScopedList>>",
+        "client": {
+          "shortName": "TargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.TargetTcpProxies.AggregatedList",
+          "service": {
+            "shortName": "TargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.TargetTcpProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetTcpProxies_AggregatedList_sync_flattened",
+      "title": "AggregatedList",
+      "description": "Snippet for AggregatedList",
+      "file": "TargetTcpProxiesClient.AggregatedListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.TargetTcpProxiesScopedList>>",
+        "client": {
+          "shortName": "TargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.TargetTcpProxies.AggregatedList",
+          "service": {
+            "shortName": "TargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.TargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetTcpProxies_AggregatedList_async_flattened",
+      "title": "AggregatedListAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "TargetTcpProxiesClient.AggregatedListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.TargetTcpProxyAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.TargetTcpProxiesScopedList>>",
+        "client": {
+          "shortName": "TargetTcpProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetTcpProxiesClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.TargetTcpProxies.AggregatedList",
+          "service": {
+            "shortName": "TargetTcpProxies",
+            "fullName": "google.cloud.compute.v1.TargetTcpProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_TargetTcpProxies_Delete_sync",
       "title": "DeleteRequestObject",
       "description": "Snippet for Delete",
