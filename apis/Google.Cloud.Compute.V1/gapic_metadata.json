@@ -4492,6 +4492,12 @@
         "grpc": {
           "libraryClient": "TargetTcpProxiesClient",
           "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
