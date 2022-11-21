@@ -35,7 +35,7 @@ namespace Google.Cloud.Storage.V1.Tests
         public void GetBucket_NoRetry() => NoRetryHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
 
         [Fact]
-        public void GetBucket_RetryOnce() => RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+        public void GetBucket_RetryOnce() => RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket", new GetBucketOptions { retryOptions = new RetryOptions { BackoffMultiplier = 1 } }));
 
         [Fact]
         public void GetBucket_RetryThenFail() => RetryThenFailHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));

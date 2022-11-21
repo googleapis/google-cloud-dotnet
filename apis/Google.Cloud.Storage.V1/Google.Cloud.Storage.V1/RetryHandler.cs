@@ -62,7 +62,10 @@ namespace Google.Cloud.Storage.V1
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
         {
             request.AddUnsuccessfulResponseHandler(s_instance);
-            delayMultiplier = options.BackoffMultiplier;
+            if (delayMultiplier != 0)
+            {
+                delayMultiplier = options.BackoffMultiplier;
+            }
         }
 
         // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
@@ -77,7 +80,7 @@ namespace Google.Cloud.Storage.V1
                 return false;
             }
             int power = Math.Min(args.CurrentFailedTry - 1, 5);
-            if (delayMultiplier != int.MinValue)
+            if (delayMultiplier != 0)
             {
                 power = delayMultiplier;
             }
