@@ -186,7 +186,7 @@ namespace Google.Cloud.Asset.V1 {
   }
   #region Messages
   /// <summary>
-  /// An asset in Google Cloud and its temporal metadata, including the time window
+  /// An asset in {{gcp_name}} and its temporal metadata, including the time window
   /// when it was observed and its status during that window.
   /// </summary>
   public sealed partial class TemporalAsset : pb::IMessage<TemporalAsset>
@@ -271,7 +271,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Asset asset_;
     /// <summary>
-    /// An asset in Google Cloud.
+    /// An asset in {{gcp_name}}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -858,13 +858,13 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// An asset in Google Cloud. An asset can be any resource in the Google Cloud
+  /// An asset in {{gcp_name}}. An asset can be any resource in the {{gcp_name}}
   /// [resource
   /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
-  /// a resource outside the Google Cloud resource hierarchy (such as Google
-  /// Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy),
-  /// or a relationship (e.g. an INSTANCE_TO_INSTANCEGROUP relationship).
-  /// See [Supported asset
+  /// a resource outside the {{gcp_name}} resource hierarchy (such as
+  /// {{container_name}} clusters and objects), or a policy (e.g.
+  /// {{iam_name_short}} policy), or a relationship (e.g. an
+  /// INSTANCE_TO_INSTANCEGROUP relationship). See [Supported asset
   /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
   /// for more information.
   /// </summary>
@@ -1007,15 +1007,15 @@ namespace Google.Cloud.Asset.V1 {
     public const int IamPolicyFieldNumber = 4;
     private global::Google.Cloud.Iam.V1.Policy iamPolicy_;
     /// <summary>
-    /// A representation of the Cloud IAM policy set on a Google Cloud resource.
-    /// There can be a maximum of one Cloud IAM policy set on any given resource.
-    /// In addition, Cloud IAM policies inherit their granted access scope from any
-    /// policies set on parent resources in the resource hierarchy. Therefore, the
-    /// effectively policy is the union of both the policy set on this resource
-    /// and each policy set on all of the resource's ancestry resource levels in
-    /// the hierarchy. See
-    /// [this topic](https://cloud.google.com/iam/help/allow-policies/inheritance)
-    /// for more information.
+    /// A representation of the {{iam_name_short}} policy set on a {{gcp_name}}
+    /// resource. There can be a maximum of one {{iam_name_short}} policy set on
+    /// any given resource. In addition, {{iam_name_short}} policies inherit their
+    /// granted access scope from any policies set on parent resources in the
+    /// resource hierarchy. Therefore, the effectively policy is the union of both
+    /// the policy set on this resource and each policy set on all of the
+    /// resource's ancestry resource levels in the hierarchy. See [this
+    /// topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for
+    /// more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1149,7 +1149,7 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(82);
     private readonly pbc::RepeatedField<string> ancestors_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The ancestry path of an asset in Google Cloud [resource
+    /// The ancestry path of an asset in {{gcp_name}} [resource
     /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
     /// represented as a list of relative resource names. An ancestry path starts
     /// with the closest ancestor in the hierarchy and ends at root. If the asset
@@ -1686,7 +1686,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A representation of a Google Cloud resource.
+  /// A representation of a {{gcp_name}} resource.
   /// </summary>
   public sealed partial class Resource : pb::IMessage<Resource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1762,7 +1762,7 @@ namespace Google.Cloud.Asset.V1 {
     /// `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
     ///
     /// This value is unspecified for resources that do not have an API based on a
-    /// discovery document, such as Cloud Bigtable.
+    /// discovery document, such as {{bigtable_name}}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1781,7 +1781,7 @@ namespace Google.Cloud.Asset.V1 {
     /// `Project`
     ///
     /// This value is unspecified for resources that do not have an API based on a
-    /// discovery document, such as Cloud Bigtable.
+    /// discovery document, such as {{bigtable_name}}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1820,8 +1820,8 @@ namespace Google.Cloud.Asset.V1 {
     /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more information.
     ///
-    /// For Google Cloud assets, this value is the parent resource defined in the
-    /// [Cloud IAM policy
+    /// For {{gcp_name}} assets, this value is the parent resource defined in the
+    /// [{{iam_name_short}} policy
     /// hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy).
     /// Example:
     /// `//cloudresourcemanager.googleapis.com/projects/my_project_123`
@@ -1857,7 +1857,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int LocationFieldNumber = 8;
     private string location_ = "";
     /// <summary>
-    /// The location of the resource in Google Cloud, such as its zone and region.
+    /// The location of the resource in {{gcp_name}}, such as its zone and region.
     /// For more information, see https://cloud.google.com/about/locations/.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2715,12 +2715,13 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// An asset identifier in Google Cloud which contains its name, type and
-  /// ancestors. An asset can be any resource in the Google Cloud [resource
+  /// An asset identifier in {{gcp_name}} which contains its name, type and
+  /// ancestors. An asset can be any resource in the {{gcp_name}}
+  /// [resource
   /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
-  /// a resource outside the Google Cloud resource hierarchy (such as Google
-  /// Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy).
-  /// See [Supported asset
+  /// a resource outside the {{gcp_name}} resource hierarchy (such as
+  /// {{container_name}} clusters and objects), or a policy (e.g.
+  /// {{iam_name_short}} policy). See [Supported asset
   /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
   /// for more information.
   /// </summary>
@@ -2816,7 +2817,7 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> ancestors_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The ancestors of an asset in Google Cloud [resource
+    /// The ancestors of an asset in {{gcp_name}} [resource
     /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
     /// represented as a list of relative resource names. An ancestry path starts
     /// with the closest ancestor in the hierarchy and ends at root.
@@ -3117,7 +3118,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The full resource name of this resource. Example:
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-    /// See [Cloud Asset Inventory Resource Name
+    /// See [{{cai_name}} Resource Name
     /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
     /// for more information.
     ///
@@ -3293,7 +3294,8 @@ namespace Google.Cloud.Asset.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Labels associated with this resource. See [Labelling and grouping GCP
+    /// Labels associated with this resource. See
+    /// [Labelling and grouping {{gcp_name}}
     /// resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-platform-resources)
     /// for more information. This field is available only when the resource's
     /// Protobuf contains it.
@@ -3319,7 +3321,8 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<string> networkTags_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Network tags associated with this resource. Like labels, network tags are a
-    /// type of annotations used to group GCP resources. See [Labelling GCP
+    /// type of annotations used to group {{gcp_name}} resources. See
+    /// [Labelling {{gcp_name}}
     /// resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-platform-resources)
     /// for more information. This field is available only when the resource's
     /// Protobuf contains it.
@@ -3339,16 +3342,16 @@ namespace Google.Cloud.Asset.V1 {
     public const int KmsKeyFieldNumber = 10;
     private string kmsKey_ = "";
     /// <summary>
-    /// The Cloud KMS
+    /// The {{kms_name_short}}
     /// [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys)
     /// name or
     /// [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions)
     /// name.
     ///
     /// This field only presents for the purpose of backward compatibility. Please
-    /// use the `kms_keys` field to retrieve KMS key information. This field is
-    /// available only when the resource's Protobuf contains it and will only be
-    /// populated for [these resource
+    /// use the `kms_keys` field to retrieve {{kms_name_short}} key information.
+    /// This field is available only when the resource's Protobuf contains it and
+    /// will only be populated for [these resource
     /// types](https://cloud.google.com/asset-inventory/docs/legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field)
     /// for backward compatible purposes.
     ///
@@ -3373,7 +3376,7 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(226);
     private readonly pbc::RepeatedField<string> kmsKeys_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The Cloud KMS
+    /// The {{kms_name_short}}
     /// [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys)
     /// names or
     /// [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions)
@@ -3457,8 +3460,8 @@ namespace Google.Cloud.Asset.V1 {
     /// SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition
     /// in [API
     /// Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances).
-    /// If the resource is a project provided by Cloud Resource Manager, its state
-    /// will include LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and
+    /// If the resource is a project provided by {{crm_name}}, its state will
+    /// include LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and
     /// DELETE_IN_PROGRESS. See `lifecycleState` definition in [API
     /// Reference](https://cloud.google.com/resource-manager/reference/rest/v1/projects).
     ///
@@ -3484,15 +3487,15 @@ namespace Google.Cloud.Asset.V1 {
     /// vary from one resource type to another. Examples: `projectId` for Project,
     /// `dnsName` for DNS ManagedZone. This field contains a subset of the resource
     /// metadata fields that are returned by the List or Get APIs provided by the
-    /// corresponding GCP service (e.g., Compute Engine). see [API references and
-    /// supported searchable
+    /// corresponding {{gcp_name}} service (e.g., Compute Engine). see
+    /// [API references and supported searchable
     /// attributes](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types)
     /// to see which fields are included.
     ///
     /// You can search values of these fields through free text search. However,
     /// you should not consume the field programically as the field names and
-    /// values may change as the GCP service updates to a new incompatible API
-    /// version.
+    /// values may change as the {{gcp_name}} service updates to a new incompatible
+    /// API version.
     ///
     /// To search against the `additional_attributes`:
     ///
@@ -5208,7 +5211,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A result of IAM Policy search, containing information of an IAM policy.
+  /// A result of {{iam_name_short}} Policy search, containing information of an
+  /// {{iam_name_short}} policy.
   /// </summary>
   public sealed partial class IamPolicySearchResult : pb::IMessage<IamPolicySearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5264,10 +5268,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int ResourceFieldNumber = 1;
     private string resource_ = "";
     /// <summary>
-    /// The full resource name of the resource associated with this IAM policy.
-    /// Example:
+    /// The full resource name of the resource associated with this
+    /// {{iam_name_short}} policy. Example:
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-    /// See [Cloud Asset Inventory Resource Name
+    /// See [{{cai_name}} Resource Name
     /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
     /// for more information.
     ///
@@ -5288,7 +5292,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 5;
     private string assetType_ = "";
     /// <summary>
-    /// The type of the resource associated with this IAM policy. Example:
+    /// The type of the resource associated with this {{iam_name_short}} policy.
+    /// Example:
     /// `compute.googleapis.com/Disk`.
     ///
     /// To search against the `asset_type`:
@@ -5308,11 +5313,12 @@ namespace Google.Cloud.Asset.V1 {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// The project that the associated GCP resource belongs to, in the form of
-    /// projects/{PROJECT_NUMBER}. If an IAM policy is set on a resource (like VM
-    /// instance, Cloud Storage bucket), the project field will indicate the
-    /// project that contains the resource. If an IAM policy is set on a folder or
-    /// orgnization, this field will be empty.
+    /// The project that the associated {{gcp_name}} resource belongs to, in the
+    /// form of projects/{PROJECT_NUMBER}. If an {{iam_name_short}} policy is set
+    /// on a resource (like VM instance, {{storage_name}} bucket), the project
+    /// field will indicate the project that contains the resource. If an
+    /// {{iam_name_short}} policy is set on a folder or orgnization, this field
+    /// will be empty.
     ///
     /// To search against the `project`:
     ///
@@ -5333,8 +5339,9 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The folder(s) that the IAM policy belongs to, in the form of
-    /// folders/{FOLDER_NUMBER}. This field is available when the IAM policy
+    /// The folder(s) that the {{iam_name_short}} policy belongs to, in the form of
+    /// folders/{FOLDER_NUMBER}. This field is available when the
+    /// {{iam_name_short}} policy
     /// belongs to one or more folders.
     ///
     /// To search against `folders`:
@@ -5353,9 +5360,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrganizationFieldNumber = 7;
     private string organization_ = "";
     /// <summary>
-    /// The organization that the IAM policy belongs to, in the form
+    /// The organization that the {{iam_name_short}} policy belongs to, in the form
     /// of organizations/{ORGANIZATION_NUMBER}. This field is available when the
-    /// IAM policy belongs to an organization.
+    /// {{iam_name_short}} policy belongs to an organization.
     ///
     /// To search against `organization`:
     ///
@@ -5376,10 +5383,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int PolicyFieldNumber = 3;
     private global::Google.Cloud.Iam.V1.Policy policy_;
     /// <summary>
-    /// The IAM policy directly set on the given resource. Note that the original
-    /// IAM policy can contain multiple bindings. This only contains the bindings
-    /// that match the given query. For queries that don't contain a constrain on
-    /// policies (e.g., an empty query), this contains all the bindings.
+    /// The {{iam_name_short}} policy directly set on the given resource. Note that
+    /// the original {{iam_name_short}} policy can contain multiple bindings. This
+    /// only contains the bindings that match the given query. For queries that
+    /// don't contain a constrain on policies (e.g., an empty query), this contains
+    /// all the bindings.
     ///
     /// To search against the `policy` bindings:
     ///
@@ -5404,8 +5412,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ExplanationFieldNumber = 4;
     private global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation explanation_;
     /// <summary>
-    /// Explanation about the IAM policy search result. It contains additional
-    /// information to explain why the search result matches the query.
+    /// Explanation about the {{iam_name_short}} policy search result. It contains
+    /// additional information to explain why the search result matches the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5705,7 +5713,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Explanation about the IAM policy search result.
+      /// Explanation about the {{iam_name_short}} policy search result.
       /// </summary>
       public sealed partial class Explanation : pb::IMessage<Explanation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5898,7 +5906,7 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// IAM permissions
+          /// {{iam_name_short}} permissions
           /// </summary>
           public sealed partial class Permissions : pb::IMessage<Permissions>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6560,7 +6568,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// IAM Policy analysis result, consisting of one IAM policy binding and derived
+  /// {{iam_name_short}} Policy analysis result, consisting of one
+  /// {{iam_name_short}} policy binding and derived
   /// access control lists.
   /// </summary>
   public sealed partial class IamPolicyAnalysisResult : pb::IMessage<IamPolicyAnalysisResult>
@@ -6617,7 +6626,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The [full resource
     /// name](https://cloud.google.com/asset-inventory/docs/resource-name-format)
-    /// of the resource to which the [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding] policy attaches.
+    /// of the resource to which the
+    /// [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding]
+    /// policy attaches.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6632,7 +6643,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int IamBindingFieldNumber = 2;
     private global::Google.Cloud.Iam.V1.Binding iamBinding_;
     /// <summary>
-    /// The Cloud IAM policy binding under analysis.
+    /// The {{iam_name_short}} policy binding under analysis.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6649,8 +6660,10 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList> accessControlLists_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList>();
     /// <summary>
-    /// The access control lists derived from the [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding] that match or
-    /// potentially match resource and access selectors specified in the request.
+    /// The access control lists derived from the
+    /// [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding]
+    /// that match or potentially match resource and access selectors specified in
+    /// the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6662,8 +6675,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int IdentityListFieldNumber = 4;
     private global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.IdentityList identityList_;
     /// <summary>
-    /// The identity list derived from members of the [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding] that match or
-    /// potentially match identity selector specified in the request.
+    /// The identity list derived from members of the
+    /// [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding]
+    /// that match or potentially match identity selector specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6678,8 +6692,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int FullyExploredFieldNumber = 5;
     private bool fullyExplored_;
     /// <summary>
-    /// Represents whether all analyses on the [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding] have successfully
-    /// finished.
+    /// Represents whether all analyses on the
+    /// [iam_binding][google.cloud.asset.v1.IamPolicyAnalysisResult.iam_binding]
+    /// have successfully finished.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6931,7 +6946,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// A Google Cloud resource under analysis.
+      /// A {{gcp_name}} resource under analysis.
       /// </summary>
       public sealed partial class Resource : pb::IMessage<Resource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7176,7 +7191,7 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// An IAM role or permission under analysis.
+      /// An {{iam_name_short}} role or permission under analysis.
       /// </summary>
       public sealed partial class Access : pb::IMessage<Access>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7545,7 +7560,7 @@ namespace Google.Cloud.Asset.V1 {
         private string name_ = "";
         /// <summary>
         /// The identity name in any form of members appear in
-        /// [IAM policy
+        /// [{{iam_name_short}} policy
         /// binding](https://cloud.google.com/iam/reference/rest/v1/Binding), such
         /// as:
         /// - user:foo@google.com
@@ -7984,15 +7999,16 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// An access control list, derived from the above IAM policy binding, which
-      /// contains a set of resources and accesses. May include one
+      /// An access control list, derived from the above {{iam_name_short}} policy
+      /// binding, which contains a set of resources and accesses. May include one
       /// item from each set to compose an access control entry.
       ///
-      /// NOTICE that there could be multiple access control lists for one IAM policy
-      /// binding. The access control lists are created based on resource and access
-      /// combinations.
+      /// NOTICE that there could be multiple access control lists for one
+      /// {{iam_name_short}} policy binding. The access control lists are created
+      /// based on resource and access combinations.
       ///
-      /// For example, assume we have the following cases in one IAM policy binding:
+      /// For example, assume we have the following cases in one
+      /// {{iam_name_short}} policy binding:
       /// - Permission P1 and P2 apply to resource R1 and R2;
       /// - Permission P3 applies to resource R2 and R3;
       ///
@@ -8086,8 +8102,10 @@ namespace Google.Cloud.Asset.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge> resourceEdges_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge>();
         /// <summary>
         /// Resource edges of the graph starting from the policy attached
-        /// resource to any descendant resources. The [Edge.source_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.source_node] contains
-        /// the full resource name of a parent resource and [Edge.target_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.target_node]
+        /// resource to any descendant resources. The
+        /// [Edge.source_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.source_node]
+        /// contains the full resource name of a parent resource and
+        /// [Edge.target_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.target_node]
         /// contains the full resource name of a child resource. This field is
         /// present only if the output_resource_edges option is enabled in request.
         /// </summary>
@@ -8102,7 +8120,7 @@ namespace Google.Cloud.Asset.V1 {
         private global::Google.Cloud.Asset.V1.ConditionEvaluation conditionEvaluation_;
         /// <summary>
         /// Condition evaluation for this AccessControlList, if there is a condition
-        /// defined in the above IAM policy binding.
+        /// defined in the above {{iam_name_short}} policy binding.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8369,12 +8387,15 @@ namespace Google.Cloud.Asset.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge> groupEdges_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge>();
         /// <summary>
         /// Group identity edges of the graph starting from the binding's
-        /// group members to any node of the [identities][google.cloud.asset.v1.IamPolicyAnalysisResult.IdentityList.identities]. The [Edge.source_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.source_node]
+        /// group members to any node of the
+        /// [identities][google.cloud.asset.v1.IamPolicyAnalysisResult.IdentityList.identities].
+        /// The
+        /// [Edge.source_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.source_node]
         /// contains a group, such as `group:parent@google.com`. The
-        /// [Edge.target_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.target_node] contains a member of the group,
-        /// such as `group:child@google.com` or `user:foo@google.com`.
-        /// This field is present only if the output_group_edges option is enabled in
-        /// request.
+        /// [Edge.target_node][google.cloud.asset.v1.IamPolicyAnalysisResult.Edge.target_node]
+        /// contains a member of the group, such as `group:child@google.com` or
+        /// `user:foo@google.com`. This field is present only if the
+        /// output_group_edges option is enabled in request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
