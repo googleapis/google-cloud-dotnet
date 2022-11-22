@@ -303,17 +303,16 @@ namespace Google.Cloud.Asset.V1 {
     public abstract partial class AssetServiceBase
     {
       /// <summary>
-      /// Exports assets with time and resource types to a given {{storage_name}}
-      /// location/{{bigquery_name}} table. For {{storage_name}} location
-      /// destinations, the output format is newline-delimited JSON. Each line
-      /// represents a [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in
-      /// the JSON format; for {{bigquery_name}} table destinations, the output table
-      /// stores the fields in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// Exports assets with time and resource types to a given Cloud Storage
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -340,7 +339,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
       /// For IAM_POLICY content, this API outputs history when the asset and its
-      /// attached IAM_POLICY both exist. This can create gaps in the output history.
+      /// attached IAM POLICY both exist. This can create gaps in the output history.
       /// Otherwise, this API outputs history with asset in both non-delete or
       /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
@@ -417,8 +416,8 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Searches all {{gcp_name}} resources within the specified scope, such as a
-      /// project, folder, or organization. The caller must be granted the
+      /// Searches all Cloud resources within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -432,8 +431,8 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Searches all {{iam_name_short}} policies within the specified scope, such
-      /// as a project, folder, or organization. The caller must be granted the
+      /// Searches all IAM policies within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -447,8 +446,8 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies to answer which identities have what
-      /// accesses on which resources.
+      /// Analyzes IAM policies to answer which identities have what accesses on
+      /// which resources.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -460,17 +459,15 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies asynchronously to answer which
-      /// identities have what accesses on which resources, and writes the analysis
-      /// results to a Google
-      /// {{storage_name}} or a {{bigquery_name}} destination. For {{storage_name}}
-      /// destination, the output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// Analyzes IAM policies asynchronously to answer which identities have what
+      /// accesses on which resources, and writes the analysis results to a Google
+      /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+      /// output format is the JSON format that represents a
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -499,7 +496,7 @@ namespace Google.Cloud.Asset.V1 {
 
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [{{bigquery_name}} Standard
+      /// [BigQuery Standard
       /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
@@ -509,7 +506,7 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// {{bigquery_name}}
+      /// BigQuery
       /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
       /// queries return larger results will result in errors.
       /// </summary>
@@ -583,7 +580,7 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Gets effective {{iam_name_short}} policies for a batch of resources.
+      /// Gets effective IAM policies for a batch of resources.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -624,17 +621,16 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Exports assets with time and resource types to a given {{storage_name}}
-      /// location/{{bigquery_name}} table. For {{storage_name}} location
-      /// destinations, the output format is newline-delimited JSON. Each line
-      /// represents a [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in
-      /// the JSON format; for {{bigquery_name}} table destinations, the output table
-      /// stores the fields in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// Exports assets with time and resource types to a given Cloud Storage
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -647,17 +643,16 @@ namespace Google.Cloud.Asset.V1 {
         return ExportAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports assets with time and resource types to a given {{storage_name}}
-      /// location/{{bigquery_name}} table. For {{storage_name}} location
-      /// destinations, the output format is newline-delimited JSON. Each line
-      /// represents a [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in
-      /// the JSON format; for {{bigquery_name}} table destinations, the output table
-      /// stores the fields in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// Exports assets with time and resource types to a given Cloud Storage
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -668,17 +663,16 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExportAssets, null, options, request);
       }
       /// <summary>
-      /// Exports assets with time and resource types to a given {{storage_name}}
-      /// location/{{bigquery_name}} table. For {{storage_name}} location
-      /// destinations, the output format is newline-delimited JSON. Each line
-      /// represents a [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in
-      /// the JSON format; for {{bigquery_name}} table destinations, the output table
-      /// stores the fields in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// Exports assets with time and resource types to a given Cloud Storage
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -691,17 +685,16 @@ namespace Google.Cloud.Asset.V1 {
         return ExportAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports assets with time and resource types to a given {{storage_name}}
-      /// location/{{bigquery_name}} table. For {{storage_name}} location
-      /// destinations, the output format is newline-delimited JSON. Each line
-      /// represents a [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in
-      /// the JSON format; for {{bigquery_name}} table destinations, the output table
-      /// stores the fields in asset Protobuf as columns. This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
-      /// allows you to keep track of the export. We recommend intervals of at least
-      /// 2 seconds with exponential retry to poll the export operation result. For
-      /// regular-size resource parent, the export operation usually finishes within
-      /// 5 minutes.
+      /// Exports assets with time and resource types to a given Cloud Storage
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+      /// destinations, the output table stores the fields in asset Protobuf as
+      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
+      /// which allows you to keep track of the export. We recommend intervals of at
+      /// least 2 seconds with exponential retry to poll the export operation result.
+      /// For regular-size resource parent, the export operation usually finishes
+      /// within 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -766,7 +759,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
       /// For IAM_POLICY content, this API outputs history when the asset and its
-      /// attached IAM_POLICY both exist. This can create gaps in the output history.
+      /// attached IAM POLICY both exist. This can create gaps in the output history.
       /// Otherwise, this API outputs history with asset in both non-delete or
       /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
@@ -785,7 +778,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
       /// For IAM_POLICY content, this API outputs history when the asset and its
-      /// attached IAM_POLICY both exist. This can create gaps in the output history.
+      /// attached IAM POLICY both exist. This can create gaps in the output history.
       /// Otherwise, this API outputs history with asset in both non-delete or
       /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
@@ -802,7 +795,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
       /// For IAM_POLICY content, this API outputs history when the asset and its
-      /// attached IAM_POLICY both exist. This can create gaps in the output history.
+      /// attached IAM POLICY both exist. This can create gaps in the output history.
       /// Otherwise, this API outputs history with asset in both non-delete or
       /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
@@ -821,7 +814,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
       /// For IAM_POLICY content, this API outputs history when the asset and its
-      /// attached IAM_POLICY both exist. This can create gaps in the output history.
+      /// attached IAM POLICY both exist. This can create gaps in the output history.
       /// Otherwise, this API outputs history with asset in both non-delete or
       /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
@@ -1080,8 +1073,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFeed, null, options, request);
       }
       /// <summary>
-      /// Searches all {{gcp_name}} resources within the specified scope, such as a
-      /// project, folder, or organization. The caller must be granted the
+      /// Searches all Cloud resources within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1096,8 +1089,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all {{gcp_name}} resources within the specified scope, such as a
-      /// project, folder, or organization. The caller must be granted the
+      /// Searches all Cloud resources within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1110,8 +1103,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllResources, null, options, request);
       }
       /// <summary>
-      /// Searches all {{gcp_name}} resources within the specified scope, such as a
-      /// project, folder, or organization. The caller must be granted the
+      /// Searches all Cloud resources within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1126,8 +1119,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all {{gcp_name}} resources within the specified scope, such as a
-      /// project, folder, or organization. The caller must be granted the
+      /// Searches all Cloud resources within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1140,8 +1133,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAllResources, null, options, request);
       }
       /// <summary>
-      /// Searches all {{iam_name_short}} policies within the specified scope, such
-      /// as a project, folder, or organization. The caller must be granted the
+      /// Searches all IAM policies within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1156,8 +1149,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllIamPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all {{iam_name_short}} policies within the specified scope, such
-      /// as a project, folder, or organization. The caller must be granted the
+      /// Searches all IAM policies within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1170,8 +1163,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllIamPolicies, null, options, request);
       }
       /// <summary>
-      /// Searches all {{iam_name_short}} policies within the specified scope, such
-      /// as a project, folder, or organization. The caller must be granted the
+      /// Searches all IAM policies within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1186,8 +1179,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllIamPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all {{iam_name_short}} policies within the specified scope, such
-      /// as a project, folder, or organization. The caller must be granted the
+      /// Searches all IAM policies within the specified scope, such as a project,
+      /// folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1200,8 +1193,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAllIamPolicies, null, options, request);
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies to answer which identities have what
-      /// accesses on which resources.
+      /// Analyzes IAM policies to answer which identities have what accesses on
+      /// which resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1214,8 +1207,8 @@ namespace Google.Cloud.Asset.V1 {
         return AnalyzeIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies to answer which identities have what
-      /// accesses on which resources.
+      /// Analyzes IAM policies to answer which identities have what accesses on
+      /// which resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1226,8 +1219,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies to answer which identities have what
-      /// accesses on which resources.
+      /// Analyzes IAM policies to answer which identities have what accesses on
+      /// which resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1240,8 +1233,8 @@ namespace Google.Cloud.Asset.V1 {
         return AnalyzeIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies to answer which identities have what
-      /// accesses on which resources.
+      /// Analyzes IAM policies to answer which identities have what accesses on
+      /// which resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1252,17 +1245,15 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies asynchronously to answer which
-      /// identities have what accesses on which resources, and writes the analysis
-      /// results to a Google
-      /// {{storage_name}} or a {{bigquery_name}} destination. For {{storage_name}}
-      /// destination, the output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// Analyzes IAM policies asynchronously to answer which identities have what
+      /// accesses on which resources, and writes the analysis results to a Google
+      /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+      /// output format is the JSON format that represents a
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,17 +1266,15 @@ namespace Google.Cloud.Asset.V1 {
         return AnalyzeIamPolicyLongrunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies asynchronously to answer which
-      /// identities have what accesses on which resources, and writes the analysis
-      /// results to a Google
-      /// {{storage_name}} or a {{bigquery_name}} destination. For {{storage_name}}
-      /// destination, the output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// Analyzes IAM policies asynchronously to answer which identities have what
+      /// accesses on which resources, and writes the analysis results to a Google
+      /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+      /// output format is the JSON format that represents a
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1296,17 +1285,15 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeIamPolicyLongrunning, null, options, request);
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies asynchronously to answer which
-      /// identities have what accesses on which resources, and writes the analysis
-      /// results to a Google
-      /// {{storage_name}} or a {{bigquery_name}} destination. For {{storage_name}}
-      /// destination, the output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// Analyzes IAM policies asynchronously to answer which identities have what
+      /// accesses on which resources, and writes the analysis results to a Google
+      /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+      /// output format is the JSON format that represents a
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1319,17 +1306,15 @@ namespace Google.Cloud.Asset.V1 {
         return AnalyzeIamPolicyLongrunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Analyzes {{iam_name_short}} policies asynchronously to answer which
-      /// identities have what accesses on which resources, and writes the analysis
-      /// results to a Google
-      /// {{storage_name}} or a {{bigquery_name}} destination. For {{storage_name}}
-      /// destination, the output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
-      /// This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
-      /// you to track the operation status. We recommend intervals of at least 2
-      /// seconds with exponential backoff retry to poll the operation result. The
-      /// metadata contains the metadata for the long-running operation.
+      /// Analyzes IAM policies asynchronously to answer which identities have what
+      /// accesses on which resources, and writes the analysis results to a Google
+      /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+      /// output format is the JSON format that represents a
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+      /// status. We recommend intervals of at least 2 seconds with exponential
+      /// backoff retry to poll the operation result. The metadata contains the
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1405,7 +1390,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [{{bigquery_name}} Standard
+      /// [BigQuery Standard
       /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
@@ -1415,7 +1400,7 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// {{bigquery_name}}
+      /// BigQuery
       /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
       /// queries return larger results will result in errors.
       /// </summary>
@@ -1431,7 +1416,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [{{bigquery_name}} Standard
+      /// [BigQuery Standard
       /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
@@ -1441,7 +1426,7 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// {{bigquery_name}}
+      /// BigQuery
       /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
       /// queries return larger results will result in errors.
       /// </summary>
@@ -1455,7 +1440,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [{{bigquery_name}} Standard
+      /// [BigQuery Standard
       /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
@@ -1465,7 +1450,7 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// {{bigquery_name}}
+      /// BigQuery
       /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
       /// queries return larger results will result in errors.
       /// </summary>
@@ -1481,7 +1466,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [{{bigquery_name}} Standard
+      /// [BigQuery Standard
       /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
@@ -1491,7 +1476,7 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// {{bigquery_name}}
+      /// BigQuery
       /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
       /// queries return larger results will result in errors.
       /// </summary>
@@ -1744,7 +1729,7 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSavedQuery, null, options, request);
       }
       /// <summary>
-      /// Gets effective {{iam_name_short}} policies for a batch of resources.
+      /// Gets effective IAM policies for a batch of resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1757,7 +1742,7 @@ namespace Google.Cloud.Asset.V1 {
         return BatchGetEffectiveIamPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets effective {{iam_name_short}} policies for a batch of resources.
+      /// Gets effective IAM policies for a batch of resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1768,7 +1753,7 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchGetEffectiveIamPolicies, null, options, request);
       }
       /// <summary>
-      /// Gets effective {{iam_name_short}} policies for a batch of resources.
+      /// Gets effective IAM policies for a batch of resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1781,7 +1766,7 @@ namespace Google.Cloud.Asset.V1 {
         return BatchGetEffectiveIamPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets effective {{iam_name_short}} policies for a batch of resources.
+      /// Gets effective IAM policies for a batch of resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
