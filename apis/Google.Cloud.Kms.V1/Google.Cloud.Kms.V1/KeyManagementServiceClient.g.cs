@@ -3681,7 +3681,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger
@@ -3716,7 +3718,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger
@@ -3751,7 +3755,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger
@@ -3782,7 +3788,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger
@@ -3817,7 +3825,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger
@@ -3852,7 +3862,9 @@ namespace Google.Cloud.Kms.V1
         /// 
         /// The maximum size depends on the key version's
         /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+        /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE],
+        /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL], and
+        /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] keys, the
         /// plaintext must be no larger than 64KiB. For
         /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
         /// the plaintext and additional_authenticated_data fields must be no larger

@@ -123,7 +123,7 @@ namespace Google.Cloud.Kms.V1 {
             "dWRrbXMuZ29vZ2xlYXBpcy5jb20vUHVibGljS2V5EoQBcHJvamVjdHMve3By",
             "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmlu",
             "Z30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX0vY3J5cHRvS2V5VmVyc2lvbnMv",
-            "e2NyeXB0b19rZXlfdmVyc2lvbn0vcHVibGljS2V5ItsHCglJbXBvcnRKb2IS",
+            "e2NyeXB0b19rZXlfdmVyc2lvbn0vcHVibGljS2V5ItQICglJbXBvcnRKb2IS",
             "EQoEbmFtZRgBIAEoCUID4EEDEkoKDWltcG9ydF9tZXRob2QYAiABKA4yKy5n",
             "b29nbGUuY2xvdWQua21zLnYxLkltcG9ydEpvYi5JbXBvcnRNZXRob2RCBuBB",
             "AuBBBRJGChBwcm90ZWN0aW9uX2xldmVsGAkgASgOMiQuZ29vZ2xlLmNsb3Vk",
@@ -138,22 +138,25 @@ namespace Google.Cloud.Kms.V1 {
             "cy52MS5JbXBvcnRKb2IuV3JhcHBpbmdQdWJsaWNLZXlCA+BBAxJGCgthdHRl",
             "c3RhdGlvbhgIIAEoCzIsLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0",
             "aW9uQXR0ZXN0YXRpb25CA+BBAxogChFXcmFwcGluZ1B1YmxpY0tleRILCgNw",
-            "ZW0YASABKAkibQoMSW1wb3J0TWV0aG9kEh0KGUlNUE9SVF9NRVRIT0RfVU5T",
-            "UEVDSUZJRUQQABIeChpSU0FfT0FFUF8zMDcyX1NIQTFfQUVTXzI1NhABEh4K",
-            "GlJTQV9PQUVQXzQwOTZfU0hBMV9BRVNfMjU2EAIiYwoOSW1wb3J0Sm9iU3Rh",
-            "dGUSIAocSU1QT1JUX0pPQl9TVEFURV9VTlNQRUNJRklFRBAAEhYKElBFTkRJ",
-            "TkdfR0VORVJBVElPThABEgoKBkFDVElWRRACEgsKB0VYUElSRUQQAzp76kF4",
-            "CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9JbXBvcnRKb2ISU3Byb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
-            "X3Jpbmd9L2ltcG9ydEpvYnMve2ltcG9ydF9qb2J9IlsKHkV4dGVybmFsUHJv",
-            "dGVjdGlvbkxldmVsT3B0aW9ucxIYChBleHRlcm5hbF9rZXlfdXJpGAEgASgJ",
-            "Eh8KF2VrbV9jb25uZWN0aW9uX2tleV9wYXRoGAIgASgJKmoKD1Byb3RlY3Rp",
-            "b25MZXZlbBIgChxQUk9URUNUSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDAoI",
-            "U09GVFdBUkUQARIHCgNIU00QAhIMCghFWFRFUk5BTBADEhAKDEVYVEVSTkFM",
-            "X1ZQQxAEQpUBChdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIRS21zUmVzb3Vy",
-            "Y2VzUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9rbXMvdjE7a21z+AEBqgITR29vZ2xlLkNsb3VkLkttcy5W",
-            "McoCE0dvb2dsZVxDbG91ZFxLbXNcVjFiBnByb3RvMw=="));
+            "ZW0YASABKAki5QEKDEltcG9ydE1ldGhvZBIdChlJTVBPUlRfTUVUSE9EX1VO",
+            "U1BFQ0lGSUVEEAASHgoaUlNBX09BRVBfMzA3Ml9TSEExX0FFU18yNTYQARIe",
+            "ChpSU0FfT0FFUF80MDk2X1NIQTFfQUVTXzI1NhACEiAKHFJTQV9PQUVQXzMw",
+            "NzJfU0hBMjU2X0FFU18yNTYQAxIgChxSU0FfT0FFUF80MDk2X1NIQTI1Nl9B",
+            "RVNfMjU2EAQSGAoUUlNBX09BRVBfMzA3Ml9TSEEyNTYQBRIYChRSU0FfT0FF",
+            "UF80MDk2X1NIQTI1NhAGImMKDkltcG9ydEpvYlN0YXRlEiAKHElNUE9SVF9K",
+            "T0JfU1RBVEVfVU5TUEVDSUZJRUQQABIWChJQRU5ESU5HX0dFTkVSQVRJT04Q",
+            "ARIKCgZBQ1RJVkUQAhILCgdFWFBJUkVEEAM6e+pBeAohY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vSW1wb3J0Sm9iElNwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9pbXBvcnRK",
+            "b2JzL3tpbXBvcnRfam9ifSJbCh5FeHRlcm5hbFByb3RlY3Rpb25MZXZlbE9w",
+            "dGlvbnMSGAoQZXh0ZXJuYWxfa2V5X3VyaRgBIAEoCRIfChdla21fY29ubmVj",
+            "dGlvbl9rZXlfcGF0aBgCIAEoCSpqCg9Qcm90ZWN0aW9uTGV2ZWwSIAocUFJP",
+            "VEVDVElPTl9MRVZFTF9VTlNQRUNJRklFRBAAEgwKCFNPRlRXQVJFEAESBwoD",
+            "SFNNEAISDAoIRVhURVJOQUwQAxIQCgxFWFRFUk5BTF9WUEMQBEKVAQoXY29t",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNlc1Byb3RvUAFaNmdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQva21z",
+            "L3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xv",
+            "dWRcS21zXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1790,6 +1793,9 @@ namespace Google.Cloud.Kms.V1 {
         /// <summary>
         /// Cavium HSM attestation compressed with gzip. Note that this format is
         /// defined by Cavium and subject to change at any time.
+        ///
+        /// See
+        /// https://www.marvell.com/products/security-solutions/nitrox-hs-adapters/software-key-attestation.html.
         /// </summary>
         [pbr::OriginalName("CAVIUM_V1_COMPRESSED")] CaviumV1Compressed = 3,
         /// <summary>
@@ -4218,6 +4224,38 @@ namespace Google.Cloud.Kms.V1 {
         /// mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).
         /// </summary>
         [pbr::OriginalName("RSA_OAEP_4096_SHA1_AES_256")] RsaOaep4096Sha1Aes256 = 2,
+        /// <summary>
+        /// This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping
+        /// scheme defined in the PKCS #11 standard. In summary, this involves
+        /// wrapping the raw key with an ephemeral AES key, and wrapping the
+        /// ephemeral AES key with a 3072 bit RSA key. For more details, see
+        /// [RSA AES key wrap
+        /// mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).
+        /// </summary>
+        [pbr::OriginalName("RSA_OAEP_3072_SHA256_AES_256")] RsaOaep3072Sha256Aes256 = 3,
+        /// <summary>
+        /// This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping
+        /// scheme defined in the PKCS #11 standard. In summary, this involves
+        /// wrapping the raw key with an ephemeral AES key, and wrapping the
+        /// ephemeral AES key with a 4096 bit RSA key. For more details, see
+        /// [RSA AES key wrap
+        /// mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).
+        /// </summary>
+        [pbr::OriginalName("RSA_OAEP_4096_SHA256_AES_256")] RsaOaep4096Sha256Aes256 = 4,
+        /// <summary>
+        /// This ImportMethod represents RSAES-OAEP with a 3072 bit RSA key. The
+        /// key material to be imported is wrapped directly with the RSA key. Due
+        /// to technical limitations of RSA wrapping, this method cannot be used to
+        /// wrap RSA keys for import.
+        /// </summary>
+        [pbr::OriginalName("RSA_OAEP_3072_SHA256")] RsaOaep3072Sha256 = 5,
+        /// <summary>
+        /// This ImportMethod represents RSAES-OAEP with a 4096 bit RSA key. The
+        /// key material to be imported is wrapped directly with the RSA key. Due
+        /// to technical limitations of RSA wrapping, this method cannot be used to
+        /// wrap RSA keys for import.
+        /// </summary>
+        [pbr::OriginalName("RSA_OAEP_4096_SHA256")] RsaOaep4096Sha256 = 6,
       }
 
       /// <summary>

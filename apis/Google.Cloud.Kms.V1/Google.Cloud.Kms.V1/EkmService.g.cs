@@ -53,46 +53,46 @@ namespace Google.Cloud.Kms.V1 {
             "dG9idWYuVGltZXN0YW1wQgPgQQMSNwoObm90X2FmdGVyX3RpbWUYByABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGgoNc2VyaWFsX251",
             "bWJlchgIIAEoCUID4EEDEh8KEnNoYTI1Nl9maW5nZXJwcmludBgJIAEoCUID",
-            "4EEDIosECg1Fa21Db25uZWN0aW9uEhEKBG5hbWUYASABKAlCA+BBAxI0Cgtj",
+            "4EEDIpAECg1Fa21Db25uZWN0aW9uEhEKBG5hbWUYASABKAlCA+BBAxI0Cgtj",
             "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxJNChFzZXJ2aWNlX3Jlc29sdmVycxgDIAMoCzIyLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuRWttQ29ubmVjdGlvbi5TZXJ2aWNlUmVzb2x2ZXISDAoEZXRh",
-            "ZxgFIAEoCRreAQoPU2VydmljZVJlc29sdmVyElIKGXNlcnZpY2VfZGlyZWN0",
-            "b3J5X3NlcnZpY2UYASABKAlCL+BBAvpBKQonc2VydmljZWRpcmVjdG9yeS5n",
-            "b29nbGVhcGlzLmNvbS9TZXJ2aWNlEhwKD2VuZHBvaW50X2ZpbHRlchgCIAEo",
-            "CUID4EEBEhUKCGhvc3RuYW1lGAMgASgJQgPgQQISQgoTc2VydmVyX2NlcnRp",
-            "ZmljYXRlcxgEIAMoCzIgLmdvb2dsZS5jbG91ZC5rbXMudjEuQ2VydGlmaWNh",
-            "dGVCA+BBAjpz6kFwCiVjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9Fa21Db25u",
-            "ZWN0aW9uEkdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vZWttQ29ubmVjdGlvbnMve2VrbV9jb25uZWN0aW9ufTKxBwoKRWttU2Vy",
-            "dmljZRK6AQoSTGlzdEVrbUNvbm5lY3Rpb25zEi4uZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5MaXN0RWttQ29ubmVjdGlvbnNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3Vk",
-            "Lmttcy52MS5MaXN0RWttQ29ubmVjdGlvbnNSZXNwb25zZSJDgtPkkwI0EjIv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9la21Db25uZWN0",
-            "aW9uc9pBBnBhcmVudBKnAQoQR2V0RWttQ29ubmVjdGlvbhIsLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuR2V0RWttQ29ubmVjdGlvblJlcXVlc3QaIi5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkVrbUNvbm5lY3Rpb24iQYLT5JMCNBIyL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZWttQ29ubmVjdGlvbnMvKn3aQQRu",
-            "YW1lEuABChNDcmVhdGVFa21Db25uZWN0aW9uEi8uZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5DcmVhdGVFa21Db25uZWN0aW9uUmVxdWVzdBoiLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuRWttQ29ubmVjdGlvbiJ0gtPkkwJEIjIvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9la21Db25uZWN0aW9uczoOZWttX2Nv",
-            "bm5lY3Rpb27aQSdwYXJlbnQsZWttX2Nvbm5lY3Rpb25faWQsZWttX2Nvbm5l",
-            "Y3Rpb24S4gEKE1VwZGF0ZUVrbUNvbm5lY3Rpb24SLy5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLlVwZGF0ZUVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xlLmNs",
-            "b3VkLmttcy52MS5Fa21Db25uZWN0aW9uInaC0+STAlMyQS92MS97ZWttX2Nv",
-            "bm5lY3Rpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VrbUNvbm5l",
-            "Y3Rpb25zLyp9Og5la21fY29ubmVjdGlvbtpBGmVrbV9jb25uZWN0aW9uLHVw",
-            "ZGF0ZV9tYXNrGnTKQRdjbG91ZGttcy5nb29nbGVhcGlzLmNvbdJBV2h0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZGttc0KSAgoXY29t",
-            "Lmdvb2dsZS5jbG91ZC5rbXMudjFCD0VrbVNlcnZpY2VQcm90b1ABWjZnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2ttcy92",
-            "MTtrbXP4AQGqAhNHb29nbGUuQ2xvdWQuS21zLlYxygITR29vZ2xlXENsb3Vk",
-            "XEttc1xWMepBfAonc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9T",
-            "ZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2aWNlcy97c2VydmljZX1i",
-            "BnByb3RvMw=="));
+            "ZC5rbXMudjEuRWttQ29ubmVjdGlvbi5TZXJ2aWNlUmVzb2x2ZXISEQoEZXRh",
+            "ZxgFIAEoCUID4EEBGt4BCg9TZXJ2aWNlUmVzb2x2ZXISUgoZc2VydmljZV9k",
+            "aXJlY3Rvcnlfc2VydmljZRgBIAEoCUIv4EEC+kEpCidzZXJ2aWNlZGlyZWN0",
+            "b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USHAoPZW5kcG9pbnRfZmlsdGVy",
+            "GAIgASgJQgPgQQESFQoIaG9zdG5hbWUYAyABKAlCA+BBAhJCChNzZXJ2ZXJf",
+            "Y2VydGlmaWNhdGVzGAQgAygLMiAuZ29vZ2xlLmNsb3VkLmttcy52MS5DZXJ0",
+            "aWZpY2F0ZUID4EECOnPqQXAKJWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Vr",
+            "bUNvbm5lY3Rpb24SR3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9la21Db25uZWN0aW9ucy97ZWttX2Nvbm5lY3Rpb259MrEHCgpF",
+            "a21TZXJ2aWNlEroBChJMaXN0RWttQ29ubmVjdGlvbnMSLi5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkxpc3RFa21Db25uZWN0aW9uc1JlcXVlc3QaLy5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLkxpc3RFa21Db25uZWN0aW9uc1Jlc3BvbnNlIkOC0+ST",
+            "AjQSMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VrbUNv",
+            "bm5lY3Rpb25z2kEGcGFyZW50EqcBChBHZXRFa21Db25uZWN0aW9uEiwuZ29v",
+            "Z2xlLmNsb3VkLmttcy52MS5HZXRFa21Db25uZWN0aW9uUmVxdWVzdBoiLmdv",
+            "b2dsZS5jbG91ZC5rbXMudjEuRWttQ29ubmVjdGlvbiJBgtPkkwI0EjIvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25uZWN0aW9ucy8q",
+            "fdpBBG5hbWUS4AEKE0NyZWF0ZUVrbUNvbm5lY3Rpb24SLy5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkNyZWF0ZUVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5Fa21Db25uZWN0aW9uInSC0+STAkQiMi92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VrbUNvbm5lY3Rpb25zOg5l",
+            "a21fY29ubmVjdGlvbtpBJ3BhcmVudCxla21fY29ubmVjdGlvbl9pZCxla21f",
+            "Y29ubmVjdGlvbhLiAQoTVXBkYXRlRWttQ29ubmVjdGlvbhIvLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuVXBkYXRlRWttQ29ubmVjdGlvblJlcXVlc3QaIi5nb29n",
+            "bGUuY2xvdWQua21zLnYxLkVrbUNvbm5lY3Rpb24idoLT5JMCUzJBL3YxL3tl",
+            "a21fY29ubmVjdGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWtt",
+            "Q29ubmVjdGlvbnMvKn06DmVrbV9jb25uZWN0aW9u2kEaZWttX2Nvbm5lY3Rp",
+            "b24sdXBkYXRlX21hc2sadMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t0kFX",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vka21zQpIC",
+            "Chdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIPRWttU2VydmljZVByb3RvUAFa",
+            "Nmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "a21zL3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVc",
+            "Q2xvdWRcS21zXFYx6kF8CidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFwaXMu",
+            "Y29tL1NlcnZpY2USUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9uYW1lc3BhY2VzL3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2",
+            "aWNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +110,8 @@ namespace Google.Cloud.Kms.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [KeyManagementService.ListEkmConnections][].
+  /// Request message for
+  /// [EkmService.ListEkmConnections][google.cloud.kms.v1.EkmService.ListEkmConnections].
   /// </summary>
   public sealed partial class ListEkmConnectionsRequest : pb::IMessage<ListEkmConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -480,7 +481,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListEkmConnections][].
+  /// Response message for
+  /// [EkmService.ListEkmConnections][google.cloud.kms.v1.EkmService.ListEkmConnections].
   /// </summary>
   public sealed partial class ListEkmConnectionsResponse : pb::IMessage<ListEkmConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -747,7 +749,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetEkmConnection][].
+  /// Request message for
+  /// [EkmService.GetEkmConnection][google.cloud.kms.v1.EkmService.GetEkmConnection].
   /// </summary>
   public sealed partial class GetEkmConnectionRequest : pb::IMessage<GetEkmConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -943,7 +946,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateEkmConnection][].
+  /// Request message for
+  /// [EkmService.CreateEkmConnection][google.cloud.kms.v1.EkmService.CreateEkmConnection].
   /// </summary>
   public sealed partial class CreateEkmConnectionRequest : pb::IMessage<CreateEkmConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1231,7 +1235,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateEkmConnection][].
+  /// Request message for
+  /// [EkmService.UpdateEkmConnection][google.cloud.kms.v1.EkmService.UpdateEkmConnection].
   /// </summary>
   public sealed partial class UpdateEkmConnectionRequest : pb::IMessage<UpdateEkmConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2127,9 +2132,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int EtagFieldNumber = 5;
     private string etag_ = "";
     /// <summary>
-    /// This checksum is computed by the server based on the value of other fields,
-    /// and may be sent on update requests to ensure the client has an up-to-date
-    /// value before proceeding.
+    /// Optional. Etag of the currently stored
+    /// [EkmConnection][google.cloud.kms.v1.EkmConnection].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2458,7 +2462,8 @@ namespace Google.Cloud.Kms.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Kms.V1.Certificate> serverCertificates_ = new pbc::RepeatedField<global::Google.Cloud.Kms.V1.Certificate>();
         /// <summary>
         /// Required. A list of leaf server certificates used to authenticate HTTPS
-        /// connections to the EKM replica.
+        /// connections to the EKM replica. Currently, a maximum of 10
+        /// [Certificate][google.cloud.kms.v1.Certificate] is supported.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
