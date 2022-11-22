@@ -42,6 +42,7 @@ namespace Google.Cloud.Kms.V1.Snippets
                 ImportJob = "",
                 RsaAesWrappedKey = ByteString.Empty,
                 CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                WrappedKey = ByteString.Empty,
             };
             // Make the request
             CryptoKeyVersion response = keyManagementServiceClient.ImportCryptoKeyVersion(request);
