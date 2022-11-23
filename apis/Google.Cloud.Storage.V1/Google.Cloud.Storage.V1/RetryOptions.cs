@@ -14,7 +14,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Google.Cloud.Storage.V1;
 
@@ -26,30 +25,58 @@ public sealed class RetryOptions
     /// <summary>
     /// 
     /// </summary>
-    public int MaxAttempts { get; set; }
+    public int MaxAttempts { get;  }
 
     /// <summary>
     /// 
     /// </summary>
-    public int InitialBackoff { get; set; }
+    public int InitialBackoff { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public int MaxBackoff { get; set; }
+    public int MaxBackoff { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public int BackoffMultiplier { get; set; }
+    public int BackoffMultiplier { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public IList<int> ErrorCodes { get; set; }
+    public enum RetryLogic
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        RetryAlways,
+
+        /// <summary>
+        /// 
+        /// </summary>
+        RetryNever,
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Default
+    }
 
     /// <summary>
     /// 
     /// </summary>
-    public bool RetryAlways { get; set; }
+    public Func<int, RetryLogic> RetryPredicate { get; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public RetryOptions(int maxAttempts = 0, int initialBackoff = 0, int maxBackoff = 0, int backoffMultiplier = 0, Func<int, RetryLogic> retryPredicate = null)
+    {
+        MaxAttempts = maxAttempts;
+        InitialBackoff = initialBackoff;
+        MaxBackoff = maxBackoff;
+        BackoffMultiplier = backoffMultiplier;
+        RetryPredicate = retryPredicate;
+    }
 }
