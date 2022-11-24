@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -72,6 +74,8 @@ namespace Google.Cloud.Metastore.V1Alpha
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
             DeleteBackupSettings = existing.DeleteBackupSettings;
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -458,6 +462,16 @@ namespace Google.Cloud.Metastore.V1Alpha
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataprocMetastoreSettings"/> object.</returns>
         public DataprocMetastoreSettings Clone() => new DataprocMetastoreSettings(this);
@@ -615,6 +629,12 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// <summary>The underlying gRPC DataprocMetastore client</summary>
         public virtual DataprocMetastore.DataprocMetastoreClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Lists services in a project and location.
         /// </summary>
@@ -637,8 +657,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -664,8 +684,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -691,8 +711,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -718,8 +738,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -772,8 +792,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -789,8 +809,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -806,8 +826,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -820,8 +840,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -837,8 +857,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -854,8 +874,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -921,8 +941,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -953,8 +973,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -985,8 +1005,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1012,8 +1032,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1044,8 +1064,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1076,8 +1096,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1280,8 +1300,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1297,8 +1317,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1314,8 +1334,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1328,8 +1348,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1345,8 +1365,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1362,8 +1382,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1394,8 +1414,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1421,8 +1441,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1448,8 +1468,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1475,8 +1495,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1529,8 +1549,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1546,8 +1566,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1563,8 +1583,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1577,8 +1597,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1594,8 +1614,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1611,8 +1631,8 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1679,19 +1699,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1711,19 +1731,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1743,19 +1763,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1770,19 +1790,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1802,19 +1822,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1834,19 +1854,19 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -2098,14 +2118,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2122,14 +2142,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2146,14 +2166,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2166,14 +2186,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2190,14 +2210,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2214,14 +2234,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2536,14 +2556,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2567,14 +2587,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2598,14 +2618,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2624,14 +2644,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2655,14 +2675,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2686,14 +2706,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2930,6 +2950,8 @@ namespace Google.Cloud.Metastore.V1Alpha
             RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
@@ -3014,6 +3036,12 @@ namespace Google.Cloud.Metastore.V1Alpha
 
         /// <summary>The underlying gRPC DataprocMetastore client</summary>
         public override DataprocMetastore.DataprocMetastoreClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListServicesRequest(ref ListServicesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3482,6 +3510,32 @@ namespace Google.Cloud.Metastore.V1Alpha
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class DataprocMetastore
+    {
+        public partial class DataprocMetastoreClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
