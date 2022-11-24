@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -43,10 +44,9 @@ public class RetryConformanceTest
     private StorageClient Client => _fixture.Client;
 
     /// <summary>
-    /// Iterate throught the json file and run the test cases 
+    /// Runs a single <see cref="RetryTest"/>,
+    /// which itself can contain multiple instruction lists and methods.
     /// </summary>
-    /// <param name="test"> An intstance of <see cref="Tests.Conformance.RetryTest"/>.</param>
-    /// <returns></returns>
     [SkippableTheory]
     [MemberData(nameof(RetryTestData))]
     public async Task RetryTest(RetryTest test)
@@ -105,27 +105,11 @@ public class RetryConformanceTest
                         Assert.False(response.Completed);
                     }
                 }
-                catch (Exception ex) // To catch expected exception when retry should not happen.
+                catch (GoogleApiException ex) when (InstructionContainsErrorCode(ex.HttpStatusCode))
                 {
-                    if (ex is GoogleApiException exception)
-                    {
-                        var statusCode = exception.HttpStatusCode;
-
-                        if ((instructionList.Instructions.Contains("return-503") && statusCode == System.Net.HttpStatusCode.ServiceUnavailable)
-                            || (instructionList.Instructions.Contains("return-400") && statusCode == System.Net.HttpStatusCode.BadRequest)
-                            || (instructionList.Instructions.Contains("return-401") && statusCode == System.Net.HttpStatusCode.Unauthorized))
-                        {
-                            Assert.False(expectSuccess);
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    // The instructions specified that the given status code would be returned.
+                    // We just need to check that we weren't expecting this specific call to succeed.
+                    Assert.False(expectSuccess);
                 }
             }
         }
@@ -137,10 +121,16 @@ public class RetryConformanceTest
                 RemoveRetryIdHeader();
                 await DeleteRetryTest(response.Id);
             }
-            catch // To catch and ignore exceptions occured, if any, while doing clean up of test.
+            catch
             {
+                // Swallow any exceptions during clean-up: it's best effort.
             }
         }
+
+        bool InstructionContainsErrorCode(HttpStatusCode statusCode) =>
+            (instructionList.Instructions.Contains("return-503") && statusCode == HttpStatusCode.ServiceUnavailable)
+            || (instructionList.Instructions.Contains("return-400") && statusCode == HttpStatusCode.BadRequest)
+            || (instructionList.Instructions.Contains("return-401") && statusCode == HttpStatusCode.Unauthorized);
     }
 
     /// <summary>
@@ -423,16 +413,10 @@ public class RetryConformanceTest
             return null;
         }
 
-        JObject payload = new JObject();
-        JArray instructions = new JArray();
-        foreach (string instruct in instructionList.Instructions)
+        var body = new JObject
         {
-            instructions.Add(instruct);
-        }
-
-        payload.Add(methodName, instructions);
-        JObject body = new JObject();
-        body.Add("instructions", payload);
+            ["instructions"] = new JObject { [methodName] = new JArray(instructionList.Instructions) }
+        };
 
         return new StringContent(body.ToString(), Encoding.UTF8, "application/json");
     }
