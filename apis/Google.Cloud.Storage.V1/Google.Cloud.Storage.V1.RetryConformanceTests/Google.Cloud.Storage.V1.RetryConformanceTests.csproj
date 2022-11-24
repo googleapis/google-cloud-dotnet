@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- We don't use anything from the Test project, but this gets us the same dependencies trivially. -->
     <ProjectReference Include="..\Google.Cloud.Storage.V1.Tests\Google.Cloud.Storage.V1.Tests.csproj" />
   </ItemGroup>
 </Project>
