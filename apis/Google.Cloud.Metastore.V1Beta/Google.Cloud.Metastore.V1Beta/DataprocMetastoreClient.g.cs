@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -72,6 +74,8 @@ namespace Google.Cloud.Metastore.V1Beta
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
             DeleteBackupSettings = existing.DeleteBackupSettings;
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -458,6 +462,16 @@ namespace Google.Cloud.Metastore.V1Beta
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataprocMetastoreSettings"/> object.</returns>
         public DataprocMetastoreSettings Clone() => new DataprocMetastoreSettings(this);
@@ -518,8 +532,8 @@ namespace Google.Cloud.Metastore.V1Beta
     /// <summary>DataprocMetastore client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Configures and manages metastore services.
-    /// Metastore services are fully managed, highly available, auto-scaled,
-    /// auto-healing, OSS-native deployments of technical metadata management
+    /// Metastore services are fully managed, highly available, autoscaled,
+    /// autohealing, OSS-native deployments of technical metadata management
     /// software. Each metastore service exposes a network endpoint through which
     /// metadata queries are served. Metadata queries can originate from a variety
     /// of sources, including Apache Hive, Apache Presto, and Apache Spark.
@@ -614,6 +628,12 @@ namespace Google.Cloud.Metastore.V1Beta
 
         /// <summary>The underlying gRPC DataprocMetastore client</summary>
         public virtual DataprocMetastore.DataprocMetastoreClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists services in a project and location.
@@ -1682,7 +1702,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -1714,7 +1734,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -1746,7 +1766,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -1773,7 +1793,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -1805,7 +1825,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -1837,7 +1857,7 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the service in which to create a
         /// metastore import, in the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The
@@ -2101,13 +2121,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2125,13 +2145,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2149,13 +2169,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2169,13 +2189,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2193,13 +2213,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2217,13 +2237,13 @@ namespace Google.Cloud.Metastore.V1Beta
         /// Required. The relative resource name of the metastore service to run
         /// restore, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The relative resource name of the metastore service backup to
         /// restore from, in the following form:
         /// 
-        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2480,7 +2500,7 @@ namespace Google.Cloud.Metastore.V1Beta
             GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2489,7 +2509,7 @@ namespace Google.Cloud.Metastore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2498,7 +2518,7 @@ namespace Google.Cloud.Metastore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2533,13 +2553,13 @@ namespace Google.Cloud.Metastore.V1Beta
             lro::Operation<Backup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2564,13 +2584,13 @@ namespace Google.Cloud.Metastore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2595,13 +2615,13 @@ namespace Google.Cloud.Metastore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2621,13 +2641,13 @@ namespace Google.Cloud.Metastore.V1Beta
             CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2652,13 +2672,13 @@ namespace Google.Cloud.Metastore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2683,13 +2703,13 @@ namespace Google.Cloud.Metastore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the service in which to create a
         /// backup of the following form:
         /// 
-        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
         /// Required. The backup to create. The `name` field is ignored. The ID of the
@@ -2861,8 +2881,8 @@ namespace Google.Cloud.Metastore.V1Beta
     /// <summary>DataprocMetastore client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Configures and manages metastore services.
-    /// Metastore services are fully managed, highly available, auto-scaled,
-    /// auto-healing, OSS-native deployments of technical metadata management
+    /// Metastore services are fully managed, highly available, autoscaled,
+    /// autohealing, OSS-native deployments of technical metadata management
     /// software. Each metastore service exposes a network endpoint through which
     /// metadata queries are served. Metadata queries can originate from a variety
     /// of sources, including Apache Hive, Apache Presto, and Apache Spark.
@@ -2930,6 +2950,8 @@ namespace Google.Cloud.Metastore.V1Beta
             RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
@@ -3014,6 +3036,12 @@ namespace Google.Cloud.Metastore.V1Beta
 
         /// <summary>The underlying gRPC DataprocMetastore client</summary>
         public override DataprocMetastore.DataprocMetastoreClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListServicesRequest(ref ListServicesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3384,7 +3412,7 @@ namespace Google.Cloud.Metastore.V1Beta
         public override lro::OperationsClient CreateBackupOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3396,7 +3424,7 @@ namespace Google.Cloud.Metastore.V1Beta
         }
 
         /// <summary>
-        /// Creates a new Backup in a given project and location.
+        /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3482,6 +3510,32 @@ namespace Google.Cloud.Metastore.V1Beta
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class DataprocMetastore
+    {
+        public partial class DataprocMetastoreClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
