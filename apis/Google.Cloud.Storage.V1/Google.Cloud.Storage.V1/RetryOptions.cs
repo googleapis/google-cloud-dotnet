@@ -45,33 +45,12 @@ public sealed class RetryOptions
     /// <summary>
     /// 
     /// </summary>
-    public enum RetryLogic
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        RetryAlways,
-
-        /// <summary>
-        /// 
-        /// </summary>
-        RetryNever,
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Default
-    }
+    public Func<int, bool> RetryPredicate { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public Func<int, RetryLogic> RetryPredicate { get; }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryOptions(int maxAttempts = 0, int initialBackoff = 0, int maxBackoff = 0, int backoffMultiplier = 0, Func<int, RetryLogic> retryPredicate = null)
+    public RetryOptions(int maxAttempts = 0, int initialBackoff = 0, int maxBackoff = 0, int backoffMultiplier = 0, Func<int, bool> retryPredicate = null)
     {
         MaxAttempts = maxAttempts;
         InitialBackoff = initialBackoff;
