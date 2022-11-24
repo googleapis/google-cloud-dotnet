@@ -3114,6 +3114,1066 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_sync",
+      "title": "ListFederationsRequestObject",
+      "description": "Snippet for ListFederations",
+      "file": "DataprocMetastoreFederationClient.ListFederationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederations",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_async",
+      "title": "ListFederationsRequestObjectAsync",
+      "description": "Snippet for ListFederationsAsync",
+      "file": "DataprocMetastoreFederationClient.ListFederationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederationsAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_sync_flattened",
+      "title": "ListFederations",
+      "description": "Snippet for ListFederations",
+      "file": "DataprocMetastoreFederationClient.ListFederationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederations",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_async_flattened",
+      "title": "ListFederationsAsync",
+      "description": "Snippet for ListFederationsAsync",
+      "file": "DataprocMetastoreFederationClient.ListFederationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederationsAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_sync_flattened_resourceNames",
+      "title": "ListFederationsResourceNames",
+      "description": "Snippet for ListFederations",
+      "file": "DataprocMetastoreFederationClient.ListFederationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederations",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_ListFederations_async_flattened_resourceNames",
+      "title": "ListFederationsResourceNamesAsync",
+      "description": "Snippet for ListFederationsAsync",
+      "file": "DataprocMetastoreFederationClient.ListFederationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFederationsAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "ListFederations",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.ListFederations",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_sync",
+      "title": "GetFederationRequestObject",
+      "description": "Snippet for GetFederation",
+      "file": "DataprocMetastoreFederationClient.GetFederationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_async",
+      "title": "GetFederationRequestObjectAsync",
+      "description": "Snippet for GetFederationAsync",
+      "file": "DataprocMetastoreFederationClient.GetFederationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_sync_flattened",
+      "title": "GetFederation",
+      "description": "Snippet for GetFederation",
+      "file": "DataprocMetastoreFederationClient.GetFederationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_async_flattened",
+      "title": "GetFederationAsync",
+      "description": "Snippet for GetFederationAsync",
+      "file": "DataprocMetastoreFederationClient.GetFederationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_sync_flattened_resourceNames",
+      "title": "GetFederationResourceNames",
+      "description": "Snippet for GetFederation",
+      "file": "DataprocMetastoreFederationClient.GetFederationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_GetFederation_async_flattened_resourceNames",
+      "title": "GetFederationResourceNamesAsync",
+      "description": "Snippet for GetFederationAsync",
+      "file": "DataprocMetastoreFederationClient.GetFederationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "GetFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.GetFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_sync",
+      "title": "CreateFederationRequestObject",
+      "description": "Snippet for CreateFederation",
+      "file": "DataprocMetastoreFederationClient.CreateFederationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_async",
+      "title": "CreateFederationRequestObjectAsync",
+      "description": "Snippet for CreateFederationAsync",
+      "file": "DataprocMetastoreFederationClient.CreateFederationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_sync_flattened",
+      "title": "CreateFederation",
+      "description": "Snippet for CreateFederation",
+      "file": "DataprocMetastoreFederationClient.CreateFederationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_async_flattened",
+      "title": "CreateFederationAsync",
+      "description": "Snippet for CreateFederationAsync",
+      "file": "DataprocMetastoreFederationClient.CreateFederationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_sync_flattened_resourceNames",
+      "title": "CreateFederationResourceNames",
+      "description": "Snippet for CreateFederation",
+      "file": "DataprocMetastoreFederationClient.CreateFederationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_async_flattened_resourceNames",
+      "title": "CreateFederationResourceNamesAsync",
+      "description": "Snippet for CreateFederationAsync",
+      "file": "DataprocMetastoreFederationClient.CreateFederationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "CreateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.CreateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_UpdateFederation_sync",
+      "title": "UpdateFederationRequestObject",
+      "description": "Snippet for UpdateFederation",
+      "file": "DataprocMetastoreFederationClient.UpdateFederationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "UpdateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.UpdateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_UpdateFederation_async",
+      "title": "UpdateFederationRequestObjectAsync",
+      "description": "Snippet for UpdateFederationAsync",
+      "file": "DataprocMetastoreFederationClient.UpdateFederationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "UpdateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.UpdateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_UpdateFederation_sync_flattened",
+      "title": "UpdateFederation",
+      "description": "Snippet for UpdateFederation",
+      "file": "DataprocMetastoreFederationClient.UpdateFederationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "UpdateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.UpdateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_UpdateFederation_async_flattened",
+      "title": "UpdateFederationAsync",
+      "description": "Snippet for UpdateFederationAsync",
+      "file": "DataprocMetastoreFederationClient.UpdateFederationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "UpdateFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.UpdateFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_sync",
+      "title": "DeleteFederationRequestObject",
+      "description": "Snippet for DeleteFederation",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_async",
+      "title": "DeleteFederationRequestObjectAsync",
+      "description": "Snippet for DeleteFederationAsync",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_sync_flattened",
+      "title": "DeleteFederation",
+      "description": "Snippet for DeleteFederation",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_async_flattened",
+      "title": "DeleteFederationAsync",
+      "description": "Snippet for DeleteFederationAsync",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_sync_flattened_resourceNames",
+      "title": "DeleteFederationResourceNames",
+      "description": "Snippet for DeleteFederation",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederation",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1alpha_generated_DataprocMetastoreFederation_DeleteFederation_async_flattened_resourceNames",
+      "title": "DeleteFederationResourceNamesAsync",
+      "description": "Snippet for DeleteFederationAsync",
+      "file": "DataprocMetastoreFederationClient.DeleteFederationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFederationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreFederationClient",
+          "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient"
+        },
+        "method": {
+          "shortName": "DeleteFederation",
+          "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation.DeleteFederation",
+          "service": {
+            "shortName": "DataprocMetastoreFederation",
+            "fullName": "google.cloud.metastore.v1alpha.DataprocMetastoreFederation"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
