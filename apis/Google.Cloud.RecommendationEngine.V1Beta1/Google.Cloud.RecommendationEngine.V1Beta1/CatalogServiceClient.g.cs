@@ -758,7 +758,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
@@ -784,7 +784,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
@@ -810,7 +810,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
@@ -831,7 +831,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
@@ -857,7 +857,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
@@ -883,7 +883,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to update/create. The 'catalog_item_id' field
