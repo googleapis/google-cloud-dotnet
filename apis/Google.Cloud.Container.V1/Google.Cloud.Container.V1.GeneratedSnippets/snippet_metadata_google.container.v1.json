@@ -946,12 +946,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 60,
+          "end": 61,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 58,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -985,12 +985,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 61,
+          "end": 62,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 59,
+          "end": 60,
           "type": "SHORT"
         }
       ]
