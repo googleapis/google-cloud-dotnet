@@ -1153,7 +1153,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Required. Full resource name of catalog item, such as
-    /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+    /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
