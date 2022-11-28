@@ -171,7 +171,7 @@ do
   fi
   dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- create-clients $api
 done
-log_build_action "(Start) End creation tests"
+log_build_action "(End) Client creation tests"
 
 if [[ "$runtests" = true ]]
 then
