@@ -671,8 +671,9 @@ namespace Google.Cloud.Optimization.V1 {
     ///     &lt;= visits[0].start_time &lt;= visits[1].start_time ...
     ///     &lt;= vehicle_end_time`).
     ///   * a shipment may only be performed on a vehicle that is allowed. A
-    ///     vehicle is allowed if [Shipment.allowed_vehicle_indices][google.cloud.optimization.v1.Shipment.allowed_vehicle_indices] is empty or
-    ///     its `vehicle_index` is included in
+    ///     vehicle is allowed if
+    ///     [Shipment.allowed_vehicle_indices][google.cloud.optimization.v1.Shipment.allowed_vehicle_indices]
+    ///     is empty or its `vehicle_index` is included in
     ///     [Shipment.allowed_vehicle_indices][google.cloud.optimization.v1.Shipment.allowed_vehicle_indices].
     ///
     /// If the injected solution is not feasible, a validation error is not
@@ -742,16 +743,27 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// If true:
     ///
-    ///   * uses [ShipmentRoute.vehicle_label][google.cloud.optimization.v1.ShipmentRoute.vehicle_label] instead of `vehicle_index` to
+    ///   * uses
+    ///   [ShipmentRoute.vehicle_label][google.cloud.optimization.v1.ShipmentRoute.vehicle_label]
+    ///   instead of `vehicle_index` to
     ///     match routes in an injected solution with vehicles in the request;
-    ///     reuses the mapping of original [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index] to new
-    ///     [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index] to update
+    ///     reuses the mapping of original
+    ///     [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index]
+    ///     to new
+    ///     [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index]
+    ///     to update
     ///     [ConstraintRelaxation.vehicle_indices][google.cloud.optimization.v1.InjectedSolutionConstraint.ConstraintRelaxation.vehicle_indices]
     ///     if non-empty, but the mapping must be unambiguous (i.e., multiple
     ///     `ShipmentRoute`s must not share the same original `vehicle_index`).
-    ///   * uses [ShipmentRoute.Visit.shipment_label][google.cloud.optimization.v1.ShipmentRoute.Visit.shipment_label] instead of `shipment_index`
+    ///   * uses
+    ///   [ShipmentRoute.Visit.shipment_label][google.cloud.optimization.v1.ShipmentRoute.Visit.shipment_label]
+    ///   instead of `shipment_index`
     ///     to match visits in an injected solution with shipments in the request;
-    ///   * uses [SkippedShipment.label][google.cloud.optimization.v1.SkippedShipment.label] instead of [SkippedShipment.index][google.cloud.optimization.v1.SkippedShipment.index] to
+    ///   * uses
+    ///   [SkippedShipment.label][google.cloud.optimization.v1.SkippedShipment.label]
+    ///   instead of
+    ///   [SkippedShipment.index][google.cloud.optimization.v1.SkippedShipment.index]
+    ///   to
     ///     match skipped shipments in the injected solution with request
     ///     shipments.
     ///
@@ -764,8 +776,10 @@ namespace Google.Cloud.Optimization.V1 {
     /// If true, labels in the following categories must appear at most once in
     /// their category:
     ///
-    ///   * [Vehicle.label][google.cloud.optimization.v1.Vehicle.label] in the request;
-    ///   * [Shipment.label][google.cloud.optimization.v1.Shipment.label] in the request;
+    ///   * [Vehicle.label][google.cloud.optimization.v1.Vehicle.label] in the
+    ///   request;
+    ///   * [Shipment.label][google.cloud.optimization.v1.Shipment.label] in the
+    ///   request;
     ///   * [ShipmentRoute.vehicle_label][google.cloud.optimization.v1.ShipmentRoute.vehicle_label] in the injected solution;
     ///   * [SkippedShipment.label][google.cloud.optimization.v1.SkippedShipment.label] and [ShipmentRoute.Visit.shipment_label][google.cloud.optimization.v1.ShipmentRoute.Visit.shipment_label] in
     ///     the injected solution (except pickup/delivery visit pairs, whose
@@ -775,20 +789,23 @@ namespace Google.Cloud.Optimization.V1 {
     /// request vehicle, the corresponding route is removed from the solution
     /// along with its visits. If a `shipment_label` in the injected solution does
     /// not correspond to a request shipment, the corresponding visit is removed
-    /// from the solution. If a [SkippedShipment.label][google.cloud.optimization.v1.SkippedShipment.label] in the injected solution
-    /// does not correspond to a request shipment, the `SkippedShipment` is removed
-    /// from the solution.
+    /// from the solution. If a
+    /// [SkippedShipment.label][google.cloud.optimization.v1.SkippedShipment.label]
+    /// in the injected solution does not correspond to a request shipment, the
+    /// `SkippedShipment` is removed from the solution.
     ///
     /// Removing route visits or entire routes from an injected solution may
     /// have an effect on the implied constraints, which may lead to change in
     /// solution, validation errors, or infeasibility.
     ///
-    /// NOTE: The caller must ensure that each [Vehicle.label][google.cloud.optimization.v1.Vehicle.label]
-    /// (resp. [Shipment.label][google.cloud.optimization.v1.Shipment.label]) uniquely identifies a vehicle (resp. shipment)
-    /// entity used across the two relevant requests: the past request that
-    /// produced the `OptimizeToursResponse` used in the injected solution and the
-    /// current request that includes the injected solution. The uniqueness checks
-    /// described above are not enough to guarantee this requirement.
+    /// NOTE: The caller must ensure that each
+    /// [Vehicle.label][google.cloud.optimization.v1.Vehicle.label] (resp.
+    /// [Shipment.label][google.cloud.optimization.v1.Shipment.label]) uniquely
+    /// identifies a vehicle (resp. shipment) entity used across the two relevant
+    /// requests: the past request that produced the `OptimizeToursResponse` used
+    /// in the injected solution and the current request that includes the injected
+    /// solution. The uniqueness checks described above are not enough to guarantee
+    /// this requirement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -807,8 +824,10 @@ namespace Google.Cloud.Optimization.V1 {
     /// [Transition.travel_duration][google.cloud.optimization.v1.ShipmentRoute.Transition.travel_duration],
     /// [Visit.start_time][google.cloud.optimization.v1.ShipmentRoute.Visit.start_time],
     /// and `vehicle_end_time`; in setting the
-    /// [ShipmentRoute.has_traffic_infeasibilities][google.cloud.optimization.v1.ShipmentRoute.has_traffic_infeasibilities] field, and in calculating the
-    /// [OptimizeToursResponse.total_cost][google.cloud.optimization.v1.OptimizeToursResponse.total_cost] field.
+    /// [ShipmentRoute.has_traffic_infeasibilities][google.cloud.optimization.v1.ShipmentRoute.has_traffic_infeasibilities]
+    /// field, and in calculating the
+    /// [OptimizeToursResponse.total_cost][google.cloud.optimization.v1.OptimizeToursResponse.total_cost]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -938,10 +957,11 @@ namespace Google.Cloud.Optimization.V1 {
     public const int PopulateTravelStepPolylinesFieldNumber = 20;
     private bool populateTravelStepPolylines_;
     /// <summary>
-    /// Deprecated: Use [OptimizeToursRequest.populate_transition_polylines][] instead.
-    /// If true, polylines will be populated in response
-    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]. Note that in this case, the polylines will
-    /// also be populated in the deprecated `travel_steps`.
+    /// Deprecated: Use [OptimizeToursRequest.populate_transition_polylines][]
+    /// instead. If true, polylines will be populated in response
+    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions].
+    /// Note that in this case, the polylines will also be populated in the
+    /// deprecated `travel_steps`.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1507,8 +1527,9 @@ namespace Google.Cloud.Optimization.V1 {
       /// <summary>
       /// Defines how the solver should handle the request. In all modes but
       /// `VALIDATE_ONLY`, if the request is invalid, you will receive an
-      /// `INVALID_REQUEST` error. See [max_validation_errors][google.cloud.optimization.v1.OptimizeToursRequest.max_validation_errors] to cap the number of
-      /// errors returned.
+      /// `INVALID_REQUEST` error. See
+      /// [max_validation_errors][google.cloud.optimization.v1.OptimizeToursRequest.max_validation_errors]
+      /// to cap the number of errors returned.
       /// </summary>
       public enum SolvingMode {
         /// <summary>
@@ -1630,8 +1651,9 @@ namespace Google.Cloud.Optimization.V1 {
     public const int RequestLabelFieldNumber = 3;
     private string requestLabel_ = "";
     /// <summary>
-    /// Copy of the [OptimizeToursRequest.label][google.cloud.optimization.v1.OptimizeToursRequest.label], if a label was specified in the
-    /// request.
+    /// Copy of the
+    /// [OptimizeToursRequest.label][google.cloud.optimization.v1.OptimizeToursRequest.label],
+    /// if a label was specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1664,7 +1686,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// List of all the validation errors that we were able to detect
     /// independently. See the "MULTIPLE ERRORS" explanation for the
-    /// [OptimizeToursValidationError][google.cloud.optimization.v1.OptimizeToursValidationError] message.
+    /// [OptimizeToursValidationError][google.cloud.optimization.v1.OptimizeToursValidationError]
+    /// message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1999,7 +2022,9 @@ namespace Google.Cloud.Optimization.V1 {
         private global::Google.Cloud.Optimization.V1.AggregatedMetrics aggregatedRouteMetrics_;
         /// <summary>
         /// Aggregated over the routes. Each metric is the sum (or max, for loads)
-        /// over all [ShipmentRoute.metrics][google.cloud.optimization.v1.ShipmentRoute.metrics] fields of the same name.
+        /// over all
+        /// [ShipmentRoute.metrics][google.cloud.optimization.v1.ShipmentRoute.metrics]
+        /// fields of the same name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2030,8 +2055,8 @@ namespace Google.Cloud.Optimization.V1 {
         private int usedVehicleCount_;
         /// <summary>
         /// Number of vehicles used. Note: if a vehicle route is empty and
-        /// [Vehicle.used_if_route_is_empty][google.cloud.optimization.v1.Vehicle.used_if_route_is_empty] is true, the vehicle is considered
-        /// used.
+        /// [Vehicle.used_if_route_is_empty][google.cloud.optimization.v1.Vehicle.used_if_route_is_empty]
+        /// is true, the vehicle is considered used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2047,7 +2072,8 @@ namespace Google.Cloud.Optimization.V1 {
         private global::Google.Protobuf.WellKnownTypes.Timestamp earliestVehicleStartTime_;
         /// <summary>
         /// The earliest start time for a used vehicle, computed as the minimum over
-        /// all used vehicles of [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time].
+        /// all used vehicles of
+        /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2063,7 +2089,8 @@ namespace Google.Cloud.Optimization.V1 {
         private global::Google.Protobuf.WellKnownTypes.Timestamp latestVehicleEndTime_;
         /// <summary>
         /// The latest end time for a used vehicle, computed as the maximum over all
-        /// used vehicles of [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time].
+        /// used vehicles of
+        /// [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2487,8 +2514,8 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig> modelConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig>();
     /// <summary>
-    /// Required. Input/Output information each purchase model, such as file paths and data
-    /// formats.
+    /// Required. Input/Output information each purchase model, such as file paths
+    /// and data formats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3326,7 +3353,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// earliest effective start time and the latest effective end time of
     /// all vehicles. Users can assign a cost per hour to that quantity to try
     /// and optimize for earliest job completion, for example. This cost must be in
-    /// the same unit as [Shipment.penalty_cost][google.cloud.optimization.v1.Shipment.penalty_cost].
+    /// the same unit as
+    /// [Shipment.penalty_cost][google.cloud.optimization.v1.Shipment.penalty_cost].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3555,7 +3583,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// Deprecated: No longer used.
     /// Set of break rules used in the model.
     /// Each vehicle specifies the `BreakRule` that applies to it via the
-    /// [Vehicle.break_rule_indices][google.cloud.optimization.v1.Vehicle.break_rule_indices] field (which must be a singleton).
+    /// [Vehicle.break_rule_indices][google.cloud.optimization.v1.Vehicle.break_rule_indices]
+    /// field (which must be a singleton).
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3986,7 +4015,8 @@ namespace Google.Cloud.Optimization.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row> rows_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row>();
         /// <summary>
         /// Specifies the rows of the duration and distance matrix. It must have as
-        /// many elements as [ShipmentModel.duration_distance_matrix_src_tags][google.cloud.optimization.v1.ShipmentModel.duration_distance_matrix_src_tags].
+        /// many elements as
+        /// [ShipmentModel.duration_distance_matrix_src_tags][google.cloud.optimization.v1.ShipmentModel.duration_distance_matrix_src_tags].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5426,8 +5456,8 @@ namespace Google.Cloud.Optimization.V1 {
             public const int MaxInterBreakDurationFieldNumber = 2;
             private global::Google.Protobuf.WellKnownTypes.Duration maxInterBreakDuration_;
             /// <summary>
-            /// Required. Maximum allowed span of any interval of time in the route that does not
-            /// include at least partially a break of `duration >=
+            /// Required. Maximum allowed span of any interval of time in the route
+            /// that does not include at least partially a break of `duration >=
             /// min_break_duration`. Must be positive.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5953,7 +5983,8 @@ namespace Google.Cloud.Optimization.V1 {
     private string label_ = "";
     /// <summary>
     /// Specifies a label for this shipment. This label is reported in the response
-    /// in the `shipment_label` of the corresponding [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit].
+    /// in the `shipment_label` of the corresponding
+    /// [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6619,8 +6650,10 @@ namespace Google.Cloud.Optimization.V1 {
         private readonly pbc::MapField<string, global::Google.Cloud.Optimization.V1.Shipment.Types.Load> loadDemands_ = new pbc::MapField<string, global::Google.Cloud.Optimization.V1.Shipment.Types.Load>();
         /// <summary>
         /// Load demands of this visit request. This is just like
-        /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands] field, except that it only applies to this
-        /// [VisitRequest][google.cloud.optimization.v1.Shipment.VisitRequest] instead of the whole [Shipment][google.cloud.optimization.v1.Shipment].
+        /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands]
+        /// field, except that it only applies to this
+        /// [VisitRequest][google.cloud.optimization.v1.Shipment.VisitRequest]
+        /// instead of the whole [Shipment][google.cloud.optimization.v1.Shipment].
         /// The demands listed here are added to the demands listed in
         /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands].
         /// </summary>
@@ -6653,7 +6686,8 @@ namespace Google.Cloud.Optimization.V1 {
         private string label_ = "";
         /// <summary>
         /// Specifies a label for this `VisitRequest`. This label is reported in the
-        /// response as `visit_label` in the corresponding [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit].
+        /// response as `visit_label` in the corresponding
+        /// [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7074,7 +7108,8 @@ namespace Google.Cloud.Optimization.V1 {
       /// <summary>
       /// When performing a visit, a predefined amount may be added to the vehicle
       /// load if it's a pickup, or subtracted if it's a delivery. This message
-      /// defines such amount. See [load_demands][google.cloud.optimization.v1.Shipment.load_demands].
+      /// defines such amount. See
+      /// [load_demands][google.cloud.optimization.v1.Shipment.load_demands].
       /// </summary>
       public sealed partial class Load : pb::IMessage<Load>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8191,7 +8226,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// Cost per traveled hour of the vehicle route. This cost is applied only to
     /// travel time taken by the route (i.e., that reported in
-    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]), and excludes waiting time and visit time.
+    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]),
+    /// and excludes waiting time and visit time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8207,9 +8243,10 @@ namespace Google.Cloud.Optimization.V1 {
     private double costPerKilometer_;
     /// <summary>
     /// Cost per kilometer of the vehicle route. This cost is applied to the
-    /// distance reported in the [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions] and does not apply
-    /// to any distance implicitly traveled from the `arrival_location` to the
-    /// `departure_location` of a single `VisitRequest`.
+    /// distance reported in the
+    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]
+    /// and does not apply to any distance implicitly traveled from the
+    /// `arrival_location` to the `departure_location` of a single `VisitRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8355,7 +8392,8 @@ namespace Google.Cloud.Optimization.V1 {
     private string label_ = "";
     /// <summary>
     /// Specifies a label for this vehicle. This label is reported in the response
-    /// as the `vehicle_label` of the corresponding [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute].
+    /// as the `vehicle_label` of the corresponding
+    /// [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9258,7 +9296,8 @@ namespace Google.Cloud.Optimization.V1 {
 
       /// <summary>
       /// Defines a load limit applying to a vehicle, e.g. "this truck may only
-      /// carry up to 3500 kg". See [load_limits][google.cloud.optimization.v1.Vehicle.load_limits].
+      /// carry up to 3500 kg". See
+      /// [load_limits][google.cloud.optimization.v1.Vehicle.load_limits].
       /// </summary>
       public sealed partial class LoadLimit : pb::IMessage<LoadLimit>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9342,7 +9381,8 @@ namespace Google.Cloud.Optimization.V1 {
         public const int SoftMaxLoadFieldNumber = 2;
         private long softMaxLoad_;
         /// <summary>
-        /// A soft limit of the load. See [cost_per_unit_above_soft_max][google.cloud.optimization.v1.Vehicle.LoadLimit.cost_per_unit_above_soft_max].
+        /// A soft limit of the load. See
+        /// [cost_per_unit_above_soft_max][google.cloud.optimization.v1.Vehicle.LoadLimit.cost_per_unit_above_soft_max].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9357,10 +9397,14 @@ namespace Google.Cloud.Optimization.V1 {
         public const int CostPerUnitAboveSoftMaxFieldNumber = 3;
         private double costPerUnitAboveSoftMax_;
         /// <summary>
-        /// If the load ever exceeds [soft_max_load][google.cloud.optimization.v1.Vehicle.LoadLimit.soft_max_load] along this vehicle's route,
-        /// the following cost penalty applies (only once per vehicle):
-        /// (load - [soft_max_load][google.cloud.optimization.v1.Vehicle.LoadLimit.soft_max_load]) * [cost_per_unit_above_soft_max][google.cloud.optimization.v1.Vehicle.LoadLimit.cost_per_unit_above_soft_max]. All costs
-        /// add up and must be in the same unit as [Shipment.penalty_cost][google.cloud.optimization.v1.Shipment.penalty_cost].
+        /// If the load ever exceeds
+        /// [soft_max_load][google.cloud.optimization.v1.Vehicle.LoadLimit.soft_max_load]
+        /// along this vehicle's route, the following cost penalty applies (only once
+        /// per vehicle): (load -
+        /// [soft_max_load][google.cloud.optimization.v1.Vehicle.LoadLimit.soft_max_load])
+        /// * [cost_per_unit_above_soft_max][google.cloud.optimization.v1.Vehicle.LoadLimit.cost_per_unit_above_soft_max]. All costs
+        /// add up and must be in the same unit as
+        /// [Shipment.penalty_cost][google.cloud.optimization.v1.Shipment.penalty_cost].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9706,7 +9750,10 @@ namespace Google.Cloud.Optimization.V1 {
             private long min_;
             /// <summary>
             /// A minimum acceptable load. Must be ≥ 0.
-            /// If they're both specified, [min][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.min] must be ≤ [max][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.max].
+            /// If they're both specified,
+            /// [min][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.min] must
+            /// be ≤
+            /// [max][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.max].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9723,7 +9770,10 @@ namespace Google.Cloud.Optimization.V1 {
             /// <summary>
             /// A maximum acceptable load. Must be ≥ 0. If unspecified, the maximum
             /// load is unrestricted by this message.
-            /// If they're both specified, [min][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.min] must be ≤ [max][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.max].
+            /// If they're both specified,
+            /// [min][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.min] must
+            /// be ≤
+            /// [max][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval.max].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10372,8 +10422,11 @@ namespace Google.Cloud.Optimization.V1 {
   /// event to happen at or before `soft_end_time` by incurring a cost proportional
   /// to how long after `soft_end_time` the event occurs. `start_time`, `end_time`,
   /// `soft_start_time` and `soft_end_time` should be within the global time limits
-  /// (see [ShipmentModel.global_start_time][google.cloud.optimization.v1.ShipmentModel.global_start_time] and
-  /// [ShipmentModel.global_end_time][google.cloud.optimization.v1.ShipmentModel.global_end_time]) and should respect:
+  /// (see
+  /// [ShipmentModel.global_start_time][google.cloud.optimization.v1.ShipmentModel.global_start_time]
+  /// and
+  /// [ShipmentModel.global_end_time][google.cloud.optimization.v1.ShipmentModel.global_end_time])
+  /// and should respect:
   /// ```
   ///   0 &lt;= `start_time` &lt;= `soft_start_time` &lt;= `end_time` and
   ///   0 &lt;= `start_time` &lt;= `soft_end_time` &lt;= `end_time`.
@@ -10858,7 +10911,8 @@ namespace Google.Cloud.Optimization.V1 {
   }
 
   /// <summary>
-  /// Deprecated: Use [Shipment.Load][], [Vehicle.LoadLimit][] and [ShipmentRoute.VehicleLoad][] instead.
+  /// Deprecated: Use [Shipment.Load][], [Vehicle.LoadLimit][] and
+  /// [ShipmentRoute.VehicleLoad][] instead.
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class CapacityQuantity : pb::IMessage<CapacityQuantity>
@@ -11815,8 +11869,9 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// A destination visit or vehicle end matches iff its
     /// [VisitRequest.tags][google.cloud.optimization.v1.Shipment.VisitRequest.tags]
-    /// or [Vehicle.end_tags][google.cloud.optimization.v1.Vehicle.end_tags] either contains `dst_tag` or does not contain
-    /// `excluded_dst_tag` (depending on which of these two fields is non-empty).
+    /// or [Vehicle.end_tags][google.cloud.optimization.v1.Vehicle.end_tags] either
+    /// contains `dst_tag` or does not contain `excluded_dst_tag` (depending on
+    /// which of these two fields is non-empty).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11866,7 +11921,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// Specifies a cost per kilometer applied to the distance traveled while
     /// performing this transition. It adds up to any
-    /// [Vehicle.cost_per_kilometer][google.cloud.optimization.v1.Vehicle.cost_per_kilometer] specified on vehicles.
+    /// [Vehicle.cost_per_kilometer][google.cloud.optimization.v1.Vehicle.cost_per_kilometer]
+    /// specified on vehicles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13454,8 +13510,8 @@ namespace Google.Cloud.Optimization.V1 {
         public const int MaxInterBreakDurationFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Duration maxInterBreakDuration_;
         /// <summary>
-        /// Required. Maximum allowed span of any interval of time in the route that does not
-        /// include at least partially a break of `duration >=
+        /// Required. Maximum allowed span of any interval of time in the route that
+        /// does not include at least partially a break of `duration >=
         /// min_break_duration`. Must be positive.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13896,8 +13952,10 @@ namespace Google.Cloud.Optimization.V1 {
     /// between visits, before the first visit, or after the last visit, while
     /// still satisfying the visit and vehicle time windows. For example,
     ///
-    ///   ```start_time(previous_visit) + duration(previous_visit) +
-    ///   travel_duration(previous_visit, next_visit) > start_time(next_visit)```
+    /// ```
+    ///   start_time(previous_visit) + duration(previous_visit) +
+    ///   travel_duration(previous_visit, next_visit) > start_time(next_visit)
+    /// ```
     ///
     /// Arrival at next_visit will likely happen later than its current
     /// time window due the increased estimate of travel time
@@ -13953,8 +14011,12 @@ namespace Google.Cloud.Optimization.V1 {
     private global::Google.Cloud.Optimization.V1.AggregatedMetrics metrics_;
     /// <summary>
     /// Duration, distance and load metrics for this route. The fields of
-    /// [AggregatedMetrics][google.cloud.optimization.v1.AggregatedMetrics] are summed over all [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions] or
-    /// [ShipmentRoute.visits][google.cloud.optimization.v1.ShipmentRoute.visits], depending on the context.
+    /// [AggregatedMetrics][google.cloud.optimization.v1.AggregatedMetrics] are
+    /// summed over all
+    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]
+    /// or
+    /// [ShipmentRoute.visits][google.cloud.optimization.v1.ShipmentRoute.visits],
+    /// depending on the context.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14009,7 +14071,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// Deprecated: Use [ShipmentRoute.Transition.loads][] instead.
     /// Vehicle loads upon arrival at its end location, for each
-    /// type specified in [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities],
+    /// type specified in
+    /// [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities],
     /// `start_load_intervals`, `end_load_intervals` or demands. Exception: we omit
     /// loads for quantity types unconstrained by intervals and that don't have any
     /// non-zero demand on the route.
@@ -14043,8 +14106,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// Deprecated: No longer used.
     /// This field will only be populated at the
-    /// [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit] level.
-    /// Extra detour time due to the shipments visited on the route.
+    /// [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit]
+    /// level. Extra detour time due to the shipments visited on the route.
     ///
     /// It is equal to `vehicle_end_time` - `vehicle_start_time` - travel duration
     /// from the vehicle's start_location to its `end_location`.
@@ -14885,7 +14948,8 @@ namespace Google.Cloud.Optimization.V1 {
         public const int ShipmentIndexFieldNumber = 1;
         private int shipmentIndex_;
         /// <summary>
-        /// Index of the `shipments` field in the source [ShipmentModel][google.cloud.optimization.v1.ShipmentModel].
+        /// Index of the `shipments` field in the source
+        /// [ShipmentModel][google.cloud.optimization.v1.ShipmentModel].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15033,8 +15097,9 @@ namespace Google.Cloud.Optimization.V1 {
         /// <summary>
         /// Deprecated: Use [ShipmentRoute.Transition.loads][] instead.
         /// Vehicle loads upon arrival at the visit location, for each
-        /// type specified in [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities], `start_load_intervals`,
-        /// `end_load_intervals` or `demands`.
+        /// type specified in
+        /// [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities],
+        /// `start_load_intervals`, `end_load_intervals` or `demands`.
         ///
         /// Exception: we omit loads for quantity types unconstrained by intervals
         /// and that don't have any non-zero demand on the route.
@@ -15673,8 +15738,11 @@ namespace Google.Cloud.Optimization.V1 {
         private readonly pbc::MapField<string, global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.VehicleLoad> vehicleLoads_ = new pbc::MapField<string, global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.VehicleLoad>();
         /// <summary>
         /// Vehicle loads during this transition, for each type that either appears
-        /// in this vehicle's [Vehicle.load_limits][google.cloud.optimization.v1.Vehicle.load_limits], or that have non-zero
-        /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands] on some shipment performed on this route.
+        /// in this vehicle's
+        /// [Vehicle.load_limits][google.cloud.optimization.v1.Vehicle.load_limits],
+        /// or that have non-zero
+        /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands]
+        /// on some shipment performed on this route.
         ///
         /// The loads during the first transition are the starting loads of the
         /// vehicle route. Then, after each visit, the visit's `load_demands` are
@@ -16120,7 +16188,8 @@ namespace Google.Cloud.Optimization.V1 {
 
       /// <summary>
       /// Reports the actual load of the vehicle at some point along the route,
-      /// for a given type (see [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]).
+      /// for a given type (see
+      /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]).
       /// </summary>
       public sealed partial class VehicleLoad : pb::IMessage<VehicleLoad>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16171,7 +16240,8 @@ namespace Google.Cloud.Optimization.V1 {
         private long amount_;
         /// <summary>
         /// The amount of load on the vehicle, for the given type. The unit of load
-        /// is usually indicated by the type. See [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads].
+        /// is usually indicated by the type. See
+        /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17197,8 +17267,9 @@ namespace Google.Cloud.Optimization.V1 {
     public const int LabelFieldNumber = 2;
     private string label_ = "";
     /// <summary>
-    /// Copy of the corresponding [Shipment.label][google.cloud.optimization.v1.Shipment.label], if specified in the
-    /// `Shipment`.
+    /// Copy of the corresponding
+    /// [Shipment.label][google.cloud.optimization.v1.Shipment.label], if specified
+    /// in the `Shipment`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17786,7 +17857,9 @@ namespace Google.Cloud.Optimization.V1 {
   }
 
   /// <summary>
-  /// Aggregated metrics for [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute] (resp. for [OptimizeToursResponse][google.cloud.optimization.v1.OptimizeToursResponse]
+  /// Aggregated metrics for
+  /// [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute] (resp. for
+  /// [OptimizeToursResponse][google.cloud.optimization.v1.OptimizeToursResponse]
   /// over all [Transition][google.cloud.optimization.v1.ShipmentRoute.Transition]
   /// and/or [Visit][google.cloud.optimization.v1.ShipmentRoute.Visit] (resp. over
   /// all [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute]) elements.
@@ -17941,7 +18014,9 @@ namespace Google.Cloud.Optimization.V1 {
     private global::Google.Protobuf.WellKnownTypes.Duration totalDuration_;
     /// <summary>
     /// The total duration should be equal to the sum of all durations above.
-    /// For routes, it also corresponds to [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time] -
+    /// For routes, it also corresponds to
+    /// [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time]
+    /// -
     /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17993,7 +18068,8 @@ namespace Google.Cloud.Optimization.V1 {
         = new pbc::MapField<string, double>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForDouble(17, 0D), 82);
     private readonly pbc::MapField<string, double> costs_ = new pbc::MapField<string, double>();
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.route_costs][] and [OptimizeToursResponse.Metrics.costs][] instead.
+    /// Deprecated: Use [ShipmentRoute.route_costs][] and
+    /// [OptimizeToursResponse.Metrics.costs][] instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18006,7 +18082,8 @@ namespace Google.Cloud.Optimization.V1 {
     public const int TotalCostFieldNumber = 11;
     private double totalCost_;
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.route_total_cost][] and [OptimizeToursResponse.Metrics.total_cost][] instead.
+    /// Deprecated: Use [ShipmentRoute.route_total_cost][] and
+    /// [OptimizeToursResponse.Metrics.total_cost][] instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18756,8 +18833,9 @@ namespace Google.Cloud.Optimization.V1 {
         /// `vehicle_indices`. A vehicle index can only be listed once, even within
         /// several `constraint_relaxations`.
         ///
-        /// A vehicle index is mapped the same as [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index], if
-        /// `interpret_injected_solutions_using_labels` is true (see `fields`
+        /// A vehicle index is mapped the same as
+        /// [ShipmentRoute.vehicle_index][google.cloud.optimization.v1.ShipmentRoute.vehicle_index],
+        /// if `interpret_injected_solutions_using_labels` is true (see `fields`
         /// comment).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
