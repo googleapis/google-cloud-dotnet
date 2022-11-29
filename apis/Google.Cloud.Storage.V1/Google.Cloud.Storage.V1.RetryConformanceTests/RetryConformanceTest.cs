@@ -38,6 +38,8 @@ public class RetryConformanceTest
     public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
 
     private readonly RetryConformanceTestFixture _fixture;
+    private readonly string retryIdPrefix = IdGenerator.FromDateTime(prefix: "test-id-", suffix: "-");
+
     public RetryConformanceTest(RetryConformanceTestFixture fixture) =>
         _fixture = fixture;
 
@@ -57,12 +59,10 @@ public class RetryConformanceTest
         {
             foreach (Method method in test.Methods)
             {
-                if (!ShouldRunMethod(method.Name))
+                if (ShouldRunMethod(method.Name))
                 {
-                    continue;
-                }
-
-                await RunTestCase(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
+                    await RunTestCaseAsync(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
+                }                
             }
         }
 
@@ -81,15 +81,15 @@ public class RetryConformanceTest
     /// <summary>
     /// Handle full flow of each individual test case from resource creation to running the testing, verify if it passed or failed and delete resource post usage.
     /// </summary>
-    private async Task RunTestCase(InstructionList instructionList, Method method, bool expectSuccess, bool specifyPreconditions)
+    private async Task RunTestCaseAsync(InstructionList instructionList, Method method, bool expectSuccess, bool specifyPreconditions)
     {
         var context = CreateTestContext(method);
-        var response = await CreateRetryTestResource(instructionList, method);
+        var response = await CreateRetryTestResourceAsync(instructionList, method);
 
         if (expectSuccess)
         {
             RunRetryTest(response, context, method.Group, specifyPreconditions);
-            var postTestResponse = await GetRetryTest(response.Id);
+            var postTestResponse = await GetRetryTestAsync(response.Id);
             Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
         }
         else
@@ -121,7 +121,7 @@ public class RetryConformanceTest
     /// <summary>
     /// Create individual test resource on the storage test bench for each of API to be tested.
     /// </summary>
-    private async Task<TestResponse> CreateRetryTestResource(InstructionList instructionList, Method method)
+    private async Task<TestResponse> CreateRetryTestResourceAsync(InstructionList instructionList, Method method)
     {
         var stringContent = GetBodyContent(method.Name, instructionList);
         HttpResponseMessage response = await _fixture.HttpClient.PostAsync("retry_test", stringContent);
@@ -150,7 +150,7 @@ public class RetryConformanceTest
 
     // Note: not a local function as that cannot handle dynamic binding with generics.
     private static void ConsumeListOutput<TRequest, TResource>(PagedEnumerable<TRequest, TResource> pagedEnumerable) =>
-        pagedEnumerable.ReadPage(100);
+        pagedEnumerable.ReadPage(1000);
 
     private object ExecuteRpc(string rpc, TestContext ctx, bool specifyPreconditions)
     {
@@ -160,7 +160,7 @@ public class RetryConformanceTest
             "storage.buckets.delete" => InvokeVoid(() => client.DeleteBucket(ctx.BucketName)),
             "storage.buckets.get" => client.GetBucket(ctx.BucketName),
             "storage.buckets.getIamPolicy" => client.GetBucketIamPolicy(ctx.BucketName),
-            "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, IdGenerator.FromDateTime(prefix: "retry-test-insert-bucket-")),
+            "storage.buckets.insert" => client.CreateBucket(ctx.ProjectId, IdGenerator.FromDateTime(prefix: retryIdPrefix + "insert-bucket-")),
             "storage.buckets.update" => client.UpdateBucket(new Bucket { Name = ctx.BucketName }, IfPreconditions(new UpdateBucketOptions { IfMetagenerationMatch = 1 })),
             "storage.buckets.list" => client.ListBuckets(ctx.ProjectId),
             "storage.buckets.testIamPermissions" => client.TestBucketIamPermissions(ctx.BucketName, new[] { "bucket.get" }),
@@ -220,7 +220,7 @@ public class RetryConformanceTest
     /// <summary>
     /// Checks if the retry resource has been created successfully.
     /// </summary>
-    private async Task<TestResponse> GetRetryTest(string id)
+    private async Task<TestResponse> GetRetryTestAsync(string id)
     {
         HttpResponseMessage response = await _fixture.HttpClient.GetAsync($"retry_test/{id}");
         response.EnsureSuccessStatusCode();
@@ -234,8 +234,8 @@ public class RetryConformanceTest
     private TestContext CreateTestContext(Method method)
     {
         var context = new TestContext(_fixture.ProjectId, _fixture.ServiceAccountEmail);
-        string bucketName = IdGenerator.FromDateTime(prefix: "retry-test-");
-        string objectName = "TestFile.json";
+        string bucketName = IdGenerator.FromDateTime(prefix: retryIdPrefix + "bucket-");
+        string objectName = retryIdPrefix + "TestFile.json";
         foreach (var resource in method.Resources)
         {
             switch (resource)
@@ -265,9 +265,9 @@ public class RetryConformanceTest
         // For copying objects, need to create destination bucket and object as well
         if (method.Name == "storage.objects.rewrite")
         {
-            string destBucketName = IdGenerator.FromDateTime(prefix: "retry-test-dest-bucket-");
+            string destBucketName = IdGenerator.FromDateTime(prefix: retryIdPrefix + "dest-bucket-");
             context.DestinationBucketName = CreateBucket(destBucketName);
-            (context.DestinationObjectName, context.ObjectGeneration) = CreateObject(destBucketName, "DestinationTestFile.json");
+            (context.DestinationObjectName, context.ObjectGeneration) = CreateObject(destBucketName, retryIdPrefix + "DestinationTestFile.json");
         }
         return context;
 
@@ -275,7 +275,7 @@ public class RetryConformanceTest
         string CreateBucket(string bucketName)
         {
             Client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName });
-            SleepAfterBucketCreateDelete();
+            SleepAfterBucketCreate();
             return bucketName;
         }
 
@@ -346,5 +346,5 @@ public class RetryConformanceTest
         return new StringContent(body.ToString(), Encoding.UTF8, "application/json");
     }
 
-    private static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
+    private static void SleepAfterBucketCreate() => Thread.Sleep(2000);
 }
