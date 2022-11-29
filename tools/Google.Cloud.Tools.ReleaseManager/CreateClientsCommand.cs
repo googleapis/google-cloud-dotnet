@@ -17,8 +17,8 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
@@ -38,11 +38,6 @@ public class CreateClientsCommand : CommandBase
         if (!catalog.TryGetApi(id, out var api))
         {
             throw new UserErrorException($"No such API: {id}");
-        }
-        if (api.Id == "Grafeas.V1")
-        {
-            Console.WriteLine("Grafeas.V1 does not support this test yet. Skipping.");
-            return;
         }
         if (api.Generator != GeneratorType.Micro)
         {
@@ -106,12 +101,15 @@ public class CreateClientsCommand : CommandBase
     private object CreateClient(Type clientType, string transport)
     {
         var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
-        var builder = Activator.CreateInstance(builderType);
+        dynamic builder = Activator.CreateInstance(builderType);
 
         // Set a credential which will never be used. (If we remove TokenAccessMethod in the next GAX
         // release, we'll need to do something else. This is the simplest option for now though.)
         Func<string, CancellationToken, Task<string>> tokenAccessMethod = (url, token) => null;
-        builderType.GetProperty("TokenAccessMethod").SetValue(builder, tokenAccessMethod);
+        builder.TokenAccessMethod = tokenAccessMethod;
+
+        // Grafeas.V1 (and potentially other APIs in the future) have no default endpoint.
+        builder.Endpoint = "nowhere.googleapis.com";
 
         // We only actually need to set the gRPC adapter explicitly if there's more than one transport,
         // and if we're trying to use REST. It's simplest to always do it for REST though.
@@ -119,11 +117,11 @@ public class CreateClientsCommand : CommandBase
         // client's dependency.
         if (transport == "Rest")
         {
-            var restTransport = builderType.BaseType.Assembly.GetType("Google.Api.Gax.Grpc.Rest.RestGrpcAdapter")
+            dynamic restTransport = builderType.BaseType.Assembly.GetType("Google.Api.Gax.Grpc.Rest.RestGrpcAdapter")
                 .GetProperty("Default", BindingFlags.Public | BindingFlags.Static)
                 .GetValue(null);
-            builderType.GetProperty("GrpcAdapter").SetValue(builder, restTransport);
+            builder.GrpcAdapter = restTransport;
         }
-        return builderType.GetMethod("Build", Type.EmptyTypes, null).Invoke(builder, new object[0]);
+        return builder.Build();
     }
 }

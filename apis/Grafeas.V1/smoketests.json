@@ -1,0 +1,20 @@
+[
+  {
+    "method": "ListNotes",
+    "client": "GrafeasClient",
+    "endpoint": "containeranalysis.googleapis.com",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}",
+      "filter": ""
+    }
+  },
+  {
+    "method": "ListOccurrences",
+    "client": "GrafeasClient",
+    "endpoint": "containeranalysis.googleapis.com",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}",
+      "filter": ""
+    }
+  }  
+]
