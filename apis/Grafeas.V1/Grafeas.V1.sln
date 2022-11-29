@@ -3,29 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1", "Grafeas.V1\Grafeas.V1.csproj", "{471B1C52-6FFD-4D5A-A4E5-2E203DE091BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1", "Grafeas.V1\Grafeas.V1.csproj", "{471B1C52-6FFD-4D5A-A4E5-2E203DE091BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1.FixGeneratedCode", "Grafeas.V1.FixGeneratedCode\Grafeas.V1.FixGeneratedCode.csproj", "{6383FC04-1F77-45D7-90B7-5173EE7F5384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1.FixGeneratedCode", "Grafeas.V1.FixGeneratedCode\Grafeas.V1.FixGeneratedCode.csproj", "{6383FC04-1F77-45D7-90B7-5173EE7F5384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1.GeneratedSnippets", "Grafeas.V1.GeneratedSnippets\Grafeas.V1.GeneratedSnippets.csproj", "{BC1E2F0B-5B69-439D-B4E7-E4108CAEC43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1.GeneratedSnippets", "Grafeas.V1.GeneratedSnippets\Grafeas.V1.GeneratedSnippets.csproj", "{BC1E2F0B-5B69-439D-B4E7-E4108CAEC43D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{DF1356DC-6D3B-4D33-8BDA-64D3960DDA8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{DF1356DC-6D3B-4D33-8BDA-64D3960DDA8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1.SmokeTests", "Grafeas.V1.SmokeTests\Grafeas.V1.SmokeTests.csproj", "{9020F0B5-75EC-4EE5-9AA9-DA0C546C822B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1.Snippets", "Grafeas.V1.Snippets\Grafeas.V1.Snippets.csproj", "{7489341D-39B5-4A43-8159-D61BD830E272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1.Snippets", "Grafeas.V1.Snippets\Grafeas.V1.Snippets.csproj", "{7489341D-39B5-4A43-8159-D61BD830E272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{471B1C52-6FFD-4D5A-A4E5-2E203DE091BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -52,13 +47,15 @@ Global
 		{DF1356DC-6D3B-4D33-8BDA-64D3960DDA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1356DC-6D3B-4D33-8BDA-64D3960DDA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1356DC-6D3B-4D33-8BDA-64D3960DDA8C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9020F0B5-75EC-4EE5-9AA9-DA0C546C822B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9020F0B5-75EC-4EE5-9AA9-DA0C546C822B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9020F0B5-75EC-4EE5-9AA9-DA0C546C822B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9020F0B5-75EC-4EE5-9AA9-DA0C546C822B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7489341D-39B5-4A43-8159-D61BD830E272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7489341D-39B5-4A43-8159-D61BD830E272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7489341D-39B5-4A43-8159-D61BD830E272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7489341D-39B5-4A43-8159-D61BD830E272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1E567C6-2A03-457A-AB8A-626017878E7F}
 	EndGlobalSection
 EndGlobal
