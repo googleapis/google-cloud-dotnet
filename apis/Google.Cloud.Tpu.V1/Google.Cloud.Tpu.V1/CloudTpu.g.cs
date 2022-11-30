@@ -1601,7 +1601,7 @@ namespace Google.Cloud.Tpu.V1 {
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 1,
         /// <summary>
-        /// TPU node has been created and is fully usable.
+        /// TPU node has been created.
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 2,
         /// <summary>
