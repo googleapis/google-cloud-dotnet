@@ -147,6 +147,12 @@
                 "StreamingReadFeatureValues",
                 "StreamingReadFeatureValuesAsync"
               ]
+            },
+            "WriteFeatureValues": {
+              "methods": [
+                "WriteFeatureValues",
+                "WriteFeatureValuesAsync"
+              ]
             }
           }
         }

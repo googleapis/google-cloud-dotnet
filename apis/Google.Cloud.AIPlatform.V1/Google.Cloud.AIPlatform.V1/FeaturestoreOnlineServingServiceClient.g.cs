@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ReadFeatureValuesSettings = existing.ReadFeatureValuesSettings;
             StreamingReadFeatureValuesSettings = existing.StreamingReadFeatureValuesSettings;
+            WriteFeatureValuesSettings = existing.WriteFeatureValuesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -82,6 +83,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings StreamingReadFeatureValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeaturestoreOnlineServingServiceClient.WriteFeatureValues</c> and
+        /// <c>FeaturestoreOnlineServingServiceClient.WriteFeatureValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings WriteFeatureValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -451,6 +465,211 @@ namespace Google.Cloud.AIPlatform.V1
             {
                 EntityTypeAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(entityType, nameof(entityType)),
             }, callSettings);
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WriteFeatureValuesResponse WriteFeatureValues(WriteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(WriteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(WriteFeatureValuesRequest request, st::CancellationToken cancellationToken) =>
+            WriteFeatureValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WriteFeatureValuesResponse WriteFeatureValues(string entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, gaxgrpc::CallSettings callSettings = null) =>
+            WriteFeatureValues(new WriteFeatureValuesRequest
+            {
+                EntityType = gax::GaxPreconditions.CheckNotNullOrEmpty(entityType, nameof(entityType)),
+                Payloads =
+                {
+                    gax::GaxPreconditions.CheckNotNull(payloads, nameof(payloads)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(string entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, gaxgrpc::CallSettings callSettings = null) =>
+            WriteFeatureValuesAsync(new WriteFeatureValuesRequest
+            {
+                EntityType = gax::GaxPreconditions.CheckNotNullOrEmpty(entityType, nameof(entityType)),
+                Payloads =
+                {
+                    gax::GaxPreconditions.CheckNotNull(payloads, nameof(payloads)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(string entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, st::CancellationToken cancellationToken) =>
+            WriteFeatureValuesAsync(entityType, payloads, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WriteFeatureValuesResponse WriteFeatureValues(EntityTypeName entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, gaxgrpc::CallSettings callSettings = null) =>
+            WriteFeatureValues(new WriteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(entityType, nameof(entityType)),
+                Payloads =
+                {
+                    gax::GaxPreconditions.CheckNotNull(payloads, nameof(payloads)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(EntityTypeName entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, gaxgrpc::CallSettings callSettings = null) =>
+            WriteFeatureValuesAsync(new WriteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(entityType, nameof(entityType)),
+                Payloads =
+                {
+                    gax::GaxPreconditions.CheckNotNull(payloads, nameof(payloads)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType for the entities being written.
+        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// {featurestore}/entityTypes/{entityType}`. For example,
+        /// for a machine learning model predicting user clicks on a website, an
+        /// EntityType ID could be `user`.
+        /// </param>
+        /// <param name="payloads">
+        /// Required. The entities to be written. Up to 100,000 feature values can be written
+        /// across all `payloads`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(EntityTypeName entityType, scg::IEnumerable<WriteFeatureValuesPayload> payloads, st::CancellationToken cancellationToken) =>
+            WriteFeatureValuesAsync(entityType, payloads, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>FeaturestoreOnlineServingService client wrapper implementation, for convenient use.</summary>
@@ -462,6 +681,8 @@ namespace Google.Cloud.AIPlatform.V1
         private readonly gaxgrpc::ApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse> _callReadFeatureValues;
 
         private readonly gaxgrpc::ApiServerStreamingCall<StreamingReadFeatureValuesRequest, ReadFeatureValuesResponse> _callStreamingReadFeatureValues;
+
+        private readonly gaxgrpc::ApiCall<WriteFeatureValuesRequest, WriteFeatureValuesResponse> _callWriteFeatureValues;
 
         /// <summary>
         /// Constructs a client wrapper for the FeaturestoreOnlineServingService service, with the specified gRPC client
@@ -485,6 +706,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callStreamingReadFeatureValues = clientHelper.BuildApiCall<StreamingReadFeatureValuesRequest, ReadFeatureValuesResponse>("StreamingReadFeatureValues", grpcClient.StreamingReadFeatureValues, effectiveSettings.StreamingReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callStreamingReadFeatureValues);
             Modify_StreamingReadFeatureValuesApiCall(ref _callStreamingReadFeatureValues);
+            _callWriteFeatureValues = clientHelper.BuildApiCall<WriteFeatureValuesRequest, WriteFeatureValuesResponse>("WriteFeatureValues", grpcClient.WriteFeatureValuesAsync, grpcClient.WriteFeatureValues, effectiveSettings.WriteFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            Modify_ApiCall(ref _callWriteFeatureValues);
+            Modify_WriteFeatureValuesApiCall(ref _callWriteFeatureValues);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -495,6 +719,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ReadFeatureValuesApiCall(ref gaxgrpc::ApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse> call);
 
         partial void Modify_StreamingReadFeatureValuesApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamingReadFeatureValuesRequest, ReadFeatureValuesResponse> call);
+
+        partial void Modify_WriteFeatureValuesApiCall(ref gaxgrpc::ApiCall<WriteFeatureValuesRequest, WriteFeatureValuesResponse> call);
 
         partial void OnConstruction(FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient grpcClient, FeaturestoreOnlineServingServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -510,6 +736,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ReadFeatureValuesRequest(ref ReadFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StreamingReadFeatureValuesRequest(ref StreamingReadFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_WriteFeatureValuesRequest(ref WriteFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Reads Feature values of a specific entity of an EntityType. For reading
@@ -560,6 +788,38 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_StreamingReadFeatureValuesRequest(ref request, ref callSettings);
             return new StreamingReadFeatureValuesStreamImpl(_callStreamingReadFeatureValues.Call(request, callSettings));
+        }
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WriteFeatureValuesResponse WriteFeatureValues(WriteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WriteFeatureValuesRequest(ref request, ref callSettings);
+            return _callWriteFeatureValues.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Writes Feature values of one or more entities of an EntityType.
+        /// 
+        /// The Feature values are merged into existing entities if any. The Feature
+        /// values to be written must have timestamp within the online storage
+        /// retention.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WriteFeatureValuesResponse> WriteFeatureValuesAsync(WriteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WriteFeatureValuesRequest(ref request, ref callSettings);
+            return _callWriteFeatureValues.Async(request, callSettings);
         }
     }
 

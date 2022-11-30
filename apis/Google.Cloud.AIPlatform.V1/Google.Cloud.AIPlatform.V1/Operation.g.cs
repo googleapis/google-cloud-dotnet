@@ -109,7 +109,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Partial failures encountered.
     /// E.g. single files that couldn't be read.
     /// This field should never exceed 20 entries.
-    /// Status details field will contain standard GCP error details.
+    /// Status details field will contain standard Google Cloud error details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

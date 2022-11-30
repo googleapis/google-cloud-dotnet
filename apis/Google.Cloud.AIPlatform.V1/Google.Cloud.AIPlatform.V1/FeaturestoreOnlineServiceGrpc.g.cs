@@ -69,6 +69,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse> __Marshaller_google_cloud_aiplatform_v1_ReadFeatureValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StreamingReadFeatureValuesRequest> __Marshaller_google_cloud_aiplatform_v1_StreamingReadFeatureValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StreamingReadFeatureValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest> __Marshaller_google_cloud_aiplatform_v1_WriteFeatureValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse> __Marshaller_google_cloud_aiplatform_v1_WriteFeatureValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse> __Method_ReadFeatureValues = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>(
@@ -85,6 +89,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "StreamingReadFeatureValues",
         __Marshaller_google_cloud_aiplatform_v1_StreamingReadFeatureValuesRequest,
         __Marshaller_google_cloud_aiplatform_v1_ReadFeatureValuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse> __Method_WriteFeatureValues = new grpc::Method<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "WriteFeatureValues",
+        __Marshaller_google_cloud_aiplatform_v1_WriteFeatureValuesRequest,
+        __Marshaller_google_cloud_aiplatform_v1_WriteFeatureValuesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -121,6 +133,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingReadFeatureValues(global::Google.Cloud.AIPlatform.V1.StreamingReadFeatureValuesRequest request, grpc::IServerStreamWriter<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Writes Feature values of one or more entities of an EntityType.
+      ///
+      /// The Feature values are merged into existing entities if any. The Feature
+      /// values to be written must have timestamp within the online storage
+      /// retention.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse> WriteFeatureValues(global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -238,6 +266,70 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamingReadFeatureValues, null, options, request);
       }
+      /// <summary>
+      /// Writes Feature values of one or more entities of an EntityType.
+      ///
+      /// The Feature values are merged into existing entities if any. The Feature
+      /// values to be written must have timestamp within the online storage
+      /// retention.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse WriteFeatureValues(global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return WriteFeatureValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Writes Feature values of one or more entities of an EntityType.
+      ///
+      /// The Feature values are merged into existing entities if any. The Feature
+      /// values to be written must have timestamp within the online storage
+      /// retention.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse WriteFeatureValues(global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_WriteFeatureValues, null, options, request);
+      }
+      /// <summary>
+      /// Writes Feature values of one or more entities of an EntityType.
+      ///
+      /// The Feature values are merged into existing entities if any. The Feature
+      /// values to be written must have timestamp within the online storage
+      /// retention.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse> WriteFeatureValuesAsync(global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return WriteFeatureValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Writes Feature values of one or more entities of an EntityType.
+      ///
+      /// The Feature values are merged into existing entities if any. The Feature
+      /// values to be written must have timestamp within the online storage
+      /// retention.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse> WriteFeatureValuesAsync(global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_WriteFeatureValues, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FeaturestoreOnlineServingServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -253,7 +345,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ReadFeatureValues, serviceImpl.ReadFeatureValues)
-          .AddMethod(__Method_StreamingReadFeatureValues, serviceImpl.StreamingReadFeatureValues).Build();
+          .AddMethod(__Method_StreamingReadFeatureValues, serviceImpl.StreamingReadFeatureValues)
+          .AddMethod(__Method_WriteFeatureValues, serviceImpl.WriteFeatureValues).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -265,6 +358,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       serviceBinder.AddMethod(__Method_ReadFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>(serviceImpl.ReadFeatureValues));
       serviceBinder.AddMethod(__Method_StreamingReadFeatureValues, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1.StreamingReadFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>(serviceImpl.StreamingReadFeatureValues));
+      serviceBinder.AddMethod(__Method_WriteFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesResponse>(serviceImpl.WriteFeatureValues));
     }
 
   }

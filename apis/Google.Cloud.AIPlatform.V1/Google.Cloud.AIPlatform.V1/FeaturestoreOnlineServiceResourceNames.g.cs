@@ -18,6 +18,18 @@
 
 namespace Google.Cloud.AIPlatform.V1
 {
+    public partial class WriteFeatureValuesRequest
+    {
+        /// <summary>
+        /// <see cref="EntityTypeName"/>-typed view over the <see cref="EntityType"/> resource name property.
+        /// </summary>
+        public EntityTypeName EntityTypeAsEntityTypeName
+        {
+            get => string.IsNullOrEmpty(EntityType) ? null : EntityTypeName.Parse(EntityType, allowUnparsed: true);
+            set => EntityType = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ReadFeatureValuesRequest
     {
         /// <summary>
