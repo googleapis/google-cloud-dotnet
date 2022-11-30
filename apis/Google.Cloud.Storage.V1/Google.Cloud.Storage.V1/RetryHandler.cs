@@ -64,15 +64,18 @@ namespace Google.Cloud.Storage.V1
 
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
+            Console.WriteLine(" CHECKING FOR RETRY ????");
             var retry = args.SupportsRetry && await IsRetriableResponse(args.Response).ConfigureAwait(false);
             if (!retry)
             {
+                Console.WriteLine("NOT RETRYING for STATUS CODE: " + ((int) args.Response.StatusCode).ToString() + " RESPONSE PHRASE: " + args.Response.ReasonPhrase);
                 return false;
             }
             // The first failure will have args.CurrentFailedTry set to 1,
             // whereas we want the first delay to be 1 second. We use Math.Min on the power
             // rather than on the result to obtain a max retry of 32 seconds without risking
             // calling Math.Pow with a huge number.
+            Console.WriteLine(" RETRYING for STATUS CODE: " + ((int) args.Response.StatusCode).ToString() + " RESPONSE PHRASE: " + args.Response.ReasonPhrase);
             int power = Math.Min(args.CurrentFailedTry - 1, 5);
             double seconds = Math.Pow(2.0, power);
             var delay = TimeSpan.FromSeconds(seconds);
