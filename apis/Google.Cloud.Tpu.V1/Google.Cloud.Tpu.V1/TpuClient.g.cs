@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -63,6 +64,7 @@ namespace Google.Cloud.Tpu.V1
             GetTensorFlowVersionSettings = existing.GetTensorFlowVersionSettings;
             ListAcceleratorTypesSettings = existing.ListAcceleratorTypesSettings;
             GetAcceleratorTypeSettings = existing.GetAcceleratorTypeSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -288,6 +290,11 @@ namespace Google.Cloud.Tpu.V1
         /// </remarks>
         public gaxgrpc::CallSettings GetAcceleratorTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TpuSettings"/> object.</returns>
         public TpuSettings Clone() => new TpuSettings(this);
@@ -428,6 +435,9 @@ namespace Google.Cloud.Tpu.V1
 
         /// <summary>The underlying gRPC Tpu client</summary>
         public virtual Tpu.TpuClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists nodes.
@@ -1008,7 +1018,7 @@ namespace Google.Cloud.Tpu.V1
             lro::Operation<Node, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReimageNodeOperationsClient, callSettings);
 
         /// <summary>
-        /// Stops a node.
+        /// Stops a node, this operation is only available with single TPU nodes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1017,7 +1027,7 @@ namespace Google.Cloud.Tpu.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops a node.
+        /// Stops a node, this operation is only available with single TPU nodes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1026,7 +1036,7 @@ namespace Google.Cloud.Tpu.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops a node.
+        /// Stops a node, this operation is only available with single TPU nodes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1598,6 +1608,7 @@ namespace Google.Cloud.Tpu.V1
             ReimageNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReimageNodeOperationsSettings, logger);
             StopNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopNodeOperationsSettings, logger);
             StartNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartNodeOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListNodes = clientHelper.BuildApiCall<ListNodesRequest, ListNodesResponse>("ListNodes", grpcClient.ListNodesAsync, grpcClient.ListNodes, effectiveSettings.ListNodesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNodes);
             Modify_ListNodesApiCall(ref _callListNodes);
@@ -1662,6 +1673,9 @@ namespace Google.Cloud.Tpu.V1
 
         /// <summary>The underlying gRPC Tpu client</summary>
         public override Tpu.TpuClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListNodesRequest(ref ListNodesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1818,7 +1832,7 @@ namespace Google.Cloud.Tpu.V1
         public override lro::OperationsClient StopNodeOperationsClient { get; }
 
         /// <summary>
-        /// Stops a node.
+        /// Stops a node, this operation is only available with single TPU nodes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1830,7 +1844,7 @@ namespace Google.Cloud.Tpu.V1
         }
 
         /// <summary>
-        /// Stops a node.
+        /// Stops a node, this operation is only available with single TPU nodes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2012,6 +2026,22 @@ namespace Google.Cloud.Tpu.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Tpu
+    {
+        public partial class TpuClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
