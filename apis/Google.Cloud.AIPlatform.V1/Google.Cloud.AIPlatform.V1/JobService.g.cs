@@ -7007,7 +7007,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// If set, all attribution scores between
         /// [SearchModelDeploymentMonitoringStatsAnomaliesRequest.start_time][google.cloud.aiplatform.v1.SearchModelDeploymentMonitoringStatsAnomaliesRequest.start_time] and
         /// [SearchModelDeploymentMonitoringStatsAnomaliesRequest.end_time][google.cloud.aiplatform.v1.SearchModelDeploymentMonitoringStatsAnomaliesRequest.end_time] are
-        /// fetched, and page token doesn't take affect in this case.
+        /// fetched, and page token doesn't take effect in this case.
         /// Only used to retrieve attribution score for the top Features which has
         /// the highest attribution score in the latest monitoring run.
         /// </summary>

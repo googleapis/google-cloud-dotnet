@@ -174,7 +174,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Required. The display name of the Endpoint.
-    /// The name can be up to 128 characters long and can be consist of any UTF-8
+    /// The name can be up to 128 characters long and can consist of any UTF-8
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -59,7 +59,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   #region Messages
   /// <summary>
   /// Tensorboard is a physical database that stores users' training metrics.
-  /// A default Tensorboard is provided in each region of a GCP project.
+  /// A default Tensorboard is provided in each region of a Google Cloud project.
   /// If needed users can also create extra Tensorboards in their projects.
   /// </summary>
   public sealed partial class Tensorboard : pb::IMessage<Tensorboard>

@@ -30,41 +30,41 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnByb3Rv",
             "GiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxocZ29vZ2xl",
             "L3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byK1BAoHRGF0YXNldBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YECABKAlC",
-            "A+BBARIgChNtZXRhZGF0YV9zY2hlbWFfdXJpGAMgASgJQgPgQQISLQoIbWV0",
-            "YWRhdGEYCCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWVCA+BBAhI0Cgtj",
-            "cmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxIMCgRldGFnGAYgASgJEj8KBmxhYmVscxgHIAMoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRhdGFzZXQuTGFiZWxzRW50",
-            "cnkSQwoPZW5jcnlwdGlvbl9zcGVjGAsgASgLMiouZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMaLQoLTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpi6kFfCiFhaXBsYXRmb3Jt",
-            "Lmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSOnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0YXNldH0ipAMKEElt",
-            "cG9ydERhdGFDb25maWcSOwoKZ2NzX3NvdXJjZRgBIAEoCzIlLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkdjc1NvdXJjZUgAEloKEGRhdGFfaXRlbV9s",
-            "YWJlbHMYAiADKAsyQC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBv",
-            "cnREYXRhQ29uZmlnLkRhdGFJdGVtTGFiZWxzRW50cnkSXQoRYW5ub3RhdGlv",
-            "bl9sYWJlbHMYAyADKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
-            "bXBvcnREYXRhQ29uZmlnLkFubm90YXRpb25MYWJlbHNFbnRyeRIeChFpbXBv",
-            "cnRfc2NoZW1hX3VyaRgEIAEoCUID4EECGjUKE0RhdGFJdGVtTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo3ChVBbm5vdGF0",
-            "aW9uTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "AUIICgZzb3VyY2UihAEKEEV4cG9ydERhdGFDb25maWcSRQoPZ2NzX2Rlc3Rp",
-            "bmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Nz",
-            "RGVzdGluYXRpb25IABIaChJhbm5vdGF0aW9uc19maWx0ZXIYAiABKAlCDQoL",
-            "ZGVzdGluYXRpb25C0AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MUIMRGF0YXNldFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
-            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
-            "cm90bzM="));
+            "dGFtcC5wcm90byLQBAoHRGF0YXNldBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
+            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YECABKAkS",
+            "IAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgDIAEoCUID4EECEi0KCG1ldGFkYXRh",
+            "GAggASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQISNAoLY3JlYXRl",
+            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSDAoEZXRhZxgGIAEoCRI/CgZsYWJlbHMYByADKAsyLy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EYXRhc2V0LkxhYmVsc0VudHJ5EkMK",
+            "D2VuY3J5cHRpb25fc3BlYxgLIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkVuY3J5cHRpb25TcGVjEh4KEW1ldGFkYXRhX2FydGlmYWN0GBEg",
+            "ASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ATpi6kFfCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFzZXQSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9kYXRhc2V0cy97ZGF0YXNldH0ipAMKEEltcG9ydERhdGFDb25maWcSOwoK",
+            "Z2NzX3NvdXJjZRgBIAEoCzIlLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "Lkdjc1NvdXJjZUgAEloKEGRhdGFfaXRlbV9sYWJlbHMYAiADKAsyQC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBvcnREYXRhQ29uZmlnLkRhdGFJ",
+            "dGVtTGFiZWxzRW50cnkSXQoRYW5ub3RhdGlvbl9sYWJlbHMYAyADKAsyQi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBvcnREYXRhQ29uZmlnLkFu",
+            "bm90YXRpb25MYWJlbHNFbnRyeRIeChFpbXBvcnRfc2NoZW1hX3VyaRgEIAEo",
+            "CUID4EECGjUKE0RhdGFJdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ARo3ChVBbm5vdGF0aW9uTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIICgZzb3VyY2UihAEKEEV4",
+            "cG9ydERhdGFDb25maWcSRQoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25IABIaChJh",
+            "bm5vdGF0aW9uc19maWx0ZXIYAiABKAlCDQoLZGVzdGluYXRpb25C0AEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIMRGF0YXNldFByb3RvUAFa",
+            "RGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "YWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
+            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
+            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "EncryptionSpec", "MetadataArtifact" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportDataConfig), global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser, new[]{ "GcsSource", "DataItemLabels", "AnnotationLabels", "ImportSchemaUri" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportDataConfig), global::Google.Cloud.AIPlatform.V1.ExportDataConfig.Parser, new[]{ "GcsDestination", "AnnotationsFilter" }, new[]{ "Destination" }, null, null, null)
           }));
@@ -120,6 +120,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       etag_ = other.etag_;
       labels_ = other.labels_.Clone();
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      metadataArtifact_ = other.metadataArtifact_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -149,7 +150,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Required. The user-defined name of the Dataset.
-    /// The name can be up to 128 characters long and can be consist of any UTF-8
+    /// The name can be up to 128 characters long and can consist of any UTF-8
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,7 +166,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DescriptionFieldNumber = 16;
     private string description_ = "";
     /// <summary>
-    /// Optional. The description of the Dataset.
+    /// The description of the Dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -299,6 +300,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "metadata_artifact" field.</summary>
+    public const int MetadataArtifactFieldNumber = 17;
+    private string metadataArtifact_ = "";
+    /// <summary>
+    /// Output only. The resource name of the Artifact that was created in MetadataStore when
+    /// creating the Dataset. The Artifact resource name pattern is
+    /// `projects/{project}/locations/{location}/metadataStores/{metadata_store}/artifacts/{artifact}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MetadataArtifact {
+      get { return metadataArtifact_; }
+      set {
+        metadataArtifact_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -324,6 +342,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (MetadataArtifact != other.MetadataArtifact) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -341,6 +360,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (MetadataArtifact.Length != 0) hash ^= MetadataArtifact.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -396,6 +416,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(Description);
       }
+      if (MetadataArtifact.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(MetadataArtifact);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -443,6 +467,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(Description);
       }
+      if (MetadataArtifact.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(MetadataArtifact);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -480,6 +508,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (MetadataArtifact.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(MetadataArtifact);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -532,6 +563,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.MetadataArtifact.Length != 0) {
+        MetadataArtifact = other.MetadataArtifact;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -600,6 +634,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             Description = input.ReadString();
             break;
           }
+          case 138: {
+            MetadataArtifact = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -665,6 +703,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 130: {
             Description = input.ReadString();
+            break;
+          }
+          case 138: {
+            MetadataArtifact = input.ReadString();
             break;
           }
         }

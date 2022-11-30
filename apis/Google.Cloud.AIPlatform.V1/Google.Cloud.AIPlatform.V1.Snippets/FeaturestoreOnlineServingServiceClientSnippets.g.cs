@@ -17,6 +17,7 @@
 namespace Google.Cloud.AIPlatform.V1.Snippets
 {
     using Google.Api.Gax.Grpc;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -184,6 +185,117 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 // Do something with streamed response
             }
             // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValues</summary>
+        public void WriteFeatureValuesRequestObject()
+        {
+            // Snippet: WriteFeatureValues(WriteFeatureValuesRequest, CallSettings)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = FeaturestoreOnlineServingServiceClient.Create();
+            // Initialize request argument(s)
+            WriteFeatureValuesRequest request = new WriteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Payloads =
+                {
+                    new WriteFeatureValuesPayload(),
+                },
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = featurestoreOnlineServingServiceClient.WriteFeatureValues(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValuesAsync</summary>
+        public async Task WriteFeatureValuesRequestObjectAsync()
+        {
+            // Snippet: WriteFeatureValuesAsync(WriteFeatureValuesRequest, CallSettings)
+            // Additional: WriteFeatureValuesAsync(WriteFeatureValuesRequest, CancellationToken)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = await FeaturestoreOnlineServingServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            WriteFeatureValuesRequest request = new WriteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Payloads =
+                {
+                    new WriteFeatureValuesPayload(),
+                },
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = await featurestoreOnlineServingServiceClient.WriteFeatureValuesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValues</summary>
+        public void WriteFeatureValues()
+        {
+            // Snippet: WriteFeatureValues(string, IEnumerable<WriteFeatureValuesPayload>, CallSettings)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = FeaturestoreOnlineServingServiceClient.Create();
+            // Initialize request argument(s)
+            string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
+            {
+                new WriteFeatureValuesPayload(),
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = featurestoreOnlineServingServiceClient.WriteFeatureValues(entityType, payloads);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValuesAsync</summary>
+        public async Task WriteFeatureValuesAsync()
+        {
+            // Snippet: WriteFeatureValuesAsync(string, IEnumerable<WriteFeatureValuesPayload>, CallSettings)
+            // Additional: WriteFeatureValuesAsync(string, IEnumerable<WriteFeatureValuesPayload>, CancellationToken)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = await FeaturestoreOnlineServingServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
+            {
+                new WriteFeatureValuesPayload(),
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = await featurestoreOnlineServingServiceClient.WriteFeatureValuesAsync(entityType, payloads);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValues</summary>
+        public void WriteFeatureValuesResourceNames()
+        {
+            // Snippet: WriteFeatureValues(EntityTypeName, IEnumerable<WriteFeatureValuesPayload>, CallSettings)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = FeaturestoreOnlineServingServiceClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
+            {
+                new WriteFeatureValuesPayload(),
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = featurestoreOnlineServingServiceClient.WriteFeatureValues(entityType, payloads);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WriteFeatureValuesAsync</summary>
+        public async Task WriteFeatureValuesResourceNamesAsync()
+        {
+            // Snippet: WriteFeatureValuesAsync(EntityTypeName, IEnumerable<WriteFeatureValuesPayload>, CallSettings)
+            // Additional: WriteFeatureValuesAsync(EntityTypeName, IEnumerable<WriteFeatureValuesPayload>, CancellationToken)
+            // Create client
+            FeaturestoreOnlineServingServiceClient featurestoreOnlineServingServiceClient = await FeaturestoreOnlineServingServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<WriteFeatureValuesPayload> payloads = new WriteFeatureValuesPayload[]
+            {
+                new WriteFeatureValuesPayload(),
+            };
+            // Make the request
+            WriteFeatureValuesResponse response = await featurestoreOnlineServingServiceClient.WriteFeatureValuesAsync(entityType, payloads);
             // End snippet
         }
     }
