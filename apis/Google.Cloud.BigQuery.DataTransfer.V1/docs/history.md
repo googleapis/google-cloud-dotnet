@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.1.0, released 2022-12-01
+
+### New features
+
+- Added Location API methods ([commit 7e0e4ab](https://github.com/googleapis/google-cloud-dotnet/commit/7e0e4ab0e3a5b6a8552078229d56c59e757f4d2c))
+
+### Documentation improvements
+
+- Updated comments ([commit 7e0e4ab](https://github.com/googleapis/google-cloud-dotnet/commit/7e0e4ab0e3a5b6a8552078229d56c59e757f4d2c))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
