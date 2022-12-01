@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2022-12-01
+
+### New features
+
+- Add files field to finding's list of attributes ([commit 3eb1c76](https://github.com/googleapis/google-cloud-dotnet/commit/3eb1c76b4f35d87a112386c5b4d170f041aed9f4))
+
 ## Version 3.5.0, released 2022-10-17
 
 ### New features
