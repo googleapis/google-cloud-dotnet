@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.6.0, released 2022-12-01
+
+### New features
+
+- Add a FastSocket API ([commit ec6e15e](https://github.com/googleapis/google-cloud-dotnet/commit/ec6e15e877bc1bd77d2324be8180ac4e56bdfc3d))
+- Add compact placement feature for node pools ([commit 89213cc](https://github.com/googleapis/google-cloud-dotnet/commit/89213cc6e3484360c45cf980087c8c33d1c0b6e6))
+
 ## Version 3.5.0, released 2022-11-10
 
 ### New features
