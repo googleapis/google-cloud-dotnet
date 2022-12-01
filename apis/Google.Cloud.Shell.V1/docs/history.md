@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2022-12-01
+
+### New features
+
+- Add CloudShellErrorCode.ENVIRONMENT_UNAVAILABLE enum value ([commit 0b4f620](https://github.com/googleapis/google-cloud-dotnet/commit/0b4f620ad580d4fd32873bcd08057b71fcb58536))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
