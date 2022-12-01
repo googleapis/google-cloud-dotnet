@@ -640,5 +640,147 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for SaveSnapshot</summary>
+        public void SaveSnapshotRequestObject()
+        {
+            // Snippet: SaveSnapshot(SaveSnapshotRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            SaveSnapshotRequest request = new SaveSnapshotRequest
+            {
+                Environment = "",
+                SnapshotLocation = "",
+            };
+            // Make the request
+            Operation<SaveSnapshotResponse, OperationMetadata> response = environmentsClient.SaveSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SaveSnapshotResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SaveSnapshotResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SaveSnapshotResponse, OperationMetadata> retrievedResponse = environmentsClient.PollOnceSaveSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SaveSnapshotAsync</summary>
+        public async Task SaveSnapshotRequestObjectAsync()
+        {
+            // Snippet: SaveSnapshotAsync(SaveSnapshotRequest, CallSettings)
+            // Additional: SaveSnapshotAsync(SaveSnapshotRequest, CancellationToken)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            SaveSnapshotRequest request = new SaveSnapshotRequest
+            {
+                Environment = "",
+                SnapshotLocation = "",
+            };
+            // Make the request
+            Operation<SaveSnapshotResponse, OperationMetadata> response = await environmentsClient.SaveSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SaveSnapshotResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SaveSnapshotResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SaveSnapshotResponse, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceSaveSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LoadSnapshot</summary>
+        public void LoadSnapshotRequestObject()
+        {
+            // Snippet: LoadSnapshot(LoadSnapshotRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            LoadSnapshotRequest request = new LoadSnapshotRequest
+            {
+                Environment = "",
+                SnapshotPath = "",
+                SkipPypiPackagesInstallation = false,
+                SkipEnvironmentVariablesSetting = false,
+                SkipAirflowOverridesSetting = false,
+                SkipGcsDataCopying = false,
+            };
+            // Make the request
+            Operation<LoadSnapshotResponse, OperationMetadata> response = environmentsClient.LoadSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoadSnapshotResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoadSnapshotResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoadSnapshotResponse, OperationMetadata> retrievedResponse = environmentsClient.PollOnceLoadSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LoadSnapshotAsync</summary>
+        public async Task LoadSnapshotRequestObjectAsync()
+        {
+            // Snippet: LoadSnapshotAsync(LoadSnapshotRequest, CallSettings)
+            // Additional: LoadSnapshotAsync(LoadSnapshotRequest, CancellationToken)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LoadSnapshotRequest request = new LoadSnapshotRequest
+            {
+                Environment = "",
+                SnapshotPath = "",
+                SkipPypiPackagesInstallation = false,
+                SkipEnvironmentVariablesSetting = false,
+                SkipAirflowOverridesSetting = false,
+                SkipGcsDataCopying = false,
+            };
+            // Make the request
+            Operation<LoadSnapshotResponse, OperationMetadata> response = await environmentsClient.LoadSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoadSnapshotResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoadSnapshotResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoadSnapshotResponse, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceLoadSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
