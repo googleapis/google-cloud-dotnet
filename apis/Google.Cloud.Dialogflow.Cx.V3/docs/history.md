@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.2.0, released 2022-12-01
+
+### Documentation improvements
+
+- Clarified Agent Assist max retention is 30 days ([commit 8ebde4f](https://github.com/googleapis/google-cloud-dotnet/commit/8ebde4f5eceb04d7833acb0890df634d8b0d2501))
+- Clarified TTL as time-to-live ([commit 8aa3a16](https://github.com/googleapis/google-cloud-dotnet/commit/8aa3a16cf991d8ab13004ce85fbbb418be652573))
+- Removed pre-GA disclaimer from Interaction Logging (has been GA for awhile) ([commit 8aa3a16](https://github.com/googleapis/google-cloud-dotnet/commit/8aa3a16cf991d8ab13004ce85fbbb418be652573))
+- Clarified gcs_bucket field of the SecuritySettings message ([commit 4888598](https://github.com/googleapis/google-cloud-dotnet/commit/488859889ab68c0fcf4e0bcff00b203ca0641b39))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### Documentation improvements
