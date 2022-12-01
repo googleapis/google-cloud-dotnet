@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.1.0, released 2022-12-01
+
+### Bug fixes
+
+- Deprecate AcceleratorType.NVIDIA_TESLA_K80 ([commit 61da370](https://github.com/googleapis/google-cloud-dotnet/commit/61da370e5246d6611c6ba8db6f09fc9cb80e273f))
+
+### New features
+
+- Added UpdateRuntime, UpgradeRuntime, DiagnoseRuntime, DiagnoseInstance to v1 API ([commit 61da370](https://github.com/googleapis/google-cloud-dotnet/commit/61da370e5246d6611c6ba8db6f09fc9cb80e273f))
+- Add Instance.reservation_affinity, nic_type, can_ip_forward to v1beta1 API ([commit 61da370](https://github.com/googleapis/google-cloud-dotnet/commit/61da370e5246d6611c6ba8db6f09fc9cb80e273f))
+- Add IsInstanceUpgradeableResponse.upgrade_image to v1beta1 API ([commit 61da370](https://github.com/googleapis/google-cloud-dotnet/commit/61da370e5246d6611c6ba8db6f09fc9cb80e273f))
+- Added Location and IAM methods ([commit 61da370](https://github.com/googleapis/google-cloud-dotnet/commit/61da370e5246d6611c6ba8db6f09fc9cb80e273f))
+
+### Documentation improvements
+
+- [Google.Cloud.Notebooks.V1] fix minor docstring formatting ([issue 9367](https://github.com/googleapis/google-cloud-dotnet/issues/9367)) ([commit 0e93ecb](https://github.com/googleapis/google-cloud-dotnet/commit/0e93ecbe710810fd4c7c7b629a4f23f007dbcc57))
+
 ## Version 2.0.0, released 2022-09-15
 
 No API surface changes; just dependency updates and promotion to GA.
