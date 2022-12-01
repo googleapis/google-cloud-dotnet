@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.1.0, released 2022-12-01
+
+### New features
+
+- Adds named reservation to InstancePolicy ([commit ad603eb](https://github.com/googleapis/google-cloud-dotnet/commit/ad603ebb64e723d32b64782ec8735cf3b7879a94))
+
+### Documentation improvements
+
+- Fix minor docstring formatting ([commit 48e5d7c](https://github.com/googleapis/google-cloud-dotnet/commit/48e5d7cf1e4e727fd1a0fd660d329408f0b5120d))
+- Remove "not yet implemented" for Accelerator & Refine Volume API docs ([commit ad603eb](https://github.com/googleapis/google-cloud-dotnet/commit/ad603ebb64e723d32b64782ec8735cf3b7879a94))
+- Update the job id format requirement ([commit ad603eb](https://github.com/googleapis/google-cloud-dotnet/commit/ad603ebb64e723d32b64782ec8735cf3b7879a94))
+- Fix minor docstring formatting ([commit 2069ee9](https://github.com/googleapis/google-cloud-dotnet/commit/2069ee9c5a1c59e950b54e281d1e05c4a0060543))
+
 ## Version 1.0.0, released 2022-11-02
 
 No API surface changes; just dependency updates and promotion to general availability.
