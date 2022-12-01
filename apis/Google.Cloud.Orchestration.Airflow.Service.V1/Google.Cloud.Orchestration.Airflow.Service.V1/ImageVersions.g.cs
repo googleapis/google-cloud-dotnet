@@ -658,7 +658,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private string imageVersionId_ = "";
     /// <summary>
     /// The string identifier of the ImageVersion, in the form:
-    /// "composer-x.y.z-airflow-a.b(.c)"
+    /// "composer-x.y.z-airflow-a.b.c"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

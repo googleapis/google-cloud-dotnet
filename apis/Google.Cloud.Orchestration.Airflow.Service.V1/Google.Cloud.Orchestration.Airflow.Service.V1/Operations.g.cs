@@ -27,7 +27,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "Cj5nb29nbGUvY2xvdWQvb3JjaGVzdHJhdGlvbi9haXJmbG93L3NlcnZpY2Uv",
             "djEvb3BlcmF0aW9ucy5wcm90bxItZ29vZ2xlLmNsb3VkLm9yY2hlc3RyYXRp",
             "b24uYWlyZmxvdy5zZXJ2aWNlLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIocEChFPcGVyYXRpb25NZXRhZGF0YRJVCgVzdGF0ZRgBIAEo",
+            "YW1wLnByb3RvIq0EChFPcGVyYXRpb25NZXRhZGF0YRJVCgVzdGF0ZRgBIAEo",
             "DjJGLmdvb2dsZS5jbG91ZC5vcmNoZXN0cmF0aW9uLmFpcmZsb3cuc2Vydmlj",
             "ZS52MS5PcGVyYXRpb25NZXRhZGF0YS5TdGF0ZRJdCg5vcGVyYXRpb25fdHlw",
             "ZRgCIAEoDjJFLmdvb2dsZS5jbG91ZC5vcmNoZXN0cmF0aW9uLmFpcmZsb3cu",
@@ -37,12 +37,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJnCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARILCgdSVU5OSU5H",
             "EAISDQoJU1VDQ0VFREVEEAMSDgoKU1VDQ0VTU0ZVTBADEgoKBkZBSUxFRBAE",
-            "GgIQASJLCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQ",
-            "ARIKCgZERUxFVEUQAhIKCgZVUERBVEUQAxIJCgVDSEVDSxAEQpwBCjFjb20u",
-            "Z29vZ2xlLmNsb3VkLm9yY2hlc3RyYXRpb24uYWlyZmxvdy5zZXJ2aWNlLnYx",
-            "Qg9PcGVyYXRpb25zUHJvdG9QAVpUZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9vcmNoZXN0cmF0aW9uL2FpcmZsb3cvc2Vy",
-            "dmljZS92MTtzZXJ2aWNlYgZwcm90bzM="));
+            "GgIQASJxCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQ",
+            "ARIKCgZERUxFVEUQAhIKCgZVUERBVEUQAxIJCgVDSEVDSxAEEhEKDVNBVkVf",
+            "U05BUFNIT1QQBRIRCg1MT0FEX1NOQVBTSE9UEAZCnAEKMWNvbS5nb29nbGUu",
+            "Y2xvdWQub3JjaGVzdHJhdGlvbi5haXJmbG93LnNlcnZpY2UudjFCD09wZXJh",
+            "dGlvbnNQcm90b1ABWlRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL29yY2hlc3RyYXRpb24vYWlyZmxvdy9zZXJ2aWNlL3Yx",
+            "O3NlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -522,6 +523,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         /// A resource check operation.
         /// </summary>
         [pbr::OriginalName("CHECK")] Check = 4,
+        /// <summary>
+        /// Saves snapshot of the resource operation.
+        /// </summary>
+        [pbr::OriginalName("SAVE_SNAPSHOT")] SaveSnapshot = 5,
+        /// <summary>
+        /// Loads snapshot of the resource operation.
+        /// </summary>
+        [pbr::OriginalName("LOAD_SNAPSHOT")] LoadSnapshot = 6,
       }
 
     }

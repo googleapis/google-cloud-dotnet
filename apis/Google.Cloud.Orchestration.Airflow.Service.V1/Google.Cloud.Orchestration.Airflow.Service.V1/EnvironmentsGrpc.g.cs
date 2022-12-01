@@ -3,7 +3,7 @@
 //     source: google/cloud/orchestration/airflow/service/v1/environments.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -79,6 +79,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_UpdateEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_SaveSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_LoadSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest, global::Google.LongRunning.Operation> __Method_CreateEnvironment = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest, global::Google.LongRunning.Operation>(
@@ -118,6 +122,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         __ServiceName,
         "DeleteEnvironment",
         __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteEnvironmentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation> __Method_SaveSnapshot = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SaveSnapshot",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_SaveSnapshotRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest, global::Google.LongRunning.Operation> __Method_LoadSnapshot = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LoadSnapshot",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_LoadSnapshotRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -186,6 +206,36 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteEnvironment(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a snapshots of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, snapshot of environment's state is stored
+      /// in a location specified in the SaveSnapshotRequest.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SaveSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Loads a snapshot of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, a snapshot of environment's specified in
+      /// LoadSnapshotRequest is loaded into the environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LoadSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -459,6 +509,126 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEnvironment, null, options, request);
       }
+      /// <summary>
+      /// Creates a snapshots of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, snapshot of environment's state is stored
+      /// in a location specified in the SaveSnapshotRequest.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SaveSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SaveSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a snapshots of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, snapshot of environment's state is stored
+      /// in a location specified in the SaveSnapshotRequest.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SaveSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SaveSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Creates a snapshots of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, snapshot of environment's state is stored
+      /// in a location specified in the SaveSnapshotRequest.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SaveSnapshotAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SaveSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a snapshots of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, snapshot of environment's state is stored
+      /// in a location specified in the SaveSnapshotRequest.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SaveSnapshotAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SaveSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Loads a snapshot of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, a snapshot of environment's specified in
+      /// LoadSnapshotRequest is loaded into the environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation LoadSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LoadSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Loads a snapshot of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, a snapshot of environment's specified in
+      /// LoadSnapshotRequest is loaded into the environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation LoadSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LoadSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Loads a snapshot of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, a snapshot of environment's specified in
+      /// LoadSnapshotRequest is loaded into the environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LoadSnapshotAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LoadSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Loads a snapshot of a Cloud Composer environment.
+      ///
+      /// As a result of this operation, a snapshot of environment's specified in
+      /// LoadSnapshotRequest is loaded into the environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LoadSnapshotAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LoadSnapshot, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EnvironmentsClient NewInstance(ClientBaseConfiguration configuration)
@@ -477,7 +647,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
           .AddMethod(__Method_GetEnvironment, serviceImpl.GetEnvironment)
           .AddMethod(__Method_ListEnvironments, serviceImpl.ListEnvironments)
           .AddMethod(__Method_UpdateEnvironment, serviceImpl.UpdateEnvironment)
-          .AddMethod(__Method_DeleteEnvironment, serviceImpl.DeleteEnvironment).Build();
+          .AddMethod(__Method_DeleteEnvironment, serviceImpl.DeleteEnvironment)
+          .AddMethod(__Method_SaveSnapshot, serviceImpl.SaveSnapshot)
+          .AddMethod(__Method_LoadSnapshot, serviceImpl.LoadSnapshot).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -492,6 +664,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       serviceBinder.AddMethod(__Method_ListEnvironments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse>(serviceImpl.ListEnvironments));
       serviceBinder.AddMethod(__Method_UpdateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateEnvironment));
       serviceBinder.AddMethod(__Method_DeleteEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteEnvironment));
+      serviceBinder.AddMethod(__Method_SaveSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.SaveSnapshot));
+      serviceBinder.AddMethod(__Method_LoadSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.LoadSnapshot));
     }
 
   }

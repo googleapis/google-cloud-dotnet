@@ -55,6 +55,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             UpdateEnvironmentOperationsSettings = existing.UpdateEnvironmentOperationsSettings.Clone();
             DeleteEnvironmentSettings = existing.DeleteEnvironmentSettings;
             DeleteEnvironmentOperationsSettings = existing.DeleteEnvironmentOperationsSettings.Clone();
+            SaveSnapshotSettings = existing.SaveSnapshotSettings;
+            SaveSnapshotOperationsSettings = existing.SaveSnapshotOperationsSettings.Clone();
+            LoadSnapshotSettings = existing.LoadSnapshotSettings;
+            LoadSnapshotOperationsSettings = existing.LoadSnapshotOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -170,6 +174,66 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteEnvironmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.SaveSnapshot</c> and <c>EnvironmentsClient.SaveSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SaveSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EnvironmentsClient.SaveSnapshot</c> and
+        /// <c>EnvironmentsClient.SaveSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SaveSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.LoadSnapshot</c> and <c>EnvironmentsClient.LoadSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LoadSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EnvironmentsClient.LoadSnapshot</c> and
+        /// <c>EnvironmentsClient.LoadSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings LoadSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -704,13 +768,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.nodeCount`
         /// * Horizontally scale the number of nodes in the environment. An integer
         /// greater than or equal to 3 must be provided in the `config.nodeCount`
-        /// field.
+        /// field. Supported for Cloud Composer environments in versions
+        /// composer-1.*.*-airflow-*.*.*.
         /// * `config.webServerNetworkAccessControl`
         /// * Replace the environment's current `WebServerNetworkAccessControl`.
-        /// * `config.databaseConfig`
-        /// * Replace the environment's current `DatabaseConfig`.
-        /// * `config.webServerConfig`
-        /// * Replace the environment's current `WebServerConfig`.
         /// * `config.softwareConfig.airflowConfigOverrides`
         /// * Replace all Apache Airflow config overrides. If a replacement config
         /// overrides map is not included in `environment`, all config overrides
@@ -728,9 +789,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.softwareConfig.envVariables`
         /// * Replace all environment variables. If a replacement environment
         /// variable map is not included in `environment`, all custom environment
-        /// variables  are cleared.
-        /// It is an error to provide both this mask and a mask specifying one or
-        /// more individual environment variables.
+        /// variables are cleared.
+        /// * `config.softwareConfig.schedulerCount`
+        /// * Horizontally scale the number of schedulers in Airflow. A positive
+        /// integer not greater than the number of nodes must be provided in the
+        /// `config.softwareConfig.schedulerCount` field. Supported for Cloud
+        /// Composer environments in versions composer-1.*.*-airflow-2.*.*.
+        /// * `config.databaseConfig.machineType`
+        /// * Cloud SQL machine type used by Airflow database.
+        /// It has to be one of: db-n1-standard-2, db-n1-standard-4,
+        /// db-n1-standard-8 or db-n1-standard-16. Supported for Cloud Composer
+        /// environments in versions composer-1.*.*-airflow-*.*.*.
+        /// * `config.webServerConfig.machineType`
+        /// * Machine type on which Airflow web server is running.
+        /// It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4
+        /// or composer-n1-webserver-8. Supported for Cloud Composer environments
+        /// in versions composer-1.*.*-airflow-*.*.*.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -840,13 +914,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.nodeCount`
         /// * Horizontally scale the number of nodes in the environment. An integer
         /// greater than or equal to 3 must be provided in the `config.nodeCount`
-        /// field.
+        /// field. Supported for Cloud Composer environments in versions
+        /// composer-1.*.*-airflow-*.*.*.
         /// * `config.webServerNetworkAccessControl`
         /// * Replace the environment's current `WebServerNetworkAccessControl`.
-        /// * `config.databaseConfig`
-        /// * Replace the environment's current `DatabaseConfig`.
-        /// * `config.webServerConfig`
-        /// * Replace the environment's current `WebServerConfig`.
         /// * `config.softwareConfig.airflowConfigOverrides`
         /// * Replace all Apache Airflow config overrides. If a replacement config
         /// overrides map is not included in `environment`, all config overrides
@@ -864,9 +935,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.softwareConfig.envVariables`
         /// * Replace all environment variables. If a replacement environment
         /// variable map is not included in `environment`, all custom environment
-        /// variables  are cleared.
-        /// It is an error to provide both this mask and a mask specifying one or
-        /// more individual environment variables.
+        /// variables are cleared.
+        /// * `config.softwareConfig.schedulerCount`
+        /// * Horizontally scale the number of schedulers in Airflow. A positive
+        /// integer not greater than the number of nodes must be provided in the
+        /// `config.softwareConfig.schedulerCount` field. Supported for Cloud
+        /// Composer environments in versions composer-1.*.*-airflow-2.*.*.
+        /// * `config.databaseConfig.machineType`
+        /// * Cloud SQL machine type used by Airflow database.
+        /// It has to be one of: db-n1-standard-2, db-n1-standard-4,
+        /// db-n1-standard-8 or db-n1-standard-16. Supported for Cloud Composer
+        /// environments in versions composer-1.*.*-airflow-*.*.*.
+        /// * `config.webServerConfig.machineType`
+        /// * Machine type on which Airflow web server is running.
+        /// It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4
+        /// or composer-n1-webserver-8. Supported for Cloud Composer environments
+        /// in versions composer-1.*.*-airflow-*.*.*.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -976,13 +1060,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.nodeCount`
         /// * Horizontally scale the number of nodes in the environment. An integer
         /// greater than or equal to 3 must be provided in the `config.nodeCount`
-        /// field.
+        /// field. Supported for Cloud Composer environments in versions
+        /// composer-1.*.*-airflow-*.*.*.
         /// * `config.webServerNetworkAccessControl`
         /// * Replace the environment's current `WebServerNetworkAccessControl`.
-        /// * `config.databaseConfig`
-        /// * Replace the environment's current `DatabaseConfig`.
-        /// * `config.webServerConfig`
-        /// * Replace the environment's current `WebServerConfig`.
         /// * `config.softwareConfig.airflowConfigOverrides`
         /// * Replace all Apache Airflow config overrides. If a replacement config
         /// overrides map is not included in `environment`, all config overrides
@@ -1000,9 +1081,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// * `config.softwareConfig.envVariables`
         /// * Replace all environment variables. If a replacement environment
         /// variable map is not included in `environment`, all custom environment
-        /// variables  are cleared.
-        /// It is an error to provide both this mask and a mask specifying one or
-        /// more individual environment variables.
+        /// variables are cleared.
+        /// * `config.softwareConfig.schedulerCount`
+        /// * Horizontally scale the number of schedulers in Airflow. A positive
+        /// integer not greater than the number of nodes must be provided in the
+        /// `config.softwareConfig.schedulerCount` field. Supported for Cloud
+        /// Composer environments in versions composer-1.*.*-airflow-2.*.*.
+        /// * `config.databaseConfig.machineType`
+        /// * Cloud SQL machine type used by Airflow database.
+        /// It has to be one of: db-n1-standard-2, db-n1-standard-4,
+        /// db-n1-standard-8 or db-n1-standard-16. Supported for Cloud Composer
+        /// environments in versions composer-1.*.*-airflow-*.*.*.
+        /// * `config.webServerConfig.machineType`
+        /// * Machine type on which Airflow web server is running.
+        /// It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4
+        /// or composer-n1-webserver-8. Supported for Cloud Composer environments
+        /// in versions composer-1.*.*-airflow-*.*.*.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1098,6 +1192,130 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a snapshots of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, snapshot of environment's state is stored
+        /// in a location specified in the SaveSnapshotRequest.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SaveSnapshotResponse, OperationMetadata> SaveSnapshot(SaveSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a snapshots of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, snapshot of environment's state is stored
+        /// in a location specified in the SaveSnapshotRequest.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SaveSnapshotResponse, OperationMetadata>> SaveSnapshotAsync(SaveSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a snapshots of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, snapshot of environment's state is stored
+        /// in a location specified in the SaveSnapshotRequest.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SaveSnapshotResponse, OperationMetadata>> SaveSnapshotAsync(SaveSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            SaveSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SaveSnapshot</c>.</summary>
+        public virtual lro::OperationsClient SaveSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SaveSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<SaveSnapshotResponse, OperationMetadata> PollOnceSaveSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SaveSnapshotResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SaveSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SaveSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<SaveSnapshotResponse, OperationMetadata>> PollOnceSaveSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SaveSnapshotResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SaveSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Loads a snapshot of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, a snapshot of environment's specified in
+        /// LoadSnapshotRequest is loaded into the environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoadSnapshotResponse, OperationMetadata> LoadSnapshot(LoadSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Loads a snapshot of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, a snapshot of environment's specified in
+        /// LoadSnapshotRequest is loaded into the environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoadSnapshotResponse, OperationMetadata>> LoadSnapshotAsync(LoadSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Loads a snapshot of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, a snapshot of environment's specified in
+        /// LoadSnapshotRequest is loaded into the environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoadSnapshotResponse, OperationMetadata>> LoadSnapshotAsync(LoadSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            LoadSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>LoadSnapshot</c>.</summary>
+        public virtual lro::OperationsClient LoadSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>LoadSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LoadSnapshotResponse, OperationMetadata> PollOnceLoadSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoadSnapshotResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LoadSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>LoadSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LoadSnapshotResponse, OperationMetadata>> PollOnceLoadSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoadSnapshotResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LoadSnapshotOperationsClient, callSettings);
     }
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
@@ -1116,6 +1334,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         private readonly gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> _callDeleteEnvironment;
 
+        private readonly gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> _callSaveSnapshot;
+
+        private readonly gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> _callLoadSnapshot;
+
         /// <summary>
         /// Constructs a client wrapper for the Environments service, with the specified gRPC client and settings.
         /// </summary>
@@ -1130,6 +1352,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings, logger);
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
+            SaveSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SaveSnapshotOperationsSettings, logger);
+            LoadSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LoadSnapshotOperationsSettings, logger);
             _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>("CreateEnvironment", grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEnvironment);
             Modify_CreateEnvironmentApiCall(ref _callCreateEnvironment);
@@ -1145,6 +1369,12 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, lro::Operation>("DeleteEnvironment", grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEnvironment);
             Modify_DeleteEnvironmentApiCall(ref _callDeleteEnvironment);
+            _callSaveSnapshot = clientHelper.BuildApiCall<SaveSnapshotRequest, lro::Operation>("SaveSnapshot", grpcClient.SaveSnapshotAsync, grpcClient.SaveSnapshot, effectiveSettings.SaveSnapshotSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callSaveSnapshot);
+            Modify_SaveSnapshotApiCall(ref _callSaveSnapshot);
+            _callLoadSnapshot = clientHelper.BuildApiCall<LoadSnapshotRequest, lro::Operation>("LoadSnapshot", grpcClient.LoadSnapshotAsync, grpcClient.LoadSnapshot, effectiveSettings.LoadSnapshotSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callLoadSnapshot);
+            Modify_LoadSnapshotApiCall(ref _callLoadSnapshot);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1160,6 +1390,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         partial void Modify_DeleteEnvironmentApiCall(ref gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> call);
 
+        partial void Modify_SaveSnapshotApiCall(ref gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> call);
+
+        partial void Modify_LoadSnapshotApiCall(ref gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> call);
+
         partial void OnConstruction(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Environments client</summary>
@@ -1174,6 +1408,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         partial void Modify_UpdateEnvironmentRequest(ref UpdateEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEnvironmentRequest(ref DeleteEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SaveSnapshotRequest(ref SaveSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LoadSnapshotRequest(ref LoadSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEnvironment</c>.</summary>
         public override lro::OperationsClient CreateEnvironmentOperationsClient { get; }
@@ -1302,6 +1540,72 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             Modify_DeleteEnvironmentRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteEnvironment.Async(request, callSettings).ConfigureAwait(false), DeleteEnvironmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SaveSnapshot</c>.</summary>
+        public override lro::OperationsClient SaveSnapshotOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a snapshots of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, snapshot of environment's state is stored
+        /// in a location specified in the SaveSnapshotRequest.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<SaveSnapshotResponse, OperationMetadata> SaveSnapshot(SaveSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SaveSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<SaveSnapshotResponse, OperationMetadata>(_callSaveSnapshot.Sync(request, callSettings), SaveSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a snapshots of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, snapshot of environment's state is stored
+        /// in a location specified in the SaveSnapshotRequest.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<SaveSnapshotResponse, OperationMetadata>> SaveSnapshotAsync(SaveSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SaveSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<SaveSnapshotResponse, OperationMetadata>(await _callSaveSnapshot.Async(request, callSettings).ConfigureAwait(false), SaveSnapshotOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>LoadSnapshot</c>.</summary>
+        public override lro::OperationsClient LoadSnapshotOperationsClient { get; }
+
+        /// <summary>
+        /// Loads a snapshot of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, a snapshot of environment's specified in
+        /// LoadSnapshotRequest is loaded into the environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LoadSnapshotResponse, OperationMetadata> LoadSnapshot(LoadSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LoadSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<LoadSnapshotResponse, OperationMetadata>(_callLoadSnapshot.Sync(request, callSettings), LoadSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// Loads a snapshot of a Cloud Composer environment.
+        /// 
+        /// As a result of this operation, a snapshot of environment's specified in
+        /// LoadSnapshotRequest is loaded into the environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LoadSnapshotResponse, OperationMetadata>> LoadSnapshotAsync(LoadSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LoadSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<LoadSnapshotResponse, OperationMetadata>(await _callLoadSnapshot.Async(request, callSettings).ConfigureAwait(false), LoadSnapshotOperationsClient);
         }
     }
 

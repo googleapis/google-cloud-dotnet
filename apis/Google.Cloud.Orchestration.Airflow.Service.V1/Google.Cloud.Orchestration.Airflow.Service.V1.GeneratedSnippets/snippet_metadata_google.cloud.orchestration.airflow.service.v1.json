@@ -771,6 +771,160 @@
       ]
     },
     {
+      "regionTag": "composer_v1_generated_Environments_SaveSnapshot_sync",
+      "title": "SaveSnapshotRequestObject",
+      "description": "Snippet for SaveSnapshot",
+      "file": "EnvironmentsClient.SaveSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SaveSnapshot",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.SaveSnapshot",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "SaveSnapshot",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.SaveSnapshot",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_SaveSnapshot_async",
+      "title": "SaveSnapshotRequestObjectAsync",
+      "description": "Snippet for SaveSnapshotAsync",
+      "file": "EnvironmentsClient.SaveSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SaveSnapshotAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.SaveSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "SaveSnapshot",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.SaveSnapshot",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_LoadSnapshot_sync",
+      "title": "LoadSnapshotRequestObject",
+      "description": "Snippet for LoadSnapshot",
+      "file": "EnvironmentsClient.LoadSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LoadSnapshot",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.LoadSnapshot",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "LoadSnapshot",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.LoadSnapshot",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_LoadSnapshot_async",
+      "title": "LoadSnapshotRequestObjectAsync",
+      "description": "Snippet for LoadSnapshotAsync",
+      "file": "EnvironmentsClient.LoadSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LoadSnapshotAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.LoadSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "LoadSnapshot",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.LoadSnapshot",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "composer_v1_generated_ImageVersions_ListImageVersions_sync",
       "title": "ListImageVersionsRequestObject",
       "description": "Snippet for ListImageVersions",
