@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.4.0, released 2022-12-01
+
+### New features
+
+- ExcludeByHotword added as an ExclusionRule type, NEW_ZEALAND added as a LocationCategory value ([commit fde47e7](https://github.com/googleapis/google-cloud-dotnet/commit/fde47e7a0e12822bfae2fc17fe0040c1a7b04202))
+
 ## Version 4.3.0, released 2022-10-03
 
 ### Bug fixes
