@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.1.0, released 2022-12-01
+
+### Bug fixes
+
+- More oauth scopes ([commit 79b9658](https://github.com/googleapis/google-cloud-dotnet/commit/79b965802715666be335a721886668bcbcd630dc))
+
+### New features
+
+- Added Sku.geo_taxonomy ([commit 79b9658](https://github.com/googleapis/google-cloud-dotnet/commit/79b965802715666be335a721886668bcbcd630dc))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
