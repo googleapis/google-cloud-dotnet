@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.6.0, released 2022-12-01
+
+### New features
+
+- Add metadata_artifact to Dataset in aiplatform v1 dataset.proto ([commit 7f369da](https://github.com/googleapis/google-cloud-dotnet/commit/7f369dafdab8345660654a36e08ecfb53664518a))
+- Add WriteFeatureValues rpc to FeaturestoreOnlineServingService in aiplatform v1 featurestore_online_service.proto ([commit 7f369da](https://github.com/googleapis/google-cloud-dotnet/commit/7f369dafdab8345660654a36e08ecfb53664518a))
+- Add service_account to batch_prediction_job in aiplatform v1 batch_prediction_job.proto ([commit 047a19c](https://github.com/googleapis/google-cloud-dotnet/commit/047a19c79d0d9ef0c63d596aa0088bac4f9f5a58))
+
 ## Version 2.5.0, released 2022-11-10
 
 ### New features
