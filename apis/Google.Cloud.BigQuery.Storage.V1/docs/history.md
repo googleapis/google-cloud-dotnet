@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.4.0, released 2022-12-01
+
+### New features
+
+- Add missing_value_interpretations to AppendRowsRequest ([commit 13e3cd7](https://github.com/googleapis/google-cloud-dotnet/commit/13e3cd7ffc5e3ab283b9934470a9cb0729dbe102))
+
+### Documentation improvements
+
+- Remove stale header guidance for AppendRows ([commit b934a52](https://github.com/googleapis/google-cloud-dotnet/commit/b934a529b6cc89898e143ff3865dde5ceb3f4fa9))
+
 ## Version 3.3.0, released 2022-09-15
 
 ### New features
