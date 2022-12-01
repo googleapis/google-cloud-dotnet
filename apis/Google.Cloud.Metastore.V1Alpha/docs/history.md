@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-alpha02, released 2022-12-01
+
+### New features
+
+- Added federation API ([commit 08fe5f7](https://github.com/googleapis/google-cloud-dotnet/commit/08fe5f76045f0a237bc23f1f0d54639e7fd150c3))
+- Added EncryptionConfig field ([commit 08fe5f7](https://github.com/googleapis/google-cloud-dotnet/commit/08fe5f76045f0a237bc23f1f0d54639e7fd150c3))
+- Added NetworkConfig field ([commit 08fe5f7](https://github.com/googleapis/google-cloud-dotnet/commit/08fe5f76045f0a237bc23f1f0d54639e7fd150c3))
+- Added DatabaseType field ([commit 08fe5f7](https://github.com/googleapis/google-cloud-dotnet/commit/08fe5f76045f0a237bc23f1f0d54639e7fd150c3))
+- Added TelemetryConfiguration field ([commit 08fe5f7](https://github.com/googleapis/google-cloud-dotnet/commit/08fe5f76045f0a237bc23f1f0d54639e7fd150c3))
+
 ## Version 2.0.0-alpha01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
