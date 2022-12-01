@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-12-01
+
+### New features
+
+- Add Pipeline.secret_environment, Action.secret_environment, VirtualMachine.reservation ([commit 1da5ffe](https://github.com/googleapis/google-cloud-dotnet/commit/1da5ffe6e62cc2f28ef3aff8895371d3dec4eb41))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
