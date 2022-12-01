@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.2.0, released 2022-12-01
+
+### New features
+
+- Add PreprocessingConfig.deinterlace ([commit f5af179](https://github.com/googleapis/google-cloud-dotnet/commit/f5af17911707975405b510b0408d747e441921cb))
+
+### Documentation improvements
+
+- Minor documentation changes ([commit f5af179](https://github.com/googleapis/google-cloud-dotnet/commit/f5af17911707975405b510b0408d747e441921cb))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### New features
