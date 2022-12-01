@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-12-01
+
+### Bug fixes
+
+- Deprecate AcceleratorType.NVIDIA_TESLA_K80 ([commit 3b439c4](https://github.com/googleapis/google-cloud-dotnet/commit/3b439c4ce6af9d491356e2c6984e123df2c7eb03))
+
+### New features
+
+- Added UpdateRuntime, UpgradeRuntime, DiagnoseRuntime, DiagnoseInstance to v1 API ([commit 3b439c4](https://github.com/googleapis/google-cloud-dotnet/commit/3b439c4ce6af9d491356e2c6984e123df2c7eb03))
+- Add Instance.reservation_affinity, nic_type, can_ip_forward to v1beta1 API ([commit 3b439c4](https://github.com/googleapis/google-cloud-dotnet/commit/3b439c4ce6af9d491356e2c6984e123df2c7eb03))
+- Add IsInstanceUpgradeableResponse.upgrade_image to v1beta1 API ([commit 3b439c4](https://github.com/googleapis/google-cloud-dotnet/commit/3b439c4ce6af9d491356e2c6984e123df2c7eb03))
+- Added Location and IAM methods ([commit 3b439c4](https://github.com/googleapis/google-cloud-dotnet/commit/3b439c4ce6af9d491356e2c6984e123df2c7eb03))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
