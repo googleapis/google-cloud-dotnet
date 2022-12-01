@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.2.0, released 2022-12-01
+
+### New features
+
+- Add SHA-2 import methods ([issue 9353](https://github.com/googleapis/google-cloud-dotnet/issues/9353)) ([commit df7a29e](https://github.com/googleapis/google-cloud-dotnet/commit/df7a29ea4d48c819d451a47e5d3e3d944a1ceb51))
+- Add support for additional HMAC algorithms ([issue 9327](https://github.com/googleapis/google-cloud-dotnet/issues/9327)) ([commit 26da664](https://github.com/googleapis/google-cloud-dotnet/commit/26da664a2c73758fedb9e527fa3562119719399d))
+
 ## Version 3.1.0, released 2022-11-02
 
 ### New features
