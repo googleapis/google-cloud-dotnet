@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.5.0, released 2022-12-01
+
+### New features
+
+- Added cx_current_page field to AutomatedAgentReply ([commit 2e15dd1](https://github.com/googleapis/google-cloud-dotnet/commit/2e15dd164b6552055ea6c9f2ba23f8b9e75959f3))
+
+### Documentation improvements
+
+- Clarified docs for Sentiment ([commit 2e15dd1](https://github.com/googleapis/google-cloud-dotnet/commit/2e15dd164b6552055ea6c9f2ba23f8b9e75959f3))
+
 ## Version 4.4.0, released 2022-11-02
 
 ### New features
