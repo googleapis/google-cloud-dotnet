@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2022-12-01
+
+### New features
+
+- Maintenance schedules ([commit a657157](https://github.com/googleapis/google-cloud-dotnet/commit/a657157d15d69eeca29f8c72917d25bd82d2c3c1))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
