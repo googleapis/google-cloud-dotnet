@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
+using Grpc.Core;
 using System;
 using Xunit;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
@@ -125,6 +127,44 @@ namespace Google.Cloud.Language.V1.Snippets
                 Console.WriteLine($"  Sentiment score: {entity.Sentiment.Score}; magnitude: {entity.Sentiment.Magnitude}");
             }
             // End sample
+        }
+
+        [SkippableFact]
+        public void ApiKey()
+        {
+            string apiKey = Environment.GetEnvironmentVariable("LANGUAGE_API_KEY");
+            Skip.If(string.IsNullOrEmpty(apiKey));
+
+            // Sample: ApiKey
+            // Create a LanguageServiceSettings that applies the X-Goog-Api-Key
+            // header on every request
+            LanguageServiceSettings settings = new LanguageServiceSettings
+            {
+                CallSettings = CallSettings.FromHeader("X-Goog-Api-Key", apiKey)
+            };
+
+            // Create a LanguageServiceClient which uses the settings to apply
+            // the API key to every request. The ChannelCredentials are set to
+            // just SSL; we don't authenticate at the channel level when
+            // applying API keys.
+            LanguageServiceClient client = new LanguageServiceClientBuilder
+            {
+                ChannelCredentials = ChannelCredentials.SecureSsl,
+                Settings = settings
+            }.Build();
+
+            // After creating the client with an API key configured, we can use it
+            // as normal.
+            Document document = Document.FromPlainText("This is a simple sentence.");
+            AnalyzeSyntaxResponse response = client.AnalyzeSyntax(document);
+
+            Console.WriteLine($"Detected language: {response.Language}");
+            Console.WriteLine($"Number of sentences: {response.Sentences.Count}");
+            Console.WriteLine($"Number of tokens: {response.Tokens.Count}");
+            // End sample
+
+            Assert.Equal(1, response.Sentences.Count);
+            Assert.Equal(6, response.Tokens.Count);
         }
     }
 }
