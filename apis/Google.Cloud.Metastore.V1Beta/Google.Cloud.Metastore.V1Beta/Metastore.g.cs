@@ -4324,7 +4324,7 @@ namespace Google.Cloud.Metastore.V1Beta {
         /// be at least one IP address available in the subnet's primary range. The
         /// subnet is specified in the following form:
         ///
-        /// `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+        /// `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
