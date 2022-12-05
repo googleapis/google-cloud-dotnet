@@ -14,31 +14,43 @@
 
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Google.Cloud.Storage.V1;
 
 /// <summary>
 /// 
 /// </summary>
-public sealed class RetryOptions
+public class RetryTimings
 {
     /// <summary>
     /// 
     /// </summary>
-    public RetryConditions _retryConditions;
+    public int MaxAttempts { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public RetryTimings _retryTimings;
+    public int InitialBackoff { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public RetryOptions(RetryTimings retryTimings, RetryConditions retryConditions)
+    public int MaxBackoff { get; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public int BackoffMultiplier { get; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public RetryTimings(int maxAttempts = 0, int initialBackoff = 0, int maxBackoff = 0, int backoffMultiplier = 0)
     {
-        _retryTimings = retryTimings;
-        _retryConditions = retryConditions;
-
+        MaxAttempts = maxAttempts;
+        InitialBackoff = initialBackoff;
+        MaxBackoff = maxBackoff;
+        BackoffMultiplier = backoffMultiplier;
     }
 }

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1;
@@ -20,25 +19,15 @@ namespace Google.Cloud.Storage.V1;
 /// <summary>
 /// 
 /// </summary>
-public sealed class RetryOptions
+public class RetryConditions
 {
     /// <summary>
     /// 
     /// </summary>
-    public RetryConditions _retryConditions;
+    public IList<int> ErrorCodes { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public RetryTimings _retryTimings;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryOptions(RetryTimings retryTimings, RetryConditions retryConditions)
-    {
-        _retryTimings = retryTimings;
-        _retryConditions = retryConditions;
-
-    }
+    public RetryConditions(IList<int> errorCodes) => ErrorCodes = errorCodes;
 }
