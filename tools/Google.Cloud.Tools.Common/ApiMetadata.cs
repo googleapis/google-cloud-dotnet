@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -259,5 +259,10 @@ namespace Google.Cloud.Tools.Common
         /// during generation.
         /// </summary>
         public string Transport { get; set; }
+
+        /// <summary>
+        /// The option to pass to protoc for the "rest-numeric-enums" option.
+        /// </summary>
+        public bool RestNumericEnums { get; set; }
     }
 }
