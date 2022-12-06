@@ -4041,7 +4041,9 @@
         "Speech",
         "Text-to-speech"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/texttospeech/v1beta1",
       "shortName": "texttospeech",

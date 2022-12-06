@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gctv = Google.Cloud.TextToSpeech.V1Beta1;
+using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
 using sys = System;
 using scg = System.Collections.Generic;
@@ -38,6 +39,24 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gctv::TextToSpeechClientBuilder builder = new gctv::TextToSpeechClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gctv::TextToSpeechLongAudioSynthesizeClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTextToSpeechLongAudioSynthesizeClient(this IServiceCollection services, sys::Action<gctv::TextToSpeechLongAudioSynthesizeClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::TextToSpeechLongAudioSynthesizeClientBuilder builder = new gctv::TextToSpeechLongAudioSynthesizeClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
