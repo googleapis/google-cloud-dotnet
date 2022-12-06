@@ -25,7 +25,8 @@ namespace Google.Analytics.Admin.V1Alpha
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Analytics.Admin.V1Alpha", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Analytics.Admin.V1Alpha", GetFileDescriptors)
+            .WithRequestNumericEnumJsonEncoding(true);
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {

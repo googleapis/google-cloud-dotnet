@@ -26,7 +26,8 @@ namespace Google.Cloud.Shell.V1
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Shell.V1", GetFileDescriptors);
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Shell.V1", GetFileDescriptors)
+            .WithRequestNumericEnumJsonEncoding(true);
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
