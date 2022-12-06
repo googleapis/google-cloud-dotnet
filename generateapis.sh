@@ -79,6 +79,7 @@ generate_microgenerator() {
   fi
   COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
   TRANSPORT_OPTION=--gapic_opt=transport=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE transport --default=grpc)
+  REST_NUMERIC_ENUMS_OPTION=--gapic_opt=rest-numeric-enums=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE restNumericEnums --default=false)    
 
   # All APIs should have a service config specified, but it might be deliberately "none" to mean
   # "there are no services for this API directory" e.g. for oslogin/common
@@ -131,6 +132,7 @@ generate_microgenerator() {
     $SERVICE_CONFIG_OPTION \
     $COMMON_RESOURCES_OPTION \
     $TRANSPORT_OPTION \
+    $REST_NUMERIC_ENUMS_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
