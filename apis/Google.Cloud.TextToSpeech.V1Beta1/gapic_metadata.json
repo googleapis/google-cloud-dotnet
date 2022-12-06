@@ -25,6 +25,21 @@
           }
         }
       }
+    },
+    "TextToSpeechLongAudioSynthesize": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TextToSpeechLongAudioSynthesizeClient",
+          "rpcs": {
+            "SynthesizeLongAudio": {
+              "methods": [
+                "SynthesizeLongAudio",
+                "SynthesizeLongAudioAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

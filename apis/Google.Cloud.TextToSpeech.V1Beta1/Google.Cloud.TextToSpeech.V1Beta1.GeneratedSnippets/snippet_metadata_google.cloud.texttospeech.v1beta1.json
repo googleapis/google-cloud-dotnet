@@ -313,6 +313,83 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "texttospeech_v1beta1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_sync",
+      "title": "SynthesizeLongAudioRequestObject",
+      "description": "Snippet for SynthesizeLongAudio",
+      "file": "TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeLongAudio",
+        "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudio",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.TextToSpeech.V1Beta1.SynthesizeLongAudioResponse, Google.Cloud.TextToSpeech.V1Beta1.SynthesizeLongAudioMetadata>",
+        "client": {
+          "shortName": "TextToSpeechLongAudioSynthesizeClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechLongAudioSynthesizeClient"
+        },
+        "method": {
+          "shortName": "SynthesizeLongAudio",
+          "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeechLongAudioSynthesize.SynthesizeLongAudio",
+          "service": {
+            "shortName": "TextToSpeechLongAudioSynthesize",
+            "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeechLongAudioSynthesize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1beta1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_async",
+      "title": "SynthesizeLongAudioRequestObjectAsync",
+      "description": "Snippet for SynthesizeLongAudioAsync",
+      "file": "TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeLongAudioAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.TextToSpeech.V1Beta1.SynthesizeLongAudioResponse, Google.Cloud.TextToSpeech.V1Beta1.SynthesizeLongAudioMetadata>>",
+        "client": {
+          "shortName": "TextToSpeechLongAudioSynthesizeClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechLongAudioSynthesizeClient"
+        },
+        "method": {
+          "shortName": "SynthesizeLongAudio",
+          "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeechLongAudioSynthesize.SynthesizeLongAudio",
+          "service": {
+            "shortName": "TextToSpeechLongAudioSynthesize",
+            "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeechLongAudioSynthesize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
