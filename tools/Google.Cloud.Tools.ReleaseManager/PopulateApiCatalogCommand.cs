@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -39,16 +39,25 @@ namespace Google.Cloud.Tools.ReleaseManager
             var googleapis = Path.Combine(root, "googleapis");
             var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
             int modifiedCount = 0;
-            foreach (var api in catalog.Apis)
+
+            var directories = File.ReadAllLines("bazel-files.txt").Select(path => path[2..^12]);
+
+            foreach (var directory in directories)
             {
-                var indexEntry = apiIndex.Apis.FirstOrDefault(x => x.DeriveCSharpNamespace() == api.Id);
+                var indexEntry = apiIndex.Apis.FirstOrDefault(x => x.Directory == directory);
                 if (indexEntry is null)
                 {
                     continue;
                 }
 
+                var id = indexEntry.DeriveCSharpNamespace();
+                if (!catalog.TryGetApi(id, out var api))
+                {
+                    continue;
+                }
+
                 // Change this line when introducing a new field...
-                api.Json.Last.AddAfterSelf(new JProperty("serviceConfigFile", indexEntry.ConfigFile));
+                api.Json.Last.AddAfterSelf(new JProperty("restNumericEnums", true));
                 modifiedCount++;
             }
 
