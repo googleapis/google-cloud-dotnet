@@ -1620,8 +1620,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// Required.
     /// Unique identifier provided by the client within the parent scope.
-    /// It must be between 1 and 128 characters, and contains alphanumeric
-    /// characters, underscores or hyphens only.
+    /// It must be between 1 and 128 characters and contain alphanumeric
+    /// characters, underscores, or hyphens only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2335,7 +2335,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. Name of the notification config to delete. Its format is
-    /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+    /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+    /// "folders/[folder_id]/notificationConfigs/[config_id]",
+    /// or "projects/[project_id]/notificationConfigs/[config_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2480,7 +2482,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for retrieving a big query export.
+  /// Request message for retrieving a BigQuery export.
   /// </summary>
   public sealed partial class GetBigQueryExportRequest : pb::IMessage<GetBigQueryExportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2530,7 +2532,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the big query export to retrieve. Its format is
+    /// Required. Name of the BigQuery export to retrieve. Its format is
     /// organizations/{organization}/bigQueryExports/{export_id},
     /// folders/{folder}/bigQueryExports/{export_id}, or
     /// projects/{project}/bigQueryExports/{export_id}
@@ -2927,7 +2929,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. Name of the notification config to get. Its format is
-    /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+    /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+    /// "folders/[folder_id]/notificationConfigs/[config_id]",
+    /// or "projects/[project_id]/notificationConfigs/[config_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3520,7 +3524,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization to groupBy. Its format is
+    /// Required. The name of the parent to group the assets by. Its format is
     /// "organizations/[organization_id], folders/[folder_id], or
     /// projects/[project_id]".
     /// </summary>
@@ -6015,9 +6019,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization to list notification configs. Its format
-    /// is "organizations/[organization_id]", "folders/[folder_id]", or
-    /// "projects/[project_id]".
+    /// Required. The name of the parent in which to list the notification
+    /// configurations. Its format is "organizations/[organization_id]",
+    /// "folders/[folder_id]", or "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7030,8 +7034,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization assets should belong to. Its format is
-    /// "organizations/[organization_id], folders/[folder_id], or
+    /// Required. The name of the parent that the listed assets belong to. Its
+    /// format is "organizations/[organization_id], folders/[folder_id], or
     /// projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9990,10 +9994,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the finding. See:
-    /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    /// Example:
-    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+    /// Required. The [relative resource
+    /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+    /// of the finding. Example:
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+    /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+    /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10276,9 +10282,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the finding. See:
-    /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    /// Example:
+    /// Required. The [relative resource
+    /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+    /// of the finding. Example:
     /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
     /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
     /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -12508,7 +12514,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for creating a big query export.
+  /// Request message for creating a BigQuery export.
   /// </summary>
   public sealed partial class CreateBigQueryExportRequest : pb::IMessage<CreateBigQueryExportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12560,8 +12566,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the new big query export's parent. Its format is
-    /// "organizations/[organization_id]", "folders/[folder_id]", or
+    /// Required. The name of the parent resource of the new BigQuery export. Its
+    /// format is "organizations/[organization_id]", "folders/[folder_id]", or
     /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12577,7 +12583,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int BigQueryExportFieldNumber = 2;
     private global::Google.Cloud.SecurityCenter.V1.BigQueryExport bigQueryExport_;
     /// <summary>
-    /// Required. The big query export being created.
+    /// Required. The BigQuery export being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13560,7 +13566,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for deleting a big query export.
+  /// Request message for deleting a BigQuery export.
   /// </summary>
   public sealed partial class DeleteBigQueryExportRequest : pb::IMessage<DeleteBigQueryExportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13610,7 +13616,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the big query export to delete. Its format is
+    /// Required. The name of the BigQuery export to delete. Its format is
     /// organizations/{organization}/bigQueryExports/{export_id},
     /// folders/{folder}/bigQueryExports/{export_id}, or
     /// projects/{project}/bigQueryExports/{export_id}

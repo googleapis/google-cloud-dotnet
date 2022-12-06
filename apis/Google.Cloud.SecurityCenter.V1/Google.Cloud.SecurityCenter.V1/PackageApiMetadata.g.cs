@@ -28,6 +28,7 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
         internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.SecurityCenter.V1", GetFileDescriptors)
+            .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
@@ -69,6 +70,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return FolderReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
+            yield return KernelRootkitReflection.Descriptor;
             yield return KubernetesReflection.Descriptor;
             yield return LabelReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
