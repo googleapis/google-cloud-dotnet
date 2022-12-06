@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.AIPlatform.V1;
+using sys = System;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -101,6 +102,28 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : DatasetName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchDataItemsRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+        /// </summary>
+        public DatasetName DatasetAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+            set => Dataset = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SavedQueryName"/>-typed view over the <see cref="SavedQuery"/> resource name property.
+        /// </summary>
+        [sys::ObsoleteAttribute]
+        public SavedQueryName SavedQueryAsSavedQueryName
+        {
+            get => string.IsNullOrEmpty(SavedQuery) ? null : SavedQueryName.Parse(SavedQuery, allowUnparsed: true);
+            set => SavedQuery = value?.ToString() ?? "";
         }
     }
 

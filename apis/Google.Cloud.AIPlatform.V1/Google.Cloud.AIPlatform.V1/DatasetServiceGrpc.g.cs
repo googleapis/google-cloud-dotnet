@@ -89,6 +89,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse> __Marshaller_google_cloud_aiplatform_v1_ListDataItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest> __Marshaller_google_cloud_aiplatform_v1_SearchDataItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse> __Marshaller_google_cloud_aiplatform_v1_SearchDataItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest> __Marshaller_google_cloud_aiplatform_v1_ListSavedQueriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse> __Marshaller_google_cloud_aiplatform_v1_ListSavedQueriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse.Parser));
@@ -164,6 +168,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "ListDataItems",
         __Marshaller_google_cloud_aiplatform_v1_ListDataItemsRequest,
         __Marshaller_google_cloud_aiplatform_v1_ListDataItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest, global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse> __Method_SearchDataItems = new grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest, global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchDataItems",
+        __Marshaller_google_cloud_aiplatform_v1_SearchDataItemsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_SearchDataItemsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest, global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse> __Method_ListSavedQueries = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest, global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse>(
@@ -291,6 +303,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse> ListDataItems(global::Google.Cloud.AIPlatform.V1.ListDataItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches DataItems in a Dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse> SearchDataItems(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -745,6 +769,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataItems, null, options, request);
       }
       /// <summary>
+      /// Searches DataItems in a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse SearchDataItems(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchDataItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches DataItems in a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse SearchDataItems(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchDataItems, null, options, request);
+      }
+      /// <summary>
+      /// Searches DataItems in a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse> SearchDataItemsAsync(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchDataItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches DataItems in a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse> SearchDataItemsAsync(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchDataItems, null, options, request);
+      }
+      /// <summary>
       /// Lists SavedQueries in a Dataset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -910,6 +982,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ImportData, serviceImpl.ImportData)
           .AddMethod(__Method_ExportData, serviceImpl.ExportData)
           .AddMethod(__Method_ListDataItems, serviceImpl.ListDataItems)
+          .AddMethod(__Method_SearchDataItems, serviceImpl.SearchDataItems)
           .AddMethod(__Method_ListSavedQueries, serviceImpl.ListSavedQueries)
           .AddMethod(__Method_GetAnnotationSpec, serviceImpl.GetAnnotationSpec)
           .AddMethod(__Method_ListAnnotations, serviceImpl.ListAnnotations).Build();
@@ -930,6 +1003,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ImportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ImportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportData));
       serviceBinder.AddMethod(__Method_ExportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportData));
       serviceBinder.AddMethod(__Method_ListDataItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListDataItemsRequest, global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse>(serviceImpl.ListDataItems));
+      serviceBinder.AddMethod(__Method_SearchDataItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest, global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse>(serviceImpl.SearchDataItems));
       serviceBinder.AddMethod(__Method_ListSavedQueries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest, global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse>(serviceImpl.ListSavedQueries));
       serviceBinder.AddMethod(__Method_GetAnnotationSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetAnnotationSpecRequest, global::Google.Cloud.AIPlatform.V1.AnnotationSpec>(serviceImpl.GetAnnotationSpec));
       serviceBinder.AddMethod(__Method_ListAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListAnnotationsRequest, global::Google.Cloud.AIPlatform.V1.ListAnnotationsResponse>(serviceImpl.ListAnnotations));
