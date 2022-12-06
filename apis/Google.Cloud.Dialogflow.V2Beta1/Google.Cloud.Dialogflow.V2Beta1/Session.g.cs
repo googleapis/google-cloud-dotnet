@@ -6211,7 +6211,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
   /// <summary>
   /// The sentiment, such as positive/negative feeling or association, for a unit
-  /// of analysis, such as the query text.
+  /// of analysis, such as the query text. See:
+  /// https://cloud.google.com/natural-language/docs/basics#interpreting_sentiment_analysis_values
+  /// for how to interpret the result.
   /// </summary>
   public sealed partial class Sentiment : pb::IMessage<Sentiment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
