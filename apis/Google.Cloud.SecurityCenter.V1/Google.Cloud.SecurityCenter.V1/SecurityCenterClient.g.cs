@@ -1882,8 +1882,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -1911,8 +1911,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -1940,8 +1940,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -1964,8 +1964,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -1993,8 +1993,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2022,8 +2022,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2046,8 +2046,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2075,8 +2075,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2104,8 +2104,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2128,8 +2128,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2157,8 +2157,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2186,8 +2186,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="configId">
         /// Required.
         /// Unique identifier provided by the client within the parent scope.
-        /// It must be between 1 and 128 characters, and contains alphanumeric
-        /// characters, underscores or hyphens only.
+        /// It must be between 1 and 128 characters and contain alphanumeric
+        /// characters, underscores, or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2602,7 +2602,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2617,7 +2619,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2632,7 +2636,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2644,7 +2650,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2659,7 +2667,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2674,7 +2684,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to delete. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2682,7 +2694,7 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2691,7 +2703,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2700,7 +2712,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2709,10 +2721,10 @@ namespace Google.Cloud.SecurityCenter.V1
             GetBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -2726,10 +2738,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -2743,10 +2755,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -2757,10 +2769,10 @@ namespace Google.Cloud.SecurityCenter.V1
             GetBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -2774,10 +2786,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -2791,10 +2803,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to retrieve. Its format is
+        /// Required. Name of the BigQuery export to retrieve. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -3070,7 +3082,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3085,7 +3099,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3100,7 +3116,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3112,7 +3130,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3127,7 +3147,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3142,7 +3164,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the notification config to get. Its format is
-        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]",
+        /// "folders/[folder_id]/notificationConfigs/[config_id]",
+        /// or "projects/[project_id]/notificationConfigs/[config_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3933,9 +3957,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3959,9 +3983,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3985,9 +4009,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4011,9 +4035,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4037,9 +4061,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4063,9 +4087,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4089,9 +4113,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4115,9 +4139,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists notification configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to list notification configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// Required. The name of the parent in which to list the notification
+        /// configurations. Its format is "organizations/[organization_id]",
+        /// "folders/[folder_id]", or "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4577,10 +4601,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4602,10 +4628,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4627,10 +4655,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4647,10 +4677,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4672,10 +4704,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4697,10 +4731,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
-        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
+        /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+        /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+        /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
         /// </param>
         /// <param name="state">
         /// Required. The desired State of the finding.
@@ -4744,9 +4780,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4767,9 +4803,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4790,9 +4826,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4809,9 +4845,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4832,9 +4868,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4855,9 +4891,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the mute state of a finding.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the finding. See:
-        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        /// Example:
+        /// Required. The [relative resource
+        /// name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+        /// of the finding. Example:
         /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
         /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
         /// "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -5764,7 +5800,7 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateSecurityMarksAsync(securityMarks, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5773,7 +5809,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5782,7 +5818,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5791,15 +5827,15 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5818,15 +5854,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5845,15 +5881,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5867,15 +5903,15 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5894,15 +5930,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5921,15 +5957,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5943,15 +5979,15 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5970,15 +6006,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -5997,15 +6033,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -6019,15 +6055,15 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -6046,15 +6082,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -6073,15 +6109,15 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new big query export's parent. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// Required. The name of the parent resource of the new BigQuery export. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]", or
         /// "projects/[project_id]".
         /// </param>
         /// <param name="bigQueryExport">
-        /// Required. The big query export being created.
+        /// Required. The BigQuery export being created.
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
@@ -6095,7 +6131,7 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6104,7 +6140,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6113,7 +6149,7 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6122,10 +6158,10 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -6139,10 +6175,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -6156,10 +6192,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -6170,10 +6206,10 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -6187,10 +6223,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -6204,10 +6240,10 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the big query export to delete. Its format is
+        /// Required. The name of the BigQuery export to delete. Its format is
         /// organizations/{organization}/bigQueryExports/{export_id},
         /// folders/{folder}/bigQueryExports/{export_id}, or
         /// projects/{project}/bigQueryExports/{export_id}
@@ -7095,7 +7131,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7107,7 +7143,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Gets a big query export.
+        /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7738,7 +7774,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7750,7 +7786,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Creates a big query export.
+        /// Creates a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7762,7 +7798,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7774,7 +7810,7 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Deletes an existing big query export.
+        /// Deletes an existing BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

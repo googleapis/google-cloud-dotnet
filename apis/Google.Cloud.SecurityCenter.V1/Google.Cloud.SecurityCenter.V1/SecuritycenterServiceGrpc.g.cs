@@ -562,7 +562,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Gets a big query export.
+      /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -880,7 +880,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Creates a big query export.
+      /// Creates a BigQuery export.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -892,7 +892,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Deletes an existing big query export.
+      /// Deletes an existing BigQuery export.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1309,7 +1309,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
       }
       /// <summary>
-      /// Gets a big query export.
+      /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1322,7 +1322,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return GetBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a big query export.
+      /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1333,7 +1333,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetBigQueryExport, null, options, request);
       }
       /// <summary>
-      /// Gets a big query export.
+      /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1346,7 +1346,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return GetBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a big query export.
+      /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2581,7 +2581,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSecurityMarks, null, options, request);
       }
       /// <summary>
-      /// Creates a big query export.
+      /// Creates a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2594,7 +2594,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CreateBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a big query export.
+      /// Creates a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2605,7 +2605,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBigQueryExport, null, options, request);
       }
       /// <summary>
-      /// Creates a big query export.
+      /// Creates a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2618,7 +2618,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CreateBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a big query export.
+      /// Creates a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2629,7 +2629,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBigQueryExport, null, options, request);
       }
       /// <summary>
-      /// Deletes an existing big query export.
+      /// Deletes an existing BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2642,7 +2642,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return DeleteBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an existing big query export.
+      /// Deletes an existing BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2653,7 +2653,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBigQueryExport, null, options, request);
       }
       /// <summary>
-      /// Deletes an existing big query export.
+      /// Deletes an existing BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2666,7 +2666,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return DeleteBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an existing big query export.
+      /// Deletes an existing BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
