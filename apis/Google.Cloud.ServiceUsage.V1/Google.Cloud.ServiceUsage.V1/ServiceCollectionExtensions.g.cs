@@ -18,6 +18,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcsv = Google.Cloud.ServiceUsage.V1;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using sys = System;
 using scg = System.Collections.Generic;
