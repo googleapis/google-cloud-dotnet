@@ -76,82 +76,106 @@ namespace Google.Cloud.AIPlatform.V1 {
             "BCABKAkSLQoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
             "ZWxkTWFzaxIQCghvcmRlcl9ieRgGIAEoCSJqChVMaXN0RGF0YUl0ZW1zUmVz",
             "cG9uc2USOAoKZGF0YV9pdGVtcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkRhdGFJdGVtEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLM",
-            "AQoXTGlzdFNhdmVkUXVlcmllc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQing",
-            "QQL6QSMKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRGF0YXNldBIOCgZm",
-            "aWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "BCABKAkSLQoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzaxIQCghvcmRlcl9ieRgGIAEoCSJyChhMaXN0U2F2ZWRRdWVyaWVz",
-            "UmVzcG9uc2USPQoNc2F2ZWRfcXVlcmllcxgBIAMoCzImLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlNhdmVkUXVlcnkSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJIokBChhHZXRBbm5vdGF0aW9uU3BlY1JlcXVlc3QSPgoEbmFtZRgB",
-            "IAEoCUIw4EEC+kEqCihhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Fubm90",
-            "YXRpb25TcGVjEi0KCXJlYWRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5GaWVsZE1hc2sizAEKFkxpc3RBbm5vdGF0aW9uc1JlcXVlc3QSOgoGcGFy",
-            "ZW50GAEgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YUl0ZW0SDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAQgASgJEi0KCXJlYWRfbWFzaxgFIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5GaWVsZE1hc2sSEAoIb3JkZXJfYnkYBiABKAkibwoXTGlz",
-            "dEFubm90YXRpb25zUmVzcG9uc2USOwoLYW5ub3RhdGlvbnMYASADKAsyJi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Bbm5vdGF0aW9uEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCTKmEgoORGF0YXNldFNlcnZpY2US3AEKDUNyZWF0",
-            "ZURhdGFzZXQSMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVhdGVE",
-            "YXRhc2V0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "eoLT5JMCNyIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "ZGF0YXNldHM6B2RhdGFzZXTaQQ5wYXJlbnQsZGF0YXNldMpBKQoHRGF0YXNl",
-            "dBIeQ3JlYXRlRGF0YXNldE9wZXJhdGlvbk1ldGFkYXRhEp0BCgpHZXREYXRh",
-            "c2V0Ei0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0RGF0YXNldFJl",
-            "cXVlc3QaIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EYXRhc2V0IjuC",
-            "0+STAi4SLC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFz",
-            "ZXRzLyp92kEEbmFtZRLDAQoNVXBkYXRlRGF0YXNldBIwLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlVwZGF0ZURhdGFzZXRSZXF1ZXN0GiMuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRGF0YXNldCJbgtPkkwI/MjQvdjEve2Rh",
-            "dGFzZXQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFzZXRzLyp9",
-            "OgdkYXRhc2V02kETZGF0YXNldCx1cGRhdGVfbWFzaxKwAQoMTGlzdERhdGFz",
-            "ZXRzEi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdERhdGFzZXRz",
-            "UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3REYXRh",
-            "c2V0c1Jlc3BvbnNlIj2C0+STAi4SLC92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L2RhdGFzZXRz2kEGcGFyZW50EtABCg1EZWxldGVEYXRh",
-            "c2V0EjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlRGF0YXNl",
-            "dFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm6C0+ST",
-            "Ai4qLC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFzZXRz",
-            "Lyp92kEEbmFtZcpBMAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhdEZWxldGVP",
-            "cGVyYXRpb25NZXRhZGF0YRLlAQoKSW1wb3J0RGF0YRItLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkltcG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiKIAYLT5JMCOCIzL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn06aW1wb3J0OgEq2kETbmFt",
-            "ZSxpbXBvcnRfY29uZmlnc8pBMQoSSW1wb3J0RGF0YVJlc3BvbnNlEhtJbXBv",
-            "cnREYXRhT3BlcmF0aW9uTWV0YWRhdGES5AEKCkV4cG9ydERhdGESLS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBvcnREYXRhUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihwGC0+STAjgiMy92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFzZXRzLyp9OmV4cG9ydDoB",
-            "KtpBEm5hbWUsZXhwb3J0X2NvbmZpZ8pBMQoSRXhwb3J0RGF0YVJlc3BvbnNl",
-            "EhtFeHBvcnREYXRhT3BlcmF0aW9uTWV0YWRhdGESvwEKDUxpc3REYXRhSXRl",
-            "bXMSMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0RGF0YUl0ZW1z",
-            "UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3REYXRh",
-            "SXRlbXNSZXNwb25zZSJJgtPkkwI6EjgvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2RhdGFzZXRzLyp9L2RhdGFJdGVtc9pBBnBhcmVudBLL",
-            "AQoQTGlzdFNhdmVkUXVlcmllcxIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkxpc3RTYXZlZFF1ZXJpZXNSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuTGlzdFNhdmVkUXVlcmllc1Jlc3BvbnNlIkyC0+STAj0S",
-            "Oy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMv",
-            "Kn0vc2F2ZWRRdWVyaWVz2kEGcGFyZW50EsQBChFHZXRBbm5vdGF0aW9uU3Bl",
-            "YxI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdldEFubm90YXRpb25T",
-            "cGVjUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkFubm90",
-            "YXRpb25TcGVjIk2C0+STAkASPi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2RhdGFzZXRzLyovYW5ub3RhdGlvblNwZWNzLyp92kEEbmFtZRLT",
-            "AQoPTGlzdEFubm90YXRpb25zEjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTGlzdEFubm90YXRpb25zUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkxpc3RBbm5vdGF0aW9uc1Jlc3BvbnNlIleC0+STAkgSRi92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKi9k",
-            "YXRhSXRlbXMvKn0vYW5ub3RhdGlvbnPaQQZwYXJlbnQaTcpBGWFpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtcBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCE0RhdGFzZXRTZXJ2aWNlUHJvdG9QAVpEZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3Jt",
-            "L3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "YXRmb3JtLnYxLkRhdGFJdGVtEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLc",
+            "BAoWU2VhcmNoRGF0YUl0ZW1zUmVxdWVzdBIcChJvcmRlcl9ieV9kYXRhX2l0",
+            "ZW0YDCABKAlIABJjChNvcmRlcl9ieV9hbm5vdGF0aW9uGA0gASgLMkQuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VhcmNoRGF0YUl0ZW1zUmVxdWVz",
+            "dC5PcmRlckJ5QW5ub3RhdGlvbkgAEjoKB2RhdGFzZXQYASABKAlCKeBBAvpB",
+            "IwohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EkAKC3NhdmVk",
+            "X3F1ZXJ5GAIgASgJQisYAfpBJgokYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9TYXZlZFF1ZXJ5EhkKEWRhdGFfbGFiZWxpbmdfam9iGAMgASgJEhgKEGRh",
+            "dGFfaXRlbV9maWx0ZXIYBCABKAkSHgoSYW5ub3RhdGlvbnNfZmlsdGVyGAUg",
+            "ASgJQgIYARIaChJhbm5vdGF0aW9uX2ZpbHRlcnMYCyADKAkSLgoKZmllbGRf",
+            "bWFzaxgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSGQoRYW5u",
+            "b3RhdGlvbnNfbGltaXQYByABKAUSEQoJcGFnZV9zaXplGAggASgFEhQKCG9y",
+            "ZGVyX2J5GAkgASgJQgIYARISCgpwYWdlX3Rva2VuGAogASgJGj8KEU9yZGVy",
+            "QnlBbm5vdGF0aW9uEhgKC3NhdmVkX3F1ZXJ5GAEgASgJQgPgQQISEAoIb3Jk",
+            "ZXJfYnkYAiABKAlCBwoFb3JkZXIidQoXU2VhcmNoRGF0YUl0ZW1zUmVzcG9u",
+            "c2USQQoPZGF0YV9pdGVtX3ZpZXdzGAEgAygLMiguZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuRGF0YUl0ZW1WaWV3EhcKD25leHRfcGFnZV90b2tlbhgC",
+            "IAEoCSKnAQoMRGF0YUl0ZW1WaWV3EjcKCWRhdGFfaXRlbRgBIAEoCzIkLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRhdGFJdGVtEjsKC2Fubm90YXRp",
+            "b25zGAIgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQW5ub3Rh",
+            "dGlvbhIhChloYXNfdHJ1bmNhdGVkX2Fubm90YXRpb25zGAMgASgIIswBChdM",
+            "aXN0U2F2ZWRRdWVyaWVzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpB",
+            "IwohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0Eg4KBmZpbHRl",
+            "chgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEo",
+            "CRItCglyZWFkX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrEhAKCG9yZGVyX2J5GAYgASgJInIKGExpc3RTYXZlZFF1ZXJpZXNSZXNw",
+            "b25zZRI9Cg1zYXZlZF9xdWVyaWVzGAEgAygLMiYuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuU2F2ZWRRdWVyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAkiiQEKGEdldEFubm90YXRpb25TcGVjUmVxdWVzdBI+CgRuYW1lGAEgASgJ",
+            "QjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQW5ub3RhdGlv",
+            "blNwZWMSLQoJcmVhZF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFzayLMAQoWTGlzdEFubm90YXRpb25zUmVxdWVzdBI6CgZwYXJlbnQY",
+            "ASABKAlCKuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9EYXRh",
+            "SXRlbRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBh",
+            "Z2VfdG9rZW4YBCABKAkSLQoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzaxIQCghvcmRlcl9ieRgGIAEoCSJvChdMaXN0QW5u",
+            "b3RhdGlvbnNSZXNwb25zZRI7Cgthbm5vdGF0aW9ucxgBIAMoCzImLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkFubm90YXRpb24SFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJMuwTCg5EYXRhc2V0U2VydmljZRLcAQoNQ3JlYXRlRGF0",
+            "YXNldBIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNyZWF0ZURhdGFz",
+            "ZXRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ6gtPk",
+            "kwI3IiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9kYXRh",
+            "c2V0czoHZGF0YXNldNpBDnBhcmVudCxkYXRhc2V0ykEpCgdEYXRhc2V0Eh5D",
+            "cmVhdGVEYXRhc2V0T3BlcmF0aW9uTWV0YWRhdGESnQEKCkdldERhdGFzZXQS",
+            "LS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZXREYXRhc2V0UmVxdWVz",
+            "dBojLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRhdGFzZXQiO4LT5JMC",
+            "LhIsL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMv",
+            "Kn3aQQRuYW1lEsMBCg1VcGRhdGVEYXRhc2V0EjAuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuVXBkYXRlRGF0YXNldFJlcXVlc3QaIy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5EYXRhc2V0IluC0+STAj8yNC92MS97ZGF0YXNl",
+            "dC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn06B2Rh",
+            "dGFzZXTaQRNkYXRhc2V0LHVwZGF0ZV9tYXNrErABCgxMaXN0RGF0YXNldHMS",
+            "Ly5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0RGF0YXNldHNSZXF1",
+            "ZXN0GjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdERhdGFzZXRz",
+            "UmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vZGF0YXNldHPaQQZwYXJlbnQS0AEKDURlbGV0ZURhdGFzZXQS",
+            "MC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZWxldGVEYXRhc2V0UmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iboLT5JMCLios",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn3a",
+            "QQRuYW1lykEwChVnb29nbGUucHJvdG9idWYuRW1wdHkSF0RlbGV0ZU9wZXJh",
+            "dGlvbk1ldGFkYXRhEuUBCgpJbXBvcnREYXRhEi0uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuSW1wb3J0RGF0YVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIogBgtPkkwI4IjMvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9kYXRhc2V0cy8qfTppbXBvcnQ6ASraQRNuYW1lLGlt",
+            "cG9ydF9jb25maWdzykExChJJbXBvcnREYXRhUmVzcG9uc2USG0ltcG9ydERh",
+            "dGFPcGVyYXRpb25NZXRhZGF0YRLkAQoKRXhwb3J0RGF0YRItLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkV4cG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKHAYLT5JMCOCIzL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn06ZXhwb3J0OgEq2kES",
+            "bmFtZSxleHBvcnRfY29uZmlnykExChJFeHBvcnREYXRhUmVzcG9uc2USG0V4",
+            "cG9ydERhdGFPcGVyYXRpb25NZXRhZGF0YRK/AQoNTGlzdERhdGFJdGVtcxIw",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3REYXRhSXRlbXNSZXF1",
+            "ZXN0GjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdERhdGFJdGVt",
+            "c1Jlc3BvbnNlIkmC0+STAjoSOC92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZGF0YXNldHMvKn0vZGF0YUl0ZW1z2kEGcGFyZW50EsMBCg9T",
+            "ZWFyY2hEYXRhSXRlbXMSMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
+            "ZWFyY2hEYXRhSXRlbXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU2VhcmNoRGF0YUl0ZW1zUmVzcG9uc2UiR4LT5JMCQRI/L3YxL3tk",
+            "YXRhc2V0PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn06c2Vh",
+            "cmNoRGF0YUl0ZW1zEssBChBMaXN0U2F2ZWRRdWVyaWVzEjMuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuTGlzdFNhdmVkUXVlcmllc1JlcXVlc3QaNC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0U2F2ZWRRdWVyaWVzUmVz",
+            "cG9uc2UiTILT5JMCPRI7L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9kYXRhc2V0cy8qfS9zYXZlZFF1ZXJpZXPaQQZwYXJlbnQSxAEKEUdl",
+            "dEFubm90YXRpb25TcGVjEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "R2V0QW5ub3RhdGlvblNwZWNSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuQW5ub3RhdGlvblNwZWMiTYLT5JMCQBI+L3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKi9hbm5vdGF0aW9uU3Bl",
+            "Y3MvKn3aQQRuYW1lEtMBCg9MaXN0QW5ub3RhdGlvbnMSMi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5MaXN0QW5ub3RhdGlvbnNSZXF1ZXN0GjMuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdEFubm90YXRpb25zUmVzcG9u",
+            "c2UiV4LT5JMCSBJGL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9kYXRhc2V0cy8qL2RhdGFJdGVtcy8qfS9hbm5vdGF0aW9uc9pBBnBhcmVu",
+            "dBpNykEZYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C1wEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUITRGF0YXNldFNlcnZpY2VQcm90",
+            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AnnotationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DataItemReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.SavedQueryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -170,6 +194,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportDataOperationMetadata), global::Google.Cloud.AIPlatform.V1.ExportDataOperationMetadata.Parser, new[]{ "GenericMetadata", "GcsOutputDirectory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListDataItemsRequest), global::Google.Cloud.AIPlatform.V1.ListDataItemsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse), global::Google.Cloud.AIPlatform.V1.ListDataItemsResponse.Parser, new[]{ "DataItems", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest), global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Parser, new[]{ "OrderByDataItem", "OrderByAnnotation", "Dataset", "SavedQuery", "DataLabelingJob", "DataItemFilter", "AnnotationsFilter", "AnnotationFilters", "FieldMask", "AnnotationsLimit", "PageSize", "OrderBy", "PageToken" }, new[]{ "Order" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation), global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation.Parser, new[]{ "SavedQuery", "OrderBy" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse), global::Google.Cloud.AIPlatform.V1.SearchDataItemsResponse.Parser, new[]{ "DataItemViews", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DataItemView), global::Google.Cloud.AIPlatform.V1.DataItemView.Parser, new[]{ "DataItem", "Annotations", "HasTruncatedAnnotations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest), global::Google.Cloud.AIPlatform.V1.ListSavedQueriesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse), global::Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse.Parser, new[]{ "SavedQueries", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetAnnotationSpecRequest), global::Google.Cloud.AIPlatform.V1.GetAnnotationSpecRequest.Parser, new[]{ "Name", "ReadMask" }, null, null, null, null),
@@ -3871,6 +3898,1513 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Request message for [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
+  /// </summary>
+  public sealed partial class SearchDataItemsRequest : pb::IMessage<SearchDataItemsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchDataItemsRequest> _parser = new pb::MessageParser<SearchDataItemsRequest>(() => new SearchDataItemsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchDataItemsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsRequest(SearchDataItemsRequest other) : this() {
+      dataset_ = other.dataset_;
+      savedQuery_ = other.savedQuery_;
+      dataLabelingJob_ = other.dataLabelingJob_;
+      dataItemFilter_ = other.dataItemFilter_;
+      annotationsFilter_ = other.annotationsFilter_;
+      annotationFilters_ = other.annotationFilters_.Clone();
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      annotationsLimit_ = other.annotationsLimit_;
+      pageSize_ = other.pageSize_;
+      orderBy_ = other.orderBy_;
+      pageToken_ = other.pageToken_;
+      switch (other.OrderCase) {
+        case OrderOneofCase.OrderByDataItem:
+          OrderByDataItem = other.OrderByDataItem;
+          break;
+        case OrderOneofCase.OrderByAnnotation:
+          OrderByAnnotation = other.OrderByAnnotation.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsRequest Clone() {
+      return new SearchDataItemsRequest(this);
+    }
+
+    /// <summary>Field number for the "order_by_data_item" field.</summary>
+    public const int OrderByDataItemFieldNumber = 12;
+    /// <summary>
+    /// A comma-separated list of data item fields to order by, sorted in
+    /// ascending order. Use "desc" after a field name for descending.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderByDataItem {
+      get { return orderCase_ == OrderOneofCase.OrderByDataItem ? (string) order_ : ""; }
+      set {
+        order_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        orderCase_ = OrderOneofCase.OrderByDataItem;
+      }
+    }
+
+    /// <summary>Field number for the "order_by_annotation" field.</summary>
+    public const int OrderByAnnotationFieldNumber = 13;
+    /// <summary>
+    /// Expression that allows ranking results based on annotation's property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation OrderByAnnotation {
+      get { return orderCase_ == OrderOneofCase.OrderByAnnotation ? (global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation) order_ : null; }
+      set {
+        order_ = value;
+        orderCase_ = value == null ? OrderOneofCase.None : OrderOneofCase.OrderByAnnotation;
+      }
+    }
+
+    /// <summary>Field number for the "dataset" field.</summary>
+    public const int DatasetFieldNumber = 1;
+    private string dataset_ = "";
+    /// <summary>
+    /// Required. The resource name of the Dataset from which to search DataItems.
+    /// Format:
+    /// `projects/{project}/locations/{location}/datasets/{dataset}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Dataset {
+      get { return dataset_; }
+      set {
+        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "saved_query" field.</summary>
+    public const int SavedQueryFieldNumber = 2;
+    private string savedQuery_ = "";
+    /// <summary>
+    /// The resource name of a SavedQuery(annotation set in UI).
+    /// Format:
+    /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+    /// All of the search will be done in the context of this SavedQuery.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SavedQuery {
+      get { return savedQuery_; }
+      set {
+        savedQuery_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_labeling_job" field.</summary>
+    public const int DataLabelingJobFieldNumber = 3;
+    private string dataLabelingJob_ = "";
+    /// <summary>
+    /// The resource name of a DataLabelingJob.
+    /// Format:
+    /// `projects/{project}/locations/{location}/dataLabelingJobs/{data_labeling_job}`
+    /// If this field is set, all of the search will be done in the context of
+    /// this DataLabelingJob.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataLabelingJob {
+      get { return dataLabelingJob_; }
+      set {
+        dataLabelingJob_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_item_filter" field.</summary>
+    public const int DataItemFilterFieldNumber = 4;
+    private string dataItemFilter_ = "";
+    /// <summary>
+    /// An expression for filtering the DataItem that will be returned.
+    ///
+    ///   * `data_item_id` - for = or !=.
+    ///   * `labeled` - for = or !=.
+    ///   * `has_annotation(ANNOTATION_SPEC_ID)` - true only for DataItem that
+    ///     have at least one annotation with annotation_spec_id =
+    ///     `ANNOTATION_SPEC_ID` in the context of SavedQuery or DataLabelingJob.
+    ///
+    /// For example:
+    ///
+    /// * `data_item=1`
+    /// * `has_annotation(5)`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataItemFilter {
+      get { return dataItemFilter_; }
+      set {
+        dataItemFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "annotations_filter" field.</summary>
+    public const int AnnotationsFilterFieldNumber = 5;
+    private string annotationsFilter_ = "";
+    /// <summary>
+    /// An expression for filtering the Annotations that will be returned per
+    /// DataItem.
+    ///   * `annotation_spec_id` - for = or !=.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AnnotationsFilter {
+      get { return annotationsFilter_; }
+      set {
+        annotationsFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "annotation_filters" field.</summary>
+    public const int AnnotationFiltersFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_annotationFilters_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> annotationFilters_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// An expression that specifies what Annotations will be returned per
+    /// DataItem. Annotations satisfied either of the conditions will be returned.
+    ///   * `annotation_spec_id` - for = or !=.
+    /// Must specify `saved_query_id=` - saved query id that annotations should
+    /// belong to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AnnotationFilters {
+      get { return annotationFilters_; }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Mask specifying which fields of [DataItemView][google.cloud.aiplatform.v1.DataItemView] to read.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "annotations_limit" field.</summary>
+    public const int AnnotationsLimitFieldNumber = 7;
+    private int annotationsLimit_;
+    /// <summary>
+    /// If set, only up to this many of Annotations will be returned per
+    /// DataItemView. The maximum value is 1000. If not set, the maximum value will
+    /// be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AnnotationsLimit {
+      get { return annotationsLimit_; }
+      set {
+        annotationsLimit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 8;
+    private int pageSize_;
+    /// <summary>
+    /// Requested page size. Server may return fewer results than requested.
+    /// Default and maximum page size is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 9;
+    private string orderBy_ = "";
+    /// <summary>
+    /// A comma-separated list of fields to order by, sorted in ascending order.
+    /// Use "desc" after a field name for descending.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 10;
+    private string pageToken_ = "";
+    /// <summary>
+    /// A token identifying a page of results for the server to return
+    /// Typically obtained via
+    /// [SearchDataItemsResponse.next_page_token][google.cloud.aiplatform.v1.SearchDataItemsResponse.next_page_token] of the previous
+    /// [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems] call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object order_;
+    /// <summary>Enum of possible cases for the "order" oneof.</summary>
+    public enum OrderOneofCase {
+      None = 0,
+      OrderByDataItem = 12,
+      OrderByAnnotation = 13,
+    }
+    private OrderOneofCase orderCase_ = OrderOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OrderOneofCase OrderCase {
+      get { return orderCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrder() {
+      orderCase_ = OrderOneofCase.None;
+      order_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchDataItemsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchDataItemsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OrderByDataItem != other.OrderByDataItem) return false;
+      if (!object.Equals(OrderByAnnotation, other.OrderByAnnotation)) return false;
+      if (Dataset != other.Dataset) return false;
+      if (SavedQuery != other.SavedQuery) return false;
+      if (DataLabelingJob != other.DataLabelingJob) return false;
+      if (DataItemFilter != other.DataItemFilter) return false;
+      if (AnnotationsFilter != other.AnnotationsFilter) return false;
+      if(!annotationFilters_.Equals(other.annotationFilters_)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (AnnotationsLimit != other.AnnotationsLimit) return false;
+      if (PageSize != other.PageSize) return false;
+      if (OrderBy != other.OrderBy) return false;
+      if (PageToken != other.PageToken) return false;
+      if (OrderCase != other.OrderCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (orderCase_ == OrderOneofCase.OrderByDataItem) hash ^= OrderByDataItem.GetHashCode();
+      if (orderCase_ == OrderOneofCase.OrderByAnnotation) hash ^= OrderByAnnotation.GetHashCode();
+      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+      if (SavedQuery.Length != 0) hash ^= SavedQuery.GetHashCode();
+      if (DataLabelingJob.Length != 0) hash ^= DataLabelingJob.GetHashCode();
+      if (DataItemFilter.Length != 0) hash ^= DataItemFilter.GetHashCode();
+      if (AnnotationsFilter.Length != 0) hash ^= AnnotationsFilter.GetHashCode();
+      hash ^= annotationFilters_.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (AnnotationsLimit != 0) hash ^= AnnotationsLimit.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      hash ^= (int) orderCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (SavedQuery.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SavedQuery);
+      }
+      if (DataLabelingJob.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataLabelingJob);
+      }
+      if (DataItemFilter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DataItemFilter);
+      }
+      if (AnnotationsFilter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AnnotationsFilter);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FieldMask);
+      }
+      if (AnnotationsLimit != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(AnnotationsLimit);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(OrderBy);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(PageToken);
+      }
+      annotationFilters_.WriteTo(output, _repeated_annotationFilters_codec);
+      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+        output.WriteRawTag(98);
+        output.WriteString(OrderByDataItem);
+      }
+      if (orderCase_ == OrderOneofCase.OrderByAnnotation) {
+        output.WriteRawTag(106);
+        output.WriteMessage(OrderByAnnotation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (SavedQuery.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SavedQuery);
+      }
+      if (DataLabelingJob.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataLabelingJob);
+      }
+      if (DataItemFilter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DataItemFilter);
+      }
+      if (AnnotationsFilter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AnnotationsFilter);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FieldMask);
+      }
+      if (AnnotationsLimit != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(AnnotationsLimit);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(OrderBy);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(PageToken);
+      }
+      annotationFilters_.WriteTo(ref output, _repeated_annotationFilters_codec);
+      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+        output.WriteRawTag(98);
+        output.WriteString(OrderByDataItem);
+      }
+      if (orderCase_ == OrderOneofCase.OrderByAnnotation) {
+        output.WriteRawTag(106);
+        output.WriteMessage(OrderByAnnotation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderByDataItem);
+      }
+      if (orderCase_ == OrderOneofCase.OrderByAnnotation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderByAnnotation);
+      }
+      if (Dataset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      }
+      if (SavedQuery.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SavedQuery);
+      }
+      if (DataLabelingJob.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataLabelingJob);
+      }
+      if (DataItemFilter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataItemFilter);
+      }
+      if (AnnotationsFilter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AnnotationsFilter);
+      }
+      size += annotationFilters_.CalculateSize(_repeated_annotationFilters_codec);
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (AnnotationsLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AnnotationsLimit);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchDataItemsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Dataset.Length != 0) {
+        Dataset = other.Dataset;
+      }
+      if (other.SavedQuery.Length != 0) {
+        SavedQuery = other.SavedQuery;
+      }
+      if (other.DataLabelingJob.Length != 0) {
+        DataLabelingJob = other.DataLabelingJob;
+      }
+      if (other.DataItemFilter.Length != 0) {
+        DataItemFilter = other.DataItemFilter;
+      }
+      if (other.AnnotationsFilter.Length != 0) {
+        AnnotationsFilter = other.AnnotationsFilter;
+      }
+      annotationFilters_.Add(other.annotationFilters_);
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.AnnotationsLimit != 0) {
+        AnnotationsLimit = other.AnnotationsLimit;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      switch (other.OrderCase) {
+        case OrderOneofCase.OrderByDataItem:
+          OrderByDataItem = other.OrderByDataItem;
+          break;
+        case OrderOneofCase.OrderByAnnotation:
+          if (OrderByAnnotation == null) {
+            OrderByAnnotation = new global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation();
+          }
+          OrderByAnnotation.MergeFrom(other.OrderByAnnotation);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 18: {
+            SavedQuery = input.ReadString();
+            break;
+          }
+          case 26: {
+            DataLabelingJob = input.ReadString();
+            break;
+          }
+          case 34: {
+            DataItemFilter = input.ReadString();
+            break;
+          }
+          case 42: {
+            AnnotationsFilter = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 56: {
+            AnnotationsLimit = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 82: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 90: {
+            annotationFilters_.AddEntriesFrom(input, _repeated_annotationFilters_codec);
+            break;
+          }
+          case 98: {
+            OrderByDataItem = input.ReadString();
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation subBuilder = new global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation();
+            if (orderCase_ == OrderOneofCase.OrderByAnnotation) {
+              subBuilder.MergeFrom(OrderByAnnotation);
+            }
+            input.ReadMessage(subBuilder);
+            OrderByAnnotation = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 18: {
+            SavedQuery = input.ReadString();
+            break;
+          }
+          case 26: {
+            DataLabelingJob = input.ReadString();
+            break;
+          }
+          case 34: {
+            DataItemFilter = input.ReadString();
+            break;
+          }
+          case 42: {
+            AnnotationsFilter = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 56: {
+            AnnotationsLimit = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 82: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 90: {
+            annotationFilters_.AddEntriesFrom(ref input, _repeated_annotationFilters_codec);
+            break;
+          }
+          case 98: {
+            OrderByDataItem = input.ReadString();
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation subBuilder = new global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Types.OrderByAnnotation();
+            if (orderCase_ == OrderOneofCase.OrderByAnnotation) {
+              subBuilder.MergeFrom(OrderByAnnotation);
+            }
+            input.ReadMessage(subBuilder);
+            OrderByAnnotation = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SearchDataItemsRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Expression that allows ranking results based on annotation's property.
+      /// </summary>
+      public sealed partial class OrderByAnnotation : pb::IMessage<OrderByAnnotation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OrderByAnnotation> _parser = new pb::MessageParser<OrderByAnnotation>(() => new OrderByAnnotation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OrderByAnnotation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.SearchDataItemsRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrderByAnnotation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrderByAnnotation(OrderByAnnotation other) : this() {
+          savedQuery_ = other.savedQuery_;
+          orderBy_ = other.orderBy_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrderByAnnotation Clone() {
+          return new OrderByAnnotation(this);
+        }
+
+        /// <summary>Field number for the "saved_query" field.</summary>
+        public const int SavedQueryFieldNumber = 1;
+        private string savedQuery_ = "";
+        /// <summary>
+        /// Required. Saved query of the Annotation. Only Annotations belong to this saved
+        /// query will be considered for ordering.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SavedQuery {
+          get { return savedQuery_; }
+          set {
+            savedQuery_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "order_by" field.</summary>
+        public const int OrderByFieldNumber = 2;
+        private string orderBy_ = "";
+        /// <summary>
+        /// A comma-separated list of annotation fields to order by, sorted in
+        /// ascending order. Use "desc" after a field name for descending. Must also
+        /// specify saved_query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OrderBy {
+          get { return orderBy_; }
+          set {
+            orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OrderByAnnotation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OrderByAnnotation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SavedQuery != other.SavedQuery) return false;
+          if (OrderBy != other.OrderBy) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SavedQuery.Length != 0) hash ^= SavedQuery.GetHashCode();
+          if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SavedQuery.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SavedQuery);
+          }
+          if (OrderBy.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OrderBy);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SavedQuery.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SavedQuery);
+          }
+          if (OrderBy.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OrderBy);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SavedQuery.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SavedQuery);
+          }
+          if (OrderBy.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OrderByAnnotation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SavedQuery.Length != 0) {
+            SavedQuery = other.SavedQuery;
+          }
+          if (other.OrderBy.Length != 0) {
+            OrderBy = other.OrderBy;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SavedQuery = input.ReadString();
+                break;
+              }
+              case 18: {
+                OrderBy = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SavedQuery = input.ReadString();
+                break;
+              }
+              case 18: {
+                OrderBy = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response message for [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
+  /// </summary>
+  public sealed partial class SearchDataItemsResponse : pb::IMessage<SearchDataItemsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchDataItemsResponse> _parser = new pb::MessageParser<SearchDataItemsResponse>(() => new SearchDataItemsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchDataItemsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsResponse(SearchDataItemsResponse other) : this() {
+      dataItemViews_ = other.dataItemViews_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchDataItemsResponse Clone() {
+      return new SearchDataItemsResponse(this);
+    }
+
+    /// <summary>Field number for the "data_item_views" field.</summary>
+    public const int DataItemViewsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.DataItemView> _repeated_dataItemViews_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.DataItemView.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DataItemView> dataItemViews_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DataItemView>();
+    /// <summary>
+    /// The DataItemViews read.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DataItemView> DataItemViews {
+      get { return dataItemViews_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token to retrieve next page of results.
+    /// Pass to [SearchDataItemsRequest.page_token][google.cloud.aiplatform.v1.SearchDataItemsRequest.page_token] to obtain that page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchDataItemsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchDataItemsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!dataItemViews_.Equals(other.dataItemViews_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= dataItemViews_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      dataItemViews_.WriteTo(output, _repeated_dataItemViews_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dataItemViews_.WriteTo(ref output, _repeated_dataItemViews_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += dataItemViews_.CalculateSize(_repeated_dataItemViews_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchDataItemsResponse other) {
+      if (other == null) {
+        return;
+      }
+      dataItemViews_.Add(other.dataItemViews_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            dataItemViews_.AddEntriesFrom(input, _repeated_dataItemViews_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dataItemViews_.AddEntriesFrom(ref input, _repeated_dataItemViews_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A container for a single DataItem and Annotations on it.
+  /// </summary>
+  public sealed partial class DataItemView : pb::IMessage<DataItemView>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataItemView> _parser = new pb::MessageParser<DataItemView>(() => new DataItemView());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DataItemView> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataItemView() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataItemView(DataItemView other) : this() {
+      dataItem_ = other.dataItem_ != null ? other.dataItem_.Clone() : null;
+      annotations_ = other.annotations_.Clone();
+      hasTruncatedAnnotations_ = other.hasTruncatedAnnotations_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataItemView Clone() {
+      return new DataItemView(this);
+    }
+
+    /// <summary>Field number for the "data_item" field.</summary>
+    public const int DataItemFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.DataItem dataItem_;
+    /// <summary>
+    /// The DataItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.DataItem DataItem {
+      get { return dataItem_; }
+      set {
+        dataItem_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Annotation> _repeated_annotations_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.Annotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Annotation> annotations_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Annotation>();
+    /// <summary>
+    /// The Annotations on the DataItem. If too many Annotations should be returned
+    /// for the DataItem, this field will be truncated per annotations_limit in
+    /// request. If it was, then the has_truncated_annotations will be set to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Annotation> Annotations {
+      get { return annotations_; }
+    }
+
+    /// <summary>Field number for the "has_truncated_annotations" field.</summary>
+    public const int HasTruncatedAnnotationsFieldNumber = 3;
+    private bool hasTruncatedAnnotations_;
+    /// <summary>
+    /// True if and only if the Annotations field has been truncated. It happens if
+    /// more Annotations for this DataItem met the request's annotation_filter than
+    /// are allowed to be returned by annotations_limit.
+    /// Note that if Annotations field is not being returned due to field mask,
+    /// then this field will not be set to true no matter how many Annotations are
+    /// there.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTruncatedAnnotations {
+      get { return hasTruncatedAnnotations_; }
+      set {
+        hasTruncatedAnnotations_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DataItemView);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DataItemView other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DataItem, other.DataItem)) return false;
+      if(!annotations_.Equals(other.annotations_)) return false;
+      if (HasTruncatedAnnotations != other.HasTruncatedAnnotations) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (dataItem_ != null) hash ^= DataItem.GetHashCode();
+      hash ^= annotations_.GetHashCode();
+      if (HasTruncatedAnnotations != false) hash ^= HasTruncatedAnnotations.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (dataItem_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataItem);
+      }
+      annotations_.WriteTo(output, _repeated_annotations_codec);
+      if (HasTruncatedAnnotations != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(HasTruncatedAnnotations);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dataItem_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataItem);
+      }
+      annotations_.WriteTo(ref output, _repeated_annotations_codec);
+      if (HasTruncatedAnnotations != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(HasTruncatedAnnotations);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (dataItem_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataItem);
+      }
+      size += annotations_.CalculateSize(_repeated_annotations_codec);
+      if (HasTruncatedAnnotations != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DataItemView other) {
+      if (other == null) {
+        return;
+      }
+      if (other.dataItem_ != null) {
+        if (dataItem_ == null) {
+          DataItem = new global::Google.Cloud.AIPlatform.V1.DataItem();
+        }
+        DataItem.MergeFrom(other.DataItem);
+      }
+      annotations_.Add(other.annotations_);
+      if (other.HasTruncatedAnnotations != false) {
+        HasTruncatedAnnotations = other.HasTruncatedAnnotations;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (dataItem_ == null) {
+              DataItem = new global::Google.Cloud.AIPlatform.V1.DataItem();
+            }
+            input.ReadMessage(DataItem);
+            break;
+          }
+          case 18: {
+            annotations_.AddEntriesFrom(input, _repeated_annotations_codec);
+            break;
+          }
+          case 24: {
+            HasTruncatedAnnotations = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dataItem_ == null) {
+              DataItem = new global::Google.Cloud.AIPlatform.V1.DataItem();
+            }
+            input.ReadMessage(DataItem);
+            break;
+          }
+          case 18: {
+            annotations_.AddEntriesFrom(ref input, _repeated_annotations_codec);
+            break;
+          }
+          case 24: {
+            HasTruncatedAnnotations = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for [DatasetService.ListSavedQueries][google.cloud.aiplatform.v1.DatasetService.ListSavedQueries].
   /// </summary>
   public sealed partial class ListSavedQueriesRequest : pb::IMessage<ListSavedQueriesRequest>
@@ -3887,7 +5421,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4294,7 +5828,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4518,7 +6052,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4764,7 +6298,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5171,7 +6705,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.AIPlatform.V1.DatasetServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

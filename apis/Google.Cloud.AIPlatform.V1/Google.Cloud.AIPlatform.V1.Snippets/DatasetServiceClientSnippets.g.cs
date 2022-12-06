@@ -1513,6 +1513,114 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SearchDataItems</summary>
+        public void SearchDataItemsRequestObject()
+        {
+            // Snippet: SearchDataItems(SearchDataItemsRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            SearchDataItemsRequest request = new SearchDataItemsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                DataLabelingJob = "",
+                DataItemFilter = "",
+                FieldMask = new FieldMask(),
+                AnnotationsLimit = 0,
+                AnnotationFilters = { "", },
+                OrderByDataItem = "",
+            };
+            // Make the request
+            PagedEnumerable<SearchDataItemsResponse, DataItemView> response = datasetServiceClient.SearchDataItems(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataItemView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchDataItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataItemView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataItemView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataItemView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchDataItemsAsync</summary>
+        public async Task SearchDataItemsRequestObjectAsync()
+        {
+            // Snippet: SearchDataItemsAsync(SearchDataItemsRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchDataItemsRequest request = new SearchDataItemsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                DataLabelingJob = "",
+                DataItemFilter = "",
+                FieldMask = new FieldMask(),
+                AnnotationsLimit = 0,
+                AnnotationFilters = { "", },
+                OrderByDataItem = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchDataItemsResponse, DataItemView> response = datasetServiceClient.SearchDataItemsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataItemView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchDataItemsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataItemView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataItemView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataItemView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSavedQueries</summary>
         public void ListSavedQueriesRequestObject()
         {

@@ -62,6 +62,7 @@ namespace Google.Cloud.AIPlatform.V1
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
             ListDataItemsSettings = existing.ListDataItemsSettings;
+            SearchDataItemsSettings = existing.SearchDataItemsSettings;
             ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
             GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
@@ -239,6 +240,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDataItemsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.SearchDataItems</c> and <c>DatasetServiceClient.SearchDataItemsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchDataItemsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1525,6 +1538,24 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
+        /// Searches DataItems in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataItemView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchDataItemsResponse, DataItemView> SearchDataItems(SearchDataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches DataItems in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataItemView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchDataItemsResponse, DataItemView> SearchDataItemsAsync(SearchDataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Lists SavedQueries in a Dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1909,6 +1940,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> _callListDataItems;
 
+        private readonly gaxgrpc::ApiCall<SearchDataItemsRequest, SearchDataItemsResponse> _callSearchDataItems;
+
         private readonly gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> _callListSavedQueries;
 
         private readonly gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> _callGetAnnotationSpec;
@@ -1956,6 +1989,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>("ListDataItems", grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataItems);
             Modify_ListDataItemsApiCall(ref _callListDataItems);
+            _callSearchDataItems = clientHelper.BuildApiCall<SearchDataItemsRequest, SearchDataItemsResponse>("SearchDataItems", grpcClient.SearchDataItemsAsync, grpcClient.SearchDataItems, effectiveSettings.SearchDataItemsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callSearchDataItems);
+            Modify_SearchDataItemsApiCall(ref _callSearchDataItems);
             _callListSavedQueries = clientHelper.BuildApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse>("ListSavedQueries", grpcClient.ListSavedQueriesAsync, grpcClient.ListSavedQueries, effectiveSettings.ListSavedQueriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSavedQueries);
             Modify_ListSavedQueriesApiCall(ref _callListSavedQueries);
@@ -1985,6 +2021,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataApiCall(ref gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> call);
 
         partial void Modify_ListDataItemsApiCall(ref gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> call);
+
+        partial void Modify_SearchDataItemsApiCall(ref gaxgrpc::ApiCall<SearchDataItemsRequest, SearchDataItemsResponse> call);
 
         partial void Modify_ListSavedQueriesApiCall(ref gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> call);
 
@@ -2018,6 +2056,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataItemsRequest(ref ListDataItemsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchDataItemsRequest(ref SearchDataItemsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSavedQueriesRequest(ref ListSavedQueriesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2230,6 +2270,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Searches DataItems in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataItemView"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchDataItemsResponse, DataItemView> SearchDataItems(SearchDataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchDataItemsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchDataItemsRequest, SearchDataItemsResponse, DataItemView>(_callSearchDataItems, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches DataItems in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataItemView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchDataItemsResponse, DataItemView> SearchDataItemsAsync(SearchDataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchDataItemsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchDataItemsRequest, SearchDataItemsResponse, DataItemView>(_callSearchDataItems, request, callSettings);
+        }
+
+        /// <summary>
         /// Lists SavedQueries in a Dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2310,6 +2374,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class SearchDataItemsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSavedQueriesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2330,6 +2398,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DataItem> GetEnumerator() => DataItems.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchDataItemsResponse : gaxgrpc::IPageResponse<DataItemView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DataItemView> GetEnumerator() => DataItemViews.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

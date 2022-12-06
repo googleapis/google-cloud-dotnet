@@ -70,6 +70,12 @@
                 "ListSavedQueriesAsync"
               ]
             },
+            "SearchDataItems": {
+              "methods": [
+                "SearchDataItems",
+                "SearchDataItemsAsync"
+              ]
+            },
             "UpdateDataset": {
               "methods": [
                 "UpdateDataset",

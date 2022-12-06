@@ -1752,6 +1752,83 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_DatasetService_SearchDataItems_sync",
+      "title": "SearchDataItemsRequestObject",
+      "description": "Snippet for SearchDataItems",
+      "file": "DatasetServiceClient.SearchDataItemsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDataItems",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.SearchDataItems",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.SearchDataItemsResponse, Google.Cloud.AIPlatform.V1.DataItemView>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDataItems",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.SearchDataItems",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_SearchDataItems_async",
+      "title": "SearchDataItemsRequestObjectAsync",
+      "description": "Snippet for SearchDataItemsAsync",
+      "file": "DatasetServiceClient.SearchDataItemsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDataItemsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.SearchDataItemsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.SearchDataItemsResponse, Google.Cloud.AIPlatform.V1.DataItemView>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDataItems",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.SearchDataItems",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 87,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 85,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_sync",
       "title": "ListSavedQueriesRequestObject",
       "description": "Snippet for ListSavedQueries",
