@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -31,6 +32,8 @@ namespace Google.Cloud.TextToSpeech.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudTtsReflection.Descriptor;
+            yield return CloudTtsLrsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }
