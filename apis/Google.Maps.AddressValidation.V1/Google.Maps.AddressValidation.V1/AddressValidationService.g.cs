@@ -731,7 +731,8 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int ResponseIdFieldNumber = 2;
     private string responseId_ = "";
     /// <summary>
-    /// Required. The ID of the response that this feedback is for. This should be the
+    /// Required. The ID of the response that this feedback is for. This should be
+    /// the
     /// [response_id][google.maps.addressvalidation.v1.ValidateAddressRequest.response_id]
     /// from the first response in a series of address validation attempts.
     /// </summary>
@@ -1997,7 +1998,7 @@ namespace Google.Maps.AddressValidation.V1 {
         [pbr::OriginalName("PREMISE")] Premise = 2,
         /// <summary>
         /// A geocode that should be very close to the building-level location of
-        /// the address. Only used for geocodes and not for addresses.
+        /// the address.
         /// </summary>
         [pbr::OriginalName("PREMISE_PROXIMITY")] PremiseProximity = 3,
         /// <summary>
