@@ -56,4 +56,6 @@ public class RetryConformanceTestFixture : ICollectionFixture<RetryConformanceTe
         string value = Environment.GetEnvironmentVariable(name);
         return string.IsNullOrEmpty(value) ? defaultValue : value;
     }
+
+    public void SleepAfterBucketCreate() => Thread.Sleep(2000);
 }

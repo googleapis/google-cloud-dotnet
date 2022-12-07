@@ -38,7 +38,7 @@ public class RetryConformanceTest
     public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
 
     private readonly RetryConformanceTestFixture _fixture;
-    private readonly string retryIdPrefix = IdGenerator.FromDateTime(prefix: "test-id-", suffix: "-");
+    private readonly string retryIdPrefix = IdGenerator.FromGuid(prefix: "test-id-", suffix: "-", maxLength: 20);
 
     public RetryConformanceTest(RetryConformanceTestFixture fixture) =>
         _fixture = fixture;
@@ -62,7 +62,7 @@ public class RetryConformanceTest
                 if (ShouldRunMethod(method.Name))
                 {
                     await RunTestCaseAsync(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
-                }                
+                }
             }
         }
 
@@ -99,6 +99,7 @@ public class RetryConformanceTest
                 RunRetryTest(response, context, method.Group, specifyPreconditions);
 
                 // storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
+                // Created an issue https://github.com/googleapis/google-cloud-dotnet/issues/9362 for this.
                 if (!method.Name.Contains("buckets.setIamPolicy"))
                 {
                     Assert.False(response.Completed);
@@ -108,14 +109,11 @@ public class RetryConformanceTest
             {
                 // The instructions specified that the given status code would be returned.
                 // We just need to check that we weren't expecting this specific call to succeed.
-                Assert.False(expectSuccess);
             }
         }
 
-        bool InstructionContainsErrorCode(HttpStatusCode statusCode) =>
-            (instructionList.Instructions.Contains("return-503") && statusCode == HttpStatusCode.ServiceUnavailable)
-            || (instructionList.Instructions.Contains("return-400") && statusCode == HttpStatusCode.BadRequest)
-            || (instructionList.Instructions.Contains("return-401") && statusCode == HttpStatusCode.Unauthorized);
+        bool InstructionContainsErrorCode(HttpStatusCode statusCode)
+            => instructionList.Instructions.Contains($"return-{(int) statusCode}");
     }
 
     /// <summary>
@@ -142,6 +140,7 @@ public class RetryConformanceTest
         var result = ExecuteRpc(rpc, context, specifyPreconditions);
 
         // For list methods, we need to fetch a page in order to actually perform requests.
+        // Dont need to do this for notifications as those are getting consumed immidiately
         if (rpc.Contains("list") && !rpc.Contains("notification"))
         {
             ConsumeListOutput((dynamic) result);
@@ -275,7 +274,7 @@ public class RetryConformanceTest
         string CreateBucket(string bucketName)
         {
             Client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName });
-            SleepAfterBucketCreate();
+            _fixture.SleepAfterBucketCreate();
             return bucketName;
         }
 
@@ -345,6 +344,4 @@ public class RetryConformanceTest
 
         return new StringContent(body.ToString(), Encoding.UTF8, "application/json");
     }
-
-    private static void SleepAfterBucketCreate() => Thread.Sleep(2000);
 }
