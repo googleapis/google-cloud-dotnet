@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1;
@@ -24,10 +25,10 @@ public class RetryConditions
     /// <summary>
     /// 
     /// </summary>
-    public IList<int> ErrorCodes { get; }
+    public Func<int,bool> RetryPredicate { get; }
 
     /// <summary>
     /// 
     /// </summary>
-    public RetryConditions(IList<int> errorCodes) => ErrorCodes = errorCodes;
+    public RetryConditions(Func<int, bool> retryPredicate) => RetryPredicate = retryPredicate;
 }
