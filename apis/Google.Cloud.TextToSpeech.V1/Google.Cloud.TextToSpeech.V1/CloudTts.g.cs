@@ -130,7 +130,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// </summary>
   public enum AudioEncoding {
     /// <summary>
-    /// Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][].
+    /// Not specified. Will return result
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [pbr::OriginalName("AUDIO_ENCODING_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -1161,8 +1162,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// <summary>
   /// Contains text input to be synthesized. Either `text` or `ssml` must be
   /// supplied. Supplying both or neither returns
-  /// [google.rpc.Code.INVALID_ARGUMENT][]. The input size is limited to 5000
-  /// characters.
+  /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. The
+  /// input size is limited to 5000 bytes.
   /// </summary>
   public sealed partial class SynthesisInput : pb::IMessage<SynthesisInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1236,7 +1237,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// <summary>
     /// The SSML document to be synthesized. The SSML document must be valid
     /// and well-formed. Otherwise the RPC will fail and return
-    /// [google.rpc.Code.INVALID_ARGUMENT][]. For more information, see
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. For
+    /// more information, see
     /// [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1486,9 +1488,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// Required. The language (and potentially also the region) of the voice expressed as a
-    /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag, e.g.
-    /// "en-US". This should not include a script tag (e.g. use
+    /// Required. The language (and potentially also the region) of the voice
+    /// expressed as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+    /// language tag, e.g. "en-US". This should not include a script tag (e.g. use
     /// "cmn-cn" rather than "cmn-Hant-cn"), because the script will be inferred
     /// from the input provided in the SynthesisInput.  The TTS service
     /// will use this parameter to help choose an appropriate voice.  Note that
@@ -1907,7 +1909,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// converting to the desired sample rate (which might result in worse audio
     /// quality), unless the specified sample rate is not supported for the
     /// encoding chosen, in which case it will fail the request and return
-    /// [google.rpc.Code.INVALID_ARGUMENT][].
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
