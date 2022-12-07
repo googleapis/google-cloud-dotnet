@@ -57,5 +57,5 @@ public class RetryConformanceTestFixture : ICollectionFixture<RetryConformanceTe
         return string.IsNullOrEmpty(value) ? defaultValue : value;
     }
 
-    internal static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
+    public void SleepAfterBucketCreate() => Thread.Sleep(2000);
 }
