@@ -1034,6 +1034,24 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class DeleteNetworkAttachmentRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertNetworkAttachmentRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteNetworkEdgeSecurityServiceRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)

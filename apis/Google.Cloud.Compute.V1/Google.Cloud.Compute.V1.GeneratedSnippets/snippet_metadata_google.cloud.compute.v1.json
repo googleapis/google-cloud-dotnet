@@ -33022,12 +33022,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -33061,12 +33061,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -33174,12 +33174,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -33213,12 +33213,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -39526,6 +39526,1222 @@
         {
           "start": 38,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_AggregatedList_sync",
+      "title": "AggregatedListRequestObject",
+      "description": "Snippet for AggregatedList",
+      "file": "NetworkAttachmentsClient.AggregatedListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.NetworkAttachmentsScopedList>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.AggregatedList",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_AggregatedList_async",
+      "title": "AggregatedListRequestObjectAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "NetworkAttachmentsClient.AggregatedListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.NetworkAttachmentsScopedList>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.AggregatedList",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_AggregatedList_sync_flattened",
+      "title": "AggregatedList",
+      "description": "Snippet for AggregatedList",
+      "file": "NetworkAttachmentsClient.AggregatedListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedList",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.AggregatedList",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.NetworkAttachmentsScopedList>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.AggregatedList",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_AggregatedList_async_flattened",
+      "title": "AggregatedListAsync",
+      "description": "Snippet for AggregatedListAsync",
+      "file": "NetworkAttachmentsClient.AggregatedListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregatedListAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.AggregatedListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentAggregatedList, System.Collections.Generic.KeyValuePair<System.String, Google.Cloud.Compute.V1.NetworkAttachmentsScopedList>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "AggregatedList",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.AggregatedList",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Delete_sync",
+      "title": "DeleteRequestObject",
+      "description": "Snippet for Delete",
+      "file": "NetworkAttachmentsClient.DeleteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Delete",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Delete_async",
+      "title": "DeleteRequestObjectAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "NetworkAttachmentsClient.DeleteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Delete",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Delete_sync_flattened",
+      "title": "Delete",
+      "description": "Snippet for Delete",
+      "file": "NetworkAttachmentsClient.DeleteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Delete",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Delete",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Delete",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Delete_async_flattened",
+      "title": "DeleteAsync",
+      "description": "Snippet for DeleteAsync",
+      "file": "NetworkAttachmentsClient.DeleteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.DeleteAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Delete",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Delete",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "NetworkAttachmentsClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.NetworkAttachment",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Get",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "NetworkAttachmentsClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Get",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "NetworkAttachmentsClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Get",
+        "resultType": "Google.Cloud.Compute.V1.NetworkAttachment",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Get",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "NetworkAttachmentsClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Get",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "NetworkAttachmentsClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.GetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "NetworkAttachmentsClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.GetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "NetworkAttachmentsClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.GetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "NetworkAttachmentsClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.GetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Insert_sync",
+      "title": "InsertRequestObject",
+      "description": "Snippet for Insert",
+      "file": "NetworkAttachmentsClient.InsertRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Insert",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Insert_async",
+      "title": "InsertRequestObjectAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "NetworkAttachmentsClient.InsertRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Insert",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Insert_sync_flattened",
+      "title": "Insert",
+      "description": "Snippet for Insert",
+      "file": "NetworkAttachmentsClient.InsertSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Insert",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.Insert",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Insert",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_Insert_async_flattened",
+      "title": "InsertAsync",
+      "description": "Snippet for InsertAsync",
+      "file": "NetworkAttachmentsClient.InsertAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.InsertAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "Insert",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.Insert",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "NetworkAttachmentsClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentList, Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.List",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "NetworkAttachmentsClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentList, Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.List",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "NetworkAttachmentsClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.List",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentList, Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.List",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "NetworkAttachmentsClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.ListAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.NetworkAttachmentList, Google.Cloud.Compute.V1.NetworkAttachment>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.List",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "NetworkAttachmentsClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.SetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "NetworkAttachmentsClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.SetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "NetworkAttachmentsClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.SetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "NetworkAttachmentsClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.SetIamPolicy",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "NetworkAttachmentsClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.TestIamPermissions",
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.TestIamPermissions",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "NetworkAttachmentsClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.TestIamPermissionsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.TestIamPermissions",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_TestIamPermissions_sync_flattened",
+      "title": "TestIamPermissions",
+      "description": "Snippet for TestIamPermissions",
+      "file": "NetworkAttachmentsClient.TestIamPermissionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.TestIamPermissions",
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.TestIamPermissions",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_NetworkAttachments_TestIamPermissions_async_flattened",
+      "title": "TestIamPermissionsAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "NetworkAttachmentsClient.TestIamPermissionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient.TestIamPermissionsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "NetworkAttachmentsClient",
+          "fullName": "Google.Cloud.Compute.V1.NetworkAttachmentsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.NetworkAttachments.TestIamPermissions",
+          "service": {
+            "shortName": "NetworkAttachments",
+            "fullName": "google.cloud.compute.v1.NetworkAttachments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
