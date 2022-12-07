@@ -556,6 +556,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::NetworkAttachmentsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNetworkAttachmentsClient(this IServiceCollection services, sys::Action<gccv::NetworkAttachmentsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::NetworkAttachmentsClientBuilder builder = new gccv::NetworkAttachmentsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::NetworkEdgeSecurityServicesClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

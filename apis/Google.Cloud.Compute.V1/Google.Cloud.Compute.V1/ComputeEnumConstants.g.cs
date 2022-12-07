@@ -2309,6 +2309,36 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics"/> message.</summary>
+        public static class InterconnectDiagnostics
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleAggregationType"/> enum.</summary>
+            public static class BundleAggregationType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleAggregationType.UndefinedBundleAggregationType"/>.</summary>
+                public const string UndefinedBundleAggregationType = "UNDEFINED_BUNDLE_AGGREGATION_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleAggregationType.Lacp"/>.</summary>
+                public const string Lacp = "BUNDLE_AGGREGATION_TYPE_LACP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleAggregationType.Static"/>.</summary>
+                public const string Static = "BUNDLE_AGGREGATION_TYPE_STATIC";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleOperationalStatus"/> enum.</summary>
+            public static class BundleOperationalStatus
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleOperationalStatus.UndefinedBundleOperationalStatus"/>.</summary>
+                public const string UndefinedBundleOperationalStatus = "UNDEFINED_BUNDLE_OPERATIONAL_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleOperationalStatus.Down"/>.</summary>
+                public const string Down = "BUNDLE_OPERATIONAL_STATUS_DOWN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics.Types.BundleOperationalStatus.Up"/>.</summary>
+                public const string Up = "BUNDLE_OPERATIONAL_STATUS_UP";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkLACPStatus"/> message.</summary>
         public static class InterconnectDiagnosticsLinkLACPStatus
         {
@@ -2349,6 +2379,23 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkOpticalPower.Types.State.Ok"/>.</summary>
                 public const string Ok = "OK";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkStatus"/> message.</summary>
+        public static class InterconnectDiagnosticsLinkStatus
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkStatus.Types.OperationalStatus"/> enum.</summary>
+            public static class OperationalStatus
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkStatus.Types.OperationalStatus.UndefinedOperationalStatus"/>.</summary>
+                public const string UndefinedOperationalStatus = "UNDEFINED_OPERATIONAL_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkStatus.Types.OperationalStatus.LinkOperationalStatusDown"/>.</summary>
+                public const string LinkOperationalStatusDown = "LINK_OPERATIONAL_STATUS_DOWN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnosticsLinkStatus.Types.OperationalStatus.LinkOperationalStatusUp"/>.</summary>
+                public const string LinkOperationalStatusUp = "LINK_OPERATIONAL_STATUS_UP";
             }
         }
 
@@ -2774,6 +2821,55 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Network.Types.NetworkFirewallPolicyEnforcementOrder.BeforeClassicFirewall"/>.</summary>
                 public const string BeforeClassicFirewall = "BEFORE_CLASSIC_FIREWALL";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment"/> message.</summary>
+        public static class NetworkAttachment
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment.Types.ConnectionPreference"/> enum.</summary>
+            public static class ConnectionPreference
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment.Types.ConnectionPreference.UndefinedConnectionPreference"/>.</summary>
+                public const string UndefinedConnectionPreference = "UNDEFINED_CONNECTION_PREFERENCE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment.Types.ConnectionPreference.AcceptAutomatic"/>.</summary>
+                public const string AcceptAutomatic = "ACCEPT_AUTOMATIC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment.Types.ConnectionPreference.AcceptManual"/>.</summary>
+                public const string AcceptManual = "ACCEPT_MANUAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachment.Types.ConnectionPreference.Invalid"/>.</summary>
+                public const string Invalid = "INVALID";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint"/> message.</summary>
+        public static class NetworkAttachmentConnectedEndpoint
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status"/> enum.</summary>
+            public static class Status
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.UndefinedStatus"/>.</summary>
+                public const string UndefinedStatus = "UNDEFINED_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.Accepted"/>.</summary>
+                public const string Accepted = "ACCEPTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.Closed"/>.</summary>
+                public const string Closed = "CLOSED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.NeedsAttention"/>.</summary>
+                public const string NeedsAttention = "NEEDS_ATTENTION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.Pending"/>.</summary>
+                public const string Pending = "PENDING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.Rejected"/>.</summary>
+                public const string Rejected = "REJECTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkAttachmentConnectedEndpoint.Types.Status.Unspecified"/>.</summary>
+                public const string Unspecified = "STATUS_UNSPECIFIED";
             }
         }
 
@@ -3317,6 +3413,25 @@ namespace Google.Cloud.Compute.V1
                 public const string StandardOverridesFixedStandard = "STANDARD_OVERRIDES_FIXED_STANDARD";
             }
 
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting"/> enum.</summary>
+            public static class VmDnsSetting
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting.UndefinedVmDnsSetting"/>.</summary>
+                public const string UndefinedVmDnsSetting = "UNDEFINED_VM_DNS_SETTING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting.GlobalDefault"/>.</summary>
+                public const string GlobalDefault = "GLOBAL_DEFAULT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting.UnspecifiedVmDnsSetting"/>.</summary>
+                public const string UnspecifiedVmDnsSetting = "UNSPECIFIED_VM_DNS_SETTING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting.ZonalDefault"/>.</summary>
+                public const string ZonalDefault = "ZONAL_DEFAULT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.VmDnsSetting.ZonalOnly"/>.</summary>
+                public const string ZonalOnly = "ZONAL_ONLY";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Project.Types.XpnProjectStatus"/> enum.</summary>
             public static class XpnProjectStatus
             {
@@ -3558,11 +3673,23 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.ForwardingRules"/>.</summary>
                 public const string ForwardingRules = "FORWARDING_RULES";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalExternalManagedBackendServices"/>.</summary>
+                public const string GlobalExternalManagedBackendServices = "GLOBAL_EXTERNAL_MANAGED_BACKEND_SERVICES";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalExternalManagedForwardingRules"/>.</summary>
                 public const string GlobalExternalManagedForwardingRules = "GLOBAL_EXTERNAL_MANAGED_FORWARDING_RULES";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalExternalProxyLbBackendServices"/>.</summary>
+                public const string GlobalExternalProxyLbBackendServices = "GLOBAL_EXTERNAL_PROXY_LB_BACKEND_SERVICES";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalInternalAddresses"/>.</summary>
                 public const string GlobalInternalAddresses = "GLOBAL_INTERNAL_ADDRESSES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalInternalManagedBackendServices"/>.</summary>
+                public const string GlobalInternalManagedBackendServices = "GLOBAL_INTERNAL_MANAGED_BACKEND_SERVICES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GlobalInternalTrafficDirectorBackendServices"/>.</summary>
+                public const string GlobalInternalTrafficDirectorBackendServices = "GLOBAL_INTERNAL_TRAFFIC_DIRECTOR_BACKEND_SERVICES";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GpusAllRegions"/>.</summary>
                 public const string GpusAllRegions = "GPUS_ALL_REGIONS";
@@ -3741,8 +3868,20 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalAutoscalers"/>.</summary>
                 public const string RegionalAutoscalers = "REGIONAL_AUTOSCALERS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalExternalManagedBackendServices"/>.</summary>
+                public const string RegionalExternalManagedBackendServices = "REGIONAL_EXTERNAL_MANAGED_BACKEND_SERVICES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalExternalNetworkLbBackendServices"/>.</summary>
+                public const string RegionalExternalNetworkLbBackendServices = "REGIONAL_EXTERNAL_NETWORK_LB_BACKEND_SERVICES";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalInstanceGroupManagers"/>.</summary>
                 public const string RegionalInstanceGroupManagers = "REGIONAL_INSTANCE_GROUP_MANAGERS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalInternalLbBackendServices"/>.</summary>
+                public const string RegionalInternalLbBackendServices = "REGIONAL_INTERNAL_LB_BACKEND_SERVICES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalInternalManagedBackendServices"/>.</summary>
+                public const string RegionalInternalManagedBackendServices = "REGIONAL_INTERNAL_MANAGED_BACKEND_SERVICES";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.Reservations"/>.</summary>
                 public const string Reservations = "RESERVATIONS";

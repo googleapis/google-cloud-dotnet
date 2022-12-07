@@ -4697,6 +4697,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Stop(request);
@@ -4733,6 +4734,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.StopAsync(request);
@@ -4831,6 +4833,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Suspend(request);
@@ -4867,6 +4870,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SuspendAsync(request);
