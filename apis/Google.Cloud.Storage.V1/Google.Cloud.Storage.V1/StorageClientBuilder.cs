@@ -44,6 +44,14 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         internal bool GZipEnabled { get; set; } = true;
 
+        /// <summary>
+        /// Creates a new builder with default settings.
+        /// </summary>
+        public StorageClientBuilder()
+        {
+            UseJwtAccessWithScopes = true;
+        }
+
         /// <inheritdoc />
         public override StorageClient Build()
         {

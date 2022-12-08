@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,6 +28,14 @@ namespace Google.Cloud.Translation.V2
         /// The translation model to use.
         /// </summary>
         public string Model { get; set; }
+
+        /// <summary>
+        /// Creates a new builder with default settings.
+        /// </summary>
+        public AdvancedTranslationClientBuilder()
+        {
+            UseJwtAccessWithScopes = true;
+        }
 
         /// <inheritdoc />
         public override AdvancedTranslationClient Build()

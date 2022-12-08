@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.1.0</Version>
+    <Version>3.2.0-beta00</Version>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.</Description>
@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest" Version="[4.2.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="[4.3.0-beta01, 5.0.0)" />
     <PackageReference Include="Google.Apis.Translate.v2" Version="[1.57.0.875, 2.0.0.0)" />
   </ItemGroup>
 </Project>
