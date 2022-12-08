@@ -552,6 +552,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             MigrateKeyRequest request = new MigrateKeyRequest
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                SkipBillingCheck = false,
             };
             // Make the request
             Key response = recaptchaEnterpriseServiceClient.MigrateKey(request);
@@ -569,6 +570,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             MigrateKeyRequest request = new MigrateKeyRequest
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                SkipBillingCheck = false,
             };
             // Make the request
             Key response = await recaptchaEnterpriseServiceClient.MigrateKeyAsync(request);

@@ -550,9 +550,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -572,9 +572,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -594,9 +594,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -612,9 +612,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -634,9 +634,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -656,9 +656,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -749,8 +749,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -766,8 +766,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -783,8 +783,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -797,8 +797,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -814,8 +814,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -831,8 +831,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// legacy reCAPTCHA.
         /// </summary>
         /// <param name="key">
-        /// Required. The public key name linked to the requested secret key in the format
-        /// "projects/{project}/keys/{key}".
+        /// Required. The public key name linked to the requested secret key in the
+        /// format "projects/{project}/keys/{key}".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1104,8 +1104,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in the format
-        /// "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in
+        /// the format "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1129,8 +1129,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in the format
-        /// "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in
+        /// the format "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1154,8 +1154,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in the format
-        /// "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in
+        /// the format "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1179,8 +1179,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// List groups of related accounts.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to list related account groups from, in the format
-        /// "projects/{project}".
+        /// Required. The name of the project to list related account groups from, in
+        /// the format "projects/{project}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1348,13 +1348,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group memberships from.
-        /// Specify the project name in the following format: "projects/{project}".
+        /// Required. The name of the project to search related account group
+        /// memberships from. Specify the project name in the following format:
+        /// "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search connections to.
-        /// The identifier should correspond to a `hashed_account_id` provided in a
-        /// previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. The unique stable hashed user identifier we should search
+        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1379,13 +1380,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group memberships from.
-        /// Specify the project name in the following format: "projects/{project}".
+        /// Required. The name of the project to search related account group
+        /// memberships from. Specify the project name in the following format:
+        /// "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search connections to.
-        /// The identifier should correspond to a `hashed_account_id` provided in a
-        /// previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. The unique stable hashed user identifier we should search
+        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1412,13 +1414,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group memberships from.
-        /// Specify the project name in the following format: "projects/{project}".
+        /// Required. The name of the project to search related account group
+        /// memberships from. Specify the project name in the following format:
+        /// "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search connections to.
-        /// The identifier should correspond to a `hashed_account_id` provided in a
-        /// previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. The unique stable hashed user identifier we should search
+        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1443,13 +1446,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Search group memberships related to a given account.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project to search related account group memberships from.
-        /// Specify the project name in the following format: "projects/{project}".
+        /// Required. The name of the project to search related account group
+        /// memberships from. Specify the project name in the following format:
+        /// "projects/{project}".
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search connections to.
-        /// The identifier should correspond to a `hashed_account_id` provided in a
-        /// previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. The unique stable hashed user identifier we should search
+        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
