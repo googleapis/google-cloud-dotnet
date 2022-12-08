@@ -42,6 +42,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 Model = new Model(),
                 ParentModel = "",
                 ModelId = "",
+                ServiceAccount = "",
             };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = modelServiceClient.UploadModel(request);
