@@ -84,7 +84,7 @@
     },
     {
       "id": "Google.Cloud.AccessApproval.V1",
-      "version": "2.1.0",
+      "version": "2.2.0-beta00",
       "type": "grpc",
       "productName": "Access Approval",
       "productUrl": "https://cloud.google.com/access-approval/docs/",
@@ -94,14 +94,15 @@
         "approval"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Grpc.Core": "2.46.3"
       },
       "generator": "micro",
       "protoPath": "google/cloud/accessapproval/v1",
       "shortName": "accessapproval",
       "serviceConfigFile": "accessapproval_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ApiGateway.V1",
@@ -437,7 +438,7 @@
     },
     {
       "id": "Google.Cloud.Batch.V1",
-      "version": "1.1.0",
+      "version": "1.2.0-beta00",
       "type": "grpc",
       "productName": "Batch",
       "productUrl": "https://cloud.google.com/batch/docs/",
@@ -446,7 +447,7 @@
         "batch"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
@@ -456,7 +457,8 @@
       "protoPath": "google/cloud/batch/v1",
       "shortName": "batch",
       "serviceConfigFile": "batch_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Batch.V1Alpha",
@@ -1724,7 +1726,7 @@
     },
     {
       "id": "Google.Cloud.Domains.V1",
-      "version": "2.0.0",
+      "version": "2.1.0-beta00",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
@@ -1733,7 +1735,7 @@
         "domains"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -1741,7 +1743,8 @@
       "protoPath": "google/cloud/domains/v1",
       "shortName": "domains",
       "serviceConfigFile": "domains_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Domains.V1Beta1",
@@ -2054,7 +2057,7 @@
     },
     {
       "id": "Google.Cloud.Gaming.V1",
-      "version": "2.0.0",
+      "version": "2.1.0-beta00",
       "type": "grpc",
       "productName": "Game Services",
       "productUrl": "https://cloud.google.com/solutions/gaming",
@@ -2064,7 +2067,7 @@
         "games"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -2072,7 +2075,8 @@
       "protoPath": "google/cloud/gaming/v1",
       "shortName": "gameservices",
       "serviceConfigFile": "gameservices_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Gaming.V1Beta",
@@ -2837,7 +2841,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V1",
-      "version": "2.1.0",
+      "version": "2.2.0-beta00",
       "type": "grpc",
       "productName": "AI Platform Notebooks",
       "productUrl": "https://cloud.google.com/ai-platform-notebooks",
@@ -2847,7 +2851,7 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
@@ -2857,7 +2861,8 @@
       "protoPath": "google/cloud/notebooks/v1",
       "shortName": "notebooks",
       "serviceConfigFile": "notebooks_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Notebooks.V1Beta1",
@@ -3394,7 +3399,7 @@
       "protoPath": "google/cloud/scheduler/v1",
       "productName": "Google Cloud Scheduler",
       "productUrl": "https://cloud.google.com/scheduler/",
-      "version": "3.0.0",
+      "version": "3.1.0-beta00",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
       "tags": [
@@ -3402,12 +3407,13 @@
         "cron"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Grpc.Core": "2.46.3"
       },
       "shortName": "cloudscheduler",
       "serviceConfigFile": "cloudscheduler_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.SecretManager.V1",
@@ -3993,20 +3999,21 @@
       "protoPath": "google/cloud/tasks/v2",
       "productName": "Google Cloud Tasks",
       "productUrl": "https://cloud.google.com/tasks/",
-      "version": "3.0.0",
+      "version": "3.1.0-beta00",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Tasks API (v2), which manages the execution of large numbers of distributed requests.",
       "tags": [
         "Tasks"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
       "shortName": "cloudtasks",
       "serviceConfigFile": "cloudtasks_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Tasks.V2Beta3",
@@ -4034,11 +4041,11 @@
       "protoPath": "google/cloud/texttospeech/v1",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
-      "version": "3.1.0",
+      "version": "3.2.0-beta00",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1, synthesizes natural-sounding speech by applying powerful neural network models.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
@@ -4048,7 +4055,8 @@
       ],
       "shortName": "texttospeech",
       "serviceConfigFile": "texttospeech_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1Beta1",
@@ -4291,7 +4299,7 @@
       "protoPath": "google/cloud/vision/v1",
       "productName": "Google Cloud Vision",
       "productUrl": "https://cloud.google.com/vision",
-      "version": "3.2.0",
+      "version": "3.3.0-beta00",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
@@ -4299,13 +4307,14 @@
         "Vision"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0-beta01",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
       "shortName": "vision",
       "serviceConfigFile": "vision_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.VmwareEngine.V1",
