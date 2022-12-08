@@ -38,4 +38,7 @@
   "2096786": "skip", // Regenerate after gRPC change
   "e85a0e1": "skip", // Remove unused imports in protos
   "3b1e263": "skip", // Regenerate with new generator (fixes XML escaping)
+  // This is the commit message from the previous commit, but our change detection ignores changes to apis.json.
+  // This is the message we want in the release notes for the REGAPIC-enabled packages.
+  "5008946": "feat: Enable REST transport in selected APIs. Set GrpcAdapter=RestGrpcAdapter.Default in the client builder to use this transport",
 }
