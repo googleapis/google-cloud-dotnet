@@ -1,0 +1,30 @@
+[
+  {
+    "method": "ListVmwareEngineNetworks",
+    "client": "VmwareEngineClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListNodeTypes",
+    "client": "VmwareEngineClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListNetworkPolicies",
+    "client": "VmwareEngineClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListPrivateClouds",
+    "client": "VmwareEngineClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
