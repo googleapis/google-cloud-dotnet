@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-12-08
+
+### New features
+
+- Add LRS API ([commit a37c5f3](https://github.com/googleapis/google-cloud-dotnet/commit/a37c5f3955bff787e2dd8f3a3a19b97a89f29e02))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
