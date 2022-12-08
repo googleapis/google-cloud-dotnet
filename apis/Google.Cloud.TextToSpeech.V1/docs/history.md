@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0-beta01, released 2022-12-08
+
+### New features
+
+- Enable REST transport in selected APIs. Set GrpcAdapter=RestGrpcAdapter.Default in the client builder to use this transport ([commit 5008946](https://github.com/googleapis/google-cloud-dotnet/commit/500894667ba84ecc3d8e3e4ebc09ac0cd597100b))
+
 ## Version 3.1.0, released 2022-12-08
 
 ### New features
