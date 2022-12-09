@@ -130,7 +130,8 @@ namespace Google.Cloud.Channel.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+  /// Request message for
+  /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
   /// </summary>
   public sealed partial class RunReportJobRequest : pb::IMessage<RunReportJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -183,8 +184,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The report's resource name. Specifies the account and report used to
-    /// generate report data. The report_id identifier is a UID (for example,
+    /// Required. The report's resource name. Specifies the account and report used
+    /// to generate report data. The report_id identifier is a UID (for example,
     /// `613bf59q`).
     /// Name uses the format:
     /// accounts/{account_id}/reports/{report_id}
@@ -217,8 +218,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// Optional. A structured string that defines conditions on dimension columns to
-    /// restrict the report output.
+    /// Optional. A structured string that defines conditions on dimension columns
+    /// to restrict the report output.
     ///
     /// Filters support logical operators (AND, OR, NOT) and conditional operators
     /// (=, !=, &lt;, >, &lt;=, and >=) using `column_id` as keys.
@@ -470,7 +471,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+  /// Response message for
+  /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
   /// </summary>
   public sealed partial class RunReportJobResponse : pb::IMessage<RunReportJobResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -521,7 +523,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ReportJobFieldNumber = 1;
     private global::Google.Cloud.Channel.V1.ReportJob reportJob_;
     /// <summary>
-    /// Pass `report_job.name` to [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job]
+    /// Pass `report_job.name` to
+    /// [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job]
     /// to retrieve the report's results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -726,7 +729,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
+  /// Request message for
+  /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// </summary>
   public sealed partial class FetchReportResultsRequest : pb::IMessage<FetchReportResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -778,7 +782,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ReportJobFieldNumber = 1;
     private string reportJob_ = "";
     /// <summary>
-    /// Required. The report job created by [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+    /// Required. The report job created by
+    /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
     /// Report_job uses the format:
     /// accounts/{account_id}/reportJobs/{report_job_id}
     /// </summary>
@@ -795,9 +800,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size of the report. The server may return fewer results than
-    /// requested. If you don't specify a page size, the server uses a sensible
-    /// default (may change over time).
+    /// Optional. Requested page size of the report. The server may return fewer
+    /// results than requested. If you don't specify a page size, the server uses a
+    /// sensible default (may change over time).
     ///
     /// The maximum value is 30,000; the server will change larger values to
     /// 30,000.
@@ -817,8 +822,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token that specifies a page of results beyond the first page.
     /// Obtained through
-    /// [FetchReportResultsResponse.next_page_token][google.cloud.channel.v1.FetchReportResultsResponse.next_page_token] of the previous
-    /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults] call.
+    /// [FetchReportResultsResponse.next_page_token][google.cloud.channel.v1.FetchReportResultsResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1011,7 +1018,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
+  /// Response message for
+  /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// Contains a tabular representation of the report results.
   /// </summary>
   public sealed partial class FetchReportResultsResponse : pb::IMessage<FetchReportResultsResponse>
@@ -1095,8 +1103,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int NextPageTokenFieldNumber = 3;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Pass this token to [FetchReportResultsRequest.page_token][google.cloud.channel.v1.FetchReportResultsRequest.page_token] to retrieve
-    /// the next page of results.
+    /// Pass this token to
+    /// [FetchReportResultsRequest.page_token][google.cloud.channel.v1.FetchReportResultsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1288,7 +1297,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
+  /// Request message for
+  /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
   /// </summary>
   public sealed partial class ListReportsRequest : pb::IMessage<ListReportsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1341,9 +1351,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the partner account to list available reports for.
-    /// Parent uses the format:
-    /// accounts/{account_id}
+    /// Required. The resource name of the partner account to list available
+    /// reports for. Parent uses the format: accounts/{account_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1358,9 +1367,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size of the report. The server might return fewer results
-    /// than requested. If unspecified, returns 20 reports.
-    /// The maximum value is 100.
+    /// Optional. Requested page size of the report. The server might return fewer
+    /// results than requested. If unspecified, returns 20 reports. The maximum
+    /// value is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1377,8 +1386,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token that specifies a page of results beyond the first page.
     /// Obtained through
-    /// [ListReportsResponse.next_page_token][google.cloud.channel.v1.ListReportsResponse.next_page_token] of the previous
-    /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports] call.
+    /// [ListReportsResponse.next_page_token][google.cloud.channel.v1.ListReportsResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1613,7 +1624,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
+  /// Response message for
+  /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
   /// </summary>
   public sealed partial class ListReportsResponse : pb::IMessage<ListReportsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1678,8 +1690,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Pass this token to [FetchReportResultsRequest.page_token][google.cloud.channel.v1.FetchReportResultsRequest.page_token] to retrieve
-    /// the next page of results.
+    /// Pass this token to
+    /// [FetchReportResultsRequest.page_token][google.cloud.channel.v1.FetchReportResultsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1839,7 +1852,8 @@ namespace Google.Cloud.Channel.V1 {
 
   /// <summary>
   /// The result of a [RunReportJob][] operation. Contains the name to use in
-  /// [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job] and the status of the operation.
+  /// [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job]
+  /// and the status of the operation.
   /// </summary>
   public sealed partial class ReportJob : pb::IMessage<ReportJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2086,7 +2100,8 @@ namespace Google.Cloud.Channel.V1 {
 
   /// <summary>
   /// The features describing the data. Returned by
-  /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob] and
+  /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob]
+  /// and
   /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// </summary>
   public sealed partial class ReportResultsMetadata : pb::IMessage<ReportResultsMetadata>
@@ -4185,9 +4200,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The report's resource name. Specifies the account and report used to
-    /// generate report data. The report_id identifier is a UID
-    /// (for example, `613bf59q`).
+    /// Required. The report's resource name. Specifies the account and report used
+    /// to generate report data. The report_id identifier is a UID (for example,
+    /// `613bf59q`).
     ///
     /// Name uses the format:
     /// accounts/{account_id}/reports/{report_id}

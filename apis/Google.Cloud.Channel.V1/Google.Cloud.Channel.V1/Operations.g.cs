@@ -49,7 +49,8 @@ namespace Google.Cloud.Channel.V1 {
   }
   #region Messages
   /// <summary>
-  /// Provides contextual information about a [google.longrunning.Operation][google.longrunning.Operation].
+  /// Provides contextual information about a
+  /// [google.longrunning.Operation][google.longrunning.Operation].
   /// </summary>
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

@@ -44,7 +44,7 @@ namespace Google.Cloud.Channel.V1 {
             "dG5lclJlcHJpY2luZ0NvbmZpZxJ6YWNjb3VudHMve2FjY291bnR9L2NoYW5u",
             "ZWxQYXJ0bmVyTGlua3Mve2NoYW5uZWxfcGFydG5lcn0vY2hhbm5lbFBhcnRu",
             "ZXJSZXByaWNpbmdDb25maWdzL3tjaGFubmVsX3BhcnRuZXJfcmVwcmljaW5n",
-            "X2NvbmZpZ30isAQKD1JlcHJpY2luZ0NvbmZpZxJiChdlbnRpdGxlbWVudF9n",
+            "X2NvbmZpZ30i/QQKD1JlcHJpY2luZ0NvbmZpZxJiChdlbnRpdGxlbWVudF9n",
             "cmFudWxhcml0eRgEIAEoCzI/Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJl",
             "cHJpY2luZ0NvbmZpZy5FbnRpdGxlbWVudEdyYW51bGFyaXR5SAASaQobY2hh",
             "bm5lbF9wYXJ0bmVyX2dyYW51bGFyaXR5GAUgASgLMkIuZ29vZ2xlLmNsb3Vk",
@@ -53,28 +53,42 @@ namespace Google.Cloud.Channel.V1 {
             "Lmdvb2dsZS50eXBlLkRhdGVCA+BBAhJFCgphZGp1c3RtZW50GAIgASgLMiwu",
             "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmVwcmljaW5nQWRqdXN0bWVudEID",
             "4EECEkUKD3JlYmlsbGluZ19iYXNpcxgDIAEoDjInLmdvb2dsZS5jbG91ZC5j",
-            "aGFubmVsLnYxLlJlYmlsbGluZ0Jhc2lzQgPgQQIaWwoWRW50aXRsZW1lbnRH",
-            "cmFudWxhcml0eRJBCgtlbnRpdGxlbWVudBgBIAEoCUIs+kEpCidjbG91ZGNo",
-            "YW5uZWwuZ29vZ2xlYXBpcy5jb20vRW50aXRsZW1lbnQaGwoZQ2hhbm5lbFBh",
-            "cnRuZXJHcmFudWxhcml0eUINCgtncmFudWxhcml0eSJzChNSZXByaWNpbmdB",
-            "ZGp1c3RtZW50Ek4KFXBlcmNlbnRhZ2VfYWRqdXN0bWVudBgCIAEoCzItLmdv",
-            "b2dsZS5jbG91ZC5jaGFubmVsLnYxLlBlcmNlbnRhZ2VBZGp1c3RtZW50SABC",
-            "DAoKYWRqdXN0bWVudCJAChRQZXJjZW50YWdlQWRqdXN0bWVudBIoCgpwZXJj",
-            "ZW50YWdlGAIgASgLMhQuZ29vZ2xlLnR5cGUuRGVjaW1hbCpdCg5SZWJpbGxp",
-            "bmdCYXNpcxIfChtSRUJJTExJTkdfQkFTSVNfVU5TUEVDSUZJRUQQABIQCgxD",
-            "T1NUX0FUX0xJU1QQARIYChRESVJFQ1RfQ1VTVE9NRVJfQ09TVBACQm8KG2Nv",
-            "bS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUIOUmVwcmljaW5nUHJvdG9QAVo+",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9j",
-            "aGFubmVsL3YxO2NoYW5uZWxiBnByb3RvMw=="));
+            "aGFubmVsLnYxLlJlYmlsbGluZ0Jhc2lzQgPgQQISSwoVY29uZGl0aW9uYWxf",
+            "b3ZlcnJpZGVzGAYgAygLMiwuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ29u",
+            "ZGl0aW9uYWxPdmVycmlkZRpbChZFbnRpdGxlbWVudEdyYW51bGFyaXR5EkEK",
+            "C2VudGl0bGVtZW50GAEgASgJQiz6QSkKJ2Nsb3VkY2hhbm5lbC5nb29nbGVh",
+            "cGlzLmNvbS9FbnRpdGxlbWVudBobChlDaGFubmVsUGFydG5lckdyYW51bGFy",
+            "aXR5Qg0KC2dyYW51bGFyaXR5InMKE1JlcHJpY2luZ0FkanVzdG1lbnQSTgoV",
+            "cGVyY2VudGFnZV9hZGp1c3RtZW50GAIgASgLMi0uZ29vZ2xlLmNsb3VkLmNo",
+            "YW5uZWwudjEuUGVyY2VudGFnZUFkanVzdG1lbnRIAEIMCgphZGp1c3RtZW50",
+            "IkAKFFBlcmNlbnRhZ2VBZGp1c3RtZW50EigKCnBlcmNlbnRhZ2UYAiABKAsy",
+            "FC5nb29nbGUudHlwZS5EZWNpbWFsIvIBChNDb25kaXRpb25hbE92ZXJyaWRl",
+            "EkUKCmFkanVzdG1lbnQYASABKAsyLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
+            "MS5SZXByaWNpbmdBZGp1c3RtZW50QgPgQQISRQoPcmViaWxsaW5nX2Jhc2lz",
+            "GAIgASgOMicuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmViaWxsaW5nQmFz",
+            "aXNCA+BBAhJNChNyZXByaWNpbmdfY29uZGl0aW9uGAMgASgLMisuZ29vZ2xl",
+            "LmNsb3VkLmNoYW5uZWwudjEuUmVwcmljaW5nQ29uZGl0aW9uQgPgQQIibAoS",
+            "UmVwcmljaW5nQ29uZGl0aW9uEkkKE3NrdV9ncm91cF9jb25kaXRpb24YASAB",
+            "KAsyKi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5Ta3VHcm91cENvbmRpdGlv",
+            "bkgAQgsKCWNvbmRpdGlvbiImChFTa3VHcm91cENvbmRpdGlvbhIRCglza3Vf",
+            "Z3JvdXAYASABKAkqXQoOUmViaWxsaW5nQmFzaXMSHwobUkVCSUxMSU5HX0JB",
+            "U0lTX1VOU1BFQ0lGSUVEEAASEAoMQ09TVF9BVF9MSVNUEAESGAoURElSRUNU",
+            "X0NVU1RPTUVSX0NPU1QQAkJvChtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwu",
+            "djFCDlJlcHJpY2luZ1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvY2hhbm5lbC92MTtjaGFubmVsYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DecimalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.RebillingBasis), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CustomerRepricingConfig), global::Google.Cloud.Channel.V1.CustomerRepricingConfig.Parser, new[]{ "Name", "RepricingConfig", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig), global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig.Parser, new[]{ "Name", "RepricingConfig", "UpdateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingConfig), global::Google.Cloud.Channel.V1.RepricingConfig.Parser, new[]{ "EntitlementGranularity", "ChannelPartnerGranularity", "EffectiveInvoiceMonth", "Adjustment", "RebillingBasis" }, new[]{ "Granularity" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingConfig.Types.EntitlementGranularity), global::Google.Cloud.Channel.V1.RepricingConfig.Types.EntitlementGranularity.Parser, new[]{ "Entitlement" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingConfig), global::Google.Cloud.Channel.V1.RepricingConfig.Parser, new[]{ "EntitlementGranularity", "ChannelPartnerGranularity", "EffectiveInvoiceMonth", "Adjustment", "RebillingBasis", "ConditionalOverrides" }, new[]{ "Granularity" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingConfig.Types.EntitlementGranularity), global::Google.Cloud.Channel.V1.RepricingConfig.Types.EntitlementGranularity.Parser, new[]{ "Entitlement" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingConfig.Types.ChannelPartnerGranularity), global::Google.Cloud.Channel.V1.RepricingConfig.Types.ChannelPartnerGranularity.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingAdjustment), global::Google.Cloud.Channel.V1.RepricingAdjustment.Parser, new[]{ "PercentageAdjustment" }, new[]{ "Adjustment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PercentageAdjustment), global::Google.Cloud.Channel.V1.PercentageAdjustment.Parser, new[]{ "Percentage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PercentageAdjustment), global::Google.Cloud.Channel.V1.PercentageAdjustment.Parser, new[]{ "Percentage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ConditionalOverride), global::Google.Cloud.Channel.V1.ConditionalOverride.Parser, new[]{ "Adjustment", "RebillingBasis", "RepricingCondition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RepricingCondition), global::Google.Cloud.Channel.V1.RepricingCondition.Parser, new[]{ "SkuGroupCondition" }, new[]{ "Condition" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.SkuGroupCondition), global::Google.Cloud.Channel.V1.SkuGroupCondition.Parser, new[]{ "SkuGroup" }, null, null, null, null)
           }));
     }
     #endregion
@@ -175,8 +189,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int RepricingConfigFieldNumber = 2;
     private global::Google.Cloud.Channel.V1.RepricingConfig repricingConfig_;
     /// <summary>
-    /// Required. The configuration for bill modifications made by a reseller before
-    /// sending it to customers.
+    /// Required. The configuration for bill modifications made by a reseller
+    /// before sending it to customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,9 +205,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int UpdateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Timestamp of an update to the repricing rule. If `update_time` is after
-    /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] then it indicates this was set
-    /// mid-month.
+    /// Output only. Timestamp of an update to the repricing rule. If `update_time`
+    /// is after
+    /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+    /// then it indicates this was set mid-month.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -474,8 +489,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int RepricingConfigFieldNumber = 2;
     private global::Google.Cloud.Channel.V1.RepricingConfig repricingConfig_;
     /// <summary>
-    /// Required. The configuration for bill modifications made by a reseller before
-    /// sending it to ChannelPartner.
+    /// Required. The configuration for bill modifications made by a reseller
+    /// before sending it to ChannelPartner.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -490,9 +505,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int UpdateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Timestamp of an update to the repricing rule. If `update_time` is after
-    /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] then it indicates this was set
-    /// mid-month.
+    /// Output only. Timestamp of an update to the repricing rule. If `update_time`
+    /// is after
+    /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+    /// then it indicates this was set mid-month.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -742,6 +758,7 @@ namespace Google.Cloud.Channel.V1 {
       effectiveInvoiceMonth_ = other.effectiveInvoiceMonth_ != null ? other.effectiveInvoiceMonth_.Clone() : null;
       adjustment_ = other.adjustment_ != null ? other.adjustment_.Clone() : null;
       rebillingBasis_ = other.rebillingBasis_;
+      conditionalOverrides_ = other.conditionalOverrides_.Clone();
       switch (other.GranularityCase) {
         case GranularityOneofCase.EntitlementGranularity:
           EntitlementGranularity = other.EntitlementGranularity.Clone();
@@ -796,8 +813,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int EffectiveInvoiceMonthFieldNumber = 1;
     private global::Google.Type.Date effectiveInvoiceMonth_;
     /// <summary>
-    /// Required. The YearMonth when these adjustments activate. The Day field needs to be
-    /// "0" since we only accept YearMonth repricing boundaries.
+    /// Required. The YearMonth when these adjustments activate. The Day field
+    /// needs to be "0" since we only accept YearMonth repricing boundaries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -827,8 +844,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RebillingBasisFieldNumber = 3;
     private global::Google.Cloud.Channel.V1.RebillingBasis rebillingBasis_ = global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified;
     /// <summary>
-    /// Required. The [RebillingBasis][google.cloud.channel.v1.RebillingBasis] to use for this bill. Specifies the relative cost
-    /// based on repricing costs you will apply.
+    /// Required. The [RebillingBasis][google.cloud.channel.v1.RebillingBasis] to
+    /// use for this bill. Specifies the relative cost based on repricing costs you
+    /// will apply.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -837,6 +855,22 @@ namespace Google.Cloud.Channel.V1 {
       set {
         rebillingBasis_ = value;
       }
+    }
+
+    /// <summary>Field number for the "conditional_overrides" field.</summary>
+    public const int ConditionalOverridesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Channel.V1.ConditionalOverride> _repeated_conditionalOverrides_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Channel.V1.ConditionalOverride.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.ConditionalOverride> conditionalOverrides_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.ConditionalOverride>();
+    /// <summary>
+    /// The conditional overrides to apply for this configuration. If you list
+    /// multiple overrides, only the first valid override is used.  If you don't
+    /// list any overrides, the API uses the normal adjustment and rebilling basis.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Channel.V1.ConditionalOverride> ConditionalOverrides {
+      get { return conditionalOverrides_; }
     }
 
     private object granularity_;
@@ -880,6 +914,7 @@ namespace Google.Cloud.Channel.V1 {
       if (!object.Equals(EffectiveInvoiceMonth, other.EffectiveInvoiceMonth)) return false;
       if (!object.Equals(Adjustment, other.Adjustment)) return false;
       if (RebillingBasis != other.RebillingBasis) return false;
+      if(!conditionalOverrides_.Equals(other.conditionalOverrides_)) return false;
       if (GranularityCase != other.GranularityCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -893,6 +928,7 @@ namespace Google.Cloud.Channel.V1 {
       if (effectiveInvoiceMonth_ != null) hash ^= EffectiveInvoiceMonth.GetHashCode();
       if (adjustment_ != null) hash ^= Adjustment.GetHashCode();
       if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) hash ^= RebillingBasis.GetHashCode();
+      hash ^= conditionalOverrides_.GetHashCode();
       hash ^= (int) granularityCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -932,6 +968,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ChannelPartnerGranularity);
       }
+      conditionalOverrides_.WriteTo(output, _repeated_conditionalOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -962,6 +999,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ChannelPartnerGranularity);
       }
+      conditionalOverrides_.WriteTo(ref output, _repeated_conditionalOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -987,6 +1025,7 @@ namespace Google.Cloud.Channel.V1 {
       if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RebillingBasis);
       }
+      size += conditionalOverrides_.CalculateSize(_repeated_conditionalOverrides_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1014,6 +1053,7 @@ namespace Google.Cloud.Channel.V1 {
       if (other.RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
         RebillingBasis = other.RebillingBasis;
       }
+      conditionalOverrides_.Add(other.conditionalOverrides_);
       switch (other.GranularityCase) {
         case GranularityOneofCase.EntitlementGranularity:
           if (EntitlementGranularity == null) {
@@ -1080,6 +1120,10 @@ namespace Google.Cloud.Channel.V1 {
             ChannelPartnerGranularity = subBuilder;
             break;
           }
+          case 50: {
+            conditionalOverrides_.AddEntriesFrom(input, _repeated_conditionalOverrides_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1129,6 +1173,10 @@ namespace Google.Cloud.Channel.V1 {
             }
             input.ReadMessage(subBuilder);
             ChannelPartnerGranularity = subBuilder;
+            break;
+          }
+          case 50: {
+            conditionalOverrides_.AddEntriesFrom(ref input, _repeated_conditionalOverrides_codec);
             break;
           }
         }
@@ -1937,6 +1985,740 @@ namespace Google.Cloud.Channel.V1 {
               Percentage = new global::Google.Type.Decimal();
             }
             input.ReadMessage(Percentage);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Specifies the override to conditionally apply.
+  /// </summary>
+  public sealed partial class ConditionalOverride : pb::IMessage<ConditionalOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConditionalOverride> _parser = new pb::MessageParser<ConditionalOverride>(() => new ConditionalOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConditionalOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Channel.V1.RepricingReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConditionalOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConditionalOverride(ConditionalOverride other) : this() {
+      adjustment_ = other.adjustment_ != null ? other.adjustment_.Clone() : null;
+      rebillingBasis_ = other.rebillingBasis_;
+      repricingCondition_ = other.repricingCondition_ != null ? other.repricingCondition_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConditionalOverride Clone() {
+      return new ConditionalOverride(this);
+    }
+
+    /// <summary>Field number for the "adjustment" field.</summary>
+    public const int AdjustmentFieldNumber = 1;
+    private global::Google.Cloud.Channel.V1.RepricingAdjustment adjustment_;
+    /// <summary>
+    /// Required. Information about the applied override's adjustment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.RepricingAdjustment Adjustment {
+      get { return adjustment_; }
+      set {
+        adjustment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rebilling_basis" field.</summary>
+    public const int RebillingBasisFieldNumber = 2;
+    private global::Google.Cloud.Channel.V1.RebillingBasis rebillingBasis_ = global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified;
+    /// <summary>
+    /// Required. The [RebillingBasis][google.cloud.channel.v1.RebillingBasis] to
+    /// use for the applied override. Shows the relative cost based on your
+    /// repricing costs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.RebillingBasis RebillingBasis {
+      get { return rebillingBasis_; }
+      set {
+        rebillingBasis_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "repricing_condition" field.</summary>
+    public const int RepricingConditionFieldNumber = 3;
+    private global::Google.Cloud.Channel.V1.RepricingCondition repricingCondition_;
+    /// <summary>
+    /// Required. Specifies the condition which, if met, will apply the override.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.RepricingCondition RepricingCondition {
+      get { return repricingCondition_; }
+      set {
+        repricingCondition_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConditionalOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConditionalOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Adjustment, other.Adjustment)) return false;
+      if (RebillingBasis != other.RebillingBasis) return false;
+      if (!object.Equals(RepricingCondition, other.RepricingCondition)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (adjustment_ != null) hash ^= Adjustment.GetHashCode();
+      if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) hash ^= RebillingBasis.GetHashCode();
+      if (repricingCondition_ != null) hash ^= RepricingCondition.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (adjustment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Adjustment);
+      }
+      if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RebillingBasis);
+      }
+      if (repricingCondition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RepricingCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (adjustment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Adjustment);
+      }
+      if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RebillingBasis);
+      }
+      if (repricingCondition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RepricingCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (adjustment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Adjustment);
+      }
+      if (RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RebillingBasis);
+      }
+      if (repricingCondition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RepricingCondition);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConditionalOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.adjustment_ != null) {
+        if (adjustment_ == null) {
+          Adjustment = new global::Google.Cloud.Channel.V1.RepricingAdjustment();
+        }
+        Adjustment.MergeFrom(other.Adjustment);
+      }
+      if (other.RebillingBasis != global::Google.Cloud.Channel.V1.RebillingBasis.Unspecified) {
+        RebillingBasis = other.RebillingBasis;
+      }
+      if (other.repricingCondition_ != null) {
+        if (repricingCondition_ == null) {
+          RepricingCondition = new global::Google.Cloud.Channel.V1.RepricingCondition();
+        }
+        RepricingCondition.MergeFrom(other.RepricingCondition);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (adjustment_ == null) {
+              Adjustment = new global::Google.Cloud.Channel.V1.RepricingAdjustment();
+            }
+            input.ReadMessage(Adjustment);
+            break;
+          }
+          case 16: {
+            RebillingBasis = (global::Google.Cloud.Channel.V1.RebillingBasis) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (repricingCondition_ == null) {
+              RepricingCondition = new global::Google.Cloud.Channel.V1.RepricingCondition();
+            }
+            input.ReadMessage(RepricingCondition);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (adjustment_ == null) {
+              Adjustment = new global::Google.Cloud.Channel.V1.RepricingAdjustment();
+            }
+            input.ReadMessage(Adjustment);
+            break;
+          }
+          case 16: {
+            RebillingBasis = (global::Google.Cloud.Channel.V1.RebillingBasis) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (repricingCondition_ == null) {
+              RepricingCondition = new global::Google.Cloud.Channel.V1.RepricingCondition();
+            }
+            input.ReadMessage(RepricingCondition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the various repricing conditions you can use for a conditional
+  /// override.
+  /// </summary>
+  public sealed partial class RepricingCondition : pb::IMessage<RepricingCondition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RepricingCondition> _parser = new pb::MessageParser<RepricingCondition>(() => new RepricingCondition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RepricingCondition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Channel.V1.RepricingReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepricingCondition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepricingCondition(RepricingCondition other) : this() {
+      switch (other.ConditionCase) {
+        case ConditionOneofCase.SkuGroupCondition:
+          SkuGroupCondition = other.SkuGroupCondition.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepricingCondition Clone() {
+      return new RepricingCondition(this);
+    }
+
+    /// <summary>Field number for the "sku_group_condition" field.</summary>
+    public const int SkuGroupConditionFieldNumber = 1;
+    /// <summary>
+    /// SKU Group condition for override.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.SkuGroupCondition SkuGroupCondition {
+      get { return conditionCase_ == ConditionOneofCase.SkuGroupCondition ? (global::Google.Cloud.Channel.V1.SkuGroupCondition) condition_ : null; }
+      set {
+        condition_ = value;
+        conditionCase_ = value == null ? ConditionOneofCase.None : ConditionOneofCase.SkuGroupCondition;
+      }
+    }
+
+    private object condition_;
+    /// <summary>Enum of possible cases for the "condition" oneof.</summary>
+    public enum ConditionOneofCase {
+      None = 0,
+      SkuGroupCondition = 1,
+    }
+    private ConditionOneofCase conditionCase_ = ConditionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConditionOneofCase ConditionCase {
+      get { return conditionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCondition() {
+      conditionCase_ = ConditionOneofCase.None;
+      condition_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RepricingCondition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RepricingCondition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(SkuGroupCondition, other.SkuGroupCondition)) return false;
+      if (ConditionCase != other.ConditionCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) hash ^= SkuGroupCondition.GetHashCode();
+      hash ^= (int) conditionCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SkuGroupCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SkuGroupCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SkuGroupCondition);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RepricingCondition other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ConditionCase) {
+        case ConditionOneofCase.SkuGroupCondition:
+          if (SkuGroupCondition == null) {
+            SkuGroupCondition = new global::Google.Cloud.Channel.V1.SkuGroupCondition();
+          }
+          SkuGroupCondition.MergeFrom(other.SkuGroupCondition);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Channel.V1.SkuGroupCondition subBuilder = new global::Google.Cloud.Channel.V1.SkuGroupCondition();
+            if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) {
+              subBuilder.MergeFrom(SkuGroupCondition);
+            }
+            input.ReadMessage(subBuilder);
+            SkuGroupCondition = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Channel.V1.SkuGroupCondition subBuilder = new global::Google.Cloud.Channel.V1.SkuGroupCondition();
+            if (conditionCase_ == ConditionOneofCase.SkuGroupCondition) {
+              subBuilder.MergeFrom(SkuGroupCondition);
+            }
+            input.ReadMessage(subBuilder);
+            SkuGroupCondition = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A condition that applies the override if a line item SKU is found in the SKU
+  /// group.
+  /// </summary>
+  public sealed partial class SkuGroupCondition : pb::IMessage<SkuGroupCondition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SkuGroupCondition> _parser = new pb::MessageParser<SkuGroupCondition>(() => new SkuGroupCondition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SkuGroupCondition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Channel.V1.RepricingReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SkuGroupCondition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SkuGroupCondition(SkuGroupCondition other) : this() {
+      skuGroup_ = other.skuGroup_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SkuGroupCondition Clone() {
+      return new SkuGroupCondition(this);
+    }
+
+    /// <summary>Field number for the "sku_group" field.</summary>
+    public const int SkuGroupFieldNumber = 1;
+    private string skuGroup_ = "";
+    /// <summary>
+    /// Specifies a SKU group (https://cloud.google.com/skus/sku-groups).
+    /// Resource name of SKU group. Format:
+    /// accounts/{account}/skuGroups/{sku_group}.
+    /// Example:
+    /// "accounts/C01234/skuGroups/3d50fd57-3157-4577-a5a9-a219b8490041".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SkuGroup {
+      get { return skuGroup_; }
+      set {
+        skuGroup_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SkuGroupCondition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SkuGroupCondition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SkuGroup != other.SkuGroup) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SkuGroup.Length != 0) hash ^= SkuGroup.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SkuGroup.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SkuGroup);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SkuGroup.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SkuGroup);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SkuGroup.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SkuGroup);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SkuGroupCondition other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SkuGroup.Length != 0) {
+        SkuGroup = other.SkuGroup;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SkuGroup = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SkuGroup = input.ReadString();
             break;
           }
         }

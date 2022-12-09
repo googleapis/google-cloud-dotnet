@@ -59,7 +59,9 @@ namespace Google.Cloud.Channel.V1 {
   }
   #region Enums
   /// <summary>
-  /// The level of granularity the [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] will display.
+  /// The level of granularity the
+  /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] will
+  /// display.
   /// </summary>
   public enum ChannelPartnerLinkView {
     /// <summary>
@@ -258,8 +260,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int PublicIdFieldNumber = 7;
     private string publicId_ = "";
     /// <summary>
-    /// Output only. Public identifier that a customer must use to generate a transfer token
-    /// to move to this distributor-reseller combination.
+    /// Output only. Public identifier that a customer must use to generate a
+    /// transfer token to move to this distributor-reseller combination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

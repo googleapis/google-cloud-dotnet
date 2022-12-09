@@ -34,15 +34,16 @@ namespace Google.Cloud.Channel.V1 {
   /// 3. Resellers and distributors can manage customer entitlements.
   ///
   /// CloudChannelService exposes the following resources:
-  /// - [Customer][google.cloud.channel.v1.Customer]s: An entity—usually an enterprise—managed by a reseller or
-  /// distributor.
+  /// - [Customer][google.cloud.channel.v1.Customer]s: An entity-usually an
+  /// enterprise-managed by a reseller or distributor.
   ///
-  /// - [Entitlement][google.cloud.channel.v1.Entitlement]s: An entity that provides a customer with the means to use
-  /// a service. Entitlements are created or updated as a result of a successful
-  /// fulfillment.
+  /// - [Entitlement][google.cloud.channel.v1.Entitlement]s: An entity that
+  /// provides a customer with the means to use a service. Entitlements are created
+  /// or updated as a result of a successful fulfillment.
   ///
-  /// - [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s: An entity that identifies links between
-  /// distributors and their indirect resellers in a channel.
+  /// - [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s: An
+  /// entity that identifies links between distributors and their indirect
+  /// resellers in a channel.
   /// </summary>
   public static partial class CloudChannelService
   {
@@ -600,7 +601,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if
+      /// there are no customers.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -612,7 +614,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -646,11 +649,14 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
       /// Return value:
-      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
-      /// empty)
+      /// A list of
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources for the domain (may be empty)
       ///
       /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
-      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
+      /// no
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources match the domain.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -662,8 +668,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
-      /// account.
+      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under
+      /// the reseller or distributor account.
       ///
       /// Possible error codes:
       ///
@@ -686,15 +692,16 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
-      /// distributor.
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource
+      /// for the reseller or distributor.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The reseller account making the request is different
       /// from the reseller account in the API request.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       ///
       /// Return value:
       /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
@@ -717,7 +724,8 @@ namespace Google.Cloud.Channel.V1 {
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * FAILED_PRECONDITION: The customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -729,10 +737,10 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
-      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
-      /// linked Customer already exists and overwrite_if_exists is true, it will
-      /// update that Customer's data.
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud
+      /// Identity associated with the provided Cloud Identity ID or domain before a
+      /// TransferEntitlements call. If a linked Customer already exists and
+      /// overwrite_if_exists is true, it will update that Customer's data.
       ///
       /// Possible error codes:
       ///
@@ -789,7 +797,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a
+      /// customer.
       ///
       /// Possible error codes:
       ///
@@ -797,7 +806,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
+      /// A list of the customer's
+      /// [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -809,8 +819,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a
+      /// customer based on the Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method to list the entitlements information of an
       /// unowned customer. You should provide the customer's
@@ -826,7 +836,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
+      /// A list of the customer's
+      /// [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -838,8 +849,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a
+      /// customer based on Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method when a reseller gets the entitlement information of an
       /// unowned customer. The reseller should provide the customer's
@@ -856,7 +867,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
+      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for
+      /// the given customer and SKU.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -868,7 +880,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -1258,8 +1271,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// You must be a distributor to call this method.
+      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s
+      /// belonging to a distributor. You must be a distributor to call this method.
       ///
       /// Possible error codes:
       ///
@@ -1268,7 +1281,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
+      /// The list of the distributor account's
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1280,7 +1294,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -1292,7 +1307,8 @@ namespace Google.Cloud.Channel.V1 {
       /// invalid channel partner link name.
       ///
       /// Return value:
-      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1325,7 +1341,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1357,7 +1374,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The updated
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1376,13 +1394,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
-      /// an error.
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1401,14 +1422,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
-      /// data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
@@ -1428,9 +1452,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a CustomerRepricingConfig. Call this method to set modifications
       /// for a specific customer's bill. You can only create configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. If needed, you can create a config for the current month,
-      /// with some restrictions.
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -1444,9 +1468,11 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
-      /// different from the value used in the current config for a
+      /// or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained
+      /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -1456,14 +1482,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1480,10 +1508,11 @@ namespace Google.Cloud.Channel.V1 {
       /// CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
-      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -1496,14 +1525,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1515,19 +1546,23 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
-      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
-      /// to a date after the current month.
+      /// Deletes the given
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
-      /// past.
-      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1546,13 +1581,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1571,14 +1609,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
-      /// The data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * channel partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
@@ -1597,9 +1638,10 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a ChannelPartnerRepricingConfig. Call this method to set
       /// modifications for a specific ChannelPartner's bill. You can only create
-      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
-      /// month. If needed, you can create a config for the current month, with some
-      /// restrictions.
+      /// configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -1613,8 +1655,9 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
-      /// must be different from the value used in the current config for a
+      /// * The contained
+      /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -1624,14 +1667,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1648,10 +1693,11 @@ namespace Google.Cloud.Channel.V1 {
       /// the existing CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
-      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -1664,14 +1710,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1683,19 +1731,23 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
-      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
-      /// set to a date after the current month.
+      /// Deletes the given
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
-      /// in the past.
-      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1818,7 +1870,8 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
       /// topic for this Channel Services account. After you create a
-      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// subscriber, you get the events through
+      /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
       /// Possible error codes:
       ///
@@ -1942,7 +1995,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if
+      /// there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1964,7 +2018,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if
+      /// there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1984,7 +2039,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if
+      /// there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2006,7 +2062,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if
+      /// there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2017,7 +2074,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomers, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -2041,7 +2099,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -2063,7 +2122,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomer, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -2087,7 +2147,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -2120,11 +2181,14 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
       /// Return value:
-      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
-      /// empty)
+      /// A list of
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources for the domain (may be empty)
       ///
       /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
-      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
+      /// no
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2148,11 +2212,14 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
       /// Return value:
-      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
-      /// empty)
+      /// A list of
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources for the domain (may be empty)
       ///
       /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
-      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
+      /// no
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2174,11 +2241,14 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
       /// Return value:
-      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
-      /// empty)
+      /// A list of
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources for the domain (may be empty)
       ///
       /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
-      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
+      /// no
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2202,11 +2272,14 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
       /// Return value:
-      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
-      /// empty)
+      /// A list of
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources for the domain (may be empty)
       ///
       /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
-      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
+      /// no
+      /// [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount]
+      /// resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2217,8 +2290,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CheckCloudIdentityAccountsExist, null, options, request);
       }
       /// <summary>
-      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
-      /// account.
+      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under
+      /// the reseller or distributor account.
       ///
       /// Possible error codes:
       ///
@@ -2242,8 +2315,8 @@ namespace Google.Cloud.Channel.V1 {
         return CreateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
-      /// account.
+      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under
+      /// the reseller or distributor account.
       ///
       /// Possible error codes:
       ///
@@ -2265,8 +2338,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCustomer, null, options, request);
       }
       /// <summary>
-      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
-      /// account.
+      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under
+      /// the reseller or distributor account.
       ///
       /// Possible error codes:
       ///
@@ -2290,8 +2363,8 @@ namespace Google.Cloud.Channel.V1 {
         return CreateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
-      /// account.
+      /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under
+      /// the reseller or distributor account.
       ///
       /// Possible error codes:
       ///
@@ -2313,15 +2386,16 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomer, null, options, request);
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
-      /// distributor.
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource
+      /// for the reseller or distributor.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The reseller account making the request is different
       /// from the reseller account in the API request.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       ///
       /// Return value:
       /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
@@ -2337,15 +2411,16 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
-      /// distributor.
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource
+      /// for the reseller or distributor.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The reseller account making the request is different
       /// from the reseller account in the API request.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       ///
       /// Return value:
       /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
@@ -2359,15 +2434,16 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomer, null, options, request);
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
-      /// distributor.
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource
+      /// for the reseller or distributor.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The reseller account making the request is different
       /// from the reseller account in the API request.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       ///
       /// Return value:
       /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
@@ -2383,15 +2459,16 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
-      /// distributor.
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource
+      /// for the reseller or distributor.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The reseller account making the request is different
       /// from the reseller account in the API request.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       ///
       /// Return value:
       /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
@@ -2413,7 +2490,8 @@ namespace Google.Cloud.Channel.V1 {
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * FAILED_PRECONDITION: The customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2434,7 +2512,8 @@ namespace Google.Cloud.Channel.V1 {
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * FAILED_PRECONDITION: The customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2453,7 +2532,8 @@ namespace Google.Cloud.Channel.V1 {
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * FAILED_PRECONDITION: The customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2474,7 +2554,8 @@ namespace Google.Cloud.Channel.V1 {
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * FAILED_PRECONDITION: The customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found
+      /// for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2485,10 +2566,10 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomer, null, options, request);
       }
       /// <summary>
-      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
-      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
-      /// linked Customer already exists and overwrite_if_exists is true, it will
-      /// update that Customer's data.
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud
+      /// Identity associated with the provided Cloud Identity ID or domain before a
+      /// TransferEntitlements call. If a linked Customer already exists and
+      /// overwrite_if_exists is true, it will update that Customer's data.
       ///
       /// Possible error codes:
       ///
@@ -2514,10 +2595,10 @@ namespace Google.Cloud.Channel.V1 {
         return ImportCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
-      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
-      /// linked Customer already exists and overwrite_if_exists is true, it will
-      /// update that Customer's data.
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud
+      /// Identity associated with the provided Cloud Identity ID or domain before a
+      /// TransferEntitlements call. If a linked Customer already exists and
+      /// overwrite_if_exists is true, it will update that Customer's data.
       ///
       /// Possible error codes:
       ///
@@ -2541,10 +2622,10 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ImportCustomer, null, options, request);
       }
       /// <summary>
-      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
-      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
-      /// linked Customer already exists and overwrite_if_exists is true, it will
-      /// update that Customer's data.
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud
+      /// Identity associated with the provided Cloud Identity ID or domain before a
+      /// TransferEntitlements call. If a linked Customer already exists and
+      /// overwrite_if_exists is true, it will update that Customer's data.
       ///
       /// Possible error codes:
       ///
@@ -2570,10 +2651,10 @@ namespace Google.Cloud.Channel.V1 {
         return ImportCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
-      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
-      /// linked Customer already exists and overwrite_if_exists is true, it will
-      /// update that Customer's data.
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud
+      /// Identity associated with the provided Cloud Identity ID or domain before a
+      /// TransferEntitlements call. If a linked Customer already exists and
+      /// overwrite_if_exists is true, it will update that Customer's data.
       ///
       /// Possible error codes:
       ///
@@ -2725,7 +2806,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ProvisionCloudIdentity, null, options, request);
       }
       /// <summary>
-      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a
+      /// customer.
       ///
       /// Possible error codes:
       ///
@@ -2733,7 +2815,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
+      /// A list of the customer's
+      /// [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2746,7 +2829,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListEntitlements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a
+      /// customer.
       ///
       /// Possible error codes:
       ///
@@ -2754,7 +2838,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
+      /// A list of the customer's
+      /// [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2765,7 +2850,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntitlements, null, options, request);
       }
       /// <summary>
-      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a
+      /// customer.
       ///
       /// Possible error codes:
       ///
@@ -2773,7 +2859,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
+      /// A list of the customer's
+      /// [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2786,7 +2873,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListEntitlementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a
+      /// customer.
       ///
       /// Possible error codes:
       ///
@@ -2794,7 +2882,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
+      /// A list of the customer's
+      /// [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2805,8 +2894,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntitlements, null, options, request);
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a
+      /// customer based on the Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method to list the entitlements information of an
       /// unowned customer. You should provide the customer's
@@ -2822,7 +2911,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
+      /// A list of the customer's
+      /// [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2835,8 +2925,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a
+      /// customer based on the Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method to list the entitlements information of an
       /// unowned customer. You should provide the customer's
@@ -2852,7 +2942,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
+      /// A list of the customer's
+      /// [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2863,8 +2954,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferableSkus, null, options, request);
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a
+      /// customer based on the Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method to list the entitlements information of an
       /// unowned customer. You should provide the customer's
@@ -2880,7 +2971,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
+      /// A list of the customer's
+      /// [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2893,8 +2985,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a
+      /// customer based on the Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method to list the entitlements information of an
       /// unowned customer. You should provide the customer's
@@ -2910,7 +3002,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
+      /// A list of the customer's
+      /// [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2921,8 +3014,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferableSkus, null, options, request);
       }
       /// <summary>
-      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a
+      /// customer based on Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method when a reseller gets the entitlement information of an
       /// unowned customer. The reseller should provide the customer's
@@ -2939,7 +3032,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
+      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for
+      /// the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2952,8 +3046,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableOffers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a
+      /// customer based on Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method when a reseller gets the entitlement information of an
       /// unowned customer. The reseller should provide the customer's
@@ -2970,7 +3064,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
+      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for
+      /// the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2981,8 +3076,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferableOffers, null, options, request);
       }
       /// <summary>
-      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a
+      /// customer based on Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method when a reseller gets the entitlement information of an
       /// unowned customer. The reseller should provide the customer's
@@ -2999,7 +3094,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
+      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for
+      /// the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3012,8 +3108,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableOffersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
-      /// Customer Name in the request.
+      /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a
+      /// customer based on Cloud Identity ID or Customer Name in the request.
       ///
       /// Use this method when a reseller gets the entitlement information of an
       /// unowned customer. The reseller should provide the customer's
@@ -3030,7 +3126,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
+      /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for
+      /// the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3041,7 +3138,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferableOffers, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -3063,7 +3161,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -3083,7 +3182,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntitlement, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -3105,7 +3205,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement]
+      /// resource.
       ///
       /// Possible error codes:
       ///
@@ -4601,8 +4702,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TransferEntitlementsToGoogle, null, options, request);
       }
       /// <summary>
-      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// You must be a distributor to call this method.
+      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s
+      /// belonging to a distributor. You must be a distributor to call this method.
       ///
       /// Possible error codes:
       ///
@@ -4611,7 +4712,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
+      /// The list of the distributor account's
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4624,8 +4726,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListChannelPartnerLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// You must be a distributor to call this method.
+      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s
+      /// belonging to a distributor. You must be a distributor to call this method.
       ///
       /// Possible error codes:
       ///
@@ -4634,7 +4736,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
+      /// The list of the distributor account's
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4645,8 +4748,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListChannelPartnerLinks, null, options, request);
       }
       /// <summary>
-      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// You must be a distributor to call this method.
+      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s
+      /// belonging to a distributor. You must be a distributor to call this method.
       ///
       /// Possible error codes:
       ///
@@ -4655,7 +4758,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
+      /// The list of the distributor account's
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4668,8 +4772,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListChannelPartnerLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// You must be a distributor to call this method.
+      /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s
+      /// belonging to a distributor. You must be a distributor to call this method.
       ///
       /// Possible error codes:
       ///
@@ -4678,7 +4782,8 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
-      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
+      /// The list of the distributor account's
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4689,7 +4794,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListChannelPartnerLinks, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -4701,7 +4807,8 @@ namespace Google.Cloud.Channel.V1 {
       /// invalid channel partner link name.
       ///
       /// Return value:
-      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4714,7 +4821,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -4726,7 +4834,8 @@ namespace Google.Cloud.Channel.V1 {
       /// invalid channel partner link name.
       ///
       /// Return value:
-      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4737,7 +4846,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -4749,7 +4859,8 @@ namespace Google.Cloud.Channel.V1 {
       /// invalid channel partner link name.
       ///
       /// Return value:
-      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4762,7 +4873,8 @@ namespace Google.Cloud.Channel.V1 {
         return GetChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -4774,7 +4886,8 @@ namespace Google.Cloud.Channel.V1 {
       /// invalid channel partner link name.
       ///
       /// Return value:
-      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4806,7 +4919,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4840,7 +4954,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4872,7 +4987,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4906,7 +5022,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4937,7 +5054,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The updated
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4970,7 +5088,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The updated
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5001,7 +5120,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The updated
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5034,7 +5154,8 @@ namespace Google.Cloud.Channel.V1 {
       /// Contact Cloud Channel support.
       ///
       /// Return value:
-      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// The updated
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5052,13 +5173,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
-      /// an error.
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5078,13 +5202,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
-      /// an error.
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5102,13 +5229,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
-      /// an error.
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5128,13 +5258,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
-      /// an error.
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5152,14 +5285,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
-      /// data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
@@ -5185,14 +5321,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
-      /// data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
@@ -5216,14 +5355,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
-      /// data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
@@ -5249,14 +5391,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
-      /// data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
@@ -5275,9 +5420,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a CustomerRepricingConfig. Call this method to set modifications
       /// for a specific customer's bill. You can only create configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. If needed, you can create a config for the current month,
-      /// with some restrictions.
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -5291,9 +5436,11 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
-      /// different from the value used in the current config for a
+      /// or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained
+      /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5303,14 +5450,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5325,9 +5474,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a CustomerRepricingConfig. Call this method to set modifications
       /// for a specific customer's bill. You can only create configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. If needed, you can create a config for the current month,
-      /// with some restrictions.
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -5341,9 +5490,11 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
-      /// different from the value used in the current config for a
+      /// or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained
+      /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5353,14 +5504,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5373,9 +5526,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a CustomerRepricingConfig. Call this method to set modifications
       /// for a specific customer's bill. You can only create configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. If needed, you can create a config for the current month,
-      /// with some restrictions.
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -5389,9 +5542,11 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
-      /// different from the value used in the current config for a
+      /// or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained
+      /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5401,14 +5556,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5423,9 +5580,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a CustomerRepricingConfig. Call this method to set modifications
       /// for a specific customer's bill. You can only create configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. If needed, you can create a config for the current month,
-      /// with some restrictions.
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -5439,9 +5596,11 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
-      /// different from the value used in the current config for a
+      /// or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained
+      /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5451,14 +5610,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5474,10 +5635,11 @@ namespace Google.Cloud.Channel.V1 {
       /// CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
-      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -5490,14 +5652,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5515,10 +5679,11 @@ namespace Google.Cloud.Channel.V1 {
       /// CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
-      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -5531,14 +5696,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5554,10 +5721,11 @@ namespace Google.Cloud.Channel.V1 {
       /// CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
-      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -5570,14 +5738,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5595,10 +5765,11 @@ namespace Google.Cloud.Channel.V1 {
       /// CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
-      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -5611,14 +5782,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
-      /// not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the updated
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5629,19 +5802,23 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomerRepricingConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
-      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
-      /// to a date after the current month.
+      /// Deletes the given
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
-      /// past.
-      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5654,19 +5831,23 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteCustomerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
-      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
-      /// to a date after the current month.
+      /// Deletes the given
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
-      /// past.
-      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5677,19 +5858,23 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomerRepricingConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
-      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
-      /// to a date after the current month.
+      /// Deletes the given
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
-      /// past.
-      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5702,19 +5887,23 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteCustomerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
-      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
-      /// to a date after the current month.
+      /// Deletes the given
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
-      /// past.
-      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5732,13 +5921,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5758,13 +5950,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5782,13 +5977,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5808,13 +6006,16 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// was not found.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
-      /// returns an error.
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5832,14 +6033,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
-      /// The data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * channel partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
@@ -5864,14 +6068,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
-      /// The data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * channel partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
@@ -5894,14 +6101,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
-      /// The data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * channel partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
@@ -5926,14 +6136,17 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// * PERMISSION_DENIED: If the account making the request and the account
       /// being queried are different.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
-      /// The data for each resource is displayed in the ascending order of:
+      /// If successful, the
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
       /// * channel partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
@@ -5951,9 +6164,10 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a ChannelPartnerRepricingConfig. Call this method to set
       /// modifications for a specific ChannelPartner's bill. You can only create
-      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
-      /// month. If needed, you can create a config for the current month, with some
-      /// restrictions.
+      /// configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -5967,8 +6181,9 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
-      /// must be different from the value used in the current config for a
+      /// * The contained
+      /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -5978,14 +6193,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6000,9 +6217,10 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a ChannelPartnerRepricingConfig. Call this method to set
       /// modifications for a specific ChannelPartner's bill. You can only create
-      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
-      /// month. If needed, you can create a config for the current month, with some
-      /// restrictions.
+      /// configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -6016,8 +6234,9 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
-      /// must be different from the value used in the current config for a
+      /// * The contained
+      /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6027,14 +6246,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6047,9 +6268,10 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a ChannelPartnerRepricingConfig. Call this method to set
       /// modifications for a specific ChannelPartner's bill. You can only create
-      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
-      /// month. If needed, you can create a config for the current month, with some
-      /// restrictions.
+      /// configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -6063,8 +6285,9 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
-      /// must be different from the value used in the current config for a
+      /// * The contained
+      /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6074,14 +6297,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6096,9 +6321,10 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates a ChannelPartnerRepricingConfig. Call this method to set
       /// modifications for a specific ChannelPartner's bill. You can only create
-      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
-      /// month. If needed, you can create a config for the current month, with some
-      /// restrictions.
+      /// configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. If needed, you can create a config for the current
+      /// month, with some restrictions.
       ///
       /// When creating a config for a future month, make sure there are no existing
       /// configs for that
@@ -6112,8 +6338,9 @@ namespace Google.Cloud.Channel.V1 {
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
-      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
-      /// must be different from the value used in the current config for a
+      /// * The contained
+      /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
+      /// vaule must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6123,14 +6350,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6146,10 +6375,11 @@ namespace Google.Cloud.Channel.V1 {
       /// the existing CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
-      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -6162,14 +6392,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6187,10 +6419,11 @@ namespace Google.Cloud.Channel.V1 {
       /// the existing CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
-      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -6203,14 +6436,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6226,10 +6461,11 @@ namespace Google.Cloud.Channel.V1 {
       /// the existing CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
-      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -6242,14 +6478,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6267,10 +6505,11 @@ namespace Google.Cloud.Channel.V1 {
       /// the existing CustomerRepricingConfig.
       ///
       /// You can only update configs if the
-      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
-      /// future month. To make changes to configs for the current month, use
-      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
-      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is a future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig],
+      /// taking note of its restrictions. You cannot update the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       ///
       /// When updating a config in the future:
       ///
@@ -6283,14 +6522,16 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request. Also displays if the updated config is for the current month or
       /// past months.
-      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
-      /// or is not associated with the given account.
+      /// * NOT_FOUND: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// specified does not exist or is not associated with the given account.
       /// * INTERNAL: Any non-user error related to technical issues in the
       /// backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
-      /// otherwise returns an error.
+      /// If successful, the updated
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// resource, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6301,19 +6542,23 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelPartnerRepricingConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
-      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
-      /// set to a date after the current month.
+      /// Deletes the given
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
-      /// in the past.
-      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6326,19 +6571,23 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteChannelPartnerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
-      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
-      /// set to a date after the current month.
+      /// Deletes the given
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
-      /// in the past.
-      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6349,19 +6598,23 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteChannelPartnerRepricingConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
-      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
-      /// set to a date after the current month.
+      /// Deletes the given
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
-      /// in the past.
-      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6374,19 +6627,23 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteChannelPartnerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
-      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
-      /// set to a date after the current month.
+      /// Deletes the given
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// permanently. You can only delete configs if their
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// is set to a date after the current month.
       ///
       /// Possible error codes:
       ///
       /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
-      /// in the past.
-      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
-      /// request.
+      /// * FAILED_PRECONDITION: The
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// is active or in the past.
+      /// * NOT_FOUND: No
+      /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+      /// found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6835,7 +7092,8 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
       /// topic for this Channel Services account. After you create a
-      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// subscriber, you get the events through
+      /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
       /// Possible error codes:
       ///
@@ -6864,7 +7122,8 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
       /// topic for this Channel Services account. After you create a
-      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// subscriber, you get the events through
+      /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
       /// Possible error codes:
       ///
@@ -6891,7 +7150,8 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
       /// topic for this Channel Services account. After you create a
-      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// subscriber, you get the events through
+      /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
       /// Possible error codes:
       ///
@@ -6920,7 +7180,8 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
       /// topic for this Channel Services account. After you create a
-      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// subscriber, you get the events through
+      /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
       /// Possible error codes:
       ///
