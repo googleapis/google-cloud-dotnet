@@ -829,8 +829,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Required. The etag associated with the entity, which can be retrieved with a
-    /// [GetEntity][] request.
+    /// Required. The etag associated with the entity, which can be retrieved with
+    /// a [GetEntity][] request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1084,9 +1084,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. Maximum number of entities to return. The service may return fewer than
-    /// this value. If unspecified, 100 entities will be returned by default. The
-    /// maximum value is 500; larger values will will be truncated to 500.
+    /// Optional. Maximum number of entities to return. The service may return
+    /// fewer than this value. If unspecified, 100 entities will be returned by
+    /// default. The maximum value is 500; larger values will will be truncated to
+    /// 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1119,8 +1120,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. The following filter parameters can be added to the URL to limit the
-    /// entities returned by the API:
+    /// Optional. The following filter parameters can be added to the URL to limit
+    /// the entities returned by the API:
     ///
     /// - Entity ID: ?filter="id=entityID"
     /// - Asset ID: ?filter="asset=assetID"
@@ -1955,9 +1956,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Maximum number of partitions to return. The service may return fewer than
-    /// this value. If unspecified, 100 partitions will be returned by default. The
-    /// maximum page size is 500; larger values will will be truncated to 500.
+    /// Optional. Maximum number of partitions to return. The service may return
+    /// fewer than this value. If unspecified, 100 partitions will be returned by
+    /// default. The maximum page size is 500; larger values will will be truncated
+    /// to 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1972,10 +1974,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. Page token received from a previous `ListPartitions` call. Provide
-    /// this to retrieve the subsequent page. When paginating, all other parameters
-    /// provided to `ListPartitions` must match the call that provided the
-    /// page token.
+    /// Optional. Page token received from a previous `ListPartitions` call.
+    /// Provide this to retrieve the subsequent page. When paginating, all other
+    /// parameters provided to `ListPartitions` must match the call that provided
+    /// the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1990,8 +1992,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter the partitions returned to the caller using a key value pair
-    /// expression. Supported operators and syntax:
+    /// Optional. Filter the partitions returned to the caller using a key value
+    /// pair expression. Supported operators and syntax:
     ///
     /// - logic operators: AND, OR
     /// - comparison operators: &lt;, >, >=, &lt;= ,=, !=
@@ -3270,8 +3272,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Optional. User friendly longer description text. Must be shorter than or equal to
-    /// 1024 characters.
+    /// Optional. User friendly longer description text. Must be shorter than or
+    /// equal to 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3336,8 +3338,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag associated with the entity, which can be retrieved with a
-    /// [GetEntity][] request. Required for update and delete requests.
+    /// Optional. The etag associated with the entity, which can be retrieved with
+    /// a [GetEntity][] request. Required for update and delete requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3367,8 +3369,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AssetFieldNumber = 11;
     private string asset_ = "";
     /// <summary>
-    /// Required. Immutable. The ID of the asset associated with the storage location containing the
-    /// entity data. The entity must be with in the same zone with the asset.
+    /// Required. Immutable. The ID of the asset associated with the storage
+    /// location containing the entity data. The entity must be with in the same
+    /// zone with the asset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3402,9 +3405,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DataPathPatternFieldNumber = 13;
     private string dataPathPattern_ = "";
     /// <summary>
-    /// Optional. The set of items within the data path constituting the data in the entity,
-    /// represented as a glob path.
-    /// Example: `gs://bucket/path/to/data/**/*.csv`.
+    /// Optional. The set of items within the data path constituting the data in
+    /// the entity, represented as a glob path. Example:
+    /// `gs://bucket/path/to/data/**/*.csv`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4360,8 +4363,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int CompatibleFieldNumber = 1;
             private bool compatible_;
             /// <summary>
-            /// Output only. Whether the entity is compatible and can be represented in the metadata
-            /// store.
+            /// Output only. Whether the entity is compatible and can be represented in
+            /// the metadata store.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4376,8 +4379,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int ReasonFieldNumber = 2;
             private string reason_ = "";
             /// <summary>
-            /// Output only. Provides additional detail if the entity is incompatible with the
-            /// metadata store.
+            /// Output only. Provides additional detail if the entity is incompatible
+            /// with the metadata store.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4630,8 +4633,8 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Immutable. The set of values representing the partition, which correspond to the
-    /// partition schema defined in the parent entity.
+    /// Required. Immutable. The set of values representing the partition, which
+    /// correspond to the partition schema defined in the parent entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4643,9 +4646,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int LocationFieldNumber = 3;
     private string location_ = "";
     /// <summary>
-    /// Required. Immutable. The location of the entity data within the partition, for example,
-    /// `gs://bucket/path/to/entity/key1=value1/key2=value2`.
-    /// Or `projects/&lt;project_id>/datasets/&lt;dataset_id>/tables/&lt;table_id>`
+    /// Required. Immutable. The location of the entity data within the partition,
+    /// for example, `gs://bucket/path/to/entity/key1=value1/key2=value2`. Or
+    /// `projects/&lt;project_id>/datasets/&lt;dataset_id>/tables/&lt;table_id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4921,8 +4924,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UserManagedFieldNumber = 1;
     private bool userManaged_;
     /// <summary>
-    /// Required. Set to `true` if user-managed or `false` if managed by Dataplex. The
-    /// default is `false` (managed by Dataplex).
+    /// Required. Set to `true` if user-managed or `false` if managed by Dataplex.
+    /// The default is `false` (managed by Dataplex).
     ///
     /// - Set to `false`to enable Dataplex discovery to update the schema.
     ///   including new data discovery, schema inference, and schema evolution.
@@ -4965,8 +4968,8 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionField.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionField> partitionFields_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionField>();
     /// <summary>
-    /// Optional. The sequence of fields describing the partition structure in entities.
-    /// If this field is empty, there are no partitions within the data.
+    /// Optional. The sequence of fields describing the partition structure in
+    /// entities. If this field is empty, there are no partitions within the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4978,7 +4981,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PartitionStyleFieldNumber = 4;
     private global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionStyle partitionStyle_ = global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionStyle.Unspecified;
     /// <summary>
-    /// Optional. The structure of paths containing partition data within the entity.
+    /// Optional. The structure of paths containing partition data within the
+    /// entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5358,8 +5362,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int DescriptionFieldNumber = 2;
         private string description_ = "";
         /// <summary>
-        /// Optional. User friendly field description. Must be less than or equal to 1024
-        /// characters.
+        /// Optional. User friendly field description. Must be less than or equal to
+        /// 1024 characters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5688,9 +5692,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. Partition field name must consist of letters, numbers, and underscores
-        /// only, with a maximum of length of 256 characters,
-        /// and must begin with a letter or underscore..
+        /// Required. Partition field name must consist of letters, numbers, and
+        /// underscores only, with a maximum of length of 256 characters, and must
+        /// begin with a letter or underscore..
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5940,8 +5944,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FormatFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format format_ = global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format.Unspecified;
     /// <summary>
-    /// Output only. The data format associated with the stored data, which represents
-    /// content type values. The value is inferred from mime type.
+    /// Output only. The data format associated with the stored data, which
+    /// represents content type values. The value is inferred from mime type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6440,8 +6444,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EncodingFieldNumber = 1;
         private string encoding_ = "";
         /// <summary>
-        /// Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8", and
-        /// "ISO-8859-1". Defaults to UTF-8 if unspecified.
+        /// Optional. The character encoding of the data. Accepts "US-ASCII",
+        /// "UTF-8", and "ISO-8859-1". Defaults to UTF-8 if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6456,8 +6460,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int HeaderRowsFieldNumber = 2;
         private int headerRows_;
         /// <summary>
-        /// Optional. The number of rows to interpret as header rows that should be skipped
-        /// when reading data rows. Defaults to 0.
+        /// Optional. The number of rows to interpret as header rows that should be
+        /// skipped when reading data rows. Defaults to 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6756,8 +6760,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EncodingFieldNumber = 1;
         private string encoding_ = "";
         /// <summary>
-        /// Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8" and
-        /// "ISO-8859-1". Defaults to UTF-8 if not specified.
+        /// Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8"
+        /// and "ISO-8859-1". Defaults to UTF-8 if not specified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

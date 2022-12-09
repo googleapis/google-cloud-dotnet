@@ -211,8 +211,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the environment. This ID will be
-    /// different if the environment is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the environment. This
+    /// ID will be different if the environment is deleted and re-created with the
+    /// same name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -346,7 +347,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EndpointsFieldNumber = 200;
     private global::Google.Cloud.Dataplex.V1.Environment.Types.Endpoints endpoints_;
     /// <summary>
-    /// Output only. URI Endpoints to access sessions associated with the Environment.
+    /// Output only. URI Endpoints to access sessions associated with the
+    /// Environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -877,7 +879,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "os_image" field.</summary>
         public const int OsImageFieldNumber = 100;
         /// <summary>
-        /// Required. Software Runtime Configuration for analyze interactive workloads.
+        /// Required. Software Runtime Configuration for analyze interactive
+        /// workloads.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1193,7 +1196,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int NodeCountFieldNumber = 2;
             private int nodeCount_;
             /// <summary>
-            /// Optional. Total number of nodes in the sessions created for this environment.
+            /// Optional. Total number of nodes in the sessions created for this
+            /// environment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1504,10 +1508,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
             private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
             /// <summary>
-            /// Optional. Spark properties to provide configuration for use in sessions created
-            /// for this environment. The properties to set on daemon config files.
-            /// Property keys are specified in `prefix:property` format.
-            /// The prefix must be "spark".
+            /// Optional. Spark properties to provide configuration for use in sessions
+            /// created for this environment. The properties to set on daemon config
+            /// files. Property keys are specified in `prefix:property` format. The
+            /// prefix must be "spark".
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1760,11 +1764,11 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EnableFastStartupFieldNumber = 2;
         private bool enableFastStartup_;
         /// <summary>
-        /// Optional. If True, this causes sessions to be pre-created and available for faster
-        /// startup to enable interactive exploration use-cases. This defaults to
-        /// False to avoid additional billed charges.
-        /// These can only be set to True for the environment with name set to
-        /// "default", and with default configuration.
+        /// Optional. If True, this causes sessions to be pre-created and available
+        /// for faster startup to enable interactive exploration use-cases. This
+        /// defaults to False to avoid additional billed charges. These can only be
+        /// set to True for the environment with name set to "default", and with
+        /// default configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1989,8 +1993,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ActiveFieldNumber = 1;
         private bool active_;
         /// <summary>
-        /// Output only. Queries over sessions to mark whether the environment is currently
-        /// active or not
+        /// Output only. Queries over sessions to mark whether the environment is
+        /// currently active or not
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2459,8 +2463,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the content. This ID will be
-    /// different if the content is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the content. This ID
+    /// will be different if the content is deleted and re-created with the same
+    /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2475,9 +2480,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PathFieldNumber = 3;
     private string path_ = "";
     /// <summary>
-    /// Required. The path for the Content file, represented as directory structure.
-    /// Unique within a lake.
-    /// Limited to alphanumerics, hyphens, underscores, dots and slashes.
+    /// Required. The path for the Content file, represented as directory
+    /// structure. Unique within a lake. Limited to alphanumerics, hyphens,
+    /// underscores, dots and slashes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
