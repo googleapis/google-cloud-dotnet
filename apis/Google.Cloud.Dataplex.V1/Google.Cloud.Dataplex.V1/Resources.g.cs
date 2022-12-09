@@ -360,8 +360,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the lake. This ID will be
-    /// different if the lake is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the lake. This ID will
+    /// be different if the lake is deleted and re-created with the same name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -450,8 +450,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ServiceAccountFieldNumber = 9;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Output only. Service account associated with this lake. This service account must be
-    /// authorized to access or operate on resources managed by the lake.
+    /// Output only. Service account associated with this lake. This service
+    /// account must be authorized to access or operate on resources managed by the
+    /// lake.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1885,8 +1886,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the zone. This ID will be
-    /// different if the zone is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the zone. This ID will
+    /// be different if the zone is deleted and re-created with the same name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1990,7 +1991,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DiscoverySpecFieldNumber = 103;
     private global::Google.Cloud.Dataplex.V1.Zone.Types.DiscoverySpec discoverySpec_;
     /// <summary>
-    /// Optional. Specification of the discovery feature applied to data in this zone.
+    /// Optional. Specification of the discovery feature applied to data in this
+    /// zone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2005,8 +2007,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ResourceSpecFieldNumber = 104;
     private global::Google.Cloud.Dataplex.V1.Zone.Types.ResourceSpec resourceSpec_;
     /// <summary>
-    /// Required. Specification of the resources that are referenced by the assets within
-    /// this zone.
+    /// Required. Specification of the resources that are referenced by the assets
+    /// within this zone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2540,8 +2542,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int LocationTypeFieldNumber = 1;
         private global::Google.Cloud.Dataplex.V1.Zone.Types.ResourceSpec.Types.LocationType locationType_ = global::Google.Cloud.Dataplex.V1.Zone.Types.ResourceSpec.Types.LocationType.Unspecified;
         /// <summary>
-        /// Required. Immutable. The location type of the resources that are allowed to be attached to the
-        /// assets within this zone.
+        /// Required. Immutable. The location type of the resources that are allowed
+        /// to be attached to the assets within this zone.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2789,11 +2791,11 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> includePatterns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The list of patterns to apply for selecting data to include during
-        /// discovery if only a subset of the data should considered. For Cloud
-        /// Storage bucket assets, these are interpreted as glob patterns used to
-        /// match object names. For BigQuery dataset assets, these are
-        /// interpreted as patterns to match table names.
+        /// Optional. The list of patterns to apply for selecting data to include
+        /// during discovery if only a subset of the data should considered. For
+        /// Cloud Storage bucket assets, these are interpreted as glob patterns used
+        /// to match object names. For BigQuery dataset assets, these are interpreted
+        /// as patterns to match table names.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2807,9 +2809,9 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> excludePatterns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The list of patterns to apply for selecting data to exclude during
-        /// discovery.  For Cloud Storage bucket assets, these are interpreted as
-        /// glob patterns used to match object names. For BigQuery dataset assets,
+        /// Optional. The list of patterns to apply for selecting data to exclude
+        /// during discovery.  For Cloud Storage bucket assets, these are interpreted
+        /// as glob patterns used to match object names. For BigQuery dataset assets,
         /// these are interpreted as patterns to match table names.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2851,15 +2853,14 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "schedule" field.</summary>
         public const int ScheduleFieldNumber = 10;
         /// <summary>
-        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running
-        /// discovery periodically. Successive discovery runs must be scheduled at
-        /// least 60 minutes apart.
-        /// The default value is to run discovery every 60 minutes.
-        /// To explicitly set a timezone to the cron tab, apply a prefix in the
-        /// cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}".
-        /// The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone
-        /// database. For example, "CRON_TZ=America/New_York 1 * * * *", or
-        /// "TZ=America/New_York 1 * * * *".
+        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for
+        /// running discovery periodically. Successive discovery runs must be
+        /// scheduled at least 60 minutes apart. The default value is to run
+        /// discovery every 60 minutes. To explicitly set a timezone to the cron
+        /// tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
+        /// TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string
+        /// from IANA time zone database. For example, "CRON_TZ=America/New_York 1
+        /// * * * *", or "TZ=America/New_York 1 * * * *".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3204,8 +3205,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int HeaderRowsFieldNumber = 1;
             private int headerRows_;
             /// <summary>
-            /// Optional. The number of rows to interpret as header rows that should be skipped
-            /// when reading data rows.
+            /// Optional. The number of rows to interpret as header rows that should be
+            /// skipped when reading data rows.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3220,7 +3221,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DelimiterFieldNumber = 2;
             private string delimiter_ = "";
             /// <summary>
-            /// Optional. The delimiter being used to separate values. This defaults to ','.
+            /// Optional. The delimiter being used to separate values. This defaults to
+            /// ','.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6480,8 +6482,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the asset. This ID will be
-    /// different if the asset is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the asset. This ID
+    /// will be different if the asset is deleted and re-created with the same
+    /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6600,7 +6603,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int SecurityStatusFieldNumber = 103;
     private global::Google.Cloud.Dataplex.V1.Asset.Types.SecurityStatus securityStatus_;
     /// <summary>
-    /// Output only. Status of the security policy applied to resource referenced by this asset.
+    /// Output only. Status of the security policy applied to resource referenced
+    /// by this asset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6615,10 +6619,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DiscoverySpecFieldNumber = 106;
     private global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec discoverySpec_;
     /// <summary>
-    /// Optional. Specification of the discovery feature applied to data referenced by this
-    /// asset.
-    /// When this spec is left unset, the asset will use the spec set on the parent
-    /// zone.
+    /// Optional. Specification of the discovery feature applied to data referenced
+    /// by this asset. When this spec is left unset, the asset will use the spec
+    /// set on the parent zone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6633,7 +6636,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DiscoveryStatusFieldNumber = 107;
     private global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus discoveryStatus_;
     /// <summary>
-    /// Output only. Status of the discovery feature applied to data referenced by this asset.
+    /// Output only. Status of the discovery feature applied to data referenced by
+    /// this asset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7517,11 +7521,11 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> includePatterns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The list of patterns to apply for selecting data to include during
-        /// discovery if only a subset of the data should considered.  For Cloud
-        /// Storage bucket assets, these are interpreted as glob patterns used to
-        /// match object names. For BigQuery dataset assets, these are interpreted as
-        /// patterns to match table names.
+        /// Optional. The list of patterns to apply for selecting data to include
+        /// during discovery if only a subset of the data should considered.  For
+        /// Cloud Storage bucket assets, these are interpreted as glob patterns used
+        /// to match object names. For BigQuery dataset assets, these are interpreted
+        /// as patterns to match table names.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7535,9 +7539,9 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> excludePatterns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The list of patterns to apply for selecting data to exclude during
-        /// discovery.  For Cloud Storage bucket assets, these are interpreted as
-        /// glob patterns used to match object names. For BigQuery dataset assets,
+        /// Optional. The list of patterns to apply for selecting data to exclude
+        /// during discovery.  For Cloud Storage bucket assets, these are interpreted
+        /// as glob patterns used to match object names. For BigQuery dataset assets,
         /// these are interpreted as patterns to match table names.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7579,15 +7583,14 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "schedule" field.</summary>
         public const int ScheduleFieldNumber = 10;
         /// <summary>
-        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running
-        /// discovery periodically. Successive discovery runs must be scheduled at
-        /// least 60 minutes apart.
-        /// The default value is to run discovery every 60 minutes.
-        /// To explicitly set a timezone to the cron tab, apply a prefix in the
-        /// cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}".
-        /// The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone
-        /// database. For example, "CRON_TZ=America/New_York 1 * * * *", or
-        /// "TZ=America/New_York 1 * * * *".
+        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for
+        /// running discovery periodically. Successive discovery runs must be
+        /// scheduled at least 60 minutes apart. The default value is to run
+        /// discovery every 60 minutes. To explicitly set a timezone to the cron
+        /// tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
+        /// TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string
+        /// from IANA time zone database. For example, "CRON_TZ=America/New_York 1
+        /// * * * *", or "TZ=America/New_York 1 * * * *".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7932,8 +7935,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int HeaderRowsFieldNumber = 1;
             private int headerRows_;
             /// <summary>
-            /// Optional. The number of rows to interpret as header rows that should be skipped
-            /// when reading data rows.
+            /// Optional. The number of rows to interpret as header rows that should be
+            /// skipped when reading data rows.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7948,7 +7951,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DelimiterFieldNumber = 2;
             private string delimiter_ = "";
             /// <summary>
-            /// Optional. The delimiter being used to separate values. This defaults to ','.
+            /// Optional. The delimiter being used to separate values. This defaults to
+            /// ','.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8489,8 +8493,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Immutable. Relative name of the cloud resource that contains the data that is
-        /// being managed within a lake. For example:
+        /// Immutable. Relative name of the cloud resource that contains the data
+        /// that is being managed within a lake. For example:
         ///   `projects/{project_number}/buckets/{bucket_id}`
         ///   `projects/{project_number}/datasets/{dataset_id}`
         /// </summary>

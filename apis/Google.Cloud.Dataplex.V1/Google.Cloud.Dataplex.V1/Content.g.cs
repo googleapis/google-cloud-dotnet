@@ -963,8 +963,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Maximum number of content to return. The service may return fewer than
-    /// this value. If unspecified, at most 10 content will be returned. The
+    /// Optional. Maximum number of content to return. The service may return fewer
+    /// than this value. If unspecified, at most 10 content will be returned. The
     /// maximum value is 1000; values above 1000 will be coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -980,8 +980,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. Page token received from a previous `ListContent` call. Provide this
-    /// to retrieve the subsequent page. When paginating, all other parameters
+    /// Optional. Page token received from a previous `ListContent` call. Provide
+    /// this to retrieve the subsequent page. When paginating, all other parameters
     /// provided to `ListContent` must match the call that provided the page
     /// token.
     /// </summary>

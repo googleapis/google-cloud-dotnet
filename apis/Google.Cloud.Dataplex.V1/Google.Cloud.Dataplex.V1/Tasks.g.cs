@@ -216,8 +216,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the task. This ID will be
-    /// different if the task is deleted and re-created with the same name.
+    /// Output only. System generated globally unique ID for the task. This ID will
+    /// be different if the task is deleted and re-created with the same name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1651,12 +1651,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
             private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
             /// <summary>
-            /// Optional. Override to common configuration of open source components installed on
-            /// the Dataproc cluster.
-            /// The properties to set on daemon config files.
-            /// Property keys are specified in `prefix:property` format, for example
-            /// `core:hadoop.tmp.dir`.
-            /// For more information, see [Cluster
+            /// Optional. Override to common configuration of open source components
+            /// installed on the Dataproc cluster. The properties to set on daemon
+            /// config files. Property keys are specified in `prefix:property` format,
+            /// for example `core:hadoop.tmp.dir`. For more information, see [Cluster
             /// properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1899,8 +1897,8 @@ namespace Google.Cloud.Dataplex.V1 {
             /// <summary>Field number for the "network" field.</summary>
             public const int NetworkFieldNumber = 1;
             /// <summary>
-            /// Optional. The Cloud VPC network in which the job is run. By default, the Cloud
-            /// VPC network named Default within the project is used.
+            /// Optional. The Cloud VPC network in which the job is run. By default,
+            /// the Cloud VPC network named Default within the project is used.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2267,14 +2265,13 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "schedule" field.</summary>
         public const int ScheduleFieldNumber = 100;
         /// <summary>
-        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running
-        /// tasks periodically.
-        /// To explicitly set a timezone to the cron tab, apply a prefix in the
-        /// cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}".
-        /// The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone
-        /// database. For example, "CRON_TZ=America/New_York 1 * * * *", or
-        /// "TZ=America/New_York 1 * * * *".
-        /// This field is required for RECURRING tasks.
+        /// Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for
+        /// running tasks periodically. To explicitly set a timezone to the cron
+        /// tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
+        /// "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid
+        /// string from IANA time zone database. For example,
+        /// "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * *
+        /// *". This field is required for RECURRING tasks.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2672,9 +2669,10 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ProjectFieldNumber = 7;
         private string project_ = "";
         /// <summary>
-        /// Optional. The project in which jobs are run. By default, the project containing the
-        /// Lake is used. If a project is provided, the
-        /// [ExecutionSpec.service_account][google.cloud.dataplex.v1.Task.ExecutionSpec.service_account] must belong to this project.
+        /// Optional. The project in which jobs are run. By default, the project
+        /// containing the Lake is used. If a project is provided, the
+        /// [ExecutionSpec.service_account][google.cloud.dataplex.v1.Task.ExecutionSpec.service_account]
+        /// must belong to this project.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3105,8 +3103,8 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Cloud Storage URIs of files to be placed in the working directory of each
-        /// executor.
+        /// Optional. Cloud Storage URIs of files to be placed in the working
+        /// directory of each executor.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3120,9 +3118,9 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Cloud Storage URIs of archives to be extracted into the working directory
-        /// of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
-        /// .zip.
+        /// Optional. Cloud Storage URIs of archives to be extracted into the working
+        /// directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+        /// .tgz, and .zip.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3518,9 +3516,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NotebookFieldNumber = 4;
         private string notebook_ = "";
         /// <summary>
-        /// Required. Path to input notebook. This can be the Cloud Storage URI of the notebook
-        /// file or the path to a Notebook Content. The execution args are accessible
-        /// as environment variables
+        /// Required. Path to input notebook. This can be the Cloud Storage URI of
+        /// the notebook file or the path to a Notebook Content. The execution args
+        /// are accessible as environment variables
         /// (`TASK_key=value`).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3553,8 +3551,8 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(42);
         private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Cloud Storage URIs of files to be placed in the working directory of each
-        /// executor.
+        /// Optional. Cloud Storage URIs of files to be placed in the working
+        /// directory of each executor.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3568,9 +3566,9 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForString(50);
         private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Cloud Storage URIs of archives to be extracted into the working directory
-        /// of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
-        /// .zip.
+        /// Optional. Cloud Storage URIs of archives to be extracted into the working
+        /// directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+        /// .tgz, and .zip.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4196,7 +4194,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ServiceJobFieldNumber = 8;
     private string serviceJob_ = "";
     /// <summary>
-    /// Output only. The full resource name for the job run under a particular service.
+    /// Output only. The full resource name for the job run under a particular
+    /// service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
