@@ -275,7 +275,8 @@ namespace Google.Cloud.Channel.V1 {
         = pb::FieldCodec.ForEnum(146, x => (int) x, x => (global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason> suspensionReasons_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason>();
     /// <summary>
-    /// Output only. Enumerable of all current suspension reasons for an entitlement.
+    /// Output only. Enumerable of all current suspension reasons for an
+    /// entitlement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -287,11 +288,11 @@ namespace Google.Cloud.Channel.V1 {
     public const int PurchaseOrderIdFieldNumber = 19;
     private string purchaseOrderId_ = "";
     /// <summary>
-    /// Optional. This purchase order (PO) information is for resellers to use for their
-    /// company tracking usage. If a purchaseOrderId value is given, it appears in
-    /// the API responses and shows up in the invoice. The property accepts up to
-    /// 80 plain text characters. This is only supported for Google Workspace
-    /// entitlements.
+    /// Optional. This purchase order (PO) information is for resellers to use for
+    /// their company tracking usage. If a purchaseOrderId value is given, it
+    /// appears in the API responses and shows up in the invoice. The property
+    /// accepts up to 80 plain text characters. This is only supported for Google
+    /// Workspace entitlements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -811,7 +812,9 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Suspension reason for an entitlement if [provisioning_state][google.cloud.channel.v1.Entitlement.provisioning_state] = SUSPENDED.
+      /// Suspension reason for an entitlement if
+      /// [provisioning_state][google.cloud.channel.v1.Entitlement.provisioning_state]
+      /// = SUSPENDED.
       /// </summary>
       public enum SuspensionReason {
         /// <summary>
@@ -929,9 +932,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int EditableFieldNumber = 3;
     private bool editable_;
     /// <summary>
-    /// Output only. Specifies whether this parameter is allowed to be changed. For example, for
-    /// a Google Workspace Business Starter entitlement in commitment plan,
-    /// num_units is editable when entitlement is active.
+    /// Output only. Specifies whether this parameter is allowed to be changed. For
+    /// example, for a Google Workspace Business Starter entitlement in commitment
+    /// plan, num_units is editable when entitlement is active.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1380,8 +1383,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ProvisioningIdFieldNumber = 1;
     private string provisioningId_ = "";
     /// <summary>
-    /// Output only. Provisioning ID of the entitlement. For Google Workspace, this is the
-    /// underlying Subscription ID. For Google Cloud Platform, this is the
+    /// Output only. Provisioning ID of the entitlement. For Google Workspace, this
+    /// is the underlying Subscription ID. For Google Cloud Platform, this is the
     /// Billing Account ID of the billing subaccount."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1397,8 +1400,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     /// <summary>
-    /// Output only. The product pertaining to the provisioning resource as specified in the
-    /// Offer.
+    /// Output only. The product pertaining to the provisioning resource as
+    /// specified in the Offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1413,7 +1416,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int SkuIdFieldNumber = 3;
     private string skuId_ = "";
     /// <summary>
-    /// Output only. The SKU pertaining to the provisioning resource as specified in the Offer.
+    /// Output only. The SKU pertaining to the provisioning resource as specified
+    /// in the Offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2567,7 +2571,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int LegacySkuFieldNumber = 12;
     private global::Google.Cloud.Channel.V1.Sku legacySku_;
     /// <summary>
-    /// Optional. The customer to transfer has an entitlement with the populated legacy SKU.
+    /// Optional. The customer to transfer has an entitlement with the populated
+    /// legacy SKU.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

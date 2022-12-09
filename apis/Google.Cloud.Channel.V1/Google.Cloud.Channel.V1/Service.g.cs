@@ -545,7 +545,8 @@ namespace Google.Cloud.Channel.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [CloudChannelService.CheckCloudIdentityAccountsExist][google.cloud.channel.v1.CloudChannelService.CheckCloudIdentityAccountsExist].
+  /// Request message for
+  /// [CloudChannelService.CheckCloudIdentityAccountsExist][google.cloud.channel.v1.CloudChannelService.CheckCloudIdentityAccountsExist].
   /// </summary>
   public sealed partial class CheckCloudIdentityAccountsExistRequest : pb::IMessage<CheckCloudIdentityAccountsExistRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1286,7 +1287,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers]
+  /// Request message for
+  /// [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers]
   /// </summary>
   public sealed partial class ListCustomersRequest : pb::IMessage<ListCustomersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1355,8 +1357,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of customers to return. The service may return fewer
-    /// than this value. If unspecified, returns at most 10 customers. The
+    /// Optional. The maximum number of customers to return. The service may return
+    /// fewer than this value. If unspecified, returns at most 10 customers. The
     /// maximum value is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1374,8 +1376,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token identifying a page of results other than the first page.
     /// Obtained through
-    /// [ListCustomersResponse.next_page_token][google.cloud.channel.v1.ListCustomersResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers] call.
+    /// [ListCustomersResponse.next_page_token][google.cloud.channel.v1.ListCustomersResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1390,7 +1394,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+    /// Optional. Filters applied to the [CloudChannelService.ListCustomers]
+    /// results. See
     /// https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers
     /// for more information.
     /// </summary>
@@ -1609,7 +1614,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers].
+  /// Response message for
+  /// [CloudChannelService.ListCustomers][google.cloud.channel.v1.CloudChannelService.ListCustomers].
   /// </summary>
   public sealed partial class ListCustomersResponse : pb::IMessage<ListCustomersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1675,7 +1681,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListCustomersRequest.page_token][google.cloud.channel.v1.ListCustomersRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListCustomersRequest.page_token][google.cloud.channel.v1.ListCustomersRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1834,7 +1842,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.GetCustomer][google.cloud.channel.v1.CloudChannelService.GetCustomer].
+  /// Request message for
+  /// [CloudChannelService.GetCustomer][google.cloud.channel.v1.CloudChannelService.GetCustomer].
   /// </summary>
   public sealed partial class GetCustomerRequest : pb::IMessage<GetCustomerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2030,7 +2039,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.CreateCustomer][google.cloud.channel.v1.CloudChannelService.CreateCustomer]
+  /// Request message for
+  /// [CloudChannelService.CreateCustomer][google.cloud.channel.v1.CloudChannelService.CreateCustomer]
   /// </summary>
   public sealed partial class CreateCustomerRequest : pb::IMessage<CreateCustomerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2081,8 +2091,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of reseller account in which to create the customer.
-    /// Parent uses the format: accounts/{account_id}
+    /// Required. The resource name of reseller account in which to create the
+    /// customer. Parent uses the format: accounts/{account_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2275,7 +2285,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.UpdateCustomer][google.cloud.channel.v1.CloudChannelService.UpdateCustomer].
+  /// Request message for
+  /// [CloudChannelService.UpdateCustomer][google.cloud.channel.v1.CloudChannelService.UpdateCustomer].
   /// </summary>
   public sealed partial class UpdateCustomerRequest : pb::IMessage<UpdateCustomerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2529,7 +2540,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.DeleteCustomer][google.cloud.channel.v1.CloudChannelService.DeleteCustomer].
+  /// Request message for
+  /// [CloudChannelService.DeleteCustomer][google.cloud.channel.v1.CloudChannelService.DeleteCustomer].
   /// </summary>
   public sealed partial class DeleteCustomerRequest : pb::IMessage<DeleteCustomerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2724,7 +2736,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ImportCustomer][google.cloud.channel.v1.CloudChannelService.ImportCustomer]
+  /// Request message for
+  /// [CloudChannelService.ImportCustomer][google.cloud.channel.v1.CloudChannelService.ImportCustomer]
   /// </summary>
   public sealed partial class ImportCustomerRequest : pb::IMessage<ImportCustomerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2869,9 +2882,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int ChannelPartnerIdFieldNumber = 6;
     private string channelPartnerId_ = "";
     /// <summary>
-    /// Optional. Cloud Identity ID of a channel partner who will be the direct reseller for
-    /// the customer's order. This field is required for 2-tier transfer scenarios
-    /// and can be provided via the request Parent binding as well.
+    /// Optional. Cloud Identity ID of a channel partner who will be the direct
+    /// reseller for the customer's order. This field is required for 2-tier
+    /// transfer scenarios and can be provided via the request Parent binding as
+    /// well.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3203,7 +3217,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ProvisionCloudIdentity][google.cloud.channel.v1.CloudChannelService.ProvisionCloudIdentity]
+  /// Request message for
+  /// [CloudChannelService.ProvisionCloudIdentity][google.cloud.channel.v1.CloudChannelService.ProvisionCloudIdentity]
   /// </summary>
   public sealed partial class ProvisionCloudIdentityRequest : pb::IMessage<ProvisionCloudIdentityRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3537,7 +3552,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements]
+  /// Request message for
+  /// [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements]
   /// </summary>
   public sealed partial class ListEntitlementsRequest : pb::IMessage<ListEntitlementsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3606,9 +3622,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, return at most 50 entitlements.
-    /// The maximum value is 100; the server will coerce values above 100.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, return at most 50 entitlements. The maximum
+    /// value is 100; the server will coerce values above 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3625,8 +3641,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token for a page of results other than the first page.
     /// Obtained using
-    /// [ListEntitlementsResponse.next_page_token][google.cloud.channel.v1.ListEntitlementsResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements] call.
+    /// [ListEntitlementsResponse.next_page_token][google.cloud.channel.v1.ListEntitlementsResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3819,7 +3837,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements].
+  /// Response message for
+  /// [CloudChannelService.ListEntitlements][google.cloud.channel.v1.CloudChannelService.ListEntitlements].
   /// </summary>
   public sealed partial class ListEntitlementsResponse : pb::IMessage<ListEntitlementsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3885,7 +3904,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to list the next page of results.
-    /// Pass to [ListEntitlementsRequest.page_token][google.cloud.channel.v1.ListEntitlementsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListEntitlementsRequest.page_token][google.cloud.channel.v1.ListEntitlementsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4044,7 +4065,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus]
+  /// Request message for
+  /// [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus]
   /// </summary>
   public sealed partial class ListTransferableSkusRequest : pb::IMessage<ListTransferableSkusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4176,9 +4198,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// A token for a page of results other than the first page.
     /// Obtained using
-    /// [ListTransferableSkusResponse.next_page_token][google.cloud.channel.v1.ListTransferableSkusResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus] call.
-    /// Optional.
+    /// [ListTransferableSkusResponse.next_page_token][google.cloud.channel.v1.ListTransferableSkusResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus]
+    /// call. Optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4529,7 +4552,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus].
+  /// Response message for
+  /// [CloudChannelService.ListTransferableSkus][google.cloud.channel.v1.CloudChannelService.ListTransferableSkus].
   /// </summary>
   public sealed partial class ListTransferableSkusResponse : pb::IMessage<ListTransferableSkusResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4595,8 +4619,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListTransferableSkusRequest.page_token][google.cloud.channel.v1.ListTransferableSkusRequest.page_token] to obtain
-    /// that page.
+    /// Pass to
+    /// [ListTransferableSkusRequest.page_token][google.cloud.channel.v1.ListTransferableSkusRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4755,7 +4780,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers]
+  /// Request message for
+  /// [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers]
   /// </summary>
   public sealed partial class ListTransferableOffersRequest : pb::IMessage<ListTransferableOffersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4883,8 +4909,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// A token for a page of results other than the first page.
     /// Obtained using
-    /// [ListTransferableOffersResponse.next_page_token][google.cloud.channel.v1.ListTransferableOffersResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers] call.
+    /// [ListTransferableOffersResponse.next_page_token][google.cloud.channel.v1.ListTransferableOffersResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5231,7 +5259,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers].
+  /// Response message for
+  /// [CloudChannelService.ListTransferableOffers][google.cloud.channel.v1.CloudChannelService.ListTransferableOffers].
   /// </summary>
   public sealed partial class ListTransferableOffersResponse : pb::IMessage<ListTransferableOffersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5298,8 +5327,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListTransferableOffersRequest.page_token][google.cloud.channel.v1.ListTransferableOffersRequest.page_token] to obtain
-    /// that page.
+    /// Pass to
+    /// [ListTransferableOffersRequest.page_token][google.cloud.channel.v1.ListTransferableOffersRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5663,7 +5693,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.GetEntitlement][google.cloud.channel.v1.CloudChannelService.GetEntitlement].
+  /// Request message for
+  /// [CloudChannelService.GetEntitlement][google.cloud.channel.v1.CloudChannelService.GetEntitlement].
   /// </summary>
   public sealed partial class GetEntitlementRequest : pb::IMessage<GetEntitlementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5860,7 +5891,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks]
+  /// Request message for
+  /// [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks]
   /// </summary>
   public sealed partial class ListChannelPartnerLinksRequest : pb::IMessage<ListChannelPartnerLinksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5913,9 +5945,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the reseller account for listing channel partner
-    /// links.
-    /// Parent uses the format: accounts/{account_id}
+    /// Required. The resource name of the reseller account for listing channel
+    /// partner links. Parent uses the format: accounts/{account_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5930,9 +5961,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, server will pick a default size (25).
-    /// The maximum value is 200; the server will coerce values above 200.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, server will pick a default size (25). The
+    /// maximum value is 200; the server will coerce values above 200.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5949,8 +5980,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token for a page of results other than the first page.
     /// Obtained using
-    /// [ListChannelPartnerLinksResponse.next_page_token][google.cloud.channel.v1.ListChannelPartnerLinksResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks] call.
+    /// [ListChannelPartnerLinksResponse.next_page_token][google.cloud.channel.v1.ListChannelPartnerLinksResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6182,7 +6215,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks].
+  /// Response message for
+  /// [CloudChannelService.ListChannelPartnerLinks][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerLinks].
   /// </summary>
   public sealed partial class ListChannelPartnerLinksResponse : pb::IMessage<ListChannelPartnerLinksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6248,7 +6282,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListChannelPartnerLinksRequest.page_token][google.cloud.channel.v1.ListChannelPartnerLinksRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListChannelPartnerLinksRequest.page_token][google.cloud.channel.v1.ListChannelPartnerLinksRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6407,7 +6443,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.GetChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.GetChannelPartnerLink].
+  /// Request message for
+  /// [CloudChannelService.GetChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.GetChannelPartnerLink].
   /// </summary>
   public sealed partial class GetChannelPartnerLinkRequest : pb::IMessage<GetChannelPartnerLinkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6644,7 +6681,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.CreateChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerLink]
+  /// Request message for
+  /// [CloudChannelService.CreateChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerLink]
   /// </summary>
   public sealed partial class CreateChannelPartnerLinkRequest : pb::IMessage<CreateChannelPartnerLinkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6892,7 +6930,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.UpdateChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerLink]
+  /// Request message for
+  /// [CloudChannelService.UpdateChannelPartnerLink][google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerLink]
   /// </summary>
   public sealed partial class UpdateChannelPartnerLinkRequest : pb::IMessage<UpdateChannelPartnerLinkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6961,8 +7000,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ChannelPartnerLinkFieldNumber = 2;
     private global::Google.Cloud.Channel.V1.ChannelPartnerLink channelPartnerLink_;
     /// <summary>
-    /// Required. The channel partner link to update. Only channel_partner_link.link_state
-    /// is allowed for updates.
+    /// Required. The channel partner link to update. Only
+    /// channel_partner_link.link_state is allowed for updates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7190,7 +7229,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.GetCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig].
+  /// Request message for
+  /// [CloudChannelService.GetCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig].
   /// </summary>
   public sealed partial class GetCustomerRepricingConfigRequest : pb::IMessage<GetCustomerRepricingConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7387,7 +7427,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs].
+  /// Request message for
+  /// [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs].
   /// </summary>
   public sealed partial class ListCustomerRepricingConfigsRequest : pb::IMessage<ListCustomerRepricingConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7458,9 +7499,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of repricing configs to return. The service may return
-    /// fewer than this value. If unspecified, returns a maximum of 50 rules. The
-    /// maximum value is 100; values above 100 will be coerced to 100.
+    /// Optional. The maximum number of repricing configs to return. The service
+    /// may return fewer than this value. If unspecified, returns a maximum of 50
+    /// rules. The maximum value is 100; values above 100 will be coerced to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7477,8 +7518,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token identifying a page of results beyond the first page.
     /// Obtained through
-    /// [ListCustomerRepricingConfigsResponse.next_page_token][google.cloud.channel.v1.ListCustomerRepricingConfigsResponse.next_page_token] of the previous
-    /// [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs] call.
+    /// [ListCustomerRepricingConfigsResponse.next_page_token][google.cloud.channel.v1.ListCustomerRepricingConfigsResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7716,7 +7759,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs].
+  /// Response message for
+  /// [CloudChannelService.ListCustomerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs].
   /// </summary>
   public sealed partial class ListCustomerRepricingConfigsResponse : pb::IMessage<ListCustomerRepricingConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7782,8 +7826,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListCustomerRepricingConfigsRequest.page_token][google.cloud.channel.v1.ListCustomerRepricingConfigsRequest.page_token] to obtain that
-    /// page.
+    /// Pass to
+    /// [ListCustomerRepricingConfigsRequest.page_token][google.cloud.channel.v1.ListCustomerRepricingConfigsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7942,7 +7987,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig].
+  /// Request message for
+  /// [CloudChannelService.CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig].
   /// </summary>
   public sealed partial class CreateCustomerRepricingConfigRequest : pb::IMessage<CreateCustomerRepricingConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7993,8 +8039,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the customer that will receive this repricing config.
-    /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+    /// Required. The resource name of the customer that will receive this
+    /// repricing config. Parent uses the format:
+    /// accounts/{account_id}/customers/{customer_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8187,7 +8234,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.UpdateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig].
+  /// Request message for
+  /// [CloudChannelService.UpdateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig].
   /// </summary>
   public sealed partial class UpdateCustomerRepricingConfigRequest : pb::IMessage<UpdateCustomerRepricingConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8391,7 +8439,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.DeleteCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig].
+  /// Request message for
+  /// [CloudChannelService.DeleteCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig].
   /// </summary>
   public sealed partial class DeleteCustomerRepricingConfigRequest : pb::IMessage<DeleteCustomerRepricingConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8441,8 +8490,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the customer repricing config rule to delete.
-    /// Format:
+    /// Required. The resource name of the customer repricing config rule to
+    /// delete. Format:
     /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8588,7 +8637,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.GetChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig]
+  /// Request message for
+  /// [CloudChannelService.GetChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig]
   /// </summary>
   public sealed partial class GetChannelPartnerRepricingConfigRequest : pb::IMessage<GetChannelPartnerRepricingConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8839,8 +8889,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink].
-    /// Parent uses the format:
+    /// Required. The resource name of the account's
+    /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]. Parent
+    /// uses the format:
     /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}.
     /// Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs
     /// for all channel partners.
@@ -8858,9 +8909,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of repricing configs to return. The service may return
-    /// fewer than this value. If unspecified, returns a maximum of 50 rules. The
-    /// maximum value is 100; values above 100 will be coerced to 100.
+    /// Optional. The maximum number of repricing configs to return. The service
+    /// may return fewer than this value. If unspecified, returns a maximum of 50
+    /// rules. The maximum value is 100; values above 100 will be coerced to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8877,8 +8928,10 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. A token identifying a page of results beyond the first page.
     /// Obtained through
-    /// [ListChannelPartnerRepricingConfigsResponse.next_page_token][google.cloud.channel.v1.ListChannelPartnerRepricingConfigsResponse.next_page_token] of the
-    /// previous [CloudChannelService.ListChannelPartnerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs] call.
+    /// [ListChannelPartnerRepricingConfigsResponse.next_page_token][google.cloud.channel.v1.ListChannelPartnerRepricingConfigsResponse.next_page_token]
+    /// of the previous
+    /// [CloudChannelService.ListChannelPartnerRepricingConfigs][google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8893,10 +8946,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. A filter for [CloudChannelService.ListChannelPartnerRepricingConfigs]
-    /// results (channel_partner_link only). You can use this filter when you
-    /// support a BatchGet-like query.
-    /// To use the filter, you must set
+    /// Optional. A filter for
+    /// [CloudChannelService.ListChannelPartnerRepricingConfigs] results
+    /// (channel_partner_link only). You can use this filter when you support a
+    /// BatchGet-like query. To use the filter, you must set
     /// `parent=accounts/{account_id}/channelPartnerLinks/-`.
     ///
     /// Example: `channel_partner_link =
@@ -9185,8 +9238,9 @@ namespace Google.Cloud.Channel.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListChannelPartnerRepricingConfigsRequest.page_token][google.cloud.channel.v1.ListChannelPartnerRepricingConfigsRequest.page_token] to obtain
-    /// that page.
+    /// Pass to
+    /// [ListChannelPartnerRepricingConfigsRequest.page_token][google.cloud.channel.v1.ListChannelPartnerRepricingConfigsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9397,8 +9451,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the ChannelPartner that will receive the repricing
-    /// config. Parent uses the format:
+    /// Required. The resource name of the ChannelPartner that will receive the
+    /// repricing config. Parent uses the format:
     /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9847,7 +9901,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the channel partner repricing config rule to delete.
+    /// Required. The resource name of the channel partner repricing config rule to
+    /// delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9992,7 +10047,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.CreateEntitlement][google.cloud.channel.v1.CloudChannelService.CreateEntitlement]
+  /// Request message for
+  /// [CloudChannelService.CreateEntitlement][google.cloud.channel.v1.CloudChannelService.CreateEntitlement]
   /// </summary>
   public sealed partial class CreateEntitlementRequest : pb::IMessage<CreateEntitlementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10044,9 +10100,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the reseller's customer account in which to create the
-    /// entitlement.
-    /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+    /// Required. The resource name of the reseller's customer account in which to
+    /// create the entitlement. Parent uses the format:
+    /// accounts/{account_id}/customers/{customer_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10076,8 +10132,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 5;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -10288,7 +10345,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.TransferEntitlements][google.cloud.channel.v1.CloudChannelService.TransferEntitlements].
+  /// Request message for
+  /// [CloudChannelService.TransferEntitlements][google.cloud.channel.v1.CloudChannelService.TransferEntitlements].
   /// </summary>
   public sealed partial class TransferEntitlementsRequest : pb::IMessage<TransferEntitlementsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10341,9 +10399,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the reseller's customer account that will receive
-    /// transferred entitlements.
-    /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+    /// Required. The resource name of the reseller's customer account that will
+    /// receive transferred entitlements. Parent uses the format:
+    /// accounts/{account_id}/customers/{customer_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10390,8 +10448,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 6;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -10607,7 +10666,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Response message for [CloudChannelService.TransferEntitlements][google.cloud.channel.v1.CloudChannelService.TransferEntitlements].
+  /// Response message for
+  /// [CloudChannelService.TransferEntitlements][google.cloud.channel.v1.CloudChannelService.TransferEntitlements].
   /// This is put in the response field of google.longrunning.Operation.
   /// </summary>
   public sealed partial class TransferEntitlementsResponse : pb::IMessage<TransferEntitlementsResponse>
@@ -10792,7 +10852,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.TransferEntitlementsToGoogle][google.cloud.channel.v1.CloudChannelService.TransferEntitlementsToGoogle].
+  /// Request message for
+  /// [CloudChannelService.TransferEntitlementsToGoogle][google.cloud.channel.v1.CloudChannelService.TransferEntitlementsToGoogle].
   /// </summary>
   public sealed partial class TransferEntitlementsToGoogleRequest : pb::IMessage<TransferEntitlementsToGoogleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10844,9 +10905,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the reseller's customer account where the entitlements
-    /// transfer from.
-    /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+    /// Required. The resource name of the reseller's customer account where the
+    /// entitlements transfer from. Parent uses the format:
+    /// accounts/{account_id}/customers/{customer_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10875,8 +10936,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -11140,10 +11202,12 @@ namespace Google.Cloud.Channel.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Channel.V1.Parameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter>();
     /// <summary>
-    /// Required. Entitlement parameters to update. You can only change editable parameters.
+    /// Required. Entitlement parameters to update. You can only change editable
+    /// parameters.
     ///
     /// To view the available Parameters for a request, refer to the
-    /// [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions] from the desired offer.
+    /// [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions]
+    /// from the desired offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11155,8 +11219,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -11387,7 +11452,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ChangeRenewalSettings][google.cloud.channel.v1.CloudChannelService.ChangeRenewalSettings].
+  /// Request message for
+  /// [CloudChannelService.ChangeRenewalSettings][google.cloud.channel.v1.CloudChannelService.ChangeRenewalSettings].
   /// </summary>
   public sealed partial class ChangeRenewalSettingsRequest : pb::IMessage<ChangeRenewalSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11471,8 +11537,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 5;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -11683,7 +11750,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ChangeOffer][google.cloud.channel.v1.CloudChannelService.ChangeOffer].
+  /// Request message for
+  /// [CloudChannelService.ChangeOffer][google.cloud.channel.v1.CloudChannelService.ChangeOffer].
   /// </summary>
   public sealed partial class ChangeOfferRequest : pb::IMessage<ChangeOfferRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11772,8 +11840,10 @@ namespace Google.Cloud.Channel.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Channel.V1.Parameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter>();
     /// <summary>
-    /// Optional. Parameters needed to purchase the Offer. To view the available Parameters
-    /// refer to the [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions] from the desired offer.
+    /// Optional. Parameters needed to purchase the Offer. To view the available
+    /// Parameters refer to the
+    /// [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions]
+    /// from the desired offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11800,8 +11870,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 6;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -12041,7 +12112,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.StartPaidService][google.cloud.channel.v1.CloudChannelService.StartPaidService].
+  /// Request message for
+  /// [CloudChannelService.StartPaidService][google.cloud.channel.v1.CloudChannelService.StartPaidService].
   /// </summary>
   public sealed partial class StartPaidServiceRequest : pb::IMessage<StartPaidServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12109,8 +12181,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -12288,7 +12361,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.CancelEntitlement][google.cloud.channel.v1.CloudChannelService.CancelEntitlement].
+  /// Request message for
+  /// [CloudChannelService.CancelEntitlement][google.cloud.channel.v1.CloudChannelService.CancelEntitlement].
   /// </summary>
   public sealed partial class CancelEntitlementRequest : pb::IMessage<CancelEntitlementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12356,8 +12430,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -12535,7 +12610,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.SuspendEntitlement][google.cloud.channel.v1.CloudChannelService.SuspendEntitlement].
+  /// Request message for
+  /// [CloudChannelService.SuspendEntitlement][google.cloud.channel.v1.CloudChannelService.SuspendEntitlement].
   /// </summary>
   public sealed partial class SuspendEntitlementRequest : pb::IMessage<SuspendEntitlementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12603,8 +12679,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -12782,7 +12859,8 @@ namespace Google.Cloud.Channel.V1 {
   }
 
   /// <summary>
-  /// Request message for [CloudChannelService.ActivateEntitlement][google.cloud.channel.v1.CloudChannelService.ActivateEntitlement].
+  /// Request message for
+  /// [CloudChannelService.ActivateEntitlement][google.cloud.channel.v1.CloudChannelService.ActivateEntitlement].
   /// </summary>
   public sealed partial class ActivateEntitlementRequest : pb::IMessage<ActivateEntitlementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12850,8 +12928,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. You can specify an optional unique request ID, and if you need to retry
-    /// your request, the server will know to ignore the request if it's complete.
+    /// Optional. You can specify an optional unique request ID, and if you need to
+    /// retry your request, the server will know to ignore the request if it's
+    /// complete.
     ///
     /// For example, you make an initial request and the request times out. If you
     /// make the request again with the same request ID, the server can check if
@@ -13295,9 +13374,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, returns at most 100 Products.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, returns at most 100 Products. The maximum value
+    /// is 1000; the server will coerce values above 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13857,9 +13936,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, returns at most 100 SKUs.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, returns at most 100 SKUs. The maximum value is
+    /// 1000; the server will coerce values above 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14411,8 +14490,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the reseller account from which to list Offers.
-    /// Parent uses the format: accounts/{account_id}.
+    /// Required. The resource name of the reseller account from which to list
+    /// Offers. Parent uses the format: accounts/{account_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14427,9 +14506,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, returns at most 500 Offers.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, returns at most 500 Offers. The maximum value is
+    /// 1000; the server will coerce values above 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15053,9 +15132,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, returns at most 100 SKUs.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, returns at most 100 SKUs. The maximum value is
+    /// 1000; the server will coerce values above 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15606,7 +15685,8 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// List SKUs for upgrading or downgrading an entitlement. Make the purchase
-      /// using [CloudChannelService.ChangeOffer][google.cloud.channel.v1.CloudChannelService.ChangeOffer].
+      /// using
+      /// [CloudChannelService.ChangeOffer][google.cloud.channel.v1.CloudChannelService.ChangeOffer].
       /// </summary>
       public sealed partial class ChangeOfferPurchase : pb::IMessage<ChangeOfferPurchase>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16411,9 +16491,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server might return fewer results than requested.
-    /// If unspecified, returns at most 100 Offers.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. Requested page size. Server might return fewer results than
+    /// requested. If unspecified, returns at most 100 Offers. The maximum value is
+    /// 1000; the server will coerce values above 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17700,7 +17780,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ServiceAccountFieldNumber = 2;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Required. Service account that provides subscriber access to the registered topic.
+    /// Required. Service account that provides subscriber access to the registered
+    /// topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18130,7 +18211,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ServiceAccountFieldNumber = 2;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Required. Service account to unregister from subscriber access to the topic.
+    /// Required. Service account to unregister from subscriber access to the
+    /// topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18561,10 +18643,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of service accounts to return. The service may return
-    /// fewer than this value.
-    /// If unspecified, returns at most 100 service accounts.
-    /// The maximum value is 1000; the server will coerce values above 1000.
+    /// Optional. The maximum number of service accounts to return. The service may
+    /// return fewer than this value. If unspecified, returns at most 100 service
+    /// accounts. The maximum value is 1000; the server will coerce values above
+    /// 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
