@@ -319,6 +319,10 @@ namespace Google.Maps.Routing.V2 {
     /// and in the event of rerouting honor the original intention when Routes
     /// ComputeRoutes is called. Customers should treat this token as an
     /// opaque blob.
+    /// NOTE: `Route.route_token` is only available for requests that have set
+    /// `ComputeRoutesRequest.routing_preference` to `TRAFFIC_AWARE` or
+    /// `TRAFFIC_AWARE_OPTIMAL`. `Route.route_token` is also not supported for
+    /// requests that have Via waypoints.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

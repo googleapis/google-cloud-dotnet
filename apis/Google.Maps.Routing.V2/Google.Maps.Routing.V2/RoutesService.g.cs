@@ -330,7 +330,8 @@ namespace Google.Maps.Routing.V2 {
     public const int ComputeAlternativeRoutesFieldNumber = 8;
     private bool computeAlternativeRoutes_;
     /// <summary>
-    /// Optional. Specifies whether to calculate alternate routes in addition to the route.
+    /// Optional. Specifies whether to calculate alternate routes in addition to
+    /// the route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -402,12 +403,11 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute) x);
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute> requestedReferenceRoutes_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute>();
     /// <summary>
-    /// Optional. Specifies what reference routes to calculate as part of the request in
-    /// addition to the default route.
-    /// A reference route is a route with a different route calculation objective
-    /// than the default route. For example an FUEL_EFFICIENT reference route
-    /// calculation takes into account various parameters that would generate an
-    /// optimal fuel efficient route.
+    /// Optional. Specifies what reference routes to calculate as part of the
+    /// request in addition to the default route. A reference route is a route with
+    /// a different route calculation objective than the default route. For example
+    /// an FUEL_EFFICIENT reference route calculation takes into account various
+    /// parameters that would generate an optimal fuel efficient route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1174,8 +1174,8 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.Routing.V2.RouteMatrixOrigin.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteMatrixOrigin> origins_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteMatrixOrigin>();
     /// <summary>
-    /// Required. Array of origins, which determines the rows of the response matrix.
-    /// Several size restrictions apply to the cardinality of origins and
+    /// Required. Array of origins, which determines the rows of the response
+    /// matrix. Several size restrictions apply to the cardinality of origins and
     /// destinations:
     ///
     /// * The number of elements (origins × destinations) must be no greater than
@@ -1197,7 +1197,8 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForMessage(18, global::Google.Maps.Routing.V2.RouteMatrixDestination.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteMatrixDestination> destinations_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteMatrixDestination>();
     /// <summary>
-    /// Required. Array of destinations, which determines the columns of the response matrix.
+    /// Required. Array of destinations, which determines the columns of the
+    /// response matrix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1224,13 +1225,13 @@ namespace Google.Maps.Routing.V2 {
     public const int RoutingPreferenceFieldNumber = 4;
     private global::Google.Maps.Routing.V2.RoutingPreference routingPreference_ = global::Google.Maps.Routing.V2.RoutingPreference.Unspecified;
     /// <summary>
-    /// Optional. Specifies how to compute the route. The server attempts to use the selected
-    /// routing preference to compute the route. If the routing preference results
-    /// in an error or an extra long latency, an error is returned. In the future,
-    /// we might implement a fallback mechanism to use a different option when the
-    /// preferred option does not give a valid result. You can specify this option
-    /// only when the `travel_mode` is `DRIVE` or `TWO_WHEELER`, otherwise the
-    /// request fails.
+    /// Optional. Specifies how to compute the route. The server attempts to use
+    /// the selected routing preference to compute the route. If the routing
+    /// preference results in an error or an extra long latency, an error is
+    /// returned. In the future, we might implement a fallback mechanism to use a
+    /// different option when the preferred option does not give a valid result.
+    /// You can specify this option only when the `travel_mode` is `DRIVE` or
+    /// `TWO_WHEELER`, otherwise the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1245,9 +1246,9 @@ namespace Google.Maps.Routing.V2 {
     public const int DepartureTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp departureTime_;
     /// <summary>
-    /// Optional. The departure time. If you don't set this value, this defaults to the time
-    /// that you made the request. If you set this value to a time that has already
-    /// occurred, the request fails.
+    /// Optional. The departure time. If you don't set this value, this defaults to
+    /// the time that you made the request. If you set this value to a time that
+    /// has already occurred, the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
