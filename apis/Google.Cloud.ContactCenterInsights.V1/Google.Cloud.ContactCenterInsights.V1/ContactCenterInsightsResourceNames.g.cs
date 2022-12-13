@@ -92,6 +92,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
     }
 
+    public partial class IngestConversationsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateAnalysisRequest
     {
         /// <summary>
@@ -137,6 +149,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::AnalysisName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BulkAnalyzeConversationsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 
@@ -245,6 +269,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : IssueModelName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteIssueRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::IssueName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::IssueName IssueName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::IssueName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

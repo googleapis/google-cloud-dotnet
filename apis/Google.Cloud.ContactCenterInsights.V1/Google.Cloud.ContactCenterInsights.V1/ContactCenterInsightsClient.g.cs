@@ -60,6 +60,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
             GetAnalysisSettings = existing.GetAnalysisSettings;
             ListAnalysesSettings = existing.ListAnalysesSettings;
             DeleteAnalysisSettings = existing.DeleteAnalysisSettings;
+            BulkAnalyzeConversationsSettings = existing.BulkAnalyzeConversationsSettings;
+            BulkAnalyzeConversationsOperationsSettings = existing.BulkAnalyzeConversationsOperationsSettings.Clone();
+            IngestConversationsSettings = existing.IngestConversationsSettings;
+            IngestConversationsOperationsSettings = existing.IngestConversationsOperationsSettings.Clone();
             ExportInsightsDataSettings = existing.ExportInsightsDataSettings;
             ExportInsightsDataOperationsSettings = existing.ExportInsightsDataOperationsSettings.Clone();
             CreateIssueModelSettings = existing.CreateIssueModelSettings;
@@ -76,6 +80,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             GetIssueSettings = existing.GetIssueSettings;
             ListIssuesSettings = existing.ListIssuesSettings;
             UpdateIssueSettings = existing.UpdateIssueSettings;
+            DeleteIssueSettings = existing.DeleteIssueSettings;
             CalculateIssueModelStatsSettings = existing.CalculateIssueModelStatsSettings;
             CreatePhraseMatcherSettings = existing.CreatePhraseMatcherSettings;
             GetPhraseMatcherSettings = existing.GetPhraseMatcherSettings;
@@ -281,6 +286,80 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteAnalysisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.BulkAnalyzeConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkAnalyzeConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkAnalyzeConversationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.BulkAnalyzeConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkAnalyzeConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkAnalyzeConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.IngestConversations</c> and
+        /// <c>ContactCenterInsightsClient.IngestConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings IngestConversationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.IngestConversations</c> and
+        /// <c>ContactCenterInsightsClient.IngestConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings IngestConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -576,6 +655,24 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateIssueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteIssue</c> and <c>ContactCenterInsightsClient.DeleteIssueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteIssueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2048,6 +2145,329 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeleteAnalysisAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> BulkAnalyzeConversations(BulkAnalyzeConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(BulkAnalyzeConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(BulkAnalyzeConversationsRequest request, st::CancellationToken cancellationToken) =>
+            BulkAnalyzeConversationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkAnalyzeConversations</c>.</summary>
+        public virtual lro::OperationsClient BulkAnalyzeConversationsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkAnalyzeConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> PollOnceBulkAnalyzeConversations(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkAnalyzeConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkAnalyzeConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> PollOnceBulkAnalyzeConversationsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkAnalyzeConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> BulkAnalyzeConversations(string parent, string filter, float analysisPercentage, gaxgrpc::CallSettings callSettings = null) =>
+            BulkAnalyzeConversations(new BulkAnalyzeConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                AnalysisPercentage = analysisPercentage,
+            }, callSettings);
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(string parent, string filter, float analysisPercentage, gaxgrpc::CallSettings callSettings = null) =>
+            BulkAnalyzeConversationsAsync(new BulkAnalyzeConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                AnalysisPercentage = analysisPercentage,
+            }, callSettings);
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(string parent, string filter, float analysisPercentage, st::CancellationToken cancellationToken) =>
+            BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> BulkAnalyzeConversations(gagr::LocationName parent, string filter, float analysisPercentage, gaxgrpc::CallSettings callSettings = null) =>
+            BulkAnalyzeConversations(new BulkAnalyzeConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                AnalysisPercentage = analysisPercentage,
+            }, callSettings);
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(gagr::LocationName parent, string filter, float analysisPercentage, gaxgrpc::CallSettings callSettings = null) =>
+            BulkAnalyzeConversationsAsync(new BulkAnalyzeConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                AnalysisPercentage = analysisPercentage,
+            }, callSettings);
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="analysisPercentage">
+        /// Required. Percentage of selected conversation to analyze, between
+        /// [0, 100].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(gagr::LocationName parent, string filter, float analysisPercentage, st::CancellationToken cancellationToken) =>
+            BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IngestConversationsResponse, IngestConversationsMetadata> IngestConversations(IngestConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(IngestConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(IngestConversationsRequest request, st::CancellationToken cancellationToken) =>
+            IngestConversationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>IngestConversations</c>.</summary>
+        public virtual lro::OperationsClient IngestConversationsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>IngestConversations</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<IngestConversationsResponse, IngestConversationsMetadata> PollOnceIngestConversations(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), IngestConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>IngestConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> PollOnceIngestConversationsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), IngestConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IngestConversationsResponse, IngestConversationsMetadata> IngestConversations(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            IngestConversations(new IngestConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            IngestConversationsAsync(new IngestConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(string parent, st::CancellationToken cancellationToken) =>
+            IngestConversationsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IngestConversationsResponse, IngestConversationsMetadata> IngestConversations(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            IngestConversations(new IngestConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            IngestConversationsAsync(new IngestConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new conversations.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            IngestConversationsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Export insights data to a destination defined in the request body.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3317,6 +3737,111 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Issue> UpdateIssueAsync(Issue issue, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateIssueAsync(issue, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteIssue(DeleteIssueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(DeleteIssueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(DeleteIssueRequest request, st::CancellationToken cancellationToken) =>
+            DeleteIssueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteIssue(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssue(new DeleteIssueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueAsync(new DeleteIssueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteIssueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteIssue(IssueName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssue(new DeleteIssueRequest
+            {
+                IssueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(IssueName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueAsync(new DeleteIssueRequest
+            {
+                IssueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteIssueAsync(IssueName name, st::CancellationToken cancellationToken) =>
+            DeleteIssueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets an issue model's statistics.
@@ -4827,6 +5352,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<DeleteAnalysisRequest, wkt::Empty> _callDeleteAnalysis;
 
+        private readonly gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> _callBulkAnalyzeConversations;
+
+        private readonly gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> _callIngestConversations;
+
         private readonly gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> _callExportInsightsData;
 
         private readonly gaxgrpc::ApiCall<CreateIssueModelRequest, lro::Operation> _callCreateIssueModel;
@@ -4848,6 +5377,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         private readonly gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> _callListIssues;
 
         private readonly gaxgrpc::ApiCall<UpdateIssueRequest, Issue> _callUpdateIssue;
+
+        private readonly gaxgrpc::ApiCall<DeleteIssueRequest, wkt::Empty> _callDeleteIssue;
 
         private readonly gaxgrpc::ApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse> _callCalculateIssueModelStats;
 
@@ -4890,6 +5421,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             ContactCenterInsightsSettings effectiveSettings = settings ?? ContactCenterInsightsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
+            BulkAnalyzeConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkAnalyzeConversationsOperationsSettings, logger);
+            IngestConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.IngestConversationsOperationsSettings, logger);
             ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings, logger);
             CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings, logger);
             DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings, logger);
@@ -4922,6 +5455,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callDeleteAnalysis = clientHelper.BuildApiCall<DeleteAnalysisRequest, wkt::Empty>("DeleteAnalysis", grpcClient.DeleteAnalysisAsync, grpcClient.DeleteAnalysis, effectiveSettings.DeleteAnalysisSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAnalysis);
             Modify_DeleteAnalysisApiCall(ref _callDeleteAnalysis);
+            _callBulkAnalyzeConversations = clientHelper.BuildApiCall<BulkAnalyzeConversationsRequest, lro::Operation>("BulkAnalyzeConversations", grpcClient.BulkAnalyzeConversationsAsync, grpcClient.BulkAnalyzeConversations, effectiveSettings.BulkAnalyzeConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBulkAnalyzeConversations);
+            Modify_BulkAnalyzeConversationsApiCall(ref _callBulkAnalyzeConversations);
+            _callIngestConversations = clientHelper.BuildApiCall<IngestConversationsRequest, lro::Operation>("IngestConversations", grpcClient.IngestConversationsAsync, grpcClient.IngestConversations, effectiveSettings.IngestConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callIngestConversations);
+            Modify_IngestConversationsApiCall(ref _callIngestConversations);
             _callExportInsightsData = clientHelper.BuildApiCall<ExportInsightsDataRequest, lro::Operation>("ExportInsightsData", grpcClient.ExportInsightsDataAsync, grpcClient.ExportInsightsData, effectiveSettings.ExportInsightsDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportInsightsData);
             Modify_ExportInsightsDataApiCall(ref _callExportInsightsData);
@@ -4955,6 +5494,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callUpdateIssue = clientHelper.BuildApiCall<UpdateIssueRequest, Issue>("UpdateIssue", grpcClient.UpdateIssueAsync, grpcClient.UpdateIssue, effectiveSettings.UpdateIssueSettings).WithGoogleRequestParam("issue.name", request => request.Issue?.Name);
             Modify_ApiCall(ref _callUpdateIssue);
             Modify_UpdateIssueApiCall(ref _callUpdateIssue);
+            _callDeleteIssue = clientHelper.BuildApiCall<DeleteIssueRequest, wkt::Empty>("DeleteIssue", grpcClient.DeleteIssueAsync, grpcClient.DeleteIssue, effectiveSettings.DeleteIssueSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteIssue);
+            Modify_DeleteIssueApiCall(ref _callDeleteIssue);
             _callCalculateIssueModelStats = clientHelper.BuildApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse>("CalculateIssueModelStats", grpcClient.CalculateIssueModelStatsAsync, grpcClient.CalculateIssueModelStats, effectiveSettings.CalculateIssueModelStatsSettings).WithGoogleRequestParam("issue_model", request => request.IssueModel);
             Modify_ApiCall(ref _callCalculateIssueModelStats);
             Modify_CalculateIssueModelStatsApiCall(ref _callCalculateIssueModelStats);
@@ -5020,6 +5562,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_DeleteAnalysisApiCall(ref gaxgrpc::ApiCall<DeleteAnalysisRequest, wkt::Empty> call);
 
+        partial void Modify_BulkAnalyzeConversationsApiCall(ref gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> call);
+
+        partial void Modify_IngestConversationsApiCall(ref gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> call);
+
         partial void Modify_ExportInsightsDataApiCall(ref gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> call);
 
         partial void Modify_CreateIssueModelApiCall(ref gaxgrpc::ApiCall<CreateIssueModelRequest, lro::Operation> call);
@@ -5041,6 +5587,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_ListIssuesApiCall(ref gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> call);
 
         partial void Modify_UpdateIssueApiCall(ref gaxgrpc::ApiCall<UpdateIssueRequest, Issue> call);
+
+        partial void Modify_DeleteIssueApiCall(ref gaxgrpc::ApiCall<DeleteIssueRequest, wkt::Empty> call);
 
         partial void Modify_CalculateIssueModelStatsApiCall(ref gaxgrpc::ApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse> call);
 
@@ -5093,6 +5641,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_DeleteAnalysisRequest(ref DeleteAnalysisRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BulkAnalyzeConversationsRequest(ref BulkAnalyzeConversationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_IngestConversationsRequest(ref IngestConversationsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ExportInsightsDataRequest(ref ExportInsightsDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateIssueModelRequest(ref CreateIssueModelRequest request, ref gaxgrpc::CallSettings settings);
@@ -5114,6 +5666,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_ListIssuesRequest(ref ListIssuesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateIssueRequest(ref UpdateIssueRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteIssueRequest(ref DeleteIssueRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CalculateIssueModelStatsRequest(ref CalculateIssueModelStatsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5362,6 +5916,62 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_DeleteAnalysisRequest(ref request, ref callSettings);
             return _callDeleteAnalysis.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkAnalyzeConversations</c>.</summary>
+        public override lro::OperationsClient BulkAnalyzeConversationsOperationsClient { get; }
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> BulkAnalyzeConversations(BulkAnalyzeConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkAnalyzeConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>(_callBulkAnalyzeConversations.Sync(request, callSettings), BulkAnalyzeConversationsOperationsClient);
+        }
+
+        /// <summary>
+        /// Analyzes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(BulkAnalyzeConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkAnalyzeConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>(await _callBulkAnalyzeConversations.Async(request, callSettings).ConfigureAwait(false), BulkAnalyzeConversationsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>IngestConversations</c>.</summary>
+        public override lro::OperationsClient IngestConversationsOperationsClient { get; }
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<IngestConversationsResponse, IngestConversationsMetadata> IngestConversations(IngestConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>(_callIngestConversations.Sync(request, callSettings), IngestConversationsOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports conversations and processes them according to the user's
+        /// configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>> IngestConversationsAsync(IngestConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<IngestConversationsResponse, IngestConversationsMetadata>(await _callIngestConversations.Async(request, callSettings).ConfigureAwait(false), IngestConversationsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>ExportInsightsData</c>.</summary>
@@ -5645,6 +6255,30 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_UpdateIssueRequest(ref request, ref callSettings);
             return _callUpdateIssue.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteIssue(DeleteIssueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIssueRequest(ref request, ref callSettings);
+            _callDeleteIssue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteIssueAsync(DeleteIssueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIssueRequest(ref request, ref callSettings);
+            return _callDeleteIssue.Async(request, callSettings);
         }
 
         /// <summary>

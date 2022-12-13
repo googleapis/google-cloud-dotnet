@@ -2127,4 +2127,23 @@ namespace Google.Cloud.ContactCenterInsights.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class AnnotatorSelector
+    {
+        /// <summary>
+        /// <see cref="PhraseMatcherName"/>-typed view over the <see cref="PhraseMatchers"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PhraseMatcherName> PhraseMatchersAsPhraseMatcherNames
+        {
+            get => new gax::ResourceNameList<PhraseMatcherName>(PhraseMatchers, s => string.IsNullOrEmpty(s) ? null : PhraseMatcherName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="IssueModelName"/>-typed view over the <see cref="IssueModels"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<IssueModelName> IssueModelsAsIssueModelNames
+        {
+            get => new gax::ResourceNameList<IssueModelName>(IssueModels, s => string.IsNullOrEmpty(s) ? null : IssueModelName.Parse(s, allowUnparsed: true));
+        }
+    }
 }
