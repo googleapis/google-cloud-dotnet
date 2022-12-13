@@ -35,17 +35,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "dXRDb25maWcSQAoKZ2NzX3ByZWZpeBgBIAEoCzIqLmdvb2dsZS5jbG91ZC5k",
             "b2N1bWVudGFpLnYxYmV0YTMuR2NzUHJlZml4SAASRgoNZ2NzX2RvY3VtZW50",
             "cxgCIAEoCzItLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2Nz",
-            "RG9jdW1lbnRzSABCCAoGc291cmNlIt0BChREb2N1bWVudE91dHB1dENvbmZp",
+            "RG9jdW1lbnRzSABCCAoGc291cmNlIo8DChREb2N1bWVudE91dHB1dENvbmZp",
             "ZxJiChFnY3Nfb3V0cHV0X2NvbmZpZxgBIAEoCzJFLmdvb2dsZS5jbG91ZC5k",
             "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2NzT3V0",
-            "cHV0Q29uZmlnSAAaUgoPR2NzT3V0cHV0Q29uZmlnEg8KB2djc191cmkYASAB",
-            "KAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
-            "ZE1hc2tCDQoLZGVzdGluYXRpb25C7AEKI2NvbS5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MWJldGEzQg9Eb2N1bWVudElvUHJvdG9QAVpJZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFp",
-            "L3YxYmV0YTM7ZG9jdW1lbnRhaaoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJ",
-            "LlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIi",
-            "R29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "cHV0Q29uZmlnSAAagwIKD0djc091dHB1dENvbmZpZxIPCgdnY3NfdXJpGAEg",
+            "ASgJEi4KCmZpZWxkX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrEm0KD3NoYXJkaW5nX2NvbmZpZxgDIAEoCzJULmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2Nz",
+            "T3V0cHV0Q29uZmlnLlNoYXJkaW5nQ29uZmlnGkAKDlNoYXJkaW5nQ29uZmln",
+            "EhcKD3BhZ2VzX3Blcl9zaGFyZBgBIAEoBRIVCg1wYWdlc19vdmVybGFwGAIg",
+            "ASgFQg0KC2Rlc3RpbmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhM0IPRG9jdW1lbnRJb1Byb3RvUAFaSWdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1lbnRhaS92",
+            "MWJldGEzO2RvY3VtZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5W",
+            "MUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRhM+oCIkdv",
+            "b2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +58,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask", "ShardingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig.Parser, new[]{ "PagesPerShard", "PagesOverlap" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -1486,6 +1490,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public GcsOutputConfig(GcsOutputConfig other) : this() {
           gcsUri_ = other.gcsUri_;
           fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+          shardingConfig_ = other.shardingConfig_ != null ? other.shardingConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1527,6 +1532,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
         }
 
+        /// <summary>Field number for the "sharding_config" field.</summary>
+        public const int ShardingConfigFieldNumber = 3;
+        private global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig shardingConfig_;
+        /// <summary>
+        /// Specifies the sharding config for the output document.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig ShardingConfig {
+          get { return shardingConfig_; }
+          set {
+            shardingConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1544,6 +1564,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           if (GcsUri != other.GcsUri) return false;
           if (!object.Equals(FieldMask, other.FieldMask)) return false;
+          if (!object.Equals(ShardingConfig, other.ShardingConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1553,6 +1574,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           int hash = 1;
           if (GcsUri.Length != 0) hash ^= GcsUri.GetHashCode();
           if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+          if (shardingConfig_ != null) hash ^= ShardingConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1579,6 +1601,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(18);
             output.WriteMessage(FieldMask);
           }
+          if (shardingConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ShardingConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1597,6 +1623,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(18);
             output.WriteMessage(FieldMask);
           }
+          if (shardingConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ShardingConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1612,6 +1642,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           if (fieldMask_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+          }
+          if (shardingConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ShardingConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1633,6 +1666,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             FieldMask.MergeFrom(other.FieldMask);
+          }
+          if (other.shardingConfig_ != null) {
+            if (shardingConfig_ == null) {
+              ShardingConfig = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig();
+            }
+            ShardingConfig.MergeFrom(other.ShardingConfig);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1658,6 +1697,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
                 }
                 input.ReadMessage(FieldMask);
+                break;
+              }
+              case 26: {
+                if (shardingConfig_ == null) {
+                  ShardingConfig = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig();
+                }
+                input.ReadMessage(ShardingConfig);
                 break;
               }
             }
@@ -1686,10 +1732,260 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 input.ReadMessage(FieldMask);
                 break;
               }
+              case 26: {
+                if (shardingConfig_ == null) {
+                  ShardingConfig = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig();
+                }
+                input.ReadMessage(ShardingConfig);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the GcsOutputConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The sharding config for the output document.
+          /// </summary>
+          public sealed partial class ShardingConfig : pb::IMessage<ShardingConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ShardingConfig> _parser = new pb::MessageParser<ShardingConfig>(() => new ShardingConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ShardingConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ShardingConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ShardingConfig(ShardingConfig other) : this() {
+              pagesPerShard_ = other.pagesPerShard_;
+              pagesOverlap_ = other.pagesOverlap_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ShardingConfig Clone() {
+              return new ShardingConfig(this);
+            }
+
+            /// <summary>Field number for the "pages_per_shard" field.</summary>
+            public const int PagesPerShardFieldNumber = 1;
+            private int pagesPerShard_;
+            /// <summary>
+            /// The number of pages per shard.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int PagesPerShard {
+              get { return pagesPerShard_; }
+              set {
+                pagesPerShard_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "pages_overlap" field.</summary>
+            public const int PagesOverlapFieldNumber = 2;
+            private int pagesOverlap_;
+            /// <summary>
+            /// The number of overlapping pages between consecutive shards.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int PagesOverlap {
+              get { return pagesOverlap_; }
+              set {
+                pagesOverlap_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ShardingConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ShardingConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (PagesPerShard != other.PagesPerShard) return false;
+              if (PagesOverlap != other.PagesOverlap) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (PagesPerShard != 0) hash ^= PagesPerShard.GetHashCode();
+              if (PagesOverlap != 0) hash ^= PagesOverlap.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (PagesPerShard != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(PagesPerShard);
+              }
+              if (PagesOverlap != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(PagesOverlap);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (PagesPerShard != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(PagesPerShard);
+              }
+              if (PagesOverlap != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(PagesOverlap);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (PagesPerShard != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(PagesPerShard);
+              }
+              if (PagesOverlap != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(PagesOverlap);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ShardingConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.PagesPerShard != 0) {
+                PagesPerShard = other.PagesPerShard;
+              }
+              if (other.PagesOverlap != 0) {
+                PagesOverlap = other.PagesOverlap;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    PagesPerShard = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    PagesOverlap = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    PagesPerShard = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    PagesOverlap = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
