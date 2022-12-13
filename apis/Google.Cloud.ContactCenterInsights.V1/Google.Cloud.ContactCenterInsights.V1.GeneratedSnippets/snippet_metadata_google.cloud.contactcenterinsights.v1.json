@@ -1973,6 +1973,460 @@
       ]
     },
     {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_sync",
+      "title": "BulkAnalyzeConversationsRequestObject",
+      "description": "Snippet for BulkAnalyzeConversations",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_async",
+      "title": "BulkAnalyzeConversationsRequestObjectAsync",
+      "description": "Snippet for BulkAnalyzeConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_sync_flattened",
+      "title": "BulkAnalyzeConversations",
+      "description": "Snippet for BulkAnalyzeConversations",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_async_flattened",
+      "title": "BulkAnalyzeConversationsAsync",
+      "description": "Snippet for BulkAnalyzeConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_sync_flattened_resourceNames",
+      "title": "BulkAnalyzeConversationsResourceNames",
+      "description": "Snippet for BulkAnalyzeConversations",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkAnalyzeConversations_async_flattened_resourceNames",
+      "title": "BulkAnalyzeConversationsResourceNamesAsync",
+      "description": "Snippet for BulkAnalyzeConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkAnalyzeConversationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkAnalyzeConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkAnalyzeConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkAnalyzeConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync",
+      "title": "IngestConversationsRequestObject",
+      "description": "Snippet for IngestConversations",
+      "file": "ContactCenterInsightsClient.IngestConversationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_async",
+      "title": "IngestConversationsRequestObjectAsync",
+      "description": "Snippet for IngestConversationsAsync",
+      "file": "ContactCenterInsightsClient.IngestConversationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync_flattened",
+      "title": "IngestConversations",
+      "description": "Snippet for IngestConversations",
+      "file": "ContactCenterInsightsClient.IngestConversationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_async_flattened",
+      "title": "IngestConversationsAsync",
+      "description": "Snippet for IngestConversationsAsync",
+      "file": "ContactCenterInsightsClient.IngestConversationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync_flattened_resourceNames",
+      "title": "IngestConversationsResourceNames",
+      "description": "Snippet for IngestConversations",
+      "file": "ContactCenterInsightsClient.IngestConversationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_async_flattened_resourceNames",
+      "title": "IngestConversationsResourceNamesAsync",
+      "description": "Snippet for IngestConversationsAsync",
+      "file": "ContactCenterInsightsClient.IngestConversationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "IngestConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.IngestConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportInsightsData_sync",
       "title": "ExportInsightsDataRequestObject",
       "description": "Snippet for ExportInsightsData",
@@ -4315,6 +4769,230 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_sync",
+      "title": "DeleteIssueRequestObject",
+      "description": "Snippet for DeleteIssue",
+      "file": "ContactCenterInsightsClient.DeleteIssueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssue",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_async",
+      "title": "DeleteIssueRequestObjectAsync",
+      "description": "Snippet for DeleteIssueAsync",
+      "file": "ContactCenterInsightsClient.DeleteIssueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssueAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_sync_flattened",
+      "title": "DeleteIssue",
+      "description": "Snippet for DeleteIssue",
+      "file": "ContactCenterInsightsClient.DeleteIssueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssue",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_async_flattened",
+      "title": "DeleteIssueAsync",
+      "description": "Snippet for DeleteIssueAsync",
+      "file": "ContactCenterInsightsClient.DeleteIssueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssueAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_sync_flattened_resourceNames",
+      "title": "DeleteIssueResourceNames",
+      "description": "Snippet for DeleteIssue",
+      "file": "ContactCenterInsightsClient.DeleteIssueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssue",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssue_async_flattened_resourceNames",
+      "title": "DeleteIssueResourceNamesAsync",
+      "description": "Snippet for DeleteIssueAsync",
+      "file": "ContactCenterInsightsClient.DeleteIssueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIssueAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteIssue",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.DeleteIssue",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

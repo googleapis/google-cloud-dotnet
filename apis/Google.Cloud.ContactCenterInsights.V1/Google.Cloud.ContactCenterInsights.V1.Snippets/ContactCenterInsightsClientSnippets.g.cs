@@ -1289,6 +1289,392 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkAnalyzeConversations</summary>
+        public void BulkAnalyzeConversationsRequestObject()
+        {
+            // Snippet: BulkAnalyzeConversations(BulkAnalyzeConversationsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            BulkAnalyzeConversationsRequest request = new BulkAnalyzeConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                AnalysisPercentage = 0F,
+                AnnotatorSelector = new AnnotatorSelector(),
+            };
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = contactCenterInsightsClient.BulkAnalyzeConversations(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkAnalyzeConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkAnalyzeConversationsAsync</summary>
+        public async Task BulkAnalyzeConversationsRequestObjectAsync()
+        {
+            // Snippet: BulkAnalyzeConversationsAsync(BulkAnalyzeConversationsRequest, CallSettings)
+            // Additional: BulkAnalyzeConversationsAsync(BulkAnalyzeConversationsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkAnalyzeConversationsRequest request = new BulkAnalyzeConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                AnalysisPercentage = 0F,
+                AnnotatorSelector = new AnnotatorSelector(),
+            };
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = await contactCenterInsightsClient.BulkAnalyzeConversationsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkAnalyzeConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkAnalyzeConversations</summary>
+        public void BulkAnalyzeConversations()
+        {
+            // Snippet: BulkAnalyzeConversations(string, string, float, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string filter = "";
+            float analysisPercentage = 0F;
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = contactCenterInsightsClient.BulkAnalyzeConversations(parent, filter, analysisPercentage);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkAnalyzeConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkAnalyzeConversationsAsync</summary>
+        public async Task BulkAnalyzeConversationsAsync()
+        {
+            // Snippet: BulkAnalyzeConversationsAsync(string, string, float, CallSettings)
+            // Additional: BulkAnalyzeConversationsAsync(string, string, float, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string filter = "";
+            float analysisPercentage = 0F;
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = await contactCenterInsightsClient.BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkAnalyzeConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkAnalyzeConversations</summary>
+        public void BulkAnalyzeConversationsResourceNames()
+        {
+            // Snippet: BulkAnalyzeConversations(LocationName, string, float, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string filter = "";
+            float analysisPercentage = 0F;
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = contactCenterInsightsClient.BulkAnalyzeConversations(parent, filter, analysisPercentage);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkAnalyzeConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkAnalyzeConversationsAsync</summary>
+        public async Task BulkAnalyzeConversationsResourceNamesAsync()
+        {
+            // Snippet: BulkAnalyzeConversationsAsync(LocationName, string, float, CallSettings)
+            // Additional: BulkAnalyzeConversationsAsync(LocationName, string, float, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string filter = "";
+            float analysisPercentage = 0F;
+            // Make the request
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> response = await contactCenterInsightsClient.BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkAnalyzeConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkAnalyzeConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkAnalyzeConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversations</summary>
+        public void IngestConversationsRequestObject()
+        {
+            // Snippet: IngestConversations(IngestConversationsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IngestConversationsRequest request = new IngestConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new IngestConversationsRequest.Types.GcsSource(),
+                TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
+                ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
+            };
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversationsAsync</summary>
+        public async Task IngestConversationsRequestObjectAsync()
+        {
+            // Snippet: IngestConversationsAsync(IngestConversationsRequest, CallSettings)
+            // Additional: IngestConversationsAsync(IngestConversationsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IngestConversationsRequest request = new IngestConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new IngestConversationsRequest.Types.GcsSource(),
+                TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
+                ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
+            };
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceIngestConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversations</summary>
+        public void IngestConversations()
+        {
+            // Snippet: IngestConversations(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversationsAsync</summary>
+        public async Task IngestConversationsAsync()
+        {
+            // Snippet: IngestConversationsAsync(string, CallSettings)
+            // Additional: IngestConversationsAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceIngestConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversations</summary>
+        public void IngestConversationsResourceNames()
+        {
+            // Snippet: IngestConversations(LocationName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestConversationsAsync</summary>
+        public async Task IngestConversationsResourceNamesAsync()
+        {
+            // Snippet: IngestConversationsAsync(LocationName, CallSettings)
+            // Additional: IngestConversationsAsync(LocationName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IngestConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceIngestConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ExportInsightsData</summary>
         public void ExportInsightsDataRequestObject()
         {
@@ -2691,6 +3077,93 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             Issue response = await contactCenterInsightsClient.UpdateIssueAsync(issue, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssue</summary>
+        public void DeleteIssueRequestObject()
+        {
+            // Snippet: DeleteIssue(DeleteIssueRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteIssueRequest request = new DeleteIssueRequest
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteIssue(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueAsync</summary>
+        public async Task DeleteIssueRequestObjectAsync()
+        {
+            // Snippet: DeleteIssueAsync(DeleteIssueRequest, CallSettings)
+            // Additional: DeleteIssueAsync(DeleteIssueRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteIssueRequest request = new DeleteIssueRequest
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteIssueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssue</summary>
+        public void DeleteIssue()
+        {
+            // Snippet: DeleteIssue(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]/issues/[ISSUE]";
+            // Make the request
+            contactCenterInsightsClient.DeleteIssue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueAsync</summary>
+        public async Task DeleteIssueAsync()
+        {
+            // Snippet: DeleteIssueAsync(string, CallSettings)
+            // Additional: DeleteIssueAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]/issues/[ISSUE]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteIssueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssue</summary>
+        public void DeleteIssueResourceNames()
+        {
+            // Snippet: DeleteIssue(IssueName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueName name = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]");
+            // Make the request
+            contactCenterInsightsClient.DeleteIssue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueAsync</summary>
+        public async Task DeleteIssueResourceNamesAsync()
+        {
+            // Snippet: DeleteIssueAsync(IssueName, CallSettings)
+            // Additional: DeleteIssueAsync(IssueName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueName name = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteIssueAsync(name);
             // End snippet
         }
 
