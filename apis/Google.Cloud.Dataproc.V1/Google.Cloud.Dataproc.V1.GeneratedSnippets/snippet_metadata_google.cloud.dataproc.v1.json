@@ -4326,6 +4326,612 @@
       ]
     },
     {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_sync",
+      "title": "CreateNodeGroupRequestObject",
+      "description": "Snippet for CreateNodeGroup",
+      "file": "NodeGroupControllerClient.CreateNodeGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_async",
+      "title": "CreateNodeGroupRequestObjectAsync",
+      "description": "Snippet for CreateNodeGroupAsync",
+      "file": "NodeGroupControllerClient.CreateNodeGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_sync_flattened",
+      "title": "CreateNodeGroup",
+      "description": "Snippet for CreateNodeGroup",
+      "file": "NodeGroupControllerClient.CreateNodeGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_async_flattened",
+      "title": "CreateNodeGroupAsync",
+      "description": "Snippet for CreateNodeGroupAsync",
+      "file": "NodeGroupControllerClient.CreateNodeGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_sync_flattened_resourceNames",
+      "title": "CreateNodeGroupResourceNames",
+      "description": "Snippet for CreateNodeGroup",
+      "file": "NodeGroupControllerClient.CreateNodeGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_CreateNodeGroup_async_flattened_resourceNames",
+      "title": "CreateNodeGroupResourceNamesAsync",
+      "description": "Snippet for CreateNodeGroupAsync",
+      "file": "NodeGroupControllerClient.CreateNodeGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.CreateNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "CreateNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.CreateNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_ResizeNodeGroup_sync",
+      "title": "ResizeNodeGroupRequestObject",
+      "description": "Snippet for ResizeNodeGroup",
+      "file": "NodeGroupControllerClient.ResizeNodeGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResizeNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.ResizeNodeGroup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "ResizeNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.ResizeNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_ResizeNodeGroup_async",
+      "title": "ResizeNodeGroupRequestObjectAsync",
+      "description": "Snippet for ResizeNodeGroupAsync",
+      "file": "NodeGroupControllerClient.ResizeNodeGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResizeNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.ResizeNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "ResizeNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.ResizeNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_ResizeNodeGroup_sync_flattened",
+      "title": "ResizeNodeGroup",
+      "description": "Snippet for ResizeNodeGroup",
+      "file": "NodeGroupControllerClient.ResizeNodeGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResizeNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.ResizeNodeGroup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "ResizeNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.ResizeNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_ResizeNodeGroup_async_flattened",
+      "title": "ResizeNodeGroupAsync",
+      "description": "Snippet for ResizeNodeGroupAsync",
+      "file": "NodeGroupControllerClient.ResizeNodeGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResizeNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.ResizeNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.NodeGroup, Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata>>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "ResizeNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.ResizeNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_sync",
+      "title": "GetNodeGroupRequestObject",
+      "description": "Snippet for GetNodeGroup",
+      "file": "NodeGroupControllerClient.GetNodeGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroup",
+        "resultType": "Google.Cloud.Dataproc.V1.NodeGroup",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_async",
+      "title": "GetNodeGroupRequestObjectAsync",
+      "description": "Snippet for GetNodeGroupAsync",
+      "file": "NodeGroupControllerClient.GetNodeGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.NodeGroup>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_sync_flattened",
+      "title": "GetNodeGroup",
+      "description": "Snippet for GetNodeGroup",
+      "file": "NodeGroupControllerClient.GetNodeGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroup",
+        "resultType": "Google.Cloud.Dataproc.V1.NodeGroup",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_async_flattened",
+      "title": "GetNodeGroupAsync",
+      "description": "Snippet for GetNodeGroupAsync",
+      "file": "NodeGroupControllerClient.GetNodeGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.NodeGroup>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_sync_flattened_resourceNames",
+      "title": "GetNodeGroupResourceNames",
+      "description": "Snippet for GetNodeGroup",
+      "file": "NodeGroupControllerClient.GetNodeGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroup",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroup",
+        "resultType": "Google.Cloud.Dataproc.V1.NodeGroup",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_NodeGroupController_GetNodeGroup_async_flattened_resourceNames",
+      "title": "GetNodeGroupResourceNamesAsync",
+      "description": "Snippet for GetNodeGroupAsync",
+      "file": "NodeGroupControllerClient.GetNodeGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNodeGroupAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient.GetNodeGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.NodeGroup>",
+        "client": {
+          "shortName": "NodeGroupControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.NodeGroupControllerClient"
+        },
+        "method": {
+          "shortName": "GetNodeGroup",
+          "fullName": "google.cloud.dataproc.v1.NodeGroupController.GetNodeGroup",
+          "service": {
+            "shortName": "NodeGroupController",
+            "fullName": "google.cloud.dataproc.v1.NodeGroupController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataproc_v1_generated_WorkflowTemplateService_CreateWorkflowTemplate_sync",
       "title": "CreateWorkflowTemplateRequestObject",
       "description": "Snippet for CreateWorkflowTemplate",
