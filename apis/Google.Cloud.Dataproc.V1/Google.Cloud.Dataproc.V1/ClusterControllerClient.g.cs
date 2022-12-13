@@ -587,7 +587,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -600,7 +601,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -613,7 +615,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -652,7 +655,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="projectId">
@@ -737,7 +741,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="projectId">
@@ -822,7 +827,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="projectId">
@@ -1698,7 +1704,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1714,7 +1721,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Updates a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
-        /// The cluster must be in a [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
+        /// The cluster must be in a
+        /// [`RUNNING`][google.cloud.dataproc.v1.ClusterStatus.State] state or an error
         /// is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

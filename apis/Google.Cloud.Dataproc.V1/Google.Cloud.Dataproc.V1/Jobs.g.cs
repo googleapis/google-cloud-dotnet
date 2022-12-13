@@ -134,7 +134,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "4EEBIocBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgcKA05FVxAB",
             "Eg4KCk5FV19TQVZJTkcQAhINCglTVUJNSVRURUQQAxIMCghBQ0NFUFRFRBAE",
             "EgsKB1JVTk5JTkcQBRIMCghGSU5JU0hFRBAGEgoKBkZBSUxFRBAHEgoKBktJ",
-            "TExFRBAIIv8ICgNKb2ISPgoJcmVmZXJlbmNlGAEgASgLMiYuZ29vZ2xlLmNs",
+            "TExFRBAIItgJCgNKb2ISPgoJcmVmZXJlbmNlGAEgASgLMiYuZ29vZ2xlLmNs",
             "b3VkLmRhdGFwcm9jLnYxLkpvYlJlZmVyZW5jZUID4EEBEj4KCXBsYWNlbWVu",
             "dBgCIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JQbGFjZW1l",
             "bnRCA+BBAhI+CgpoYWRvb3Bfam9iGAMgASgLMiMuZ29vZ2xlLmNsb3VkLmRh",
@@ -158,70 +158,74 @@ namespace Google.Cloud.Dataproc.V1 {
             "MikuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYi5MYWJlbHNFbnRyeUID",
             "4EEBEkAKCnNjaGVkdWxpbmcYFCABKAsyJy5nb29nbGUuY2xvdWQuZGF0YXBy",
             "b2MudjEuSm9iU2NoZWR1bGluZ0ID4EEBEhUKCGpvYl91dWlkGBYgASgJQgPg",
-            "QQMSEQoEZG9uZRgYIAEoCEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCgoIdHlwZV9qb2IiVAoNSm9iU2No",
-            "ZWR1bGluZxIiChVtYXhfZmFpbHVyZXNfcGVyX2hvdXIYASABKAVCA+BBARIf",
-            "ChJtYXhfZmFpbHVyZXNfdG90YWwYAiABKAVCA+BBASKKAQoQU3VibWl0Sm9i",
-            "UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISEwoGcmVnaW9uGAMg",
-            "ASgJQgPgQQISLwoDam9iGAIgASgLMh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
-            "LnYxLkpvYkID4EECEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASKuAQoLSm9i",
-            "TWV0YWRhdGESEwoGam9iX2lkGAEgASgJQgPgQQMSOAoGc3RhdHVzGAIgASgL",
-            "MiMuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYlN0YXR1c0ID4EEDEhsK",
-            "Dm9wZXJhdGlvbl90eXBlGAMgASgJQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJSCg1HZXRKb2JS",
-            "ZXF1ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyAB",
-            "KAlCA+BBAhITCgZqb2JfaWQYAiABKAlCA+BBAiKzAgoPTGlzdEpvYnNSZXF1",
-            "ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YBiABKAlC",
-            "A+BBAhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMg",
-            "ASgJQgPgQQESGQoMY2x1c3Rlcl9uYW1lGAQgASgJQgPgQQESWQoRam9iX3N0",
-            "YXRlX21hdGNoZXIYBSABKA4yOS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "TGlzdEpvYnNSZXF1ZXN0LkpvYlN0YXRlTWF0Y2hlckID4EEBEhMKBmZpbHRl",
-            "chgHIAEoCUID4EEBIjYKD0pvYlN0YXRlTWF0Y2hlchIHCgNBTEwQABIKCgZB",
-            "Q1RJVkUQARIOCgpOT05fQUNUSVZFEAIivAEKEFVwZGF0ZUpvYlJlcXVlc3QS",
-            "FwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgCIAEoCUID4EEC",
-            "EhMKBmpvYl9pZBgDIAEoCUID4EECEi8KA2pvYhgEIAEoCzIdLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5Kb2JCA+BBAhI0Cgt1cGRhdGVfbWFzaxgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJiChBMaXN0Sm9i",
-            "c1Jlc3BvbnNlEjAKBGpvYnMYASADKAsyHS5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuSm9iQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQEi",
-            "VQoQQ2FuY2VsSm9iUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQIS",
-            "EwoGcmVnaW9uGAMgASgJQgPgQQISEwoGam9iX2lkGAIgASgJQgPgQQIiVQoQ",
-            "RGVsZXRlSm9iUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISEwoG",
-            "cmVnaW9uGAMgASgJQgPgQQISEwoGam9iX2lkGAIgASgJQgPgQQIy/AoKDUpv",
-            "YkNvbnRyb2xsZXISsQEKCVN1Ym1pdEpvYhIqLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5TdWJtaXRKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkpvYiJZgtPkkwI7IjYvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
-            "L3JlZ2lvbnMve3JlZ2lvbn0vam9iczpzdWJtaXQ6ASraQRVwcm9qZWN0X2lk",
-            "LHJlZ2lvbixqb2IS3gEKFFN1Ym1pdEpvYkFzT3BlcmF0aW9uEiouZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwcm9jLnYxLlN1Ym1pdEpvYlJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uInuC0+STAkYiQS92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzOnN1Ym1pdEFzT3Bl",
-            "cmF0aW9uOgEq2kEXcHJvamVjdF9pZCwgcmVnaW9uLCBqb2LKQRIKA0pvYhIL",
-            "Sm9iTWV0YWRhdGESrQEKBkdldEpvYhInLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
-            "Yy52MS5HZXRKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "LkpvYiJbgtPkkwI6EjgvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lv",
-            "bnMve3JlZ2lvbn0vam9icy97am9iX2lkfdpBGHByb2plY3RfaWQscmVnaW9u",
-            "LGpvYl9pZBLJAQoITGlzdEpvYnMSKS5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
-            "djEuTGlzdEpvYnNSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "Lkxpc3RKb2JzUmVzcG9uc2UiZoLT5JMCMRIvL3YxL3Byb2plY3RzL3twcm9q",
-            "ZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnPaQRFwcm9qZWN0X2lkLHJl",
-            "Z2lvbtpBGHByb2plY3RfaWQscmVnaW9uLGZpbHRlchKdAQoJVXBkYXRlSm9i",
-            "EiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVwZGF0ZUpvYlJlcXVlc3Qa",
-            "HS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIkWC0+STAj8yOC92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzL3tq",
-            "b2JfaWR9OgNqb2ISvQEKCUNhbmNlbEpvYhIqLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5DYW5jZWxKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkpvYiJlgtPkkwJEIj8vdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
-            "L3JlZ2lvbnMve3JlZ2lvbn0vam9icy97am9iX2lkfTpjYW5jZWw6ASraQRhw",
-            "cm9qZWN0X2lkLHJlZ2lvbixqb2JfaWQSrAEKCURlbGV0ZUpvYhIqLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVKb2JSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IluC0+STAjoqOC92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzL3tqb2JfaWR92kEYcHJvamVj",
-            "dF9pZCxyZWdpb24sam9iX2lkGkvKQRdkYXRhcHJvYy5nb29nbGVhcGlzLmNv",
-            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CbQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUIJSm9ic1By",
-            "b3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvZGF0YXByb2MvdjE7ZGF0YXByb2NiBnByb3RvMw=="));
+            "QQMSEQoEZG9uZRgYIAEoCEID4EEDElcKGGRyaXZlcl9zY2hlZHVsaW5nX2Nv",
+            "bmZpZxgbIAEoCzIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ecml2ZXJT",
+            "Y2hlZHVsaW5nQ29uZmlnQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCgh0eXBlX2pvYiJFChZEcml2ZXJT",
+            "Y2hlZHVsaW5nQ29uZmlnEhYKCW1lbW9yeV9tYhgBIAEoBUID4EECEhMKBnZj",
+            "b3JlcxgCIAEoBUID4EECIlQKDUpvYlNjaGVkdWxpbmcSIgoVbWF4X2ZhaWx1",
+            "cmVzX3Blcl9ob3VyGAEgASgFQgPgQQESHwoSbWF4X2ZhaWx1cmVzX3RvdGFs",
+            "GAIgASgFQgPgQQEiigEKEFN1Ym1pdEpvYlJlcXVlc3QSFwoKcHJvamVjdF9p",
+            "ZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEi8KA2pvYhgCIAEo",
+            "CzIdLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JCA+BBAhIXCgpyZXF1",
+            "ZXN0X2lkGAQgASgJQgPgQQEirgEKC0pvYk1ldGFkYXRhEhMKBmpvYl9pZBgB",
+            "IAEoCUID4EEDEjgKBnN0YXR1cxgCIAEoCzIjLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cHJvYy52MS5Kb2JTdGF0dXNCA+BBAxIbCg5vcGVyYXRpb25fdHlwZRgDIAEo",
+            "CUID4EEDEjMKCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMiUgoNR2V0Sm9iUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
+            "GAEgASgJQgPgQQISEwoGcmVnaW9uGAMgASgJQgPgQQISEwoGam9iX2lkGAIg",
+            "ASgJQgPgQQIiswIKD0xpc3RKb2JzUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEg",
+            "ASgJQgPgQQISEwoGcmVnaW9uGAYgASgJQgPgQQISFgoJcGFnZV9zaXplGAIg",
+            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhkKDGNsdXN0ZXJf",
+            "bmFtZRgEIAEoCUID4EEBElkKEWpvYl9zdGF0ZV9tYXRjaGVyGAUgASgOMjku",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RKb2JzUmVxdWVzdC5Kb2JT",
+            "dGF0ZU1hdGNoZXJCA+BBARITCgZmaWx0ZXIYByABKAlCA+BBASI2Cg9Kb2JT",
+            "dGF0ZU1hdGNoZXISBwoDQUxMEAASCgoGQUNUSVZFEAESDgoKTk9OX0FDVElW",
+            "RRACIrwBChBVcGRhdGVKb2JSZXF1ZXN0EhcKCnByb2plY3RfaWQYASABKAlC",
+            "A+BBAhITCgZyZWdpb24YAiABKAlCA+BBAhITCgZqb2JfaWQYAyABKAlCA+BB",
+            "AhIvCgNqb2IYBCABKAsyHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9i",
+            "QgPgQQISNAoLdXBkYXRlX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "RmllbGRNYXNrQgPgQQIiYgoQTGlzdEpvYnNSZXNwb25zZRIwCgRqb2JzGAEg",
+            "AygLMh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYkID4EEDEhwKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCUID4EEBIlUKEENhbmNlbEpvYlJlcXVlc3QS",
+            "FwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EEC",
+            "EhMKBmpvYl9pZBgCIAEoCUID4EECIlUKEERlbGV0ZUpvYlJlcXVlc3QSFwoK",
+            "cHJvamVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEhMK",
+            "BmpvYl9pZBgCIAEoCUID4EECMvwKCg1Kb2JDb250cm9sbGVyErEBCglTdWJt",
+            "aXRKb2ISKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU3VibWl0Sm9iUmVx",
+            "dWVzdBodLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2IiWYLT5JMCOyI2",
+            "L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pv",
+            "YnM6c3VibWl0OgEq2kEVcHJvamVjdF9pZCxyZWdpb24sam9iEt4BChRTdWJt",
+            "aXRKb2JBc09wZXJhdGlvbhIqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5T",
+            "dWJtaXRKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biJ7gtPkkwJGIkEvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMv",
+            "e3JlZ2lvbn0vam9iczpzdWJtaXRBc09wZXJhdGlvbjoBKtpBF3Byb2plY3Rf",
+            "aWQsIHJlZ2lvbiwgam9iykESCgNKb2ISC0pvYk1ldGFkYXRhEq0BCgZHZXRK",
+            "b2ISJy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuR2V0Sm9iUmVxdWVzdBod",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2IiW4LT5JMCOhI4L3YxL3By",
+            "b2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pv",
+            "Yl9pZH3aQRhwcm9qZWN0X2lkLHJlZ2lvbixqb2JfaWQSyQEKCExpc3RKb2Jz",
+            "EikuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RKb2JzUmVxdWVzdBoq",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1Jlc3BvbnNlImaC",
+            "0+STAjESLy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVn",
+            "aW9ufS9qb2Jz2kERcHJvamVjdF9pZCxyZWdpb27aQRhwcm9qZWN0X2lkLHJl",
+            "Z2lvbixmaWx0ZXISnQEKCVVwZGF0ZUpvYhIqLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cHJvYy52MS5VcGRhdGVKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "cm9jLnYxLkpvYiJFgtPkkwI/MjgvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
+            "L3JlZ2lvbnMve3JlZ2lvbn0vam9icy97am9iX2lkfToDam9iEr0BCglDYW5j",
+            "ZWxKb2ISKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2FuY2VsSm9iUmVx",
+            "dWVzdBodLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2IiZYLT5JMCRCI/",
+            "L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pv",
+            "YnMve2pvYl9pZH06Y2FuY2VsOgEq2kEYcHJvamVjdF9pZCxyZWdpb24sam9i",
+            "X2lkEqwBCglEZWxldGVKb2ISKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "RGVsZXRlSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJbgtPk",
+            "kwI6KjgvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lv",
+            "bn0vam9icy97am9iX2lkfdpBGHByb2plY3RfaWQscmVnaW9uLGpvYl9pZBpL",
+            "ykEXZGF0YXByb2MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQm0KHGNvbS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjFCCUpvYnNQcm90b1ABWkBnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2Rh",
+            "dGFwcm9jYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -239,7 +243,8 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobStatus), global::Google.Cloud.Dataproc.V1.JobStatus.Parser, new[]{ "State", "Details", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobReference), global::Google.Cloud.Dataproc.V1.JobReference.Parser, new[]{ "ProjectId", "JobId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.YarnApplication), global::Google.Cloud.Dataproc.V1.YarnApplication.Parser, new[]{ "Name", "State", "Progress", "TrackingUrl" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkRJob", "SparkSqlJob", "PrestoJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid", "Done" }, new[]{ "TypeJob" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkRJob", "SparkSqlJob", "PrestoJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid", "Done", "DriverSchedulingConfig" }, new[]{ "TypeJob" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig), global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig.Parser, new[]{ "MemoryMb", "Vcores" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobScheduling), global::Google.Cloud.Dataproc.V1.JobScheduling.Parser, new[]{ "MaxFailuresPerHour", "MaxFailuresTotal" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobMetadata), global::Google.Cloud.Dataproc.V1.JobMetadata.Parser, new[]{ "JobId", "Status", "OperationType", "StartTime" }, null, null, null, null),
@@ -977,7 +982,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Dataproc job for running [Apache Spark](http://spark.apache.org/)
+  /// A Dataproc job for running [Apache Spark](https://spark.apache.org/)
   /// applications on YARN.
   /// </summary>
   public sealed partial class SparkJob : pb::IMessage<SparkJob>
@@ -2497,7 +2502,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// A Dataproc job for running [Apache Spark
-  /// SQL](http://spark.apache.org/sql/) queries.
+  /// SQL](https://spark.apache.org/sql/) queries.
   /// </summary>
   public sealed partial class SparkSqlJob : pb::IMessage<SparkSqlJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4315,7 +4320,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> clusterLabels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Cluster labels to identify a cluster where the job will be submitted.
+    /// Optional. Cluster labels to identify a cluster where the job will be
+    /// submitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4963,8 +4969,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// Optional. The ID of the Google Cloud Platform project that the job belongs to. If
-    /// specified, must match the request project ID.
+    /// Optional. The ID of the Google Cloud Platform project that the job belongs
+    /// to. If specified, must match the request project ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5573,6 +5579,7 @@ namespace Google.Cloud.Dataproc.V1 {
       scheduling_ = other.scheduling_ != null ? other.scheduling_.Clone() : null;
       jobUuid_ = other.jobUuid_;
       done_ = other.done_;
+      driverSchedulingConfig_ = other.driverSchedulingConfig_ != null ? other.driverSchedulingConfig_.Clone() : null;
       switch (other.TypeJobCase) {
         case TypeJobOneofCase.HadoopJob:
           HadoopJob = other.HadoopJob.Clone();
@@ -5900,8 +5907,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DoneFieldNumber = 24;
     private bool done_;
     /// <summary>
-    /// Output only. Indicates whether the job is completed. If the value is `false`,
-    /// the job is still in progress. If `true`, the job is completed, and
+    /// Output only. Indicates whether the job is completed. If the value is
+    /// `false`, the job is still in progress. If `true`, the job is completed, and
     /// `status.state` field will indicate if it was successful, failed,
     /// or cancelled.
     /// </summary>
@@ -5911,6 +5918,21 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return done_; }
       set {
         done_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "driver_scheduling_config" field.</summary>
+    public const int DriverSchedulingConfigFieldNumber = 27;
+    private global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig driverSchedulingConfig_;
+    /// <summary>
+    /// Optional. Driver scheduling configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig DriverSchedulingConfig {
+      get { return driverSchedulingConfig_; }
+      set {
+        driverSchedulingConfig_ = value;
       }
     }
 
@@ -5975,6 +5997,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(Scheduling, other.Scheduling)) return false;
       if (JobUuid != other.JobUuid) return false;
       if (Done != other.Done) return false;
+      if (!object.Equals(DriverSchedulingConfig, other.DriverSchedulingConfig)) return false;
       if (TypeJobCase != other.TypeJobCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6002,6 +6025,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (scheduling_ != null) hash ^= Scheduling.GetHashCode();
       if (JobUuid.Length != 0) hash ^= JobUuid.GetHashCode();
       if (Done != false) hash ^= Done.GetHashCode();
+      if (driverSchedulingConfig_ != null) hash ^= DriverSchedulingConfig.GetHashCode();
       hash ^= (int) typeJobCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6088,6 +6112,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(192, 1);
         output.WriteBool(Done);
       }
+      if (driverSchedulingConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DriverSchedulingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6165,6 +6193,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(192, 1);
         output.WriteBool(Done);
       }
+      if (driverSchedulingConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DriverSchedulingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6226,6 +6258,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Done != false) {
         size += 2 + 1;
       }
+      if (driverSchedulingConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DriverSchedulingConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6276,6 +6311,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.Done != false) {
         Done = other.Done;
+      }
+      if (other.driverSchedulingConfig_ != null) {
+        if (driverSchedulingConfig_ == null) {
+          DriverSchedulingConfig = new global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig();
+        }
+        DriverSchedulingConfig.MergeFrom(other.DriverSchedulingConfig);
       }
       switch (other.TypeJobCase) {
         case TypeJobOneofCase.HadoopJob:
@@ -6471,6 +6512,13 @@ namespace Google.Cloud.Dataproc.V1 {
             Done = input.ReadBool();
             break;
           }
+          case 218: {
+            if (driverSchedulingConfig_ == null) {
+              DriverSchedulingConfig = new global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig();
+            }
+            input.ReadMessage(DriverSchedulingConfig);
+            break;
+          }
         }
       }
     #endif
@@ -6614,6 +6662,248 @@ namespace Google.Cloud.Dataproc.V1 {
             Done = input.ReadBool();
             break;
           }
+          case 218: {
+            if (driverSchedulingConfig_ == null) {
+              DriverSchedulingConfig = new global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig();
+            }
+            input.ReadMessage(DriverSchedulingConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Driver scheduling configuration.
+  /// </summary>
+  public sealed partial class DriverSchedulingConfig : pb::IMessage<DriverSchedulingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DriverSchedulingConfig> _parser = new pb::MessageParser<DriverSchedulingConfig>(() => new DriverSchedulingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DriverSchedulingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DriverSchedulingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DriverSchedulingConfig(DriverSchedulingConfig other) : this() {
+      memoryMb_ = other.memoryMb_;
+      vcores_ = other.vcores_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DriverSchedulingConfig Clone() {
+      return new DriverSchedulingConfig(this);
+    }
+
+    /// <summary>Field number for the "memory_mb" field.</summary>
+    public const int MemoryMbFieldNumber = 1;
+    private int memoryMb_;
+    /// <summary>
+    /// Required. The amount of memory in MB the driver is requesting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MemoryMb {
+      get { return memoryMb_; }
+      set {
+        memoryMb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vcores" field.</summary>
+    public const int VcoresFieldNumber = 2;
+    private int vcores_;
+    /// <summary>
+    /// Required. The number of vCPUs the driver is requesting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Vcores {
+      get { return vcores_; }
+      set {
+        vcores_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DriverSchedulingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DriverSchedulingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MemoryMb != other.MemoryMb) return false;
+      if (Vcores != other.Vcores) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MemoryMb != 0) hash ^= MemoryMb.GetHashCode();
+      if (Vcores != 0) hash ^= Vcores.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MemoryMb != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MemoryMb);
+      }
+      if (Vcores != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Vcores);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MemoryMb != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MemoryMb);
+      }
+      if (Vcores != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Vcores);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MemoryMb != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MemoryMb);
+      }
+      if (Vcores != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Vcores);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DriverSchedulingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MemoryMb != 0) {
+        MemoryMb = other.MemoryMb;
+      }
+      if (other.Vcores != 0) {
+        Vcores = other.Vcores;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MemoryMb = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Vcores = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MemoryMb = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Vcores = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -6638,7 +6928,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6677,16 +6967,14 @@ namespace Google.Cloud.Dataproc.V1 {
     /// a result of driver exiting with non-zero code before job is
     /// reported failed.
     ///
-    /// A job may be reported as thrashing if driver exits with non-zero code
-    /// 4 times within 10 minute window.
+    /// A job may be reported as thrashing if the driver exits with a non-zero code
+    /// four times within a 10-minute window.
     ///
     /// Maximum value is 10.
     ///
-    /// **Note:** Currently, this restartable job option is
-    /// not supported in Dataproc
-    /// [workflow
-    /// template](https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template)
-    /// jobs.
+    /// **Note:** This restartable job option is not supported in Dataproc
+    /// [workflow templates]
+    /// (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6701,15 +6989,16 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MaxFailuresTotalFieldNumber = 2;
     private int maxFailuresTotal_;
     /// <summary>
-    /// Optional. Maximum number of times in total a driver may be restarted as a result of
-    /// driver exiting with non-zero code before job is reported failed.
+    /// Optional. Maximum total number of times a driver may be restarted as a
+    /// result of the driver exiting with a non-zero code. After the maximum number
+    /// is reached, the job will be reported as failed.
+    ///
     /// Maximum value is 240.
     ///
     /// **Note:** Currently, this restartable job option is
     /// not supported in Dataproc
     /// [workflow
-    /// template](https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template)
-    /// jobs.
+    /// templates](https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6894,7 +7183,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7230,7 +7519,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7563,7 +7852,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7839,7 +8128,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8320,7 +8609,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8699,7 +8988,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8925,7 +9214,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9201,7 +9490,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

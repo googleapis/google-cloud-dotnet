@@ -59,6 +59,7 @@ namespace Google.Cloud.Dataproc.V1
             yield return BatchesReflection.Descriptor;
             yield return ClustersReflection.Descriptor;
             yield return JobsReflection.Descriptor;
+            yield return NodeGroupsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
             yield return SharedReflection.Descriptor;
             yield return WorkflowTemplatesReflection.Descriptor;

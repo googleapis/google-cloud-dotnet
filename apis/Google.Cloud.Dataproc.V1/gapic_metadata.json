@@ -185,6 +185,33 @@
         }
       }
     },
+    "NodeGroupController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NodeGroupControllerClient",
+          "rpcs": {
+            "CreateNodeGroup": {
+              "methods": [
+                "CreateNodeGroup",
+                "CreateNodeGroupAsync"
+              ]
+            },
+            "GetNodeGroup": {
+              "methods": [
+                "GetNodeGroup",
+                "GetNodeGroupAsync"
+              ]
+            },
+            "ResizeNodeGroup": {
+              "methods": [
+                "ResizeNodeGroup",
+                "ResizeNodeGroupAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "WorkflowTemplateService": {
       "clients": {
         "grpc": {
