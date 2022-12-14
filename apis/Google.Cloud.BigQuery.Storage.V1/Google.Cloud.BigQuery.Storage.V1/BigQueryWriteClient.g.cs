@@ -833,8 +833,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -853,8 +853,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -873,8 +873,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -890,8 +890,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -910,8 +910,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -930,8 +930,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// for read operations.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent table that all the streams should belong to, in the form of
-        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// Required. Parent table that all the streams should belong to, in the form
+        /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

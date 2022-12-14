@@ -352,7 +352,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema> fields_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema>();
     /// <summary>
-    /// Optional. Describes the nested schema fields if the type property is set to STRUCT.
+    /// Optional. Describes the nested schema fields if the type property is set to
+    /// STRUCT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
