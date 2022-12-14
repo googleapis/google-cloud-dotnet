@@ -1052,7 +1052,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessEndpointFieldNumber = 6;
     private string processEndpoint_ = "";
     /// <summary>
-    /// Output only. Immutable. The http endpoint that can be called to invoke processing.
+    /// Output only. Immutable. The http endpoint that can be called to invoke
+    /// processing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
