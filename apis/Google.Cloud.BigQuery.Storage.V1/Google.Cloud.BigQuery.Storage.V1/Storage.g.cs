@@ -2822,10 +2822,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int WriteStreamFieldNumber = 1;
     private string writeStream_ = "";
     /// <summary>
-    /// Required. The write_stream identifies the target of the append operation, and only
-    /// needs to be specified as part of the first request on the gRPC connection.
-    /// If provided for subsequent requests, it must match the value of the first
-    /// request.
+    /// Required. The write_stream identifies the target of the append operation,
+    /// and only needs to be specified as part of the first request on the gRPC
+    /// connection. If provided for subsequent requests, it must match the value of
+    /// the first request.
     ///
     /// For explicitly created write streams, the format is:
     ///
@@ -4416,8 +4416,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Parent table that all the streams should belong to, in the form of
-    /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+    /// Required. Parent table that all the streams should belong to, in the form
+    /// of `projects/{project}/datasets/{dataset}/tables/{table}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
