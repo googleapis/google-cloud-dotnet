@@ -28,6 +28,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal class GitCommit
     {
+        /// <summary>
+        /// Cache of messages (already split) from googleapis, used to reduce the risk of rate limiting
+        /// where multiple APIs have been affected by the same commit.
+        /// </summary>
+        private static readonly Dictionary<string, List<string>> s_googleApisCommitMessageCache = new();
+
         private static readonly Regex OwlBotEmailRegex = new Regex(@".*gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
 
         /// <summary>
@@ -48,9 +54,15 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// </summary>
         public string HashPrefix { get; }
 
+        /// <summary>
+        /// The title (short message) of the commit.
+        /// </summary>
+        public string Title { get; }
+
         internal GitCommit(Commit libGit2Commit)
         {
             _libGit2Commit = libGit2Commit;
+            Title = libGit2Commit.MessageShort;
             Hash = _libGit2Commit.Sha;
             HashPrefix = GitHelpers.GetHashPrefix(Hash);
         }
@@ -141,6 +153,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         private List<string> GetGoogleApisCommitLines(string hash)
         {
+            if (s_googleApisCommitMessageCache.TryGetValue(hash, out var cachedResult))
+            {
+                return cachedResult;
+            }
+
             // We could use Octokit etc, but we don't really need to, and it's simpler not to plumb it through.
             var client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
@@ -150,7 +167,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 // Note: waiting in a console app should be fine.
                 string json = client.GetStringAsync(url).GetAwaiter().GetResult();
                 string message = (string) JObject.Parse(json)["message"];
-                return SplitCommitMessage(message);
+                var result = SplitCommitMessage(message);
+                s_googleApisCommitMessageCache[hash] = result;
+                return result;
             }
             catch (HttpRequestException e)
             {
