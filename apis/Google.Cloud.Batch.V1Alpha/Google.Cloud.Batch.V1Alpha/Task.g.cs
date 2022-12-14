@@ -2924,8 +2924,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> environments_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Environment variables to set before running the Task.
-    /// You can set up to 100 environments.
+    /// Deprecated: please use environment(non-plural) instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
