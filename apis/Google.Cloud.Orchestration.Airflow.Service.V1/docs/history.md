@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.1.0, released 2022-12-14
+
+### New features
+
+- Added LoadSnapshot, SaveSnapshot RPCs ([commit c84f55a](https://github.com/googleapis/google-cloud-dotnet/commit/c84f55a6901a487e1f9494ac73a7ce0dcaf9dfa4))
+- Added fields maintenance_window, workloads_config, environment_size, master_authorized_networks_config, recovery_config to EnvironmentConfig ([commit c84f55a](https://github.com/googleapis/google-cloud-dotnet/commit/c84f55a6901a487e1f9494ac73a7ce0dcaf9dfa4))
+- Added field scheduler_count to SoftwareConfig ([commit c84f55a](https://github.com/googleapis/google-cloud-dotnet/commit/c84f55a6901a487e1f9494ac73a7ce0dcaf9dfa4))
+- Added field enable_ip_masq_agent to NodeConfig ([commit c84f55a](https://github.com/googleapis/google-cloud-dotnet/commit/c84f55a6901a487e1f9494ac73a7ce0dcaf9dfa4))
+- Added fields cloud_composer_network_ipv4_cidr_block, cloud_composer_network_ipv4_reserved_range, enable_privately_used_public_ips, cloud_composer_connection_subnetwork, networking_config to PrivateEnvironmentConfig ([commit c84f55a](https://github.com/googleapis/google-cloud-dotnet/commit/c84f55a6901a487e1f9494ac73a7ce0dcaf9dfa4))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
