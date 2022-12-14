@@ -45,18 +45,18 @@ namespace Google.Cloud.Batch.V1
                 },
                 {
                     "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "get": "/v1/{resource=projects/*/locations/*/jobs/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/tasks/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/nodes/*}:getIamPolicy" } ] }
-                    proto::ByteString.FromBase64("EjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpnZXRJYW1Qb2xpY3laPBI6L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Rhc2tzLyp9OmdldElhbVBvbGljeVo8EjovdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbm9kZXMvKn06Z2V0SWFtUG9saWN5")
+                    // { "get": "/v1/{resource=projects/*/locations/*/jobs/*}:getIamPolicy" }
+                    proto::ByteString.FromBase64("EjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpnZXRJYW1Qb2xpY3k=")
                 },
                 {
                     "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/tasks/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/nodes/*}:setIamPolicy", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpzZXRJYW1Qb2xpY3k6ASpaPyI6L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Rhc2tzLyp9OnNldElhbVBvbGljeToBKlo/IjovdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbm9kZXMvKn06c2V0SWFtUG9saWN5OgEq")
+                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:setIamPolicy", "body": "*" }
+                    proto::ByteString.FromBase64("IjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpzZXRJYW1Qb2xpY3k6ASo=")
                 },
                 {
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/tasks/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/nodes/*}:testIamPermissions", "body": "*" } ] }
-                    proto::ByteString.FromBase64("Ij8vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaRSJAL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Rhc2tzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbm9kZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
+                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:testIamPermissions", "body": "*" }
+                    proto::ByteString.FromBase64("Ij8vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
