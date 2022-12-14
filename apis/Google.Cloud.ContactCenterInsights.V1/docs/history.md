@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2022-12-14
+
+### New features
+
+- Add Configurable Analysis, Bulk Upload, Bulk Analyze, Delete Issue Apis ([commit 6f38b9f](https://github.com/googleapis/google-cloud-dotnet/commit/6f38b9fdafff95df2d059178a6e96b2175dd368d))
+
 ## Version 2.1.0, released 2022-09-15
 
 ### Documentation improvements
