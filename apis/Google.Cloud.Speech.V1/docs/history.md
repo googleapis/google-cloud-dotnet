@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2022-12-14
+
+### New features
+
+- Added new fields to facilitate debugging ([commit 5491c8f](https://github.com/googleapis/google-cloud-dotnet/commit/5491c8f8d30a596c8131d7b7bd86564a67177280))
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
