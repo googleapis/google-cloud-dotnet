@@ -396,11 +396,15 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [Processor][google.cloud.documentai.v1.Processor] or
+    /// Required. The resource name of the
+    /// [Processor][google.cloud.documentai.v1.Processor] or
     /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion]
-    /// to use for processing. If a [Processor][google.cloud.documentai.v1.Processor] is specified, the server will use
-    /// its [default version][google.cloud.documentai.v1.Processor.default_processor_version]. Format:
-    /// `projects/{project}/locations/{location}/processors/{processor}`, or
+    /// to use for processing. If a
+    /// [Processor][google.cloud.documentai.v1.Processor] is specified, the server
+    /// will use its [default
+    /// version][google.cloud.documentai.v1.Processor.default_processor_version].
+    /// Format: `projects/{project}/locations/{location}/processors/{processor}`,
+    /// or
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1358,7 +1362,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of [Processor][google.cloud.documentai.v1.Processor] or
+    /// Required. The resource name of
+    /// [Processor][google.cloud.documentai.v1.Processor] or
     /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
     /// Format: `projects/{project}/locations/{location}/processors/{processor}`,
     /// or
@@ -3476,8 +3481,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) which owns this collection of Processors.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The parent (project and location) which owns this collection of
+    /// Processors. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4369,8 +4374,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project, location and processor) to list all versions.
-    /// Format: `projects/{project}/locations/{location}/processors/{processor}`
+    /// Required. The parent (project, location and processor) to list all
+    /// versions. Format:
+    /// `projects/{project}/locations/{location}/processors/{processor}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6381,8 +6387,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) under which to create the processor.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The parent (project and location) under which to create the
+    /// processor. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6397,8 +6403,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorFieldNumber = 2;
     private global::Google.Cloud.DocumentAI.V1.Processor processor_;
     /// <summary>
-    /// Required. The processor to be created, requires [processor_type] and [display_name]
-    /// to be set. Also, the processor is under CMEK if CMEK fields are set.
+    /// Required. The processor to be created, requires [processor_type] and
+    /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
+    /// are set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8136,7 +8143,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorFieldNumber = 1;
     private string processor_ = "";
     /// <summary>
-    /// Required. The resource name of the [Processor][google.cloud.documentai.v1.Processor] to change default version.
+    /// Required. The resource name of the
+    /// [Processor][google.cloud.documentai.v1.Processor] to change default
+    /// version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8151,8 +8160,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int DefaultProcessorVersionFieldNumber = 2;
     private string defaultProcessorVersion_ = "";
     /// <summary>
-    /// Required. The resource name of child [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to use as default.
-    /// Format:
+    /// Required. The resource name of child
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to use as
+    /// default. Format:
     /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8756,8 +8766,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int HumanReviewConfigFieldNumber = 1;
     private string humanReviewConfig_ = "";
     /// <summary>
-    /// Required. The resource name of the HumanReviewConfig that the document will be
-    /// reviewed with.
+    /// Required. The resource name of the HumanReviewConfig that the document will
+    /// be reviewed with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

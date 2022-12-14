@@ -449,8 +449,10 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Set the default (active) version of a [Processor][google.cloud.documentai.v1.Processor] that will be used in
-      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] and
+      /// Set the default (active) version of a
+      /// [Processor][google.cloud.documentai.v1.Processor] that will be used in
+      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+      /// and
       /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1245,8 +1247,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DisableProcessor, null, options, request);
       }
       /// <summary>
-      /// Set the default (active) version of a [Processor][google.cloud.documentai.v1.Processor] that will be used in
-      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] and
+      /// Set the default (active) version of a
+      /// [Processor][google.cloud.documentai.v1.Processor] that will be used in
+      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+      /// and
       /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1260,8 +1264,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         return SetDefaultProcessorVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Set the default (active) version of a [Processor][google.cloud.documentai.v1.Processor] that will be used in
-      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] and
+      /// Set the default (active) version of a
+      /// [Processor][google.cloud.documentai.v1.Processor] that will be used in
+      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+      /// and
       /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1273,8 +1279,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetDefaultProcessorVersion, null, options, request);
       }
       /// <summary>
-      /// Set the default (active) version of a [Processor][google.cloud.documentai.v1.Processor] that will be used in
-      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] and
+      /// Set the default (active) version of a
+      /// [Processor][google.cloud.documentai.v1.Processor] that will be used in
+      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+      /// and
       /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1288,8 +1296,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         return SetDefaultProcessorVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Set the default (active) version of a [Processor][google.cloud.documentai.v1.Processor] that will be used in
-      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument] and
+      /// Set the default (active) version of a
+      /// [Processor][google.cloud.documentai.v1.Processor] that will be used in
+      /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+      /// and
       /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
