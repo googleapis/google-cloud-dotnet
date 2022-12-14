@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,20 +16,29 @@ using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
     /// <summary>
-    /// Criterion for "just release everything that has changes", currently
-    /// with no additional config.
+    /// Criterion for "just release everything that has changes".
     /// </summary>
     public sealed class ReleaseAllCriterion : IBatchCriterion
     {
+        /// <summary>
+        /// If this is set to true, any APIs which would only generate
+        /// release notes of "updated dependencies only" (i.e. no commits
+        /// have meaningful release notes) are skipped, but the commits are reported.
+        /// </summary>
+        public bool SkipIfNoReleaseNotes { get; set; }
+
         IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
+            Console.WriteLine($"Analyzing changes by API (this may take a few minutes)");
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
+            Console.WriteLine($"Finish analyzing changes.");
 
             foreach (var api in catalog.Apis)
             {
@@ -38,14 +47,33 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 {
                     continue;
                 }
+
+                var commits = pendingChangesByApi[api].Commits;
+
                 // Don't propose packages that haven't changed.
                 // Note that this will also not propose a release for APIs that haven't
                 // yet *been* released - which is probably fine. (We don't want to accidentally
                 // launch something due to not paying attention.)
-                if (pendingChangesByApi[api].Commits.Count == 0)
+                if (commits.Count == 0)
                 {
                     continue;
                 }
+
+                if (SkipIfNoReleaseNotes)
+                {
+                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes)))
+                    {
+                        Console.WriteLine($"Skipping {api} which has {commits.Count} commits, but none generate release notes:");
+                        foreach (var commit in commits)
+                        {
+                            string truncatedTitle = commit.Title.Substring(0, Math.Min(commit.Title.Length, 60));
+                            Console.WriteLine($"  {commit.HashPrefix}: {truncatedTitle}");
+                        }
+                        Console.WriteLine();
+                        continue;
+                    }
+                }
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
                 yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
