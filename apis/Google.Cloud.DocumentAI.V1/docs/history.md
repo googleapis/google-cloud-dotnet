@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2022-12-14
+
+### New features
+
+- Added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto ([commit 1f81bac](https://github.com/googleapis/google-cloud-dotnet/commit/1f81bac43a32567244773f3de53a8f2aff2b4b5b))
+
 ## Version 3.1.0, released 2022-11-10
 
 ### New features
