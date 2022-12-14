@@ -156,8 +156,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             internal IEnumerable<string> GetNotesFromCommits(IReadOnlyList<GitCommit> commits) =>
                 commits
                     .SelectMany(c => c.GetReleaseNoteElements())
+                    .Where(c => c.PublishInReleaseNotes)
                     .ToLookup(e => e.Type)
-                    .Where(g => g.Key != ReleaseNoteElementType.Chore)
                     .OrderBy(g => g.Key)
                     .Select(GetNotesFromElement)
                     .SelectMany(line => line);

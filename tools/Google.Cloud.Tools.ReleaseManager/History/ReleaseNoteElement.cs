@@ -22,6 +22,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     internal sealed class ReleaseNoteElement
     {
         /// <summary>
+        /// Whether or not we should actually include this note in the published
+        /// release notes.
+        /// </summary>
+        public bool PublishInReleaseNotes => Type != ReleaseNoteElementType.Chore;
+
+        /// <summary>
         /// The commit within google-cloud-dotnet responsible for the change.
         /// </summary>
         public string CommitHash { get; }
