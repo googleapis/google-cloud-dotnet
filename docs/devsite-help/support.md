@@ -223,4 +223,5 @@ Google.GoogleApiException: The service bigquery has thrown an exception. HttpSta
 ```
 
 If I set `UseJwtAccessWithScopes = false` when building the client, this code works fine. Why does `UseJwtAccessWithScopes = true` cause a failure?
+
 ---
