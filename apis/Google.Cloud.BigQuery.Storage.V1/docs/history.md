@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2022-12-14
+
+### New features
+
+- Add estimated number of rows to CreateReadSession response ([commit 2ac8ed0](https://github.com/googleapis/google-cloud-dotnet/commit/2ac8ed0add87367717aa7593a5013153d374d328))
+
 ## Version 3.4.0, released 2022-12-01
 
 ### New features
