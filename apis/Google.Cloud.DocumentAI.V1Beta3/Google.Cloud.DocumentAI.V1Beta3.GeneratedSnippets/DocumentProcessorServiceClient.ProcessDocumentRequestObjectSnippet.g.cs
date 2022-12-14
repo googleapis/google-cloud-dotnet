@@ -42,6 +42,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);

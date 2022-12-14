@@ -43,6 +43,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(request);
