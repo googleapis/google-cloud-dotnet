@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.7.0, released 2022-12-14
+
+### New features
+
+- Add user_name field to the finding access ([commit 8f4176b](https://github.com/googleapis/google-cloud-dotnet/commit/8f4176b0bc3062739640f83d157c4c249d0ae058))
+- Add kernel_rootkit field to finding's list of attributes ([commit d98be1c](https://github.com/googleapis/google-cloud-dotnet/commit/d98be1c121aa30446ecc56237ac5aa6773724838))
+
+### Documentation improvements
+
+- Miscellaneous style improvements ([commit d98be1c](https://github.com/googleapis/google-cloud-dotnet/commit/d98be1c121aa30446ecc56237ac5aa6773724838))
+
 ## Version 3.6.0, released 2022-12-01
 
 ### New features
