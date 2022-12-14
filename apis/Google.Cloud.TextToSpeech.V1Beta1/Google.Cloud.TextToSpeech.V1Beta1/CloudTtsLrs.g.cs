@@ -126,7 +126,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// The resource states of the request in the form of
-    /// projects/*/locations/*/voices/*.
+    /// `projects/*/locations/*/voices/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
