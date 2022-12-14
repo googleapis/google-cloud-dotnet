@@ -17,18 +17,14 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1;
 
-/// <summary>
-/// 
-/// </summary>
-public class RetryConditions
+public sealed class RetryPredicate
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public Func<int,bool> RetryPredicate { get; }
+    public static RetryPredicate DefaultErrorCodes { get; } = RetryPredicate.FromErrorCodes(408, 429, 500, 502, 503, 504);
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryConditions(Func<int, bool> retryPredicate) => RetryPredicate = retryPredicate;
+    public Func<int, bool> Predicate { get; private set; }
+
+    public static RetryPredicate FromErrorCodes(params int[] errorCodes);
+    public static RetryPredicate ErrorCodePredicate(Func<int, bool> retryCode);
+    internal bool ShouldRetry(int statusCode);
 }
+

@@ -17,28 +17,17 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1;
 
-/// <summary>
-/// 
-/// </summary>
 public sealed class RetryOptions
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryConditions _retryConditions;
+    private readonly RetryPredicate _retryPredicate;
+    private readonly RetryTimings _retryTimings;
+    internal RetryPredicate RetryPredicate => _retryPredicate;
+    internal RetryTimings RetryTimings => _retryTimings;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryTimings _retryTimings;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryOptions(RetryTimings retryTimings, RetryConditions retryConditions)
+    public RetryOptions(RetryTimings retryTimings, RetryPredicate retryPredicate)
     {
         _retryTimings = retryTimings;
-        _retryConditions = retryConditions;
-
+        _retryPredicate = retryPredicate;
     }
 }
+

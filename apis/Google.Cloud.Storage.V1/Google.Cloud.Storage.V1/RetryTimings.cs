@@ -18,39 +18,18 @@ using System.Text;
 
 namespace Google.Cloud.Storage.V1;
 
-/// <summary>
-/// 
-/// </summary>
-public class RetryTimings
+
+public sealed class RetryTimings
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public int MaxAttempts { get; }
+    public static RetryTimings Default { get; }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public int InitialBackoff { get; }
+    public int MaxAttempts { get; private set; }
+    public int InitialBackoff { get; private set; }
+    public int MaxBackoff { get; private set; }
+    public int BackoffMultiplier { get; private set; }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public int MaxBackoff { get; }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public int BackoffMultiplier { get; }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public RetryTimings(int maxAttempts = 0, int initialBackoff = 0, int maxBackoff = 0, int backoffMultiplier = 0)
-    {
-        MaxAttempts = maxAttempts;
-        InitialBackoff = initialBackoff;
-        MaxBackoff = maxBackoff;
-        BackoffMultiplier = backoffMultiplier;
-    }
+    public RetryTimings WithMaxAttempts(int maxAttempts);
+    public RetryTimings WithInitialBackoff(int initialBackoff);
+    public RetryTimings WithMaxBackoff(int maxBackoff);
+    public RetryTimings WithBackoffMultiplier(int backoffMultiplier);
 }
