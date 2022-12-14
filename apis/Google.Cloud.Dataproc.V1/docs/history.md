@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.2.0, released 2022-12-14
+
+### New features
+
+- Added node groups API protos ([commit f56258b](https://github.com/googleapis/google-cloud-dotnet/commit/f56258b097d221feb3e7ee533acf2fff4d8cbfc1))
+
 ## Version 5.1.0, released 2022-10-03
 
 ### New features
