@@ -265,10 +265,8 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. Specifies how to compute the route. The server
     /// attempts to use the selected routing preference to compute the route. If
     ///  the routing preference results in an error or an extra long latency, then
-    /// an error is returned. In the future, we might implement a fallback
-    /// mechanism to use a different option when the preferred option does not give
-    /// a valid result. You can specify this option only when the `travel_mode` is
-    /// `DRIVE` or `TWO_WHEELER`, otherwise the request fails.
+    /// an error is returned. You can specify this option only when the
+    /// `travel_mode` is `DRIVE` or `TWO_WHEELER`, otherwise the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1228,10 +1226,8 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. Specifies how to compute the route. The server attempts to use
     /// the selected routing preference to compute the route. If the routing
     /// preference results in an error or an extra long latency, an error is
-    /// returned. In the future, we might implement a fallback mechanism to use a
-    /// different option when the preferred option does not give a valid result.
-    /// You can specify this option only when the `travel_mode` is `DRIVE` or
-    /// `TWO_WHEELER`, otherwise the request fails.
+    /// returned. You can specify this option only when the `travel_mode` is
+    /// `DRIVE` or `TWO_WHEELER`, otherwise the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
