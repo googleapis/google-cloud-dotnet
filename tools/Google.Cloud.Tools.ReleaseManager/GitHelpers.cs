@@ -107,6 +107,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             var allTags = repo.Tags.OrderByDescending(GetDate).ToList();
             return catalog.Apis.ToDictionary(api => api, api => GetPendingChanges(api));
 
+            // TODO: Optimize this; it's pretty slow due to checking lots of paths all the time.
+            // We can probably find the oldest commit we care about, and work out all the APIs that have changed on
+            // a per-commit basis after that. But it gets complex quite quickly...
+
             Release GetPendingChanges(ApiMetadata api)
             {
                 string expectedTagPrefix = $"{api.Id}-";
