@@ -1,6 +1,6 @@
 # Protocol buffers in Google Cloud Libraries for .NET
 
-[Protocol buffers](https://developers.google.com/protocol-buffers) - also known as *protobuf* for short - are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.
+[Protocol buffers](https://protobuf.dev) - also known as *protobuf* for short - are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.
 
 Almost all the Google Cloud Libraries are generated from API
 definitions using protobuf, in the

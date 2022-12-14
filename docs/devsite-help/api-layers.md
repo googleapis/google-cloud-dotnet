@@ -20,7 +20,7 @@ which has been used to generate per-API packages under the umbrella of the
 In November 2014, Google introduced gRPC, a new RPC framework offering efficient multi-plexing,
 bidirectional streaming and many other features. New APIs are now being provided with access via
 either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
-[Protocol Buffers](https://developers.google.com/protocol-buffers/).
+[Protocol Buffers](https://protobuf.dev).
 
 The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
 `Google.Cloud.Storage.V1` and `Google.Cloud.BigQuery.V2` are hand-written layers over the existing REST-based
@@ -37,7 +37,7 @@ generated code comes from three sources:
 
 - [Google API Tools](https://github.com/googleapis/toolkit) generation for clients
 - [gRPC](http://www.grpc.io) raw RPC service generation
-- [Protocol Buffer](https://developers.google.com/protocol-buffers/) generation
+- [Protocol Buffer](https://protobuf.dev) generation
   for request, response and resource messages and enums
 
 To show the layering involved, we'll use the Google.Cloud.Datastore.V1 client library as an example.

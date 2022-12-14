@@ -62,7 +62,7 @@ dotnet add package Google.Cloud.Translate.V3
 > some of those dependencies. The list below is not comprehensive, but highlights some of the packages
 > you'll see being installed.
 >
-> - Google.Protobuf: the library supporting the [Protocol Buffers](https://developers.google.com/protocol-buffers) seralization format
+> - Google.Protobuf: the library supporting the [Protocol Buffers](https://protobuf.dev) seralization format
 > - Google.Api.Gax, Google.Api.Gax.Grpc: support libraries specifically tailored for the Google Cloud client libraries
 > - Google.Apis.Auth, Google.Apis, Google.Apis.Core: authentication support for Google Cloud Platform credentials
 > - Grpc.Auth, Grpc.Core.Api, Grpc.Net.Client, Grpc.Net.Common: support for the [gRPC](https://grpc.io/) RPC protocol
@@ -95,7 +95,7 @@ for details.
 
 ## Make requests
 
-The Google Cloud Libraries use [Protocol Buffers](https://developers.google.com/protocol-buffers)
+The Google Cloud Libraries use [Protocol Buffers](https://protobuf.dev)
 to represent requests and responses, with some additional types to make the APIs more
 convenient to work with.
 

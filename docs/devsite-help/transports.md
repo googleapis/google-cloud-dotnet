@@ -10,7 +10,7 @@ including transitive dependencies. (For example, Google.Cloud.Firestore depends
 on Google.Cloud.Firestore.V1 which depends on Google.Api.Gax.Grpc).
 
 The client libraries are based on API definitions expressed in
-[Protocol Buffers](https://developers.google.com/protocol-buffers).
+[Protocol Buffers](https://protobuf.dev).
 The API definitions themselves are [available on GitHub](https://github.com/googleapis/googleapis).
 
 Most APIs can be accessed via two different transports:
