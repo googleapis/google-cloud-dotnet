@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnByb3Rv",
-            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi4gIKBkFjY2VzcxIX",
+            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi9QIKBkFjY2VzcxIX",
             "Cg9wcmluY2lwYWxfZW1haWwYASABKAkSEQoJY2FsbGVyX2lwGAIgASgJEkIK",
             "DWNhbGxlcl9pcF9nZW8YAyABKAsyKy5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
             "ZW50ZXIudjEuR2VvbG9jYXRpb24SGQoRdXNlcl9hZ2VudF9mYW1pbHkYBCAB",
@@ -33,19 +33,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "EhkKEXByaW5jaXBhbF9zdWJqZWN0GAcgASgJEiAKGHNlcnZpY2VfYWNjb3Vu",
             "dF9rZXlfbmFtZRgIIAEoCRJlCh9zZXJ2aWNlX2FjY291bnRfZGVsZWdhdGlv",
             "bl9pbmZvGAkgAygLMjwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LlNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8iUgocU2VydmljZUFjY291",
-            "bnREZWxlZ2F0aW9uSW5mbxIXCg9wcmluY2lwYWxfZW1haWwYASABKAkSGQoR",
-            "cHJpbmNpcGFsX3N1YmplY3QYAiABKAkiIgoLR2VvbG9jYXRpb24SEwoLcmVn",
-            "aW9uX2NvZGUYASABKAlC5wEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjFCC0FjY2Vzc1Byb3RvUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2Vj",
-            "dXJpdHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHK",
-            "Ah5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNs",
-            "b3VkOjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
+            "LlNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8SEQoJdXNlcl9uYW1lGAsg",
+            "ASgJIlIKHFNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8SFwoPcHJpbmNp",
+            "cGFsX2VtYWlsGAEgASgJEhkKEXByaW5jaXBhbF9zdWJqZWN0GAIgASgJIiIK",
+            "C0dlb2xvY2F0aW9uEhMKC3JlZ2lvbl9jb2RlGAEgASgJQucBCiJjb20uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQgtBY2Nlc3NQcm90b1ABWkxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Nl",
+            "Y3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3Vk",
+            "LlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2Vu",
+            "dGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName", "PrincipalSubject", "ServiceAccountKeyName", "ServiceAccountDelegationInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName", "PrincipalSubject", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "UserName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo), global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo.Parser, new[]{ "PrincipalEmail", "PrincipalSubject" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Geolocation), global::Google.Cloud.SecurityCenter.V1.Geolocation.Parser, new[]{ "RegionCode" }, null, null, null, null)
           }));
@@ -100,6 +101,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       principalSubject_ = other.principalSubject_;
       serviceAccountKeyName_ = other.serviceAccountKeyName_;
       serviceAccountDelegationInfo_ = other.serviceAccountDelegationInfo_.Clone();
+      userName_ = other.userName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -165,7 +167,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UserAgentFamilyFieldNumber = 4;
     private string userAgentFamily_ = "";
     /// <summary>
-    /// What kind of user agent is associated, e.g. operating system shells,
+    /// What kind of user agent is associated, for example operating system shells,
     /// embedded or stand-alone applications, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -266,6 +268,27 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return serviceAccountDelegationInfo_; }
     }
 
+    /// <summary>Field number for the "user_name" field.</summary>
+    public const int UserNameFieldNumber = 11;
+    private string userName_ = "";
+    /// <summary>
+    /// A string that represents the username of a user, user account, or other
+    /// entity involved in the access event. What the entity is and what its role
+    /// in the access event is depends on the finding that this field appears in.
+    /// The entity is likely not an IAM principal, but could be a user that is
+    /// logged into an operating system, if the finding is VM-related, or a user
+    /// that is logged into some type of application that is involved in the
+    /// access event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserName {
+      get { return userName_; }
+      set {
+        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -290,6 +313,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (PrincipalSubject != other.PrincipalSubject) return false;
       if (ServiceAccountKeyName != other.ServiceAccountKeyName) return false;
       if(!serviceAccountDelegationInfo_.Equals(other.serviceAccountDelegationInfo_)) return false;
+      if (UserName != other.UserName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -306,6 +330,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (PrincipalSubject.Length != 0) hash ^= PrincipalSubject.GetHashCode();
       if (ServiceAccountKeyName.Length != 0) hash ^= ServiceAccountKeyName.GetHashCode();
       hash ^= serviceAccountDelegationInfo_.GetHashCode();
+      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -357,6 +382,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(ServiceAccountKeyName);
       }
       serviceAccountDelegationInfo_.WriteTo(output, _repeated_serviceAccountDelegationInfo_codec);
+      if (UserName.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(UserName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -400,6 +429,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(ServiceAccountKeyName);
       }
       serviceAccountDelegationInfo_.WriteTo(ref output, _repeated_serviceAccountDelegationInfo_codec);
+      if (UserName.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(UserName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -435,6 +468,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountKeyName);
       }
       size += serviceAccountDelegationInfo_.CalculateSize(_repeated_serviceAccountDelegationInfo_codec);
+      if (UserName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -475,6 +511,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         ServiceAccountKeyName = other.ServiceAccountKeyName;
       }
       serviceAccountDelegationInfo_.Add(other.serviceAccountDelegationInfo_);
+      if (other.UserName.Length != 0) {
+        UserName = other.UserName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -529,6 +568,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             serviceAccountDelegationInfo_.AddEntriesFrom(input, _repeated_serviceAccountDelegationInfo_codec);
             break;
           }
+          case 90: {
+            UserName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -581,6 +624,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 74: {
             serviceAccountDelegationInfo_.AddEntriesFrom(ref input, _repeated_serviceAccountDelegationInfo_codec);
+            break;
+          }
+          case 90: {
+            UserName = input.ReadString();
             break;
           }
         }
