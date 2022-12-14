@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2022-12-14
+
+### New features
+
+- Add support for granular repricing configurations via SkuGroups in Cloud Channel Repricing APIs ([commit fe238c6](https://github.com/googleapis/google-cloud-dotnet/commit/fe238c6dd1d6c47b9421ad53ae7a90b89b7c80e6))
+
 ## Version 2.2.0, released 2022-11-10
 
 ### New features
