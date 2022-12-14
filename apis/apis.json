@@ -2,7 +2,7 @@
   "apis": [
     {
       "id": "Google.Analytics.Admin.V1Alpha",
-      "version": "2.0.0-alpha02",
+      "version": "2.0.0-alpha03",
       "type": "grpc",
       "productName": "Analytics Admin",
       "productUrl": "https://developers.google.com/analytics",
