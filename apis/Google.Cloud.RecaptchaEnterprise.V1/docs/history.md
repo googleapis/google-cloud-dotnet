@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2022-12-14
+
+### New features
+
+- Add account_verification field to Assessment for MFA ([commit e703e5b](https://github.com/googleapis/google-cloud-dotnet/commit/e703e5b1cc29c00853d76d788bd91296587048d8))
+
 ## Version 2.2.0, released 2022-10-17
 
 ### New features
