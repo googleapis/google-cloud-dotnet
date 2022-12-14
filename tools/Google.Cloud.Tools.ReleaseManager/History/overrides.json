@@ -41,4 +41,6 @@
   // This is the commit message from the previous commit, but our change detection ignores changes to apis.json.
   // This is the message we want in the release notes for the REGAPIC-enabled packages.
   "5008946": "feat: Enable REST transport in selected APIs. Set GrpcAdapter=RestGrpcAdapter.Default in the client builder to use this transport",
+  "aa471c9": "skip", // Enable requesting numeric enums
+  "3927b62": "skip", // Regenerate all APIs with new generator; no user-significant API changes
 }
