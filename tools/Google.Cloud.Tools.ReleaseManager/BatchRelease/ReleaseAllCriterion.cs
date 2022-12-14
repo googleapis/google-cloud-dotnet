@@ -32,6 +32,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public bool SkipIfNoReleaseNotes { get; set; }
 
+        /// <summary>
+        /// If this is set to true, any APIs which would only generate
+        /// release notes related to documentation are skipped.
+        /// </summary>
+        public bool SkipDocumentationOnly { get; set; }
+
         IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -69,6 +75,16 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                             string truncatedTitle = commit.Title.Substring(0, Math.Min(commit.Title.Length, 60));
                             Console.WriteLine($"  {commit.HashPrefix}: {truncatedTitle}");
                         }
+                        Console.WriteLine();
+                        continue;
+                    }
+                }
+
+                if (SkipDocumentationOnly)
+                {
+                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes && note.Type != History.ReleaseNoteElementType.Docs)))
+                    {
+                        Console.WriteLine($"Skipping {api.Id} which only contains documentation/trivial changes");
                         Console.WriteLine();
                         continue;
                     }
