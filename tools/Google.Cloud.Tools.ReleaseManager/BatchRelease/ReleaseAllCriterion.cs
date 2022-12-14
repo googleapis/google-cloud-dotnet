@@ -63,7 +63,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 {
                     if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes)))
                     {
-                        Console.WriteLine($"Skipping {api} which has {commits.Count} commits, but none generate release notes:");
+                        Console.WriteLine($"Skipping {api.Id} which has {commits.Count} commit(s), but none generate release notes:");
                         foreach (var commit in commits)
                         {
                             string truncatedTitle = commit.Title.Substring(0, Math.Min(commit.Title.Length, 60));
