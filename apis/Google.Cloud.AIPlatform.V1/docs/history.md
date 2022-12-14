@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.7.0, released 2022-12-14
+
+### New features
+
+- Add service_account to UploadModelRequest in aiplatform v1 model_service.proto ([commit d2f3215](https://github.com/googleapis/google-cloud-dotnet/commit/d2f32151d16303b4684188ca44e19ba6c115ee5d))
+- Add SearchDataItems RPC in aiplatform version v1 and v1beta1 dataset_service.proto ([commit c44d0dc](https://github.com/googleapis/google-cloud-dotnet/commit/c44d0dc34e3d22c26c2edd1eef2df32ea7f6d4e9))
+
 ## Version 2.6.0, released 2022-12-01
 
 ### New features
