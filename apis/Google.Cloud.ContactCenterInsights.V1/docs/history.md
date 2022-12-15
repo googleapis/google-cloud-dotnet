@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.1, released 2022-12-15
+
+Patch release due to a release failure in 2.2.0.
+This has the exact same code as 2.2.0 should have had, but rolling
+forward is simpler than trying to re-release 2.2.0.
+
 ## Version 2.2.0, released 2022-12-14
 
 ### New features
