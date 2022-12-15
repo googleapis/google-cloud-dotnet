@@ -141,7 +141,7 @@ namespace Google.Cloud.Retail.V2
     /// Service for search.
     /// 
     /// This feature is only available for users who have Retail Search enabled.
-    /// Please enable Retail Search on Cloud Console before using this feature.
+    /// Enable Retail Search on Cloud Console before using this feature.
     /// </remarks>
     public abstract partial class SearchServiceClient
     {
@@ -230,7 +230,7 @@ namespace Google.Cloud.Retail.V2
         /// Performs a search.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Please enable Retail Search on Cloud Console before using this feature.
+        /// Enable Retail Search on Cloud Console before using this feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -242,7 +242,7 @@ namespace Google.Cloud.Retail.V2
         /// Performs a search.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Please enable Retail Search on Cloud Console before using this feature.
+        /// Enable Retail Search on Cloud Console before using this feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -258,7 +258,7 @@ namespace Google.Cloud.Retail.V2
     /// Service for search.
     /// 
     /// This feature is only available for users who have Retail Search enabled.
-    /// Please enable Retail Search on Cloud Console before using this feature.
+    /// Enable Retail Search on Cloud Console before using this feature.
     /// </remarks>
     public sealed partial class SearchServiceClientImpl : SearchServiceClient
     {
@@ -300,7 +300,7 @@ namespace Google.Cloud.Retail.V2
         /// Performs a search.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Please enable Retail Search on Cloud Console before using this feature.
+        /// Enable Retail Search on Cloud Console before using this feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -315,7 +315,7 @@ namespace Google.Cloud.Retail.V2
         /// Performs a search.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Please enable Retail Search on Cloud Console before using this feature.
+        /// Enable Retail Search on Cloud Console before using this feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

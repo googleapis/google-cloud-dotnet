@@ -28,7 +28,7 @@ namespace Google.Cloud.Retail.V2 {
             "EhZnb29nbGUuY2xvdWQucmV0YWlsLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29n",
             "bGUvY2xvdWQvcmV0YWlsL3YyL2NvbW1vbi5wcm90bxorZ29vZ2xlL2Nsb3Vk",
-            "L3JldGFpbC92Mi9zZWFyY2hfc2VydmljZS5wcm90byLFBgoNU2VydmluZ0Nv",
+            "L3JldGFpbC92Mi9zZWFyY2hfc2VydmljZS5wcm90byL4BwoNU2VydmluZ0Nv",
             "bmZpZxIRCgRuYW1lGAEgASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAIgASgJ",
             "QgPgQQISEAoIbW9kZWxfaWQYAyABKAkSHQoVcHJpY2VfcmVyYW5raW5nX2xl",
             "dmVsGAQgASgJEhkKEWZhY2V0X2NvbnRyb2xfaWRzGAUgAygJElIKEmR5bmFt",
@@ -39,24 +39,27 @@ namespace Google.Cloud.Retail.V2 {
             "Y29udHJvbF9pZHMYEiADKAkSIwobb25ld2F5X3N5bm9ueW1zX2NvbnRyb2xf",
             "aWRzGAwgAygJEiQKHGRvX25vdF9hc3NvY2lhdGVfY29udHJvbF9pZHMYDSAD",
             "KAkSHwoXcmVwbGFjZW1lbnRfY29udHJvbF9pZHMYDiADKAkSGgoSaWdub3Jl",
-            "X2NvbnRyb2xfaWRzGA8gAygJEhcKD2RpdmVyc2l0eV9sZXZlbBgIIAEoCRIk",
-            "ChxlbmFibGVfY2F0ZWdvcnlfZmlsdGVyX2xldmVsGBAgASgJElcKFHBlcnNv",
-            "bmFsaXphdGlvbl9zcGVjGBUgASgLMjkuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5TZWFyY2hSZXF1ZXN0LlBlcnNvbmFsaXphdGlvblNwZWMSRAoOc29sdXRp",
-            "b25fdHlwZXMYEyADKA4yJC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNvbHV0",
-            "aW9uVHlwZUIG4EEC4EEFOoUB6kGBAQojcmV0YWlsLmdvb2dsZWFwaXMuY29t",
-            "L1NlcnZpbmdDb25maWcSWnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vc2VydmluZ0NvbmZpZ3Mv",
-            "e3NlcnZpbmdfY29uZmlnfULHAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djJCElNlcnZpbmdDb25maWdQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZS",
-            "RVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3Vk",
-            "XFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3Rv",
-            "Mw=="));
+            "X2NvbnRyb2xfaWRzGA8gAygJEhcKD2RpdmVyc2l0eV9sZXZlbBgIIAEoCRJL",
+            "Cg5kaXZlcnNpdHlfdHlwZRgUIAEoDjIzLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuU2VydmluZ0NvbmZpZy5EaXZlcnNpdHlUeXBlEiQKHGVuYWJsZV9jYXRl",
+            "Z29yeV9maWx0ZXJfbGV2ZWwYECABKAkSVwoUcGVyc29uYWxpemF0aW9uX3Nw",
+            "ZWMYFSABKAsyOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVl",
+            "c3QuUGVyc29uYWxpemF0aW9uU3BlYxJECg5zb2x1dGlvbl90eXBlcxgTIAMo",
+            "DjIkLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU29sdXRpb25UeXBlQgbgQQLg",
+            "QQUiZAoNRGl2ZXJzaXR5VHlwZRIeChpESVZFUlNJVFlfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEhgKFFJVTEVfQkFTRURfRElWRVJTSVRZEAISGQoVREFUQV9EUklW",
+            "RU5fRElWRVJTSVRZEAM6hQHqQYEBCiNyZXRhaWwuZ29vZ2xlYXBpcy5jb20v",
+            "U2VydmluZ0NvbmZpZxJacHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfS9zZXJ2aW5nQ29uZmlncy97",
+            "c2VydmluZ19jb25maWd9QscBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "MkISU2VydmluZ0NvbmZpZ1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJF",
+            "VEFJTKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRc",
+            "UmV0YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.SearchServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ServingConfig), global::Google.Cloud.Retail.V2.ServingConfig.Parser, new[]{ "Name", "DisplayName", "ModelId", "PriceRerankingLevel", "FacetControlIds", "DynamicFacetSpec", "BoostControlIds", "FilterControlIds", "RedirectControlIds", "TwowaySynonymsControlIds", "OnewaySynonymsControlIds", "DoNotAssociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "DiversityLevel", "EnableCategoryFilterLevel", "PersonalizationSpec", "SolutionTypes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ServingConfig), global::Google.Cloud.Retail.V2.ServingConfig.Parser, new[]{ "Name", "DisplayName", "ModelId", "PriceRerankingLevel", "FacetControlIds", "DynamicFacetSpec", "BoostControlIds", "FilterControlIds", "RedirectControlIds", "TwowaySynonymsControlIds", "OnewaySynonymsControlIds", "DoNotAssociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "DiversityLevel", "DiversityType", "EnableCategoryFilterLevel", "PersonalizationSpec", "SolutionTypes" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType) }, null, null)
           }));
     }
     #endregion
@@ -116,6 +119,7 @@ namespace Google.Cloud.Retail.V2 {
       replacementControlIds_ = other.replacementControlIds_.Clone();
       ignoreControlIds_ = other.ignoreControlIds_.Clone();
       diversityLevel_ = other.diversityLevel_;
+      diversityType_ = other.diversityType_;
       enableCategoryFilterLevel_ = other.enableCategoryFilterLevel_;
       personalizationSpec_ = other.personalizationSpec_ != null ? other.personalizationSpec_.Clone() : null;
       solutionTypes_ = other.solutionTypes_.Clone();
@@ -197,13 +201,13 @@ namespace Google.Cloud.Retail.V2 {
     /// click-through and conversion rates.
     ///  Allowed values are:
     ///
-    /// * 'no-price-reranking'
-    /// * 'low-price-raranking'
-    /// * 'medium-price-reranking'
-    /// * 'high-price-reranking'
+    /// * `no-price-reranking`
+    /// * `low-price-raranking`
+    /// * `medium-price-reranking`
+    /// * `high-price-reranking`
     ///
     /// If not specified, we choose default based on model type. Default value:
-    /// 'no-price-reranking'.
+    /// `no-price-reranking`.
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
@@ -444,16 +448,16 @@ namespace Google.Cloud.Retail.V2 {
     private string diversityLevel_ = "";
     /// <summary>
     /// How much diversity to use in recommendation model results e.g.
-    /// 'medium-diversity' or 'high-diversity'. Currently supported values:
+    /// `medium-diversity` or `high-diversity`. Currently supported values:
     ///
-    /// * 'no-diversity'
-    /// * 'low-diversity'
-    /// * 'medium-diversity'
-    /// * 'high-diversity'
-    /// * 'auto-diversity'
+    /// * `no-diversity`
+    /// * `low-diversity`
+    /// * `medium-diversity`
+    /// * `high-diversity`
+    /// * `auto-diversity`
     ///
     /// If not specified, we choose default based on recommendation model
-    /// type. Default value: 'no-diversity'.
+    /// type. Default value: `no-diversity`.
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
@@ -468,17 +472,34 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "diversity_type" field.</summary>
+    public const int DiversityTypeFieldNumber = 20;
+    private global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType diversityType_ = global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified;
+    /// <summary>
+    /// What kind of diversity to use - data driven or rule based. If unset,
+    /// the server behavior defaults to
+    /// [RULE_BASED_DIVERSITY][google.cloud.retail.v2.ServingConfig.DiversityType.RULE_BASED_DIVERSITY].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType DiversityType {
+      get { return diversityType_; }
+      set {
+        diversityType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "enable_category_filter_level" field.</summary>
     public const int EnableCategoryFilterLevelFieldNumber = 16;
     private string enableCategoryFilterLevel_ = "";
     /// <summary>
-    /// Whether to add additional category filters on the 'similar-items' model.
+    /// Whether to add additional category filters on the `similar-items` model.
     /// If not specified, we enable it by default.
     ///  Allowed values are:
     ///
-    /// * 'no-category-match': No additional filtering of original results from
+    /// * `no-category-match`: No additional filtering of original results from
     ///   the model and the customer's filters.
-    /// * 'relaxed-category-match': Only keep results with categories that match
+    /// * `relaxed-category-match`: Only keep results with categories that match
     ///   at least one item categories in the PredictRequests's context item.
     ///   * If customer also sends filters in the PredictRequest, then the results
     ///   will satisfy both conditions (user given and category match).
@@ -569,6 +590,7 @@ namespace Google.Cloud.Retail.V2 {
       if(!replacementControlIds_.Equals(other.replacementControlIds_)) return false;
       if(!ignoreControlIds_.Equals(other.ignoreControlIds_)) return false;
       if (DiversityLevel != other.DiversityLevel) return false;
+      if (DiversityType != other.DiversityType) return false;
       if (EnableCategoryFilterLevel != other.EnableCategoryFilterLevel) return false;
       if (!object.Equals(PersonalizationSpec, other.PersonalizationSpec)) return false;
       if(!solutionTypes_.Equals(other.solutionTypes_)) return false;
@@ -594,6 +616,7 @@ namespace Google.Cloud.Retail.V2 {
       hash ^= replacementControlIds_.GetHashCode();
       hash ^= ignoreControlIds_.GetHashCode();
       if (DiversityLevel.Length != 0) hash ^= DiversityLevel.GetHashCode();
+      if (DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) hash ^= DiversityType.GetHashCode();
       if (EnableCategoryFilterLevel.Length != 0) hash ^= EnableCategoryFilterLevel.GetHashCode();
       if (personalizationSpec_ != null) hash ^= PersonalizationSpec.GetHashCode();
       hash ^= solutionTypes_.GetHashCode();
@@ -653,6 +676,10 @@ namespace Google.Cloud.Retail.V2 {
       }
       twowaySynonymsControlIds_.WriteTo(output, _repeated_twowaySynonymsControlIds_codec);
       solutionTypes_.WriteTo(output, _repeated_solutionTypes_codec);
+      if (DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) DiversityType);
+      }
       if (personalizationSpec_ != null) {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PersonalizationSpec);
@@ -705,6 +732,10 @@ namespace Google.Cloud.Retail.V2 {
       }
       twowaySynonymsControlIds_.WriteTo(ref output, _repeated_twowaySynonymsControlIds_codec);
       solutionTypes_.WriteTo(ref output, _repeated_solutionTypes_codec);
+      if (DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) DiversityType);
+      }
       if (personalizationSpec_ != null) {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PersonalizationSpec);
@@ -745,6 +776,9 @@ namespace Google.Cloud.Retail.V2 {
       size += ignoreControlIds_.CalculateSize(_repeated_ignoreControlIds_codec);
       if (DiversityLevel.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DiversityLevel);
+      }
+      if (DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DiversityType);
       }
       if (EnableCategoryFilterLevel.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EnableCategoryFilterLevel);
@@ -794,6 +828,9 @@ namespace Google.Cloud.Retail.V2 {
       ignoreControlIds_.Add(other.ignoreControlIds_);
       if (other.DiversityLevel.Length != 0) {
         DiversityLevel = other.DiversityLevel;
+      }
+      if (other.DiversityType != global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified) {
+        DiversityType = other.DiversityType;
       }
       if (other.EnableCategoryFilterLevel.Length != 0) {
         EnableCategoryFilterLevel = other.EnableCategoryFilterLevel;
@@ -892,6 +929,10 @@ namespace Google.Cloud.Retail.V2 {
             solutionTypes_.AddEntriesFrom(input, _repeated_solutionTypes_codec);
             break;
           }
+          case 160: {
+            DiversityType = (global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType) input.ReadEnum();
+            break;
+          }
           case 170: {
             if (personalizationSpec_ == null) {
               PersonalizationSpec = new global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec();
@@ -986,6 +1027,10 @@ namespace Google.Cloud.Retail.V2 {
             solutionTypes_.AddEntriesFrom(ref input, _repeated_solutionTypes_codec);
             break;
           }
+          case 160: {
+            DiversityType = (global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType) input.ReadEnum();
+            break;
+          }
           case 170: {
             if (personalizationSpec_ == null) {
               PersonalizationSpec = new global::Google.Cloud.Retail.V2.SearchRequest.Types.PersonalizationSpec();
@@ -997,6 +1042,32 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ServingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// What type of diversity - data or rule based.
+      /// </summary>
+      public enum DiversityType {
+        /// <summary>
+        /// Default value.
+        /// </summary>
+        [pbr::OriginalName("DIVERSITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Rule based diversity.
+        /// </summary>
+        [pbr::OriginalName("RULE_BASED_DIVERSITY")] RuleBasedDiversity = 2,
+        /// <summary>
+        /// Data driven diversity.
+        /// </summary>
+        [pbr::OriginalName("DATA_DRIVEN_DIVERSITY")] DataDrivenDiversity = 3,
+      }
+
+    }
+    #endregion
 
   }
 

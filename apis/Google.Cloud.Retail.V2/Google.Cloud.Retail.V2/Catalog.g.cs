@@ -30,7 +30,7 @@ namespace Google.Cloud.Retail.V2 {
             "ZC9yZXRhaWwvdjIvY29tbW9uLnByb3RvGipnb29nbGUvY2xvdWQvcmV0YWls",
             "L3YyL2ltcG9ydF9jb25maWcucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmln",
             "Eh4KFmluZ2VzdGlvbl9wcm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRf",
-            "Y2VudGVyX3Byb2R1Y3RfaWRfZmllbGQYAiABKAkimwYKEENhdGFsb2dBdHRy",
+            "Y2VudGVyX3Byb2R1Y3RfaWRfZmllbGQYAiABKAkivwkKEENhdGFsb2dBdHRy",
             "aWJ1dGUSEAoDa2V5GAEgASgJQgPgQQISEwoGaW5fdXNlGAkgASgIQgPgQQMS",
             "SQoEdHlwZRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxv",
             "Z0F0dHJpYnV0ZS5BdHRyaWJ1dGVUeXBlQgPgQQMSUgoQaW5kZXhhYmxlX29w",
@@ -39,55 +39,65 @@ namespace Google.Cloud.Retail.V2 {
             "b3B0aW9uGAYgASgOMj8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9n",
             "QXR0cmlidXRlLkR5bmFtaWNGYWNldGFibGVPcHRpb24SVAoRc2VhcmNoYWJs",
             "ZV9vcHRpb24YByABKA4yOS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNhdGFs",
-            "b2dBdHRyaWJ1dGUuU2VhcmNoYWJsZU9wdGlvbiI4Cg1BdHRyaWJ1dGVUeXBl",
-            "EgsKB1VOS05PV04QABILCgdURVhUVUFMEAESDQoJTlVNRVJJQ0FMEAIiYgoP",
-            "SW5kZXhhYmxlT3B0aW9uEiAKHElOREVYQUJMRV9PUFRJT05fVU5TUEVDSUZJ",
-            "RUQQABIVChFJTkRFWEFCTEVfRU5BQkxFRBABEhYKEklOREVYQUJMRV9ESVNB",
-            "QkxFRBACIoEBChZEeW5hbWljRmFjZXRhYmxlT3B0aW9uEigKJERZTkFNSUNf",
-            "RkFDRVRBQkxFX09QVElPTl9VTlNQRUNJRklFRBAAEh0KGURZTkFNSUNfRkFD",
-            "RVRBQkxFX0VOQUJMRUQQARIeChpEWU5BTUlDX0ZBQ0VUQUJMRV9ESVNBQkxF",
-            "RBACImYKEFNlYXJjaGFibGVPcHRpb24SIQodU0VBUkNIQUJMRV9PUFRJT05f",
-            "VU5TUEVDSUZJRUQQABIWChJTRUFSQ0hBQkxFX0VOQUJMRUQQARIXChNTRUFS",
-            "Q0hBQkxFX0RJU0FCTEVEEAIitgMKEEF0dHJpYnV0ZXNDb25maWcSFAoEbmFt",
-            "ZRgBIAEoCUIG4EEC4EEFElsKEmNhdGFsb2dfYXR0cmlidXRlcxgCIAMoCzI/",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQXR0cmlidXRlc0NvbmZpZy5DYXRh",
-            "bG9nQXR0cmlidXRlc0VudHJ5ElEKFmF0dHJpYnV0ZV9jb25maWdfbGV2ZWwY",
-            "AyABKA4yLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkF0dHJpYnV0ZUNvbmZp",
-            "Z0xldmVsQgPgQQMaYgoWQ2F0YWxvZ0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkY",
-            "ASABKAkSNwoFdmFsdWUYAiABKAsyKC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkNhdGFsb2dBdHRyaWJ1dGU6AjgBOnjqQXUKJnJldGFpbC5nb29nbGVhcGlz",
-            "LmNvbS9BdHRyaWJ1dGVzQ29uZmlnEktwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2F0dHJpYnV0",
-            "ZXNDb25maWcimQUKEENvbXBsZXRpb25Db25maWcSFAoEbmFtZRgBIAEoCUIG",
-            "4EEC4EEFEhYKDm1hdGNoaW5nX29yZGVyGAIgASgJEhcKD21heF9zdWdnZXN0",
-            "aW9ucxgDIAEoBRIZChFtaW5fcHJlZml4X2xlbmd0aBgEIAEoBRIVCg1hdXRv",
-            "X2xlYXJuaW5nGAsgASgIElgKGHN1Z2dlc3Rpb25zX2lucHV0X2NvbmZpZxgF",
-            "IAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29tcGxldGlvbkRhdGFJ",
-            "bnB1dENvbmZpZ0ID4EEDEi4KIWxhc3Rfc3VnZ2VzdGlvbnNfaW1wb3J0X29w",
-            "ZXJhdGlvbhgGIAEoCUID4EEDElUKFWRlbnlsaXN0X2lucHV0X2NvbmZpZxgH",
-            "IAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29tcGxldGlvbkRhdGFJ",
-            "bnB1dENvbmZpZ0ID4EEDEisKHmxhc3RfZGVueWxpc3RfaW1wb3J0X29wZXJh",
-            "dGlvbhgIIAEoCUID4EEDElYKFmFsbG93bGlzdF9pbnB1dF9jb25maWcYCSAB",
-            "KAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNvbXBsZXRpb25EYXRhSW5w",
-            "dXRDb25maWdCA+BBAxIsCh9sYXN0X2FsbG93bGlzdF9pbXBvcnRfb3BlcmF0",
-            "aW9uGAogASgJQgPgQQM6eOpBdQomcmV0YWlsLmdvb2dsZWFwaXMuY29tL0Nv",
-            "bXBsZXRpb25Db25maWcSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vY29tcGxldGlvbkNvbmZp",
-            "ZyLsAQoHQ2F0YWxvZxIUCgRuYW1lGAEgASgJQgbgQQLgQQUSHAoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJQgbgQQLgQQUSTQoUcHJvZHVjdF9sZXZlbF9jb25maWcY",
-            "BCABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3RMZXZlbENv",
-            "bmZpZ0ID4EECOl7qQVsKHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9n",
-            "Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0",
-            "YWxvZ3Mve2NhdGFsb2d9QsEBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "MkIMQ2F0YWxvZ1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoC",
-            "Fkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWls",
-            "XFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
+            "b2dBdHRyaWJ1dGUuU2VhcmNoYWJsZU9wdGlvbhJfChdleGFjdF9zZWFyY2hh",
+            "YmxlX29wdGlvbhgLIAEoDjI+Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0",
+            "YWxvZ0F0dHJpYnV0ZS5FeGFjdFNlYXJjaGFibGVPcHRpb24SVgoScmV0cmll",
+            "dmFibGVfb3B0aW9uGAwgASgOMjouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5D",
+            "YXRhbG9nQXR0cmlidXRlLlJldHJpZXZhYmxlT3B0aW9uIjgKDUF0dHJpYnV0",
+            "ZVR5cGUSCwoHVU5LTk9XThAAEgsKB1RFWFRVQUwQARINCglOVU1FUklDQUwQ",
+            "AiJiCg9JbmRleGFibGVPcHRpb24SIAocSU5ERVhBQkxFX09QVElPTl9VTlNQ",
+            "RUNJRklFRBAAEhUKEUlOREVYQUJMRV9FTkFCTEVEEAESFgoSSU5ERVhBQkxF",
+            "X0RJU0FCTEVEEAIigQEKFkR5bmFtaWNGYWNldGFibGVPcHRpb24SKAokRFlO",
+            "QU1JQ19GQUNFVEFCTEVfT1BUSU9OX1VOU1BFQ0lGSUVEEAASHQoZRFlOQU1J",
+            "Q19GQUNFVEFCTEVfRU5BQkxFRBABEh4KGkRZTkFNSUNfRkFDRVRBQkxFX0RJ",
+            "U0FCTEVEEAIiZgoQU2VhcmNoYWJsZU9wdGlvbhIhCh1TRUFSQ0hBQkxFX09Q",
+            "VElPTl9VTlNQRUNJRklFRBAAEhYKElNFQVJDSEFCTEVfRU5BQkxFRBABEhcK",
+            "E1NFQVJDSEFCTEVfRElTQUJMRUQQAiJ9ChVFeGFjdFNlYXJjaGFibGVPcHRp",
+            "b24SJwojRVhBQ1RfU0VBUkNIQUJMRV9PUFRJT05fVU5TUEVDSUZJRUQQABIc",
+            "ChhFWEFDVF9TRUFSQ0hBQkxFX0VOQUJMRUQQARIdChlFWEFDVF9TRUFSQ0hB",
+            "QkxFX0RJU0FCTEVEEAIiagoRUmV0cmlldmFibGVPcHRpb24SIgoeUkVUUklF",
+            "VkFCTEVfT1BUSU9OX1VOU1BFQ0lGSUVEEAASFwoTUkVUUklFVkFCTEVfRU5B",
+            "QkxFRBABEhgKFFJFVFJJRVZBQkxFX0RJU0FCTEVEEAIitgMKEEF0dHJpYnV0",
+            "ZXNDb25maWcSFAoEbmFtZRgBIAEoCUIG4EEC4EEFElsKEmNhdGFsb2dfYXR0",
+            "cmlidXRlcxgCIAMoCzI/Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQXR0cmli",
+            "dXRlc0NvbmZpZy5DYXRhbG9nQXR0cmlidXRlc0VudHJ5ElEKFmF0dHJpYnV0",
+            "ZV9jb25maWdfbGV2ZWwYAyABKA4yLC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LkF0dHJpYnV0ZUNvbmZpZ0xldmVsQgPgQQMaYgoWQ2F0YWxvZ0F0dHJpYnV0",
+            "ZXNFbnRyeRILCgNrZXkYASABKAkSNwoFdmFsdWUYAiABKAsyKC5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLkNhdGFsb2dBdHRyaWJ1dGU6AjgBOnjqQXUKJnJl",
+            "dGFpbC5nb29nbGVhcGlzLmNvbS9BdHRyaWJ1dGVzQ29uZmlnEktwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2Nh",
+            "dGFsb2d9L2F0dHJpYnV0ZXNDb25maWcimQUKEENvbXBsZXRpb25Db25maWcS",
+            "FAoEbmFtZRgBIAEoCUIG4EEC4EEFEhYKDm1hdGNoaW5nX29yZGVyGAIgASgJ",
+            "EhcKD21heF9zdWdnZXN0aW9ucxgDIAEoBRIZChFtaW5fcHJlZml4X2xlbmd0",
+            "aBgEIAEoBRIVCg1hdXRvX2xlYXJuaW5nGAsgASgIElgKGHN1Z2dlc3Rpb25z",
+            "X2lucHV0X2NvbmZpZxgFIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "Q29tcGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EEDEi4KIWxhc3Rfc3VnZ2Vz",
+            "dGlvbnNfaW1wb3J0X29wZXJhdGlvbhgGIAEoCUID4EEDElUKFWRlbnlsaXN0",
+            "X2lucHV0X2NvbmZpZxgHIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "Q29tcGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EEDEisKHmxhc3RfZGVueWxp",
+            "c3RfaW1wb3J0X29wZXJhdGlvbhgIIAEoCUID4EEDElYKFmFsbG93bGlzdF9p",
+            "bnB1dF9jb25maWcYCSABKAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNv",
+            "bXBsZXRpb25EYXRhSW5wdXRDb25maWdCA+BBAxIsCh9sYXN0X2FsbG93bGlz",
+            "dF9pbXBvcnRfb3BlcmF0aW9uGAogASgJQgPgQQM6eOpBdQomcmV0YWlsLmdv",
+            "b2dsZWFwaXMuY29tL0NvbXBsZXRpb25Db25maWcSS3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30v",
+            "Y29tcGxldGlvbkNvbmZpZyLsAQoHQ2F0YWxvZxIUCgRuYW1lGAEgASgJQgbg",
+            "QQLgQQUSHAoMZGlzcGxheV9uYW1lGAIgASgJQgbgQQLgQQUSTQoUcHJvZHVj",
+            "dF9sZXZlbF9jb25maWcYBCABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LlByb2R1Y3RMZXZlbENvbmZpZ0ID4EECOl7qQVsKHXJldGFpbC5nb29nbGVh",
+            "cGlzLmNvbS9DYXRhbG9nEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9QsEBChpjb20uZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52MkIMQ2F0YWxvZ1Byb3RvUAFaPGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3Jl",
+            "dGFpbKICBlJFVEFJTKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29n",
+            "bGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpW",
+            "MmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductLevelConfig), global::Google.Cloud.Retail.V2.ProductLevelConfig.Parser, new[]{ "IngestionProductType", "MerchantCenterProductIdField" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute), global::Google.Cloud.Retail.V2.CatalogAttribute.Parser, new[]{ "Key", "InUse", "Type", "IndexableOption", "DynamicFacetableOption", "SearchableOption" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CatalogAttribute), global::Google.Cloud.Retail.V2.CatalogAttribute.Parser, new[]{ "Key", "InUse", "Type", "IndexableOption", "DynamicFacetableOption", "SearchableOption", "ExactSearchableOption", "RetrievableOption" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption), typeof(global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AttributesConfig), global::Google.Cloud.Retail.V2.AttributesConfig.Parser, new[]{ "Name", "CatalogAttributes", "AttributeConfigLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CompletionConfig), global::Google.Cloud.Retail.V2.CompletionConfig.Parser, new[]{ "Name", "MatchingOrder", "MaxSuggestions", "MinPrefixLength", "AutoLearning", "SuggestionsInputConfig", "LastSuggestionsImportOperation", "DenylistInputConfig", "LastDenylistImportOperation", "AllowlistInputConfig", "LastAllowlistImportOperation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Catalog), global::Google.Cloud.Retail.V2.Catalog.Parser, new[]{ "Name", "DisplayName", "ProductLevelConfig" }, null, null, null, null)
@@ -421,6 +431,8 @@ namespace Google.Cloud.Retail.V2 {
       indexableOption_ = other.indexableOption_;
       dynamicFacetableOption_ = other.dynamicFacetableOption_;
       searchableOption_ = other.searchableOption_;
+      exactSearchableOption_ = other.exactSearchableOption_;
+      retrievableOption_ = other.retrievableOption_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -469,13 +481,13 @@ namespace Google.Cloud.Retail.V2 {
     /// APIs. This field is `False` for pre-loaded
     /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s.
     ///
-    /// Only pre-loaded
-    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s that are
-    /// neither in use by products nor predefined can be deleted.
-    /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s that are
-    /// either in use by products or are predefined cannot be deleted; however,
-    /// their configuration properties will reset to default values upon removal
-    /// request.
+    /// Only pre-loaded [catalog
+    /// attributes][google.cloud.retail.v2.CatalogAttribute] that are neither in
+    /// use by products nor predefined can be deleted. [Catalog
+    /// attributes][google.cloud.retail.v2.CatalogAttribute] that are
+    /// either in use by products or are predefined attributes cannot be deleted;
+    /// however, their configuration properties will reset to default values upon
+    /// removal request.
     ///
     /// After catalog changes, it takes about 10 minutes for this field to update.
     /// </summary>
@@ -513,6 +525,8 @@ namespace Google.Cloud.Retail.V2 {
     /// is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values
     /// are indexed so that it can be filtered, faceted, or boosted in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    ///
+    /// Must be specified, otherwise throws INVALID_FORMAT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -531,6 +545,8 @@ namespace Google.Cloud.Retail.V2 {
     /// facet. Could only be DYNAMIC_FACETABLE_DISABLED if
     /// [CatalogAttribute.indexable_option][google.cloud.retail.v2.CatalogAttribute.indexable_option]
     /// is INDEXABLE_DISABLED. Otherwise, an INVALID_ARGUMENT error is returned.
+    ///
+    /// Must be specified, otherwise throws INVALID_FORMAT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -555,6 +571,8 @@ namespace Google.Cloud.Retail.V2 {
     /// will not be searchable by text queries in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search], as
     /// there are no text values associated to numerical attributes.
+    ///
+    /// Must be specified, otherwise throws INVALID_FORMAT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -562,6 +580,39 @@ namespace Google.Cloud.Retail.V2 {
       get { return searchableOption_; }
       set {
         searchableOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exact_searchable_option" field.</summary>
+    public const int ExactSearchableOptionFieldNumber = 11;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption exactSearchableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified;
+    /// <summary>
+    /// If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable.
+    /// This property only applies to textual custom attributes and requires
+    /// indexable set to enabled to enable exact-searchable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption ExactSearchableOption {
+      get { return exactSearchableOption_; }
+      set {
+        exactSearchableOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retrievable_option" field.</summary>
+    public const int RetrievableOptionFieldNumber = 12;
+    private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption retrievableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified;
+    /// <summary>
+    /// If RETRIEVABLE_ENABLED, attribute values are retrievable in the search
+    /// results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption RetrievableOption {
+      get { return retrievableOption_; }
+      set {
+        retrievableOption_ = value;
       }
     }
 
@@ -586,6 +637,8 @@ namespace Google.Cloud.Retail.V2 {
       if (IndexableOption != other.IndexableOption) return false;
       if (DynamicFacetableOption != other.DynamicFacetableOption) return false;
       if (SearchableOption != other.SearchableOption) return false;
+      if (ExactSearchableOption != other.ExactSearchableOption) return false;
+      if (RetrievableOption != other.RetrievableOption) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -599,6 +652,8 @@ namespace Google.Cloud.Retail.V2 {
       if (IndexableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.IndexableOption.Unspecified) hash ^= IndexableOption.GetHashCode();
       if (DynamicFacetableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.DynamicFacetableOption.Unspecified) hash ^= DynamicFacetableOption.GetHashCode();
       if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) hash ^= SearchableOption.GetHashCode();
+      if (ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) hash ^= ExactSearchableOption.GetHashCode();
+      if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) hash ^= RetrievableOption.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -641,6 +696,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(80);
         output.WriteEnum((int) Type);
       }
+      if (ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) ExactSearchableOption);
+      }
+      if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) RetrievableOption);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -675,6 +738,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(80);
         output.WriteEnum((int) Type);
       }
+      if (ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) ExactSearchableOption);
+      }
+      if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) RetrievableOption);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -702,6 +773,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchableOption);
+      }
+      if (ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExactSearchableOption);
+      }
+      if (RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RetrievableOption);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -732,6 +809,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.SearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.SearchableOption.Unspecified) {
         SearchableOption = other.SearchableOption;
+      }
+      if (other.ExactSearchableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption.Unspecified) {
+        ExactSearchableOption = other.ExactSearchableOption;
+      }
+      if (other.RetrievableOption != global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified) {
+        RetrievableOption = other.RetrievableOption;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -770,6 +853,14 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 80: {
             Type = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            ExactSearchableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            RetrievableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) input.ReadEnum();
             break;
           }
         }
@@ -811,6 +902,14 @@ namespace Google.Cloud.Retail.V2 {
             Type = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.AttributeType) input.ReadEnum();
             break;
           }
+          case 88: {
+            ExactSearchableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.ExactSearchableOption) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            RetrievableOption = (global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -847,8 +946,7 @@ namespace Google.Cloud.Retail.V2 {
       /// </summary>
       public enum IndexableOption {
         /// <summary>
-        /// Value used when unset. Defaults to
-        /// [INDEXABLE_ENABLED][google.cloud.retail.v2.CatalogAttribute.IndexableOption.INDEXABLE_ENABLED].
+        /// Value used when unset.
         /// </summary>
         [pbr::OriginalName("INDEXABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -866,8 +964,7 @@ namespace Google.Cloud.Retail.V2 {
       /// </summary>
       public enum DynamicFacetableOption {
         /// <summary>
-        /// Value used when unset. Defaults to
-        /// [DYNAMIC_FACETABLE_ENABLED][google.cloud.retail.v2.CatalogAttribute.DynamicFacetableOption.DYNAMIC_FACETABLE_ENABLED].
+        /// Value used when unset.
         /// </summary>
         [pbr::OriginalName("DYNAMIC_FACETABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -885,8 +982,7 @@ namespace Google.Cloud.Retail.V2 {
       /// </summary>
       public enum SearchableOption {
         /// <summary>
-        /// Value used when unset. Defaults to
-        /// [SEARCHABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.SearchableOption.SEARCHABLE_DISABLED].
+        /// Value used when unset.
         /// </summary>
         [pbr::OriginalName("SEARCHABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -897,6 +993,44 @@ namespace Google.Cloud.Retail.V2 {
         /// Searchable option disabled for an attribute.
         /// </summary>
         [pbr::OriginalName("SEARCHABLE_DISABLED")] SearchableDisabled = 2,
+      }
+
+      /// <summary>
+      /// The status of the exact-searchable option of a catalog attribute.
+      /// </summary>
+      public enum ExactSearchableOption {
+        /// <summary>
+        /// Value used when unset. Defaults to
+        /// [EXACT_SEARCHABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.ExactSearchableOption.EXACT_SEARCHABLE_DISABLED].
+        /// </summary>
+        [pbr::OriginalName("EXACT_SEARCHABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Exact searchable option enabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("EXACT_SEARCHABLE_ENABLED")] ExactSearchableEnabled = 1,
+        /// <summary>
+        /// Exact searchable option disabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("EXACT_SEARCHABLE_DISABLED")] ExactSearchableDisabled = 2,
+      }
+
+      /// <summary>
+      /// The status of the retrievable option of a catalog attribute.
+      /// </summary>
+      public enum RetrievableOption {
+        /// <summary>
+        /// Value used when unset. Defaults to
+        /// [RETRIEVABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.RetrievableOption.RETRIEVABLE_DISABLED].
+        /// </summary>
+        [pbr::OriginalName("RETRIEVABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Retrievable option enabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("RETRIEVABLE_ENABLED")] RetrievableEnabled = 1,
+        /// <summary>
+        /// Retrievable option disabled for an attribute.
+        /// </summary>
+        [pbr::OriginalName("RETRIEVABLE_DISABLED")] RetrievableDisabled = 2,
       }
 
     }

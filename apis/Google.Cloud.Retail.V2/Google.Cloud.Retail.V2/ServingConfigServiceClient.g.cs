@@ -556,7 +556,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -573,7 +573,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -590,7 +590,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -604,7 +604,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -621,7 +621,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -638,7 +638,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to delete. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -780,7 +780,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -797,7 +797,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -814,7 +814,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -828,7 +828,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -845,7 +845,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -862,7 +862,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -892,7 +892,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The catalog resource name. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -917,7 +917,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The catalog resource name. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -942,7 +942,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The catalog resource name. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -967,7 +967,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The catalog resource name. Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1064,7 +1064,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1103,7 +1103,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1145,7 +1145,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1214,7 +1214,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1247,7 +1247,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1283,7 +1283,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="servingConfig">
         /// Required. The source ServingConfig resource name . Format:
-        /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+        /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

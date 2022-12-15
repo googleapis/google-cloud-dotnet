@@ -31,7 +31,7 @@ namespace Google.Cloud.Retail.V2 {
             "L3YyL3Byb21vdGlvbi5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
             "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
             "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
-            "L3dyYXBwZXJzLnByb3RvItcNCgdQcm9kdWN0EjEKC2V4cGlyZV90aW1lGBAg",
+            "L3dyYXBwZXJzLnByb3RvItsNCgdQcm9kdWN0EjEKC2V4cGlyZV90aW1lGBAg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEi0KA3R0bBgRIAEo",
             "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEESAASEQoEbmFtZRgB",
             "IAEoCUID4EEFEg8KAmlkGAIgASgJQgPgQQUSNwoEdHlwZRgDIAEoDjIkLmdv",
@@ -56,28 +56,28 @@ namespace Google.Cloud.Retail.V2 {
             "CgVzaXplcxgaIAMoCRIRCgltYXRlcmlhbHMYGyADKAkSEAoIcGF0dGVybnMY",
             "HCADKAkSEgoKY29uZGl0aW9ucxgdIAMoCRI1Cgpwcm9tb3Rpb25zGCIgAygL",
             "MiEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9tb3Rpb24SMAoMcHVibGlz",
-            "aF90aW1lGCEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2ChJy",
+            "aF90aW1lGCEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6ChJy",
             "ZXRyaWV2YWJsZV9maWVsZHMYHiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrEjYKCHZhcmlhbnRzGB8gAygLMh8uZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5Qcm9kdWN0QgPgQQMSRgoRbG9jYWxfaW52ZW50b3JpZXMYIyADKAsy",
-            "Ji5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxvY2FsSW52ZW50b3J5QgPgQQMa",
-            "WgoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgCIAEo",
-            "CzInLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ3VzdG9tQXR0cmlidXRlOgI4",
-            "ASJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZEAES",
-            "CwoHVkFSSUFOVBACEg4KCkNPTExFQ1RJT04QAyJpCgxBdmFpbGFiaWxpdHkS",
-            "HAoYQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIQ",
-            "CgxPVVRfT0ZfU1RPQ0sQAhIMCghQUkVPUkRFUhADEg0KCUJBQ0tPUkRFUhAE",
-            "OoQB6kGAAQodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSX3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97",
-            "Y2F0YWxvZ30vYnJhbmNoZXMve2JyYW5jaH0vcHJvZHVjdHMve3Byb2R1Y3R9",
-            "QgwKCmV4cGlyYXRpb25CsAIKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "QgxQcm9kdWN0UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlMqgIW",
-            "R29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxc",
-            "VjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy6kFsChxyZXRhaWwuZ29v",
-            "Z2xlYXBpcy5jb20vQnJhbmNoEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2JyYW5jaGVzL3ti",
-            "cmFuY2h9YgZwcm90bzM="));
+            "bGRNYXNrQgIYARI2Cgh2YXJpYW50cxgfIAMoCzIfLmdvb2dsZS5jbG91ZC5y",
+            "ZXRhaWwudjIuUHJvZHVjdEID4EEDEkYKEWxvY2FsX2ludmVudG9yaWVzGCMg",
+            "AygLMiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Mb2NhbEludmVudG9yeUID",
+            "4EEDGloKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSNgoFdmFsdWUY",
+            "AiABKAsyJy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1c3RvbUF0dHJpYnV0",
+            "ZToCOAEiRgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCwoHUFJJTUFS",
+            "WRABEgsKB1ZBUklBTlQQAhIOCgpDT0xMRUNUSU9OEAMiaQoMQXZhaWxhYmls",
+            "aXR5EhwKGEFWQUlMQUJJTElUWV9VTlNQRUNJRklFRBAAEgwKCElOX1NUT0NL",
+            "EAESEAoMT1VUX09GX1NUT0NLEAISDAoIUFJFT1JERVIQAxINCglCQUNLT1JE",
+            "RVIQBDqEAepBgAEKHXJldGFpbC5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0El9w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0YWxv",
+            "Z3Mve2NhdGFsb2d9L2JyYW5jaGVzL3ticmFuY2h9L3Byb2R1Y3RzL3twcm9k",
+            "dWN0fUIMCgpleHBpcmF0aW9uQrACChpjb20uZ29vZ2xlLmNsb3VkLnJldGFp",
+            "bC52MkIMUHJvZHVjdFByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJ",
+            "TKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0",
+            "YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMupBbAoccmV0YWls",
+            "Lmdvb2dsZWFwaXMuY29tL0JyYW5jaBJMcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfS9icmFuY2hl",
+            "cy97YnJhbmNofWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.PromotionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -180,7 +180,13 @@ namespace Google.Cloud.Retail.V2 {
     public const int ExpireTimeFieldNumber = 16;
     /// <summary>
     /// The timestamp when this product becomes unavailable for
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search]. Note
+    /// that this is only applicable to
+    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
+    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION], and
+    /// ignored for [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT].
+    /// In general, we suggest the users to delete the stale products explicitly,
+    /// instead of using this field to determine staleness.
     ///
     /// If it is set, the [Product][google.cloud.retail.v2.Product] is not
     /// available for
@@ -212,7 +218,13 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>Field number for the "ttl" field.</summary>
     public const int TtlFieldNumber = 17;
     /// <summary>
-    /// Input only. The TTL (time to live) of the product.
+    /// Input only. The TTL (time to live) of the product. Note that this is only
+    /// applicable to [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
+    /// and [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION],
+    /// and ignored for
+    /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]. In general,
+    /// we suggest the users to delete the stale products explicitly, instead of
+    /// using this field to determine staleness.
     ///
     /// If it is set, it must be a non-negative value, and
     /// [expire_time][google.cloud.retail.v2.Product.expire_time] is set as
@@ -397,7 +409,7 @@ namespace Google.Cloud.Retail.V2 {
     /// full path for better search / recommendation quality.
     ///
     /// To represent full path of category, use '>' sign to separate different
-    /// hierarchies. If '>' is part of the category name, please replace it with
+    /// hierarchies. If '>' is part of the category name, replace it with
     /// other character(s).
     ///
     /// For example, if a shoes product belongs to both
@@ -629,7 +641,11 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The timestamp when this [Product][google.cloud.retail.v2.Product] becomes
     /// available for
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search]. Note
+    /// that this is only applicable to
+    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
+    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION], and
+    /// ignored for [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -978,7 +994,10 @@ namespace Google.Cloud.Retail.V2 {
     /// Note: Returning more fields in
     /// [SearchResponse][google.cloud.retail.v2.SearchResponse] can increase
     /// response payload size and serving latency.
+    ///
+    /// This field is deprecated. Use the retrievable site-wide control instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask RetrievableFields {
@@ -1020,7 +1039,11 @@ namespace Google.Cloud.Retail.V2 {
     /// Output only. A list of local inventories specific to different places.
     ///
     /// This is only available for users who have Retail Search enabled, and it can
-    /// be managed by [AddLocalInventories][] and [RemoveLocalInventories][] APIs.
+    /// be managed by
+    /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
+    /// and
+    /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
+    /// APIs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

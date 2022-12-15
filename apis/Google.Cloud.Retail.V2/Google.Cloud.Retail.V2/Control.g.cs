@@ -168,9 +168,8 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> associatedServingConfigIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. List of [serving
-    /// configuration][google.cloud.retail.v2.ServingConfig] ids that are
-    /// associated with this control in the same
+    /// Output only. List of [serving config][google.cloud.retail.v2.ServingConfig]
+    /// ids that are associated with this control in the same
     /// [Catalog][google.cloud.retail.v2.Catalog].
     ///
     /// Note the association is managed via the

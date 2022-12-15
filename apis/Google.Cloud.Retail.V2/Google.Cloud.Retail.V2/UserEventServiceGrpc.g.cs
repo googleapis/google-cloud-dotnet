@@ -192,14 +192,14 @@ namespace Google.Cloud.Retail.V2 {
       }
 
       /// <summary>
-      /// Starts a user event rejoin operation with latest product catalog. Events
-      /// will not be annotated with detailed product information if product is
-      /// missing from the catalog at the time the user event is ingested, and these
-      /// events are stored as unjoined events with a limited usage on training and
-      /// serving. This method can be used to start a join operation on specified
-      /// events with latest version of product catalog. It can also be used to
-      /// correct events joined with the wrong product catalog. A rejoin operation
-      /// can take hours or days to complete.
+      /// Starts a user-event rejoin operation with latest product catalog. Events
+      /// are not annotated with detailed product information for products that are
+      /// missing from the catalog when the user event is ingested. These
+      /// events are stored as unjoined events with limited usage on training and
+      /// serving. You can use this method to start a join operation on specified
+      /// events with the latest version of product catalog. You can also use this
+      /// method to correct events joined with the wrong product catalog. A rejoin
+      /// operation can take hours or days to complete.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -484,14 +484,14 @@ namespace Google.Cloud.Retail.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ImportUserEvents, null, options, request);
       }
       /// <summary>
-      /// Starts a user event rejoin operation with latest product catalog. Events
-      /// will not be annotated with detailed product information if product is
-      /// missing from the catalog at the time the user event is ingested, and these
-      /// events are stored as unjoined events with a limited usage on training and
-      /// serving. This method can be used to start a join operation on specified
-      /// events with latest version of product catalog. It can also be used to
-      /// correct events joined with the wrong product catalog. A rejoin operation
-      /// can take hours or days to complete.
+      /// Starts a user-event rejoin operation with latest product catalog. Events
+      /// are not annotated with detailed product information for products that are
+      /// missing from the catalog when the user event is ingested. These
+      /// events are stored as unjoined events with limited usage on training and
+      /// serving. You can use this method to start a join operation on specified
+      /// events with the latest version of product catalog. You can also use this
+      /// method to correct events joined with the wrong product catalog. A rejoin
+      /// operation can take hours or days to complete.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -504,14 +504,14 @@ namespace Google.Cloud.Retail.V2 {
         return RejoinUserEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts a user event rejoin operation with latest product catalog. Events
-      /// will not be annotated with detailed product information if product is
-      /// missing from the catalog at the time the user event is ingested, and these
-      /// events are stored as unjoined events with a limited usage on training and
-      /// serving. This method can be used to start a join operation on specified
-      /// events with latest version of product catalog. It can also be used to
-      /// correct events joined with the wrong product catalog. A rejoin operation
-      /// can take hours or days to complete.
+      /// Starts a user-event rejoin operation with latest product catalog. Events
+      /// are not annotated with detailed product information for products that are
+      /// missing from the catalog when the user event is ingested. These
+      /// events are stored as unjoined events with limited usage on training and
+      /// serving. You can use this method to start a join operation on specified
+      /// events with the latest version of product catalog. You can also use this
+      /// method to correct events joined with the wrong product catalog. A rejoin
+      /// operation can take hours or days to complete.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -522,14 +522,14 @@ namespace Google.Cloud.Retail.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_RejoinUserEvents, null, options, request);
       }
       /// <summary>
-      /// Starts a user event rejoin operation with latest product catalog. Events
-      /// will not be annotated with detailed product information if product is
-      /// missing from the catalog at the time the user event is ingested, and these
-      /// events are stored as unjoined events with a limited usage on training and
-      /// serving. This method can be used to start a join operation on specified
-      /// events with latest version of product catalog. It can also be used to
-      /// correct events joined with the wrong product catalog. A rejoin operation
-      /// can take hours or days to complete.
+      /// Starts a user-event rejoin operation with latest product catalog. Events
+      /// are not annotated with detailed product information for products that are
+      /// missing from the catalog when the user event is ingested. These
+      /// events are stored as unjoined events with limited usage on training and
+      /// serving. You can use this method to start a join operation on specified
+      /// events with the latest version of product catalog. You can also use this
+      /// method to correct events joined with the wrong product catalog. A rejoin
+      /// operation can take hours or days to complete.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -542,14 +542,14 @@ namespace Google.Cloud.Retail.V2 {
         return RejoinUserEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts a user event rejoin operation with latest product catalog. Events
-      /// will not be annotated with detailed product information if product is
-      /// missing from the catalog at the time the user event is ingested, and these
-      /// events are stored as unjoined events with a limited usage on training and
-      /// serving. This method can be used to start a join operation on specified
-      /// events with latest version of product catalog. It can also be used to
-      /// correct events joined with the wrong product catalog. A rejoin operation
-      /// can take hours or days to complete.
+      /// Starts a user-event rejoin operation with latest product catalog. Events
+      /// are not annotated with detailed product information for products that are
+      /// missing from the catalog when the user event is ingested. These
+      /// events are stored as unjoined events with limited usage on training and
+      /// serving. You can use this method to start a join operation on specified
+      /// events with the latest version of product catalog. You can also use this
+      /// method to correct events joined with the wrong product catalog. A rejoin
+      /// operation can take hours or days to complete.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

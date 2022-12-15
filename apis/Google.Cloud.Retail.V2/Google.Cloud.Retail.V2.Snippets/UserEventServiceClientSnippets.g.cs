@@ -34,6 +34,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Parent = "",
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = userEventServiceClient.WriteUserEvent(request);
@@ -52,6 +53,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Parent = "",
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = await userEventServiceClient.WriteUserEventAsync(request);
@@ -71,6 +73,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 UserEvent = "",
                 Uri = "",
                 Ets = 0L,
+                RawJson = "",
+                PrebuiltRule = "",
             };
             // Make the request
             HttpBody response = userEventServiceClient.CollectUserEvent(request);
@@ -91,6 +95,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 UserEvent = "",
                 Uri = "",
                 Ets = 0L,
+                RawJson = "",
+                PrebuiltRule = "",
             };
             // Make the request
             HttpBody response = await userEventServiceClient.CollectUserEventAsync(request);

@@ -476,8 +476,8 @@ namespace Google.Cloud.Retail.V2 {
         /// Value cannot be empty.
         /// Value can have at most 3 terms if specified as a partial match. Each
         /// space separated string is considered as one term.
-        /// Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not
-        /// allowed for partial match.
+        /// For example, "a b c" is 3 terms and allowed, but " a b c d" is 4 terms
+        /// and not allowed for a partial match.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -921,6 +921,7 @@ namespace Google.Cloud.Retail.V2 {
 
   /// <summary>
   /// A rule is a condition-action pair
+  ///
   /// * A condition defines when a rule is to be triggered.
   /// * An action specifies what occurs on that trigger.
   /// Currently rules only work for [controls][google.cloud.retail.v2.Control] with
@@ -2295,7 +2296,8 @@ namespace Google.Cloud.Retail.V2 {
 
       /// <summary>
       /// Creates a set of terms that will be treated as synonyms of each other.
-      /// Example: synonyms of "sneakers" and "shoes".
+      /// Example: synonyms of "sneakers" and "shoes":
+      ///
       ///  * "sneakers" will use a synonym of "shoes".
       ///  * "shoes" will use a synonym of "sneakers".
       /// </summary>

@@ -212,8 +212,10 @@ namespace Google.Cloud.Retail.V2 {
     public const int DeviceTypeFieldNumber = 4;
     private string deviceType_ = "";
     /// <summary>
-    /// The device type context for completion suggestions.
-    /// It is useful to apply different suggestions on different device types, e.g.
+    /// The device type context for completion suggestions. We recommend that you
+    /// leave this field empty.
+    ///
+    /// It can apply different suggestions on different device types, e.g.
     /// `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all device
     /// types.
     ///

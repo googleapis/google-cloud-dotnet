@@ -42,6 +42,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 UserEvent = "",
                 Uri = "",
                 Ets = 0L,
+                RawJson = "",
+                PrebuiltRule = "",
             };
             // Make the request
             HttpBody response = await userEventServiceClient.CollectUserEventAsync(request);
