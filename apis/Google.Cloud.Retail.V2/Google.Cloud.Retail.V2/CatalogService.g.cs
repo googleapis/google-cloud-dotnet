@@ -1809,7 +1809,7 @@ namespace Google.Cloud.Retail.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. Full CompletionConfig resource name. Format:
-    /// projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+    /// `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

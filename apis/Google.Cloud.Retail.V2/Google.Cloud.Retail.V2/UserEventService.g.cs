@@ -28,59 +28,62 @@ namespace Google.Cloud.Retail.V2 {
             "cm90bxIWZ29vZ2xlLmNsb3VkLnJldGFpbC52MhocZ29vZ2xlL2FwaS9hbm5v",
             "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvaHR0cGJv",
-            "ZHkucHJvdG8aKmdvb2dsZS9jbG91ZC9yZXRhaWwvdjIvaW1wb3J0X2NvbmZp",
-            "Zy5wcm90bxopZ29vZ2xlL2Nsb3VkL3JldGFpbC92Mi9wdXJnZV9jb25maWcu",
-            "cHJvdG8aJ2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvdXNlcl9ldmVudC5wcm90",
-            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8iaAoVV3Jp",
-            "dGVVc2VyRXZlbnRSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEjoKCnVz",
-            "ZXJfZXZlbnQYAiABKAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJF",
-            "dmVudEID4EECImEKF0NvbGxlY3RVc2VyRXZlbnRSZXF1ZXN0EhMKBnBhcmVu",
-            "dBgBIAEoCUID4EECEhcKCnVzZXJfZXZlbnQYAiABKAlCA+BBAhILCgN1cmkY",
-            "AyABKAkSCwoDZXRzGAQgASgDIv4BChdSZWpvaW5Vc2VyRXZlbnRzUmVxdWVz",
-            "dBITCgZwYXJlbnQYASABKAlCA+BBAhJlChd1c2VyX2V2ZW50X3Jlam9pbl9z",
-            "Y29wZRgCIAEoDjJELmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVqb2luVXNl",
-            "ckV2ZW50c1JlcXVlc3QuVXNlckV2ZW50UmVqb2luU2NvcGUiZwoUVXNlckV2",
-            "ZW50UmVqb2luU2NvcGUSJwojVVNFUl9FVkVOVF9SRUpPSU5fU0NPUEVfVU5T",
-            "UEVDSUZJRUQQABIRCg1KT0lORURfRVZFTlRTEAESEwoPVU5KT0lORURfRVZF",
-            "TlRTEAIiPgoYUmVqb2luVXNlckV2ZW50c1Jlc3BvbnNlEiIKGnJlam9pbmVk",
-            "X3VzZXJfZXZlbnRzX2NvdW50GAEgASgDIhoKGFJlam9pblVzZXJFdmVudHNN",
-            "ZXRhZGF0YTK/CQoQVXNlckV2ZW50U2VydmljZRK3AQoOV3JpdGVVc2VyRXZl",
-            "bnQSLS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLldyaXRlVXNlckV2ZW50UmVx",
-            "dWVzdBohLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXNlckV2ZW50IlOC0+ST",
-            "Ak0iPy92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxv",
-            "Z3MvKn0vdXNlckV2ZW50czp3cml0ZToKdXNlcl9ldmVudBKkAQoQQ29sbGVj",
-            "dFVzZXJFdmVudBIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29sbGVjdFVz",
-            "ZXJFdmVudFJlcXVlc3QaFC5nb29nbGUuYXBpLkh0dHBCb2R5IkmC0+STAkMS",
-            "QS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3Mv",
-            "Kn0vdXNlckV2ZW50czpjb2xsZWN0EoYCCg9QdXJnZVVzZXJFdmVudHMSLi5n",
-            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlB1cmdlVXNlckV2ZW50c1JlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqMBgtPkkwJEIj8vdjIv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9L3Vz",
-            "ZXJFdmVudHM6cHVyZ2U6ASrKQVYKLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "UHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2USJGdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHVyZ2VNZXRhZGF0YRKLAgoQSW1wb3J0VXNlckV2ZW50cxIvLmdvb2ds",
-            "ZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0VXNlckV2ZW50c1JlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqYBgtPkkwJFIkAvdjIve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9L3VzZXJF",
-            "dmVudHM6aW1wb3J0OgEqykFYCi9nb29nbGUuY2xvdWQucmV0YWlsLnYyLklt",
-            "cG9ydFVzZXJFdmVudHNSZXNwb25zZRIlZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbXBvcnRNZXRhZGF0YRLnAQoQUmVqb2luVXNlckV2ZW50cxIvLmdvb2ds",
-            "ZS5jbG91ZC5yZXRhaWwudjIuUmVqb2luVXNlckV2ZW50c1JlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBgtPkkwJFIkAvdjIve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9L3VzZXJF",
-            "dmVudHM6cmVqb2luOgEqykE0ChhSZWpvaW5Vc2VyRXZlbnRzUmVzcG9uc2US",
-            "GFJlam9pblVzZXJFdmVudHNNZXRhZGF0YRpJykEVcmV0YWlsLmdvb2dsZWFw",
-            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybULKAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCFVVz",
-            "ZXJFdmVudFNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRB",
-            "SUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJl",
-            "dGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "ZHkucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKmdvb2dsZS9j",
+            "bG91ZC9yZXRhaWwvdjIvaW1wb3J0X2NvbmZpZy5wcm90bxopZ29vZ2xlL2Ns",
+            "b3VkL3JldGFpbC92Mi9wdXJnZV9jb25maWcucHJvdG8aJ2dvb2dsZS9jbG91",
+            "ZC9yZXRhaWwvdjIvdXNlcl9ldmVudC5wcm90bxojZ29vZ2xlL2xvbmdydW5u",
+            "aW5nL29wZXJhdGlvbnMucHJvdG8ifQoVV3JpdGVVc2VyRXZlbnRSZXF1ZXN0",
+            "EhMKBnBhcmVudBgBIAEoCUID4EECEjoKCnVzZXJfZXZlbnQYAiABKAsyIS5n",
+            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudEID4EECEhMKC3dyaXRl",
+            "X2FzeW5jGAMgASgIIp8BChdDb2xsZWN0VXNlckV2ZW50UmVxdWVzdBIXCg1w",
+            "cmVidWlsdF9ydWxlGAYgASgJSAASEwoGcGFyZW50GAEgASgJQgPgQQISFwoK",
+            "dXNlcl9ldmVudBgCIAEoCUID4EECEgsKA3VyaRgDIAEoCRILCgNldHMYBCAB",
+            "KAMSEAoIcmF3X2pzb24YBSABKAlCEQoPY29udmVyc2lvbl9ydWxlIv4BChdS",
+            "ZWpvaW5Vc2VyRXZlbnRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJl",
+            "Chd1c2VyX2V2ZW50X3Jlam9pbl9zY29wZRgCIAEoDjJELmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuUmVqb2luVXNlckV2ZW50c1JlcXVlc3QuVXNlckV2ZW50",
+            "UmVqb2luU2NvcGUiZwoUVXNlckV2ZW50UmVqb2luU2NvcGUSJwojVVNFUl9F",
+            "VkVOVF9SRUpPSU5fU0NPUEVfVU5TUEVDSUZJRUQQABIRCg1KT0lORURfRVZF",
+            "TlRTEAESEwoPVU5KT0lORURfRVZFTlRTEAIiPgoYUmVqb2luVXNlckV2ZW50",
+            "c1Jlc3BvbnNlEiIKGnJlam9pbmVkX3VzZXJfZXZlbnRzX2NvdW50GAEgASgD",
+            "IhoKGFJlam9pblVzZXJFdmVudHNNZXRhZGF0YTK/CQoQVXNlckV2ZW50U2Vy",
+            "dmljZRK3AQoOV3JpdGVVc2VyRXZlbnQSLS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLldyaXRlVXNlckV2ZW50UmVxdWVzdBohLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuVXNlckV2ZW50IlOC0+STAk0iPy92Mi97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn0vdXNlckV2ZW50czp3cml0ZToK",
+            "dXNlcl9ldmVudBKkAQoQQ29sbGVjdFVzZXJFdmVudBIvLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuQ29sbGVjdFVzZXJFdmVudFJlcXVlc3QaFC5nb29nbGUu",
+            "YXBpLkh0dHBCb2R5IkmC0+STAkMSQS92Mi97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovY2F0YWxvZ3MvKn0vdXNlckV2ZW50czpjb2xsZWN0EoYC",
+            "Cg9QdXJnZVVzZXJFdmVudHMSLi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlB1",
+            "cmdlVXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIqMBgtPkkwJEIj8vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6cHVyZ2U6ASrKQVYKLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2US",
+            "JGdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHVyZ2VNZXRhZGF0YRKLAgoQSW1w",
+            "b3J0VXNlckV2ZW50cxIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0",
+            "VXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIqYBgtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6aW1wb3J0OgEqykFYCi9nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydFVzZXJFdmVudHNSZXNwb25zZRIl",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRNZXRhZGF0YRLnAQoQUmVq",
+            "b2luVXNlckV2ZW50cxIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVqb2lu",
+            "VXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIoIBgtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6cmVqb2luOgEqykE0ChhSZWpv",
+            "aW5Vc2VyRXZlbnRzUmVzcG9uc2USGFJlam9pblVzZXJFdmVudHNNZXRhZGF0",
+            "YRpJykEVcmV0YWlsLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULKAQoaY29tLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjJCFVVzZXJFdmVudFNlcnZpY2VQcm90b1ABWjxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Jl",
+            "dGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWls",
+            "LlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6",
+            "OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.WriteUserEventRequest), global::Google.Cloud.Retail.V2.WriteUserEventRequest.Parser, new[]{ "Parent", "UserEvent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CollectUserEventRequest), global::Google.Cloud.Retail.V2.CollectUserEventRequest.Parser, new[]{ "Parent", "UserEvent", "Uri", "Ets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.WriteUserEventRequest), global::Google.Cloud.Retail.V2.WriteUserEventRequest.Parser, new[]{ "Parent", "UserEvent", "WriteAsync" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CollectUserEventRequest), global::Google.Cloud.Retail.V2.CollectUserEventRequest.Parser, new[]{ "PrebuiltRule", "Parent", "UserEvent", "Uri", "Ets", "RawJson" }, new[]{ "ConversionRule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RejoinUserEventsRequest), global::Google.Cloud.Retail.V2.RejoinUserEventsRequest.Parser, new[]{ "Parent", "UserEventRejoinScope" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.RejoinUserEventsRequest.Types.UserEventRejoinScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RejoinUserEventsResponse), global::Google.Cloud.Retail.V2.RejoinUserEventsResponse.Parser, new[]{ "RejoinedUserEventsCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RejoinUserEventsMetadata), global::Google.Cloud.Retail.V2.RejoinUserEventsMetadata.Parser, null, null, null, null, null)
@@ -129,6 +132,7 @@ namespace Google.Cloud.Retail.V2 {
     public WriteUserEventRequest(WriteUserEventRequest other) : this() {
       parent_ = other.parent_;
       userEvent_ = other.userEvent_ != null ? other.userEvent_.Clone() : null;
+      writeAsync_ = other.writeAsync_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -169,6 +173,24 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "write_async" field.</summary>
+    public const int WriteAsyncFieldNumber = 3;
+    private bool writeAsync_;
+    /// <summary>
+    /// If set to true, the user event will be written asynchronously after
+    /// validation, and the API will respond without waiting for the write.
+    /// Therefore, silent failures can occur even if the API returns success. In
+    /// case of silent failures, error messages can be found in Stackdriver logs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool WriteAsync {
+      get { return writeAsync_; }
+      set {
+        writeAsync_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -186,6 +208,7 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(UserEvent, other.UserEvent)) return false;
+      if (WriteAsync != other.WriteAsync) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -195,6 +218,7 @@ namespace Google.Cloud.Retail.V2 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (userEvent_ != null) hash ^= UserEvent.GetHashCode();
+      if (WriteAsync != false) hash ^= WriteAsync.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -221,6 +245,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(UserEvent);
       }
+      if (WriteAsync != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(WriteAsync);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -239,6 +267,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(UserEvent);
       }
+      if (WriteAsync != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(WriteAsync);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -254,6 +286,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (userEvent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserEvent);
+      }
+      if (WriteAsync != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -275,6 +310,9 @@ namespace Google.Cloud.Retail.V2 {
           UserEvent = new global::Google.Cloud.Retail.V2.UserEvent();
         }
         UserEvent.MergeFrom(other.UserEvent);
+      }
+      if (other.WriteAsync != false) {
+        WriteAsync = other.WriteAsync;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -302,6 +340,10 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(UserEvent);
             break;
           }
+          case 24: {
+            WriteAsync = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -326,6 +368,10 @@ namespace Google.Cloud.Retail.V2 {
               UserEvent = new global::Google.Cloud.Retail.V2.UserEvent();
             }
             input.ReadMessage(UserEvent);
+            break;
+          }
+          case 24: {
+            WriteAsync = input.ReadBool();
             break;
           }
         }
@@ -376,6 +422,13 @@ namespace Google.Cloud.Retail.V2 {
       userEvent_ = other.userEvent_;
       uri_ = other.uri_;
       ets_ = other.ets_;
+      rawJson_ = other.rawJson_;
+      switch (other.ConversionRuleCase) {
+        case ConversionRuleOneofCase.PrebuiltRule:
+          PrebuiltRule = other.PrebuiltRule;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -383,6 +436,22 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CollectUserEventRequest Clone() {
       return new CollectUserEventRequest(this);
+    }
+
+    /// <summary>Field number for the "prebuilt_rule" field.</summary>
+    public const int PrebuiltRuleFieldNumber = 6;
+    /// <summary>
+    /// The prebuilt rule name that can convert a specific type of raw_json.
+    /// For example: "default_schema/v1.0"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrebuiltRule {
+      get { return conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule ? (string) conversionRule_ : ""; }
+      set {
+        conversionRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        conversionRuleCase_ = ConversionRuleOneofCase.PrebuiltRule;
+      }
     }
 
     /// <summary>Field number for the "parent" field.</summary>
@@ -452,6 +521,44 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "raw_json" field.</summary>
+    public const int RawJsonFieldNumber = 5;
+    private string rawJson_ = "";
+    /// <summary>
+    /// An arbitrary serialized JSON string that contains necessary information
+    /// that can comprise a user event. When this field is specified, the
+    /// user_event field will be ignored. Note: line-delimited JSON is not
+    /// supported, a single JSON only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RawJson {
+      get { return rawJson_; }
+      set {
+        rawJson_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object conversionRule_;
+    /// <summary>Enum of possible cases for the "conversion_rule" oneof.</summary>
+    public enum ConversionRuleOneofCase {
+      None = 0,
+      PrebuiltRule = 6,
+    }
+    private ConversionRuleOneofCase conversionRuleCase_ = ConversionRuleOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionRuleOneofCase ConversionRuleCase {
+      get { return conversionRuleCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConversionRule() {
+      conversionRuleCase_ = ConversionRuleOneofCase.None;
+      conversionRule_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -467,10 +574,13 @@ namespace Google.Cloud.Retail.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PrebuiltRule != other.PrebuiltRule) return false;
       if (Parent != other.Parent) return false;
       if (UserEvent != other.UserEvent) return false;
       if (Uri != other.Uri) return false;
       if (Ets != other.Ets) return false;
+      if (RawJson != other.RawJson) return false;
+      if (ConversionRuleCase != other.ConversionRuleCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -478,10 +588,13 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) hash ^= PrebuiltRule.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (UserEvent.Length != 0) hash ^= UserEvent.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (Ets != 0L) hash ^= Ets.GetHashCode();
+      if (RawJson.Length != 0) hash ^= RawJson.GetHashCode();
+      hash ^= (int) conversionRuleCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -516,6 +629,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(Ets);
       }
+      if (RawJson.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RawJson);
+      }
+      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+        output.WriteRawTag(50);
+        output.WriteString(PrebuiltRule);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -542,6 +663,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(Ets);
       }
+      if (RawJson.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RawJson);
+      }
+      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+        output.WriteRawTag(50);
+        output.WriteString(PrebuiltRule);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -552,6 +681,9 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrebuiltRule);
+      }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
@@ -563,6 +695,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (Ets != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Ets);
+      }
+      if (RawJson.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RawJson);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -588,6 +723,15 @@ namespace Google.Cloud.Retail.V2 {
       if (other.Ets != 0L) {
         Ets = other.Ets;
       }
+      if (other.RawJson.Length != 0) {
+        RawJson = other.RawJson;
+      }
+      switch (other.ConversionRuleCase) {
+        case ConversionRuleOneofCase.PrebuiltRule:
+          PrebuiltRule = other.PrebuiltRule;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -619,6 +763,14 @@ namespace Google.Cloud.Retail.V2 {
             Ets = input.ReadInt64();
             break;
           }
+          case 42: {
+            RawJson = input.ReadString();
+            break;
+          }
+          case 50: {
+            PrebuiltRule = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -648,6 +800,14 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 32: {
             Ets = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            RawJson = input.ReadString();
+            break;
+          }
+          case 50: {
+            PrebuiltRule = input.ReadString();
             break;
           }
         }
@@ -727,8 +887,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The type of the user event rejoin to define the scope and range of the user
     /// events to be rejoined with the latest product catalog. Defaults to
-    /// USER_EVENT_REJOIN_SCOPE_UNSPECIFIED if this field is not set, or set to an
-    /// invalid integer value.
+    /// `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if this field is not set, or set to
+    /// an invalid integer value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -902,11 +1062,11 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// The scope of user events to be rejoined with the latest product catalog.
       /// If the rejoining aims at reducing number of unjoined events, set
-      /// UserEventRejoinScope to UNJOINED_EVENTS.
+      /// `UserEventRejoinScope` to `UNJOINED_EVENTS`.
       /// If the rejoining aims at correcting product catalog information in joined
-      /// events, set UserEventRejoinScope to JOINED_EVENTS.
-      /// If all events needs to be rejoined, set UserEventRejoinScope to
-      /// USER_EVENT_REJOIN_SCOPE_UNSPECIFIED.
+      /// events, set `UserEventRejoinScope` to `JOINED_EVENTS`.
+      /// If all events needs to be rejoined, set `UserEventRejoinScope` to
+      /// `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED`.
       /// </summary>
       public enum UserEventRejoinScope {
         /// <summary>
@@ -930,7 +1090,7 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Response message for RejoinUserEvents method.
+  /// Response message for `RejoinUserEvents` method.
   /// </summary>
   public sealed partial class RejoinUserEventsResponse : pb::IMessage<RejoinUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1125,7 +1285,7 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Metadata for RejoinUserEvents method.
+  /// Metadata for `RejoinUserEvents` method.
   /// </summary>
   public sealed partial class RejoinUserEventsMetadata : pb::IMessage<RejoinUserEventsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

@@ -27,7 +27,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Auto-completion service for retail.
   ///
   /// This feature is only available for users who have Retail Search enabled.
-  /// Please enable Retail Search on Cloud Console before using this feature.
+  /// Enable Retail Search on Cloud Console before using this feature.
   /// </summary>
   public static partial class CompletionService
   {
@@ -105,7 +105,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Completes the specified prefix with keyword suggestions.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -125,7 +125,7 @@ namespace Google.Cloud.Retail.V2 {
       /// are indexed successfully and ready for serving. The process takes hours.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -169,7 +169,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Completes the specified prefix with keyword suggestions.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -185,7 +185,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Completes the specified prefix with keyword suggestions.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -199,7 +199,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Completes the specified prefix with keyword suggestions.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -215,7 +215,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Completes the specified prefix with keyword suggestions.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -234,7 +234,7 @@ namespace Google.Cloud.Retail.V2 {
       /// are indexed successfully and ready for serving. The process takes hours.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -255,7 +255,7 @@ namespace Google.Cloud.Retail.V2 {
       /// are indexed successfully and ready for serving. The process takes hours.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -274,7 +274,7 @@ namespace Google.Cloud.Retail.V2 {
       /// are indexed successfully and ready for serving. The process takes hours.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -295,7 +295,7 @@ namespace Google.Cloud.Retail.V2 {
       /// are indexed successfully and ready for serving. The process takes hours.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// Enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

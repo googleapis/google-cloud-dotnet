@@ -38,6 +38,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Parent = "",
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = userEventServiceClient.WriteUserEvent(request);
