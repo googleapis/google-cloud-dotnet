@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -92,6 +92,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             { "int", "System.Int32" },
             { "long", "System.Int64" },
             { "double", "System.Double" },
+            { "float", "System.Single" },
         };
         private static readonly string[] SnippetFileSuffixes =
         {
