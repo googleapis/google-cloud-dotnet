@@ -28,7 +28,7 @@ namespace Google.Cloud.SecretManager.V1 {
             "dG8SHWdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i7gUKBlNlY3JldBIRCgRuYW1lGAEg",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i9AYKBlNlY3JldBIRCgRuYW1lGAEg",
             "ASgJQgPgQQMSRwoLcmVwbGljYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQu",
             "c2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbkIG4EEF4EECEjQKC2NyZWF0",
             "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
@@ -40,69 +40,72 @@ namespace Google.Cloud.SecretManager.V1 {
             "QQRIABIRCgRldGFnGAggASgJQgPgQQESPgoIcm90YXRpb24YCSABKAsyJy5n",
             "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5Sb3RhdGlvbkID4EEBElcK",
             "D3ZlcnNpb25fYWxpYXNlcxgLIAMoCzI5Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
-            "YW5hZ2VyLnYxLlNlY3JldC5WZXJzaW9uQWxpYXNlc0VudHJ5QgPgQQEaLQoL",
-            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo1",
-            "ChNWZXJzaW9uQWxpYXNlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoAzoCOAE6TepBSgojc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9T",
-            "ZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9QgwK",
-            "CmV4cGlyYXRpb24iogQKDVNlY3JldFZlcnNpb24SEQoEbmFtZRgBIAEoCUID",
-            "4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgVzdGF0ZRgEIAEoDjIyLmdvb2ds",
-            "ZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldFZlcnNpb24uU3RhdGVC",
-            "A+BBAxJMChJyZXBsaWNhdGlvbl9zdGF0dXMYBSABKAsyMC5nb29nbGUuY2xv",
-            "dWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cxIRCgRldGFn",
-            "GAYgASgJQgPgQQMSLgohY2xpZW50X3NwZWNpZmllZF9wYXlsb2FkX2NoZWNr",
-            "c3VtGAcgASgIQgPgQQMiSAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhINCglERVNUUk9ZRUQQAzpu",
-            "6kFrCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNp",
-            "b24SPXByb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9L3ZlcnNp",
-            "b25zL3tzZWNyZXRfdmVyc2lvbn0ikAQKC1JlcGxpY2F0aW9uEkkKCWF1dG9t",
-            "YXRpYxgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJl",
-            "cGxpY2F0aW9uLkF1dG9tYXRpY0gAEk4KDHVzZXJfbWFuYWdlZBgCIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLlVz",
-            "ZXJNYW5hZ2VkSAAabwoJQXV0b21hdGljEmIKG2N1c3RvbWVyX21hbmFnZWRf",
-            "ZW5jcnlwdGlvbhgBIAEoCzI4Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2Vy",
-            "LnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25CA+BBARrlAQoLVXNlck1h",
-            "bmFnZWQSVQoIcmVwbGljYXMYASADKAsyPi5nb29nbGUuY2xvdWQuc2VjcmV0",
-            "bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2VyTWFuYWdlZC5SZXBsaWNhQgPg",
-            "QQIafwoHUmVwbGljYRIQCghsb2NhdGlvbhgBIAEoCRJiChtjdXN0b21lcl9t",
-            "YW5hZ2VkX2VuY3J5cHRpb24YAiABKAsyOC5nb29nbGUuY2xvdWQuc2VjcmV0",
-            "bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uQgPgQQFCDQoL",
-            "cmVwbGljYXRpb24iNgoZQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbhIZCgxr",
-            "bXNfa2V5X25hbWUYASABKAlCA+BBAiLrBAoRUmVwbGljYXRpb25TdGF0dXMS",
-            "VQoJYXV0b21hdGljGAEgASgLMkAuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFn",
-            "ZXIudjEuUmVwbGljYXRpb25TdGF0dXMuQXV0b21hdGljU3RhdHVzSAASWgoM",
-            "dXNlcl9tYW5hZ2VkGAIgASgLMkIuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFn",
-            "ZXIudjEuUmVwbGljYXRpb25TdGF0dXMuVXNlck1hbmFnZWRTdGF0dXNIABp7",
-            "Cg9BdXRvbWF0aWNTdGF0dXMSaAobY3VzdG9tZXJfbWFuYWdlZF9lbmNyeXB0",
-            "aW9uGAEgASgLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuQ3Vz",
-            "dG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1c0ID4EEDGo8CChFVc2VyTWFu",
-            "YWdlZFN0YXR1cxJnCghyZXBsaWNhcxgBIAMoCzJQLmdvb2dsZS5jbG91ZC5z",
-            "ZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzLlVzZXJNYW5hZ2Vk",
-            "U3RhdHVzLlJlcGxpY2FTdGF0dXNCA+BBAxqQAQoNUmVwbGljYVN0YXR1cxIV",
-            "Cghsb2NhdGlvbhgBIAEoCUID4EEDEmgKG2N1c3RvbWVyX21hbmFnZWRfZW5j",
-            "cnlwdGlvbhgCIAEoCzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYx",
-            "LkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXNCA+BBA0IUChJyZXBs",
-            "aWNhdGlvbl9zdGF0dXMiRAofQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0",
-            "YXR1cxIhChRrbXNfa2V5X3ZlcnNpb25fbmFtZRgBIAEoCUID4EECIl8KBVRv",
-            "cGljEhEKBG5hbWUYASABKAlCA+BBAjpD6kFAChtwdWJzdWIuZ29vZ2xlYXBp",
-            "cy5jb20vVG9waWMSIXByb2plY3RzL3twcm9qZWN0fS90b3BpY3Mve3RvcGlj",
-            "fSKAAQoIUm90YXRpb24SOwoSbmV4dF9yb3RhdGlvbl90aW1lGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEjcKD3JvdGF0aW9uX3Bl",
-            "cmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEEIkwK",
-            "DVNlY3JldFBheWxvYWQSDAoEZGF0YRgBIAEoDBIdCgtkYXRhX2NyYzMyYxgC",
-            "IAEoA0ID4EEBSACIAQFCDgoMX2RhdGFfY3JjMzJjQu0BCiFjb20uZ29vZ2xl",
-            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjFCDlJlc291cmNlc1Byb3RvUAFaSmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2Vj",
-            "cmV0bWFuYWdlci92MTtzZWNyZXRtYW5hZ2Vy+AEBogIDR1NNqgIdR29vZ2xl",
-            "LkNsb3VkLlNlY3JldE1hbmFnZXIuVjHKAh1Hb29nbGVcQ2xvdWRcU2VjcmV0",
-            "TWFuYWdlclxWMeoCIEdvb2dsZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYx",
-            "YgZwcm90bzM="));
+            "YW5hZ2VyLnYxLlNlY3JldC5WZXJzaW9uQWxpYXNlc0VudHJ5QgPgQQESUAoL",
+            "YW5ub3RhdGlvbnMYDSADKAsyNi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdl",
+            "ci52MS5TZWNyZXQuQW5ub3RhdGlvbnNFbnRyeUID4EEBGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNQoTVmVyc2lv",
+            "bkFsaWFzZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgB",
+            "GjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ATpN6kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Nl",
+            "Y3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH1CDAoK",
+            "ZXhwaXJhdGlvbiKiBAoNU2VjcmV0VmVyc2lvbhIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSNQoMZGVzdHJveV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKBXN0YXRlGAQgASgOMjIuZ29vZ2xl",
+            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuU2VjcmV0VmVyc2lvbi5TdGF0ZUID",
+            "4EEDEkwKEnJlcGxpY2F0aW9uX3N0YXR1cxgFIAEoCzIwLmdvb2dsZS5jbG91",
+            "ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzEhEKBGV0YWcY",
+            "BiABKAlCA+BBAxIuCiFjbGllbnRfc3BlY2lmaWVkX3BheWxvYWRfY2hlY2tz",
+            "dW0YByABKAhCA+BBAyJICgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "EgsKB0VOQUJMRUQQARIMCghESVNBQkxFRBACEg0KCURFU1RST1lFRBADOm7q",
+            "QWsKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
+            "bhI9cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lv",
+            "bnMve3NlY3JldF92ZXJzaW9ufSKQBAoLUmVwbGljYXRpb24SSQoJYXV0b21h",
+            "dGljGAEgASgLMjQuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVw",
+            "bGljYXRpb24uQXV0b21hdGljSAASTgoMdXNlcl9tYW5hZ2VkGAIgASgLMjYu",
+            "Z29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb24uVXNl",
+            "ck1hbmFnZWRIABpvCglBdXRvbWF0aWMSYgobY3VzdG9tZXJfbWFuYWdlZF9l",
+            "bmNyeXB0aW9uGAEgASgLMjguZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
+            "djEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbkID4EEBGuUBCgtVc2VyTWFu",
+            "YWdlZBJVCghyZXBsaWNhcxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
+            "YW5hZ2VyLnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5hZ2VkLlJlcGxpY2FCA+BB",
+            "Ahp/CgdSZXBsaWNhEhAKCGxvY2F0aW9uGAEgASgJEmIKG2N1c3RvbWVyX21h",
+            "bmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
+            "YW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25CA+BBAUINCgty",
+            "ZXBsaWNhdGlvbiI2ChlDdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uEhkKDGtt",
+            "c19rZXlfbmFtZRgBIAEoCUID4EECIusEChFSZXBsaWNhdGlvblN0YXR1cxJV",
+            "CglhdXRvbWF0aWMYASABKAsyQC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdl",
+            "ci52MS5SZXBsaWNhdGlvblN0YXR1cy5BdXRvbWF0aWNTdGF0dXNIABJaCgx1",
+            "c2VyX21hbmFnZWQYAiABKAsyQi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdl",
+            "ci52MS5SZXBsaWNhdGlvblN0YXR1cy5Vc2VyTWFuYWdlZFN0YXR1c0gAGnsK",
+            "D0F1dG9tYXRpY1N0YXR1cxJoChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRp",
+            "b24YASABKAsyPi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0",
+            "b21lck1hbmFnZWRFbmNyeXB0aW9uU3RhdHVzQgPgQQMajwIKEVVzZXJNYW5h",
+            "Z2VkU3RhdHVzEmcKCHJlcGxpY2FzGAEgAygLMlAuZ29vZ2xlLmNsb3VkLnNl",
+            "Y3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuVXNlck1hbmFnZWRT",
+            "dGF0dXMuUmVwbGljYVN0YXR1c0ID4EEDGpABCg1SZXBsaWNhU3RhdHVzEhUK",
+            "CGxvY2F0aW9uGAEgASgJQgPgQQMSaAobY3VzdG9tZXJfbWFuYWdlZF9lbmNy",
+            "eXB0aW9uGAIgASgLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEu",
+            "Q3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1c0ID4EEDQhQKEnJlcGxp",
+            "Y2F0aW9uX3N0YXR1cyJECh9DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uU3Rh",
+            "dHVzEiEKFGttc19rZXlfdmVyc2lvbl9uYW1lGAEgASgJQgPgQQIiXwoFVG9w",
+            "aWMSEQoEbmFtZRgBIAEoCUID4EECOkPqQUAKG3B1YnN1Yi5nb29nbGVhcGlz",
+            "LmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97dG9waWN9",
+            "IoABCghSb3RhdGlvbhI7ChJuZXh0X3JvdGF0aW9uX3RpbWUYASABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESNwoPcm90YXRpb25fcGVy",
+            "aW9kGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQQiTAoN",
+            "U2VjcmV0UGF5bG9hZBIMCgRkYXRhGAEgASgMEh0KC2RhdGFfY3JjMzJjGAIg",
+            "ASgDQgPgQQFIAIgBAUIOCgxfZGF0YV9jcmMzMmNC7QEKIWNvbS5nb29nbGUu",
+            "Y2xvdWQuc2VjcmV0bWFuYWdlci52MUIOUmVzb3VyY2VzUHJvdG9QAVpKZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWNy",
+            "ZXRtYW5hZ2VyL3YxO3NlY3JldG1hbmFnZXL4AQGiAgNHU02qAh1Hb29nbGUu",
+            "Q2xvdWQuU2VjcmV0TWFuYWdlci5WMcoCHUdvb2dsZVxDbG91ZFxTZWNyZXRN",
+            "YW5hZ2VyXFYx6gIgR29vZ2xlOjpDbG91ZDo6U2VjcmV0TWFuYWdlcjo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation", "VersionAliases" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation", "VersionAliases", "Annotations" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus", "Etag", "ClientSpecifiedPayloadChecksum" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
@@ -120,11 +123,12 @@ namespace Google.Cloud.SecretManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// A [Secret][google.cloud.secretmanager.v1.Secret] is a logical secret whose value and versions can
-  /// be accessed.
+  /// A [Secret][google.cloud.secretmanager.v1.Secret] is a logical secret whose
+  /// value and versions can be accessed.
   ///
-  /// A [Secret][google.cloud.secretmanager.v1.Secret] is made up of zero or more [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] that
-  /// represent the secret data.
+  /// A [Secret][google.cloud.secretmanager.v1.Secret] is made up of zero or more
+  /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] that represent
+  /// the secret data.
   /// </summary>
   public sealed partial class Secret : pb::IMessage<Secret>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -168,6 +172,7 @@ namespace Google.Cloud.SecretManager.V1 {
       etag_ = other.etag_;
       rotation_ = other.rotation_ != null ? other.rotation_.Clone() : null;
       versionAliases_ = other.versionAliases_.Clone();
+      annotations_ = other.annotations_.Clone();
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           ExpireTime = other.ExpireTime.Clone();
@@ -190,7 +195,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the [Secret][google.cloud.secretmanager.v1.Secret] in the format `projects/*/secrets/*`.
+    /// Output only. The resource name of the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] in the format
+    /// `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,7 +212,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int ReplicationFieldNumber = 2;
     private global::Google.Cloud.SecretManager.V1.Replication replication_;
     /// <summary>
-    /// Required. Immutable. The replication policy of the secret data attached to the [Secret][google.cloud.secretmanager.v1.Secret].
+    /// Required. Immutable. The replication policy of the secret data attached to
+    /// the [Secret][google.cloud.secretmanager.v1.Secret].
     ///
     /// The replication policy cannot be changed after the Secret has been created.
     /// </summary>
@@ -222,7 +230,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int CreateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the [Secret][google.cloud.secretmanager.v1.Secret] was created.
+    /// Output only. The time at which the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,8 +272,8 @@ namespace Google.Cloud.SecretManager.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.SecretManager.V1.Topic.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Topic>();
     /// <summary>
-    /// Optional. A list of up to 10 Pub/Sub topics to which messages are published when
-    /// control plane operations are called on the secret or its versions.
+    /// Optional. A list of up to 10 Pub/Sub topics to which messages are published
+    /// when control plane operations are called on the secret or its versions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -275,8 +284,9 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "expire_time" field.</summary>
     public const int ExpireTimeFieldNumber = 6;
     /// <summary>
-    /// Optional. Timestamp in UTC when the [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to expire. This is
-    /// always provided on output, regardless of what was sent on input.
+    /// Optional. Timestamp in UTC when the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to expire.
+    /// This is always provided on output, regardless of what was sent on input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,7 +301,8 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "ttl" field.</summary>
     public const int TtlFieldNumber = 7;
     /// <summary>
-    /// Input only. The TTL for the [Secret][google.cloud.secretmanager.v1.Secret].
+    /// Input only. The TTL for the
+    /// [Secret][google.cloud.secretmanager.v1.Secret].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -307,7 +318,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Etag of the currently stored [Secret][google.cloud.secretmanager.v1.Secret].
+    /// Optional. Etag of the currently stored
+    /// [Secret][google.cloud.secretmanager.v1.Secret].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -322,8 +334,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int RotationFieldNumber = 9;
     private global::Google.Cloud.SecretManager.V1.Rotation rotation_;
     /// <summary>
-    /// Optional. Rotation policy attached to the [Secret][google.cloud.secretmanager.v1.Secret]. May be excluded if there is no
-    /// rotation policy.
+    /// Optional. Rotation policy attached to the
+    /// [Secret][google.cloud.secretmanager.v1.Secret]. May be excluded if there is
+    /// no rotation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -356,6 +369,31 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, long> VersionAliases {
       get { return versionAliases_; }
+    }
+
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 13;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotations_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
+    private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Custom metadata about the secret.
+    ///
+    /// Annotations are distinct from various forms of labels.
+    /// Annotations exist to allow client tools to store their own state
+    /// information without requiring a database.
+    ///
+    /// Annotation keys must be between 1 and 63 characters long, have a UTF-8
+    /// encoding of maximum 128 bytes, begin and end with an alphanumeric character
+    /// ([a-z0-9A-Z]), and may have dashes (-), underscores (_), dots (.), and
+    /// alphanumerics in between these symbols.
+    ///
+    /// The total size of annotation keys and values must be less than 16KiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Annotations {
+      get { return annotations_; }
     }
 
     private object expiration_;
@@ -404,6 +442,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (Etag != other.Etag) return false;
       if (!object.Equals(Rotation, other.Rotation)) return false;
       if (!VersionAliases.Equals(other.VersionAliases)) return false;
+      if (!Annotations.Equals(other.Annotations)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -422,6 +461,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (rotation_ != null) hash ^= Rotation.GetHashCode();
       hash ^= VersionAliases.GetHashCode();
+      hash ^= Annotations.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -472,6 +512,7 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(Rotation);
       }
       versionAliases_.WriteTo(output, _map_versionAliases_codec);
+      annotations_.WriteTo(output, _map_annotations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -513,6 +554,7 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(Rotation);
       }
       versionAliases_.WriteTo(ref output, _map_versionAliases_codec);
+      annotations_.WriteTo(ref output, _map_annotations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -547,6 +589,7 @@ namespace Google.Cloud.SecretManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rotation);
       }
       size += versionAliases_.CalculateSize(_map_versionAliases_codec);
+      size += annotations_.CalculateSize(_map_annotations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -586,6 +629,7 @@ namespace Google.Cloud.SecretManager.V1 {
         Rotation.MergeFrom(other.Rotation);
       }
       versionAliases_.Add(other.versionAliases_);
+      annotations_.Add(other.annotations_);
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           if (ExpireTime == null) {
@@ -675,6 +719,10 @@ namespace Google.Cloud.SecretManager.V1 {
             versionAliases_.AddEntriesFrom(input, _map_versionAliases_codec);
             break;
           }
+          case 106: {
+            annotations_.AddEntriesFrom(input, _map_annotations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -749,6 +797,10 @@ namespace Google.Cloud.SecretManager.V1 {
             versionAliases_.AddEntriesFrom(ref input, _map_versionAliases_codec);
             break;
           }
+          case 106: {
+            annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
+            break;
+          }
         }
       }
     }
@@ -813,11 +865,13 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the
-    /// format `projects/*/secrets/*/versions/*`.
+    /// Output only. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+    /// `projects/*/secrets/*/versions/*`.
     ///
-    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] IDs in a [Secret][google.cloud.secretmanager.v1.Secret] start at 1 and
-    /// are incremented for each subsequent version of the secret.
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] IDs in a
+    /// [Secret][google.cloud.secretmanager.v1.Secret] start at 1 and are
+    /// incremented for each subsequent version of the secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -832,7 +886,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] was created.
+    /// Output only. The time at which the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -847,8 +902,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int DestroyTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp destroyTime_;
     /// <summary>
-    /// Output only. The time this [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] was destroyed.
-    /// Only present if [state][google.cloud.secretmanager.v1.SecretVersion.state] is
+    /// Output only. The time this
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] was destroyed.
+    /// Only present if [state][google.cloud.secretmanager.v1.SecretVersion.state]
+    /// is
     /// [DESTROYED][google.cloud.secretmanager.v1.SecretVersion.State.DESTROYED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -864,7 +921,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int StateFieldNumber = 4;
     private global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State state_ = global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The current state of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// Output only. The current state of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -879,7 +937,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int ReplicationStatusFieldNumber = 5;
     private global::Google.Cloud.SecretManager.V1.ReplicationStatus replicationStatus_;
     /// <summary>
-    /// The replication status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// The replication status of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -894,7 +953,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 6;
     private string etag_ = "";
     /// <summary>
-    /// Output only. Etag of the currently stored [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// Output only. Etag of the currently stored
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -909,8 +969,11 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int ClientSpecifiedPayloadChecksumFieldNumber = 7;
     private bool clientSpecifiedPayloadChecksum_;
     /// <summary>
-    /// Output only. True if payload checksum specified in [SecretPayload][google.cloud.secretmanager.v1.SecretPayload] object has been
-    /// received by [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] on
+    /// Output only. True if payload checksum specified in
+    /// [SecretPayload][google.cloud.secretmanager.v1.SecretPayload] object has
+    /// been received by
+    /// [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService]
+    /// on
     /// [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1230,7 +1293,9 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The state of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion], indicating if it can be accessed.
+      /// The state of a
+      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion], indicating if
+      /// it can be accessed.
       /// </summary>
       public enum State {
         /// <summary>
@@ -1238,18 +1303,22 @@ namespace Google.Cloud.SecretManager.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] may be accessed.
+        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] may be
+        /// accessed.
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] may not be accessed, but the secret data
-        /// is still available and can be placed back into the [ENABLED][google.cloud.secretmanager.v1.SecretVersion.State.ENABLED]
+        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] may not
+        /// be accessed, but the secret data is still available and can be placed
+        /// back into the
+        /// [ENABLED][google.cloud.secretmanager.v1.SecretVersion.State.ENABLED]
         /// state.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] is destroyed and the secret data is no longer
-        /// stored. A version may not leave this state once entered.
+        /// The [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] is
+        /// destroyed and the secret data is no longer stored. A version may not
+        /// leave this state once entered.
         /// </summary>
         [pbr::OriginalName("DESTROYED")] Destroyed = 3,
       }
@@ -1317,7 +1386,8 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "automatic" field.</summary>
     public const int AutomaticFieldNumber = 1;
     /// <summary>
-    /// The [Secret][google.cloud.secretmanager.v1.Secret] will automatically be replicated without any restrictions.
+    /// The [Secret][google.cloud.secretmanager.v1.Secret] will automatically be
+    /// replicated without any restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1332,7 +1402,8 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "user_managed" field.</summary>
     public const int UserManagedFieldNumber = 2;
     /// <summary>
-    /// The [Secret][google.cloud.secretmanager.v1.Secret] will only be replicated into the locations specified.
+    /// The [Secret][google.cloud.secretmanager.v1.Secret] will only be
+    /// replicated into the locations specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1557,7 +1628,8 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// A replication policy that replicates the [Secret][google.cloud.secretmanager.v1.Secret] payload without any
+      /// A replication policy that replicates the
+      /// [Secret][google.cloud.secretmanager.v1.Secret] payload without any
       /// restrictions.
       /// </summary>
       public sealed partial class Automatic : pb::IMessage<Automatic>
@@ -1608,12 +1680,15 @@ namespace Google.Cloud.SecretManager.V1 {
         public const int CustomerManagedEncryptionFieldNumber = 1;
         private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption customerManagedEncryption_;
         /// <summary>
-        /// Optional. The customer-managed encryption configuration of the [Secret][google.cloud.secretmanager.v1.Secret]. If no
-        /// configuration is provided, Google-managed default encryption is used.
+        /// Optional. The customer-managed encryption configuration of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. If no configuration is
+        /// provided, Google-managed default encryption is used.
         ///
-        /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption configuration only apply to
-        /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added afterwards. They do not apply
-        /// retroactively to existing [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+        /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption
+        /// configuration only apply to
+        /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added
+        /// afterwards. They do not apply retroactively to existing
+        /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1767,8 +1842,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
 
       /// <summary>
-      /// A replication policy that replicates the [Secret][google.cloud.secretmanager.v1.Secret] payload into the
-      /// locations specified in [Secret.replication.user_managed.replicas][]
+      /// A replication policy that replicates the
+      /// [Secret][google.cloud.secretmanager.v1.Secret] payload into the locations
+      /// specified in [Secret.replication.user_managed.replicas][]
       /// </summary>
       public sealed partial class UserManaged : pb::IMessage<UserManaged>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1820,7 +1896,8 @@ namespace Google.Cloud.SecretManager.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica> replicas_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica>();
         /// <summary>
-        /// Required. The list of Replicas for this [Secret][google.cloud.secretmanager.v1.Secret].
+        /// Required. The list of Replicas for this
+        /// [Secret][google.cloud.secretmanager.v1.Secret].
         ///
         /// Cannot be empty.
         /// </summary>
@@ -1957,7 +2034,8 @@ namespace Google.Cloud.SecretManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Represents a Replica for this [Secret][google.cloud.secretmanager.v1.Secret].
+          /// Represents a Replica for this
+          /// [Secret][google.cloud.secretmanager.v1.Secret].
           /// </summary>
           public sealed partial class Replica : pb::IMessage<Replica>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2024,13 +2102,15 @@ namespace Google.Cloud.SecretManager.V1 {
             public const int CustomerManagedEncryptionFieldNumber = 2;
             private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption customerManagedEncryption_;
             /// <summary>
-            /// Optional. The customer-managed encryption configuration of the [User-Managed
-            /// Replica][Replication.UserManaged.Replica]. If no configuration is
-            /// provided, Google-managed default encryption is used.
+            /// Optional. The customer-managed encryption configuration of the
+            /// [User-Managed Replica][Replication.UserManaged.Replica]. If no
+            /// configuration is provided, Google-managed default encryption is used.
             ///
-            /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption configuration only apply to
-            /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added afterwards. They do not apply
-            /// retroactively to existing [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+            /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret]
+            /// encryption configuration only apply to
+            /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added
+            /// afterwards. They do not apply retroactively to existing
+            /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2269,15 +2349,17 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int KmsKeyNameFieldNumber = 1;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// Required. The resource name of the Cloud KMS CryptoKey used to encrypt secret
-    /// payloads.
+    /// Required. The resource name of the Cloud KMS CryptoKey used to encrypt
+    /// secret payloads.
     ///
-    /// For secrets using the [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged] replication
-    /// policy type, Cloud KMS CryptoKeys must reside in the same location as the
-    /// [replica location][Secret.UserManaged.Replica.location].
+    /// For secrets using the
+    /// [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged]
+    /// replication policy type, Cloud KMS CryptoKeys must reside in the same
+    /// location as the [replica location][Secret.UserManaged.Replica.location].
     ///
-    /// For secrets using the [Automatic][google.cloud.secretmanager.v1.Replication.Automatic] replication policy
-    /// type, Cloud KMS CryptoKeys must reside in `global`.
+    /// For secrets using the
+    /// [Automatic][google.cloud.secretmanager.v1.Replication.Automatic]
+    /// replication policy type, Cloud KMS CryptoKeys must reside in `global`.
     ///
     /// The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
@@ -2424,7 +2506,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+  /// The replication status of a
+  /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
   /// </summary>
   public sealed partial class ReplicationStatus : pb::IMessage<ReplicationStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2481,11 +2564,13 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "automatic" field.</summary>
     public const int AutomaticFieldNumber = 1;
     /// <summary>
-    /// Describes the replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
+    /// Describes the replication status of a
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
     /// automatic replication.
     ///
-    /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has an automatic replication
-    /// policy.
+    /// Only populated if the parent
+    /// [Secret][google.cloud.secretmanager.v1.Secret] has an automatic
+    /// replication policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2500,11 +2585,13 @@ namespace Google.Cloud.SecretManager.V1 {
     /// <summary>Field number for the "user_managed" field.</summary>
     public const int UserManagedFieldNumber = 2;
     /// <summary>
-    /// Describes the replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
+    /// Describes the replication status of a
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
     /// user-managed replication.
     ///
-    /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed replication
-    /// policy.
+    /// Only populated if the parent
+    /// [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed
+    /// replication policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2729,10 +2816,12 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using automatic replication.
+      /// The replication status of a
+      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using
+      /// automatic replication.
       ///
-      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has an automatic replication
-      /// policy.
+      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret]
+      /// has an automatic replication policy.
       /// </summary>
       public sealed partial class AutomaticStatus : pb::IMessage<AutomaticStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2782,7 +2871,8 @@ namespace Google.Cloud.SecretManager.V1 {
         public const int CustomerManagedEncryptionFieldNumber = 1;
         private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus customerManagedEncryption_;
         /// <summary>
-        /// Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
+        /// Output only. The customer-managed encryption status of the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
         /// populated if customer-managed encryption is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2937,11 +3027,12 @@ namespace Google.Cloud.SecretManager.V1 {
       }
 
       /// <summary>
-      /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using user-managed
-      /// replication.
+      /// The replication status of a
+      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using
+      /// user-managed replication.
       ///
-      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed replication
-      /// policy.
+      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret]
+      /// has a user-managed replication policy.
       /// </summary>
       public sealed partial class UserManagedStatus : pb::IMessage<UserManagedStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2993,7 +3084,8 @@ namespace Google.Cloud.SecretManager.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus> replicas_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus>();
         /// <summary>
-        /// Output only. The list of replica statuses for the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// Output only. The list of replica statuses for the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3128,7 +3220,8 @@ namespace Google.Cloud.SecretManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Describes the status of a user-managed replica for the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+          /// Describes the status of a user-managed replica for the
+          /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
           /// </summary>
           public sealed partial class ReplicaStatus : pb::IMessage<ReplicaStatus>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3195,7 +3288,8 @@ namespace Google.Cloud.SecretManager.V1 {
             public const int CustomerManagedEncryptionFieldNumber = 2;
             private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus customerManagedEncryption_;
             /// <summary>
-            /// Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
+            /// Output only. The customer-managed encryption status of the
+            /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
             /// populated if customer-managed encryption is used.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3434,8 +3528,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int KmsKeyVersionNameFieldNumber = 1;
     private string kmsKeyVersionName_ = "";
     /// <summary>
-    /// Required. The resource name of the Cloud KMS CryptoKeyVersion used to encrypt the
-    /// secret payload, in the following format:
+    /// Required. The resource name of the Cloud KMS CryptoKeyVersion used to
+    /// encrypt the secret payload, in the following format:
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*/versions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3632,9 +3726,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Pub/Sub topic that will be published to, in the
-    /// following format: `projects/*/topics/*`. For publication to succeed, the
-    /// Secret Manager P4SA must have `pubsub.publisher` permissions on the topic.
+    /// Required. The resource name of the Pub/Sub topic that will be published to,
+    /// in the following format: `projects/*/topics/*`. For publication to succeed,
+    /// the Secret Manager P4SA must have `pubsub.publisher` permissions on the
+    /// topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3779,9 +3874,11 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// The rotation time and period for a [Secret][google.cloud.secretmanager.v1.Secret]. At next_rotation_time, Secret
+  /// The rotation time and period for a
+  /// [Secret][google.cloud.secretmanager.v1.Secret]. At next_rotation_time, Secret
   /// Manager will send a Pub/Sub notification to the topics configured on the
-  /// Secret. [Secret.topics][google.cloud.secretmanager.v1.Secret.topics] must be set to configure rotation.
+  /// Secret. [Secret.topics][google.cloud.secretmanager.v1.Secret.topics] must be
+  /// set to configure rotation.
   /// </summary>
   public sealed partial class Rotation : pb::IMessage<Rotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3832,11 +3929,15 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NextRotationTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp nextRotationTime_;
     /// <summary>
-    /// Optional. Timestamp in UTC at which the [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to rotate. Cannot be
-    /// set to less than 300s (5 min) in the future and at most 3153600000s (100
-    /// years).
+    /// Optional. Timestamp in UTC at which the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to rotate.
+    /// Cannot be set to less than 300s (5 min) in the future and at most
+    /// 3153600000s (100 years).
     ///
-    /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time] MUST  be set if [rotation_period][google.cloud.secretmanager.v1.Rotation.rotation_period] is set.
+    /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time]
+    /// MUST  be set if
+    /// [rotation_period][google.cloud.secretmanager.v1.Rotation.rotation_period]
+    /// is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3854,9 +3955,14 @@ namespace Google.Cloud.SecretManager.V1 {
     /// Input only. The Duration between rotation notifications. Must be in seconds
     /// and at least 3600s (1h) and at most 3153600000s (100 years).
     ///
-    /// If [rotation_period][google.cloud.secretmanager.v1.Rotation.rotation_period] is set, [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time] must be set.
-    /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time] will be advanced by this period when the service
-    /// automatically sends rotation notifications.
+    /// If
+    /// [rotation_period][google.cloud.secretmanager.v1.Rotation.rotation_period]
+    /// is set,
+    /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time]
+    /// must be set.
+    /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time]
+    /// will be advanced by this period when the service automatically sends
+    /// rotation notifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4044,7 +4150,8 @@ namespace Google.Cloud.SecretManager.V1 {
 
   /// <summary>
   /// A secret payload resource in the Secret Manager API. This contains the
-  /// sensitive secret payload that is associated with a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+  /// sensitive secret payload that is associated with a
+  /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
   /// </summary>
   public sealed partial class SecretPayload : pb::IMessage<SecretPayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4112,12 +4219,18 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int DataCrc32CFieldNumber = 2;
     private long dataCrc32C_;
     /// <summary>
-    /// Optional. If specified, [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] will verify the integrity of the
-    /// received [data][google.cloud.secretmanager.v1.SecretPayload.data] on [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion] calls using
-    /// the crc32c checksum and store it to include in future
-    /// [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion] responses. If a checksum is
-    /// not provided in the [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion] request, the
-    /// [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] will generate and store one for you.
+    /// Optional. If specified,
+    /// [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService]
+    /// will verify the integrity of the received
+    /// [data][google.cloud.secretmanager.v1.SecretPayload.data] on
+    /// [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion]
+    /// calls using the crc32c checksum and store it to include in future
+    /// [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion]
+    /// responses. If a checksum is not provided in the
+    /// [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion]
+    /// request, the
+    /// [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService]
+    /// will generate and store one for you.
     ///
     /// The CRC32C value is encoded as a Int64 for compatibility, and can be
     /// safely downconverted to uint32 in languages that support this type.
