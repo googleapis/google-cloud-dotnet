@@ -62,6 +62,63 @@
         }
       }
     },
+    "DataScanService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataScanServiceClient",
+          "rpcs": {
+            "CreateDataScan": {
+              "methods": [
+                "CreateDataScan",
+                "CreateDataScanAsync"
+              ]
+            },
+            "DeleteDataScan": {
+              "methods": [
+                "DeleteDataScan",
+                "DeleteDataScanAsync"
+              ]
+            },
+            "GetDataScan": {
+              "methods": [
+                "GetDataScan",
+                "GetDataScanAsync"
+              ]
+            },
+            "GetDataScanJob": {
+              "methods": [
+                "GetDataScanJob",
+                "GetDataScanJobAsync"
+              ]
+            },
+            "ListDataScanJobs": {
+              "methods": [
+                "ListDataScanJobs",
+                "ListDataScanJobsAsync"
+              ]
+            },
+            "ListDataScans": {
+              "methods": [
+                "ListDataScans",
+                "ListDataScansAsync"
+              ]
+            },
+            "RunDataScan": {
+              "methods": [
+                "RunDataScan",
+                "RunDataScanAsync"
+              ]
+            },
+            "UpdateDataScan": {
+              "methods": [
+                "UpdateDataScan",
+                "UpdateDataScanAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataplexService": {
       "clients": {
         "grpc": {

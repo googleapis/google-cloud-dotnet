@@ -47,6 +47,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::DataScanServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDataScanServiceClient(this IServiceCollection services, sys::Action<gcdv::DataScanServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DataScanServiceClientBuilder builder = new gcdv::DataScanServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::DataplexServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
