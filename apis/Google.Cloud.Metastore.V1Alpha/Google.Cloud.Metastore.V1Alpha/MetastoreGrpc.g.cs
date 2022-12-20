@@ -123,6 +123,16 @@ namespace Google.Cloud.Metastore.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.CreateBackupRequest> __Marshaller_google_cloud_metastore_v1alpha_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.CreateBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest> __Marshaller_google_cloud_metastore_v1alpha_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest> __Marshaller_google_cloud_metastore_v1alpha_RemoveIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse> __Marshaller_google_cloud_metastore_v1alpha_RemoveIamPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest> __Marshaller_google_cloud_metastore_v1alpha_QueryMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest> __Marshaller_google_cloud_metastore_v1alpha_MoveTableToDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest> __Marshaller_google_cloud_metastore_v1alpha_AlterMetadataResourceLocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Metastore.V1Alpha.ListServicesRequest, global::Google.Cloud.Metastore.V1Alpha.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.Metastore.V1Alpha.ListServicesRequest, global::Google.Cloud.Metastore.V1Alpha.ListServicesResponse>(
@@ -242,6 +252,38 @@ namespace Google.Cloud.Metastore.V1Alpha {
         __ServiceName,
         "DeleteBackup",
         __Marshaller_google_cloud_metastore_v1alpha_DeleteBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest, global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse> __Method_RemoveIamPolicy = new grpc::Method<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest, global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveIamPolicy",
+        __Marshaller_google_cloud_metastore_v1alpha_RemoveIamPolicyRequest,
+        __Marshaller_google_cloud_metastore_v1alpha_RemoveIamPolicyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest, global::Google.LongRunning.Operation> __Method_QueryMetadata = new grpc::Method<global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryMetadata",
+        __Marshaller_google_cloud_metastore_v1alpha_QueryMetadataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest, global::Google.LongRunning.Operation> __Method_MoveTableToDatabase = new grpc::Method<global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MoveTableToDatabase",
+        __Marshaller_google_cloud_metastore_v1alpha_MoveTableToDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest, global::Google.LongRunning.Operation> __Method_AlterMetadataResourceLocation = new grpc::Method<global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AlterMetadataResourceLocation",
+        __Marshaller_google_cloud_metastore_v1alpha_AlterMetadataResourceLocationRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -431,6 +473,57 @@ namespace Google.Cloud.Metastore.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackup(global::Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Removes the attached IAM policies for a resource
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse> RemoveIamPolicy(global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Query DPMS metadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> QueryMetadata(global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Move a table to another database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MoveTableToDatabase(global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Alter metadata resource location. The metadata resource can be a database,
+      /// table, or partition. This functionality only updates the parent directory
+      /// for the respective metadata resource and does not transfer any existing
+      /// data to the new location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AlterMetadataResourceLocation(global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1188,6 +1281,210 @@ namespace Google.Cloud.Metastore.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
       }
+      /// <summary>
+      /// Removes the attached IAM policies for a resource
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse RemoveIamPolicy(global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes the attached IAM policies for a resource
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse RemoveIamPolicy(global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Removes the attached IAM policies for a resource
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse> RemoveIamPolicyAsync(global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes the attached IAM policies for a resource
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse> RemoveIamPolicyAsync(global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Query DPMS metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation QueryMetadata(global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Query DPMS metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation QueryMetadata(global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Query DPMS metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> QueryMetadataAsync(global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Query DPMS metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> QueryMetadataAsync(global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Move a table to another database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MoveTableToDatabase(global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveTableToDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Move a table to another database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MoveTableToDatabase(global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MoveTableToDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Move a table to another database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MoveTableToDatabaseAsync(global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveTableToDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Move a table to another database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MoveTableToDatabaseAsync(global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MoveTableToDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Alter metadata resource location. The metadata resource can be a database,
+      /// table, or partition. This functionality only updates the parent directory
+      /// for the respective metadata resource and does not transfer any existing
+      /// data to the new location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AlterMetadataResourceLocation(global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AlterMetadataResourceLocation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Alter metadata resource location. The metadata resource can be a database,
+      /// table, or partition. This functionality only updates the parent directory
+      /// for the respective metadata resource and does not transfer any existing
+      /// data to the new location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AlterMetadataResourceLocation(global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AlterMetadataResourceLocation, null, options, request);
+      }
+      /// <summary>
+      /// Alter metadata resource location. The metadata resource can be a database,
+      /// table, or partition. This functionality only updates the parent directory
+      /// for the respective metadata resource and does not transfer any existing
+      /// data to the new location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AlterMetadataResourceLocationAsync(global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AlterMetadataResourceLocationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Alter metadata resource location. The metadata resource can be a database,
+      /// table, or partition. This functionality only updates the parent directory
+      /// for the respective metadata resource and does not transfer any existing
+      /// data to the new location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AlterMetadataResourceLocationAsync(global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AlterMetadataResourceLocation, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataprocMetastoreClient NewInstance(ClientBaseConfiguration configuration)
@@ -1216,7 +1513,11 @@ namespace Google.Cloud.Metastore.V1Alpha {
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
-          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup).Build();
+          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
+          .AddMethod(__Method_RemoveIamPolicy, serviceImpl.RemoveIamPolicy)
+          .AddMethod(__Method_QueryMetadata, serviceImpl.QueryMetadata)
+          .AddMethod(__Method_MoveTableToDatabase, serviceImpl.MoveTableToDatabase)
+          .AddMethod(__Method_AlterMetadataResourceLocation, serviceImpl.AlterMetadataResourceLocation).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1241,6 +1542,10 @@ namespace Google.Cloud.Metastore.V1Alpha {
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.GetBackupRequest, global::Google.Cloud.Metastore.V1Alpha.Backup>(serviceImpl.GetBackup));
       serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
+      serviceBinder.AddMethod(__Method_RemoveIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest, global::Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse>(serviceImpl.RemoveIamPolicy));
+      serviceBinder.AddMethod(__Method_QueryMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest, global::Google.LongRunning.Operation>(serviceImpl.QueryMetadata));
+      serviceBinder.AddMethod(__Method_MoveTableToDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.MoveTableToDatabase));
+      serviceBinder.AddMethod(__Method_AlterMetadataResourceLocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest, global::Google.LongRunning.Operation>(serviceImpl.AlterMetadataResourceLocation));
     }
 
   }

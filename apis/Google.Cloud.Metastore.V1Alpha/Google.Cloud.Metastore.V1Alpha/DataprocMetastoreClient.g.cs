@@ -74,6 +74,13 @@ namespace Google.Cloud.Metastore.V1Alpha
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
             DeleteBackupSettings = existing.DeleteBackupSettings;
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            RemoveIamPolicySettings = existing.RemoveIamPolicySettings;
+            QueryMetadataSettings = existing.QueryMetadataSettings;
+            QueryMetadataOperationsSettings = existing.QueryMetadataOperationsSettings.Clone();
+            MoveTableToDatabaseSettings = existing.MoveTableToDatabaseSettings;
+            MoveTableToDatabaseOperationsSettings = existing.MoveTableToDatabaseOperationsSettings.Clone();
+            AlterMetadataResourceLocationSettings = existing.AlterMetadataResourceLocationSettings;
+            AlterMetadataResourceLocationOperationsSettings = existing.AlterMetadataResourceLocationOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -458,6 +465,134 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.RemoveIamPolicy</c> and <c>DataprocMetastoreClient.RemoveIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.QueryMetadata</c> and <c>DataprocMetastoreClient.QueryMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.QueryMetadata</c> and
+        /// <c>DataprocMetastoreClient.QueryMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings QueryMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.MoveTableToDatabase</c> and <c>DataprocMetastoreClient.MoveTableToDatabaseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveTableToDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.MoveTableToDatabase</c> and
+        /// <c>DataprocMetastoreClient.MoveTableToDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveTableToDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.AlterMetadataResourceLocation</c> and
+        /// <c>DataprocMetastoreClient.AlterMetadataResourceLocationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AlterMetadataResourceLocationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.AlterMetadataResourceLocation</c>
+        /// and <c>DataprocMetastoreClient.AlterMetadataResourceLocationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AlterMetadataResourceLocationOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2876,6 +3011,203 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
             DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes the attached IAM policies for a resource
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveIamPolicyResponse RemoveIamPolicy(RemoveIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the attached IAM policies for a resource
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIamPolicyResponse> RemoveIamPolicyAsync(RemoveIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the attached IAM policies for a resource
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIamPolicyResponse> RemoveIamPolicyAsync(RemoveIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            RemoveIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QueryMetadataResponse, OperationMetadata> QueryMetadata(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, st::CancellationToken cancellationToken) =>
+            QueryMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>QueryMetadata</c>.</summary>
+        public virtual lro::OperationsClient QueryMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>QueryMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<QueryMetadataResponse, OperationMetadata> PollOnceQueryMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetadataResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>QueryMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> PollOnceQueryMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetadataResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> MoveTableToDatabase(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            MoveTableToDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MoveTableToDatabase</c>.</summary>
+        public virtual lro::OperationsClient MoveTableToDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MoveTableToDatabase</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> PollOnceMoveTableToDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveTableToDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MoveTableToDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> PollOnceMoveTableToDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveTableToDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> AlterMetadataResourceLocation(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, st::CancellationToken cancellationToken) =>
+            AlterMetadataResourceLocationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AlterMetadataResourceLocation</c>.</summary>
+        public virtual lro::OperationsClient AlterMetadataResourceLocationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AlterMetadataResourceLocation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> PollOnceAlterMetadataResourceLocation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AlterMetadataResourceLocationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AlterMetadataResourceLocation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> PollOnceAlterMetadataResourceLocationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AlterMetadataResourceLocationOperationsClient, callSettings);
     }
 
     /// <summary>DataprocMetastore client wrapper implementation, for convenient use.</summary>
@@ -2930,6 +3262,14 @@ namespace Google.Cloud.Metastore.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
 
+        private readonly gaxgrpc::ApiCall<RemoveIamPolicyRequest, RemoveIamPolicyResponse> _callRemoveIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<QueryMetadataRequest, lro::Operation> _callQueryMetadata;
+
+        private readonly gaxgrpc::ApiCall<MoveTableToDatabaseRequest, lro::Operation> _callMoveTableToDatabase;
+
+        private readonly gaxgrpc::ApiCall<AlterMetadataResourceLocationRequest, lro::Operation> _callAlterMetadataResourceLocation;
+
         /// <summary>
         /// Constructs a client wrapper for the DataprocMetastore service, with the specified gRPC client and settings.
         /// </summary>
@@ -2950,6 +3290,9 @@ namespace Google.Cloud.Metastore.V1Alpha
             RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            QueryMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.QueryMetadataOperationsSettings, logger);
+            MoveTableToDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveTableToDatabaseOperationsSettings, logger);
+            AlterMetadataResourceLocationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AlterMetadataResourceLocationOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2997,6 +3340,18 @@ namespace Google.Cloud.Metastore.V1Alpha
             _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackup);
             Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callRemoveIamPolicy = clientHelper.BuildApiCall<RemoveIamPolicyRequest, RemoveIamPolicyResponse>("RemoveIamPolicy", grpcClient.RemoveIamPolicyAsync, grpcClient.RemoveIamPolicy, effectiveSettings.RemoveIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callRemoveIamPolicy);
+            Modify_RemoveIamPolicyApiCall(ref _callRemoveIamPolicy);
+            _callQueryMetadata = clientHelper.BuildApiCall<QueryMetadataRequest, lro::Operation>("QueryMetadata", grpcClient.QueryMetadataAsync, grpcClient.QueryMetadata, effectiveSettings.QueryMetadataSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callQueryMetadata);
+            Modify_QueryMetadataApiCall(ref _callQueryMetadata);
+            _callMoveTableToDatabase = clientHelper.BuildApiCall<MoveTableToDatabaseRequest, lro::Operation>("MoveTableToDatabase", grpcClient.MoveTableToDatabaseAsync, grpcClient.MoveTableToDatabase, effectiveSettings.MoveTableToDatabaseSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callMoveTableToDatabase);
+            Modify_MoveTableToDatabaseApiCall(ref _callMoveTableToDatabase);
+            _callAlterMetadataResourceLocation = clientHelper.BuildApiCall<AlterMetadataResourceLocationRequest, lro::Operation>("AlterMetadataResourceLocation", grpcClient.AlterMetadataResourceLocationAsync, grpcClient.AlterMetadataResourceLocation, effectiveSettings.AlterMetadataResourceLocationSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callAlterMetadataResourceLocation);
+            Modify_AlterMetadataResourceLocationApiCall(ref _callAlterMetadataResourceLocation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3031,6 +3386,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
 
         partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
+        partial void Modify_RemoveIamPolicyApiCall(ref gaxgrpc::ApiCall<RemoveIamPolicyRequest, RemoveIamPolicyResponse> call);
+
+        partial void Modify_QueryMetadataApiCall(ref gaxgrpc::ApiCall<QueryMetadataRequest, lro::Operation> call);
+
+        partial void Modify_MoveTableToDatabaseApiCall(ref gaxgrpc::ApiCall<MoveTableToDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_AlterMetadataResourceLocationApiCall(ref gaxgrpc::ApiCall<AlterMetadataResourceLocationRequest, lro::Operation> call);
 
         partial void OnConstruction(DataprocMetastore.DataprocMetastoreClient grpcClient, DataprocMetastoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3072,6 +3435,14 @@ namespace Google.Cloud.Metastore.V1Alpha
         partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveIamPolicyRequest(ref RemoveIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryMetadataRequest(ref QueryMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveTableToDatabaseRequest(ref MoveTableToDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AlterMetadataResourceLocationRequest(ref AlterMetadataResourceLocationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists services in a project and location.
@@ -3460,6 +3831,117 @@ namespace Google.Cloud.Metastore.V1Alpha
         {
             Modify_DeleteBackupRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Removes the attached IAM policies for a resource
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveIamPolicyResponse RemoveIamPolicy(RemoveIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveIamPolicyRequest(ref request, ref callSettings);
+            return _callRemoveIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes the attached IAM policies for a resource
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveIamPolicyResponse> RemoveIamPolicyAsync(RemoveIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveIamPolicyRequest(ref request, ref callSettings);
+            return _callRemoveIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>QueryMetadata</c>.</summary>
+        public override lro::OperationsClient QueryMetadataOperationsClient { get; }
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<QueryMetadataResponse, OperationMetadata> QueryMetadata(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetadataResponse, OperationMetadata>(_callQueryMetadata.Sync(request, callSettings), QueryMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetadataResponse, OperationMetadata>(await _callQueryMetadata.Async(request, callSettings).ConfigureAwait(false), QueryMetadataOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>MoveTableToDatabase</c>.</summary>
+        public override lro::OperationsClient MoveTableToDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> MoveTableToDatabase(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveTableToDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>(_callMoveTableToDatabase.Sync(request, callSettings), MoveTableToDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveTableToDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>(await _callMoveTableToDatabase.Async(request, callSettings).ConfigureAwait(false), MoveTableToDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AlterMetadataResourceLocation</c>.</summary>
+        public override lro::OperationsClient AlterMetadataResourceLocationOperationsClient { get; }
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> AlterMetadataResourceLocation(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AlterMetadataResourceLocationRequest(ref request, ref callSettings);
+            return new lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>(_callAlterMetadataResourceLocation.Sync(request, callSettings), AlterMetadataResourceLocationOperationsClient);
+        }
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AlterMetadataResourceLocationRequest(ref request, ref callSettings);
+            return new lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>(await _callAlterMetadataResourceLocation.Async(request, callSettings).ConfigureAwait(false), AlterMetadataResourceLocationOperationsClient);
         }
     }
 
